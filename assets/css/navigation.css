@@ -86,14 +86,13 @@
 .nav-link {
     color: #fff;
     text-decoration: none;
-    font-size: 0.9rem;
     padding: 10px 12px;
     border-radius: 10px;
     display: flex;
     align-items: center;
     justify-self: center;
     gap: 8px;
-    opacity: .92;
+    font-size: 0.9rem;
 }
 
 .nav-link:hover {
@@ -107,10 +106,6 @@
     cursor: pointer;
 }
 
-.chev {
-    font-size: 12px;
-    opacity: .8;
-}
 
 /* Dropdown */
 .nav-item {
@@ -135,8 +130,8 @@
     border-radius: 10px;
     color: #fff;
     text-decoration: none;
-    font-size: 0.9rem;
     opacity: .75;
+    font-size: 0.9rem;
 }
 
 .dropdown a:hover {
@@ -190,7 +185,7 @@
 }
 
 /* Responsive */
-@media (max-width: 960px) {
+@media (max-width: 1160px) {
     .nav-toggle {
         display: inline-flex;
         align-items: center;
