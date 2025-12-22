@@ -44,6 +44,13 @@
     min-width: 260px;
 }
 
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    vertical-align: middle;
+}
+
 .logo img {
     width: 60px;
     height: 60px;
@@ -184,8 +191,56 @@
     top: 6px;
 }
 
+
+/* Controls */
+.controls {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.langbtn {
+    border-radius: 12px;
+    width: 44px;
+    height: 44px;
+    padding: 10px 12px;
+    border: 1px solid rgba(255, 255, 255, .14);
+    background: rgba(255, 255, 255, .06);
+    color: #fff;
+    cursor: pointer;
+}
+
+.langbtn:hover {
+    background: rgba(255, 255, 255, .10);
+}
+
+/* Dropdown trigger container */
+.has-dropdown {
+    position: relative;
+}
+
+/* hover bridge */
+.dropdown::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: -10px;
+    height: 10px;
+}
+
+.title a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.title a:hover {
+    text-decoration: none;
+    color: inherit;
+}
+
 /* Responsive */
-@media (max-width: 1160px) {
+@media (max-width: 1200px) {
     .nav-toggle {
         display: inline-flex;
         align-items: center;
@@ -234,49 +289,27 @@
     }
 }
 
-/* Controls */
-.controls {
-    display: flex;
-    align-items: center;
-    gap: 10px;
+@media (max-width: 768px) {
+    .brand {
+        min-width: auto;
+        gap: 8px;
+    }
+
+    .title strong {
+        font-size: 1.125rem;
+    }
+
+    .title span {
+        font-size: 0.9rem;
+    }
 }
 
-.langbtn {
-    border-radius: 12px;
-    width: 44px;
-    height: 44px;
-    padding: 10px 12px;
-    border: 1px solid rgba(255, 255, 255, .14);
-    background: rgba(255, 255, 255, .06);
-    color: #fff;
-    cursor: pointer;
-}
+@media (max-width: 480px) {
+    .title strong {
+        font-size: 1rem;
+    }
 
-.langbtn:hover {
-    background: rgba(255, 255, 255, .10);
-}
-
-/* Dropdown trigger container */
-.has-dropdown {
-    position: relative;
-}
-
-/* hover bridge */
-.dropdown::before {
-    content: "";
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: -10px;
-    height: 10px;
-}
-
-.title a {
-    text-decoration: none;
-    color: inherit;
-}
-
-.title a:hover {
-    text-decoration: none;
-    color: inherit;
+    .title span {
+        font-size: 0.875rem;
+    }
 }

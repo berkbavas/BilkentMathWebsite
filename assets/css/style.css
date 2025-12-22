@@ -377,18 +377,16 @@ p {
 }
 
 .alumni-entry {
-    margin-bottom: 2.5rem;
     padding: 1.5rem;
     background: var(--surface);
     border-radius: 12px;
     box-shadow: var(--shadow-1);
     border: 1px solid var(--border);
-    transition: box-shadow 0.2s ease, transform 0.2s ease;
+    transition: all 0.2s ease;
 }
 
 .alumni-entry:hover {
     box-shadow: var(--shadow-2);
-    ;
 }
 
 .alumni-entry h3 {
@@ -403,24 +401,25 @@ p {
 }
 
 .alumni-entry details summary {
-
     cursor: pointer;
     outline: none;
     list-style: none;
 }
 
-/* Custom arrow */
-.alumni-entry details summary::before {
-    content: "▶";
-    display: inline-block;
-    margin-right: 8px;
+.alumni-entry details summary::-webkit-details-marker {
+    display: none;
+}
+
+.alumni-entry details[open] summary i {
+    transform: rotate(90deg);
     transition: transform 0.2s ease;
 }
 
-/* Rotate when open */
-.alumni-entry details[open] summary::before {
-    transform: rotate(90deg);
+.alumni-entry details i {
+    margin-right: 0.6rem;
+    transition: transform 0.2s ease;
 }
+
 
 .alumni-entry blockquote {
     margin: 1rem 0;

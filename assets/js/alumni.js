@@ -35,7 +35,7 @@
             : "";
 
         const storyHtml = a.storyHtml
-            ? `<details><summary>Story</summary><blockquote>${a.storyHtml}</blockquote></details>`
+            ? `<details><summary><i class="fa-solid fa-caret-right"></i>Story</summary><blockquote>${a.storyHtml}</blockquote></details>`
             : "";
 
         const lastUpdateHtml = a.lastUpdate
