@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Graduate Students</title>
+    <style>
+/* =========================
+   Graduate Students Cards
+   ========================= */
+
+:root {
+  --bg: #ffffff;
+  --card-bg: #ffffff;
+  --border: #e5e7eb;
+  --text-main: #111827;
+  --text-muted: #6b7280;
+  --accent: #0f3d91; /* Bilkent'e yakın lacivert */
+  --radius: 14px;
+  --shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+  --font: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+          Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+}
+
+body {
+  font-family: var(--font);
+  background: var(--bg);
+  color: var(--text-main);
+}
+
+/* Grid */
+.gs-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+}
+
+@media (max-width: 1100px) {
+  .gs-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 640px) {
+  .gs-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Card */
+.gs-card {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 16px;
+  box-shadow: var(--shadow);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.gs-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.08);
+}
+
+/* Header */
+.gs-head {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+}
+
+/* Photo */
+.gs-photo {
+  width: 72px;
+  height: 72px;
+  flex: 0 0 auto;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #f3f4f6;
+  border: 1px solid var(--border);
+}
+
+.gs-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Meta */
+.gs-meta {
+  flex: 1;
+  min-width: 0;
+}
+
+.gs-name {
+  margin: 0 0 6px;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.25;
+  color: var(--text-main);
+}
+
+/* Info lines */
+.gs-line {
+  margin: 4px 0;
+  font-size: 14px;
+  line-height: 1.4;
+  color: var(--text-muted);
+}
+
+.gs-line span {
+  font-weight: 600;
+  color: var(--text-main);
+}
+
+/* Email link */
+.gs-line a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.gs-line a:hover {
+  text-decoration: underline;
+}
+
+/* Optional: tighter look on mobile */
+@media (max-width: 480px) {
+  .gs-photo {
+    width: 60px;
+    height: 60px;
+  }
+
+  .gs-name {
+    font-size: 16px;
+  }
+
+  .gs-line {
+    font-size: 13px;
+  }
+}
+
+    </style>
+</head>
+
+<body>
+    <main style="max-width:1100px;margin:0 auto;padding:20px;">
+        <div class="top">
+            <h1 style="margin:0;">Graduate Students</h1>
+            <div id="grad-students-status" class="status"></div>
+        </div>
+
+        <section id="grad-students" class="grid"></section>
+    </main>
+
+    <script type="module" src="./gradstudents.js"></script>
+</body>
+
+</html>

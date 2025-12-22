@@ -1,0 +1,122 @@
+/* ==========================================================
+   App bootstrap
+   ========================================================== */
+document.addEventListener("DOMContentLoaded", () => {
+    setupNavigation();
+    setupLanguageToggle();
+});
+
+/* ==========================================================
+   Selectors (single source of truth)
+   ========================================================== */
+const SELECTORS = {
+    navToggle: "[data-nav-toggle]",
+    nav: "#primaryNav",
+    dropdownToggle: "[data-dropdown-toggle]",
+    langToggle: "[data-lang-toggle]"
+};
+
+/* ==========================================================
+   Navigation (mobile + dropdown)
+   ========================================================== */
+function setupNavigation() {
+    const navToggle = document.querySelector(SELECTORS.navToggle);
+    const nav = document.querySelector(SELECTORS.nav);
+    const dropdownToggles = document.querySelectorAll(SELECTORS.dropdownToggle);
+
+    if (!nav || !navToggle) return;
+
+    /* Mobile menu toggle */
+    navToggle.addEventListener("click", () => {
+        const isOpen = nav.getAttribute("data-collapsed") === "false";
+        setNavOpen(!isOpen);
+    });
+
+    /* Dropdown toggles */
+    dropdownToggles.forEach(btn => {
+        btn.addEventListener("click", (e) => {
+            e.stopPropagation();
+            toggleDropdown(btn);
+        });
+    });
+
+    /* Close menus when clicking outside */
+    document.addEventListener("click", (e) => {
+        if (!nav.contains(e.target) && !navToggle.contains(e.target)) {
+            closeAllDropdowns();
+            setNavOpen(false);
+        }
+    });
+
+    function setNavOpen(open) {
+        nav.setAttribute("data-collapsed", String(!open));
+        navToggle.setAttribute("aria-expanded", String(open));
+    }
+
+    function toggleDropdown(button) {
+        const item = button.closest(".nav-item");
+        const expanded = item.classList.contains("open");
+
+        closeAllDropdowns();
+
+        if (!expanded) {
+            item.classList.add("open");
+            button.setAttribute("aria-expanded", "true");
+        }
+    }
+
+    function closeAllDropdowns() {
+        document.querySelectorAll(".nav-item.open")
+            .forEach(item => item.classList.remove("open"));
+
+        dropdownToggles.forEach(btn =>
+            btn.setAttribute("aria-expanded", "false")
+        );
+    }
+}
+
+/* ==========================================================
+   Language toggle / i18n (lightweight)
+   ========================================================== */
+function setupLanguageToggle() {
+    const toggle = document.querySelector(SELECTORS.langToggle);
+    if (!toggle) return;
+
+    let currentLang = "en";
+
+    toggle.addEventListener("click", () => {
+        currentLang = currentLang === "en" ? "tr" : "en";
+        toggle.textContent = currentLang.toUpperCase();
+        applyTranslations(currentLang);
+    });
+}
+
+/* ==========================================================
+   Translations
+   ========================================================== */
+const TRANSLATIONS = {
+    en: {
+        pageHomeTitle: "Department of Mathematics • Bilkent University"
+    },
+    tr: {
+        pageHomeTitle: "Matematik Bölümü • Bilkent Üniversitesi"
+    }
+};
+
+function applyTranslations(lang) {
+    const dict = TRANSLATIONS[lang];
+    if (!dict) return;
+
+    /* Title */
+    if (dict.pageHomeTitle) {
+        document.title = dict.pageHomeTitle;
+    }
+
+    /* Optional: data-i18n-text usage */
+    document.querySelectorAll("[data-i18n]").forEach(el => {
+        const key = el.getAttribute("data-i18n");
+        if (dict[key]) {
+            el.textContent = dict[key];
+        }
+    });
+}
