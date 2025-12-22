@@ -29,7 +29,7 @@
             <a role="menuitem" href="faculty.php">Faculty</a>
             <a role="menuitem" href="graduate-students.php">Graduate Students</a>
             <a role="menuitem" href="alumni.php">Some of Our Alumni</a>
-            <a role="menuitem" href="alumni-stats.php">Alumni Statistics</a>
+            <a role="menuitem" href="alumni-statistics.php">Alumni Statistics</a>
           </div>
         </li>
 

@@ -7,7 +7,7 @@
     --font-sans: "Fira Sans", sans-serif;
     --font-serif: ui-serif, Georgia, "Times New Roman", Times, serif;
 
-    --container: 1200px;
+    --container: 1260px;
     --navigation-width: 1300px;
     --radius: 14px;
     --radius-sm: 10px;
@@ -45,7 +45,7 @@
 
 html, body {
     height: 100%;
-
+    scrollbar-gutter: stable;
 }
 
 body {
@@ -249,6 +249,12 @@ p {
     margin: var(--space-4) 0;
 }
 
+@media (max-width: 768px) {
+    .footer-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
 
 /* Graduate Students */
 
@@ -372,7 +378,7 @@ p {
 
 .alumni-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(420px, 1fr));
     gap: 2rem;
 }
 
@@ -472,3 +478,32 @@ p {
         height: 120px;
     }
 }
+
+/* Alumni Statistics Cards */
+
+.charts-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(480px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.card {
+    padding: 16px;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    background: var(--surface);
+    box-shadow: var(--shadow-2);
+}
+
+.card h2 {
+    margin-top: 0;
+    margin-bottom: 16px;
+}
+
+.card h3 {
+    margin-top: 0;
+    margin-bottom: 12px;
+}
+
+/* ========================================================= */
