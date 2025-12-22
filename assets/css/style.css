@@ -367,3 +367,72 @@ p {
 }
 
 /* ========================================================= */
+
+/* Alumni page add-on */
+
+.alumni-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+    gap: 2rem;
+}
+
+.alumni-entry {
+    margin-bottom: 2.5rem;
+    padding: 1.5rem;
+    background: var(--surface);
+    border-radius: 12px;
+    box-shadow: var(--shadow-1);
+    border: 1px solid var(--border);
+}
+
+.alumni-entry h3 {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    font-size: 1.6rem;
+}
+
+.alumni-entry details {
+    margin-top: 1rem;
+    cursor: pointer;
+}
+
+.alumni-entry blockquote {
+    margin: 1rem 0;
+    padding-left: 1rem;
+    border-left: 4px solid var(--primary);
+    color: var(--muted);
+    font-style: italic;
+    cursor: default;
+}
+
+.alumni-entry ul {
+    padding-left: 1.2rem;
+    margin: 0.5rem 0 1rem;
+}
+
+.alumni-entry li {
+    margin-bottom: 0.4rem;
+    list-style-type: square;
+}
+
+
+.alumni-image {
+    margin-bottom: 1rem;
+    text-align: left;
+    display: flex;
+    gap: 1rem;
+}
+
+.alumni-image img {
+    width: 164px;
+    height: 164px;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: var(--shadow-1);
+}
+
+.alumni-update {
+    font-size: 0.85rem;
+    color: var(--muted);
+    text-align: right;
+}
