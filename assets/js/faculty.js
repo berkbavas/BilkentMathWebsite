@@ -1,5 +1,4 @@
-/* ====== DATA (fill/extend) ====== */
-/* ====== DATA (fill/extend) ====== */
+
 const FACULTY = [
   // ===== Current Faculty =====
   {

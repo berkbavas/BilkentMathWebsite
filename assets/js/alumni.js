@@ -10,18 +10,6 @@
             .replaceAll('"', "&quot;")
             .replaceAll("'", "&#039;");
 
-    function groupByYear(items) {
-        const map = new Map();
-        for (const it of items) {
-            const y = Number(it.year);
-            if (!map.has(y)) map.set(y, []);
-            map.get(y).push(it);
-        }
-        // Bilkent sayfası gibi: yıllar artan/azalan hangisini istersen.
-        const years = [...map.keys()].sort((a, b) => a - b);
-        return years.map(y => [y, map.get(y)]);
-    }
-
     function renderEntry(a) {
         const bullets = Array.isArray(a.bullets) ? a.bullets : [];
         const links = Array.isArray(a.links) ? a.links : [];
