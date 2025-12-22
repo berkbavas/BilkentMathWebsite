@@ -53,21 +53,30 @@ document.addEventListener("DOMContentLoaded", () => {
             data: {
                 labels,
                 datasets: [{
-                    label: "Percentage",
-                    data: values,
-                }],
+                    data: values
+                }]
             },
             options: {
                 responsive: true,
                 plugins: {
-                    legend: { position: "bottom" },
+                    legend: {
+                        position: "bottom"
+                    },
                     tooltip: {
                         callbacks: {
-                            label: (ctx) => `${ctx.label}: ${ctx.parsed}%`,
-                        },
+                            label: (ctx) => `${ctx.label}: ${ctx.parsed}%`
+                        }
                     },
-                },
+                    datalabels: {
+                        color: "#fff",
+                        font: {
+                            size: 16
+                        },
+                        formatter: (value) => value + "%",
+                    }
+                }
             },
+            plugins: [ChartDataLabels]
         });
     }
 });
