@@ -1,88 +1,6 @@
 /* Seminars Page Styles */
 
-.page-hero {
-    padding: 32px 0 14px;
-}
-
-.page-hero-top {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    gap: 16px;
-}
-
-.eyebrow {
-    margin: 0 0 10px;
-    color: var(--muted);
-    font-weight: 700;
-    letter-spacing: .02em;
-}
-
-.page-hero h1 {
-    margin: 0 0 10px;
-    font-size: 36px;
-    line-height: 1.15;
-}
-
-.lead {
-    margin: 0;
-    color: var(--muted);
-    font-size: 16.5px;
-    line-height: 1.65;
-    max-width: 70ch;
-}
-
-.filters {
-    margin-top: 16px;
-    display: grid;
-    grid-template-columns: 1.5fr 0.5fr;
-    gap: 10px;
-}
-
-.searchbox {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    border: 1px solid var(--line);
-    border-radius: 1rem;
-    padding: 10px 12px;
-    background: #ffffff;
-}
-
-.searchbox .icon {
-    opacity: .7;
-}
-
-.searchbox input {
-    border: none;
-    outline: none;
-    width: 100%;
-    background: transparent;
-    font-size: 0.9rem;
-    color: var(--text);
-}
-
-.filters select {
-    border: 1px solid var(--line);
-    border-radius: 999px;
-    padding: 10px 12px;
-    background: rgba(255, 255, 255, .70);
-    font-size: 1rem;
-    outline: none;
-}
-
-.meta {
-    margin-top: 10px;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    color: var(--muted);
-    font-weight: 600;
-}
-
-.meta .dot {
-    opacity: .45;
-}
+/* Table styles */
 
 .table-card {
     border: 1px solid var(--line);
@@ -204,10 +122,6 @@
         flex-direction: column;
         align-items: flex-start;
     }
-
-    .filters {
-        grid-template-columns: 1fr 1fr;
-    }
 }
 
 @media (max-width: 920px) {
@@ -217,10 +131,6 @@
 
     .cards {
         display: grid;
-    }
-
-    .filters {
-        grid-template-columns: 1fr;
     }
 
     .page-hero h1 {

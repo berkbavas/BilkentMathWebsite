@@ -9,9 +9,9 @@
 <body>
     <?php include 'navigation.php'; ?>
 
-    <main id="content">
+    <main class="container">
         <!-- Header -->
-        <section class="page-hero container">
+        <section class="page-hero">
             <div class="page-hero-top">
                 <div>
                     <h1>2025–26 Academic Year Seminars</h1>
@@ -25,7 +25,7 @@
                 </a>-->
             </div>
 
-    
+
             <div class="filters">
                 <div class="searchbox">
                     <span class="icon" aria-hidden="true"><i class="fa-solid fa-magnifying-glass"></i></span>
@@ -41,32 +41,30 @@
         </section>
 
         <!-- Table -->
-        <section class="section">
-            <div class="container">
+        <section>
 
-                <div class="table-card">
-                    <div class="table-wrap" role="region" aria-label="Seminar list" tabindex="0">
-                        <table class="seminar-table" aria-describedby="count">
-                            <thead>
-                                <tr>
-                                    <th data-col="speaker">Speaker</th>
-                                    <th data-col="title">Title</th>
-                                    <th data-col="date">Date</th>
-                                    <th data-col="time">Time</th>
-                                    <th data-col="place">Place</th>
-                                </tr>
-                            </thead>
-                            <tbody id="tbody">
-                                <!-- JS will fill this -->
-                            </tbody>
-                        </table>
-                    </div>
+            <div class="table-card">
+                <div class="table-wrap" role="region" aria-label="Seminar list" tabindex="0">
+                    <table class="seminar-table" aria-describedby="count">
+                        <thead>
+                            <tr>
+                                <th data-col="speaker">Speaker</th>
+                                <th data-col="title">Title</th>
+                                <th data-col="date">Date</th>
+                                <th data-col="time">Time</th>
+                                <th data-col="place">Place</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tbody">
+                            <!-- JS will fill this -->
+                        </tbody>
+                    </table>
                 </div>
-
-                <!-- Mobile cards (JS will render the same data here too) -->
-                <div class="cards" id="cards" aria-label="Seminar cards"></div>
-
             </div>
+
+            <!-- Mobile cards (JS will render the same data here too) -->
+            <div class="cards" id="cards" aria-label="Seminar cards"></div>
+
         </section>
     </main>
 

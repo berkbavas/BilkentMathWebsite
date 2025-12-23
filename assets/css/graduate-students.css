@@ -4,26 +4,15 @@
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 1rem;
-    margin-top: 2rem;
 }
 
-.gs-card {
-    background: var(--surface);
-    border-radius: var(--radius);
-    box-shadow: var(--shadow-1);
-    padding: 1rem;
+.gs-entry {
     display: flex;
     flex-direction: column;
     align-items: center;
-    text-align: center;
-    transition: all 0.2s ease;
 }
 
-.gs-card:hover {
-    box-shadow: var(--shadow-2);
-}
-
-.gs-card img {
+.gs-entry img {
     width: 120px;
     height: 150px;
     object-fit: cover;
@@ -31,11 +20,11 @@
     margin-bottom: 1rem;
 }
 
-.gs-card h3 {
+.gs-entry h3 {
     margin: 0.5rem 0 0.25rem;
 }
 
-.gs-card p {
+.gs-entry p {
     margin: 0.1rem 0;
     color: var(--text);
     font-size: 0.9rem;

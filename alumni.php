@@ -9,20 +9,22 @@
 <body>
     <?php include 'navigation.php'; ?>
 
-    <main id="content">
-        <section class="section">
-            <div class="container">
+    <main class="container">
 
-                <header class="alumni-pagehead">
-                    <h1>Some of Our Alumni</h1>
-                    <p class="muted">Selected alumni stories and updates.</p>
-                </header>
-
-                <!-- Alumni content will be injected here -->
-                <div id="alumniRoot" class="alumni-grid"></div>
-
+        <section class="page-hero">
+            <div class="page-hero-top">
+                <div>
+                    <h1 data-i18n="pageAlumniTitle">Alumni</h1>
+                    <p class="lead" data-i18n="pageAlumniLead">
+                        Information about alumni of the Department of Mathematics.
+                    </p>
+                </div>
             </div>
         </section>
+
+        <!-- Alumni content will be injected here -->
+        <div id="alumniRoot" class="alumni-grid"></div>
+
     </main>
 
     <?php include 'footer.php'; ?>

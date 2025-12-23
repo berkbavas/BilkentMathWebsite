@@ -8,17 +8,24 @@
 <body>
   <?php include 'navigation.php'; ?>
 
-  <main id="content" class="container">
-    <h1>Faculty Members</h1>
-    <p class="lead">Click on a faculty member's name to view their personal web page.</p>
+  <main class="container">
+
+    <section class="page-hero">
+      <div class="page-hero-top">
+        <div>
+          <h1 data-i18n="pageFacultyTitle">Faculty Members</h1>
+          <p class="lead" data-i18n="pageFacultyLead">
+            Information about faculty members of the Department of Mathematics.
+          </p>
+        </div>
+      </div>
+    </section>
 
     <section class="wrap">
       <h1>Current Faculty</h1>
       <div id="gridCurrent" class="faculty-grid" aria-label="Faculty list"></div>
     </section>
 
-    <br>
-    <br>
     <section class="wrap">
       <h1>Emeriti</h1>
       <div id="gridEmeriti" class="faculty-grid" aria-label="Emeriti list"></div>

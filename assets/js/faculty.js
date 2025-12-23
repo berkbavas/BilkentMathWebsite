@@ -19,7 +19,7 @@ function cardTemplate(p) {
     : `${name}`;
 
   return `
-    <article class="faculty-card" data-rank="${escapeHtml(p.rank || "")}">
+    <article class="card" data-rank="${escapeHtml(p.rank || "")}">
       <div class="cardTop">
         <div class="faculty-avatar" aria-hidden="true">
           ${photo ? `<img src="${escapeHtml(photo)}" alt="${name}">` : ""}

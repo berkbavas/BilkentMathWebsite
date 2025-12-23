@@ -31,7 +31,7 @@ function renderEntry(a) {
         : "";
 
     return `
-      <article class="alumni-entry">
+      <article class="card alumni-entry">
         <h3>${esc(a.name || "")}, <strong>${esc(a.year || "")}</strong></h3>
         <div class="alumni-info">
             <div class="alumni-image">

@@ -8,27 +8,33 @@
 <body>
     <?php include 'navigation.php'; ?>
 
-    <main id="content" class="container">
-        <h1>Graduate Students</h1>
+    <main class="container">
 
-        <!-- <section class="wrap">
-            <table class="gs-table gs-table-modern" id="graduate-students">
-                <thead>
-                    <tr>
-                        <th>Photo</th>
-                        <th>Name</th>
-                        <th>Office</th>
-                        <th>Phone</th>
-                        <th>Email</th>
-                        <th>Supervisor</th>
-                    </tr>
-                </thead>
-                <tbody id="gs-tbody">
-                </tbody>
-            </table>
-        </section> -->
+        <section class="page-hero">
+            <div class="page-hero-top">
+                <div>
+                    <h1 data-i18n="pageGradStudentsTitle">Graduate Students</h1>
+                    <p class="lead" data-i18n="pageGradStudentsLead">
+                        Information about current graduate students of the Department of Mathematics.
+                    </p>
+                </div>
+            </div>
 
-        <div id="gs-cards-container" class="gs-cards-container"></div>
+            <div class="filters">
+                <div class="searchbox">
+                    <span class="icon" aria-hidden="true"><i class="fa-solid fa-magnifying-glass"></i></span>
+                    <input id="q" type="search" placeholder="Search: name, supervisor..." autocomplete="off">
+                </div>
+                <button class="btn btn-ghost" id="reset" type="button">Reset</button>
+            </div>
+
+            <div class="meta">
+                <span id="count"></span>
+            </div>
+
+        </section>
+
+        <div id="gs-cards-container" class="section gs-cards-container"></div>
 
     </main>
 

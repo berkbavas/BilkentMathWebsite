@@ -6,11 +6,22 @@
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js" defer></script>
 <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.2.0" defer></script>
 <script type="module" src="assets/js/alumni-statistics.js?v=<?php echo filemtime('assets/js/alumni-statistics.js'); ?>" defer></script>
+
 <body>
     <?php include 'navigation.php'; ?>
 
-    <div class="content container section">
-        <h1>Alumni Statistics</h1>
+    <main class="container">
+
+        <section class="page-hero">
+            <div class="page-hero-top">
+                <div>
+                    <h1 data-i18n="pageAlumniStatisticsTitle">Alumni Statistics</h1>
+                    <p class="lead" data-i18n="pageAlumniStatisticsLead">
+                        Information about alumni of the Department of Mathematics.
+                    </p>
+                </div>
+            </div>
+        </section>
 
         <div class="charts">
             <div class="card">
@@ -23,7 +34,8 @@
                 <canvas id="alumniPie"></canvas>
             </div>
         </div>
-    </div>
+        
+    </main>
 
     <?php include 'footer.php'; ?>
 </body>

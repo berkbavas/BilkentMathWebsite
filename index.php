@@ -40,7 +40,8 @@
               <img
                 src="assets/img/hero/math-building.jpg"
                 alt="Bilkent Department of Mathematics building"
-                loading="lazy">
+                loading="lazy"
+              >
               <figcaption>
                 <strong>Department of Mathematics</strong>
                 <span>Ankara, Türkiye</span>
@@ -229,5 +230,4 @@
 
   <?php include 'footer.php'; ?>
 </body>
-
 </html>

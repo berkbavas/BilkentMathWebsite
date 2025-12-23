@@ -75,7 +75,7 @@ function apply() {
         return toDateKey(b.date, b.time) - toDateKey(a.date, a.time);
     });
 
-    $("#count").textContent = `${list.length} seminar`;
+    $("#count").textContent = `${list.length} seminar(s)`;
     renderTable(list);
     renderCards(list);
 }

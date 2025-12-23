@@ -11,21 +11,6 @@
     gap: 2rem;
 }
 
-.faculty-card {
-    background: var(--card-bg, #ffffff);
-    border-radius: 14px;
-    padding: 1.6rem;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
-    display: flex;
-    flex-direction: column;
-    gap: 1.2rem;
-    transition: box-shadow 0.2s ease;
-}
-
-.faculty-card:hover {
-    box-shadow: 0 14px 40px rgba(0, 0, 0, 0.1);
-}
-
 .faculty-avatar {
     color: #fff;
     display: grid;
