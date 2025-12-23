@@ -258,6 +258,50 @@ p {
 
 /* Graduate Students */
 
+.graduate-students-cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.graduate-student-card {
+    background: var(--surface);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-1);
+    padding: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.graduate-student-card img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+}
+
+.graduate-student-card h3 {
+    margin: 0.5rem 0 0.25rem;
+}
+
+.graduate-student-card p {
+    margin: 0;
+    color: var(--text);
+    font-size: 0.9rem;
+}
+
+.graduate-student-content {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: start;
+}
+
 .gs-table {
     width: 100%;
     border-collapse: separate;
@@ -431,7 +475,7 @@ p {
     margin: 1rem 0;
     padding-left: 1rem;
     border-left: 4px solid var(--primary);
-    color: var(--muted);
+    color: var(--text);
     font-style: italic;
     cursor: default;
 }
@@ -481,11 +525,10 @@ p {
 
 /* Alumni Statistics Cards */
 
-.charts-grid {
+.charts {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(480px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     gap: 2rem;
-    margin-bottom: 3rem;
 }
 
 .card {
@@ -506,4 +549,9 @@ p {
     margin-bottom: 12px;
 }
 
-/* ========================================================= */
+@media (max-width: 960px) {
+    .charts {
+        display: flex;
+        flex-direction: column;
+    }
+}

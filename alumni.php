@@ -3,7 +3,7 @@
 <?php $pageTitle = '<title>Some of Our Alumni</title>'; ?>
 <?php include 'head.php'; ?>
 
-<script src="assets/js/alumni.js?v=<?php echo filemtime('assets/js/alumni.js'); ?>" defer></script>
+<script type="module" src="assets/js/alumni.js?v=<?php echo filemtime('assets/js/alumni.js'); ?>" defer></script>
 
 <body>
     <?php include 'navigation.php'; ?>

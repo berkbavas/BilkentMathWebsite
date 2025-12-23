@@ -1,68 +1,50 @@
-const GRADUATE_STUDENTS = [
-    {
-        name: "Hafsah Aamer",
-        supervisor: "Gökhan Yıldırım",
-        office: "SA-104A",
-        phone: "+90 (312) 290-6946",
-        email: "h.aamer [-at-] bilkent.edu.tr",
-        photo: "https://math.bilkent.edu.tr/Grad_student_photos/Hafsah_Aamer.jpg",
-    },
-    {
-        name: "Hafsah Aamer",
-        supervisor: "Gökhan Yıldırım",
-        office: "SA-104A",
-        phone: "+90 (312) 290-6946",
-        email: "h.aamer [-at-] bilkent.edu.tr",
-        photo: "https://math.bilkent.edu.tr/Grad_student_photos/Hafsah_Aamer.jpg",
-    },
-    {
-        name: "Hafsah Aamer",
-        supervisor: "Gökhan Yıldırım",
-        office: "SA-104A",
-        phone: "+90 (312) 290-6946",
-        email: "h.aamer [-at-] bilkent.edu.tr",
-        photo: "https://math.bilkent.edu.tr/Grad_student_photos/Hafsah_Aamer.jpg",
-    },
-    {
-        name: "Hafsah Aamer",
-        supervisor: "Gökhan Yıldırım",
-        office: "SA-104A",
-        phone: "+90 (312) 290-6946",
-        email: "h.aamer [-at-] bilkent.edu.tr",
-        photo: "https://math.bilkent.edu.tr/Grad_student_photos/Hafsah_Aamer.jpg",
-    },
-];
+import { GRADUATE_STUDENTS } from "../data/graduate-students.js";
+import { escapeHtml } from "./helpers.js";
 
-function escapeHtml(str) {
-    return (str || "")
-        .replaceAll("&", "&amp;")
-        .replaceAll("<", "&lt;")
-        .replaceAll(">", "&gt;")
-        .replaceAll('"', "&quot;")
-        .replaceAll("'", "&#039;");
-}
-
-function row(s) {
-    return `
+function row(student) {
+  return `
       <tr>
         <td class="gs-photo-cell">
-          <img src="${escapeHtml(s.photo)}" alt="${escapeHtml(s.name)}">
+          <img src="${student.photo}" alt="${escapeHtml(student.name)}">
         </td>
-        <td class="gs-name">${escapeHtml(s.name)}</td>
-        <td>${escapeHtml(s.office)}</td>
-        <td>${escapeHtml(s.phone)}</td>
+        <td class="gs-name">${escapeHtml(student.name)}</td>
+        <td>${escapeHtml(student.office)}</td>
+        <td>${escapeHtml(student.phone)}</td>
         <td>
-          <a href="mailto:${escapeHtml(s.email)}">
-            ${escapeHtml(s.email)}
+          <a href="mailto:${escapeHtml(student.email)}">
+            ${escapeHtml(student.email)}
           </a>
-         <td>${escapeHtml(s.supervisor)}</td>
+         <td>${escapeHtml(student.supervisor)}</td>
         </td>
       </tr>
     `;
 }
 
-document.addEventListener("DOMContentLoaded", () => {
-    const tbody = document.querySelector("#graduate-students tbody");
-    if (!tbody) return;
-    tbody.innerHTML = GRADUATE_STUDENTS.map(row).join("");
-});
+function card(student) {
+
+  const URL = "https://math.bilkent.edu.tr/Grad_student_photos/";
+  return `
+      <div class="graduate-student-card">
+        <img src="${URL}${student.photo}" alt="${escapeHtml(student.name)}">
+        <h3>${escapeHtml(student.name)}</h3>
+        <div class="graduate-student-content">
+          <p><strong>Office:</strong> ${escapeHtml(student.office)}</p>
+          <p><strong>Phone:</strong> ${escapeHtml(student.phone)}</p>
+          <p><strong>Email:</strong> <a href="mailto:${escapeHtml(student.email)}">${escapeHtml(student.email)}</a></p>
+          <p><strong>Supervisor:</strong> ${escapeHtml(student.advisor)}</p>
+        </div>
+      </div>
+    `;
+}
+
+function renderTable() {
+  const tbody = document.querySelector("#graduate-students-tbody");
+  tbody.innerHTML = GRADUATE_STUDENTS.map(row).join("");
+}
+
+function renderCards() {
+  const container = document.querySelector("#graduate-students-cards-container");
+  container.innerHTML = GRADUATE_STUDENTS.map(card).join("");
+}
+
+document.addEventListener("DOMContentLoaded", renderCards);

@@ -2,7 +2,7 @@
 <html lang="en">
 <?php $pageTitle = '<title data-i18n-title="pageFacultyTitle">Faculty Members</title>'; ?>
 <?php include 'head.php'; ?>
-<script src="assets/js/faculty.js?v=<?= filemtime('assets/js/faculty.js') ?>" defer></script>
+<script type="module" src="assets/js/faculty.js?v=<?= filemtime('assets/js/faculty.js') ?>" defer></script>
 
 <body>
   <?php include 'navigation.php'; ?>

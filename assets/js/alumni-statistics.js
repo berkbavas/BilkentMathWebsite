@@ -1,19 +1,8 @@
-const STATS = {
-    "Academia": 52,
-    "Finance and Banking": 11,
-    "IT": 8,
-    "Education": 7,
-    "Public Sector": 3,
-    "Research Institute": 2,
-    "Telecommunications": 2,
-    "Defense Industry": 1,
-    "Other": 13,
-};
+import { ALUMNI_STATISTICS } from "../data/alumni-statistics.js";
 
-document.addEventListener("DOMContentLoaded", () => {
-
-    const labels = Object.keys(STATS);
-    const values = Object.values(STATS);
+async function render() {
+    const labels = Object.keys(ALUMNI_STATISTICS);
+    const values = Object.values(ALUMNI_STATISTICS);
 
     // Bar chart
     const barCanvas = document.getElementById("alumniBar");
@@ -79,4 +68,6 @@ document.addEventListener("DOMContentLoaded", () => {
             plugins: [ChartDataLabels]
         });
     }
-});
+}
+
+document.addEventListener("DOMContentLoaded", render);
