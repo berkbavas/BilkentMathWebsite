@@ -29,11 +29,7 @@
                 </div>
                 <button class="btn btn-ghost" id="reset" type="button">Reset</button>
             </div>
-
-            <div class="meta">
-                <span id="count"></span>
-            </div>
-
+            
         </section>
 
         <!-- Alumni content will be injected here -->

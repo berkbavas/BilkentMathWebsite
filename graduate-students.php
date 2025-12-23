@@ -34,7 +34,7 @@
 
         </section>
 
-        <div id="gs-cards-container" class="section gs-cards-container"></div>
+        <div id="gs-cards-container" class="gs-grid"></div>
 
     </main>
 

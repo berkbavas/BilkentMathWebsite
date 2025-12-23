@@ -2,20 +2,47 @@ import { GRADUATE_STUDENTS } from "../data/graduate-students.js";
 import { escapeHtml } from "./helpers.js";
 
 
-function card(student) {
-    const URL = "https://math.bilkent.edu.tr/Grad_student_photos/";
+function card(s) {
+    const name = s.name ?? "";
+    const advisor = s.advisor ?? "";
+    const office = s.office ?? "";
+    const phone = s.phone ?? "";
+    const email = s.email ?? "";
+
+
+    const photoUrl = encodeURI("https://math.bilkent.edu.tr/Grad_student_photos/" + (s.photo || "placeholder.jpg"));
+
     return `
-      <div class="card gs-entry">
-        <img src="${URL}${student.photo}" alt="${escapeHtml(student.name)}">
-        <h3>${escapeHtml(student.name)}</h3>
-        <div class="gs-content">
-          <p><strong>Office:</strong> ${escapeHtml(student.office)}</p>
-          <p><strong>Phone:</strong> ${escapeHtml(student.phone)}</p>
-          <p><strong>Email:</strong> ${escapeHtml(student.email)}</p>
-          <p><strong>Supervisor:</strong> ${escapeHtml(student.advisor)}</p>
+    <article class="gs-card">
+        <div class="gs-card-top" role="group" aria-label="${name}">
+            <div class="gs-avatar">
+            <img src="${photoUrl}" alt="${name}" loading="lazy">
+            </div>
+            <div class="gs-head">
+                <h2 class="gs-name">${name}</h2>
+                <p class="gs-sub">Advisor: ${advisor}</p>
+            </div>
         </div>
-      </div>
-    `;
+
+        <div class="gs-meta">
+            <div class="gs-meta-item">
+                <i class="gs-ico fa-regular fa-building"></i>
+                <span class="gs-meta-text">${office}</span>
+            </div>
+
+            <div class="gs-meta-item">
+                <i class="gs-ico fa-regular fa-envelope"></i>
+                <span class="gs-meta-text">${email}</span>
+            </div>
+
+            <div class="gs-meta-item">
+                <i class="gs-ico fa-solid fa-phone"></i>
+                <span class="gs-meta-text">${phone}</span>
+            </div>
+
+        </div>
+    </article>
+  `;
 }
 
 function matches(student, q) {

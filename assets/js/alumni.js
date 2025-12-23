@@ -57,6 +57,9 @@ function apply() {
     const q = document.querySelector("#search").value.trim();
     let list = ALUMNI.filter(alumni => matches(alumni, q));
     renderCards(list);
+    if(list.length === 0) {
+        document.getElementById("alumniRoot").innerHTML = "<p>No matching alumni found.</p>";
+    }
 }
 
 function resetFilters() {

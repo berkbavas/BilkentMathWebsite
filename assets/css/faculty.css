@@ -1,10 +1,5 @@
 /* Faculty Page */
 
-.page-title {
-    font-size: 2.2rem;
-    margin-bottom: 2rem;
-}
-
 .faculty-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
@@ -26,7 +21,7 @@
     border-radius: 50%;
 }
 
-.cardTop {
+.card-top {
     display: flex;
     align-items: start;
     gap: 1.2rem;
@@ -40,10 +35,11 @@
 
 .faculty-title {
     color: var(--muted);
+    font-size: 0.85rem;
     margin: 0.2rem 0 0;
 }
 
-.cardBody {
+.card-body {
     flex-grow: 1;
     display: flex;
     flex-direction: column;
@@ -64,53 +60,39 @@
     font-size: 0.85rem;
 }
 
-.details {
-    margin-top: auto;
+.faculty-meta {
+    margin-top: 0.5rem;
     display: flex;
     flex-direction: column;
-    gap: 0.5rem;
+    gap: 8px;
 }
 
-.kv {
-    display: grid;
-    grid-template-columns: auto 1fr;
-    gap: 0.6rem;
-}
-
-.faculty-search {
-    margin-bottom: 2rem;
-    padding: 0.8rem 1.2rem;
-    width: 100%;
-    max-width: 400px;
-    font-size: 1rem;
-    border: 1px solid var(--border);
-    border-radius: 8px;
-}
-
-.faculty-search:focus {
-    outline: none;
-    box-shadow: var(--focus);
-    border-color: var(--accent);
-}
-
-.faculty-controls-row {
+.faculty-meta-item {
     display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-    margin-bottom: 1.5rem;
     align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    color: rgba(17, 17, 17, .82);
 }
 
-.faculty-controls-row>* {
-    margin: 0;
+.faculty-meta-item:hover {
+    color: rgba(17, 17, 17, 1);
 }
 
-.faculty-clear-btn {
-    background: var(--accent);
-    color: #fff;
-    border: none;
-    padding: 0.8rem 1.2rem;
-    border-radius: 8px;
-    cursor: pointer;
-    font-size: 1rem;
+.faculty-ico {
+    width: 28px;
+    height: 28px;
+    border-radius: 10px;
+    display: grid;
+    place-items: center;
+    background: rgba(0, 0, 0, .05);
+    border: 1px solid rgba(0, 0, 0, .08);
+    font-size: 0.85rem;
+}
+
+.faculty-meta-text {
+    font-size: 0.85rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }

@@ -19,32 +19,42 @@ function cardTemplate(p) {
     : `${name}`;
 
   return `
-    <article class="card" data-rank="${escapeHtml(p.rank || "")}">
-      <div class="cardTop">
-        <div class="faculty-avatar" aria-hidden="true">
-          ${photo ? `<img src="${escapeHtml(photo)}" alt="${name}">` : ""}
-        </div>
+        <article class="card" data-rank="${escapeHtml(p.rank || "")}">
+            <div class="card-top">
+                <div class="faculty-avatar" aria-hidden="true">
+                    <img src="${escapeHtml(photo)}" alt="${name}">
+                </div>
 
-        <div style="min-width:0">
-          <div class="nameRow">
-            <h3 class="faculty-name">${nameHtml}</h3>
-            ${titleBadge}
-          </div>
-          <p class="faculty-title">${degree || research}</p>
-        </div>
-      </div>
-
-      <div class="cardBody">
-        ${research ? `<div class="tags">${tags}</div>` : ""}
-            <div class="kv">
-              ${office ? `<b>Office:</b><span>${office}</span>` : ""}
-              ${phone ? `<b>Phone:</b><span>${phone}</span>` : ""}
-              ${email ? `<b>E-mail:</b><span>${email}</span>` : ""}
+                <div style="min-width:0">
+                    <div class="name-row">
+                        <h3 class="faculty-name">${nameHtml}</h3>
+                        ${titleBadge}
+                    </div>
+                    <p class="faculty-title">${degree || research}</p>
+                </div>
             </div>
-        </div>
-      </div>
-    </article>
-  `;
+            
+            <div class="card-body">
+                <div class="tags">${tags}</div>
+                    <div class="faculty-meta">
+                        ${office ? `<div class="faculty-meta-item">
+                            <i class="faculty-ico fa-regular fa-building"></i>
+                            <span class="faculty-meta-text">${office}</span>
+                        </div>` : ""}
+
+                        ${email ? `<div class="faculty-meta-item">
+                            <i class="faculty-ico fa-regular fa-envelope"></i>
+                            <span class="faculty-meta-text">${email}</span>
+                        </div>` : ""}
+
+                        ${phone ? `<div class="faculty-meta-item">
+                            <i class="faculty-ico fa-solid fa-phone"></i>
+                            <span class="faculty-meta-text">${phone}</span>
+                        </div>` : ""}
+                    </div>
+                </div>
+            </div>
+        </article>`;
 }
 
 function render() {
