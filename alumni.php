@@ -14,12 +14,26 @@
         <section class="page-hero">
             <div class="page-hero-top">
                 <div>
-                    <h1 data-i18n="pageAlumniTitle">Alumni</h1>
+                    <h1 data-i18n="pageAlumniTitle">Some of Our Alumni</h1>
                     <p class="lead" data-i18n="pageAlumniLead">
                         Information about alumni of the Department of Mathematics.
                     </p>
                 </div>
             </div>
+
+
+            <div class="filters">
+                <div class="searchbox">
+                    <span class="icon" aria-hidden="true"><i class="fa-solid fa-magnifying-glass"></i></span>
+                    <input id="search" type="search" placeholder="Search" autocomplete="off">
+                </div>
+                <button class="btn btn-ghost" id="reset" type="button">Reset</button>
+            </div>
+
+            <div class="meta">
+                <span id="count"></span>
+            </div>
+
         </section>
 
         <!-- Alumni content will be injected here -->

@@ -23,7 +23,7 @@
             <div class="filters">
                 <div class="searchbox">
                     <span class="icon" aria-hidden="true"><i class="fa-solid fa-magnifying-glass"></i></span>
-                    <input id="q" type="search" placeholder="Search: name, supervisor..." autocomplete="off">
+                    <input id="search" type="search" placeholder="Search" autocomplete="off">
                 </div>
                 <button class="btn btn-ghost" id="reset" type="button">Reset</button>
             </div>

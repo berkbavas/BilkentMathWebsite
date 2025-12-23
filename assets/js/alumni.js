@@ -46,9 +46,33 @@ function renderEntry(a) {
     `;
 }
 
-function render() {
+function matches(alumni, q) {
+    const ql = q.toLowerCase();
+    if (alumni.name && alumni.name.toLowerCase().includes(ql)) return true;
+    if (alumni.year && alumni.year.toString().toLowerCase().includes(ql)) return true;
+    return false;
+}
+
+function apply() {
+    const q = document.querySelector("#search").value.trim();
+    let list = ALUMNI.filter(alumni => matches(alumni, q));
+    renderCards(list);
+}
+
+function resetFilters() {
+    document.querySelector("#search").value = "";
+    apply();
+}
+
+function renderCards(list) {
     const root = document.getElementById("alumniRoot");
-    root.innerHTML = ALUMNI.map(renderEntry).join("");
+    root.innerHTML = list.map(renderEntry).join("");
+}
+
+function render() {
+    document.querySelector("#search").addEventListener("input", apply);
+    document.querySelector("#reset").addEventListener("click", resetFilters);
+    apply();
 }
 
 document.addEventListener("DOMContentLoaded", render);

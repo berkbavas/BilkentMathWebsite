@@ -12,9 +12,13 @@ function toDateKey(s, t) { // DD.MM.YYYY -> Date
 }
 
 function matches(item, q) {
-    if (!q) return true;
-    const hay = `${item.speaker} ${item.title} ${item.location}`.toLowerCase();
-    return hay.includes(q.toLowerCase());
+    const ql = q.toLowerCase();
+    if (item.title && item.title.toLowerCase().includes(ql)) return true;
+    if (item.speaker && item.speaker.toLowerCase().includes(ql)) return true;
+    if (item.date && item.date.toLowerCase().includes(ql)) return true;
+    if (item.time && item.time.toLowerCase().includes(ql)) return true;
+    if (item.place && item.place.toLowerCase().includes(ql)) return true;
+    return false;
 }
 
 // ---------- render ----------
@@ -67,7 +71,7 @@ function renderCards(list) {
 
 
 function apply() {
-    const q = $("#q").value.trim();
+    const q = $("#search").value.trim();
 
     let list = SEMINARS.filter(s => matches(s, q));
 
@@ -81,12 +85,12 @@ function apply() {
 }
 
 function resetFilters() {
-    $("#q").value = "";
+    $("#search").value = "";
     apply();
 }
 
 function render() {
-    $("#q").addEventListener("input", apply);
+    $("#search").addEventListener("input", apply);
     $("#reset").addEventListener("click", resetFilters);
     apply();
 }

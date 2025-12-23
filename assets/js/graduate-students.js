@@ -1,11 +1,6 @@
 import { GRADUATE_STUDENTS } from "../data/graduate-students.js";
 import { escapeHtml } from "./helpers.js";
 
-function matches(student, q) {
-    if (!q) return true;
-    const hay = `${student.name} ${student.advisor}`.toLowerCase();
-    return hay.includes(q.toLowerCase());
-}
 
 function card(student) {
     const URL = "https://math.bilkent.edu.tr/Grad_student_photos/";
@@ -23,25 +18,36 @@ function card(student) {
     `;
 }
 
+function matches(student, q) {
+    const ql = q.toLowerCase();
+    if (student.name && student.name.toLowerCase().includes(ql)) return true;
+    if (student.office && student.office.toLowerCase().includes(ql)) return true;
+    if (student.phone && student.phone.toLowerCase().includes(ql)) return true;
+    if (student.email && student.email.toLowerCase().includes(ql)) return true;
+    if (student.advisor && student.advisor.toLowerCase().includes(ql)) return true;
+    return false;
+}
+
+
 function renderCards(list) {
     const container = document.querySelector("#gs-cards-container");
     container.innerHTML = list.map(card).join("");
 }
 
 function apply() {
-    const q = document.querySelector("#q").value.trim();
+    const q = document.querySelector("#search").value.trim();
     let list = GRADUATE_STUDENTS.filter(student => matches(student, q));
     document.querySelector("#count").textContent = `${list.length} student(s)`;
     renderCards(list);
 }
 
 function resetFilters() {
-    document.querySelector("#q").value = "";
+    document.querySelector("#search").value = "";
     apply();
 }
 
 function render() {
-    document.querySelector("#q").addEventListener("input", apply);
+    document.querySelector("#search").addEventListener("input", apply);
     document.querySelector("#reset").addEventListener("click", resetFilters);
     apply();
 }
