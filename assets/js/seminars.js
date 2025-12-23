@@ -15,9 +15,6 @@ function matches(item, q) {
     const ql = q.toLowerCase();
     if (item.title && item.title.toLowerCase().includes(ql)) return true;
     if (item.speaker && item.speaker.toLowerCase().includes(ql)) return true;
-    if (item.date && item.date.toLowerCase().includes(ql)) return true;
-    if (item.time && item.time.toLowerCase().includes(ql)) return true;
-    if (item.place && item.place.toLowerCase().includes(ql)) return true;
     return false;
 }
 
