@@ -2,6 +2,7 @@
 <html lang="en" data-theme="light">
 <?php $pageTitle = '<title>Some of Our Alumni</title>'; ?>
 <?php include 'head.php'; ?>
+<link rel="stylesheet" href="assets/css/alumni.css?v=<?= filemtime('assets/css/alumni.css') ?>">
 
 <script type="module" src="assets/js/alumni.js?v=<?php echo filemtime('assets/js/alumni.js'); ?>" defer></script>
 

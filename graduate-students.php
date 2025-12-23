@@ -2,6 +2,7 @@
 <html lang="en">
 <?php $pageTitle = '<title data-i18n-title="pageGradStudentsTitle">Graduate Students</title>'; ?>
 <?php include 'head.php'; ?>
+<link rel="stylesheet" href="assets/css/graduate-students.css?v=<?= filemtime('assets/css/graduate-students.css') ?>">
 <script type="module" src="assets/js/graduate-students.js?v=<?= filemtime('assets/js/graduate-students.js') ?>" defer></script>
 
 <body>
@@ -22,12 +23,12 @@
                         <th>Supervisor</th>
                     </tr>
                 </thead>
-                <tbody id="graduate-students-tbody">
+                <tbody id="gs-tbody">
                 </tbody>
             </table>
         </section> -->
 
-        <div id="graduate-students-cards-container" class="graduate-students-cards-container"></div>
+        <div id="gs-cards-container" class="gs-cards-container"></div>
 
     </main>
 

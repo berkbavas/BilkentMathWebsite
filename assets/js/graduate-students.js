@@ -24,13 +24,13 @@ function card(student) {
 
   const URL = "https://math.bilkent.edu.tr/Grad_student_photos/";
   return `
-      <div class="graduate-student-card">
+      <div class="gs-card">
         <img src="${URL}${student.photo}" alt="${escapeHtml(student.name)}">
         <h3>${escapeHtml(student.name)}</h3>
-        <div class="graduate-student-content">
+        <div class="gs-content">
           <p><strong>Office:</strong> ${escapeHtml(student.office)}</p>
           <p><strong>Phone:</strong> ${escapeHtml(student.phone)}</p>
-          <p><strong>Email:</strong> <a href="mailto:${escapeHtml(student.email)}">${escapeHtml(student.email)}</a></p>
+          <p><strong>Email:</strong> ${escapeHtml(student.email)}</p>
           <p><strong>Supervisor:</strong> ${escapeHtml(student.advisor)}</p>
         </div>
       </div>
@@ -38,12 +38,12 @@ function card(student) {
 }
 
 function renderTable() {
-  const tbody = document.querySelector("#graduate-students-tbody");
+  const tbody = document.querySelector("#gs-tbody");
   tbody.innerHTML = GRADUATE_STUDENTS.map(row).join("");
 }
 
 function renderCards() {
-  const container = document.querySelector("#graduate-students-cards-container");
+  const container = document.querySelector("#gs-cards-container");
   container.innerHTML = GRADUATE_STUDENTS.map(card).join("");
 }
 

@@ -2,6 +2,7 @@
 <html lang="en">
 <?php $pageTitle = '<title data-i18n-title="pageFacultyTitle">Faculty Members</title>'; ?>
 <?php include 'head.php'; ?>
+<link rel="stylesheet" href="assets/css/faculty.css?v=<?= filemtime('assets/css/faculty.css') ?>">
 <script type="module" src="assets/js/faculty.js?v=<?= filemtime('assets/js/faculty.js') ?>" defer></script>
 
 <body>

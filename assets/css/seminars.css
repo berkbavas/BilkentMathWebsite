@@ -1,0 +1,229 @@
+/* Seminars Page Styles */
+
+.page-hero {
+    padding: 32px 0 14px;
+}
+
+.page-hero-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 16px;
+}
+
+.eyebrow {
+    margin: 0 0 10px;
+    color: var(--muted);
+    font-weight: 700;
+    letter-spacing: .02em;
+}
+
+.page-hero h1 {
+    margin: 0 0 10px;
+    font-size: 36px;
+    line-height: 1.15;
+}
+
+.lead {
+    margin: 0;
+    color: var(--muted);
+    font-size: 16.5px;
+    line-height: 1.65;
+    max-width: 70ch;
+}
+
+.filters {
+    margin-top: 16px;
+    display: grid;
+    grid-template-columns: 1.5fr 0.5fr;
+    gap: 10px;
+}
+
+.searchbox {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    border: 1px solid var(--line);
+    border-radius: 1rem;
+    padding: 10px 12px;
+    background: #ffffff;
+}
+
+.searchbox .icon {
+    opacity: .7;
+}
+
+.searchbox input {
+    border: none;
+    outline: none;
+    width: 100%;
+    background: transparent;
+    font-size: 0.9rem;
+    color: var(--text);
+}
+
+.filters select {
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    padding: 10px 12px;
+    background: rgba(255, 255, 255, .70);
+    font-size: 1rem;
+    outline: none;
+}
+
+.meta {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--muted);
+    font-weight: 600;
+}
+
+.meta .dot {
+    opacity: .45;
+}
+
+.table-card {
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    background: rgba(255, 255, 255, .75);
+    backdrop-filter: blur(10px);
+    box-shadow: var(--shadow);
+    overflow: hidden;
+}
+
+.table-wrap {
+    overflow: auto;
+}
+
+.seminar-table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 860px;
+}
+
+.seminar-table thead th {
+    text-align: left;
+    padding: 14px 16px;
+    font-size: 13px;
+    letter-spacing: .04em;
+    text-transform: uppercase;
+    color: rgba(17, 17, 17, .65);
+    border-bottom: 1px solid var(--line);
+    background: rgba(255, 255, 255, .65);
+}
+
+.seminar-table tbody td {
+    padding: 14px 16px;
+    border-bottom: 1px solid rgba(17, 17, 17, .08);
+    vertical-align: middle;
+}
+
+.seminar-table tbody tr:hover {
+    background: rgba(31, 58, 138, .06);
+}
+
+.speaker {
+    font-weight: 800;
+}
+
+.title-link {
+    color: var(--text);
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.title-link:hover {
+    text-decoration: underline;
+}
+
+/* Mobile cards */
+.cards {
+    display: none;
+    margin-top: 14px;
+    gap: 10px;
+}
+
+.seminar-card {
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    background: rgba(255, 255, 255, .78);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 10px 22px rgba(0, 0, 0, .06);
+    padding: 14px;
+}
+
+.sc-top {
+    display: flex;
+    gap: 12px;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.sc-title a {
+    color: var(--text);
+    text-decoration: none;
+    font-weight: 900;
+}
+
+.sc-title a:hover {
+    text-decoration: underline;
+}
+
+.sc-speaker {
+    margin-top: 6px;
+    color: var(--muted);
+    font-weight: 700;
+}
+
+.sc-date {
+    text-align: right;
+    min-width: 110px;
+}
+
+.sc-date .m {
+    display: block;
+    font-weight: 900;
+}
+
+.sc-date .t {
+    display: block;
+    color: var(--muted);
+    font-weight: 800;
+    margin-top: 2px;
+}
+
+.sc-meta {
+    margin-top: 10px;
+}
+
+/* Responsive */
+@media (max-width: 980px) {
+    .page-hero-top {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .filters {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 920px) {
+    .table-card {
+        display: none;
+    }
+
+    .cards {
+        display: grid;
+    }
+
+    .filters {
+        grid-template-columns: 1fr;
+    }
+
+    .page-hero h1 {
+        font-size: 30px;
+    }
+}

@@ -56,7 +56,7 @@
           </div>
         </li>
 
-        <li><a class="nav-link" href="index.php">Seminars</a></li>
+        <li><a class="nav-link" href="seminars.php">Seminars</a></li>
         <li><a class="nav-link" href="index.php">Alisbah Rewards</a></li>
         <li><a class="nav-link" href="index.php">Problem of Month</a></li>
       </ul>

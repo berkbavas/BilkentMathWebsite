@@ -1,0 +1,168 @@
+/* Graduate Students */
+
+.gs-cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.gs-card {
+    background: var(--surface);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-1);
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    transition: all 0.2s ease;
+}
+
+.gs-card:hover {
+    box-shadow: var(--shadow-2);
+}
+
+.gs-card img {
+    width: 120px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+}
+
+.gs-card h3 {
+    margin: 0.5rem 0 0.25rem;
+}
+
+.gs-card p {
+    margin: 0.1rem 0;
+    color: var(--text);
+    font-size: 0.9rem;
+}
+
+.gs-content {
+    width: 100%;
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: start;
+    text-align: left;
+}
+
+.gs-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    box-shadow: var(--shadow-2);
+    border-radius: var(--radius);
+    overflow: hidden;
+    margin-bottom: var(--space-5);
+    background: var(--surface);
+    border: 1px solid var(--border);
+
+}
+
+.gs-table th, .gs-table td {
+    padding: 1rem 1.5rem;
+    text-align: left;
+    border-bottom: 1px solid var(--border);
+    vertical-align: middle;
+}
+
+.gs-table th {
+    background: var(--accent);
+    color: white;
+    font-weight: 600;
+    font-size: 0.95rem;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.gs-table th:first-child {
+    border-top-left-radius: var(--radius);
+}
+
+.gs-table th:last-child {
+    border-top-right-radius: var(--radius);
+}
+
+.gs-table tbody tr {
+    background: var(--surface);
+
+}
+
+.gs-table tbody tr:nth-child(even) {
+    background: color-mix(in oklab, var(--surface-2) 40%, var(--surface));
+}
+
+.gs-table tbody tr:hover {
+    background: color-mix(in oklab, var(--accent) 8%, var(--surface));
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.gs-table tbody tr:last-child td:first-child {
+    border-bottom-left-radius: var(--radius);
+}
+
+.gs-table tbody tr:last-child td:last-child {
+    border-bottom-right-radius: var(--radius);
+}
+
+.gs-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.gs-table td {
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+.gs-table td:first-child {
+    font-weight: 500;
+    color: var(--primary);
+}
+
+.gs-table img {
+    width: 86px;
+    height: 86px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+/* Mobile responsive table */
+@media (max-width: 768px) {
+    .gs-table {
+        font-size: 0.9rem;
+    }
+
+    .gs-table th, .gs-table td {
+        padding: 0.8rem 1rem;
+    }
+
+    .gs-table th {
+        font-size: 0.85rem;
+    }
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .faculty-card {
+        padding: 1rem;
+    }
+
+    .faculty-avatar {
+        width: 120px;
+        font-size: 1rem;
+    }
+
+    .faculty-name {
+        font-size: 1.3rem;
+    }
+}
+
+/* ========================================================= */

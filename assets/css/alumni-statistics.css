@@ -1,0 +1,32 @@
+/* Alumni Statistics Cards */
+
+.charts {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+}
+
+.card {
+    padding: 1.5rem;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    background: var(--surface);
+    box-shadow: var(--shadow-2);
+}
+
+.card h2 {
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+
+.card h3 {
+    margin-top: 0;
+    margin-bottom: 0.75rem;
+}
+
+@media (max-width: 960px) {
+    .charts {
+        display: flex;
+        flex-direction: column;
+    }
+}
