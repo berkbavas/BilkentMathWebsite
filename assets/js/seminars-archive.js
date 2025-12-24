@@ -3,8 +3,8 @@ import { SEMINARS_2023_2024 } from "../data/seminars/seminars-2023-2024.js";
 import { escapeHtml } from "./helpers.js";
 
 const DATA = {
-    "2024–2025": SEMINARS_2024_2025,
-    "2023–2024": SEMINARS_2023_2024,
+    "2024-2025": SEMINARS_2024_2025,
+    "2023-2024": SEMINARS_2023_2024,
 };
 
 const elArchive = document.getElementById("mount");
