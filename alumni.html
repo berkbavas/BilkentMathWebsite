@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -23,26 +24,22 @@
 
     <main class="container">
 
-        <section class="page-hero">
-            <div class="page-hero-top">
-                <div>
-                    <h1 data-i18n="pageAlumniTitle">Some of Our Alumni</h1>
-                    <p class="lead" data-i18n="pageAlumniLead">
-                        Information about alumni of the Department of Mathematics.
-                    </p>
-                </div>
+        <header class="header">
+            <div class="header-top">
+                <h1>Some of Our Alumni</h1>
+                <p>Information about alumni of the Department of Mathematics.</p>
             </div>
 
+            <div class="header-controls" role="search">
+                <label class="header-search">
+                    <i class="fa-solid fa-magnifying-glass header-search-icon" aria-hidden="true"></i>
+                    <input class="header-search-input" type="search" placeholder="Search" autocomplete="off"
+                        id="search" />
+                </label>
 
-            <div class="filters">
-                <div class="searchbox">
-                    <span class="icon" aria-hidden="true"><i class="fa-solid fa-magnifying-glass"></i></span>
-                    <input id="search" type="search" placeholder="Search" autocomplete="off">
-                </div>
-                <button class="btn btn-ghost" id="reset" type="button">Reset</button>
+                <button class="btn btn-ghost" type="button" id="reset">Reset</button>
             </div>
-            
-        </section>
+        </header>
 
         <!-- Alumni content will be injected here -->
         <div id="alumniRoot" class="alumni-grid"></div>

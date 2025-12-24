@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -22,29 +23,26 @@
 
     <main class="container">
 
-        <section class="page-hero">
-            <div class="page-hero-top">
-                <div>
-                    <h1 data-i18n="pageGradStudentsTitle">Graduate Students</h1>
-                    <p class="lead" data-i18n="pageGradStudentsLead">
-                        Information about current graduate students of the Department of Mathematics.
-                    </p>
-                </div>
+        <header class="header">
+            <div class="header-top">
+                <h1>Graduate Students</h1>
+                <p>Information about current graduate students of the Department of Mathematics.</p>
             </div>
 
-            <div class="filters">
-                <div class="searchbox">
-                    <span class="icon" aria-hidden="true"><i class="fa-solid fa-magnifying-glass"></i></span>
-                    <input id="search" type="search" placeholder="Search" autocomplete="off">
-                </div>
-                <button class="btn btn-ghost" id="reset" type="button">Reset</button>
+            <div class="header-controls" role="search">
+                <label class="header-search">
+                    <i class="fa-solid fa-magnifying-glass header-search-icon" aria-hidden="true"></i>
+                    <input class="header-search-input" type="search" placeholder="Search"
+                        autocomplete="off" id="search" />
+                </label>
+
+                <button class="btn btn-ghost" type="button" id="reset">Reset</button>
             </div>
 
-            <div class="meta">
-                <span id="count"></span>
+            <div class="header-meta">
+                <span class="pill" id="count">0 student(s)</span>
             </div>
-
-        </section>
+        </header>
 
         <div id="gs-cards-container" class="gs-grid"></div>
 

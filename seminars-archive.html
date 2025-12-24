@@ -22,39 +22,39 @@
     <header id="navigation" class="topbar"></header>
 
     <main class="container">
-        <!-- Header -->
-        <section class="page-hero">
-            <div class="page-hero-top">
-                <div>
-                    <h1>Seminars Archive</h1>
-                    <p class="lead">
-                        Department seminars held between 2009 and 2025 (by academic year).
-                    </p>
-                </div>
+
+        <header class="header">
+            <div class="header-top">
+                <h1>Seminars Archive</h1>
+                <p>Department seminars held between 2009 and 2025 (by academic year).</p>
             </div>
 
+            <div class="header-controls" role="search">
+                <label class="header-search">
+                    <i class="fa-solid fa-magnifying-glass header-search-icon" aria-hidden="true"></i>
+                    <input class="header-search-input" type="search" placeholder="Search" autocomplete="off"
+                        id="search" />
+                </label>
 
-            <div class="filters">
-                <div class="searchbox">
-                    <span class="icon" aria-hidden="true"><i class="fa-solid fa-magnifying-glass"></i></span>
-                    <input id="search" type="search" placeholder="Search" autocomplete="off">
-                </div>
-                <button class="btn" id="reset" type="button">Reset</button>
-                <button class="btn" id="expandAll" type="button">Expand all</button>
-                <button class="btn" id="collapseAll" type="button">Collapse all</button>
+                <button class="btn btn-ghost" type="button" id="reset">Reset</button>
+                <button class="btn btn-ghost" id="expandAll" type="button">Expand all</button>
+                <button class="btn btn-ghost" id="collapseAll" type="button">Collapse all</button>
             </div>
+        </header>
 
-        </section>
-        <p> Files from February 2009 through June 2012 are mainly "mht" files, which can best be
-            opened using the following software:</p>
-        <ul>
-            <li><a href="https://www.microsoft.com/en-us/download/details.aspx?id=21714" target="_blank"
-                    rel="noopener">Microsoft Internet Explorer</a>
-            </li>
-            <li><a href="https://addons.mozilla.org/en-US/firefox/addon/unmht/" target="_blank" rel="noopener">Mozilla
-                    Firefox</a> with "UnMHT" add-on
-            </li>
-        </ul>
+        <div class="info-box">
+            <p>Files from February 2009 through June 2012 are mainly "mht" files, which can best be opened using the
+                following software:</p>
+            <ul>
+                <li><a href="https://www.microsoft.com/en-us/download/details.aspx?id=21714" target="_blank"
+                        rel="noopener">Microsoft Internet Explorer</a>
+                </li>
+                <li><a href="https://addons.mozilla.org/en-US/firefox/addon/unmht/" target="_blank"
+                        rel="noopener">Mozilla
+                        Firefox</a> with "UnMHT" add-on
+                </li>
+            </ul>
+        </div>
 
         <div id="mount" class="archive-accordion"></div>
 

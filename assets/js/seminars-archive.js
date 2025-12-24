@@ -115,7 +115,6 @@ function render() {
         const count = list.length;
         const details = document.createElement("details");
         details.className = "archive-year";
-
         details.innerHTML = `
       <summary>
         <div class="year-summary">

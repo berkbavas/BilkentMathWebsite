@@ -1,7 +1,6 @@
-.filters {
-    margin-top: 16px;
+.header-controls {
     display: grid;
-    grid-template-columns: 1.5fr 0.5fr 0.5fr 0.5fr;
+    grid-template-columns: 1fr auto auto auto;
     gap: 10px;
 }
 
@@ -196,7 +195,7 @@ details[open] .chev {
 
 /* Responsive */
 @media (max-width: 960px) {
-    .filters {
+    .header-controls {
         grid-template-columns: 1fr;
     }
 

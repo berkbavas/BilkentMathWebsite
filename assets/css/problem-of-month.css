@@ -1,0 +1,425 @@
+:root {
+    --pom-surface: var(--surface, #fff);
+    --pom-border: var(--border, rgba(17, 17, 17, .12));
+    --pom-muted: var(--muted, rgba(17, 17, 17, .68));
+    --pom-radius: 16px;
+}
+
+.pom-card {
+    background: var(--pom-surface);
+    border: 1px solid var(--pom-border);
+    border-radius: var(--pom-radius);
+    padding: 18px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, .04);
+    transition: transform .12s ease, box-shadow .18s ease, border-color .18s ease;
+}
+
+.pom-card:hover {
+    box-shadow: 0 16px 36px rgba(0, 0, 0, .08);
+    border-color: rgba(17, 17, 17, .18);
+}
+
+.pom-card h2 {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.pom-hero {
+    display: grid;
+    grid-template-columns: 1.25fr .75fr;
+    gap: 18px;
+    align-items: start;
+    margin-bottom: 1rem;
+}
+
+@media (max-width: 900px) {
+    .pom-hero {
+        grid-template-columns: 1fr;
+    }
+}
+
+.pom-meta {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    font-size: 1em;
+}
+
+.pom-meta strong {
+    color: inherit;
+    font-weight: 600;
+}
+
+
+.pom-btn {
+    padding: 10px 16px;
+    border-radius: 8px;
+    border: 1px solid var(--pom-border);
+    background-color: #000;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: transform .06s ease, box-shadow .18s ease, border-color .18s ease;
+}
+
+.pom-btn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 10px 24px rgba(0, 0, 0, .08);
+    border-color: rgba(17, 17, 17, .22);
+}
+
+.pom-btn:active {
+    transform: translateY(0);
+}
+
+.pom-btn-secondary {
+    padding: 10px 16px;
+    border-radius: 8px;
+    border: 1px solid var(--pom-border);
+    background-color: #fff;
+    color: #000;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: transform .06s ease, box-shadow .18s ease, border-color .18s ease;
+}
+
+.pom-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 14px;
+}
+
+.archive-accordion-details {
+    border: 1px solid #eee;
+    border-radius: 1rem;
+    padding: 0;
+    margin: 12px 0;
+    background: #fff;
+    overflow: hidden;
+}
+
+.archive-accordion-details[open] {
+    border-color: #e6e6e6;
+}
+
+.archive-accordion-summary {
+    list-style: none;
+    cursor: pointer;
+    padding: 14px 14px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.archive-accordion-summary::-webkit-details-marker {
+    display: none;
+}
+
+
+.year-summary {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    gap: 12px;
+}
+
+.year-left {
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+    min-width: 0;
+}
+
+.year-title {
+    font-size: 18px;
+    font-weight: 650;
+    letter-spacing: 0.2px;
+    white-space: nowrap;
+}
+
+.year-right {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #666;
+    font-size: 13px;
+    white-space: nowrap;
+}
+
+.chev {
+    width: 10px;
+    height: 10px;
+    border-right: 2px solid #777;
+    border-bottom: 2px solid #777;
+    transform: rotate(-45deg);
+    transition: transform .18s ease;
+    margin-left: 6px;
+}
+
+details[open] .chev {
+    transform: rotate(45deg);
+}
+
+.pom-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(520px, 1fr));
+    gap: 18px;
+    margin-top: 1rem;
+    padding: 1rem;
+}
+
+@media (max-width: 960px) {
+    .pom-cards {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+.pom-top {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+
+/* --- Month cards polish (drop-in overrides) --- */
+:root {
+    --pom-shadow: 0 10px 28px rgba(0, 0, 0, .06);
+    --pom-shadow-hover: 0 18px 40px rgba(0, 0, 0, .10);
+}
+
+.pom-month-card {
+    background: var(--pom-surface);
+    border: 1px solid var(--pom-border);
+    border-radius: var(--pom-radius);
+    padding: 18px;
+    box-shadow: var(--pom-shadow);
+    transition: transform .12s ease, box-shadow .18s ease, border-color .18s ease;
+}
+
+.pom-month-card:hover {
+    box-shadow: var(--pom-shadow-hover);
+    border-color: rgba(17, 17, 17, .18);
+}
+
+.pom-monthline {
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+}
+
+.pom-month {
+    font-size: 18px;
+    font-weight: 750;
+    letter-spacing: .2px;
+}
+
+.pom-year {
+    font-size: 13px;
+    color: var(--pom-muted);
+    font-weight: 650;
+}
+
+.pom-subline {
+    margin-top: 8px;
+}
+
+.badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 10px;
+    border-radius: 999px;
+    border: 1px solid var(--pom-border);
+    background: rgba(17, 17, 17, .03);
+    font-size: 12.5px;
+    font-weight: 650;
+    color: rgba(17, 17, 17, .78);
+}
+
+/* --- Chips: icon + hierarchy --- */
+.pom-links {
+    display: inline-flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 12px;
+    border-radius: 999px;
+    border: 1px solid var(--pom-border);
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 13px;
+    transition: transform .06s ease, box-shadow .18s ease, border-color .18s ease;
+}
+
+.chip:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 10px 22px rgba(0, 0, 0, .08);
+    border-color: rgba(17, 17, 17, .22);
+}
+
+.chip-ghost {
+    background: #fff;
+    color: rgba(17, 17, 17, .92);
+}
+
+.pom-links a {
+    text-decoration: none;
+}
+
+.pom-links a:hover {
+    text-decoration: none;
+}
+
+.chip-solid {
+    background: rgba(17, 17, 17, .92);
+    color: #fff;
+    border-color: rgba(17, 17, 17, .92);
+}
+
+/* --- Year header meta pills --- */
+.year-meta {
+    display: inline-flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.year-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 10px;
+    border-radius: 999px;
+    border: 1px solid var(--pom-border);
+    background: rgba(17, 17, 17, .03);
+    font-size: 12px;
+    font-weight: 650;
+    color: rgba(17, 17, 17, .76);
+}
+
+/* --- Solvers details: better summary row --- */
+.solvers-details {
+    margin-top: 6px;
+}
+
+.solvers-summary {
+    list-style: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 12px 12px;
+    border-radius: 12px;
+    border: 1px solid var(--pom-border);
+    background: rgba(17, 17, 17, .02);
+}
+
+.solvers-summary::-webkit-details-marker {
+    display: none;
+}
+
+.solvers-left {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 750;
+}
+
+.solvers-right {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.count-pill {
+    min-width: 34px;
+    height: 26px;
+    padding: 0 10px;
+    border-radius: 999px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    font-weight: 800;
+    border: 1px solid var(--pom-border);
+    background: #fff;
+}
+
+/* reuse your existing .chev, but smaller inside solvers */
+.chev-mini {
+    width: 7px;
+    height: 7px;
+    border-right: 2px solid #777;
+    border-bottom: 2px solid #777;
+    transform: rotate(-45deg);
+    transition: transform .18s ease;
+    margin-left: 6px;
+}
+
+/* open state: rotate mini chevron too */
+.solvers-details[open] .chev-mini {
+    transform: rotate(45deg);
+}
+
+/* --- Solver list: columns + name/aff split --- */
+.solver-list {
+    margin-top: 10px;
+    padding-left: 0;
+    list-style: none;
+    /* remove bullets for cleaner look */
+}
+
+.solver-grid {
+    column-count: 2;
+    column-gap: 26px;
+}
+
+@media (max-width: 960px) {
+    .solver-grid {
+        column-count: 1;
+    }
+}
+
+.solver-item {
+    break-inside: avoid;
+    padding: 8px 10px;
+    margin: 0 0 10px;
+    border-radius: 12px;
+    border: 1px solid rgba(17, 17, 17, .08);
+    background: #fff;
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 12px;
+}
+
+.solver-item:hover {
+    border-color: rgba(17, 17, 17, .16);
+    box-shadow: 0 10px 22px rgba(0, 0, 0, .06);
+}
+
+.solver-name {
+    font-weight: 700;
+    font-size: 0.85em;
+}
+
+.solver-aff {
+    font-size: 0.7em;
+    color: rgba(17, 17, 17, .62);
+    white-space: nowrap;
+}
