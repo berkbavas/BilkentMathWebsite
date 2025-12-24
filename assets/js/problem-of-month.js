@@ -49,7 +49,7 @@ function renderCard(item) {
           <i class="fa-regular fa-circle-question"></i>
           Question
         </a>
-        <a href="${item.solution}" target="_blank" class="chip chip-solid" aria-label="Open solution PDF">
+        <a href="${item.solution}" target="_blank" class="chip chip-ghost" aria-label="Open solution PDF">
           <i class="fa-regular fa-file-lines"></i>
           Solution
         </a>
