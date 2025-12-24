@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bilkent University • Department of Mathematics</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/common.css">
+    <link rel="stylesheet" href="assets/css/navigation.css">
+    <link rel="stylesheet" href="assets/css/faculty.css">
+</head>
+<script src="assets/js/app.js" defer></script>
+<script type="module" src="assets/js/faculty.js" defer></script>
+
+<body>
+    <header id="navigation" class="topbar"></header>
+
+    <main class="container">
+
+        <section class="page-hero">
+            <div class="page-hero-top">
+                <div>
+                    <h1 data-i18n="pageFacultyTitle">Faculty Members</h1>
+                    <p class="lead" data-i18n="pageFacultyLead">
+                        Information about faculty members of the Department of Mathematics.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="wrap">
+            <h1>Current Faculty</h1>
+            <div id="gridCurrent" class="faculty-grid" aria-label="Faculty list"></div>
+        </section>
+
+        <section class="wrap">
+            <h1>Emeriti</h1>
+            <div id="gridEmeriti" class="faculty-grid" aria-label="Emeriti list"></div>
+        </section>
+
+    </main>
+
+    <footer id="footer" class="footer"></footer>
+
+</body>
+
+</html>

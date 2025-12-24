@@ -2,9 +2,20 @@
    App bootstrap
    ========================================================== */
 document.addEventListener("DOMContentLoaded", () => {
+    init();
     setupNavigation();
     setupLanguageToggle();
 });
+
+
+function init() {
+    fetch("navigation.html")
+        .then(res => res.text())
+        .then(html => { document.getElementById("navigation").innerHTML = html; });
+    fetch("footer.html")
+        .then(res => res.text())
+        .then(html => { document.getElementById("footer").innerHTML = html; });
+}
 
 /* ==========================================================
    Selectors (single source of truth)
