@@ -233,6 +233,8 @@ p {
     border: 1px solid var(--border);
     font-weight: 600;
     cursor: pointer;
+    background-color: var(--surface);
+    color: var(--text);
     transition: transform .08s ease, background .2s ease, border-color .2s ease;
 }
 
@@ -241,11 +243,12 @@ p {
 }
 
 .btn-ghost {
-    background: rgba(17, 17, 17, .03);
+    background-color: rgba(17, 17, 17, .03);
+    color: var(--text);
 }
 
 .btn-ghost:hover {
-    background: rgba(17, 17, 17, .06);
+    background-color: rgba(17, 17, 17, .06);
 }
 
 /* Responsive */
