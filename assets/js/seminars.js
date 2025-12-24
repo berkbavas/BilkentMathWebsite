@@ -4,92 +4,92 @@ import { escapeHtml } from "./helpers.js";
 // ---------- helpers ----------
 const $ = (sel) => document.querySelector(sel);
 
-
 function toDateKey(s, t) { // DD.MM.YYYY -> Date
-	const [d, m, y] = s.split(".").map(x => x.padStart(2, "0"));
-	const [hh, mm] = (t || "00:00").split(":").map(x => x.padStart(2, "0"));
-	return new Date(`${y}-${m}-${d}T${hh}:${mm}:00`);
+  const [d, m, y] = s.split(".").map(x => x.padStart(2, "0"));
+  const [hh, mm] = (t || "00:00").split(":").map(x => x.padStart(2, "0"));
+  return new Date(`${y}-${m}-${d}T${hh}:${mm}:00`);
 }
 
 function matches(item, q) {
-	const ql = q.toLowerCase();
-	if (item.title && item.title.toLowerCase().includes(ql)) return true;
-	if (item.speaker && item.speaker.toLowerCase().includes(ql)) return true;
-	return false;
+  const ql = q.toLowerCase();
+  if (item.title && item.title.toLowerCase().includes(ql)) return true;
+  if (item.speaker && item.speaker.toLowerCase().includes(ql)) return true;
+  return false;
+}
+
+function renderRow(seminar) {
+  return `
+    <tr>
+      <td>
+        <a class="title-link" target="_blank" href="${seminar.link || "#"}">${escapeHtml(seminar.title)}</a>
+        <div class="col-speaker">${escapeHtml(seminar.speaker)}</div>
+      </td>
+      <td>${escapeHtml(seminar.date)}</td>
+      <td>${escapeHtml(seminar.time)}</td>
+      <td><span class="pill">${escapeHtml(seminar.place)}</span></td>
+    </tr>
+  `
 }
 
 // ---------- render ----------
 function renderTable(list) {
-	const tbody = $("#tbody");
-	tbody.innerHTML = list.map(s => `
-    <tr>
-      <td class="col-speaker">
-        <div class="speaker">${escapeHtml(s.speaker)}</div>
-      </td>
-      <td class="col-title">
-        <a class="title-link" href="${s.link || "#"}">
-          ${escapeHtml(s.title)}
-        </a>
-      </td>
-      <td class="col-date">
-        <span class="chip">${escapeHtml(s.date)}</span>
-      </td>
-      <td class="col-time">${escapeHtml(s.time)}</td>
-      <td class="col-place">
-        <span class="pill">${escapeHtml(s.place)}</span>
-      </td>
-    </tr>
-  `).join("");
+  const tbody = $("#tbody");
+  tbody.innerHTML = list.map(renderRow).join("");
 }
 
-function renderCards(list) {
-	const cards = $("#cards");
-	cards.innerHTML = list.map(s => `
+function renderCard(seminar) {
+  return `
     <article class="seminar-card">
       <div class="sc-top">
         <div>
           <div class="sc-title">
-            <a href="${s.link || "#"}">${escapeHtml(s.title)}</a>
+            <a href="${seminar.link || "#"}">${escapeHtml(seminar.title)}</a>
           </div>
-          <div class="sc-speaker">${escapeHtml(s.speaker)}</div>
+          <div class="sc-speaker">${escapeHtml(seminar.speaker)}</div>
         </div>
         <div class="sc-date">
-          <span class="m">${escapeHtml(s.date)}</span>
-          <span class="t">${escapeHtml(s.time)}</span>
+          <span class="m">${escapeHtml(seminar.date)}</span>
+          <span class="t">${escapeHtml(seminar.time)}</span>
         </div>
       </div>
 
       <div class="sc-meta">
-        <span class="pill">${escapeHtml(s.place)}</span>
+        <span class="pill">${escapeHtml(seminar.place)}</span>
       </div>
     </article>
-  `).join("");
+  `;
+}
+
+
+function renderCards(list) {
+  const cards = $("#cards");
+  cards.innerHTML = list.map(renderCard).join("");
 }
 
 
 function apply() {
-	const q = $("#search").value.trim();
+  const search = $("#search").value.trim();
 
-	let list = SEMINARS.filter(s => matches(s, q));
+  let list = SEMINARS.filter(s => matches(s, search));
 
-	list.sort((a, b) => {
-		return toDateKey(b.date, b.time) - toDateKey(a.date, a.time);
-	});
+  list.sort((a, b) => {
+    return toDateKey(b.date, b.time) - toDateKey(a.date, a.time);
+  });
 
-	$("#count").textContent = `${list.length} seminar(s)`;
-	renderTable(list);
-	renderCards(list);
+  $("#count").textContent = `${list.length} seminar(s)`;
+  renderTable(list);
+  renderCards(list);
 }
 
 function resetFilters() {
-	$("#search").value = "";
-	apply();
+  $("#search").value = "";
+  apply();
 }
 
 function render() {
-	$("#search").addEventListener("input", apply);
-	$("#reset").addEventListener("click", resetFilters);
-	apply();
+  $("#search").addEventListener("input", apply);
+  $("#reset").addEventListener("click", resetFilters);
+  apply();
 }
 
 document.addEventListener("DOMContentLoaded", render);

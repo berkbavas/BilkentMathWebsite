@@ -239,7 +239,7 @@
 }
 
 /* Responsive */
-@media (max-width: 1200px) {
+@media (max-width: 1260px) {
     .nav-toggle {
         display: inline-flex;
         align-items: center;

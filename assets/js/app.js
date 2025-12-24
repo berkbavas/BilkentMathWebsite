@@ -1,17 +1,17 @@
 /* ==========================================================
    App bootstrap
    ========================================================== */
-document.addEventListener("DOMContentLoaded", () => {
-    init();
-    setupNavigation();
-    setupLanguageToggle();
-});
-
+document.addEventListener("DOMContentLoaded", init);
 
 function init() {
     fetch("navigation.html")
         .then(res => res.text())
-        .then(html => { document.getElementById("navigation").innerHTML = html; });
+        .then(html => {
+            document.getElementById("navigation").innerHTML = html;
+            setupNavigation();
+            setupLanguageToggle();
+        });
+        
     fetch("footer.html")
         .then(res => res.text())
         .then(html => { document.getElementById("footer").innerHTML = html; });

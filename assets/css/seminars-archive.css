@@ -1,13 +1,93 @@
-/* Seminars Page Styles */
+.filters {
+    margin-top: 16px;
+    display: grid;
+    grid-template-columns: 1.5fr 0.5fr 0.5fr 0.5fr;
+    gap: 10px;
+}
 
-/* Table styles */
+.chev {
+    width: 10px;
+    height: 10px;
+    border-right: 2px solid #777;
+    border-bottom: 2px solid #777;
+    transform: rotate(-45deg);
+    transition: transform .18s ease;
+    margin-left: 6px;
+}
+
+details[open] .chev {
+    transform: rotate(45deg);
+}
+
+.year-body {
+    padding: 0;
+}
+
+.year-summary {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    gap: 12px;
+}
+
+.year-left {
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+    min-width: 0;
+}
+
+.year-title {
+    font-size: 18px;
+    font-weight: 650;
+    letter-spacing: 0.2px;
+    white-space: nowrap;
+}
+
+.year-count {
+    font-size: 13px;
+    color: #666;
+    white-space: nowrap;
+}
+
+.year-right {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #666;
+    font-size: 13px;
+    white-space: nowrap;
+}
+
+.archive-accordion details {
+    border: 1px solid #eee;
+    border-radius: 1rem;
+    padding: 0;
+    margin: 12px 0;
+    background: #fff;
+    overflow: hidden;
+}
+
+.archive-accordion details[open] {
+    border-color: #e6e6e6;
+}
+
+.archive-accordion summary {
+    list-style: none;
+    cursor: pointer;
+    padding: 14px 14px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.archive-accordion summary::-webkit-details-marker {
+    display: none;
+}
+
 
 .table-card {
-    border: 1px solid var(--line);
-    border-radius: var(--radius);
-    background: rgba(255, 255, 255, .75);
-    backdrop-filter: blur(10px);
-    box-shadow: var(--shadow);
     overflow: hidden;
 }
 
@@ -28,6 +108,7 @@
     letter-spacing: .04em;
     text-transform: uppercase;
     color: rgba(17, 17, 17, .65);
+    border-top: 1px solid var(--line);
     border-bottom: 1px solid var(--line);
     background: rgba(255, 255, 255, .65);
 }
@@ -60,7 +141,7 @@
 /* Mobile cards */
 .cards {
     display: none;
-    margin-top: 14px;
+    padding: 14px;
     gap: 10px;
 }
 
@@ -115,6 +196,9 @@
 
 /* Responsive */
 @media (max-width: 960px) {
+    .filters {
+        grid-template-columns: 1fr;
+    }
 
     .table-card {
         display: none;
