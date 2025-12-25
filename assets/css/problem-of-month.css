@@ -53,38 +53,9 @@
 }
 
 
-.pom-btn {
-    padding: 10px 16px;
-    border-radius: 8px;
-    border: 1px solid var(--pom-border);
+.black-bg {
     background-color: #000;
     color: #fff;
-    font-size: 14px;
-    font-weight: 700;
-    cursor: pointer;
-    transition: transform .06s ease, box-shadow .18s ease, border-color .18s ease;
-}
-
-.pom-btn:hover {
-    transform: translateY(-1px);
-    box-shadow: 0 10px 24px rgba(0, 0, 0, .08);
-    border-color: rgba(17, 17, 17, .22);
-}
-
-.pom-btn:active {
-    transform: translateY(0);
-}
-
-.pom-btn-secondary {
-    padding: 10px 16px;
-    border-radius: 8px;
-    border: 1px solid var(--pom-border);
-    background-color: #fff;
-    color: #000;
-    font-size: 14px;
-    font-weight: 700;
-    cursor: pointer;
-    transition: transform .06s ease, box-shadow .18s ease, border-color .18s ease;
 }
 
 .pom-actions {

@@ -131,7 +131,7 @@ function render() {
 
         // Quick links
         const linkBtn = document.createElement("button");
-        linkBtn.className = "pom-btn-secondary";
+        linkBtn.className = "btn btn-ghost";
         linkBtn.textContent = year;
         linkBtn.addEventListener("click", () => {
             document.getElementById(`year-${year}`).scrollIntoView({ behavior: "smooth" });

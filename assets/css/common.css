@@ -49,7 +49,8 @@
     box-sizing: border-box;
 }
 
-html, body {
+html,
+body {
     height: 100%;
     scrollbar-gutter: stable;
 }
@@ -102,7 +103,8 @@ p {
     font-size: 1rem;
 }
 
-.footer p, .footer a {
+.footer p,
+.footer a {
     color: var(--muted);
 }
 
@@ -130,29 +132,54 @@ p {
 
 /* Shared components (used across multiple pages) */
 .card {
-    background: var(--card-bg, #ffffff);
+    background: #ffffff;
     border: 1px solid var(--border);
     border-radius: 14px;
     padding: 1.5rem;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
     display: flex;
     flex-direction: column;
-    gap: 1.2rem;
+    gap: 1rem;
     transition: all 0.2s ease;
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    border-radius: 1rem;
+    margin: 12px 0;
+    object-fit: cover;
+}
+
+.card h2 {
+    padding: 0;
+    margin: 0;
+}
+
+.card p {
+    padding: 0;
+    margin: 0;
 }
 
 .card:hover {
     box-shadow: 0 14px 40px rgba(0, 0, 0, 0.1);
 }
 
-.pill, .chip {
+.image-with-text {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}
+
+.pill,
+.chip {
     display: inline-flex;
     padding: 6px 10px;
     border-radius: 999px;
     border: 1px solid var(--line);
     background: rgba(255, 255, 255, .65);
     font-weight: 800;
-    font-size: 13px;
+    font-size: 14px;
 }
 
 .muted {
@@ -171,20 +198,20 @@ p {
     margin-bottom: 1rem;
 }
 
-.header-top {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-}
-
 .header h1 {
-    font-size: 2rem;
+    font-size: 2em;
     margin: 0;
 }
 
 .header p {
     margin: 4px 0 0 0;
-    font-size: 16px;
+    font-size: 1em;
+}
+
+.header-top {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
 }
 
 .header-controls {
@@ -251,9 +278,30 @@ p {
     background-color: rgba(17, 17, 17, .06);
 }
 
+.two-column-newspaper {
+    column-count: 2;
+    column-gap: 2rem;
+    column-rule: 1px solid #e0e0e0;
+    hyphens: auto;
+    line-height: 1.6;
+    font-size: 16px;
+}
+
 /* Responsive */
 
 @media (max-width: 960px) {
+    .header h1 {
+        font-size: 1.75em;
+    }
+
+    .header p {
+        font-size: 0.9em;
+    }
+
+    .header-controls {
+        grid-template-columns: 1fr;
+    }
+
     .filters {
         grid-template-columns: 1fr;
     }
@@ -266,4 +314,6 @@ p {
     .page-hero h1 {
         font-size: 30px;
     }
+
+
 }
