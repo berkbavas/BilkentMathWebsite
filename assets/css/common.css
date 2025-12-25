@@ -307,10 +307,6 @@ p {
         font-size: 1.75em;
     }
 
-    .header p {
-        font-size: 0.9em;
-    }
-
     .header-controls {
         grid-template-columns: 1fr;
     }
@@ -327,6 +323,4 @@ p {
     .page-hero h1 {
         font-size: 30px;
     }
-
-
 }
