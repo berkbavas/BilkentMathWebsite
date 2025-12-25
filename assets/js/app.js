@@ -1,6 +1,8 @@
 /* ==========================================================
    App bootstrap
    ========================================================== */
+import {TRANSLATIONS} from '../data/translations.js';
+
 document.addEventListener("DOMContentLoaded", init);
 
 function init() {
@@ -11,7 +13,7 @@ function init() {
             setupNavigation();
             setupLanguageToggle();
         });
-        
+
     fetch("footer.html")
         .then(res => res.text())
         .then(html => { document.getElementById("footer").innerHTML = html; });
@@ -95,6 +97,9 @@ function setupLanguageToggle() {
 
     let currentLang = "en"; // default language
 
+
+    applyTranslations(currentLang);
+
     toggle.addEventListener("click", () => {
         currentLang = currentLang === "en" ? "tr" : "en";
         toggle.textContent = currentLang.toUpperCase();
@@ -105,27 +110,17 @@ function setupLanguageToggle() {
 /* ==========================================================
    Translations
    ========================================================== */
-const TRANSLATIONS = {
-    en: {
-        pageHomeTitle: "Department of Mathematics • Bilkent University"
-    },
-    tr: {
-        pageHomeTitle: "Matematik Bölümü • Bilkent Üniversitesi"
-    }
-};
 
 function applyTranslations(lang) {
     const dict = TRANSLATIONS[lang];
-    if (!dict) return;
 
-    /* Title */
-    if (dict.pageHomeTitle) {
-        document.title = dict.pageHomeTitle;
-    }
+    document.querySelectorAll("[data-lang]").forEach(el => {
+        el.hidden = (el.dataset.lang !== lang);
+    });
 
-    /* Optional: data-i18n-text usage */
     document.querySelectorAll("[data-i18n]").forEach(el => {
         const key = el.getAttribute("data-i18n");
+        console.log(key, dict[key]);
         if (dict[key]) {
             el.textContent = dict[key];
         }
