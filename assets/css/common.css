@@ -265,9 +265,9 @@ p {
 }
 
 .btn-black {
-    padding: 14px;
+    padding: 16px;
     border-radius: 999px;
-    font-weight: 600;
+    font-weight: 800;
     cursor: pointer;
     background-color: #000;
     color: #fff;
