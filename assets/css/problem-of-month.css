@@ -52,12 +52,6 @@
     font-weight: 600;
 }
 
-
-.black-bg {
-    background-color: #000;
-    color: #fff;
-}
-
 .pom-actions {
     display: flex;
     flex-wrap: wrap;

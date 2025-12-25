@@ -264,6 +264,20 @@ p {
     transition: transform .08s ease, background .2s ease, border-color .2s ease;
 }
 
+.btn-black {
+    padding: 14px;
+    border-radius: 999px;
+    font-weight: 600;
+    cursor: pointer;
+    background-color: #000;
+    color: #fff;
+    transition: transform .08s ease, background .2s ease, border-color .2s ease;
+}
+
+.btn-black:active {
+    transform: scale(.97);
+}
+
 .btn:active {
     transform: scale(.97);
 }
