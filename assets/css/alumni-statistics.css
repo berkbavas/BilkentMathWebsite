@@ -24,6 +24,13 @@
     margin-bottom: 0.75rem;
 }
 
+.chart-sub {
+    margin-top: -8px;
+    margin-bottom: 12px;
+    font-size: 0.9rem;
+    color: #777;
+}
+
 @media (max-width: 960px) {
     .charts {
         display: flex;

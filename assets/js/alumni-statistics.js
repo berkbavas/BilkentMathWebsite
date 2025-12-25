@@ -14,6 +14,8 @@ async function render() {
                 datasets: [{
                     label: "Percentage",
                     data: values,
+                    borderRadius: 6,
+                    maxBarThickness: 48
                 }],
             },
             options: {
@@ -42,8 +44,10 @@ async function render() {
             data: {
                 labels,
                 datasets: [{
-                    data: values
-                }]
+                    data: values,
+                    borderWidth: 2,
+                    hoverOffset: 8
+                }],
             },
             options: {
                 responsive: true,
