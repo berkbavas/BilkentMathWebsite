@@ -6,7 +6,6 @@ function renderEntry(a) {
 
     const photoUrl = "https://math.bilkent.edu.tr/Alumni/" + (a.photo || "");
     const bullets = Array.isArray(a.bullets) ? a.bullets : [];
-    const links = Array.isArray(a.links) ? a.links : [];
 
     const imgHtml = a.photo
         ? `<img src="${photoUrl}" alt="${esc(a.name)}" loading="lazy">`
@@ -24,12 +23,6 @@ function renderEntry(a) {
         ? `<div class="alumni-update">Son güncelleme: ${esc(a.lastUpdate)}</div>`
         : "";
 
-    const linksHtml = links.length
-        ? `<div class="alumni-links">
-          ${links.map(l => `<a href="${esc(l.url)}" target="_blank" rel="noopener">${esc(l.label || "Link")}</a>`).join(" · ")}
-        </div>`
-        : "";
-
     return `
       <article class="card alumni-entry">
         <h3>${esc(a.name || "")}, <strong>${esc(a.year || "")}</strong></h3>
@@ -39,7 +32,6 @@ function renderEntry(a) {
                 ${bulletHtml}
             </div>
         ${storyHtml}
-        ${linksHtml}
         ${lastUpdateHtml}
         </div>
       </article>
