@@ -2,6 +2,7 @@
     display: grid;
     grid-template-columns: 1fr auto auto auto;
     gap: 10px;
+    margin-bottom: 2rem;
 }
 
 .chev {

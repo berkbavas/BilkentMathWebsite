@@ -1,0 +1,144 @@
+/* Narrative / history text */
+.container>p {
+  max-width: 780px;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 1.05rem;
+  line-height: 1.75;
+  color: #444;
+}
+
+.container>p+p {
+  margin-top: 1rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.card {
+  background: #fff;
+  border-radius: 14px;
+  overflow: hidden;
+  border: 1px solid #eee;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.04);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 40px rgba(0, 0, 0, 0.08);
+}
+
+/* ===== Card internals (fills the empty blocks) ===== */
+
+.card-header {
+  padding: 1.25rem 1.25rem 0.25rem;
+  display: grid;
+  place-items: center;
+}
+
+
+.card-photo {
+  width: 100%;
+  height: auto;
+}
+
+/* content wrapper */
+.card-content {
+  padding: 0.75rem 1.25rem 1.25rem;
+  text-align: center;
+}
+
+/* Name */
+.card-name {
+  margin: 0.35rem 0 0;
+  font-weight: 650;
+  font-size: 1.18rem;
+  letter-spacing: -0.01em;
+  color: #111;
+}
+
+/* Title */
+.card-title {
+  margin: 0.25rem 0 0;
+  font-size: 0.95rem;
+  color: #555;
+}
+
+/* PhD line */
+.card-phd {
+  margin: 0.35rem 0 0;
+  font-size: 0.88rem;
+  color: #777;
+}
+
+/* Areas: chips container */
+.card-areas {
+  margin-top: 0.9rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.45rem;
+}
+
+/* Chip style */
+.chip {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.28rem 0.6rem;
+  border-radius: 999px;
+  font-size: 0.78rem;
+  line-height: 1;
+  background: #f3f5f8;
+  border: 1px solid #eceff3;
+  color: #444;
+  white-space: nowrap;
+}
+
+/* Term badge */
+.card-term {
+  margin: 0.9rem auto 0;
+  padding: 0.7rem 0.95rem;
+  border-radius: 12px;
+  font-size: 1rem;
+  font-weight: 600;
+  background: #f5f5f5;
+  border: 1px solid #e0e0e0;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+/* Link button-ish */
+.card-link {
+  font-weight: 600;
+  font-size: 0.88rem;
+  text-decoration: none;
+}
+
+
+.card-link i {
+  font-size: 0.9em;
+}
+
+/* Better hover focus (keyboard) */
+.card:focus-within {
+  outline: 3px solid rgba(26, 115, 232, 0.22);
+  outline-offset: 3px;
+}
+
+/* Responsive tweaks */
+@media (max-width: 960px) {
+  .grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}

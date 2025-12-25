@@ -93,7 +93,7 @@ function setupLanguageToggle() {
     const toggle = document.querySelector(SELECTORS.langToggle);
     if (!toggle) return;
 
-    let currentLang = "en";
+    let currentLang = "en"; // default language
 
     toggle.addEventListener("click", () => {
         currentLang = currentLang === "en" ? "tr" : "en";
