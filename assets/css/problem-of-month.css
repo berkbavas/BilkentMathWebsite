@@ -30,11 +30,10 @@
     display: grid;
     grid-template-columns: 1.25fr .75fr;
     gap: 18px;
-    align-items: start;
     margin-bottom: 1rem;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 960px) {
     .pom-hero {
         grid-template-columns: 1fr;
     }
