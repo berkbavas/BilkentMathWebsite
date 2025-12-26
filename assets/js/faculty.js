@@ -7,56 +7,58 @@ function cardTemplate(p) {
     const name = escapeHtml(p.name);
     const rank = escapeHtml(p.rank || "");
     const degree = escapeHtml(p.degree || "");
-    const research = escapeHtml(p.research || "");
     const office = escapeHtml(p.office || "");
     const phone = escapeHtml(p.phone || "");
     const email = escapeHtml(p.email || "");
     const url = (p.url || "").trim();
     const photo = (p.photo || "").trim();
-    const tags = (p.research || []).map(t => `<span class="tag">${escapeHtml(t)}</span>`).join("");
-    const titleBadge = rank ? `<span class="badge">${rank}</span>` : "";
+
+    const tags = (p.research || [])
+        .map(t => `<span class="faculty-chip">${escapeHtml(t)}</span>`)
+        .join("");
+
     const nameHtml = url
-        ? `<a class="link" href="${escapeHtml(url)}" target="_blank" rel="noopener">${name}</a>`
-        : `${name}`;
+        ? `<a href="${escapeHtml(url)}" target="_blank" rel="noopener">${name}</a>`
+        : name;
 
     return `
-        <article class="card" data-rank="${escapeHtml(p.rank || "")}">
-            <div class="card-top">
-                <div class="faculty-avatar" aria-hidden="true">
-                    <img src="${escapeHtml(photo)}" alt="${name}">
-                </div>
+    <article class="faculty-card">
+        <div class="faculty-media">
+            <img src="${escapeHtml(photo)}" alt="${name}">
+        </div>
 
-                <div style="min-width:0">
-                    <div class="name-row">
-                        <h3 class="faculty-name">${nameHtml}</h3>
-                        ${titleBadge}
-                    </div>
-                    <p class="faculty-title">${degree || research}</p>
-                </div>
-            </div>
-            
-            <div class="card-body">
-                <div class="tags">${tags}</div>
-                    <div class="faculty-meta">
-                        ${office ? `<div class="faculty-meta-item">
-                            <i class="faculty-ico fa-regular fa-building"></i>
-                            <span class="faculty-meta-text">${office}</span>
-                        </div>` : ""}
+        <div class="faculty-content">
+            <header class="faculty-header">
+                <h3 class="faculty-name">${nameHtml}</h3>
+                ${rank ? `<span class="faculty-rank">${rank}</span>` : ""}
+                ${degree ? `<p class="faculty-degree">${degree}</p>` : ""}
+            </header>
 
-                        ${email ? `<div class="faculty-meta-item">
-                            <i class="faculty-ico fa-regular fa-envelope"></i>
-                            <span class="faculty-meta-text">${email}</span>
-                        </div>` : ""}
+            ${tags ? `<div class="faculty-chips">${tags}</div>` : ""}
 
-                        ${phone ? `<div class="faculty-meta-item">
-                            <i class="faculty-ico fa-solid fa-phone"></i>
-                            <span class="faculty-meta-text">${phone}</span>
-                        </div>` : ""}
-                    </div>
-                </div>
-            </div>
-        </article>`;
+            <ul class="faculty-meta">
+                ${office ? `
+                <li>
+                    <i class="fa-regular fa-building"></i>
+                    <span>${office}</span>
+                </li>` : ""}
+
+                ${email ? `
+                <li>
+                    <i class="fa-regular fa-envelope"></i>
+                    <span>${email}</span>
+                </li>` : ""}
+
+                ${phone ? `
+                <li>
+                    <i class="fa-solid fa-phone"></i>
+                    <span>${phone}</span>
+                </li>` : ""}
+            </ul>
+        </div>
+    </article>`;
 }
+
 
 const gridCurrent = document.querySelector("#gridCurrent");
 const gridEmeriti = document.querySelector("#gridEmeriti");
