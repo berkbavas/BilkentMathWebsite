@@ -1,7 +1,14 @@
+// Each page imports this file and adds its translations to TRANSLATIONS object.
+// Definitions below are used in navigation and footer. 
+// Since they are common to all pages, they are defined in here.
+
 export const TRANSLATIONS = {
     en: {
+
         titleDepartment: "Department of Mathematics",
         titleUniversity: "Bilkent University",
+
+        // Navigation
         navHome: "Home",
         navPeople: "People",
         navPeopleFaculty: "Faculty",
@@ -40,10 +47,21 @@ export const TRANSLATIONS = {
         navMoreNewsFromDepartment: "News from Department",
         navMoreVideos: "Videos",
         navMoreLinks: "Links",
+
+        // Footer
+        footerAddress: "Address",
+        footerDepartment: "Department of Mathematics",
+        footerUniversity: "Bilkent University",
+        footerAddressLine1: "Faculty of Science Building, Room SA132B",
+        footerAddressLine2: "Bilkent University, 06800 Ankara, Turkey",
+        footerContact: "Contact",
+        footerFollowUs: "Follow Us"
     },
     tr: {
         titleDepartment: "Matematik Bölümü",
         titleUniversity: "Bilkent Üniversitesi",
+
+        // Navigation
         navHome: "Ana Sayfa",
         navPeople: "Bölüm Elemanları",
         navPeopleFaculty: "Öğretim Üyeleri",
@@ -82,5 +100,14 @@ export const TRANSLATIONS = {
         navMoreNewsFromDepartment: "Bölümden Haberler",
         navMoreVideos: "Videolar",
         navMoreLinks: "Bağlantılar",
+
+        // Footer
+        footerAddress: "Adres",
+        footerDepartment: "Matematik Bölümü",
+        footerUniversity: "Bilkent Üniversitesi",
+        footerAddressLine1: "Fen Fakültesi Binası, Ofis SA132B",
+        footerAddressLine2: "Bilkent Üniversitesi, 06800 Ankara, Türkiye",
+        footerContact: "İletişim",
+        footerFollowUs: "Bizi Takip Edin"
     }
 };
