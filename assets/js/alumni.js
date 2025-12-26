@@ -8,38 +8,42 @@ const elementRoot = document.getElementById("alumniRoot");
 
 function renderEntry(a) {
     const esc = escapeHtml;
-
-    const photoUrl = "https://math.bilkent.edu.tr/Alumni/" + (a.photo || "");
+    const photoUrl = a.photo ? "https://math.bilkent.edu.tr/Alumni/" + a.photo : "";
     const bullets = Array.isArray(a.bullets) ? a.bullets : [];
 
-    const imgHtml = a.photo
-        ? `<img src="${photoUrl}" alt="${esc(a.name)}" loading="lazy">`
-        : "";
-
-    const bulletHtml = bullets.length
-        ? `<ul>${bullets.map(b => `<li>${esc(b)}</li>`).join("")}</ul>`
-        : "";
-
-    const storyHtml = a.story
-        ? `<details><summary><i class="fa-solid fa-caret-right"></i>Story</summary><blockquote>${a.story}</blockquote></details>`
-        : "";
-
-    const lastUpdateHtml = a.lastUpdate
-        ? `<div class="alumni-update">Son güncelleme: ${esc(a.lastUpdate)}</div>`
-        : "";
-
     return `
-      <article class="card alumni-entry">
-        <h3>${esc(a.name || "")}, <strong>${esc(a.year || "")}</strong></h3>
-        <div class="alumni-info">
-            <div class="alumni-image">
-                ${imgHtml}
-                ${bulletHtml}
+    <article class="alumni-card">
+        <header class="alumni-header">
+            ${photoUrl ? `
+            <div class="alumni-avatar">
+                <img src="${photoUrl}" alt="${esc(a.name)}" loading="lazy">
+            </div>` : ""}
+
+            <div class="alumni-title">
+                <h3 class="alumni-name">${esc(a.name)}</h3>
+                ${a.year ? `<span class="alumni-year">${esc(a.year)}</span>` : ""}
             </div>
-        ${storyHtml}
-        ${lastUpdateHtml}
-        </div>
-      </article>
+        </header>
+
+        ${bullets.length ? `
+        <ul class="alumni-bullets">
+            ${bullets.map(b => `<li>${esc(b)}</li>`).join("")}
+        </ul>` : ""}
+
+        ${a.story ? `
+        <details class="alumni-story">
+            <summary>
+                <i class="fa-solid fa-caret-right"></i>
+                <span data-i18n="story">Story</span>
+            </summary>
+            <blockquote>${a.story}</blockquote>
+        </details>` : ""}
+
+        ${a.lastUpdate ? `
+        <div class="alumni-update">
+            Son güncelleme: ${esc(a.lastUpdate)}
+        </div>` : ""}
+    </article>
     `;
 }
 
