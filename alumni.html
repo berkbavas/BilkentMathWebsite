@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bilkent University • Department of Mathematics</title>
+    <title data-i18n="titleAlumniPage">Some of Our Alumni - Bilkent University</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -25,14 +25,22 @@
     <main class="container">
 
         <header class="header">
-            <h1>Some of Our Alumni</h1>
-            <p>Information about alumni of the Department of Mathematics.</p>
-            <p>Değerli mezunumuz sizin bilgileriniz de bu websitesinde paylaşılmasını veya güncellenmesini
-                istiyorsanız
-                lütfen <strong><a href="mailto:alumni@bilkent.edu.tr">buradan</a></strong> mezuniyet sonrası
-                hikayenizi
-                bizimle paylaşın.</p>
+            <h1 data-i18n="headerAlumni">Some of Our Alumni</h1>
 
+
+            <div data-lang="en">
+                <p>Dear alumnus, if you would like your information to be shared on this
+                    website or updated, please share your post-graduation story with us <strong><a
+                            href="mailto:alumni@bilkent.edu.tr">here</a></strong>.</p>
+            </div>
+
+            <div data-lang="tr">
+                <p>Değerli mezunumuz sizin bilgileriniz de bu websitesinde paylaşılmasını
+                    veya güncellenmesini istiyorsanız
+                    lütfen <strong><a href="mailto:alumni@bilkent.edu.tr">buradan</a></strong> mezuniyet sonrası
+                    hikayenizi
+                    bizimle paylaşın.</p>
+            </div>
 
         </header>
 
@@ -42,7 +50,7 @@
                 <input class="header-search-input" type="search" placeholder="Search" autocomplete="off" id="search" />
             </label>
 
-            <button class="btn btn-ghost" type="button" id="reset">Reset</button>
+            <button class="btn btn-ghost" type="button" id="reset" data-i18n="buttonReset">Reset</button>
         </div>
 
         <!-- Alumni content will be injected here -->

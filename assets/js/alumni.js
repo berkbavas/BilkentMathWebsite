@@ -1,5 +1,10 @@
 import { ALUMNI } from "../data/alumni.js";
+import { TRANSLATIONS } from "../data/translations.js";
 import { escapeHtml } from "./helpers.js";
+
+const elementSearch = document.querySelector("#search");
+const elementReset = document.querySelector("#reset");
+const elementRoot = document.getElementById("alumniRoot");
 
 function renderEntry(a) {
     const esc = escapeHtml;
@@ -38,36 +43,49 @@ function renderEntry(a) {
     `;
 }
 
-function matches(alumni, q) {
-    const ql = q.toLowerCase();
+function matches(alumni, query) {
+    const ql = query.toLowerCase();
     if (alumni.name && alumni.name.toLowerCase().includes(ql)) return true;
-    if (alumni.year && alumni.year.toString().toLowerCase().includes(ql)) return true;
     return false;
 }
 
 function apply() {
-    const q = document.querySelector("#search").value.trim();
-    let list = ALUMNI.filter(alumni => matches(alumni, q));
-    renderCards(list);
-    if(list.length === 0) {
-        document.getElementById("alumniRoot").innerHTML = "<p>No matching alumni found.</p>";
+    const lang = localStorage.getItem("lang") || "en";
+    const query = elementSearch.value.trim();
+    const list = ALUMNI.filter(alumni => matches(alumni, query));
+    elementRoot.innerHTML = list.map(renderEntry).join("");
+    elementSearch.placeholder = TRANSLATIONS[lang].placeholderSearch;
+    if (list.length === 0) {
+        elementRoot.innerHTML = `<p>${TRANSLATIONS[lang].noResults}</p>`;
     }
 }
 
 function resetFilters() {
-    document.querySelector("#search").value = "";
+    elementSearch.value = "";
     apply();
 }
 
-function renderCards(list) {
-    const root = document.getElementById("alumniRoot");
-    root.innerHTML = list.map(renderEntry).join("");
+function init() {
+    elementSearch.addEventListener("input", apply);
+    elementReset.addEventListener("click", resetFilters);
+    render();
 }
 
 function render() {
-    document.querySelector("#search").addEventListener("input", apply);
-    document.querySelector("#reset").addEventListener("click", resetFilters);
     apply();
 }
 
-document.addEventListener("DOMContentLoaded", render);
+TRANSLATIONS.en.titleAlumniPage = "Some of Our Alumni - Bilkent University";
+TRANSLATIONS.en.headerAlumni = "Some of Our Alumni";
+TRANSLATIONS.en.buttonReset = "Reset";
+TRANSLATIONS.en.noResults = "No matching alumni found.";
+TRANSLATIONS.en.placeholderSearch = "Search";
+
+TRANSLATIONS.tr.titleAlumniPage = "Bazı Mezunlarımız - Bilkent Üniversitesi";
+TRANSLATIONS.tr.headerAlumni = "Bazı Mezunlarımız";
+TRANSLATIONS.tr.buttonReset = "Sıfırla";
+TRANSLATIONS.tr.noResults = "Eşleşen mezun bulunamadı.";
+TRANSLATIONS.tr.placeholderSearch = "Ara";
+
+document.render = render; // expose render function to other modules, app.js in particular
+document.addEventListener("DOMContentLoaded", init);
