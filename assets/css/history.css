@@ -1,143 +1,134 @@
 /* Narrative / history text */
-.container>p {
-  max-width: 780px;
-  margin-left: auto;
-  margin-right: auto;
+.text-content {
   font-size: 1.05rem;
   line-height: 1.75;
-  color: #444;
-}
-
-.container>p+p {
-  margin-top: 1rem;
 }
 
 .grid {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 2rem;
+  grid-template-columns: 1fr;
+  gap: 1rem;
   margin-top: 2rem;
 }
 
-.card {
-  background: #fff;
-  border-radius: 14px;
-  overflow: hidden;
-  border: 1px solid #eee;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.04);
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
+:root {
+  --card-bg: #ffffff;
+  --muted: #6b7280;
+  --accent: #0ea5a4;
+  /* teal */
+  --border: #e5e7eb;
+  --shadow: 0 6px 18px rgba(15, 23, 42, 0.06);
+  --radius: 10px;
 }
 
-.card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 14px 40px rgba(0, 0, 0, 0.08);
-}
-
-/* ===== Card internals (fills the empty blocks) ===== */
-
-.card-header {
-  padding: 1.25rem 1.25rem 0.25rem;
-  display: grid;
-  place-items: center;
-}
-
-
-.card-photo {
-  width: 100%;
-  height: auto;
-}
-
-/* content wrapper */
-.card-content {
-  padding: 0.75rem 1.25rem 1.25rem;
-  text-align: center;
-}
-
-/* Name */
-.card-name {
-  margin: 0.35rem 0 0;
-  font-weight: 650;
-  font-size: 1.18rem;
-  letter-spacing: -0.01em;
-  color: #111;
-}
-
-/* Title */
-.card-title {
-  margin: 0.25rem 0 0;
-  font-size: 0.95rem;
-  color: #555;
-}
-
-/* PhD line */
-.card-phd {
-  margin: 0.35rem 0 0;
-  font-size: 0.88rem;
-  color: #777;
-}
-
-/* Areas: chips container */
-.card-areas {
-  margin-top: 0.9rem;
+.chair-card {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 0.45rem;
+  gap: 16px;
+  padding: 16px;
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  align-items: flex-start;
+  max-width: 740px;
 }
 
-/* Chip style */
-.chip {
-  display: inline-flex;
-  align-items: center;
-  padding: 0.28rem 0.6rem;
-  border-radius: 999px;
-  font-size: 0.78rem;
-  line-height: 1;
-  background: #f3f5f8;
-  border: 1px solid #eceff3;
-  color: #444;
+.chair-avatar {
+  width: 164px;
+  height: 164px;
+  border-radius: 12px;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.chair-body {
+  flex: 1;
+  min-width: 0;
+}
+
+.chair-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  gap: 12px;
+}
+
+.chair-name {
+  margin: 0;
+  font-size: 1.05rem;
+  line-height: 1.15;
+}
+
+.chair-role {
+  margin: 2px 0 0 0;
+  color: var(--muted);
+  font-size: 0.88rem;
+}
+
+.chair-years {
+  color: var(--muted);
+  font-size: 1em;
   white-space: nowrap;
 }
 
-/* Term badge */
-.card-term {
-  margin: 0.9rem auto 0;
-  padding: 0.7rem 0.95rem;
-  border-radius: 12px;
-  font-size: 1rem;
-  font-weight: 600;
-  background: #f5f5f5;
-  border: 1px solid #e0e0e0;
-  color: #333;
-  margin-bottom: 1rem;
+.chair-summary {
+  margin: 10px 0;
+  color: #374151;
+  font-size: 0.95rem;
 }
 
-/* Link button-ish */
-.card-link {
-  font-weight: 600;
-  font-size: 0.88rem;
+.chair-tags {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 12px;
+}
+
+.tag {
+  background: #f1f5f9;
+  color: #0f172a;
+  padding: 6px 8px;
+  border-radius: 999px;
+  font-size: 0.8rem;
+}
+
+.chair-actions {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.btn {
+  border: none;
+  padding: 8px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.9rem;
   text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
 }
 
-
-.card-link i {
-  font-size: 0.9em;
+.btn-outline {
+  background: transparent;
+  border: 1px solid var(--border);
+  color: #111827;
 }
 
-/* Better hover focus (keyboard) */
-.card:focus-within {
-  outline: 3px solid rgba(26, 115, 232, 0.22);
-  outline-offset: 3px;
+.btn-primary {
+  background: var(--accent);
+  color: white;
+  border: 1px solid rgba(0, 0, 0, 0.04);
+}
+
+.chair-more {
+  margin-top: 12px;
+  color: #374151;
 }
 
 /* Responsive tweaks */
 @media (max-width: 960px) {
-  .grid {
-    grid-template-columns: 1fr 1fr;
-  }
-}
-
-@media (max-width: 600px) {
   .grid {
     grid-template-columns: 1fr;
   }
