@@ -6,19 +6,19 @@ const elementCount = document.querySelector("#count");
 const elementReset = document.querySelector("#reset");
 
 function card(s, lang) {
-    const name = s.name ?? "";
-    const advisor = s.advisor ?? "";
-    const office = s.office ?? "";
-    const phone = s.phone ?? "";
-    const email = s.email ?? "";
+  const name = s.name ?? "";
+  const advisor = s.advisor ?? "";
+  const office = s.office ?? "";
+  const phone = s.phone ?? "";
+  const email = s.email ?? "";
 
-    const photoUrl = encodeURI(
-        "https://math.bilkent.edu.tr/Grad_student_photos/" + (s.photo || "placeholder.jpg")
-    );
+  const photoUrl = encodeURI(
+    "https://math.bilkent.edu.tr/Grad_student_photos/" + (s.photo || "placeholder.jpg")
+  );
 
-    const advisorLabel = lang === "tr" ? "Danışman" : "Advisor";
+  const advisorLabel = lang === "tr" ? "Danışman" : "Advisor";
 
-    return `
+  return `
   <article class="gs-card">
     <div class="gs-card-inner">
 
