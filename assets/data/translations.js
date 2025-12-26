@@ -24,6 +24,7 @@ export const TRANSLATIONS = {
         navCoursesSummer: "Summer Practice",
         navResearch: "Research",
         navResearchBooks: "Books",
+        navResearchBooksReviews: "Books Reviews",
         navResearchJournals: "Journals",
         navResearchThesisArchive: "Thesis Archive",
         navSeminars: "Seminars",
@@ -38,7 +39,7 @@ export const TRANSLATIONS = {
         navMoreProblemOfMonth: "Problem of Month",
         navMoreNewsFromDepartment: "News from Department",
         navMoreVideos: "Videos",
-        navMoreLinks: "Links"
+        navMoreLinks: "Links",
     },
     tr: {
         titleDepartment: "Matematik Bölümü",
@@ -65,6 +66,7 @@ export const TRANSLATIONS = {
         navCoursesSummer: "Yaz Stajı",
         navResearch: "Araştırma",
         navResearchBooks: "Kitaplar",
+        navResearchBooksReviews: "Kitap Eleştirileri",
         navResearchJournals: "Makaleler",
         navResearchThesisArchive: "Tez Arşivi",
         navSeminars: "Seminerler",
@@ -79,6 +81,6 @@ export const TRANSLATIONS = {
         navMoreProblemOfMonth: "Ayın Problemi",
         navMoreNewsFromDepartment: "Bölümden Haberler",
         navMoreVideos: "Videolar",
-        navMoreLinks: "Bağlantılar"
+        navMoreLinks: "Bağlantılar",
     }
 };

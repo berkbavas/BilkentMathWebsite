@@ -23,6 +23,10 @@
     box-shadow: 0 10px 25px rgba(0, 0, 0, .18);
 }
 
+.badge {
+    color: var(--muted);
+}
+
 .card-top {
     display: flex;
     align-items: start;
@@ -31,15 +35,22 @@
 }
 
 .faculty-name {
+    margin: 0;
+    padding: 0;
+    margin-top: 24px;
     font-size: 1.35rem;
     font-weight: 700;
     letter-spacing: -0.2px;
 }
 
+.faculty-name a {
+    color: var(--text);
+    text-decoration: none;
+}
+
 .faculty-title {
     font-size: 0.9rem;
-    color: var(--text);
-    font-weight: 500;
+    color: var(--muted);
 }
 
 .card-body {
@@ -57,11 +68,10 @@
 
 .tag {
     background: rgba(45, 42, 98, 0.06);
-    color: var(--text);
+    color: var(--muted);
     padding: 0.35rem 0.75rem;
     border-radius: 999px;
     font-size: 0.8rem;
-    font-weight: 600;
 }
 
 

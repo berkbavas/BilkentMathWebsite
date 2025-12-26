@@ -8,15 +8,13 @@ function renderCard(head) {
         <img class="chair-avatar" src="${head.photo}" alt="${head.name}">
         <div class="chair-body">
             <div class="chair-header">
-            <div>
-                <h3 class="chair-name">${head.name}</h3>
-                <p class="chair-role">${head.title}</p>
+                <div>
+                    <h3 class="chair-name">${head.name}</h3>
+                    <p class="chair-role">${head.title}</p>
+                </div>
+                <div class="chair-years">${head.term}</div>
             </div>
-            <div class="chair-years">${head.term}</div>
-            </div>
-            
-            <p>${head.phd}</p>
-
+            <div class="chair-phd">${head.phd}</div>
             <div class="chair-tags">${head.areas}</div>
         </div>
     </div>

@@ -1,0 +1,54 @@
+.links-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.link-card {
+    background: #fff;
+    border-radius: 14px;
+    padding: 1.75rem 1.75rem 2rem;
+    border: 1px solid #eee;
+    box-shadow: 0 10px 28px rgba(0,0,0,0.04);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.link-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 18px 48px rgba(0,0,0,0.08);
+}
+
+.link-card h2 {
+    font-size: 1.35rem;
+    margin-bottom: 1rem;
+}
+
+.link-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.link-card li + li {
+    margin-top: 0.55rem;
+}
+
+.link-card a {
+    text-decoration: none;
+    color: var(--text);
+    padding-left: 1.2rem;
+    position: relative;
+    transition: color 0.2s ease;
+}
+
+.link-card a::before {
+    content: "↗";
+    position: absolute;
+    left: 0;
+    color: #999;
+    font-size: 0.9rem;
+}
+
+.link-card a:hover {
+    color: #1a4fd8;
+}

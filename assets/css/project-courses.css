@@ -1,0 +1,60 @@
+.courses-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.6rem;
+    margin-top: 2rem;
+}
+
+.course-card h2 {
+    font-size: 1.2rem;
+    margin-bottom: .5rem;
+}
+
+.course-card p {
+    color: var(--muted);
+    margin-bottom: 1rem;
+}
+
+.course-card a {
+    font-weight: 600;
+}
+
+.archive {
+    margin-top: 3rem;
+}
+
+.archive details {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 1rem 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.archive summary {
+    cursor: pointer;
+    font-weight: 600;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.archive summary::after {
+    content: "▾";
+    font-size: 1.1rem;
+    transition: transform .2s ease;
+}
+
+.archive details[open] summary::after {
+    transform: rotate(180deg);
+}
+
+.archive ul {
+    margin-top: 1rem;
+    padding-left: 1.2rem;
+}
+
+.archive li {
+    margin-bottom: .6rem;
+}

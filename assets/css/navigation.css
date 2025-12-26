@@ -90,6 +90,13 @@
     gap: 6px;
 }
 
+.topbar ul li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+
 .nav-link {
     color: #fff;
     text-decoration: none;

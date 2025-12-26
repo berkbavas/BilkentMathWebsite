@@ -13,11 +13,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="stylesheet" href="assets/css/common.css">
     <link rel="stylesheet" href="assets/css/navigation.css">
-    <link rel="stylesheet" href="assets/css/alumni-statistics.css">
 </head>
-<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js" defer></script>
-<script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.2.0" defer></script>
-<script type="module" src="assets/js/alumni-statistics.js" defer></script>
 <script type="module" src="assets/js/app.js" defer></script>
 
 <body>
@@ -26,23 +22,23 @@
     <main class="container">
 
         <header class="header">
-            <h1>Alumni Statistics</h1>
-            <p>Information about alumni of the Department of Mathematics.</p>
+            <div class="header-top">
+                <h1>Department of Mathematics</h1>
+                <div class="description">
+                    <p>The Department of Mathematics offers undergraduate and graduate courses that lead to B.S., M.S.
+                        and
+                        Ph.D. degrees in Mathematics as well as undergraduate and graduate courses to all departments of
+                        the
+                        university.</p>
+
+                    <p>The department emphasizes both pure and applied mathematics. Research in the department covers
+                        algebra, algebraic topology, algebraic geometry, complex analysis, functional analysis, number
+                        theory, financial mathematics, differential equations and dynamical systems, mathematical
+                        physics,
+                        and applied mathematics.</p>
+                </div>
+            </div>
         </header>
-
-        <div class="charts">
-            <div class="card">
-                <h2>Career Paths After Graduation (Bar)</h2>
-                <p class="chart-sub">Distribution by sector (%)</p>
-                <canvas id="alumniBar"></canvas>
-            </div>
-
-            <div class="card">
-                <h2>Career Paths After Graduation</h2>
-                <p class="chart-sub">Distribution by sector (%)</p>
-                <canvas id="alumniPie"></canvas>
-            </div>
-        </div>
 
     </main>
 
