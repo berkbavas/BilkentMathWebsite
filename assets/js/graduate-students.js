@@ -5,7 +5,7 @@ const elementSearch = document.querySelector("#search");
 const elementCount = document.querySelector("#count");
 const elementReset = document.querySelector("#reset");
 
-function card(s) {
+function card(s, lang) {
     const name = s.name ?? "";
     const advisor = s.advisor ?? "";
     const office = s.office ?? "";
@@ -23,7 +23,7 @@ function card(s) {
             </div>
             <div class="gs-head">
                 <h2 class="gs-name">${name}</h2>
-                <p class="gs-sub">Advisor: ${advisor}</p>
+                <p class="gs-sub">${lang === "tr" ? "Danışman: " : "Advisor: "}${advisor}</p>
             </div>
         </div>
 
@@ -57,7 +57,8 @@ function matches(student, query) {
 
 function renderCards(list) {
     const container = document.querySelector("#gs-cards-container");
-    container.innerHTML = list.map(card).join("");
+    const currentLang = localStorage.getItem("lang") || "en";
+    container.innerHTML = list.map(student => card(student, currentLang)).join("");
 }
 
 function apply() {
