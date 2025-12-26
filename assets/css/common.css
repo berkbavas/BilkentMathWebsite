@@ -177,14 +177,29 @@ ul li {
     margin: 0;
 }
 
-.card:hover {
-    box-shadow: 0 14px 40px rgba(0, 0, 0, 0.1);
+.card-2 {
+    max-width: 820px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    padding: 2rem;
+    box-shadow: 0 10px 26px rgba(0, 0, 0, .06);
 }
 
-.image-with-text {
-    display: flex;
-    flex-direction: row;
-    gap: 1rem;
+.card-2 p {
+    margin: 0 0 1.2rem;
+    font-size: 1rem;
+    line-height: 1.75;
+    color: rgba(17, 17, 17, .92);
+}
+
+.card-2 p:last-child {
+    margin-bottom: 0;
+}
+
+.card-2 strong {
+    font-weight: 700;
+    color: rgba(17, 17, 17, .95);
 }
 
 .pill,

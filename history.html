@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8" />
-    <title>History | Department of Mathematics</title>
+    <title data-i18n="title">Bilkent University • Department of Mathematics</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Fonts -->
@@ -34,56 +34,90 @@
         <!-- PAGE HEADER -->
         <header class="header">
             <div class="header-top">
-                <h1>History of the Department</h1>
-
-                <div class="description">
-                    <!-- HISTORY TEXT -->
-                    <p>
-                        In 1986, when Bilkent University admitted its first students, the
-                        mathematics department was positioned as a unit within the Faculty
-                        of Engineering.
-                    </p>
-
-                    <p>
-                        At the end of 1989, it was officially decided to reposition the
-                        Mathematics Department as an independent department to conduct
-                        high-level research on an international scale.
-                    </p>
-
-                    <p>
-                        Initially, only the graduate program was launched. The first
-                        undergraduate students joined the department in 1991.
-                    </p>
-
-                    <p>
-                        The mission of the department has been to provide a solid
-                        undergraduate foundation for students who plan to pursue graduate
-                        or doctoral studies in applied or pure mathematics, while also
-                        supporting internationally recognized research.
-                    </p>
-                </div>
+                <h1 data-i18n="headerText">A Short History of the Department</h1>
             </div>
         </header>
 
+        <div data-lang="en" class="card-2">
+            <!-- HISTORY TEXT -->
+            <p>
+                In <strong>1986</strong>, when Bilkent University admitted its first students, the
+                mathematics department was positioned as a unit within the Faculty
+                of Engineering.
+            </p>
+
+            <p>
+                At the end of <strong>1989</strong>, it was officially decided to reposition the
+                Mathematics Department as an independent department to conduct
+                high-level research on an international scale.
+            </p>
+
+            <p>
+                Initially, only the <strong>graduate program</strong> was launched. The first
+                undergraduate students joined the department in <strong>1991</strong>.
+            </p>
+
+            <p>
+                The mission of the department has been to provide a solid
+                undergraduate foundation for students who plan to pursue graduate
+                or doctoral studies in <strong>applied</strong> or <strong>pure mathematics</strong>, while also
+                supporting internationally recognized research.
+            </p>
+        </div>
+
+
+        <div data-lang="tr" class="card-2">
+            <!-- HISTORY TEXT -->
+            <p>
+                Bilkent Üniversitesi ilk öğrencilerini aldığı <strong>1986</strong> yılında, Matematik Bölümü
+                Mühendislik Fakültesi içinde bir birim olarak konumlandırılmıştı.
+            </p>
+
+            <p>
+                Üç yıl sonra, uluslararası ölçekte üst düzey araştırmalar yapmak ve bu nitelikte araştırma yapacak olan
+                matematikçiler yetiştirmek üzere <strong>1989</strong> yılının sonlarında resmen bölüm olarak yeniden
+                konumlandırılması
+                kararı alındı.
+            </p>
+
+            <p>
+                İlk olarak Lisansüstü programı başlatıldı. İlk lisans öğrencileri <strong>1991</strong> yılında bölüme
+                katıldı.
+            </p>
+
+            <p>
+                Matematik bölümünün misyonu, <strong>uygulamalı</strong> ya da <strong>sırfi</strong> matematikte
+                lisansüstü ve doktora yapacak
+                öğrencilere gerekli lisans alt yapısını vermek olarak belirlenmişti. Yıllar içerisinde Bilkent'in
+                öğrenci sayısının artmasıyla, bu misyonu gerçekleştirmek için gerekli olan sayı ve çeşitlilikteki
+                öğretim üyesi düzeyine ulaşıldı.
+            </p>
+        </div>
+
+
+
         <!-- HEADS OF DEPARTMENT -->
-        <section class="section">
+        <div class="section-head">
+            <h2 data-i18n="headsOfDepartment">Heads of the Department</h2>
 
-            <div class="section-head">
-                <h2>Heads of the Department</h2>
-            </div>
+        </div>
 
-            <!-- JSON render target -->
-            <div id="heads-root" aria-live="polite" class="grid"></div>
-
-        </section>
-
-
+        <!-- JSON render target -->
+        <div id="heads-root" aria-live="polite" class="grid"></div>
 
     </main>
 
     <!-- Footer -->
     <footer id="footer" class="footer"></footer>
+    <script type="module">
+        import { TRANSLATIONS } from './assets/data/translations.js';
 
+        TRANSLATIONS.en.headerText = "A Short History of the Department";
+        TRANSLATIONS.en.headsOfDepartment = "Heads of the Department";
+
+        TRANSLATIONS.tr.headerText = "Bölümün Kısa Tarihi";
+        TRANSLATIONS.tr.headsOfDepartment = "Bölüm Başkanları";
+    </script>
 </body>
 
 </html>
