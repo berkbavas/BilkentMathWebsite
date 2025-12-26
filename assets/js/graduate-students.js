@@ -12,40 +12,51 @@ function card(s, lang) {
     const phone = s.phone ?? "";
     const email = s.email ?? "";
 
+    const photoUrl = encodeURI(
+        "https://math.bilkent.edu.tr/Grad_student_photos/" + (s.photo || "placeholder.jpg")
+    );
 
-    const photoUrl = encodeURI("https://math.bilkent.edu.tr/Grad_student_photos/" + (s.photo || "placeholder.jpg"));
+    const advisorLabel = lang === "tr" ? "Danışman" : "Advisor";
 
     return `
-    <article class="gs-card">
-        <div class="gs-card-top" role="group" aria-label="${name}">
-            <div class="gs-avatar">
-            <img src="${photoUrl}" alt="${name}" loading="lazy">
-            </div>
-            <div class="gs-head">
-                <h2 class="gs-name">${name}</h2>
-                <p class="gs-sub">${lang === "tr" ? "Danışman: " : "Advisor: "}${advisor}</p>
-            </div>
+  <article class="gs-card">
+    <div class="gs-card-inner">
+
+      <div class="gs-top">
+        <div class="gs-avatar">
+          <img src="${photoUrl}" alt="${name}" loading="lazy">
         </div>
 
-        <div class="gs-meta">
-            <div class="gs-meta-item">
-                <i class="gs-ico fa-regular fa-building"></i>
-                <span class="gs-meta-text">${office}</span>
-            </div>
-
-            <div class="gs-meta-item">
-                <i class="gs-ico fa-regular fa-envelope"></i>
-                <span class="gs-meta-text">${email}</span>
-            </div>
-
-            <div class="gs-meta-item">
-                <i class="gs-ico fa-solid fa-phone"></i>
-                <span class="gs-meta-text">${phone}</span>
-            </div>
-
+        <div class="gs-title">
+          <h2 class="gs-name">${name}</h2>
+          ${advisor ? `<p class="gs-sub"><span class="gs-sub-label">${advisorLabel}:</span> ${advisor}</p>` : ""}
         </div>
-    </article>
-  `;
+      </div>
+
+      <div class="gs-divider" aria-hidden="true"></div>
+
+      <ul class="gs-meta" aria-label="Contact information">
+        ${office ? `
+          <li class="gs-meta-item">
+            <span class="gs-ico"><i class="fa-regular fa-building" aria-hidden="true"></i></span>
+            <span class="gs-meta-text">${office}</span>
+          </li>` : ""}
+
+        ${email ? `
+          <li class="gs-meta-item">
+            <span class="gs-ico"><i class="fa-regular fa-envelope" aria-hidden="true"></i></span>
+            <span class="gs-meta-text">${email}</span>
+          </li>` : ""}
+
+        ${phone ? `
+          <li class="gs-meta-item">
+            <span class="gs-ico"><i class="fa-solid fa-phone" aria-hidden="true"></i></span>
+            <span class="gs-meta-text">${phone}</span>
+          </li>` : ""}
+      </ul>
+
+    </div>
+  </article>`;
 }
 
 function matches(student, query) {
