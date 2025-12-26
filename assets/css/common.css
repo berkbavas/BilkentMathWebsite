@@ -202,6 +202,14 @@ ul li {
     color: rgba(17, 17, 17, .95);
 }
 
+.page-lead {
+    margin-top: 1rem;
+    max-width: 720px;
+    font-size: 1.05rem;
+    color: var(--muted);
+    line-height: 1.7;
+}
+
 .pill,
 .chip {
     display: inline-flex;

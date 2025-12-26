@@ -22,23 +22,44 @@
 
     <main class="container">
         <header class="header">
-            <h1>Mathematics Undergraduate Program</h1>
+            <h1 data-i18n="headerText">Mathematics Undergraduate Program</h1>
         </header>
 
-        <section class="description">
+        <section data-lang="en" class="description">
             <p>
                 The undergraduate program aims to prepare students for mathematical careers or postgraduate degrees, to
                 which end it admits a small number of highly qualified and motivated students each year. The program is
                 designed to give the students a good background in all areas of mathematics. It consists of four series
-                of courses in analysis, algebra, geometry, and applied mathematics.
+                of courses in <strong>analysis</strong>, <strong>algebra</strong>, <strong>geometry</strong>, and
+                <strong>applied mathematics</strong>.
             </p>
             <br>
-            <a class="btn-black" href="https://catalog.bilkent.edu.tr/dep/d03.html" target="_blank">
-                View Curriculum</a>
+            <a class="btn-black" href="https://stars.bilkent.edu.tr/homepage/curriculum.php?DEPT=MATH" target="_blank">Curriculum</a>
+        </section>
+
+        <section data-lang="tr" class="description">
+            <p>
+                Matematik lisans programı, öğrencileri matematik ağırlıklı mesleklere veya lisans sonrası derecelere
+                hazırlamayı amaçlar. Bu amaçla her yıl az sayıda yüksek nitelikli ve hevesli öğrenci alır. Lisans
+                programı öğrencilere matematiğin her alanında iyi bir temel vermek için düzenlenmiştir ve
+                <strong>analiz</strong>, <strong>cebir</strong>,
+                <strong>geometri</strong>, ve <strong>uygulamalı matematik</strong> olmak üzere dört alanda derslerden
+                oluşmaktadır.
+            </p>
+            <br>
+            <a class="btn-black" href="https://stars.bilkent.edu.tr/homepage/curriculum.php?DEPT=MATH"
+                target="_blank">Ders Çizelgesi</a>
         </section>
     </main>
 
     <footer id="footer" class="footer"></footer>
+
+    <script type="module">
+        import { TRANSLATIONS } from './assets/data/translations.js';
+
+        TRANSLATIONS.en.headerText = "Mathematics Undergraduate Program";
+        TRANSLATIONS.tr.headerText = "Matematik Lisans Programı";
+    </script>
 </body>
 
 </html>

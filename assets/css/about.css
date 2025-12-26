@@ -25,14 +25,6 @@
     border-radius: 999px;
 }
 
-.page-lead {
-    margin-top: 1rem;
-    max-width: 720px;
-    font-size: 1.05rem;
-    color: var(--muted);
-    line-height: 1.7;
-}
-
 /* Section */
 .about-section {
     display: flex;
