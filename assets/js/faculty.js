@@ -1,24 +1,25 @@
-import { CURRENT_FACULTY } from "../data/faculty.js";
-import { EMERITI } from "../data/emeriti.js";
+import { CURRENT_FACULTY_EN, CURRENT_FACULTY_TR } from "../data/faculty.js";
+import { EMERITI_EN, EMERITI_TR } from "../data/emeriti.js";
+import { TRANSLATIONS } from "../data/translations.js";
 import { escapeHtml } from "./helpers.js";
 
 function cardTemplate(p) {
-  const name = escapeHtml(p.name);
-  const rank = escapeHtml(p.rank || "");
-  const degree = escapeHtml(p.degree || "");
-  const research = escapeHtml(p.research || "");
-  const office = escapeHtml(p.office || "");
-  const phone = escapeHtml(p.phone || "");
-  const email = escapeHtml(p.email || "");
-  const url = (p.url || "").trim();
-  const photo = (p.photo || "").trim();
-  const tags = (p.research || []).map(t => `<span class="tag">${escapeHtml(t)}</span>`).join("");
-  const titleBadge = rank ? `<span class="badge">${rank}</span>` : "";
-  const nameHtml = url
-    ? `<a class="link" href="${escapeHtml(url)}" target="_blank" rel="noopener">${name}</a>`
-    : `${name}`;
+    const name = escapeHtml(p.name);
+    const rank = escapeHtml(p.rank || "");
+    const degree = escapeHtml(p.degree || "");
+    const research = escapeHtml(p.research || "");
+    const office = escapeHtml(p.office || "");
+    const phone = escapeHtml(p.phone || "");
+    const email = escapeHtml(p.email || "");
+    const url = (p.url || "").trim();
+    const photo = (p.photo || "").trim();
+    const tags = (p.research || []).map(t => `<span class="tag">${escapeHtml(t)}</span>`).join("");
+    const titleBadge = rank ? `<span class="badge">${rank}</span>` : "";
+    const nameHtml = url
+        ? `<a class="link" href="${escapeHtml(url)}" target="_blank" rel="noopener">${name}</a>`
+        : `${name}`;
 
-  return `
+    return `
         <article class="card" data-rank="${escapeHtml(p.rank || "")}">
             <div class="card-top">
                 <div class="faculty-avatar" aria-hidden="true">
@@ -59,12 +60,41 @@ function cardTemplate(p) {
 
 function render() {
 
-  const gridCurrent = document.querySelector("#gridCurrent");
-  const gridEmeriti = document.querySelector("#gridEmeriti");
+    const gridCurrent = document.querySelector("#gridCurrent");
+    const gridEmeriti = document.querySelector("#gridEmeriti");
 
-  gridCurrent.innerHTML = CURRENT_FACULTY.map(cardTemplate).join("");
-  gridEmeriti.innerHTML = EMERITI.map(cardTemplate).join("");
+    let currentLang = localStorage.getItem("lang") || "en";
+    let currentFaculty;
+    let emeritiFaculty;
+
+    if (currentLang === "en") {
+        currentFaculty = CURRENT_FACULTY_EN;
+        emeritiFaculty = EMERITI_EN;
+    } else if (currentLang === "tr") {
+        currentFaculty = CURRENT_FACULTY_TR;
+        emeritiFaculty = EMERITI_TR;
+    }
+    else {
+        throw new Error(`Unsupported language: ${currentLang}`);
+    }
+
+    gridCurrent.innerHTML = currentFaculty.map(cardTemplate).join("");
+    gridEmeriti.innerHTML = emeritiFaculty.map(cardTemplate).join("");
 
 }
 
+
+TRANSLATIONS.en.titleFacultyPage = "Faculty - Bilkent University";
+TRANSLATIONS.en.titleFaculty = "Faculty Members"
+TRANSLATIONS.en.clickFaculty = "Click on a faculty member's name to view their personal web page."
+TRANSLATIONS.en.currentFaculty = "Current Faculty"
+TRANSLATIONS.en.emeritiFaculty = "Emeriti"
+
+TRANSLATIONS.tr.titleFacultyPage = "Öğretim Üyeleri - Bilkent Üniversitesi";
+TRANSLATIONS.tr.titleFaculty = "Öğretim Üyeleri"
+TRANSLATIONS.tr.clickFaculty = " Kişisel sayfalara ulaşmak için isimlerin üzerine tıklayınız."
+TRANSLATIONS.tr.currentFaculty = "Mevcut Öğretim Üyeleri"
+TRANSLATIONS.tr.emeritiFaculty = "Emekli Öğretim Üyeleri"
+
 document.addEventListener("DOMContentLoaded", render);
+document.render = render; // expose render function to other modules, app.js in particular

@@ -1,4 +1,4 @@
-export const EMERITI = [
+export const EMERITI_EN = [
     {
         name: "İbrahim Dibağ",
         rank: "Professor",
@@ -26,7 +26,7 @@ export const EMERITI = [
         phone: "",
         email: "",
         photo: "https://math.bilkent.edu.tr/mugan.jpg",
-        url: "https://www.fen.bilkent.edu.tr/"
+        url: "http://www.fen.bilkent.edu.tr/~mugan/"
     },
     {
         name: "Alexander Klyachko",
@@ -41,7 +41,7 @@ export const EMERITI = [
         phone: "",
         email: "",
         photo: "https://math.bilkent.edu.tr/klyachko-2.jpg",
-        url: "https://www.fen.bilkent.edu.tr/"
+        url: "http://www.fen.bilkent.edu.tr/~klyachko/"
     },
     {
         name: "Mefharet Kocatepe",
@@ -56,7 +56,7 @@ export const EMERITI = [
         phone: "",
         email: "",
         photo: "https://math.bilkent.edu.tr/kocatepe-2.jpg",
-        url: "https://www.fen.bilkent.edu.tr/"
+        url: "http://www.fen.bilkent.edu.tr/~kocatepe/"
     },
     {
         name: "Ali Süleyman Üstünel",
@@ -71,7 +71,7 @@ export const EMERITI = [
         phone: "",
         email: "",
         photo: "https://math.bilkent.edu.tr/ustunel-2.jpg",
-        url: "https://www.fen.bilkent.edu.tr/"
+        url: "http://www.fen.bilkent.edu.tr/~ustunel/"
     },
     {
         name: "Aurelian Gheondea",
@@ -87,7 +87,7 @@ export const EMERITI = [
         phone: "",
         email: "",
         photo: "https://math.bilkent.edu.tr/gheondea-2.jpg",
-        url: "https://www.fen.bilkent.edu.tr/"
+        url: "http://www.fen.bilkent.edu.tr/~aurelian/"
     },
     {
         name: "Yosum Kurtulmaz",
@@ -102,7 +102,7 @@ export const EMERITI = [
         phone: "",
         email: "",
         photo: "https://math.bilkent.edu.tr/kurtulmaz-2.jpg",
-        url: "https://www.fen.bilkent.edu.tr/"
+        url: "http://www.fen.bilkent.edu.tr/~yosum/"
     },
     {
         name: "Metin Gürses",
@@ -117,7 +117,7 @@ export const EMERITI = [
         phone: "+90 (312) 290-1924",
         email: "gurses [-at-] fen.bilkent.edu.tr",
         photo: "https://math.bilkent.edu.tr/gurses-2.jpg",
-        url: "https://www.fen.bilkent.edu.tr/"
+        url: "http://www.fen.bilkent.edu.tr/~gurses/"
     },
     {
         name: "Dilek Köksal",
@@ -130,6 +130,109 @@ export const EMERITI = [
         phone: "",
         email: "",
         photo: "https://math.bilkent.edu.tr/guvenc-2.jpg",
-        url: "https://www.fen.bilkent.edu.tr/"
+        url: "http://www.fen.bilkent.edu.tr/~guvenc/"
     }
 ]
+
+
+export const EMERITI_TR = [
+  {
+    name: "İbrahim Dibağ",
+    rank: "Profesör Dr.",
+    degree: "Doktora, Matematik, Princeton Üniversitesi, 1988.",
+    research: ["Cebirsel topoloji."],
+    office: "",
+    phone: "",
+    email: "",
+    photo: "https://math.bilkent.edu.tr/tr/dibag.jpg",
+    url: ""
+  },
+  {
+    name: "Uğurhan Muğan",
+    rank: "Profesör Dr.",
+    degree: "Doktora, Matematik, Clarkson Üniversitesi, 1988.",
+    research: ["Doğrusal olmayan adi ve kısmi diferansiyel denklemler", "asimptotik analiz", "sınır değer problemleri", "tekil integral denklemler."],
+    office: "",
+    phone: "",
+    email: "",
+    photo: "https://math.bilkent.edu.tr/tr/mugan.jpg",
+    url: "http://www.fen.bilkent.edu.tr/~mugan/"
+  },
+  {
+    name: "Alexander Klyachko",
+    rank: "Profesör Dr.",
+    degree: "Doktora, Matematik, Saratov Devlet Üniversitesi, 1973",
+    research: ["Cebir", "cebirsel geometri", "sayılar kuramı"],
+    office: "",
+    phone: "",
+    email: "",
+    photo: "https://math.bilkent.edu.tr/tr/klyachko-2.jpg",
+    url: "http://www.fen.bilkent.edu.tr/~klyachko/"
+  },
+  {
+    name: "Mefharet Kocatepe",
+    rank: "Profesör Dr.",
+    degree: "Doktora, Matematik, Michigan Üniversitesi, 1978",
+    research: ["Fonksiyonel analiz", "nükleer uzaylar", "Köthe uzayları"],
+    office: "",
+    phone: "",
+    email: "",
+    photo: "https://math.bilkent.edu.tr/tr/kocatepe-2.jpg",
+    url: "http://www.fen.bilkent.edu.tr/~kocatepe/"
+  },
+  {
+    name: "Ali Süleyman Üstünel",
+    rank: "Misafir Profesör Dr.",
+    degree: "Doktora, Matematik, Paris VI Üniversitesi, 1981",
+    research: ["Olasılık ve analiz", "rassal analiz", "finans matematiği"],
+    office: "",
+    phone: "",
+    email: "",
+    photo: "https://math.bilkent.edu.tr/tr/ustunel-2.jpg",
+    url: "http://www.fen.bilkent.edu.tr/~ustunel/"
+  },
+  {
+    name: "Aurelian Gheondea",
+    rank: "Profesör Dr.",
+    degree: "Doktora, Matematik, Bükreş Üniversitesi, 1990",
+    research: ["Fonksiyonel analiz", "operatör kuramı", "matematiksel fizik"],
+    office: "",
+    phone: "",
+    email: "",
+    photo: "https://math.bilkent.edu.tr/tr/gheondea-2.jpg",
+    url: "http://www.fen.bilkent.edu.tr/~aurelian/"
+  },
+  {
+    name: "Yosum Kurtulmaz",
+    rank: "Öğretim Görevlisi",
+    degree: "Doktora, Matematik, Orta Doğu Teknik Üniversitesi, 1998",
+    research: ["Halka kuramı", "sayılar kuramı", "biçimsel kavram analizi"],
+    office: "",
+    phone: "",
+    email: "",
+    photo: "https://math.bilkent.edu.tr/tr/kurtulmaz-2.jpg",
+    url: "http://www.fen.bilkent.edu.tr/~yosum/"
+  },
+  {
+    name: "Metin Gürses",
+    rank: "Profesör Dr.",
+    degree: "Doktora, Fizik, Orta Doğu Teknik Üniversitesi, 1975",
+    research: ["Matematiksel fizik", "genel görelik kuramı", "kısmi diferansiyel denklemler"],
+    office: "SA-126",
+    phone: "(312) 290 1924",
+    email: "gurses [-at-] fen.bilkent.edu.tr",
+    photo: "https://math.bilkent.edu.tr/tr/gurses-2.jpg",
+    url: "http://www.fen.bilkent.edu.tr/~gurses/"
+  },
+  {
+    name: "Dilek Köksal",
+    rank: "Öğretim Görevlisi",
+    degree: "Doktora, İstatistik, Ankara Üniversitesi, 1984",
+    research: ["Olasılık ve istatistik"],
+    office: "",
+    phone: "",
+    email: "",
+    photo: "https://math.bilkent.edu.tr/tr/guvenc-2.jpg",
+    url: "http://www.fen.bilkent.edu.tr/~guvenc/"
+  }
+];

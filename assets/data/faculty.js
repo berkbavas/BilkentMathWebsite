@@ -1,4 +1,4 @@
-export const CURRENT_FACULTY = [
+export const CURRENT_FACULTY_EN = [
   {
     name: "İnci Pekgüleç Apaydın",
     rank: "Instructor",
@@ -41,7 +41,7 @@ export const CURRENT_FACULTY = [
     phone: "+90 (312) 290-2120",
     email: "barker [-at-] fen.bilkent.edu.tr",
     photo: "https://math.bilkent.edu.tr/barker-2.jpg",
-    url: "https://www.fen.bilkent.edu.tr/"
+    url: "http://www.fen.bilkent.edu.tr/~barker/fenis2.html"
   },
   {
     name: "Alexander Degtyarev",
@@ -52,7 +52,7 @@ export const CURRENT_FACULTY = [
     phone: "+90 (312) 290-2135",
     email: "degt [-at-] fen.bilkent.edu.tr",
     photo: "https://math.bilkent.edu.tr/degtyarev-2.jpg",
-    url: "https://www.fen.bilkent.edu.tr/"
+    url: "http://www.fen.bilkent.edu.tr/~degt/"
   },
   {
     name: "Alexander Goncharov",
@@ -63,7 +63,7 @@ export const CURRENT_FACULTY = [
     phone: "+90 (312) 290-1923",
     email: "goncha [-at-] fen.bilkent.edu.tr",
     photo: "https://math.bilkent.edu.tr/goncharov-2.jpg",
-    url: "https://www.fen.bilkent.edu.tr/"
+    url: "http://www.fen.bilkent.edu.tr/~goncha/index.html"
   },
   {
     name: "Ahmet Güloğlu",
@@ -74,7 +74,7 @@ export const CURRENT_FACULTY = [
     phone: "+90 (312) 290-2747",
     email: "guloglua [-at-] fen.bilkent.edu.tr",
     photo: "https://math.bilkent.edu.tr/guloglu-2.jpg",
-    url: "https://www.fen.bilkent.edu.tr/"
+    url: "http://www.fen.bilkent.edu.tr/~guloglua/"
   },
   {
     name: "Yaghoub Heydarzade",
@@ -96,7 +96,7 @@ export const CURRENT_FACULTY = [
     phone: "+90 (312) 290-2101",
     email: "kaptan [-at-] fen.bilkent.edu.tr",
     photo: "https://math.bilkent.edu.tr/kaptanoglu-2.jpg",
-    url: "https://www.fen.bilkent.edu.tr/"
+    url: "http://www.fen.bilkent.edu.tr/~kaptan/"
   },
   {
     name: "Enis Kaya",
@@ -107,7 +107,7 @@ export const CURRENT_FACULTY = [
     phone: "+90 (312) 290 2132",
     email: "enis.kaya [-at-] bilkent.edu.tr",
     photo: "https://math.bilkent.edu.tr/kaya.jpg",
-    url: "https://sites.google.com/"
+    url: "https://sites.google.com/view/eniskaya/home"
   },
   {
     name: "Azer Kerimov",
@@ -118,7 +118,7 @@ export const CURRENT_FACULTY = [
     phone: "+90 (312) 290-1627",
     email: "kerimov [-at-] fen.bilkent.edu.tr",
     photo: "https://math.bilkent.edu.tr/kerimov-2.jpg",
-    url: "https://www.fen.bilkent.edu.tr/"
+    url: "http://www.fen.bilkent.edu.tr/~kerimov/fenis2.html"
   },
   {
     name: "Yasir Kızmaz",
@@ -129,7 +129,7 @@ export const CURRENT_FACULTY = [
     phone: "+90 (312) 290-2130",
     email: "yasirkizmaz [-at-] bilkent.edu.tr",
     photo: "https://math.bilkent.edu.tr/kizmaz.jpg",
-    url: "https://myasir-kizmaz.wixsite.com/"
+    url: "https://myasir-kizmaz.wixsite.com/my-homepage"
   },
   {
     name: "Konstantinos Maronikolakis",
@@ -151,7 +151,7 @@ export const CURRENT_FACULTY = [
     phone: "+90 (312) 290-2103",
     email: "cihan.okay [-at-] bilkent.edu.tr",
     photo: "https://math.bilkent.edu.tr/okay.jpg",
-    url: "https://cihan.okay.bilkent.edu.tr/"
+    url: "https://www.cihanokay.com/"
   },
   {
     name: "Türker Özsarı",
@@ -162,7 +162,7 @@ export const CURRENT_FACULTY = [
     phone: "+90 (312) 290 2899",
     email: "turker.ozsari [-at-] bilkent.edu.tr",
     photo: "https://math.bilkent.edu.tr/ozsari.jpg",
-    url: "https://www.turkerozsari.com/"
+    url: "https://turkerozsari.com/"
   },
   {
     name: "Naci Saldı",
@@ -195,7 +195,7 @@ export const CURRENT_FACULTY = [
     phone: "+90 (312) 290-1255",
     email: "sezer [-at-] fen.bilkent.edu.tr",
     photo: "https://math.bilkent.edu.tr/sezer-2.jpg",
-    url: "https://orcid.org/"
+    url: "https://orcid.org/0000-0002-6704-5399"
   },
   {
     name: "Syed Waqar Ali Shah",
@@ -206,7 +206,7 @@ export const CURRENT_FACULTY = [
     phone: "+90 (312) 290-1883",
     email: "swshah [-at-] bilkent.edu.tr",
     photo: "https://math.bilkent.edu.tr/shah.jpg",
-    url: "https://sites.google.com/"
+    url: "https://sites.google.com/view/swshah/home"
   },
   {
     name: "Okan Tekman",
@@ -217,7 +217,7 @@ export const CURRENT_FACULTY = [
     phone: "+90 (312) 290-1256",
     email: "otekman [-at-] fen.bilkent.edu.tr",
     photo: "https://math.bilkent.edu.tr/tekman-2.jpg",
-    url: "https://www.fen.bilkent.edu.tr/"
+    url: "http://www.fen.bilkent.edu.tr/~otekman/"
   },
   {
     name: "Bülent Ünal",
@@ -228,7 +228,7 @@ export const CURRENT_FACULTY = [
     phone: "+90 (312) 290-1719",
     email: "bulent [-at-] fen.bilkent.edu.tr",
     photo: "https://math.bilkent.edu.tr/unal-2.jpg",
-    url: "https://www.fen.bilkent.edu.tr/"
+    url: "http://www.fen.bilkent.edu.tr/~bulent/"
   },
   {
     name: "Özgün Ünlü",
@@ -239,7 +239,7 @@ export const CURRENT_FACULTY = [
     phone: "+90 (312) 290-1359",
     email: "unluo [-at-] fen.bilkent.edu.tr",
     photo: "https://math.bilkent.edu.tr/unlu-2.jpg",
-    url: "https://www.fen.bilkent.edu.tr/"
+    url: "http://www.fen.bilkent.edu.tr/~unluo/"
   },
   {
     name: "Ergün Yalçın",
@@ -250,7 +250,7 @@ export const CURRENT_FACULTY = [
     phone: "+90 (312) 290-2115",
     email: "yalcine [-at-] fen.bilkent.edu.tr",
     photo: "https://math.bilkent.edu.tr/yalcin-2.jpg",
-    url: "https://www.fen.bilkent.edu.tr/"
+    url: "http://www.fen.bilkent.edu.tr/~yalcine/"
   },
   {
     name: "Hamza Yeşilyurt",
@@ -261,7 +261,7 @@ export const CURRENT_FACULTY = [
     phone: "+90 (312) 290-1897",
     email: "hamza [-at-] fen.bilkent.edu.tr",
     photo: "https://math.bilkent.edu.tr/yesilyurt-2.jpg",
-    url: "https://www.fen.bilkent.edu.tr/"
+    url: "http://www.fen.bilkent.edu.tr/~hamza/"
   },
   {
     name: "Gökhan Yıldırım",
@@ -272,7 +272,7 @@ export const CURRENT_FACULTY = [
     phone: "+90 (312) 290-2104",
     email: "gokhan.yildirim [-at-] bilkent.edu.tr",
     photo: "https://math.bilkent.edu.tr/yildirim-2.jpg",
-    url: "https://orcid.org/"
+    url: "https://orcid.org/0000-0003-4399-7843"
   },
   {
     name: "Deniz Yılmaz",
@@ -283,7 +283,7 @@ export const CURRENT_FACULTY = [
     phone: "+90 (312) 290-1085",
     email: "d.yilmaz [-at-] bilkent.edu.tr",
     photo: "https://math.bilkent.edu.tr/d.yilmaz.jpg",
-    url: "https://web4.bilkent.edu.tr/"
+    url: "https://yilmazdeniz.bilkent.edu.tr/"
   },
   {
     name: "Natalya Zheltukhina",
@@ -294,6 +294,306 @@ export const CURRENT_FACULTY = [
     phone: "+90 (312) 290-2465",
     email: "natalya [-at-] fen.bilkent.edu.tr",
     photo: "https://math.bilkent.edu.tr/zheltukhina-2.jpg",
-    url: "https://www.fen.bilkent.edu.tr/"
+    url: "http://www.fen.bilkent.edu.tr/~natalya/"
+  }
+];
+
+export const CURRENT_FACULTY_TR = [
+  {
+    name: "İnci Pekgüleç Apaydın",
+    rank: "Öğretim Görevlisi",
+    degree: "Yüksek lisans, Yöneylem araştırması, Orta Doğu Teknik Üniversitesi, 1989",
+    research: ["Klasik istatistik", "kestirim", "istatistiksel karar verme kuramı"],
+    office: "SA-144",
+    phone: "+90 (312) 290-2131",
+    email: "incia [-at-] bilkent.edu.tr",
+    photo: "https://math.bilkent.edu.tr/tr/apaydin.jpg",
+    url: ""
+  },
+  {
+    name: "Fatihcan Atay",
+    rank: "Profesör Dr.",
+    degree: "Doktora, Uygulamalı Matematik, Brown Üniversitesi, 1994",
+    research: ["Dinamik sistemler", "gecikmeli diferansiyel denklemler", "karmaşık sistemler ve ağlar", "uygulamalı matematik"],
+    office: "SA-132",
+    phone: "(312) 290 1265",
+    email: "f.atay [-at-] bilkent.edu.tr",
+    photo: "https://math.bilkent.edu.tr/tr/atay-2.jpg",
+    url: "https://fatihcanatay.wordpress.com/"
+  },
+  {
+    name: "Cihan Bahran",
+    rank: "Dr. Öğr. Üyesi",
+    degree: "Doktora,Matematik, Minnesota Universitesi, 2019",
+    research: ["Fonktoryel Temsil Teorisi ve Topoloji Uygulamaları"],
+    office: "SA-138",
+    phone: "+90 (312) 290-2466",
+    email: "cihan.bahran[-at-] bilkent.edu.tr",
+    photo: "https://math.bilkent.edu.tr/tr/bahran.jpg",
+    url: "https://www.cihanbahran.org/"
+  },
+  {
+    name: "Laurence Barker",
+    rank: "Doçent Dr.",
+    degree: "Doktora, Matematik, Oxford Üniversitesi, 1992",
+    research: ["Sonlu gruplar", "gösterim kuramı", "Clifford kuramı", "G-cebirleri"],
+    office: "SA-129",
+    phone: "(312) 290 2120",
+    email: "barker [-at-] fen.bilkent.edu.tr",
+    photo: "https://math.bilkent.edu.tr/tr/barker-2.jpg",
+    url: "http://www.fen.bilkent.edu.tr/~barker/fenis2.html"
+  },
+  {
+    name: "Alexander Degtyarev",
+    rank: "Profesör Dr.",
+    degree: "Doktora, Matematik, Steklov Matematik Enstitüsü, 1988",
+    research: ["Topoloji", "cebirsel geometri"],
+    office: "SA-130",
+    phone: "(312) 290 2135",
+    email: "degt [-at-] fen.bilkent.edu.tr",
+    photo: "https://math.bilkent.edu.tr/tr/degtyarev-2.jpg",
+    url: "http://www.fen.bilkent.edu.tr/~degt/"
+  },
+  {
+    name: "Alexander Goncharov",
+    rank: "Doçent Dr.",
+    degree: "Doktora, Matematik, Rostov Devlet Üniversitesi, 1986",
+    research: ["Fonksiyonel analiz"],
+    office: "SA-122",
+    phone: "(312) 290 1923",
+    email: "goncha [-at-] fen.bilkent.edu.tr",
+    photo: "https://math.bilkent.edu.tr/tr/goncharov-2.jpg",
+    url: "http://www.fen.bilkent.edu.tr/~goncha/index.html"
+  },
+  {
+    name: "Ahmet Güloğlu",
+    rank: "Doçent Dr.",
+    degree: "Doktora, Matematik, Ohio Eyalet Üniversitesi, 2005",
+    research: ["Analitik sayılar kuramı"],
+    office: "SA-131",
+    phone: "(312) 290 2747",
+    email: "guloglua [-at-] fen.bilkent.edu.tr",
+    photo: "https://math.bilkent.edu.tr/tr/guloglu-2.jpg",
+    url: "http://www.fen.bilkent.edu.tr/~guloglua/"
+  },
+  {
+    name: "Yaghoub Heydarzade",
+    rank: "Dr. Öğr. Üyesi",
+    degree: "Doktora, Fizik, Azerbaycan Shahid Madani Üniversitesi, 2018",
+    research: ["Kuramsal fizik", "yerçekimi ve kozmoloji"],
+    office: "SA-137",
+    phone: "(312) 290 1590",
+    email: "yheydarzade [-at-] bilkent.edu.tr",
+    photo: "https://math.bilkent.edu.tr/tr/heydarzade-2.jpg",
+    url: "https://www.yaghoubheydarzade.com/"
+  },
+  {
+    name: "H. Turgay Kaptanoğlu",
+    rank: "Profesör Dr.",
+    degree: "Doktora, Matematik, Wisconsin Üniversitesi, Madison, 1991",
+    research: ["Karmaşık analiz ve operatör kuramı"],
+    office: "SA-124",
+    phone: "(312) 290 2101",
+    email: "kaptan [-at-] fen.bilkent.edu.tr",
+    photo: "https://math.bilkent.edu.tr/tr/kaptanoglu-2.jpg",
+    url: "http://www.fen.bilkent.edu.tr/~kaptan/"
+  },
+  {
+    name: "Enis Kaya",
+    rank: "Dr. Öğr. Üyesi",
+    degree: "Doktora, Groningen Üniversitesi",
+    research: ["Aritmetik geometri", "cebirsel geometri", "tropikal geometri"],
+    office: "SA-105",
+    phone: "(312) 290 2132",
+    email: "enis.kaya [-at-] bilkent.edu.tr",
+    photo: "https://math.bilkent.edu.tr/tr/kaya.jpg",
+    url: "https://sites.google.com/view/eniskaya/home"
+  },
+  {
+    name: "Azer Kerimov",
+    rank: "Profesör Dr.",
+    degree: "Doktora, Matematik, Landau Teorik Fizik Enstitüsü ve Azerbaycan Bilimler Akademisi, 1988",
+    research: ["İstatistiksel fiziğin matematiksel kuramı", "olasılık", "matematiksel analiz"],
+    office: "SA-120",
+    phone: "(312) 290 1627",
+    email: "kerimov [-at-] fen.bilkent.edu.tr",
+    photo: "https://math.bilkent.edu.tr/tr/kerimov-2.jpg",
+    url: "http://www.fen.bilkent.edu.tr/~kerimov/fenis2.html"
+  },
+  {
+    name: "Yasir Kızmaz",
+    rank: "Dr. Öğr. Üyesi",
+    degree: "Doktora, Matematik, Orta Doğu Teknik Üniversites, 2018",
+    research: ["Sonlu grup teorisi"],
+    office: "SA-143",
+    phone: "(312) 290- 2130",
+    email: "yasirkizmaz [-at-] bilkent.edu.tr",
+    photo: "https://math.bilkent.edu.tr/tr/kizmaz.jpg",
+    url: "https://myasir-kizmaz.wixsite.com/my-homepage"
+  },
+  {
+    name: "Konstantinos Maronikolakis",
+    rank: "Misafir Dr. Öğr. Üyesi",
+    degree: "Doktora, Matematik, University College Dublin, 2024",
+    research: ["Karmaşık analiz", "potansiyel kuramı", "fonksiyonel analiz"],
+    office: "SA-109",
+    phone: "(312) 290 2102",
+    email: "konstantinos [-at-] bilkent.edu.tr",
+    photo: "https://math.bilkent.edu.tr/tr/maronikolakis.png",
+    url: "https://conmaro.github.io/"
+  },
+  {
+    name: "Cihan Okay",
+    rank: "Dr. Öğr. Üyesi",
+    degree: "Doktora, Matematik, British Columbia Üniversitesi, 2014",
+    research: ["Cebirsel topoloji", "quantum enformasyon kuramı"],
+    office: "SA-140",
+    phone: "(312) 290 2103",
+    email: "cihan.okay [-at-] bilkent.edu.tr",
+    photo: "https://math.bilkent.edu.tr/tr/okay.jpg",
+    url: "https://www.cihanokay.com/"
+  },
+  {
+    name: "Türker Özsarı",
+    rank: "Doçent Dr., Bölüm Başkanı",
+    degree: "Doktora, Matematik, Virginia Üniversitesi, 2010",
+    research: ["Kısmi diferansiyel denklemlerin analizi ve kontrol kuramı"],
+    office: "SA-111A",
+    phone: "(312) 290 2899",
+    email: "turker.ozsari [-at-] bilkent.edu.tr",
+    photo: "https://math.bilkent.edu.tr/tr/ozsari.jpg",
+    url: "https://turkerozsari.com/"
+  },
+  {
+    name: "Naci Saldı",
+    rank: "Doçent Dr.",
+    degree: "Doktora, Uygulamalı Matematik, Queen's Üniversitesi, 2015",
+    research: ["Stokastik denetim kuramı", "oyun kuramı", "makine öğrenmesi", "enformasyon kuramı", "olasılık kuramı ve uygulamaları"],
+    office: "SA-139",
+    phone: "(312) 290 1938",
+    email: "naci.saldi [-at-] bilkent.edu.tr",
+    photo: "https://math.bilkent.edu.tr/tr/saldi.jpg",
+    url: "https://web4.bilkent.edu.tr/saldi/"
+  },
+  {
+    name: "Ali Sinan Sertöz",
+    rank: "Profesör Dr.",
+    degree: "Doktora, Matematik, British Columbia Üniversitesi, 1984",
+    research: ["Cebirsel geometri"],
+    office: "SA-121",
+    phone: "(312) 290 1490",
+    email: "sertoz [-at-] bilkent.edu.tr",
+    photo: "https://math.bilkent.edu.tr/tr/sertoz-2.jpg",
+    url: "https://sertoz.bilkent.edu.tr/"
+  },
+  {
+    name: "Müfit Sezer",
+    rank: "Profesör Dr.",
+    degree: "Doktora, Matematik, Purdue Üniversitesi, 2003",
+    research: ["Değişmeli cebir", "değişmezlik teorisi"],
+    office: "SA-117",
+    phone: "(312) 290 1255",
+    email: "sezer [-at-] fen.bilkent.edu.tr",
+    photo: "https://math.bilkent.edu.tr/tr/sezer-2.jpg",
+    url: "https://orcid.org/0000-0002-6704-5399"
+  },
+  {
+    name: "Syed Waqar Ali Shah",
+    rank: "Dr. Öğr. Üyesi",
+    degree: "Doktora, Harvard Üniversitesi",
+    research: ["İwasawa Teorisi", "Aritmetik Geometri"],
+    office: "SA-103",
+    phone: "+90 (312) 290-1883",
+    email: "swshah [-at-] bilkent.edu.tr",
+    photo: "https://math.bilkent.edu.tr/tr/shah.jpg",
+    url: "https://sites.google.com/view/swshah/home"
+  },
+  {
+    name: "Okan Tekman",
+    rank: "Senior Lecturer",
+    degree: "Doktora, Matematik, Minnesota Üniversitesi, 1992",
+    research: ["Otomorfik formlar"],
+    office: "SA-125",
+    phone: "(312) 290 1256",
+    email: "otekman [-at-] fen.bilkent.edu.tr",
+    photo: "https://math.bilkent.edu.tr/tr/tekman-2.jpg",
+    url: "http://www.fen.bilkent.edu.tr/~otekman/"
+  },
+  {
+    name: "Bülent Ünal",
+    rank: "Doçent Dr.",
+    degree: "Doktora, Matematik, Missouri Üniversitesi, 2000",
+    research: ["Diferansiyel geometri", "Riemann geometrisi", "katmanlı uzaylarda global analiz"],
+    office: "SA-118",
+    phone: "(312) 290 1719",
+    email: "bulent [-at-] fen.bilkent.edu.tr",
+    photo: "https://math.bilkent.edu.tr/tr/unal-2.jpg",
+    url: "http://www.fen.bilkent.edu.tr/~bulent/"
+  },
+  {
+    name: "Özgün Ünlü",
+    rank: "Doçent Dr.",
+    degree: "Doktora, Matematik, Wisconsin Üniversitesi, Madison, 2004",
+    research: ["Cebirsel geometri", "geometrik grup kuramı"],
+    office: "SA-123",
+    phone: "(312) 290 1359",
+    email: "unluo [-at-] fen.bilkent.edu.tr",
+    photo: "https://math.bilkent.edu.tr/tr/unlu-2.jpg",
+    url: "http://www.fen.bilkent.edu.tr/~unluo/"
+  },
+  {
+    name: "Ergün Yalçın",
+    rank: "Profesör Dr.",
+    degree: "Doktora, Matematik, Wisconsin Üniversitesi, Madison, 1998",
+    research: ["Grup kohomolojisi", "topolojik uzaylara sonlu grup etkisi", "gruplarla ilişkili geometrik yapılar"],
+    office: "SA-127",
+    phone: "(312) 290 2115",
+    email: "yalcine [-at-] fen.bilkent.edu.tr",
+    photo: "https://math.bilkent.edu.tr/tr/yalcin-2.jpg",
+    url: "http://www.fen.bilkent.edu.tr/~yalcine/"
+  },
+  {
+    name: "Hamza Yeşilyurt",
+    rank: "Doçent Dr.",
+    degree: "Doktora, Matematik, Illinois Üniversitesi, Urbana-Champaign, 2004",
+    research: ["Analitik sayılar kuramı"],
+    office: "SA-106",
+    phone: "(312) 290 1897",
+    email: "hamza [-at-] fen.bilkent.edu.tr",
+    photo: "https://math.bilkent.edu.tr/tr/yesilyurt-2.jpg",
+    url: "http://www.fen.bilkent.edu.tr/~hamza/"
+  },
+  {
+    name: "Gökhan Yıldırım",
+    rank: "Dr. Öğr. Üyesi",
+    degree: "Doktora, Uygulamalı Matematik, Güney California Üniversitesi, 2013",
+    research: ["Saymalı kombinatorik", "olasılık kuramı", "istatistiksel fizik", "veri bilimi"],
+    office: "SA-142",
+    phone: "(312) 290 2104",
+    email: "gokhan.yildirim [-at-] bilkent.edu.tr",
+    photo: "https://math.bilkent.edu.tr/tr/yildirim-2.jpg",
+    url: "https://orcid.org/0000-0003-4399-7843"
+  },
+  {
+    name: "Deniz Yılmaz",
+    rank: "Dr. Öğr. Üyesi",
+    degree: "Doktora, Matematik, California Üniversitesi, Santa Cruz, 2020",
+    research: ["Temsil kuramı", "sonlu gruplar", "blok kuramı", "iküme izleçleri"],
+    office: "SA-114",
+    phone: "(312) 290 1085",
+    email: "d.yilmaz [-at-]bilkent.edu.tr",
+    photo: "https://math.bilkent.edu.tr/tr/yilmaz.jpg",
+    url: "https://yilmazdeniz.bilkent.edu.tr/"
+  },
+  {
+    name: "Natalya Zheltukhina",
+    rank: "Öğretim Görevlisi",
+    degree: "Doktora, Matematik, Bilkent Üniversitesi, 2002",
+    research: ["Tüm düzlemde analitik fonksiyonlar kuramı", "Polya sıklık dizileri"],
+    office: "SA-111b",
+    phone: "(312) 290 2465",
+    email: "natalya [-at-] fen.bilkent.edu.tr",
+    photo: "https://math.bilkent.edu.tr/tr/zheltukhina-2.jpg",
+    url: "http://www.fen.bilkent.edu.tr/~natalya/"
   }
 ];

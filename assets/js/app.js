@@ -94,7 +94,6 @@ function setupNavigation() {
    ========================================================== */
 function setupLanguageToggle() {
     const toggle = document.querySelector(SELECTORS.langToggle);
-    if (!toggle) return;
 
     let currentLang = localStorage.getItem("lang") || "en";
     toggle.textContent = currentLang.toUpperCase();
@@ -105,6 +104,9 @@ function setupLanguageToggle() {
         localStorage.setItem("lang", currentLang);
         toggle.textContent = currentLang.toUpperCase();
         applyTranslations(currentLang);
+        if(document.render) {
+            document.render();
+        }
     });
 }
 
