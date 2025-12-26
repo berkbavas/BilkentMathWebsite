@@ -1,6 +1,9 @@
 import { GRADUATE_STUDENTS } from "../data/graduate-students.js";
-import { escapeHtml } from "./helpers.js";
+import { TRANSLATIONS } from "../data/translations.js";
 
+const elementSearch = document.querySelector("#search");
+const elementCount = document.querySelector("#count");
+const elementReset = document.querySelector("#reset");
 
 function card(s) {
     const name = s.name ?? "";
@@ -45,13 +48,9 @@ function card(s) {
   `;
 }
 
-function matches(student, q) {
-    const ql = q.toLowerCase();
+function matches(student, query) {
+    const ql = query.toLowerCase();
     if (student.name && student.name.toLowerCase().includes(ql)) return true;
-    if (student.office && student.office.toLowerCase().includes(ql)) return true;
-    if (student.phone && student.phone.toLowerCase().includes(ql)) return true;
-    if (student.email && student.email.toLowerCase().includes(ql)) return true;
-    if (student.advisor && student.advisor.toLowerCase().includes(ql)) return true;
     return false;
 }
 
@@ -62,21 +61,39 @@ function renderCards(list) {
 }
 
 function apply() {
-    const q = document.querySelector("#search").value.trim();
-    let list = GRADUATE_STUDENTS.filter(student => matches(student, q));
-    document.querySelector("#count").textContent = `${list.length} student(s)`;
+    const currentLang = localStorage.getItem("lang") || "en";
+    elementSearch.placeholder = TRANSLATIONS[currentLang].placeholderSearch;
+    const query = elementSearch.value.trim();
+    const list = GRADUATE_STUDENTS.filter(student => matches(student, query));
+    elementCount.textContent = `${list.length} ${TRANSLATIONS[currentLang].postfixStudent}`;
     renderCards(list);
 }
 
 function resetFilters() {
-    document.querySelector("#search").value = "";
+    elementSearch.value = "";
     apply();
 }
 
 function render() {
-    document.querySelector("#search").addEventListener("input", apply);
-    document.querySelector("#reset").addEventListener("click", resetFilters);
+    elementSearch.addEventListener("input", apply);
+    elementReset.addEventListener("click", resetFilters);
     apply();
 }
 
+
+TRANSLATIONS.en.titleGraduateStudentsPage = "Graduate Students - Bilkent University";
+TRANSLATIONS.en.headerGraduateStudents = "Graduate Students";
+TRANSLATIONS.en.paragraphGraduateStudents = "Information about current graduate students of the Department of Mathematics.";
+TRANSLATIONS.en.buttonReset = "Reset";
+TRANSLATIONS.en.postfixStudent = "Student(s)";
+TRANSLATIONS.en.placeholderSearch = "Search";
+
+TRANSLATIONS.tr.titleGraduateStudentsPage = "Lisansüstü Öğrencileri - Bilkent Üniversitesi";
+TRANSLATIONS.tr.headerGraduateStudents = "Lisansüstü Öğrencileri";
+TRANSLATIONS.tr.paragraphGraduateStudents = "Matematik Bölümü'nün mevcut lisansüstü öğrencileri hakkında bilgi.";
+TRANSLATIONS.tr.buttonReset = "Sıfırla";
+TRANSLATIONS.tr.postfixStudent = "Öğrenci";
+TRANSLATIONS.tr.placeholderSearch = "Ara";
+
+document.render = render;
 document.addEventListener("DOMContentLoaded", render);

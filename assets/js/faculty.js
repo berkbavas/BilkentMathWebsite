@@ -58,10 +58,10 @@ function cardTemplate(p) {
         </article>`;
 }
 
-function render() {
+const gridCurrent = document.querySelector("#gridCurrent");
+const gridEmeriti = document.querySelector("#gridEmeriti");
 
-    const gridCurrent = document.querySelector("#gridCurrent");
-    const gridEmeriti = document.querySelector("#gridEmeriti");
+function render() {
 
     let currentLang = localStorage.getItem("lang") || "en";
     let currentFaculty;
@@ -80,7 +80,6 @@ function render() {
 
     gridCurrent.innerHTML = currentFaculty.map(cardTemplate).join("");
     gridEmeriti.innerHTML = emeritiFaculty.map(cardTemplate).join("");
-
 }
 
 
