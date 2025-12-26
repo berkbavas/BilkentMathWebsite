@@ -64,32 +64,18 @@ const gridEmeriti = document.querySelector("#gridEmeriti");
 function render() {
 
     let currentLang = localStorage.getItem("lang") || "en";
-    let currentFaculty;
-    let emeritiFaculty;
-
-    if (currentLang === "en") {
-        currentFaculty = CURRENT_FACULTY_EN;
-        emeritiFaculty = EMERITI_EN;
-    } else if (currentLang === "tr") {
-        currentFaculty = CURRENT_FACULTY_TR;
-        emeritiFaculty = EMERITI_TR;
-    }
-    else {
-        throw new Error(`Unsupported language: ${currentLang}`);
-    }
+    let currentFaculty = currentLang === "tr" ? CURRENT_FACULTY_TR : CURRENT_FACULTY_EN;
+    let emeritiFaculty = currentLang === "tr" ? EMERITI_TR : EMERITI_EN;
 
     gridCurrent.innerHTML = currentFaculty.map(cardTemplate).join("");
     gridEmeriti.innerHTML = emeritiFaculty.map(cardTemplate).join("");
 }
 
-
-TRANSLATIONS.en.titleFacultyPage = "Faculty - Bilkent University";
 TRANSLATIONS.en.titleFaculty = "Faculty Members"
 TRANSLATIONS.en.clickFaculty = "Click on a faculty member's name to view their personal web page."
 TRANSLATIONS.en.currentFaculty = "Current Faculty"
 TRANSLATIONS.en.emeritiFaculty = "Emeriti"
 
-TRANSLATIONS.tr.titleFacultyPage = "Öğretim Üyeleri - Bilkent Üniversitesi";
 TRANSLATIONS.tr.titleFaculty = "Öğretim Üyeleri"
 TRANSLATIONS.tr.clickFaculty = " Kişisel sayfalara ulaşmak için isimlerin üzerine tıklayınız."
 TRANSLATIONS.tr.currentFaculty = "Mevcut Öğretim Üyeleri"

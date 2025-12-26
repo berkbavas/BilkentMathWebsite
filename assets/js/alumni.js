@@ -75,13 +75,11 @@ function render() {
     apply();
 }
 
-TRANSLATIONS.en.titleAlumniPage = "Some of Our Alumni - Bilkent University";
 TRANSLATIONS.en.headerAlumni = "Some of Our Alumni";
 TRANSLATIONS.en.buttonReset = "Reset";
 TRANSLATIONS.en.noResults = "No matching alumni found.";
 TRANSLATIONS.en.placeholderSearch = "Search";
 
-TRANSLATIONS.tr.titleAlumniPage = "Bazı Mezunlarımız - Bilkent Üniversitesi";
 TRANSLATIONS.tr.headerAlumni = "Bazı Mezunlarımız";
 TRANSLATIONS.tr.buttonReset = "Sıfırla";
 TRANSLATIONS.tr.noResults = "Eşleşen mezun bulunamadı.";

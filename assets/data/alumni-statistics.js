@@ -1,11 +1,11 @@
 export const ALUMNI_STATISTICS = {
-    "Academia": 52,
-    "Finance and Banking": 11,
-    "IT": 8,
-    "Education": 7,
-    "Public Sector": 3,
-    "Research Institute": 2,
-    "Telecommunications": 2,
-    "Defense Industry": 1,
-    "Other": 13
+    academia: 52,
+    financeAndBanking: 11,
+    it: 8,
+    education: 7,
+    publicSector: 3,
+    researchInstitute: 2,
+    telecommunications: 2,
+    defenseIndustry: 1,
+    other: 13
 };

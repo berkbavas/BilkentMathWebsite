@@ -4,11 +4,12 @@
 
 export const TRANSLATIONS = {
     en: {
-
-        titleDepartment: "Department of Mathematics",
-        titleUniversity: "Bilkent University",
+        // Page Titles
+        title: "Bilkent University • Department of Mathematics",
 
         // Navigation
+        titleDepartment: "Department of Mathematics",
+        titleUniversity: "Bilkent University",
         navHome: "Home",
         navPeople: "People",
         navPeopleFaculty: "Faculty",
@@ -58,10 +59,12 @@ export const TRANSLATIONS = {
         footerFollowUs: "Follow Us"
     },
     tr: {
-        titleDepartment: "Matematik Bölümü",
-        titleUniversity: "Bilkent Üniversitesi",
+        // Page Titles
+        title: "Bilkent Üniversitesi • Matematik Bölümü",
 
         // Navigation
+        titleDepartment: "Matematik Bölümü",
+        titleUniversity: "Bilkent Üniversitesi",
         navHome: "Ana Sayfa",
         navPeople: "Bölüm Elemanları",
         navPeopleFaculty: "Öğretim Üyeleri",

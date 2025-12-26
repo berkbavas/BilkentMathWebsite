@@ -80,15 +80,12 @@ function render() {
     apply();
 }
 
-
-TRANSLATIONS.en.titleGraduateStudentsPage = "Graduate Students - Bilkent University";
 TRANSLATIONS.en.headerGraduateStudents = "Graduate Students";
 TRANSLATIONS.en.paragraphGraduateStudents = "Information about current graduate students of the Department of Mathematics.";
 TRANSLATIONS.en.buttonReset = "Reset";
 TRANSLATIONS.en.postfixStudent = "Student(s)";
 TRANSLATIONS.en.placeholderSearch = "Search";
 
-TRANSLATIONS.tr.titleGraduateStudentsPage = "Lisansüstü Öğrencileri - Bilkent Üniversitesi";
 TRANSLATIONS.tr.headerGraduateStudents = "Lisansüstü Öğrencileri";
 TRANSLATIONS.tr.paragraphGraduateStudents = "Matematik Bölümü'nün mevcut lisansüstü öğrencileri hakkında bilgi.";
 TRANSLATIONS.tr.buttonReset = "Sıfırla";
