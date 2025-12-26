@@ -68,16 +68,12 @@
 }
 
 /* Title area */
-.gs-title {
-    min-width: 0;
-}
 
 .gs-name {
     margin: 0;
     font-size: 1.05rem;
     font-weight: 800;
     letter-spacing: -0.2px;
-    line-height: 1.15;
 }
 
 .gs-sub {
@@ -87,8 +83,6 @@
     line-height: 1.35;
     overflow: hidden;
     text-overflow: ellipsis;
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
 }
 
 .gs-sub-label {

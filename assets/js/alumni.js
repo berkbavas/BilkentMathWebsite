@@ -6,7 +6,7 @@ const elementSearch = document.querySelector("#search");
 const elementReset = document.querySelector("#reset");
 const elementRoot = document.getElementById("alumniRoot");
 
-function renderEntry(a) {
+function renderEntry(a, lang) {
     const esc = escapeHtml;
     const photoUrl = a.photo ? "https://math.bilkent.edu.tr/Alumni/" + a.photo : "";
     const bullets = Array.isArray(a.bullets) ? a.bullets : [];
@@ -34,7 +34,7 @@ function renderEntry(a) {
         <details class="alumni-story">
             <summary>
                 <i class="fa-solid fa-caret-right"></i>
-                <span data-i18n="story">Story</span>
+                <span data-i18n="story">${TRANSLATIONS[lang].story}</span>
             </summary>
             <blockquote>${a.story}</blockquote>
         </details>` : ""}
@@ -57,7 +57,7 @@ function apply() {
     const lang = localStorage.getItem("lang") || "en";
     const query = elementSearch.value.trim();
     const list = ALUMNI.filter(alumni => matches(alumni, query));
-    elementRoot.innerHTML = list.map(renderEntry).join("");
+    elementRoot.innerHTML = list.map(a => renderEntry(a, lang)).join("");
     elementSearch.placeholder = TRANSLATIONS[lang].placeholderSearch;
     if (list.length === 0) {
         elementRoot.innerHTML = `<p>${TRANSLATIONS[lang].noResults}</p>`;
@@ -83,11 +83,13 @@ TRANSLATIONS.en.headerAlumni = "Some of Our Alumni";
 TRANSLATIONS.en.buttonReset = "Reset";
 TRANSLATIONS.en.noResults = "No matching alumni found.";
 TRANSLATIONS.en.placeholderSearch = "Search";
+TRANSLATIONS.en.story = "Story";
 
 TRANSLATIONS.tr.headerAlumni = "Bazı Mezunlarımız";
 TRANSLATIONS.tr.buttonReset = "Sıfırla";
 TRANSLATIONS.tr.noResults = "Eşleşen mezun bulunamadı.";
 TRANSLATIONS.tr.placeholderSearch = "Ara";
+TRANSLATIONS.tr.story = "Hikaye";
 
 document.render = render; // expose render function to other modules, app.js in particular
 document.addEventListener("DOMContentLoaded", init);
