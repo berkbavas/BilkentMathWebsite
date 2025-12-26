@@ -1,7 +1,8 @@
 /* ==========================================================
    App bootstrap
    ========================================================== */
-import {TRANSLATIONS} from '../data/translations.js';
+import { TRANSLATIONS } from '../data/translations.js';
+
 
 document.addEventListener("DOMContentLoaded", init);
 
@@ -95,13 +96,13 @@ function setupLanguageToggle() {
     const toggle = document.querySelector(SELECTORS.langToggle);
     if (!toggle) return;
 
-    let currentLang = "en"; // default language
-
-
+    let currentLang = localStorage.getItem("lang") || "en";
+    toggle.textContent = currentLang.toUpperCase();
     applyTranslations(currentLang);
 
     toggle.addEventListener("click", () => {
         currentLang = currentLang === "en" ? "tr" : "en";
+        localStorage.setItem("lang", currentLang);
         toggle.textContent = currentLang.toUpperCase();
         applyTranslations(currentLang);
     });
@@ -120,9 +121,13 @@ function applyTranslations(lang) {
 
     document.querySelectorAll("[data-i18n]").forEach(el => {
         const key = el.getAttribute("data-i18n");
-        console.log(key, dict[key]);
         if (dict[key]) {
             el.textContent = dict[key];
         }
+    });
+
+    document.querySelectorAll("[data-fa]").forEach(el => {
+        const faClass = el.getAttribute("data-fa");
+        el.innerHTML += `<i class="${faClass}"></i>`;
     });
 }
