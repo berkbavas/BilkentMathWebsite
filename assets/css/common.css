@@ -229,7 +229,7 @@ ul li {
     display: block;
     width: 64px;
     height: 3px;
-    background: #1a4fd8;
+    background: var(--primary);
     border-radius: 999px;
 }
 

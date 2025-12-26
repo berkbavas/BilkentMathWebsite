@@ -1,0 +1,77 @@
+/* =========================
+   About – Department Page
+   ========================= */
+
+.page-hero {
+    padding: 2.2rem 0 1.6rem;
+    margin-bottom: 2.4rem;
+    border-bottom: 1px solid var(--border);
+}
+
+.page-hero h1 {
+    margin: 0;
+    font-size: 1.9rem;
+    font-weight: 700;
+    letter-spacing: -0.3px;
+}
+
+.page-hero h1::after {
+    content: "";
+    display: block;
+    width: 64px;
+    height: 3px;
+    margin-top: 10px;
+    background: var(--primary);
+    border-radius: 999px;
+}
+
+.page-lead {
+    margin-top: 1rem;
+    max-width: 720px;
+    font-size: 1.05rem;
+    color: var(--muted);
+    line-height: 1.7;
+}
+
+/* Section */
+.about-section {
+    display: flex;
+    justify-content: center;
+}
+
+/* Card */
+.about-card {
+    max-width: 820px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    padding: 2rem;
+    box-shadow: 0 10px 26px rgba(0, 0, 0, .06);
+}
+
+.about-card p {
+    margin: 0 0 1.2rem;
+    font-size: 1rem;
+    line-height: 1.75;
+    color: rgba(17, 17, 17, .92);
+}
+
+.about-card p:last-child {
+    margin-bottom: 0;
+}
+
+.about-card strong {
+    font-weight: 700;
+    color: rgba(17, 17, 17, .95);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .page-hero h1 {
+        font-size: 1.6rem;
+    }
+
+    .about-card {
+        padding: 1.5rem;
+    }
+}
