@@ -107,6 +107,7 @@
     justify-self: center;
     gap: 8px;
     font-size: 0.9rem;
+    white-space: nowrap;
 }
 
 .nav-link:hover {
@@ -246,7 +247,7 @@
 }
 
 /* Responsive */
-@media (max-width: 1260px) {
+@media (max-width: 1320px) {
     .nav-toggle {
         display: inline-flex;
         align-items: center;
