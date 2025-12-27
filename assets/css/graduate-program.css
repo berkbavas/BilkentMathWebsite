@@ -181,7 +181,7 @@
     font-size: .8rem;
 }
 
-@media (max-width: 960px) {
+@media (max-width: 720px) {
     .gsup-footer {
         grid-template-columns: 1fr;
     }
