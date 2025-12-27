@@ -114,3 +114,18 @@ export const TRANSLATIONS = {
         footerFollowUs: "Bizi Takip Edin"
     }
 };
+
+export const MONTHS_EN_TO_TR = {
+    January: "Ocak",
+    February: "Şubat",
+    March: "Mart",
+    April: "Nisan",
+    May: "Mayıs",
+    June: "Haziran",
+    July: "Temmuz",
+    August: "Ağustos",
+    September: "Eylül",
+    October: "Ekim",
+    November: "Kasım",
+    December: "Aralık"
+};
