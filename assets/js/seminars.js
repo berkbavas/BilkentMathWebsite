@@ -76,14 +76,11 @@ function apply() {
     list.sort((a, b) => {
         return toDateKey(b.date, b.time) - toDateKey(a.date, a.time);
     });
+
     let lang = localStorage.getItem("lang") || "en";
 
-    if (lang === "tr") {
-        $("#count").textContent = `${list.length} seminer`;
-    }
-    else {
-        $("#count").textContent = `${list.length} seminar(s)`;
-    }
+    $("#table-container").hidden = list.length === 0;
+    $("#count").textContent = `${list.length} ${lang === "en" ? "seminar(s)" : "seminer"}`;
 
     renderTable(list);
     renderCards(list);
