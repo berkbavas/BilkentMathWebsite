@@ -62,9 +62,12 @@ function cardTemplate(p) {
 function render() {
     const lang = localStorage.getItem("lang") || "en";
     const search = elSearch.value.trim();
+    elSearch.placeholder = TRANSLATIONS[lang].placeholderSearch;
+
     let list = lang === "en"
         ? GRADUATE_SUPERVISORS_EN
         : GRADUATE_SUPERVISORS_TR;
+
     if (search) {
         list = list.filter(p => matches(p, search));
     }
@@ -100,6 +103,10 @@ TRANSLATIONS.en.placeholderSearch = "Search";
 TRANSLATIONS.en.buttonReset = "Reset";
 TRANSLATIONS.en.countResults = "{count} faculty members";
 TRANSLATIONS.en.noResults = "No results found.";
+TRANSLATIONS.en.headerPastTheses = "Past Theses";
+TRANSLATIONS.en.buttonPastTheses = "View";
+TRANSLATIONS.en.headerCoordinator = "Department Graduate Coordinator";
+TRANSLATIONS.en.buttonApplyOnline = "Apply Online";
 
 TRANSLATIONS.tr.headerText = "Matematik Lisansüstü Programı";
 TRANSLATIONS.tr.pageLead = "Bilkent Üniversitesi Matematik Bölümü Lisansüstü Programı, Türkiye'nin en önde gelen matematik araştırma programlarındandır.";
@@ -109,3 +116,7 @@ TRANSLATIONS.tr.placeholderSearch = "Ara";
 TRANSLATIONS.tr.buttonReset = "Sıfırla";
 TRANSLATIONS.tr.noResults = "Sonuç bulunamadı.";
 TRANSLATIONS.tr.countResults = "{count} öğretim üyesi";
+TRANSLATIONS.tr.headerPastTheses = "Geçmişte Yürütülen Tezler";
+TRANSLATIONS.tr.buttonPastTheses = "Görüntüle";
+TRANSLATIONS.tr.headerCoordinator = "Bölüm Lisansüstü Koordinatörü";
+TRANSLATIONS.tr.buttonApplyOnline = "Çevrimiçi Başvuru Formu";

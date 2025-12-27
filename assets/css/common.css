@@ -250,7 +250,7 @@ ul li {
 .header h1::after {
     content: "";
     display: block;
-    width: 64px;
+    width: 54px;
     height: 3px;
     background: var(--primary);
     border-radius: 999px;
@@ -312,6 +312,7 @@ header p {
     cursor: pointer;
     background-color: var(--surface);
     color: var(--text);
+    text-decoration: none;
     transition: transform .08s ease, background .2s ease, border-color .2s ease;
 }
 
