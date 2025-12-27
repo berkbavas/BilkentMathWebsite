@@ -56,12 +56,6 @@ h2 {
     color: rgba(255, 255, 255, 0.88);
 }
 
-
-.header p+p {
-    margin-top: 0.9rem;
-}
-
-
 .header a {
     display: inline-block;
     margin-top: 0.75rem;
