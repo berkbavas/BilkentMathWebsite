@@ -76,7 +76,7 @@ function renderCards(list) {
 }
 
 
-function renderTable(list, lang = "en") {
+function renderTable(list, lang) {
 
     let headerRow = lang === "en" ? `<th>Title / Speaker</th>
                                 <th>Date</th>
@@ -100,8 +100,8 @@ function renderTable(list, lang = "en") {
             </div>`;
 }
 
-function renderYearContent(seminars) {
-    return renderTable(seminars) + renderCards(seminars);
+function renderYearContent(seminars, lang) {
+    return renderTable(seminars, lang) + renderCards(seminars);
 }
 
 function render() {
