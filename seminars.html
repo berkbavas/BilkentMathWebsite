@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="assets/css/navigation.css">
     <link rel="stylesheet" href="assets/css/seminars.css">
     <script type="module" src="assets/js/app.js"></script>
-    <script type="module" src="assets/js/seminars.js" defer></script>
+    <script type="module" src="assets/js/seminars.js"></script>
 </head>
 
 <body>
@@ -32,7 +32,7 @@
         <div class="header-controls" role="search">
             <label class="header-search">
                 <i class="fa-solid fa-magnifying-glass header-search-icon" aria-hidden="true"></i>
-                <input class="header-search-input" type="search" placeholder="Search" autocomplete="off" id="search" />
+                <input class="header-search-input" type="search" placeholder="Search" autocomplete="off" id="search">
             </label>
 
             <button class="btn btn-ghost" type="button" id="reset">Reset</button>
@@ -43,9 +43,9 @@
         </div>
 
         <!-- Table -->
-        <section>
+        <div>
             <div class="table-card">
-                <div class="table-wrap" role="region" aria-label="Seminar list" tabindex="0">
+                <div class="table-wrap" role="region" tabindex="0">
                     <table class="seminar-table" aria-describedby="count">
                         <thead>
                             <tr>
@@ -63,9 +63,9 @@
             </div>
 
             <!-- Mobile cards (JS will render the same data here too) -->
-            <div class="cards" id="cards" aria-label="Seminar cards"></div>
+            <div class="cards" id="cards"></div>
+        </div>
 
-        </section>
     </main>
 
     <footer id="footer" class="footer"></footer>

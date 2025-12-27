@@ -102,7 +102,6 @@
                 <p>The duration of the visa application process varies from country to country. In some cases, the
                     process
                     may take up to 8 weeks, so accepted students are advised to apply for visa as early as possible.</p>
-                </section>
             </div>
 
             <div data-lang="tr">
@@ -146,11 +145,8 @@
                 <p>İlk elemeyi geçen adaylara mülakat daveti yollanacaktır. Başvuruların çokluğu nedeniyle kişisel
                     sorgulamalara dönüş yapılamamaktadır.</p>
 
-                </section>
-
-
             </div>
-            
+
             <h3 data-i18n="titleGraduateSupervisors">Graduate Supervisors</h3>
             <p class="max-width-720" data-i18n="paragraphGraduateSupervisors">
                 Faculty members and their research interests.
@@ -158,18 +154,19 @@
 
 
             <div class="gsup-controls" role="search">
-                <label class="gsup-search" aria-label="Search supervisors">
+                <label class="gsup-search" for="supSearch">
                     <i class="fa-solid fa-magnifying-glass gsup-search-icon" aria-hidden="true"></i>
                     <input id="supSearch" type="search" placeholder="Search" autocomplete="off">
                 </label>
 
                 <button id="supReset" class="btn btn-ghost" type="button" data-i18n="buttonReset">Reset</button>
-                <div class="gsup-count" aria-live="polite"></div>
+                <p class="gsup-count" aria-live="polite">
+                </p>
             </div>
 
-            <section class="gsup-grid" id="supRoot" aria-live="polite"></section>
+            <div class="gsup-grid" id="supRoot" aria-live="polite"></div>
 
-            <section class="gsup-footer">
+            <div class="gsup-footer">
                 <div class="gsup-footer-card">
                     <div class="gsup-footer-title" data-i18n="headerPastTheses">Past Theses</div>
                     <a href="#" data-i18n="buttonPastTheses">View</a>
@@ -187,10 +184,9 @@
                     <a href="https://stars.bilkent.edu.tr/gradapp/" data-i18n="buttonApplyOnline" target="_blank">Apply
                         Online</a>
                 </div>
-            </section>
+            </div>
 
-            </section>
-
+        </div>
     </main>
 
     <footer id="footer" class="footer"></footer>

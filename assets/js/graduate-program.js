@@ -70,12 +70,13 @@ function render() {
     }
 
     if (list.length === 0) {
+        elCount.textContent = "";
         elRoot.innerHTML = `<p>${TRANSLATIONS[lang].noResults}</p>`;
     }
     else {
+        elCount.textContent = TRANSLATIONS[lang].countResults.replace("{count}", list.length);
         elRoot.innerHTML = list.map(cardTemplate).join("");
     }
-    elCount.textContent = TRANSLATIONS[lang].countResults.replace("{count}", list.length);
 
 }
 
