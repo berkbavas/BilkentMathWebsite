@@ -23,10 +23,10 @@
 
     <main class="container">
 
-
         <header class="header">
-            <h1>2025-26 Academic Year Seminars</h1>
-            <p>Department seminars held during the 2025-26 academic year. </p>
+            <h1 data-i18n="titleSeminars">2025-26 Academic Year Seminars</h1>
+            <p class="page-lead" data-i18n="textDescription">Department seminars held during the 2025-26 academic year.
+            </p>
         </header>
 
         <div class="header-controls" role="search">
@@ -35,24 +35,24 @@
                 <input class="header-search-input" type="search" placeholder="Search" autocomplete="off" id="search">
             </label>
 
-            <button class="btn btn-ghost" type="button" id="reset">Reset</button>
+            <button class="btn btn-ghost" type="button" id="reset" data-i18n="buttonReset">Reset</button>
 
             <div class="header-meta">
-                <span class="pill" id="count">0 student(s)</span>
+                <span class="pill" id="count">0 seminar(s)</span>
             </div>
         </div>
 
-        <!-- Table -->
         <div>
+            <!-- Table -->
             <div class="table-card">
                 <div class="table-wrap" role="region" tabindex="0">
                     <table class="seminar-table" aria-describedby="count">
                         <thead>
                             <tr>
-                                <th data-col="title">Title / Speaker</th>
-                                <th data-col="date">Date</th>
-                                <th data-col="time">Time</th>
-                                <th data-col="place">Place</th>
+                                <th data-col="title" data-i18n="tableHeaderTitleSpeaker">Title / Speaker</th>
+                                <th data-col="date" data-i18n="tableHeaderDate">Date</th>
+                                <th data-col="time" data-i18n="tableHeaderTime">Time</th>
+                                <th data-col="place" data-i18n="tableHeaderPlace">Place</th>
                             </tr>
                         </thead>
                         <tbody id="tbody">
