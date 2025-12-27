@@ -3,6 +3,14 @@ export const SEMINARS = [
         speaker: "Asım Ocak",
         title: "Chebyshev's Bias in Integer Partitions",
         link: "seminars/2025-2026/senior_project_25122025.pdf",
+        date: "31.12.2025",
+        time: "12:30",
+        place: "SA141"
+    },
+    {
+        speaker: "Asım Ocak",
+        title: "Chebyshev's Bias in Integer Partitions",
+        link: "seminars/2025-2026/senior_project_25122025.pdf",
         date: "29.12.2025",
         time: "12:30",
         place: "SA141"
