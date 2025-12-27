@@ -96,9 +96,7 @@
 .faculty-meta {
     list-style: none;
     padding: 0;
-    margin: .4rem 0 0;
     display: grid;
-    gap: .45rem;
 }
 
 .faculty-meta li {

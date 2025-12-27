@@ -1,5 +1,4 @@
 import { NEWS_EN, NEWS_TR } from "../data/news.js";
-import {TRANSLATIONS} from "../data/translations.js";
 
 let elMount = document.getElementById("news-timeline");
 
@@ -55,5 +54,5 @@ function render() {
     });
 }
 
-document.render = render;
-document.addEventListener("DOMContentLoaded", render);
+document.render = render; // Expose render function to other modules, app.js in particular
+document.addEventListener("DOMContentLoaded", render); // Initial render on DOM load

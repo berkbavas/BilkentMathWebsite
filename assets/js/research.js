@@ -1,51 +1,38 @@
 import { RESEARCH_DATA } from "../data/research.js";
-import { TRANSLATIONS } from "../data/translations.js";
-
-function escapeHtml(str) {
-    return String(str)
-        .replaceAll("&", "&amp;")
-        .replaceAll("<", "&lt;")
-        .replaceAll(">", "&gt;")
-        .replaceAll('"', "&quot;")
-        .replaceAll("'", "&#039;");
-}
 
 function renderFacultyChips(faculty, accent) {
     const chips = faculty.map(f => {
-        const name = escapeHtml(f.name);
-        const url = escapeHtml(f.url);
         return `
-      <a class="chip-link" href="${url}" target="_blank" rel="noreferrer"
-         style="--accent:${accent}">
+      <a class="chip-link" href="${f.url}" target="_blank" rel="noreferrer" style="--chip-accent: ${accent};">
         <i class="fa-regular fa-user"></i>
-        <span>${name}</span>
+        <span>${f.name}</span>
       </a>`;
     }).join("");
 
     return `<div class="faculty-chips">${chips}</div>`;
 }
 
-
 function renderAccordionItem(area, lang) {
     const accent = area.accent;
     const description = area.description[lang] || area.description["en"];
     const title = area.title[lang] || area.title["en"];
+    const labelParticipatingFaculty = lang === "en" ? "Participating faculty:" : "Öğretim üyeleri:"
 
     return `
-    <details class="acc-item" style="--accent:${accent}">
+    <details class="acc-item max-width-720" style="--accent:${accent}">
       <summary class="acc-summary">
         <div class="acc-left">
           <span class="area-icon" aria-hidden="true"><i class="${area.icon}"></i></span>
           <div class="acc-title">
             <span class="swatch" aria-hidden="true"></span>
-            <span>${escapeHtml(title)}</span>
+            <span>${title}</span>
           </div>
         </div>
         <div class="acc-chevron" aria-hidden="true"><i class="fa-solid fa-chevron-down"></i></div>
       </summary>
       <div class="acc-body">
-        <p>${escapeHtml(description)}</p>
-        <p><strong>${lang === "en" ? "Participating faculty:" : "Öğretim üyeleri:"}</strong></p>
+        <p>${description}</p>
+        <p><strong>${labelParticipatingFaculty}</strong></p>
         ${renderFacultyChips(area.faculty, accent)}
       </div>
     </details>
@@ -55,18 +42,12 @@ function renderAccordionItem(area, lang) {
 
 function render() {
     const lang = localStorage.getItem("lang") || "en";
-    const mount = document.querySelector(".research-accordion");
+    const mount = document.getElementById("mount");
     mount.innerHTML = RESEARCH_DATA.map((a, idx) => renderAccordionItem(a, lang)).join("");
 }
 
+document.render = render; // Expose render function to global scope for language toggle
+document.addEventListener("DOMContentLoaded", render); // Initial render on DOM load
 
-TRANSLATIONS.en.headerText = "Research at Bilkent Mathematics";
-TRANSLATIONS.en.pageLeadText = "Research activities at the Department of Mathematics are grouped into four classical areas of pure and applied mathematics. Each group consist of several faculty members and graduate students and holds regular weekly seminars and other activities.";
-TRANSLATIONS.en.thesesArchiveText = "Theses archive";
-
-TRANSLATIONS.tr.headerText = "Araştırma Alanları";
-TRANSLATIONS.tr.pageLeadText = "Bilkent Matematik Bölümü'nde araştırma faaliyetleri matematiğin dört klasik alanında yoğunlaşmıştır. Öğretim üyeleri ve yüksek lisans öğrencilerinden oluşan her araştırma grubu, kendi haftalık düzenli seminer dizilerini ve diğer bilimsel faaliyetleri organize ederler.";
-TRANSLATIONS.tr.thesesArchiveText = "Tez arşivi";
-
-document.render = render;
-document.addEventListener("DOMContentLoaded", render);
+// Note: The code above defines functions to render research areas with faculty chips
+// and sets up the initial rendering and language toggle support.

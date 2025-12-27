@@ -7,9 +7,7 @@
     <title data-i18n="title">Bilkent University • Department of Mathematics</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="stylesheet" href="assets/css/common.css">
     <link rel="stylesheet" href="assets/css/navigation.css">
@@ -19,11 +17,10 @@
 </head>
 
 <body>
-    <header id="navigation" class="topbar"></header>
+    <header id="navigation" class="navigation"></header>
 
     <main class="container">
 
-        <!-- HERO -->
         <header class="header">
             <div class="header-wrap">
                 <h1 data-lang="en">Welcome to Bilkent Mathematics</h1>
@@ -72,18 +69,16 @@
                 <div class="kpi-label" data-lang="en"><i class="fa-solid fa-graduation-cap"></i>Graduate Students</div>
                 <div class="kpi-label" data-lang="tr"><i class="fa-solid fa-graduation-cap"></i>Lisansüstü Öğrencileri</div>
                 <div class="kpi-value" id="gradCount">—</div>
-                <div class="kpi-sub" data-lang="en"><a href="graduate-students.html">View all graduate students →</a>
-                </div>
-                <div class="kpi-sub" data-lang="tr"><a href="graduate-students.html">Tüm lisansüstü öğrencilerini
-                        görüntüle →</a></div>
+                <div class="kpi-sub" data-lang="en"><a href="graduate-students.html">View all graduate students →</a></div>
+                <div class="kpi-sub" data-lang="tr"><a href="graduate-students.html">Tüm lisansüstü öğrencilerini görüntüle →</a></div>
             </div>
 
             <div class="kpi-card">
                 <div class="kpi-label" data-lang="en"><i class="fa-solid fa-hourglass-start"></i>Next Seminar</div>
                 <div class="kpi-label" data-lang="tr"><i class="fa-solid fa-hourglass-start"></i>Sonraki Seminer</div>
-                <div class="kpi-value" id="nextSeminarDate">—</div>
-                <div class="kpi-sub bold" id="nextSeminarTitle">—</div>
-                <div class="kpi-sub" id="nextSeminarSpeaker">—</div>
+                <div class="kpi-value" id="nextSeminarDate">—</div><!-- e.g., "01.01.2026, 00:00 · SA141" -->
+                <div class="kpi-sub bold" id="nextSeminarTitle">—</div> <!-- e.g., "Proof of Riemann Hypothesis" -->
+                <div class="kpi-sub" id="nextSeminarSpeaker">—</div> <!-- e.g., "Prof. Berk Bavaş " -->
             </div>
 
             <a href="problem-of-month.html" class="kpi-card kpi-link">
@@ -94,23 +89,21 @@
             </a>
         </section>
 
-
         <section class="home-seminars">
             <div class="seminar-column">
                 <div class="seminar-column upcoming" id="upcomingSeminarsTitle">
                     <h2 data-lang="en"><i class="fa-regular fa-bell"></i>Upcoming Seminars</h2>
                     <h2 data-lang="tr"><i class="fa-regular fa-bell"></i>Yaklaşan Seminerler</h2>
                 </div>
-                <div id="upcomingSeminars"></div>
+                <div id="upcomingSeminars"><!-- JS will insert seminars here --></div>
             </div>
 
             <div class="seminar-column past">
                 <h2 data-lang="en"><i class="fa-regular fa-calendar-check"></i>Past Seminars</h2>
                 <h2 data-lang="tr"><i class="fa-regular fa-calendar-check"></i>Geçmiş Seminerler</h2>
-                <div id="pastSeminars"></div>
+                <div id="pastSeminars"><!-- JS will insert seminars here --></div>
             </div>
         </section>
-
 
     </main>
 

@@ -48,7 +48,7 @@ function cardTemplate(p) {
             <a href="${esc(url)}" class="sup-avatar">${avatar}</a>
 
             <div style="min-width:0">
-                <a href="${esc(url)}" class="sup-name">${name}</a>
+                <a href="${esc(url)}" class="sup-name" target="_blank">${name}</a>
                 ${rank ? `<div class="sup-rank">${rank}</div>` : ""}
             </div>
         </div>
@@ -95,8 +95,7 @@ function init() {
 document.render = render;
 document.addEventListener("DOMContentLoaded", init);
 
-TRANSLATIONS.en.headerText = "Mathematics Graduate Program";
-TRANSLATIONS.en.pageLead = "The Graduate Program of the Department of Mathematics at Bilkent University is among the leading mathematics research programs in Turkey. ";
+// Add translations specific to Graduate Supervisors page
 TRANSLATIONS.en.titleGraduateSupervisors = "Graduate Supervisors";
 TRANSLATIONS.en.paragraphGraduateSupervisors = "Faculty members and their research interests.";
 TRANSLATIONS.en.placeholderSearch = "Search";
@@ -109,8 +108,6 @@ TRANSLATIONS.en.headerCoordinator = "Department Graduate Coordinator";
 TRANSLATIONS.en.buttonApplyOnline = "Apply Online";
 TRANSLATIONS.en.coordinatorName = "Prof. Azer Kerimov";
 
-TRANSLATIONS.tr.headerText = "Matematik Lisansüstü Programı";
-TRANSLATIONS.tr.pageLead = "Bilkent Üniversitesi Matematik Bölümü Lisansüstü Programı, Türkiye'nin en önde gelen matematik araştırma programlarındandır.";
 TRANSLATIONS.tr.titleGraduateSupervisors = "Lisansüstü Tez Danışmanları";
 TRANSLATIONS.tr.paragraphGraduateSupervisors = "Öğretim üyeleri ve araştırma alanları.";
 TRANSLATIONS.tr.placeholderSearch = "Ara";

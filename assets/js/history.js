@@ -39,5 +39,5 @@ function render() {
     container.innerHTML = heads.map(renderCard).join("");
 }
 
-document.render = render;
-document.addEventListener("DOMContentLoaded", render);
+document.render = render; // Expose render function to global scope for language toggle
+document.addEventListener("DOMContentLoaded", render); // Initial render on DOM load

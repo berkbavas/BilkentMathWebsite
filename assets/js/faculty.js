@@ -1,6 +1,5 @@
 import { CURRENT_FACULTY_EN, CURRENT_FACULTY_TR } from "../data/faculty.js";
 import { EMERITI_EN, EMERITI_TR } from "../data/emeriti.js";
-import { TRANSLATIONS } from "../data/translations.js";
 import { escapeHtml } from "./helpers.js";
 
 function cardTemplate(p) {
@@ -39,7 +38,7 @@ function cardTemplate(p) {
             <ul class="faculty-meta">
                 ${office ? `
                 <li>
-                    <i class="fa-regular fa-building"></i>
+                    <i class="fa-solid fa-briefcase"></i>
                     <span>${office}</span>
                 </li>` : ""}
 
@@ -72,16 +71,6 @@ function render() {
     gridCurrent.innerHTML = currentFaculty.map(cardTemplate).join("");
     gridEmeriti.innerHTML = emeritiFaculty.map(cardTemplate).join("");
 }
-
-TRANSLATIONS.en.titleFaculty = "Faculty Members"
-TRANSLATIONS.en.clickFaculty = "Click on a faculty member's name to view their personal web page."
-TRANSLATIONS.en.currentFaculty = "Current Faculty"
-TRANSLATIONS.en.emeritiFaculty = "Emeriti"
-
-TRANSLATIONS.tr.titleFaculty = "Öğretim Üyeleri"
-TRANSLATIONS.tr.clickFaculty = " Kişisel sayfalara ulaşmak için isimlerin üzerine tıklayınız."
-TRANSLATIONS.tr.currentFaculty = "Mevcut Öğretim Üyeleri"
-TRANSLATIONS.tr.emeritiFaculty = "Emekli Öğretim Üyeleri"
 
 document.addEventListener("DOMContentLoaded", render);
 document.render = render; // expose render function to other modules, app.js in particular

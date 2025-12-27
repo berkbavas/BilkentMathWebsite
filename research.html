@@ -7,8 +7,7 @@
     <title data-i18n="title">Bilkent University • Department of Mathematics</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300;400;500;600;700;800&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="stylesheet" href="assets/css/common.css">
     <link rel="stylesheet" href="assets/css/navigation.css">
@@ -18,28 +17,32 @@
 </head>
 
 <body>
-    <header id="navigation" class="topbar"></header>
+    <header id="navigation" class="navigation"><!-- JavaScript will inject content here --></header>
 
     <main class="container">
 
         <header class="header">
-            <h1 data-i18n="headerText">Research</h1>
-            <p class="page-lead" data-i18n="pageLeadText">Research activities at the Department of Mathematics are
+            <h1 data-lang="en">Research</h1>
+            <h1 data-lang="tr">Araştırma Alanları</h1>
+            <p class="page-lead" data-lang="en">Research activities at the Department of Mathematics are
                 grouped into four classical areas of pure and applied mathematics. Each group consist of several faculty
                 members and graduate students and holds regular weekly seminars and other activities.
             </p>
-
+            <p class="page-lead" data-lang="tr">Bilkent Matematik Bölümü'nde araştırma faaliyetleri matematiğin dört
+                klasik alanında yoğunlaşmıştır. Öğretim üyeleri ve yüksek lisans öğrencilerinden oluşan her araştırma
+                grubu, kendi haftalık düzenli seminer dizilerini ve diğer bilimsel faaliyetleri organize ederler.
+            </p>
             <div class="research-toolbar">
-                <a class="btn" href="http://repository.bilkent.edu.tr/handle/11693/13818" target="_blank"
-                    rel="noreferrer" data-i18n="thesesArchiveText"> Theses archive</a>
+                <a class="btn" href="http://repository.bilkent.edu.tr/handle/11693/13818" target="_blank" rel="noreferrer" data-lang="en"><i class="fa-solid fa-folder-open"></i>Theses archive</a>
+                <a class="btn" href="http://repository.bilkent.edu.tr/handle/11693/13818" target="_blank" rel="noreferrer" data-lang="tr"><i class="fa-solid fa-folder-open"></i>Tez arşivi</a>
             </div>
         </header>
 
-        <div class="research-accordion"> <!-- JavaScript will inject content here --> </div>
+        <div class="research-accordion" id="mount"><!-- JavaScript will inject content here --></div>
 
     </main>
 
-    <footer id="footer" class="footer"></footer>
+    <footer id="footer" class="footer"><!-- JavaScript will inject content here --></footer>
 </body>
 
 </html>

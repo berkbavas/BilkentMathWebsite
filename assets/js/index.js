@@ -2,8 +2,6 @@ import { SEMINARS } from "../data/seminars.js";
 import { CURRENT_FACULTY_EN } from "../data/faculty.js";
 import { GRADUATE_STUDENTS } from "../data/graduate-students.js";
 
-
-
 function toDateKey(s, t) { // DD.MM.YYYY -> Date
 	const [d, m, y] = s.split(".").map(x => x.padStart(2, "0"));
 	const [hh, mm] = (t || "00:00").split(":").map(x => x.padStart(2, "0"));
@@ -49,6 +47,5 @@ function renderSeminars(containerId, list) {
   `).join("");
 }
 
-
-document.render = render;
-document.addEventListener("DOMContentLoaded", render);
+document.render = render; // Expose render function to other modules, app.js in particular
+document.addEventListener("DOMContentLoaded", render); // Initial render on DOM load

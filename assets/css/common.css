@@ -8,7 +8,7 @@
     --font-serif: ui-serif, Georgia, "Times New Roman", Times, serif;
 
     --container: 1260px;
-    --navigation-width: 1300px;
+    --navigation-width: 1320px;
     --radius: 14px;
     --radius-sm: 10px;
 
@@ -27,7 +27,7 @@
     --surface: #FFFFFF;
     --surface-2: #F0F4FF;
     --text: #000000;
-    --muted: #5B6473;
+    --muted: #474e5a;
     --border: #E5E7EB;
 
     --primary: #2d2a62;
@@ -332,6 +332,10 @@ header p {
     background-color: #f8f8f8;
 }
 
+.btn i {
+    margin-right: 0.6rem;
+}
+
 .btn-black {
     padding: 16px;
     border-radius: 999px;
@@ -341,6 +345,10 @@ header p {
     text-decoration: none;
     color: #fff;
     transition: all .2s ease;
+}
+
+.btn-black i {
+    margin-right: 0.6rem;
 }
 
 .btn-ghost {

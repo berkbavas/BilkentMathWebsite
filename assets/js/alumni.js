@@ -77,14 +77,12 @@ function render() {
     apply();
 }
 
-TRANSLATIONS.en.headerAlumni = "Some of Our Alumni";
 TRANSLATIONS.en.buttonReset = "Reset";
 TRANSLATIONS.en.noResults = "No matching alumni found.";
 TRANSLATIONS.en.placeholderSearch = "Search";
 TRANSLATIONS.en.story = "Story";
 TRANSLATIONS.en.lastUpdate = "Last Update";
 
-TRANSLATIONS.tr.headerAlumni = "Bazı Mezunlarımız";
 TRANSLATIONS.tr.buttonReset = "Sıfırla";
 TRANSLATIONS.tr.noResults = "Eşleşen mezun bulunamadı.";
 TRANSLATIONS.tr.placeholderSearch = "Ara";

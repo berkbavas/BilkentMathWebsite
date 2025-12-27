@@ -11,12 +11,8 @@ function card(s, lang) {
   const office = s.office ?? "";
   const phone = s.phone ?? "";
   const email = s.email ?? "";
-
-  const photoUrl = encodeURI(
-    "https://math.bilkent.edu.tr/Grad_student_photos/" + (s.photo || "placeholder.jpg")
-  );
-
-  const advisorLabel = lang === "tr" ? "Danışman" : "Advisor";
+  const advisorLabel = TRANSLATIONS[lang].labelAdvisor;
+  const photoUrl = encodeURI("https://math.bilkent.edu.tr/Grad_student_photos/" + (s.photo || "placeholder.jpg"));
 
   return `
   <article class="gs-card">
@@ -29,30 +25,25 @@ function card(s, lang) {
 
         <div class="gs-title">
           <h2 class="gs-name">${name}</h2>
-          ${advisor ? `<p class="gs-sub"><span class="gs-sub-label">${advisorLabel}:</span> ${advisor}</p>` : ""}
+          <p class="gs-sub"><span class="gs-sub-label">${advisorLabel}:</span> ${advisor}</p>
         </div>
       </div>
 
-      <div class="gs-divider" aria-hidden="true"></div>
-
       <ul class="gs-meta" aria-label="Contact information">
-        ${office ? `
           <li class="gs-meta-item">
             <span class="gs-ico"><i class="fa-regular fa-building" aria-hidden="true"></i></span>
             <span class="gs-meta-text">${office}</span>
-          </li>` : ""}
+          </li>
 
-        ${email ? `
           <li class="gs-meta-item">
             <span class="gs-ico"><i class="fa-regular fa-envelope" aria-hidden="true"></i></span>
             <span class="gs-meta-text">${email}</span>
-          </li>` : ""}
+          </li>
 
-        ${phone ? `
           <li class="gs-meta-item">
             <span class="gs-ico"><i class="fa-solid fa-phone" aria-hidden="true"></i></span>
             <span class="gs-meta-text">${phone}</span>
-          </li>` : ""}
+          </li>
       </ul>
 
     </div>
@@ -60,49 +51,47 @@ function card(s, lang) {
 }
 
 function matches(student, query) {
-    const ql = query.toLowerCase();
-    if (student.name && student.name.toLowerCase().includes(ql)) return true;
-    return false;
+  const ql = query.toLowerCase();
+  if (student.name && student.name.toLowerCase().includes(ql)) return true;
+  return false;
 }
 
 
 function renderCards(list) {
-    const container = document.querySelector("#gs-cards-container");
-    const currentLang = localStorage.getItem("lang") || "en";
-    container.innerHTML = list.map(student => card(student, currentLang)).join("");
+  const currentLang = localStorage.getItem("lang") || "en";
+  const container = document.querySelector("#gs-cards-container");
+  container.innerHTML = list.map(student => card(student, currentLang)).join("");
 }
 
 function apply() {
-    const currentLang = localStorage.getItem("lang") || "en";
-    elementSearch.placeholder = TRANSLATIONS[currentLang].placeholderSearch;
-    const query = elementSearch.value.trim();
-    const list = GRADUATE_STUDENTS.filter(student => matches(student, query));
-    elementCount.textContent = `${list.length} ${TRANSLATIONS[currentLang].postfixStudent}`;
-    renderCards(list);
+  const currentLang = localStorage.getItem("lang") || "en";
+  elementSearch.placeholder = TRANSLATIONS[currentLang].placeholderSearch;
+  const query = elementSearch.value.trim();
+  const list = GRADUATE_STUDENTS.filter(student => matches(student, query));
+  elementCount.textContent = `${list.length} ${TRANSLATIONS[currentLang].postfixStudent}`;
+  renderCards(list);
 }
 
 function resetFilters() {
-    elementSearch.value = "";
-    apply();
+  elementSearch.value = "";
+  apply();
 }
 
 function render() {
-    elementSearch.addEventListener("input", apply);
-    elementReset.addEventListener("click", resetFilters);
-    apply();
+  elementSearch.addEventListener("input", apply);
+  elementReset.addEventListener("click", resetFilters);
+  apply();
 }
 
-TRANSLATIONS.en.headerGraduateStudents = "Graduate Students";
-TRANSLATIONS.en.paragraphGraduateStudents = "Information about current graduate students of the Department of Mathematics.";
 TRANSLATIONS.en.buttonReset = "Reset";
 TRANSLATIONS.en.postfixStudent = "Student(s)";
 TRANSLATIONS.en.placeholderSearch = "Search";
+TRANSLATIONS.en.labelAdvisor = "Advisor";
 
-TRANSLATIONS.tr.headerGraduateStudents = "Lisansüstü Öğrencileri";
-TRANSLATIONS.tr.paragraphGraduateStudents = "Matematik Bölümü'nün mevcut lisansüstü öğrencileri hakkında bilgi.";
 TRANSLATIONS.tr.buttonReset = "Sıfırla";
 TRANSLATIONS.tr.postfixStudent = "Öğrenci";
 TRANSLATIONS.tr.placeholderSearch = "Ara";
+TRANSLATIONS.tr.labelAdvisor = "Danışman";
 
 document.render = render;
 document.addEventListener("DOMContentLoaded", render);

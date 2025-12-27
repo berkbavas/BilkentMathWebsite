@@ -86,16 +86,17 @@ h2 {
 .kpi-label {
     font-size: .85rem;
     color: #777;
-    margin-bottom: .25rem;
+    margin-bottom: 0.25rem;
 }
 
 .kpi-label i {
-    margin-right: .4rem;
+    margin-right: 0.4rem;
 }
 
 .kpi-value {
     font-size: 1.15rem;
     font-weight: 600;
+    margin-bottom: 0.4rem;
 }
 
 .kpi-sub {
@@ -106,7 +107,7 @@ h2 {
 .kpi-link {
     text-decoration: none;
     color: inherit;
-    border-left: 4px solid var(--primary);
+    border-left: 6px solid var(--primary);
 }
 
 .home-seminars {

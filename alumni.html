@@ -7,9 +7,7 @@
     <title data-i18n="title">Bilkent University • Department of Mathematics</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="stylesheet" href="assets/css/common.css">
     <link rel="stylesheet" href="assets/css/navigation.css">
@@ -19,24 +17,15 @@
 </head>
 
 <body>
-    <header id="navigation" class="topbar"></header>
+    <header id="navigation" class="navigation"><!-- JavaScript will inject content here --></header>
 
     <main class="container">
 
         <header class="header">
-            <h1 data-i18n="headerAlumni">Some of Our Alumni</h1>
-
-            <p data-lang="en" class="page-lead">Dear alumnus, if you would like your information to be shared on this
-                website or updated, please share your post-graduation story with us <strong><a
-                        href="https://math.bilkent.edu.tr/Alumni/Graduate_Information_Questionnaire.html"
-                        target="_blank">here</a></strong>.</p>
-
-            <p data-lang="tr" class="page-lead">Değerli mezunumuz sizin bilgileriniz de bu websitesinde paylaşılmasını
-                veya güncellenmesini istiyorsanız
-                lütfen <strong><a href="https://math.bilkent.edu.tr/Alumni/Graduate_Information_Questionnaire.html"
-                        target="_blank">buradan</a></strong> mezuniyet sonrası
-                hikayenizi
-                bizimle paylaşın.</p>
+            <h1 data-lang="en">Some of Our Alumni</h1>
+            <h1 data-lang="tr">Bazı Mezunlarımız</h1>
+            <p data-lang="en" class="page-lead">Dear alumnus, if you would like your information to be shared on this website or updated, please share your post-graduation story with us <strong><a href="https://math.bilkent.edu.tr/Alumni/Graduate_Information_Questionnaire.html" target="_blank">here</a></strong>.</p>
+            <p data-lang="tr" class="page-lead">Değerli mezunumuz sizin bilgileriniz de bu websitesinde paylaşılmasını veya güncellenmesini istiyorsanız lütfen <strong><a href="https://math.bilkent.edu.tr/Alumni/Graduate_Information_Questionnaire.html" target="_blank">buradan</a></strong> mezuniyet sonrası hikayenizi bizimle paylaşın.</p>
         </header>
 
         <div class="header-controls" role="search">
@@ -48,12 +37,11 @@
             <button class="btn btn-ghost" type="button" id="reset" data-i18n="buttonReset">Reset</button>
         </div>
 
-
         <div id="alumniRoot" class="alumni-grid"> <!-- Alumni content will be injected here --> </div>
 
     </main>
 
-    <footer id="footer" class="footer"></footer>
+    <footer id="footer" class="footer"><!-- JavaScript will inject content here --></footer>
 </body>
 
 </html>

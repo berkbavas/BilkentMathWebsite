@@ -100,24 +100,23 @@ function render() {
     apply();
 }
 
+TRANSLATIONS.en.titleSeminars = "2025-26 Academic Year Seminars";
+TRANSLATIONS.en.textDescription = "Department seminars held during the 2025-26 academic year. ";
 TRANSLATIONS.en.tableHeaderTitleSpeaker = "Title / Speaker";
 TRANSLATIONS.en.tableHeaderDate = "Date";
 TRANSLATIONS.en.tableHeaderTime = "Time";
 TRANSLATIONS.en.tableHeaderPlace = "Place";
-TRANSLATIONS.en.titleSeminars = "2025-26 Academic Year Seminars";
-TRANSLATIONS.en.textDescription = "Department seminars held during the 2025-26 academic year. ";
 TRANSLATIONS.en.buttonReset = "Reset";
 TRANSLATIONS.en.searchPlaceholder = "Search";
 
+TRANSLATIONS.tr.titleSeminars = "2025-26 Akademik Yılı Seminerleri";
+TRANSLATIONS.tr.textDescription = "2025-26 akademik yılı boyunca düzenlenen bölüm seminerleri.";
 TRANSLATIONS.tr.tableHeaderTitleSpeaker = "Başlık / Konuşmacı";
 TRANSLATIONS.tr.tableHeaderDate = "Tarih";
 TRANSLATIONS.tr.tableHeaderTime = "Saat";
 TRANSLATIONS.tr.tableHeaderPlace = "Yer";
-TRANSLATIONS.tr.titleSeminars = "2025-26 Akademik Yılı Seminerleri";
-TRANSLATIONS.tr.textDescription = "2025-26 akademik yılı boyunca düzenlenen bölüm seminerleri.";
 TRANSLATIONS.tr.buttonReset = "Sıfırla";
 TRANSLATIONS.tr.searchPlaceholder = "Ara";
-
 
 document.render = render;
 document.addEventListener("DOMContentLoaded", render);

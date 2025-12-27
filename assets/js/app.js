@@ -3,21 +3,17 @@
    ========================================================== */
 import { TRANSLATIONS } from '../data/translations.js';
 
-
-document.addEventListener("DOMContentLoaded", init);
-
 function init() {
-    fetch("navigation.html")
+    fetch("footer.html")
+        .then(res => res.text())
+        .then(html => { document.getElementById("footer").innerHTML = html; })
+        .then(() => fetch("navigation.html"))
         .then(res => res.text())
         .then(html => {
             document.getElementById("navigation").innerHTML = html;
             setupNavigation();
             setupLanguageToggle();
         });
-
-    fetch("footer.html")
-        .then(res => res.text())
-        .then(html => { document.getElementById("footer").innerHTML = html; });
 }
 
 /* ==========================================================
@@ -89,9 +85,6 @@ function setupNavigation() {
     }
 }
 
-/* ==========================================================
-   Language toggle / i18n (lightweight)
-   ========================================================== */
 function setupLanguageToggle() {
     const toggle = document.querySelector(SELECTORS.langToggle);
 
@@ -104,15 +97,11 @@ function setupLanguageToggle() {
         localStorage.setItem("lang", currentLang);
         toggle.textContent = currentLang.toUpperCase();
         applyTranslations(currentLang);
-        if(document.render) {
+        if (document.render) {
             document.render();
         }
     });
 }
-
-/* ==========================================================
-   Translations
-   ========================================================== */
 
 function applyTranslations(lang) {
     const dict = TRANSLATIONS[lang];
@@ -130,6 +119,8 @@ function applyTranslations(lang) {
 
     document.querySelectorAll("[data-fa]").forEach(el => {
         const faClass = el.getAttribute("data-fa");
-        el.innerHTML += `<i class="${faClass}"></i>`;
+        el.innerHTML += `<i class="${faClass}"></i>`; // Hacky way to inject FontAwesome icons. I don't like it but it works.
     });
 }
+
+document.addEventListener("DOMContentLoaded", init);

@@ -1,12 +1,11 @@
 import { PROBLEM_OF_MONTH_2024 } from "../data/problem-of-month/problem-of-month-2024.js";
 import { PROBLEM_OF_MONTH_2025 } from "../data/problem-of-month/problem-of-month-2025.js";
 import { TRANSLATIONS, MONTHS_EN_TO_TR } from "../data/translations.js";
-import { escapeHtml } from "./helpers.js";
 
 // Data for rendering descending years
 const DATA = [
-  PROBLEM_OF_MONTH_2025,
-  PROBLEM_OF_MONTH_2024
+    PROBLEM_OF_MONTH_2025,
+    PROBLEM_OF_MONTH_2024
 ];
 
 const elMount = document.getElementById("mount");
@@ -14,49 +13,49 @@ const elLatestProblemBtn = document.getElementById("latestProblemBtn");
 const elQuickLinks = document.getElementById("quickLinks");
 
 function yearStats(items) {
-  const solversTotal = items.reduce((acc, it) => acc + (it.solvers?.length || 0), 0);
-  return solversTotal;
+    const solversTotal = items.reduce((acc, it) => acc + (it.solvers?.length || 0), 0);
+    return solversTotal;
 }
 
 function renderCard(item, t, lang) {
-  const solversList = (item.solvers || []).map(
-    (solver) => `
+    const solversList = (item.solvers || []).map(
+        (solver) => `
       <li class="solver-item">
-        <span class="solver-name">${escapeHtml(solver.name)}</span>
-        <span class="solver-aff">${escapeHtml(solver.affiliation)}</span>
+        <span class="solver-name">${solver.name}</span>
+        <span class="solver-aff">${solver.affiliation}</span>
       </li>
     `
-  ).join("");
+    ).join("");
 
-  const solverCount = item.solvers?.length || 0;
-  let month = lang === "tr" ? MONTHS_EN_TO_TR[item.month] : item.month;
+    const solverCount = item.solvers?.length || 0;
+    let month = lang === "tr" ? MONTHS_EN_TO_TR[item.month] : item.month;
 
-  return `
+    return `
   <article class="pom-month-card">
     <div class="pom-top">
       <div class="pom-title">
         <div class="pom-monthline">
-          <span class="pom-month">${escapeHtml(month)}</span>
-          <span class="pom-year">${escapeHtml(String(item.year))}</span>
+          <span class="pom-month">${month}</span>
+          <span class="pom-year">${String(item.year)}</span>
         </div>
 
         <div class="pom-subline">
           <span class="badge">
             <i class="fa-solid fa-users"></i>
-            ${solverCount} ${escapeHtml(t.pomSolversLabel || "solvers")}
+            ${solverCount} ${t.pomSolversLabel || "solvers"}
           </span>
         </div>
       </div>
 
       <div class="pom-links">
-        <a href="${item.question}" target="_blank" class="chip chip-ghost" aria-label="${escapeHtml(t.pomOpenQuestionAria || "Open question PDF")}">
+        <a href="${item.question}" target="_blank" class="chip chip-ghost" aria-label="${t.pomOpenQuestionAria || "Open question PDF"}">
           <i class="fa-regular fa-circle-question"></i>
-          ${escapeHtml(t.pomQuestionLabel || "Question")}
+          ${t.pomQuestionLabel || "Question"}
         </a>
 
-        <a href="${item.solution}" target="_blank" class="chip chip-ghost" aria-label="${escapeHtml(t.pomOpenSolutionAria || "Open solution PDF")}">
+        <a href="${item.solution}" target="_blank" class="chip chip-ghost" aria-label="${t.pomOpenSolutionAria || "Open solution PDF"}">
           <i class="fa-regular fa-file-lines"></i>
-          ${escapeHtml(t.pomSolutionLabel || "Solution")}
+          ${t.pomSolutionLabel || "Solution"}
         </a>
       </div>
     </div>
@@ -66,7 +65,7 @@ function renderCard(item, t, lang) {
         <summary class="solvers-summary">
           <span class="solvers-left">
             <i class="fa-solid fa-list-check"></i>
-            ${escapeHtml(t.pomSolversTitle || "Solvers")}
+            ${(t.pomSolversTitle || "Solvers")}
           </span>
           <span class="solvers-right">
             <span class="count-pill">${solverCount}</span>
@@ -74,9 +73,7 @@ function renderCard(item, t, lang) {
           </span>
         </summary>
 
-        <ul class="solver-list solver-grid">
-          ${solversList}
-        </ul>
+        <ul class="solver-list solver-grid">${solversList}</ul>
       </details>
     </div>
   </article>
@@ -84,7 +81,7 @@ function renderCard(item, t, lang) {
 }
 
 function renderCards(data, t, lang) {
-  return `
+    return `
     <div class="pom-cards">
       ${data.map((item) => renderCard(item, t, lang)).join("")}
     </div>
@@ -92,7 +89,7 @@ function renderCards(data, t, lang) {
 }
 
 function createDetailSummary(year, solversTotal, t) {
-  return `
+    return `
     <summary class="archive-accordion-summary">
       <div class="year-summary">
         <div class="year-left">
@@ -100,13 +97,13 @@ function createDetailSummary(year, solversTotal, t) {
           <div class="year-meta">
             <span class="year-pill">
               <i class="fa-solid fa-users"></i>
-              ${solversTotal} ${escapeHtml(t.pomSolversLabel || "solvers")}
+              ${solversTotal} ${t.pomSolversLabel || "solvers"}
             </span>
           </div>
         </div>
 
         <div class="year-right">
-          <span class="hint">${escapeHtml(t.pomViewLabel || "View")}</span>
+          <span class="hint">${t.pomViewLabel || "View"}</span>
           <span class="chev" aria-hidden="true"></span>
         </div>
       </div>
@@ -115,46 +112,46 @@ function createDetailSummary(year, solversTotal, t) {
 }
 
 function render() {
-  elMount.innerHTML = "";
-  elQuickLinks.innerHTML = "";
+    elMount.innerHTML = "";
+    elQuickLinks.innerHTML = "";
 
-  const lang = localStorage.getItem("lang") || "en";
-  const t = TRANSLATIONS[lang] || {};
+    const lang = localStorage.getItem("lang") || "en";
+    const t = TRANSLATIONS[lang] || {};
 
-  DATA.map((item, idx) => {
-    const year = item[0].year;
-    const solversTotal = yearStats(item);
-    const details = document.createElement("details");
-    details.className = "archive-accordion-details";
-    details.id = `year-${year}`;
-    details.innerHTML = createDetailSummary(year, solversTotal, t);
-    details.innerHTML += renderCards(item, t, lang);
-    if (idx === 0) {
-      details.setAttribute("open", "true");
-    }
+    DATA.map((item, idx) => {
+        const year = item[0].year;
+        const solversTotal = yearStats(item);
+        const details = document.createElement("details");
+        details.className = "archive-accordion-details";
+        details.id = `year-${year}`;
+        details.innerHTML = createDetailSummary(year, solversTotal, t);
+        details.innerHTML += renderCards(item, t, lang);
+        if (idx === 0) {
+            details.setAttribute("open", "true");
+        }
 
-    elMount.appendChild(details);
+        elMount.appendChild(details);
 
-    // Quick links buttons
-    const linkBtn = document.createElement("button");
-    linkBtn.className = "btn btn-ghost";
-    linkBtn.textContent = year;
-    linkBtn.addEventListener("click", () => {
-      document.getElementById(`year-${year}`).scrollIntoView({ behavior: "smooth" });
+        // Quick links buttons
+        const linkBtn = document.createElement("button");
+        linkBtn.className = "btn btn-ghost";
+        linkBtn.textContent = year;
+        linkBtn.addEventListener("click", () => {
+            document.getElementById(`year-${year}`).scrollIntoView({ behavior: "smooth" });
+        });
+        elQuickLinks.appendChild(linkBtn);
     });
-    elQuickLinks.appendChild(linkBtn);
-  });
 
 
-  // Latest problem button
-  const latestData = DATA[0]; // Latest year
-  const latestItem = latestData[latestData.length - 1];
+    // Latest problem button
+    const latestData = DATA[0]; // Latest year
+    const latestItem = latestData[latestData.length - 1];
 
-  let month = lang === "tr" ? MONTHS_EN_TO_TR[latestItem.month] : latestItem.month;
+    let month = lang === "tr" ? MONTHS_EN_TO_TR[latestItem.month] : latestItem.month;
 
-  elLatestProblemBtn.onclick = () => window.open(latestItem.question, "_blank");
-  elLatestProblemBtn.textContent =
-    (t.pomLatestProblemLabel || "Latest Problem") + ` (${month} ${latestItem.year})`;
+    elLatestProblemBtn.onclick = () => window.open(latestItem.question, "_blank");
+    elLatestProblemBtn.textContent =
+        (t.pomLatestProblemLabel || "Latest Problem") + ` (${month} ${latestItem.year})`;
 }
 
 /* ---- i18n keys ---- */
@@ -198,5 +195,5 @@ TRANSLATIONS.tr.emailLabel = "E-posta:";
 TRANSLATIONS.tr.quickLinksTitle = "Hızlı linkler";
 TRANSLATIONS.tr.quickLinksDescription = "Bir yıla atlayın veya son soruyu açın.";
 
-document.render = render;
-document.addEventListener("DOMContentLoaded", render);
+document.render = render; // Expose render function to other modules, app.js in particular
+document.addEventListener("DOMContentLoaded", render); // Initial render on DOM load 

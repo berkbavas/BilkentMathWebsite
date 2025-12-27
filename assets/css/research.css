@@ -9,10 +9,9 @@
 /* Toolbar */
 .research-toolbar {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
     gap: 12px;
-    margin-top: 10px;
+    flex-wrap: wrap;
+    margin-top: 14px;
 }
 
 .research-viewhint {
