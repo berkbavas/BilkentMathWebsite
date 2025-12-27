@@ -21,23 +21,6 @@
     gap: 10px;
 }
 
-.research-cta {
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
-    padding: 10px 14px;
-    border-radius: 999px;
-    border: 1px solid var(--border);
-    background: var(--surface);
-    box-shadow: 0 6px 18px rgba(0, 0, 0, .06);
-    font-weight: 700;
-}
-
-.research-cta:hover {
-    text-decoration: none;
-    transform: translateY(-1px);
-}
-
 .area-title {
     display: flex;
     align-items: center;
@@ -91,7 +74,8 @@
     border: 1px solid var(--chip-border);
     background: var(--chip-bg);
     font-weight: 700;
-    transition: background .2s ease, transform .08s ease;
+    transition: all .2s ease;
+    text-decoration: none;
 }
 
 .chip-link:hover {

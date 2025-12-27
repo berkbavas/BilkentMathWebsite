@@ -313,7 +313,11 @@ header p {
     background-color: var(--surface);
     color: var(--text);
     text-decoration: none;
-    transition: transform .08s ease, background .2s ease, border-color .2s ease;
+    transition: all .2s ease;
+}
+
+.btn:hover {
+    background-color: #f8f8f8;
 }
 
 .btn-black {
@@ -324,15 +328,7 @@ header p {
     background-color: #000;
     text-decoration: none;
     color: #fff;
-    transition: transform .08s ease, background .2s ease, border-color .2s ease;
-}
-
-.btn-black:active {
-    transform: scale(.97);
-}
-
-.btn:active {
-    transform: scale(.97);
+    transition: all .2s ease;
 }
 
 .btn-ghost {
