@@ -134,7 +134,6 @@ details[open] .chev {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(520px, 1fr));
     gap: 18px;
-    margin-top: 1rem;
     padding: 1rem;
 }
 
