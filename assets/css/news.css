@@ -1,10 +1,152 @@
+/* =========================
+   News – Modern Timeline
+   ========================= */
+
 .news-timeline {
-    max-width: 720px;
+    max-width: 860px;
+    margin: 0 auto;
+    position: relative;
 }
 
-.chip {
-    display: inline-block;
+/* vertical line */
+.news-timeline::before {
+    content: "";
+    position: absolute;
+    left: 14px;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: rgba(0, 0, 0, .10);
+}
+
+/* Year section */
+.news-year-section {
+    position: relative;
+    margin-top: 22px;
+    padding-top: 6px;
+}
+
+.news-year-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 12px;
+    border-radius: 999px;
+    font-weight: 900;
+    letter-spacing: .02em;
+    font-size: .9rem;
+
+    background: rgba(45, 42, 98, .08);
+    border: 1px solid rgba(45, 42, 98, .16);
+    color: var(--accent);
+    margin: 8px 0 10px 34px;
+}
+
+/* item row */
+.news-item {
+    position: relative;
+    display: grid;
+    grid-template-columns: 28px 1fr;
+    gap: 14px;
     margin: 14px 0;
-    padding: 4px 10px;
-    font-size: 1em;
+    padding-left: 0;
+}
+
+/* dot on the line */
+.news-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: var(--surface);
+    border: 3px solid var(--primary);
+    margin-top: 18px;
+    margin-left: 9px;
+}
+
+/* Card */
+.news-card {
+    border-radius: 20px;
+    border: 1px solid var(--border);
+    background: var(--surface);
+    box-shadow: 0 10px 26px rgba(0, 0, 0, .06);
+    padding: 14px 16px 16px;
+    transition: transform .22s ease, box-shadow .22s ease, border-color .22s ease;
+    overflow: hidden;
+}
+
+.news-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 18px 44px rgba(0, 0, 0, .12);
+    border-color: rgba(0, 0, 0, .14);
+}
+
+/* Date badge */
+.news-date {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+
+    font-weight: 900;
+    font-size: .78rem;
+    letter-spacing: .03em;
+
+    padding: 7px 10px;
+    border-radius: 999px;
+
+    background: rgba(0, 0, 0, .06);
+    border: 1px solid rgba(0, 0, 0, .12);
+    color: rgba(17, 17, 17, .82);
+    margin-bottom: 10px;
+}
+
+/* Content */
+.news-content {
+    color: rgba(17, 17, 17, .90);
+    line-height: 1.75;
+    font-size: 1rem;
+}
+
+.news-content a {
+    font-weight: 800;
+    text-decoration: none;
+    border-bottom: 1px dashed rgba(45, 42, 98, .45);
+}
+
+.news-content a:hover {
+    border-bottom-style: solid;
+}
+
+/* nice paragraph spacing */
+.news-content p {
+    margin: 0 0 10px;
+}
+
+.news-content p:last-child {
+    margin-bottom: 0;
+}
+
+/* Mobile */
+@media (max-width: 720px) {
+    .news-timeline {
+        max-width: 720px;
+        padding-left: 0;
+    }
+
+    .news-timeline::before {
+        left: 0;
+        display: none;
+    }
+
+    .news-year-chip {
+        margin-left: 18px;
+    }
+
+    .news-item {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    .news-dot {
+        display: none;
+    }
 }
