@@ -41,7 +41,7 @@ function renderEntry(a, lang) {
 
         ${a.lastUpdate ? `
         <div class="alumni-update">
-            Son güncelleme: ${esc(a.lastUpdate)}
+           ${TRANSLATIONS[lang].lastUpdate}: ${esc(a.lastUpdate)}
         </div>` : ""}
     </article>
     `;
@@ -84,12 +84,14 @@ TRANSLATIONS.en.buttonReset = "Reset";
 TRANSLATIONS.en.noResults = "No matching alumni found.";
 TRANSLATIONS.en.placeholderSearch = "Search";
 TRANSLATIONS.en.story = "Story";
+TRANSLATIONS.en.lastUpdate = "Last Update";
 
 TRANSLATIONS.tr.headerAlumni = "Bazı Mezunlarımız";
 TRANSLATIONS.tr.buttonReset = "Sıfırla";
 TRANSLATIONS.tr.noResults = "Eşleşen mezun bulunamadı.";
 TRANSLATIONS.tr.placeholderSearch = "Ara";
 TRANSLATIONS.tr.story = "Hikaye";
+TRANSLATIONS.tr.lastUpdate = "Son Güncelleme";
 
 document.render = render; // expose render function to other modules, app.js in particular
 document.addEventListener("DOMContentLoaded", init);
