@@ -61,34 +61,34 @@
 
         <section class="home-kpis">
             <div class="kpi-card">
-                <div class="kpi-label" data-lang="en">Faculty Members</div>
-                <div class="kpi-label" data-lang="tr">Öğretim Üyeleri</div>
+                <div class="kpi-label" data-lang="en"><i class="fa-solid fa-building-columns"></i>Faculty Members</div>
+                <div class="kpi-label" data-lang="tr"><i class="fa-solid fa-building-columns"></i>Öğretim Üyeleri</div>
                 <div class="kpi-value" id="facultyCount">—</div>
-                <br>
                 <div class="kpi-sub" data-lang="en"><a href="faculty.html">View all faculty members →</a></div>
                 <div class="kpi-sub" data-lang="tr"><a href="faculty.html">Tüm öğretim üyelerini görüntüle →</a></div>
             </div>
 
             <div class="kpi-card">
-                <div class="kpi-label" data-lang="en">Graduate Students</div>
-                <div class="kpi-label" data-lang="tr">Yüksek Lisans ve Doktora Öğrencileri</div>
+                <div class="kpi-label" data-lang="en"><i class="fa-solid fa-graduation-cap"></i>Graduate Students</div>
+                <div class="kpi-label" data-lang="tr"><i class="fa-solid fa-graduation-cap"></i>Lisansüstü Öğrencileri</div>
                 <div class="kpi-value" id="gradCount">—</div>
-                <br>
-                <div class="kpi-sub" data-lang="en"><a href="graduate-students.html">View all graduate students →</a></div>
-                <div class="kpi-sub" data-lang="tr"><a href="graduate-students.html">Tüm lisansüstü öğrencilerini görüntüle →</a></div>
+                <div class="kpi-sub" data-lang="en"><a href="graduate-students.html">View all graduate students →</a>
+                </div>
+                <div class="kpi-sub" data-lang="tr"><a href="graduate-students.html">Tüm lisansüstü öğrencilerini
+                        görüntüle →</a></div>
             </div>
 
             <div class="kpi-card">
-                <div class="kpi-label" data-lang="en">Next Seminar</div>
-                <div class="kpi-label" data-lang="tr">Sonraki Seminer</div>
+                <div class="kpi-label" data-lang="en"><i class="fa-regular fa-calendar"></i>Next Seminar</div>
+                <div class="kpi-label" data-lang="tr"><i class="fa-regular fa-calendar"></i>Sonraki Seminer</div>
                 <div class="kpi-value" id="nextSeminarDate">—</div>
                 <div class="kpi-sub bold" id="nextSeminarTitle">—</div>
                 <div class="kpi-sub" id="nextSeminarSpeaker">—</div>
             </div>
 
             <a href="problem-of-month.html" class="kpi-card kpi-link">
-                <div class="kpi-label" data-lang="en">Problem of the Month</div>
-                <div class="kpi-label" data-lang="tr">Ayın Sorusu</div>
+                <div class="kpi-label" data-lang="en"><i class="fa-regular fa-circle-question"></i>Problem of the Month</div>
+                <div class="kpi-label" data-lang="tr"><i class="fa-regular fa-circle-question"></i>Ayın Sorusu</div>
                 <div class="kpi-value" data-lang="en">View →</div>
                 <div class="kpi-value" data-lang="tr">Görüntüle →</div>
             </a>
@@ -97,14 +97,16 @@
 
         <section class="home-seminars">
             <div class="seminar-column">
-                <h2 data-lang="en">Upcoming Seminars</h2>
-                <h2 data-lang="tr">Yaklaşan Seminerler</h2>
+                <div class="seminar-column upcoming" id="upcomingSeminarsTitle">
+                    <h2 data-lang="en"><i class="fa-regular fa-bell"></i>Upcoming Seminars</h2>
+                    <h2 data-lang="tr"><i class="fa-regular fa-bell"></i>Yaklaşan Seminerler</h2>
+                </div>
                 <div id="upcomingSeminars"></div>
             </div>
 
             <div class="seminar-column past">
-                <h2 data-lang="en">Past Seminars</h2>
-                <h2 data-lang="tr">Geçmiş Seminerler</h2>
+                <h2 data-lang="en"><i class="fa-regular fa-calendar-check"></i>Past Seminars</h2>
+                <h2 data-lang="tr"><i class="fa-regular fa-calendar-check"></i>Geçmiş Seminerler</h2>
                 <div id="pastSeminars"></div>
             </div>
         </section>

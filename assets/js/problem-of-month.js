@@ -5,8 +5,8 @@ import { escapeHtml } from "./helpers.js";
 
 // Data for rendering descending years
 const DATA = [
-	PROBLEM_OF_MONTH_2025,
-	PROBLEM_OF_MONTH_2024
+  PROBLEM_OF_MONTH_2025,
+  PROBLEM_OF_MONTH_2024
 ];
 
 const elMount = document.getElementById("mount");
@@ -14,24 +14,24 @@ const elLatestProblemBtn = document.getElementById("latestProblemBtn");
 const elQuickLinks = document.getElementById("quickLinks");
 
 function yearStats(items) {
-	const solversTotal = items.reduce((acc, it) => acc + (it.solvers?.length || 0), 0);
-	return solversTotal;
+  const solversTotal = items.reduce((acc, it) => acc + (it.solvers?.length || 0), 0);
+  return solversTotal;
 }
 
 function renderCard(item, t, lang) {
-	const solversList = (item.solvers || []).map(
-		(solver) => `
+  const solversList = (item.solvers || []).map(
+    (solver) => `
       <li class="solver-item">
         <span class="solver-name">${escapeHtml(solver.name)}</span>
         <span class="solver-aff">${escapeHtml(solver.affiliation)}</span>
       </li>
     `
-	).join("");
+  ).join("");
 
-	const solverCount = item.solvers?.length || 0;
-	let month = lang === "tr" ? MONTHS_EN_TO_TR[item.month] : item.month;
+  const solverCount = item.solvers?.length || 0;
+  let month = lang === "tr" ? MONTHS_EN_TO_TR[item.month] : item.month;
 
-	return `
+  return `
   <article class="pom-month-card">
     <div class="pom-top">
       <div class="pom-title">
@@ -84,7 +84,7 @@ function renderCard(item, t, lang) {
 }
 
 function renderCards(data, t, lang) {
-	return `
+  return `
     <div class="pom-cards">
       ${data.map((item) => renderCard(item, t, lang)).join("")}
     </div>
@@ -92,7 +92,7 @@ function renderCards(data, t, lang) {
 }
 
 function createDetailSummary(year, solversTotal, t) {
-	return `
+  return `
     <summary class="archive-accordion-summary">
       <div class="year-summary">
         <div class="year-left">
@@ -115,43 +115,46 @@ function createDetailSummary(year, solversTotal, t) {
 }
 
 function render() {
-	elMount.innerHTML = "";
-	elQuickLinks.innerHTML = "";
+  elMount.innerHTML = "";
+  elQuickLinks.innerHTML = "";
 
-	const lang = localStorage.getItem("lang") || "en";
-	const t = TRANSLATIONS[lang] || {};
+  const lang = localStorage.getItem("lang") || "en";
+  const t = TRANSLATIONS[lang] || {};
 
-	DATA.map((item, idx) => {
-		const year = item[idx].year;
-		const solversTotal = yearStats(item);
-		const details = document.createElement("details");
-		details.className = "archive-accordion-details";
-		details.id = `year-${year}`;
-		details.innerHTML = createDetailSummary(year, solversTotal, t);
-		details.innerHTML += renderCards(item, t, lang);
-		details.setAttribute("open", idx < 1 ? "true" : "false");
-		elMount.appendChild(details);
+  DATA.map((item, idx) => {
+    const year = item[0].year;
+    const solversTotal = yearStats(item);
+    const details = document.createElement("details");
+    details.className = "archive-accordion-details";
+    details.id = `year-${year}`;
+    details.innerHTML = createDetailSummary(year, solversTotal, t);
+    details.innerHTML += renderCards(item, t, lang);
+    if (idx === 0) {
+      details.setAttribute("open", "true");
+    }
 
-		// Quick links buttons
-		const linkBtn = document.createElement("button");
-		linkBtn.className = "btn btn-ghost";
-		linkBtn.textContent = year;
-		linkBtn.addEventListener("click", () => {
-			document.getElementById(`year-${year}`).scrollIntoView({ behavior: "smooth" });
-		});
-		elQuickLinks.appendChild(linkBtn);
-	});
+    elMount.appendChild(details);
+
+    // Quick links buttons
+    const linkBtn = document.createElement("button");
+    linkBtn.className = "btn btn-ghost";
+    linkBtn.textContent = year;
+    linkBtn.addEventListener("click", () => {
+      document.getElementById(`year-${year}`).scrollIntoView({ behavior: "smooth" });
+    });
+    elQuickLinks.appendChild(linkBtn);
+  });
 
 
-	// Latest problem button
-	const latestData = DATA[0]; // Latest year
-	const latestItem = latestData[latestData.length - 1];
+  // Latest problem button
+  const latestData = DATA[0]; // Latest year
+  const latestItem = latestData[latestData.length - 1];
 
-	let month = lang === "tr" ? MONTHS_EN_TO_TR[latestItem.month] : latestItem.month;
+  let month = lang === "tr" ? MONTHS_EN_TO_TR[latestItem.month] : latestItem.month;
 
-	elLatestProblemBtn.onclick = () => window.open(latestItem.question, "_blank");
-	elLatestProblemBtn.textContent =
-		(t.pomLatestProblemLabel || "Latest Problem") + ` (${month} ${latestItem.year})`;
+  elLatestProblemBtn.onclick = () => window.open(latestItem.question, "_blank");
+  elLatestProblemBtn.textContent =
+    (t.pomLatestProblemLabel || "Latest Problem") + ` (${month} ${latestItem.year})`;
 }
 
 /* ---- i18n keys ---- */

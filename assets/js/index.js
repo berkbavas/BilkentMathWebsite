@@ -2,6 +2,8 @@ import { SEMINARS } from "../data/seminars.js";
 import { CURRENT_FACULTY_EN } from "../data/faculty.js";
 import { GRADUATE_STUDENTS } from "../data/graduate-students.js";
 
+
+
 function toDateKey(s, t) { // DD.MM.YYYY -> Date
 	const [d, m, y] = s.split(".").map(x => x.padStart(2, "0"));
 	const [hh, mm] = (t || "00:00").split(":").map(x => x.padStart(2, "0"));
@@ -27,9 +29,11 @@ function render() {
 	renderSeminars("upcomingSeminars", upcoming);
 	renderSeminars("pastSeminars", past);
 
-	if (upcoming.length) {
-		document.getElementById("nextSeminarDate").textContent = upcoming[0].date;
-		document.getElementById("nextSeminarTitle").textContent = upcoming[0].title;
+	document.getElementById("upcomingSeminarsTitle").hidden = upcoming.length === 0;
+
+	if (upcoming.length > 0) {
+		document.getElementById("nextSeminarDate").textContent = upcoming[0].date + `, ${upcoming[0].time} · ${upcoming[0].place}`;
+		document.getElementById("nextSeminarTitle").innerHTML = `<a href="${upcoming[0].link}" target="_blank" rel="noopener noreferrer">${upcoming[0].title}</a>`;
 		document.getElementById("nextSeminarSpeaker").textContent = upcoming[0].speaker;
 	}
 }
@@ -39,8 +43,8 @@ function renderSeminars(containerId, list) {
 	el.innerHTML = list.map(s => `
     <div class="seminar-card">
       <strong><a href="${s.link}" target="_blank" rel="noopener noreferrer">${s.title}</a></strong><br>
-      <span>${s.speaker}</span><br>
-      <small>${s.date} · ${s.place}</small>
+      <span>${s.speaker}</span>
+      <small>${s.date} · ${s.time} · ${s.place}</small>
     </div>
   `).join("");
 }
