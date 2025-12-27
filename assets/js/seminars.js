@@ -1,6 +1,6 @@
 import { SEMINARS } from "../data/seminars.js";
-import { escapeHtml } from "./helpers.js";
 import { TRANSLATIONS } from "../data/translations.js";
+import { escapeHtml } from "./helpers.js";
 
 // ---------- helpers ----------
 const $ = (sel) => document.querySelector(sel);

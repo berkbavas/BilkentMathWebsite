@@ -21,23 +21,19 @@
 
     <main class="container">
         <header class="header">
-            <h1 data-i18n="headerText">Mathematics Undergraduate Program</h1>
+            <h1 data-lang="en">Mathematics Undergraduate Program</h1>
+            <h1 data-lang="tr">Matematik Lisans Programı</h1>
         </header>
 
-        <div data-lang="en" class="description">
-            <p>
+        <div class="description">
+            <p data-lang="en">
                 The undergraduate program aims to prepare students for mathematical careers or postgraduate degrees, to
                 which end it admits a small number of highly qualified and motivated students each year. The program is
                 designed to give the students a good background in all areas of mathematics. It consists of four series
                 of courses in <strong>analysis</strong>, <strong>algebra</strong>, <strong>geometry</strong>, and
                 <strong>applied mathematics</strong>.
             </p>
-            <br>
-            <a class="btn-black" href="https://stars.bilkent.edu.tr/homepage/curriculum.php?DEPT=MATH" target="_blank">Curriculum</a>
-        </div>
-
-        <div data-lang="tr" class="description">
-            <p>
+            <p data-lang="tr">
                 Matematik lisans programı, öğrencileri matematik ağırlıklı mesleklere veya lisans sonrası derecelere
                 hazırlamayı amaçlar. Bu amaçla her yıl az sayıda yüksek nitelikli ve hevesli öğrenci alır. Lisans
                 programı öğrencilere matematiğin her alanında iyi bir temel vermek için düzenlenmiştir ve
@@ -45,20 +41,19 @@
                 <strong>geometri</strong>, ve <strong>uygulamalı matematik</strong> olmak üzere dört alanda derslerden
                 oluşmaktadır.
             </p>
+            
             <br>
-            <a class="btn-black" href="https://stars.bilkent.edu.tr/homepage/curriculum.php?DEPT=MATH"
-                target="_blank">Ders Çizelgesi</a>
+
+            <a data-lang="en" class="btn-black" href="https://stars.bilkent.edu.tr/homepage/curriculum.php?DEPT=MATH"
+                target="_blank">Curriculum
+            </a>
+            <a data-lang="tr" class="btn-black" href="https://stars.bilkent.edu.tr/homepage/curriculum.php?DEPT=MATH"
+                target="_blank">Ders Çizelgesi
+            </a>
         </div>
     </main>
 
     <footer id="footer" class="footer"></footer>
-
-    <script type="module">
-        import { TRANSLATIONS } from './assets/data/translations.js';
-
-        TRANSLATIONS.en.headerText = "Mathematics Undergraduate Program";
-        TRANSLATIONS.tr.headerText = "Matematik Lisans Programı";
-    </script>
 </body>
 
 </html>

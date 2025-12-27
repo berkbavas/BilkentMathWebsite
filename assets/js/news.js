@@ -55,11 +55,5 @@ function render() {
     });
 }
 
-TRANSLATIONS.en.headerTitle = "News from the Department";
-TRANSLATIONS.tr.headerTitle = "Bölümden Haberler";
-
-TRANSLATIONS.en.headerLead = "Recent and past news from the Department of Mathematics.";
-TRANSLATIONS.tr.headerLead = "Matematik Bölümü'nden güncel haberler.";
-
 document.render = render;
 document.addEventListener("DOMContentLoaded", render);

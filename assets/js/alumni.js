@@ -26,9 +26,7 @@ function renderEntry(a, lang) {
         </header>
 
         ${bullets.length ? `
-        <ul class="alumni-bullets">
-            ${bullets.map(b => `<li>${esc(b)}</li>`).join("")}
-        </ul>` : ""}
+        <ul class="alumni-bullets">${bullets.map(b => `<li>${esc(b)}</li>`).join("")}</ul>` : ""}
 
         ${a.story ? `
         <details class="alumni-story">

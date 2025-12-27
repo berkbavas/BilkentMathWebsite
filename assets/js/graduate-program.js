@@ -107,6 +107,7 @@ TRANSLATIONS.en.headerPastTheses = "Past Theses";
 TRANSLATIONS.en.buttonPastTheses = "View";
 TRANSLATIONS.en.headerCoordinator = "Department Graduate Coordinator";
 TRANSLATIONS.en.buttonApplyOnline = "Apply Online";
+TRANSLATIONS.en.coordinatorName = "Prof. Azer Kerimov";
 
 TRANSLATIONS.tr.headerText = "Matematik Lisansüstü Programı";
 TRANSLATIONS.tr.pageLead = "Bilkent Üniversitesi Matematik Bölümü Lisansüstü Programı, Türkiye'nin en önde gelen matematik araştırma programlarındandır.";
@@ -120,3 +121,4 @@ TRANSLATIONS.tr.headerPastTheses = "Geçmişte Yürütülen Tezler";
 TRANSLATIONS.tr.buttonPastTheses = "Görüntüle";
 TRANSLATIONS.tr.headerCoordinator = "Bölüm Lisansüstü Koordinatörü";
 TRANSLATIONS.tr.buttonApplyOnline = "Çevrimiçi Başvuru Formu";
+TRANSLATIONS.tr.coordinatorName = "Prof. Dr. Azer Kerimov";

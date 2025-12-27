@@ -212,7 +212,5 @@ TRANSLATIONS.tr.chartLabels = {
 };
 
 
-
-
 document.render = render;
 document.addEventListener("DOMContentLoaded", render);
