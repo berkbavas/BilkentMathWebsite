@@ -60,11 +60,8 @@
 
 .faculty-name a {
     text-decoration: none;
+    border: none;
     color: var(--text);
-}
-
-.faculty-name a:hover {
-    text-decoration: underline;
 }
 
 .faculty-rank {

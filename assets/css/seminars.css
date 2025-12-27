@@ -50,11 +50,12 @@
 .title-link {
     color: var(--text);
     text-decoration: none;
+
     font-weight: 700;
 }
 
 .title-link:hover {
-    text-decoration: underline;
+    text-decoration: none;
 }
 
 /* Mobile cards */
@@ -87,7 +88,7 @@
 }
 
 .sc-title a:hover {
-    text-decoration: underline;
+    text-decoration: none;
 }
 
 .sc-speaker {
