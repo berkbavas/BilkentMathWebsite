@@ -1,22 +1,18 @@
-:root {
-    --oa-bg: #ffffff;
-    --oa-card: #ffffff;
-    --oa-text: #111827;
-    --oa-muted: #6b7280;
-    --oa-border: rgba(17, 24, 39, .12);
-    --oa-shadow: 0 10px 30px rgba(17, 24, 39, .08);
-    --oa-radius: 16px;
-    --oa-accent: #111827;
-}
+/* =========================
+   Orhan Alisbah Awards – Modern
+   ========================= */
 
+/* Table wrapper = card */
 .oa-table-wrap {
-    border: 1px solid var(--oa-border);
-    border-radius: var(--oa-radius);
+    margin-top: 18px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 20px;
     overflow: hidden;
-    background: var(--oa-card);
-    box-shadow: var(--oa-shadow);
+    box-shadow: 0 10px 28px rgba(0, 0, 0, .06);
 }
 
+/* Table */
 .oa-table {
     width: 100%;
     border-collapse: separate;
@@ -25,12 +21,13 @@
 
 .oa-table thead th {
     text-align: left;
-    font-weight: 650;
-    font-size: 14px;
-    letter-spacing: .02em;
-    color: var(--oa-muted);
+    font-weight: 800;
+    font-size: 13px;
+    letter-spacing: .03em;
+    color: rgba(17, 17, 17, .65);
     padding: 14px 16px;
-    background: rgba(17, 24, 39, .03);
+    background: rgba(0, 0, 0, .03);
+    border-bottom: 1px solid var(--border);
     position: sticky;
     top: 0;
     z-index: 1;
@@ -38,40 +35,148 @@
 
 .oa-table tbody td {
     padding: 14px 16px;
-    border-top: 1px solid var(--oa-border);
+    border-top: 1px solid rgba(0, 0, 0, .08);
     vertical-align: middle;
-    color: var(--oa-text);
+    color: rgba(17, 17, 17, .92);
+}
+
+.oa-row:hover td {
+    background: rgba(45, 42, 98, .03);
 }
 
 .oa-year-cell {
-    font-weight: 700;
-    color: var(--oa-text);
-    text-align: left;
-    
+    font-weight: 900;
+    letter-spacing: -0.2px;
 }
 
+/* Recipients chips */
 .oa-names {
-    padding: 0;
-}
-
-.oa-names ul {
-    padding: 0;
+    list-style: none;
     margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
 }
 
-.oa-names li {
-    list-style-type: none;
-    margin: 4px;
+.oa-chip {
+    display: inline-flex;
+    align-items: center;
+    padding: 6px 10px;
+    border-radius: 999px;
+    background: rgba(45, 42, 98, .06);
+    border: 1px solid rgba(45, 42, 98, .14);
+    color: rgba(17, 17, 17, .84);
+    font-weight: 800;
+    font-size: 12.6px;
 }
 
+/* View button */
+.oa-btn {
+    display: inline-block;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+    padding: 10px 12px;
+    border-radius: 14px;
+    border: 1px solid rgba(0, 0, 0, .12);
+    background: rgba(0, 0, 0, .04);
+    color: rgba(17, 17, 17, .9);
+    font-weight: 900;
+    text-decoration: none;
+    transition: transform .12s ease, background .18s ease, box-shadow .18s ease;
+}
+
+.oa-btn:hover {
+    background: rgba(0, 0, 0, .06);
+    box-shadow: 0 10px 22px rgba(0, 0, 0, .10);
+    transform: translateY(-1px);
+}
+
+/* Two-column bio grid */
 .two-column-grid {
     display: grid;
     grid-template-columns: 3fr 2fr;
-    gap: 1rem;
+    gap: 16px;
     margin-top: 26px;
 }
 
-@media (max-width: 960px) {
+.two-column-grid .card {
+    border-radius: 20px;
+    border: 1px solid var(--border);
+    background: var(--surface);
+    box-shadow: 0 10px 26px rgba(0, 0, 0, .06);
+    overflow: hidden;
+}
+
+.two-column-grid .card h2 {
+    margin: 0;
+    padding: 16px 16px 0;
+    font-size: 1.1rem;
+    font-weight: 900;
+    letter-spacing: -0.2px;
+}
+
+.two-column-grid .card img {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin-top: 12px;
+}
+
+.two-column-grid .card p {
+    padding: 14px 16px 16px;
+    margin: 0;
+    line-height: 1.75;
+    color: rgba(17, 17, 17, .88);
+}
+
+/* -------------------------
+   Mobile: table -> cards
+   ------------------------- */
+@media (max-width: 760px) {
+    .oa-table thead {
+        display: none;
+    }
+
+    .oa-table,
+    .oa-table tbody,
+    .oa-table tr {
+        display: block;
+        width: 100%;
+    }
+
+    .oa-row {
+        border-top: 1px solid rgba(0, 0, 0, .08);
+        padding: 12px 12px 6px;
+    }
+
+    .oa-table tbody td {
+        display: grid;
+        grid-template-columns: 120px 1fr;
+        gap: 10px;
+        border-top: 0;
+        padding: 10px 6px;
+        background: transparent;
+    }
+
+    .oa-table tbody td::before {
+        content: attr(data-label);
+        font-weight: 900;
+        color: rgba(17, 17, 17, .60);
+        font-size: 12px;
+        letter-spacing: .02em;
+        padding-top: 2px;
+    }
+
+    .oa-year-cell {
+        font-size: 1.05rem;
+    }
+
+    .oa-names {
+        gap: 6px;
+    }
+
     .two-column-grid {
         grid-template-columns: 1fr;
     }

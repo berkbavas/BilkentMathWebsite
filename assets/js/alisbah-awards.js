@@ -1,30 +1,44 @@
-
 import { TRANSLATIONS } from "../data/translations.js";
-import {ALISBAH_AWARDS} from "../data/alisbah-awards.js"
+import { ALISBAH_AWARDS } from "../data/alisbah-awards.js";
 
+function renderRecipients(recipients) {
+  return `
+    <ul class="oa-names">
+      ${recipients.map(r => `<li class="oa-chip">${r}</li>`).join("")}
+    </ul>
+  `;
+}
 
-function renderRow(item) {
-    let list = "";
-    item.recipients.forEach(element => {
-        list += `<li class="pill">${element}</li>`
-    });
-
-    return `
-    <tr>
-    <td class="oa-year-cell">${item.year}</td>
-    <td>
-        <ul class="oa-names">${list}</ul>
-    </td>
-    <td><a data-i18n="tableView" class="pill" href="${item.photos}">View</a></td>
+function renderRow(item, labels) {
+  return `
+    <tr class="oa-row">
+      <td class="oa-year-cell" data-label="${labels.year}">${item.year}</td>
+      <td data-label="${labels.recipients}">
+        ${renderRecipients(item.recipients)}
+      </td>
+      <td data-label="${labels.photos}">
+        <a class="oa-btn" href="${item.photos}" target="_blank" rel="noopener">
+          <i class="fa-regular fa-image" aria-hidden="true"></i>
+          <span data-i18n="tableView">${labels.view}</span>
+        </a>
+      </td>
     </tr>
-    `
+  `;
 }
 
 function render() {
-    let rows = "";
-    ALISBAH_AWARDS.forEach(item => {rows += renderRow(item)});
-    const elTableMount = document.getElementById("tableMount");
-    elTableMount.innerHTML = rows;
+  const lang = localStorage.getItem("lang") || "en";
+  const t = TRANSLATIONS[lang] || {};
+
+  const labels = {
+    year: t.tableYear || "Year",
+    recipients: t.tableRecipients || "Recipients",
+    photos: t.tablePhotos || "Photos",
+    view: t.tableView || "View",
+  };
+
+  const elTableMount = document.getElementById("tableMount");
+  elTableMount.innerHTML = ALISBAH_AWARDS.map(item => renderRow(item, labels)).join("");
 }
 
 TRANSLATIONS.en.titleOrhanAlisbah = "Orhan Alisbah Awards - Department of Mathematics - Bilkent University";
@@ -39,4 +53,5 @@ TRANSLATIONS.tr.tableRecipients = "Ödül Sahipleri";
 TRANSLATIONS.tr.tablePhotos = "Fotoğraflar";
 TRANSLATIONS.tr.tableView = "Görüntüle";
 
+document.render = render;
 document.addEventListener("DOMContentLoaded", render);
