@@ -19,13 +19,12 @@
 }
 
 .link-card ul {
-    list-style: none;
-    padding: 0;
+    padding-left: 1.2rem;
     margin: 0;
 }
 
 .link-card li {
-    list-style: none;
+    list-style: square;
 }
 
 .link-card li+li {
@@ -36,19 +35,13 @@
 .link-card a {
     text-decoration: none;
     color: var(--text);
-    padding-left: 1.2rem;
     position: relative;
     transition: color 0.2s ease;
 }
 
-.link-card a::before {
+.link-card a::after {
     content: "↗";
     position: absolute;
-    left: 0;
-    color: #999;
+    right: -1.2rem;
     font-size: 0.9rem;
-}
-
-.link-card a:hover {
-    color: #1a4fd8;
 }
