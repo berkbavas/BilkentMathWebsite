@@ -1,0 +1,188 @@
+/* =========================
+   Graduate Supervisors
+   ========================= */
+
+/* Grid */
+.gsup-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+}
+
+@media (max-width: 720px) {
+    .gsup-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.spacer-16 {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 24px;
+}
+
+@media (max-width: 720px) {
+    .spacer-16 {
+        flex-direction: column;
+    }
+}
+
+.gsup-controls {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 12px;
+    margin-bottom: 18px;
+}
+
+.gsup-search {
+    position: relative;
+    display: flex;
+    align-items: center;
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    background: var(--surface);
+    height: 46px;
+    overflow: hidden;
+}
+
+.gsup-search-icon {
+    width: 44px;
+    height: 46px;
+    display: grid;
+    place-items: center;
+    color: rgba(17, 17, 17, .55);
+}
+
+.gsup-search input {
+    width: 100%;
+    height: 100%;
+    border: 0;
+    outline: 0;
+    background: transparent;
+    padding: 0 14px 0 0;
+    font-size: 16px;
+    color: var(--text);
+}
+
+
+/* Card */
+.sup-card {
+    position: relative;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    box-shadow: 0 10px 28px rgba(0, 0, 0, .06);
+    padding: 16px;
+    transition: transform .22s ease, box-shadow .22s ease;
+    overflow: hidden;
+}
+
+.sup-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 18px 44px rgba(0, 0, 0, .12);
+}
+
+.sup-top {
+    display: grid;
+    grid-template-columns: 54px 1fr auto;
+    gap: 12px;
+    align-items: center;
+}
+
+/* Avatar (photo optional) */
+.sup-avatar {
+    width: 54px;
+    height: 54px;
+    border-radius: 16px;
+    background: rgba(45, 42, 98, .08);
+    border: 1px solid rgba(45, 42, 98, .14);
+    display: grid;
+    place-items: center;
+    overflow: hidden;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.sup-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.sup-initials {
+    font-weight: 900;
+    color: var(--primary);
+    letter-spacing: -0.2px;
+}
+
+.sup-name {
+    margin: 0;
+    font-size: 1.05rem;
+    font-weight: 900;
+    letter-spacing: -0.2px;
+    text-decoration: none;
+}
+
+.sup-rank {
+    margin-top: 3px;
+    font-size: .9rem;
+    color: var(--muted);
+}
+
+.sup-body {
+    margin-top: 12px;
+    display: grid;
+    gap: 10px;
+}
+
+.sup-details {
+    padding-top: 10px;
+}
+
+.sup-details p {
+    margin: 0;
+    color: rgba(17, 17, 17, .84);
+    line-height: 1.7;
+    font-size: .95rem;
+}
+
+/* Footer blocks */
+.gsup-footer {
+    margin-top: 22px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+    border-top: 1px solid var(--border);
+    padding-top: 20px;
+}
+
+.gsup-footer-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    padding: 16px;
+    box-shadow: 0 10px 26px rgba(0, 0, 0, .06);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+}
+
+.gsup-footer-title {
+    font-weight: 900;
+    letter-spacing: -0.2px;
+}
+
+.gsup-footer-sub {
+    display: flex;
+    flex-direction: column;
+    margin-top: 6px;
+    color: var(--muted);
+    font-size: .92rem;
+}
+
+@media (max-width: 960px) {
+    .gsup-footer {
+        grid-template-columns: 1fr;
+    }
+}
