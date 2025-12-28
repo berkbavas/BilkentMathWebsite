@@ -5,12 +5,16 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title data-i18n="title">Bilkent University • Department of Mathematics</title>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="stylesheet" href="assets/css/common.css">
     <link rel="stylesheet" href="assets/css/navigation.css">
+    <link rel="stylesheet" href="assets/css/phd.css">
+
     <script type="module" src="assets/js/app.js"></script>
 </head>
 
@@ -18,41 +22,148 @@
     <header id="navigation" class="navigation"><!-- JavaScript will inject content here --></header>
 
     <main class="container">
-        <header class="header">
-            <h1>Doctoral Degree Program</h1>
-        </header>
-        <div class="max-width-720">
-            <p>A doctoral degree program is intended to enhance originality and creativity in
-                research and teaching. It is expected to lead students to independent investigation of a problem in
-                their fields, so that they can make a significant contribution to the existing body of knowledge.
-                Although a part of the task is the acquisition of existing knowledge in the field, the fundamental
-                objective is to develop the skill and capacity to conduct original research in the generation of new
-                knowledge. The preliminary requirement for the doctorate, therefore, is regarded not as an end in
-                itself, but as a preparation for the dissertation in which the candidate demonstrates this ability.
-                Clearly the doctoral program is not only useful for its own sake, but as preparation for further
-                investigation and research in a professional career.
-            </p>
+        <!-- Hero -->
+        <section class="phd-hero">
+            <div class="phd-hero-top">
+                <div class="phd-hero-kicker">
+                    <span class="chip"><i class="fa-solid fa-graduation-cap"></i> Ph.D.</span>
+                    <span class="pill">Doctoral Degree Program</span>
+                </div>
 
-            <h2>Admission</h2>
-            <p>Applicants must have an M.S. or B.S. degree in Mathematics (or in relevant
-                areas of science or engineering). Evaluation of applicants is based on their ALES scores, past
-                academic
-                record and the interview at Bilkent University. The evaluation of the applicants who cannot take the
-                ALES exam will be based on their GRE scores. Satisfactory knowledge of English is required.</p>
-            <p>(Please refer to the "Summary of requirements for admission to graduate programs" of the <strong><a href="https://mfbe.bilkent.edu.tr" target="_blank">Graduate School of Engineering and Science </a></strong>)</p>
+                <h1>Doctoral Degree Program</h1>
+                <p class="page-lead">
+                    Designed to cultivate independent researchers with originality and creativity, and to prepare students for a professional research career.
+                </p>
 
-            <h2>Degree Requirements</h2>
-            <p>Each student's Ph.D. program is individually planned with a
-                faculty advisor. In addition to successful completion of at least 21 credits of course work above
-                the
-                M.S. level or 42 credits of course work above the B.S. level, the Ph.D. student is expected to pass
-                a
-                qualifying examination, and to prepare and defend a dissertation based on original research. The
-                usual
-                duration for Ph.D. study is 8 semesters above the M.S. level and 10 semesters above the B.S. level,
-                extendable for 4 more semesters.
-            </p>
-        </div>
+                <div class="phd-hero-actions">
+                    <a class="btn-black" href="https://stars.bilkent.edu.tr/gradapp/" target="_blank" rel="noopener">
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i> Apply Online
+                    </a>
+                    <a class="btn" href="https://stars.bilkent.edu.tr/homepage/curriculum.php?DEPT=MATH" target="_blank" rel="noopener">
+                        <i class="fa-solid fa-list-check"></i> Curriculum
+                    </a>
+                    <a class="btn btn-ghost" href="graduate-program.html">
+                        <i class="fa-solid fa-arrow-left"></i> Graduate Program Overview
+                    </a>
+                </div>
+            </div>
+
+            <!-- Quick facts -->
+            <div class="phd-facts">
+                <article class="card phd-fact">
+                    <div class="phd-fact-icon"><i class="fa-solid fa-compass-drafting"></i></div>
+                    <div>
+                        <h3>Research-first</h3>
+                        <p>Thesis-driven program with emphasis on original work and independent investigation.</p>
+                    </div>
+                </article>
+
+                <article class="card phd-fact">
+                    <div class="phd-fact-icon"><i class="fa-solid fa-user-group"></i></div>
+                    <div>
+                        <h3>Advisor-guided</h3>
+                        <p>Each program is individually planned with a faculty advisor.</p>
+                    </div>
+                </article>
+
+                <article class="card phd-fact">
+                    <div class="phd-fact-icon"><i class="fa-solid fa-calendar-check"></i></div>
+                    <div>
+                        <h3>Typical duration</h3>
+                        <p>8 semesters (above M.S.) or 10 semesters (above B.S.), extendable for 4 more.</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="phd-layout">
+            <!-- Left: content -->
+            <div class="phd-content">
+                <div class="card-2">
+                    <h2>Purpose</h2>
+                    <p>
+                        A doctoral degree program is intended to enhance originality and creativity in research and teaching.
+                        It is expected to lead students to independent investigation of a problem in their fields, so that they can
+                        make a significant contribution to the existing body of knowledge.
+                    </p>
+                    <p>
+                        Although a part of the task is the acquisition of existing knowledge in the field, the fundamental objective is
+                        to develop the skill and capacity to conduct original research in the generation of new knowledge.
+                    </p>
+                    <p>
+                        The preliminary requirement for the doctorate is regarded not as an end in itself, but as preparation for the
+                        dissertation in which the candidate demonstrates this ability.
+                    </p>
+                </div>
+
+                <div class="phd-section-grid">
+                    <div class="card">
+                        <h2>Admission</h2>
+                        <p class="muted">
+                            Applicants must have an M.S. or B.S. degree in Mathematics (or in relevant areas of science or engineering).
+                            Evaluation is based on ALES, academic record, and interview. Applicants unable to take ALES are evaluated by GRE.
+                            Satisfactory English proficiency is required.
+                        </p>
+                        <p class="muted" style="margin-top:.8rem;">
+                            Please refer to the Graduate School of Engineering and Science requirements:
+                            <strong><a href="https://mfbe.bilkent.edu.tr" target="_blank" rel="noopener">mfbe.bilkent.edu.tr</a></strong>
+                        </p>
+                    </div>
+
+                    <div class="card">
+                        <h2>Degree requirements</h2>
+                        <p class="muted">
+                            In addition to course work, the Ph.D. student is expected to pass a qualifying examination, and to prepare and defend a dissertation
+                            based on original research.
+                        </p>
+
+                        <ul class="phd-list">
+                            <li><strong>Course work:</strong> at least 21 credits above M.S. level (or 42 above B.S. level)</li>
+                            <li><strong>Qualifying exam:</strong> successful completion required</li>
+                            <li><strong>Dissertation:</strong> original research, defense required</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="card-2 phd-cta-bottom">
+                    <h2>Ready to apply?</h2>
+                    <p class="muted">Submit your application through the Bilkent STARS.</p>
+                    <div class="phd-cta-row">
+                        <a class="btn-black" href="https://stars.bilkent.edu.tr/gradapp/" target="_blank" rel="noopener">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i> Apply Online
+                        </a>
+                        <a class="btn" href="graduate-program.html">
+                            <i class="fa-solid fa-circle-info"></i> See scholarships & timeline
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right: sticky sidebar -->
+            <aside class="phd-aside">
+                <div class="card phd-sticky">
+                    <div class="phd-sticky-title">
+                        <i class="fa-solid fa-clipboard-check"></i>
+                        <span>Application checklist</span>
+                    </div>
+
+                    <ul class="phd-checklist">
+                        <li><i class="fa-regular fa-circle-check"></i> Degree (M.S. or B.S.)</li>
+                        <li><i class="fa-regular fa-circle-check"></i> Transcript</li>
+                        <li><i class="fa-regular fa-circle-check"></i> Statement of purpose</li>
+                        <li><i class="fa-regular fa-circle-check"></i> Recommendation letters</li>
+                        <li><i class="fa-regular fa-circle-check"></i> ALES (TR) or GRE (Intl.)</li>
+                        <li><i class="fa-regular fa-circle-check"></i> English proficiency</li>
+                    </ul>
+
+                    <div class="phd-aside-links">
+                        <a class="btn" href="https://mfbe.bilkent.edu.tr/?page_id=17" target="_blank" rel="noopener">
+                            <i class="fa-solid fa-circle-question"></i> Requirements
+                        </a>
+                    </div>
+                </div>
+            </aside>
+        </section>
     </main>
 
     <footer id="footer" class="footer"><!-- JavaScript will inject content here --></footer>

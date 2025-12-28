@@ -1,0 +1,182 @@
+/* =========================
+   Ph.D. Program Page
+   Matches Graduate Program redesign style
+   ========================= */
+
+.phd-hero {
+    padding: 2.3rem 0 1.6rem;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 1.8rem;
+}
+
+.phd-hero-kicker {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-bottom: .8rem;
+}
+
+.phd-hero h1 {
+    font-size: 2.05rem;
+    letter-spacing: -0.03em;
+    margin: 0;
+}
+
+.phd-hero-actions {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-top: 1.4rem;
+}
+
+.phd-facts {
+    margin-top: 1.9rem;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 16px;
+}
+
+.phd-fact {
+    display: flex;
+    gap: 14px;
+    align-items: flex-start;
+    padding: 1.25rem;
+}
+
+.phd-fact h3 {
+    margin: 0 0 .35rem;
+    font-size: 1.05rem;
+    letter-spacing: -0.01em;
+}
+
+.phd-fact p {
+    margin: 0;
+    color: var(--muted);
+}
+
+.phd-fact-icon {
+    width: 46px;
+    height: 46px;
+    border-radius: 14px;
+    display: grid;
+    place-items: center;
+    border: 1px solid rgba(45, 42, 98, .14);
+    background: rgba(45, 42, 98, .08);
+    color: var(--primary);
+    flex: 0 0 auto;
+}
+
+.phd-layout {
+    display: grid;
+    grid-template-columns: 1.35fr .65fr;
+    gap: 18px;
+    align-items: start;
+    padding-bottom: 2rem;
+}
+
+.phd-section-grid {
+    margin-top: 18px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}
+
+.phd-list {
+    margin: 1rem 0 0;
+    padding-left: 1.15rem;
+}
+
+.phd-list li {
+    margin-bottom: .75rem;
+}
+
+.phd-aside {
+    position: relative;
+}
+
+.phd-sticky {
+    position: sticky;
+    top: 96px;
+    /* accounts for fixed navigation */
+    padding: 1.25rem;
+}
+
+.phd-sticky-title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 900;
+    letter-spacing: -0.02em;
+    margin-bottom: .85rem;
+}
+
+.phd-checklist {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    gap: 10px;
+}
+
+.phd-checklist li {
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+    color: rgba(17, 17, 17, .84);
+    line-height: 1.5;
+}
+
+.phd-checklist i {
+    color: var(--primary);
+    margin-top: 2px;
+}
+
+.phd-aside-links {
+    margin-top: 14px;
+    display: grid;
+    gap: 10px;
+}
+
+.phd-cta-bottom {
+    margin-top: 18px;
+}
+
+.phd-cta-row {
+    margin-top: 12px;
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+@media (max-width: 1024px) {
+    .phd-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .phd-sticky {
+        position: static;
+    }
+}
+
+@media (max-width: 960px) {
+    .phd-facts {
+        grid-template-columns: 1fr;
+    }
+
+    .phd-section-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 720px) {
+    .phd-hero-actions {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .phd-cta-row {
+        flex-direction: column;
+        align-items: stretch;
+    }
+}
