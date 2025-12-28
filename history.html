@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="stylesheet" href="assets/css/common.css">
     <link rel="stylesheet" href="assets/css/navigation.css">
@@ -22,69 +22,120 @@
 
     <main class="container">
 
-        <header class="header">
-            <div class="header-top">
+        <!-- HERO -->
+        <header class="history-hero">
+            <div class="history-hero-top">
+                <div class="history-hero-badge">
+                    <i class="fa-solid fa-landmark" aria-hidden="true"></i>
+                    <span data-lang="en">Department History</span>
+                    <span data-lang="tr">Bölüm Tarihçesi</span>
+                </div>
+
                 <h1 data-lang="en">A Short History of the Department</h1>
                 <h1 data-lang="tr">Bölümün Kısa Tarihi</h1>
+
+                <p class="history-hero-lead" data-lang="en">
+                    A quick overview of how the department was founded and how it grew into an internationally oriented research department.
+                </p>
+                <p class="history-hero-lead" data-lang="tr">
+                    Bölümün kuruluşuna ve uluslararası düzeyde araştırma odaklı bir yapıya dönüşümüne kısa bir bakış.
+                </p>
+
+                <div class="history-hero-actions">
+                    <a class="btn-black" href="#heads" data-lang="en"><i class="fa-solid fa-users"></i>Heads of Department</a>
+                    <a class="btn-black" href="#heads" data-lang="tr"><i class="fa-solid fa-users"></i>Bölüm Başkanları</a>
+
+                    <a class="btn btn-ghost" href="about.html" data-lang="en"><i class="fa-solid fa-circle-info"></i>About</a>
+                    <a class="btn btn-ghost" href="about.html" data-lang="tr"><i class="fa-solid fa-circle-info"></i>Hakkında</a>
+                </div>
+            </div>
+
+            <div class="history-kpis card-width" aria-label="Key milestones">
+                <div class="history-kpi">
+                    <div class="history-kpi-label" data-lang="en">First students</div>
+                    <div class="history-kpi-label" data-lang="tr">İlk öğrenciler</div>
+                    <div class="history-kpi-value">1986</div>
+                </div>
+                <div class="history-kpi">
+                    <div class="history-kpi-label" data-lang="en">Independent department</div>
+                    <div class="history-kpi-label" data-lang="tr">Bölüm olarak konumlanma</div>
+                    <div class="history-kpi-value">1989</div>
+                </div>
+                <div class="history-kpi">
+                    <div class="history-kpi-label" data-lang="en">First undergraduates</div>
+                    <div class="history-kpi-label" data-lang="tr">İlk lisans öğrencileri</div>
+                    <div class="history-kpi-value">1991</div>
+                </div>
             </div>
         </header>
 
-        <div class="max-width-720">
+        <!-- STORY -->
+        <section class="history-layout">
+            <article class="card history-story">
+                <h2 data-lang="en">Overview</h2>
+                <h2 data-lang="tr">Genel Bakış</h2>
 
-            <p data-lang="en">
-                In <strong>1986</strong>, when Bilkent University admitted its first students, the
-                mathematics department was positioned as a unit within the Faculty
-                of Engineering.
-            </p>
-            <p data-lang="tr">
-                Bilkent Üniversitesi ilk öğrencilerini aldığı <strong>1986</strong> yılında, Matematik Bölümü
-                Mühendislik Fakültesi içinde bir birim olarak konumlandırılmıştı.
-            </p>
+                <p data-lang="en">
+                    In <strong>1986</strong>, when Bilkent University admitted its first students, the
+                    mathematics department was positioned as a unit within the Faculty
+                    of Engineering.
+                </p>
+                <p data-lang="tr">
+                    Bilkent Üniversitesi ilk öğrencilerini aldığı <strong>1986</strong> yılında, Matematik Bölümü
+                    Mühendislik Fakültesi içinde bir birim olarak konumlandırılmıştı.
+                </p>
 
-            <p data-lang="en">
-                At the end of <strong>1989</strong>, it was officially decided to reposition the
-                Mathematics Department as an independent department to conduct
-                high-level research on an international scale.
-            </p>
-            <p data-lang="tr">
-                Üç yıl sonra, uluslararası ölçekte üst düzey araştırmalar yapmak ve bu nitelikte araştırma yapacak olan
-                matematikçiler yetiştirmek üzere <strong>1989</strong> yılının sonlarında resmen bölüm olarak yeniden
-                konumlandırılması
-                kararı alındı.
-            </p>
+                <p data-lang="en">
+                    At the end of <strong>1989</strong>, it was officially decided to reposition the
+                    Mathematics Department as an independent department to conduct
+                    high-level research on an international scale.
+                </p>
+                <p data-lang="tr">
+                    Üç yıl sonra, uluslararası ölçekte üst düzey araştırmalar yapmak ve bu nitelikte araştırma yapacak olan
+                    matematikçiler yetiştirmek üzere <strong>1989</strong> yılının sonlarında resmen bölüm olarak yeniden
+                    konumlandırılması
+                    kararı alındı.
+                </p>
 
-            <p data-lang="en">
-                Initially, only the <strong>graduate program</strong> was launched. The first
-                undergraduate students joined the department in <strong>1991</strong>.
-            </p>
-            <p data-lang="tr">
-                İlk olarak Lisansüstü programı başlatıldı. İlk lisans öğrencileri <strong>1991</strong> yılında bölüme
-                katıldı.
-            </p>
+                <p data-lang="en">
+                    Initially, only the <strong>graduate program</strong> was launched. The first
+                    undergraduate students joined the department in <strong>1991</strong>.
+                </p>
+                <p data-lang="tr">
+                    İlk olarak Lisansüstü programı başlatıldı. İlk lisans öğrencileri <strong>1991</strong> yılında bölüme
+                    katıldı.
+                </p>
 
-            <p data-lang="en">
-                The mission of the department has been to provide a solid
-                undergraduate foundation for students who plan to pursue graduate
-                or doctoral studies in <strong>applied</strong> or <strong>pure mathematics</strong>, while also
-                supporting internationally recognized research.
-            </p>
-            <p data-lang="tr">
-                Matematik bölümünün misyonu, <strong>uygulamalı</strong> ya da <strong>sırfi</strong> matematikte
-                lisansüstü ve doktora yapacak
-                öğrencilere gerekli lisans alt yapısını vermek olarak belirlenmişti. Yıllar içerisinde Bilkent'in
-                öğrenci sayısının artmasıyla, bu misyonu gerçekleştirmek için gerekli olan sayı ve çeşitlilikteki
-                öğretim üyesi düzeyine ulaşıldı.
-            </p>
-        </div>
+                <p data-lang="en">
+                    The mission of the department has been to provide a solid
+                    undergraduate foundation for students who plan to pursue graduate
+                    or doctoral studies in <strong>applied</strong> or <strong>pure mathematics</strong>, while also
+                    supporting internationally recognized research.
+                </p>
+                <p data-lang="tr">
+                    Matematik bölümünün misyonu, <strong>uygulamalı</strong> ya da <strong>sırfi</strong> matematikte
+                    lisansüstü ve doktora yapacak
+                    öğrencilere gerekli lisans alt yapısını vermek olarak belirlenmişti. Yıllar içerisinde Bilkent'in
+                    öğrenci sayısının artmasıyla, bu misyonu gerçekleştirmek için gerekli olan sayı ve çeşitlilikteki
+                    öğretim üyesi düzeyine ulaşıldı.
+                </p>
+            </article>
 
-        <br>
 
-        <div class="section-head">
-            <h2 data-lang="en">Heads of the Department</h2>
-            <h2 data-lang="tr">Bölüm Başkanları</h2>
-        </div>
+        </section>
 
-        <div id="heads-root" aria-live="polite" class="grid"><!-- JSON render target --></div>
+        <!-- HEADS -->
+        <section class="history-heads" id="heads">
+            <div class="section-head history-section-head">
+                <h2 data-lang="en">Heads of the Department</h2>
+                <h2 data-lang="tr">Bölüm Başkanları</h2>
+
+                <p class="page-lead" data-lang="en">A timeline of leadership and academic focus across the years.</p>
+                <p class="page-lead" data-lang="tr">Yıllar boyunca bölüm liderliği ve akademik odakların kısa bir özeti.</p>
+            </div>
+
+            <div id="heads-root" aria-live="polite" class="grid card-width"><!-- JSON render target --></div>
+        </section>
 
     </main>
 
