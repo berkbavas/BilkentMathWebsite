@@ -14,6 +14,10 @@ import { PROBLEM_OF_MONTH_2013 } from "../data/problem-of-month/problem-of-month
 import { PROBLEM_OF_MONTH_2012 } from "../data/problem-of-month/problem-of-month-2012.js";
 import { PROBLEM_OF_MONTH_2011 } from "../data/problem-of-month/problem-of-month-2011.js";
 import { PROBLEM_OF_MONTH_2010 } from "../data/problem-of-month/problem-of-month-2010.js";
+import { PROBLEM_OF_MONTH_2009 } from "../data/problem-of-month/problem-of-month-2009.js";
+import { PROBLEM_OF_MONTH_2008 } from "../data/problem-of-month/problem-of-month-2008.js";
+import { PROBLEM_OF_MONTH_2007 } from "../data/problem-of-month/problem-of-month-2007.js";
+import { PROBLEM_OF_MONTH_2006 } from "../data/problem-of-month/problem-of-month-2006.js";
 
 import { TRANSLATIONS, MONTHS_EN_TO_TR } from "../data/translations.js";
 
@@ -34,7 +38,11 @@ const DATA = [
     PROBLEM_OF_MONTH_2013,
     PROBLEM_OF_MONTH_2012,
     PROBLEM_OF_MONTH_2011,
-    PROBLEM_OF_MONTH_2010
+    PROBLEM_OF_MONTH_2010,
+    PROBLEM_OF_MONTH_2009,
+    PROBLEM_OF_MONTH_2008,
+    PROBLEM_OF_MONTH_2007,
+    PROBLEM_OF_MONTH_2006
 ];
 
 const URL = "Problem/"; // Base URL for problem PDFs
