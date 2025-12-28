@@ -11,38 +11,112 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="stylesheet" href="assets/css/common.css">
     <link rel="stylesheet" href="assets/css/navigation.css">
+    <link rel="stylesheet" href="assets/css/undergraduate-program.css">
     <script type="module" src="assets/js/app.js"></script>
 </head>
 
 <body>
     <header id="navigation" class="navigation"><!-- JavaScript will inject content here --></header>
+
     <main class="container">
-        <header class="header">
-            <h1 data-lang="en">Mathematics Undergraduate Program</h1>
-            <h1 data-lang="tr">Matematik Lisans Programı</h1>
+        <!-- HERO -->
+        <header class="ug-hero">
+            <div class="ug-hero-top">
+                <div class="ug-hero-copy">
+                    <h1 data-lang="en">Mathematics Undergraduate Program</h1>
+                    <h1 data-lang="tr">Matematik Lisans Programı</h1>
+
+                    <p class="page-lead" data-lang="en">
+                        A selective, research-driven program designed to build a strong foundation across core areas of mathematics
+                        and prepare students for mathematical careers or postgraduate study.
+                    </p>
+                    <p class="page-lead" data-lang="tr">
+                        Matematiğin temel alanlarında güçlü bir altyapı kazandırmayı ve öğrencileri matematik ağırlıklı mesleklere
+                        veya lisansüstü çalışmalara hazırlamayı amaçlayan seçici bir program.
+                    </p>
+
+                    <div class="ug-actions">
+                        <a data-lang="en" class="btn-black" href="https://stars.bilkent.edu.tr/homepage/curriculum.php?DEPT=MATH" target="_blank" rel="noopener">
+                            <i class="fa-solid fa-table-list" aria-hidden="true"></i>
+                            Curriculum
+                        </a>
+                        <a data-lang="tr" class="btn-black" href="https://stars.bilkent.edu.tr/homepage/curriculum.php?DEPT=MATH" target="_blank" rel="noopener">
+                            <i class="fa-solid fa-table-list" aria-hidden="true"></i>
+                            Ders Çizelgesi
+                        </a>
+
+                        <a data-lang="en" class="btn" href="faculty.html">
+                            <i class="fa-solid fa-user-group" aria-hidden="true"></i>
+                            Faculty
+                        </a>
+                        <a data-lang="tr" class="btn" href="faculty.html">
+                            <i class="fa-solid fa-user-group" aria-hidden="true"></i>
+                            Öğretim Üyeleri
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+
+            <div data-lang="en" class="ug-pill-row" aria-label="Program pillars">
+                <span class="pill">Analysis</span>
+                <span class="pill">Algebra</span>
+                <span class="pill">Geometry</span>
+                <span class="pill">Applied Mathematics</span>
+            </div>
+            <div data-lang="tr" class="ug-pill-row" aria-label="Program pillars">
+                <span class="pill">Analiz</span>
+                <span class="pill">Cebir</span>
+                <span class="pill">Geometri</span>
+                <span class="pill">Uygulamalı Matematik</span>
+            </div>
         </header>
 
-        <div class="description">
-            <p data-lang="en">
-                The undergraduate program aims to prepare students for mathematical careers or postgraduate degrees, to
-                which end it admits a small number of highly qualified and motivated students each year. The program is
-                designed to give the students a good background in all areas of mathematics. It consists of four series
-                of courses in <strong>analysis</strong>, <strong>algebra</strong>, <strong>geometry</strong>, and
-                <strong>applied mathematics</strong>.
-            </p>
-            <p data-lang="tr">
-                Matematik lisans programı, öğrencileri matematik ağırlıklı mesleklere veya lisans sonrası derecelere
-                hazırlamayı amaçlar. Bu amaçla her yıl az sayıda yüksek nitelikli ve hevesli öğrenci alır. Lisans
-                programı öğrencilere matematiğin her alanında iyi bir temel vermek için düzenlenmiştir ve
-                <strong>analiz</strong>, <strong>cebir</strong>,
-                <strong>geometri</strong>, ve <strong>uygulamalı matematik</strong> olmak üzere dört alanda derslerden
-                oluşmaktadır.
-            </p>
-            <br>
-            <a data-lang="en" class="btn-black" href="https://stars.bilkent.edu.tr/homepage/curriculum.php?DEPT=MATH" target="_blank">Curriculum</a>
-            <a data-lang="tr" class="btn-black" href="https://stars.bilkent.edu.tr/homepage/curriculum.php?DEPT=MATH" target="_blank">Ders Çizelgesi</a>
-        </div>
+        <!-- MAIN CONTENT -->
+        <section class="ug-section">
+            <div class="card-2">
+                <h2 data-lang="en">Overview</h2>
+                <h2 data-lang="tr">Genel Bakış</h2>
+
+                <p data-lang="en">
+                    The undergraduate program aims to prepare students for mathematical careers or postgraduate degrees. To this end,
+                    it admits a small number of highly qualified and motivated students each year. The program is designed to give
+                    students a good background in all areas of mathematics.
+                </p>
+
+                <p data-lang="tr">
+                    Matematik lisans programı, öğrencileri matematik ağırlıklı mesleklere veya lisans sonrası derecelere hazırlamayı amaçlar.
+                    Bu amaçla her yıl az sayıda yüksek nitelikli ve hevesli öğrenci alır. Lisans programı öğrencilere matematiğin her alanında
+                    iyi bir temel vermek için düzenlenmiştir.
+                </p>
+
+                <div class="ug-grid">
+                    <div class="ug-mini">
+                        <div class="ug-mini-title" data-lang="en">Program structure</div>
+                        <div class="ug-mini-title" data-lang="tr">Program yapısı</div>
+                        <p class="muted" data-lang="en">Four series of courses across the main pillars.</p>
+                        <p class="muted" data-lang="tr">Dört temel alanda ders serileri.</p>
+                    </div>
+
+                    <div class="ug-mini">
+                        <div class="ug-mini-title" data-lang="en">Strong foundation</div>
+                        <div class="ug-mini-title" data-lang="tr">Sağlam temel</div>
+                        <p class="muted" data-lang="en">Builds breadth and depth for future specialization.</p>
+                        <p class="muted" data-lang="tr">İleride uzmanlaşma için genişlik ve derinlik sağlar.</p>
+                    </div>
+
+                    <div class="ug-mini">
+                        <div class="ug-mini-title" data-lang="en">Next steps</div>
+                        <div class="ug-mini-title" data-lang="tr">Sonraki adımlar</div>
+                        <p class="muted" data-lang="en">Supports preparation for graduate study and research.</p>
+                        <p class="muted" data-lang="tr">Lisansüstü çalışmalar ve araştırma için hazırlık.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
     </main>
+
     <footer id="footer" class="footer"><!-- JavaScript will inject content here --></footer>
 </body>
 

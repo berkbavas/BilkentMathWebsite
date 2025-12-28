@@ -1,0 +1,192 @@
+/* =========================
+   Undergraduate Program
+   ========================= */
+
+.ug-hero {
+    padding: 2.2rem 0 1.4rem;
+    margin-bottom: 1.6rem;
+    border-bottom: 1px solid var(--border);
+}
+
+.ug-hero-top {
+    display: grid;
+    grid-template-columns: 1.35fr .85fr;
+    gap: 22px;
+    align-items: start;
+}
+
+.ug-hero-copy h1 {
+    margin: 0;
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+}
+
+.ug-actions {
+    display: flex;
+    gap: 12px;
+    margin-top: 1.25rem;
+    flex-wrap: wrap;
+}
+
+.ug-actions .btn,
+.ug-actions .btn-black {
+    display: inline-flex;
+    align-items: center;
+    gap: .55rem;
+}
+
+/* Right highlight card */
+.ug-hero-card {
+    background: linear-gradient(180deg, var(--surface), #fbfbfd);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    box-shadow: 0 10px 28px rgba(0, 0, 0, .06);
+    padding: 18px;
+    position: sticky;
+    top: 96px;
+}
+
+.ug-hero-card-title {
+    font-weight: 900;
+    letter-spacing: -0.02em;
+    margin-bottom: 10px;
+}
+
+.ug-facts {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    gap: 12px;
+}
+
+.ug-facts li {
+    display: grid;
+    grid-template-columns: 44px 1fr;
+    gap: 10px;
+    align-items: start;
+    padding: 10px 10px;
+    border-radius: 14px;
+    border: 1px solid rgba(0, 0, 0, .06);
+    background: rgba(45, 42, 98, .03);
+}
+
+.ug-fact-icon {
+    width: 44px;
+    height: 44px;
+    display: grid;
+    place-items: center;
+    border-radius: 14px;
+    border: 1px solid rgba(45, 42, 98, .14);
+    background: rgba(45, 42, 98, .08);
+    color: var(--primary);
+}
+
+.ug-pill-row {
+    margin-top: 14px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+/* Section spacing */
+.ug-section {
+    padding: .2rem 0 1.1rem;
+}
+
+/* Mini grid inside the card */
+.ug-grid {
+    margin-top: 1.4rem;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 14px;
+}
+
+.ug-mini {
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    padding: 14px;
+    background: rgba(255, 255, 255, .65);
+}
+
+.ug-mini-title {
+    font-weight: 900;
+    letter-spacing: -0.02em;
+    margin-bottom: 6px;
+}
+
+.ug-mini p {
+    margin: 0;
+    line-height: 1.6;
+}
+
+/* CTA strip */
+.ug-cta {
+    margin: 1.6rem 0 0;
+    padding: 1.2rem 0 2.2rem;
+}
+
+.ug-cta-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 18px;
+    border-radius: 22px;
+    border: 1px solid var(--border);
+    background: linear-gradient(180deg, var(--surface), var(--surface-2));
+    box-shadow: 0 10px 26px rgba(0, 0, 0, .06);
+}
+
+.ug-cta-title {
+    font-weight: 900;
+    letter-spacing: -0.02em;
+    font-size: 1.05rem;
+}
+
+.ug-cta-sub {
+    margin: 6px 0 0;
+    color: var(--muted);
+}
+
+.ug-cta-actions {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.ug-cta-actions .btn-black {
+    display: inline-flex;
+    align-items: center;
+    gap: .55rem;
+}
+
+/* Responsive */
+@media (max-width: 980px) {
+    .ug-hero-top {
+        grid-template-columns: 1fr;
+    }
+
+    .ug-hero-card {
+        position: relative;
+        top: auto;
+    }
+}
+
+@media (max-width: 720px) {
+    .ug-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .ug-actions,
+    .ug-cta-actions {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .ug-cta-inner {
+        flex-direction: column;
+        align-items: stretch;
+    }
+}
