@@ -3,7 +3,7 @@
 A modern, responsive website for the Department of Mathematics at Bilkent University.
 The site provides comprehensive information about faculty, students, research areas, seminars, and academic programs.
 
-## 🌟 Features
+## Features
 
 - **Multilingual Support**: Full Turkish and English language support
 - **Responsive Design**: Optimized for desktop, tablet, and mobile devices
@@ -12,7 +12,7 @@ The site provides comprehensive information about faculty, students, research ar
 - **Academic Resources**: Problem of the month, project courses, and alumni information
 - **Modern UI/UX**: Clean, professional design with smooth interactions
 
-## 🛠️ Technologies Used
+## Technologies Used
 
 - **Frontend**: HTML5, CSS3, JavaScript (ES6+ modules)
 - **Styling**: Custom CSS with responsive design principles
@@ -21,14 +21,14 @@ The site provides comprehensive information about faculty, students, research ar
 - **Charts**: Chart.js for alumni statistics visualization
 - **Data**: JSON/JavaScript data files for content management
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 bilkent-math/
 ├── assets/
-│   ├── css/                 # Stylesheet files
-│   │   ├── common.css       # Global styles
-│   │   ├── navigation.css   # Navigation styles
+│   ├── css/                # Stylesheet files
+│   │   ├── common.css      # Global styles
+│   │   ├── navigation.css  # Navigation styles
 │   │   └── *.css           # Page-specific styles
 │   ├── data/               # JSON/JS data files
 │   │   ├── faculty.js      # Faculty information
@@ -46,7 +46,7 @@ bilkent-math/
 └── site.webmanifest        # Web app manifest
 ```
 
-## 🚀 Getting Started
+## Getting Started
 
 ### Prerequisites
 
@@ -60,6 +60,7 @@ bilkent-math/
 3. **Access the website** through your web server URL
 
 For local development with XAMPP:
+
 ```bash
 # Place files in: c:\xampp\htdocs\bilkent-math\
 # Access via: http://localhost/bilkent-math/
@@ -72,64 +73,101 @@ For local development with XAMPP:
 3. **Make changes** to HTML, CSS, or JavaScript files
 4. **Refresh the browser** to see updates
 
-## 📝 Content Management
+## Content Management
 
-### Adding Faculty Members
+Website content is managed through JavaScript data files located in `/assets/data/`.
+Each data file exports structured objects that are consumed by the corresponding JavaScript modules.
 
-Edit `assets/data/faculty.js`:
+### Data Files Structure
+
+| File | Purpose | Structure |
+|------|---------|-----------|
+| `faculty.js` | Faculty member information | `CURRENT_FACULTY` array with bilingual objects |
+| `news.js` | News and announcements | `NEWS` array with year, date, and content |
+| `seminars.js` | Seminar listings | `SEMINARS` array with speaker, title, date, time info |
+| `research.js` | Research areas | `RESEARCH_DATA` array with bilingual descriptions |
+| `translations.js` | UI text translations | `TRANSLATIONS` object with key-value pairs |
+| `graduate-students.js` | Student information | Arrays for current graduate students |
+| `alumni.js` | Alumni data | Categorized by graduation year and degree |
+| `project-courses.js` | Course information | Bilingual course descriptions |
+| `history.js` | Department history | Timeline events |
+
+### Updating Content
+
+#### Faculty Information
+
 ```javascript
+// assets/data/faculty.js
 {
     name: "Faculty Name",
-    rank: "Professor",
-    email: "email@bilkent.edu.tr",
-    webpage: "https://example.com",
-    office: "Office Number",
-    phone: "+90 312 290 XXXX",
-    researchAreas: ["Research Area 1", "Research Area 2"]
+    isSupervisor: true,
+    title: { en: "Professor", tr: "Profesör Dr." },
+    degree: { en: "Ph.D. details", tr: "Doktora detayları" },
+    research: { 
+        en: ["Research Area 1", "Research Area 2"], 
+        tr: ["Araştırma Alanı 1", "Araştırma Alanı 2"] 
+    },
+    office: "SA-144",
+    phone: "+90 (312) 290-XXXX",
+    email: "email [-at-] bilkent.edu.tr",
+    photo: "photo.jpg",
+    webpage: "personal-webpage-url"
 }
 ```
 
-### Adding Seminars
+### Graduate Students
 
-Edit `assets/data/seminars/seminars-YYYY-YYYY.js`:
 ```javascript
+// assets/data/graduate-students.js
 {
-    date: "YYYY-MM-DD",
-    time: "HH:MM",
+    name: "Student Name",
+    office: "SA-150",
+    phone: "XXXX",
+    email: "email [-at-] bilkent.edu.tr",
+    advisor: "Advisor Name",
+    photo: "photo.jpg"
+}
+```
+
+#### News Items
+
+```javascript
+// assets/data/news.js
+{
+    year: 2025,
+    date: { en: "January 1, 2025", tr: "1 Ocak 2025" },
+    content: { 
+        en: "English news content with <a href='#'>links</a>", 
+        tr: "Türkçe haber içeriği <a href='#'>linklerle</a>" 
+    }
+}
+```
+
+#### Seminars
+
+```javascript
+// assets/data/seminars.js
+{
     speaker: "Speaker Name",
-    title: { en: "Title", tr: "Başlık" },
-    abstract: { en: "Abstract", tr: "Özet" },
-    location: "Room Number"
+    title: "Seminar Title",
+    link: "seminars/2025-2026/file.pdf", // Optional PDF link
+    date: "DD.MM.YYYY",
+    time: "HH:MM",
+    place: "Room Code"
 }
 ```
 
-### Adding News
+### Translations
 
-Edit `assets/data/news.js`:
 ```javascript
+// assets/data/translations.js
 {
-    date: "YYYY-MM-DD",
-    title: { en: "News Title", tr: "Haber Başlığı" },
-    content: { en: "Content", tr: "İçerik" },
-    link: "optional-link-url"
+    home: { en: "Home", tr: "Ana Sayfa" },
+    faculty: { en: "Faculty", tr: "Fakülte" },
+    // More key-value pairs
 }
+
 ```
-
-### Language Translations
-
-Update `assets/data/translations.js` to add or modify translations:
-```javascript
-key: {
-    en: "English text",
-    tr: "Türkçe metin"
-}
-```
-
-## 📞 Support
-
-For technical issues or questions:
-
-**Department Email**: bilmath@fen.bilkent.edu.tr
 
 ## 📄 License
 
