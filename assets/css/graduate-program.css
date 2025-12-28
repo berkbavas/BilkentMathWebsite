@@ -4,7 +4,7 @@
 
 /* ---------- Hero ---------- */
 .grad-hero {
-    padding: 2.6rem 0 2.2rem;
+    padding: 2.6rem 0;
     margin-bottom: 1.6rem;
     position: relative;
 }
@@ -46,12 +46,19 @@
 }
 
 @media (max-width: 720px) {
-    .grad-hero h1 { font-size: 1.75rem; }
-    .grad-hero-actions { flex-direction: column; }
+    .grad-hero h1 {
+        font-size: 1.75rem;
+    }
+
+    .grad-hero-actions {
+        flex-direction: column;
+    }
 }
 
 /* ---------- Quick facts ---------- */
-.grad-facts { margin: 1.2rem 0 2.2rem; }
+.grad-facts {
+    margin: 1.2rem 0 2.2rem;
+}
 
 .grad-facts-grid {
     display: grid;
@@ -60,7 +67,9 @@
 }
 
 @media (max-width: 960px) {
-    .grad-facts-grid { grid-template-columns: 1fr; }
+    .grad-facts-grid {
+        grid-template-columns: 1fr;
+    }
 }
 
 .grad-fact {
@@ -80,7 +89,9 @@
     flex: 0 0 auto;
 }
 
-.grad-fact-icon i { color: var(--primary); }
+.grad-fact-icon i {
+    color: var(--primary);
+}
 
 .grad-fact-body h3 {
     margin: 0;
@@ -95,8 +106,13 @@
 }
 
 /* ---------- Main sections ---------- */
-.grad-section { margin: 1.4rem 0; }
-.grad-section h2 { margin-top: 0; }
+.grad-section {
+    margin: 1.4rem 0;
+}
+
+.grad-section h2 {
+    margin-top: 0;
+}
 
 .grad-inline-actions {
     display: flex;
@@ -105,7 +121,9 @@
 }
 
 @media (max-width: 720px) {
-    .grad-inline-actions { flex-direction: column; }
+    .grad-inline-actions {
+        flex-direction: column;
+    }
 }
 
 /* Emphasis card */
@@ -142,7 +160,9 @@
     flex: 0 0 auto;
 }
 
-.grad-section-icon i { color: var(--primary); }
+.grad-section-icon i {
+    color: var(--primary);
+}
 
 .grad-stipend {
     display: grid;
@@ -152,7 +172,9 @@
 }
 
 @media (max-width: 720px) {
-    .grad-stipend { grid-template-columns: 1fr; }
+    .grad-stipend {
+        grid-template-columns: 1fr;
+    }
 }
 
 .grad-stipend-item {
@@ -184,7 +206,9 @@
 }
 
 @media (max-width: 960px) {
-    .grad-timeline { grid-template-columns: 1fr; }
+    .grad-timeline {
+        grid-template-columns: 1fr;
+    }
 }
 
 .grad-timeline-card {
@@ -228,7 +252,10 @@
 }
 
 @media (max-width: 720px) {
-    .grad-ready-actions { flex-direction: column; align-items: stretch; }
+    .grad-ready-actions {
+        flex-direction: column;
+        align-items: stretch;
+    }
 }
 
 /* =========================
@@ -315,7 +342,9 @@
     box-shadow: 0 18px 44px rgba(0, 0, 0, .12);
 }
 
-.sup-card:hover::before { opacity: 1; }
+.sup-card:hover::before {
+    opacity: 1;
+}
 
 .sup-top {
     display: grid;

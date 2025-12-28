@@ -47,6 +47,9 @@
 
 
 .master-section {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
     max-width: 820px;
     margin-top: 1.8rem;
 }
@@ -109,7 +112,6 @@
 @media (max-width: 720px) {
     .master-info-grid {
         grid-template-columns: 1fr;
-        gap: 0;
         margin-top: 0;
     }
 
