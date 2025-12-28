@@ -190,9 +190,9 @@ function render() {
     const latestData = DATA[0]; // Latest year
     const latestItem = latestData[latestData.length - 1];
 
-    let month = lang === "tr" ? MONTHS_EN_TO_TR[latestItem.month] : latestItem.month;
+    let month = lang === "tr" ? MONTHS_EN_TO_TR[latestItem.month] || latestItem.month : latestItem.month;
 
-    elLatestProblemBtn.onclick = () => window.open(latestItem.question, "_blank");
+    elLatestProblemBtn.onclick = () => window.open(URL + latestItem.question, "_blank");
     elLatestProblemBtn.textContent =
         (TRANSLATIONS.pomLatestProblemLabel[lang] || "Latest Problem") + ` (${month} ${latestItem.year})`;
 }
