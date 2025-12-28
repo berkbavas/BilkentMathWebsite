@@ -28,6 +28,10 @@
     margin-top: 3rem;
 }
 
+.archive h2 {
+    margin-bottom: 1.6rem;
+}
+
 .archive-inner  {
     display: flex;
     flex-direction: column;

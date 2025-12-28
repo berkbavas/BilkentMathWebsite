@@ -9,7 +9,7 @@
 
     --container: 1260px;
     --navigation-width: 1320px;
-    --card-max-width: 830px;
+    --max-card-width: 830px;
     --radius: 14px;
     --radius-sm: 10px;
 
@@ -174,7 +174,7 @@ ul li {
 }
 
 .card-width {
-    max-width: var(--card-max-width);
+    max-width: var(--max-card-width);
 }
 
 .container {
