@@ -2,7 +2,7 @@ import { TRANSLATIONS } from "../data/translations.js";
 import { ALISBAH_AWARDS } from "../data/alisbah-awards.js";
 
 function renderRecipients(recipients) {
-  return `
+    return `
     <ul class="oa-names">
       ${recipients.map(r => `<li class="oa-chip">${r}</li>`).join("")}
     </ul>
@@ -10,7 +10,7 @@ function renderRecipients(recipients) {
 }
 
 function renderRow(item, labels) {
-  return `
+    return `
     <tr class="oa-row">
       <td class="oa-year-cell" data-label="${labels.year}">${item.year}</td>
       <td data-label="${labels.recipients}">
@@ -27,31 +27,42 @@ function renderRow(item, labels) {
 }
 
 function render() {
-  const lang = localStorage.getItem("lang") || "en";
-  const t = TRANSLATIONS[lang] || {};
-
-  const labels = {
-    year: t.tableYear || "Year",
-    recipients: t.tableRecipients || "Recipients",
-    photos: t.tablePhotos || "Photos",
-    view: t.tableView || "View",
-  };
-
-  const elTableMount = document.getElementById("tableMount");
-  elTableMount.innerHTML = ALISBAH_AWARDS.map(item => renderRow(item, labels)).join("");
+    const lang = localStorage.getItem("lang") || "en";
+    const labels = {
+        year: TRANSLATIONS.tableYear[lang],
+        recipients: TRANSLATIONS.tableRecipients[lang],
+        photos: TRANSLATIONS.tablePhotos[lang],
+        view: TRANSLATIONS.tableView[lang]
+    };
+    const elTableMount = document.getElementById("tableMount");
+    elTableMount.innerHTML = ALISBAH_AWARDS.map(item => renderRow(item, labels)).join("");
 }
 
-TRANSLATIONS.en.titleOrhanAlisbah = "Orhan Alisbah Awards - Department of Mathematics - Bilkent University";
-TRANSLATIONS.en.tableYear = "Year";
-TRANSLATIONS.en.tableRecipients = "Recipients";
-TRANSLATIONS.en.tablePhotos = "Photos";
-TRANSLATIONS.en.tableView = "View";
+TRANSLATIONS.titleOrhanAlisbah = {
+    en: "Orhan Alisbah Awards - Department of Mathematics - Bilkent University",
+    tr: "Orhan Alisbah Ödülleri - Matematik Bölümü - Bilkent Üniversitesi"
+};
 
-TRANSLATIONS.tr.titleOrhanAlisbah = "Orhan Alisbah Ödülleri - Matematik Bölümü - Bilkent Üniversitesi";
-TRANSLATIONS.tr.tableYear = "Yıl";
-TRANSLATIONS.tr.tableRecipients = "Ödül Sahipleri";
-TRANSLATIONS.tr.tablePhotos = "Fotoğraflar";
-TRANSLATIONS.tr.tableView = "Görüntüle";
+TRANSLATIONS.tableYear = {
+    en: "Year",
+    tr: "Yıl"
+};
+
+TRANSLATIONS.tableRecipients = {
+    en: "Recipients",
+    tr: "Ödül Sahipleri"
+};
+
+TRANSLATIONS.tablePhotos = {
+    en: "Photos",
+    tr: "Fotoğraflar"
+};
+
+TRANSLATIONS.tableView = {
+    en: "View",
+    tr: "Görüntüle"
+};
+
 
 document.render = render;
 document.addEventListener("DOMContentLoaded", render);

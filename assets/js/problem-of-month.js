@@ -17,7 +17,7 @@ function yearStats(items) {
     return solversTotal;
 }
 
-function renderCard(item, t, lang) {
+function renderCard(item, lang) {
     const solversList = (item.solvers || []).map(
         (solver) => `
       <li class="solver-item">
@@ -42,20 +42,20 @@ function renderCard(item, t, lang) {
         <div class="pom-subline">
           <span class="badge">
             <i class="fa-solid fa-users"></i>
-            ${solverCount} ${t.pomSolversLabel || "solvers"}
+            ${solverCount} ${TRANSLATIONS.pomSolversLabel[lang] || "solvers"}
           </span>
         </div>
       </div>
 
       <div class="pom-links">
-        <a href="${item.question}" target="_blank" class="chip chip-ghost" aria-label="${t.pomOpenQuestionAria || "Open question PDF"}">
+        <a href="${item.question}" target="_blank" class="chip chip-ghost" aria-label="${TRANSLATIONS.pomOpenQuestionAria[lang] || "Open question PDF"}">
           <i class="fa-regular fa-circle-question"></i>
-          ${t.pomQuestionLabel || "Question"}
+          ${TRANSLATIONS.pomQuestionLabel[lang] || "Question"}
         </a>
 
-        <a href="${item.solution}" target="_blank" class="chip chip-ghost" aria-label="${t.pomOpenSolutionAria || "Open solution PDF"}">
+        <a href="${item.solution}" target="_blank" class="chip chip-ghost" aria-label="${TRANSLATIONS.pomOpenSolutionAria[lang] || "Open solution PDF"}">
           <i class="fa-regular fa-file-lines"></i>
-          ${t.pomSolutionLabel || "Solution"}
+          ${TRANSLATIONS.pomSolutionLabel[lang] || "Solution"}
         </a>
       </div>
     </div>
@@ -65,7 +65,7 @@ function renderCard(item, t, lang) {
         <summary class="solvers-summary">
           <span class="solvers-left">
             <i class="fa-solid fa-list-check"></i>
-            ${(t.pomSolversTitle || "Solvers")}
+            ${(TRANSLATIONS.pomSolversTitle[lang] || "Solvers")}
           </span>
           <span class="solvers-right">
             <span class="count-pill">${solverCount}</span>
@@ -80,15 +80,15 @@ function renderCard(item, t, lang) {
   `;
 }
 
-function renderCards(data, t, lang) {
+function renderCards(data, lang) {
     return `
     <div class="pom-cards">
-      ${data.map((item) => renderCard(item, t, lang)).join("")}
+      ${data.map((item) => renderCard(item, lang)).join("")}
     </div>
   `;
 }
 
-function createDetailSummary(year, solversTotal, t) {
+function createDetailSummary(year, solversTotal, lang) {
     return `
     <summary class="archive-accordion-summary">
       <div class="year-summary">
@@ -97,13 +97,13 @@ function createDetailSummary(year, solversTotal, t) {
           <div class="year-meta">
             <span class="year-pill">
               <i class="fa-solid fa-users"></i>
-              ${solversTotal} ${t.pomSolversLabel || "solvers"}
+              ${solversTotal} ${TRANSLATIONS.pomSolversLabel[lang] || "solvers"}
             </span>
           </div>
         </div>
 
         <div class="year-right">
-          <span class="hint">${t.pomViewLabel || "View"}</span>
+          <span class="hint">${TRANSLATIONS.pomViewLabel[lang] || "View"}</span>
           <span class="chev" aria-hidden="true"></span>
         </div>
       </div>
@@ -116,7 +116,6 @@ function render() {
     elQuickLinks.innerHTML = "";
 
     const lang = localStorage.getItem("lang") || "en";
-    const t = TRANSLATIONS[lang] || {};
 
     DATA.map((item, idx) => {
         const year = item[0].year;
@@ -124,8 +123,8 @@ function render() {
         const details = document.createElement("details");
         details.className = "archive-accordion-details";
         details.id = `year-${year}`;
-        details.innerHTML = createDetailSummary(year, solversTotal, t);
-        details.innerHTML += renderCards(item, t, lang);
+        details.innerHTML = createDetailSummary(year, solversTotal, lang);
+        details.innerHTML += renderCards(item, lang);
         if (idx === 0) {
             details.setAttribute("open", "true");
         }
@@ -151,49 +150,105 @@ function render() {
 
     elLatestProblemBtn.onclick = () => window.open(latestItem.question, "_blank");
     elLatestProblemBtn.textContent =
-        (t.pomLatestProblemLabel || "Latest Problem") + ` (${month} ${latestItem.year})`;
+        (TRANSLATIONS.pomLatestProblemLabel[lang] || "Latest Problem") + ` (${month} ${latestItem.year})`;
 }
 
-/* ---- i18n keys ---- */
-TRANSLATIONS.en.pomQuestionLabel = "Question";
-TRANSLATIONS.en.pomSolutionLabel = "Solution";
-TRANSLATIONS.en.pomSolversTitle = "Solvers";
-TRANSLATIONS.en.pomSolversLabel = "solvers";
-TRANSLATIONS.en.pomViewLabel = "View";
-TRANSLATIONS.en.pomLatestProblemLabel = "Problem of the Month";
-TRANSLATIONS.en.pomOpenQuestionAria = "Open question PDF";
-TRANSLATIONS.en.pomOpenSolutionAria = "Open solution PDF";
-TRANSLATIONS.en.headerTitle = "Problem of the Month";
-TRANSLATIONS.en.headerDescription = "A monthly problem series. Submit your solution and see the archive of questions and solutions.";
-TRANSLATIONS.en.howToSubmitTitle = "How to Submit";
-TRANSLATIONS.en.howToSubmitDescription = "We will announce the following month on this page the names of people who have sent correct solutions. You can send your answers by one of the following ways.";
-TRANSLATIONS.en.mailLabel = "Mail:";
-TRANSLATIONS.en.mailAddressLine1 = "Bilkent University,";
-TRANSLATIONS.en.mailAddressLine2 = "Department of Mathematics,";
-TRANSLATIONS.en.mailAddressLine3 = "06800 Bilkent, Ankara, Turkey";
-TRANSLATIONS.en.emailLabel = "Email:";
-TRANSLATIONS.en.quickLinksTitle = "Quick links";
-TRANSLATIONS.en.quickLinksDescription = "Jump to a year or open the latest question.";
 
-TRANSLATIONS.tr.pomQuestionLabel = "Soru";
-TRANSLATIONS.tr.pomSolutionLabel = "Çözüm";
-TRANSLATIONS.tr.pomSolversTitle = "Çözenler";
-TRANSLATIONS.tr.pomSolversLabel = "çözen";
-TRANSLATIONS.tr.pomViewLabel = "Görüntüle";
-TRANSLATIONS.tr.pomLatestProblemLabel = "Ayın Sorusu";
-TRANSLATIONS.tr.pomOpenQuestionAria = "Soru PDF'ini aç";
-TRANSLATIONS.tr.pomOpenSolutionAria = "Çözüm PDF'ini aç";
-TRANSLATIONS.tr.headerTitle = "Ayın Sorusu";
-TRANSLATIONS.tr.headerDescription = "Aylık soru serisi. Çözümünüzü gönderin veya arşive göz atın.";
-TRANSLATIONS.tr.howToSubmitTitle = "Nasıl Gönderilir?";
-TRANSLATIONS.tr.howToSubmitDescription = "Soruları doğru çözenlerin isimlerini takip eden ay bu sayfada yayınlıyoruz. Çözümlerinizi aşağıdaki yollardan biri ile bize ulaştırabilirsiniz.";
-TRANSLATIONS.tr.mailLabel = "Posta:";
-TRANSLATIONS.tr.mailAddressLine1 = "Bilkent Üniversitesi,";
-TRANSLATIONS.tr.mailAddressLine2 = "Matematik Bölümü,";
-TRANSLATIONS.tr.mailAddressLine3 = "06800 Bilkent, Ankara, Türkiye";
-TRANSLATIONS.tr.emailLabel = "E-posta:";
-TRANSLATIONS.tr.quickLinksTitle = "Hızlı linkler";
-TRANSLATIONS.tr.quickLinksDescription = "Bir yıla atlayın veya son soruyu açın.";
+TRANSLATIONS.pomQuestionLabel = {
+    en: "Question",
+    tr: "Soru"
+};
+
+TRANSLATIONS.pomSolutionLabel = {
+    en: "Solution",
+    tr: "Çözüm"
+};
+
+TRANSLATIONS.pomSolversTitle = {
+    en: "Solvers",
+    tr: "Çözenler"
+};
+
+TRANSLATIONS.pomSolversLabel = {
+    en: "solvers",
+    tr: "çözen"
+};
+
+TRANSLATIONS.pomViewLabel = {
+    en: "View",
+    tr: "Görüntüle"
+};
+
+TRANSLATIONS.pomLatestProblemLabel = {
+    en: "Problem of the Month",
+    tr: "Ayın Sorusu"
+};
+
+TRANSLATIONS.pomOpenQuestionAria = {
+    en: "Open question PDF",
+    tr: "Soru PDF'ini aç"
+};
+
+TRANSLATIONS.pomOpenSolutionAria = {
+    en: "Open solution PDF",
+    tr: "Çözüm PDF'ini aç"
+};
+
+TRANSLATIONS.headerTitle = {
+    en: "Problem of the Month",
+    tr: "Ayın Sorusu"
+};
+
+TRANSLATIONS.headerDescription = {
+    en: "A monthly problem series. Submit your solution and see the archive of questions and solutions.",
+    tr: "Aylık soru serisi. Çözümünüzü gönderin veya arşive göz atın."
+};
+
+TRANSLATIONS.howToSubmitTitle = {
+    en: "How to Submit",
+    tr: "Nasıl Gönderilir?"
+};
+
+TRANSLATIONS.howToSubmitDescription = {
+    en: "We will announce the following month on this page the names of people who have sent correct solutions. You can send your answers by one of the following ways.",
+    tr: "Soruları doğru çözenlerin isimlerini takip eden ay bu sayfada yayınlıyoruz. Çözümlerinizi aşağıdaki yollardan biri ile bize ulaştırabilirsiniz."
+};
+
+TRANSLATIONS.mailLabel = {
+    en: "Mail:",
+    tr: "Posta:"
+};
+
+TRANSLATIONS.mailAddressLine1 = {
+    en: "Bilkent University,",
+    tr: "Bilkent Üniversitesi,"
+};
+
+TRANSLATIONS.mailAddressLine2 = {
+    en: "Department of Mathematics,",
+    tr: "Matematik Bölümü,"
+};
+
+TRANSLATIONS.mailAddressLine3 = {
+    en: "06800 Bilkent, Ankara, Turkey",
+    tr: "06800 Bilkent, Ankara, Türkiye"
+};
+
+TRANSLATIONS.emailLabel = {
+    en: "Email:",
+    tr: "E-posta:"
+};
+
+TRANSLATIONS.quickLinksTitle = {
+    en: "Quick links",
+    tr: "Hızlı linkler"
+};
+
+TRANSLATIONS.quickLinksDescription = {
+    en: "Jump to a year or open the latest question.",
+    tr: "Bir yıla atlayın veya son soruyu açın."
+};
+
 
 document.render = render; // Expose render function to other modules, app.js in particular
 document.addEventListener("DOMContentLoaded", render); // Initial render on DOM load 

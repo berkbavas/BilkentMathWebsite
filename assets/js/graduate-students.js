@@ -6,15 +6,15 @@ const elementCount = document.querySelector("#count");
 const elementReset = document.querySelector("#reset");
 
 function card(s, lang) {
-  const name = s.name ?? "";
-  const advisor = s.advisor ?? "";
-  const office = s.office ?? "";
-  const phone = s.phone ?? "";
-  const email = s.email ?? "";
-  const advisorLabel = TRANSLATIONS[lang].labelAdvisor;
-  const photoUrl = encodeURI("https://math.bilkent.edu.tr/Grad_student_photos/" + (s.photo || "placeholder.jpg"));
+    const name = s.name ?? "";
+    const advisor = s.advisor ?? "";
+    const office = s.office ?? "";
+    const phone = s.phone ?? "";
+    const email = s.email ?? "";
+    const advisorLabel = TRANSLATIONS.labelAdvisor[lang] || "Advisor";
+    const photoUrl = encodeURI("https://math.bilkent.edu.tr/Grad_student_photos/" + (s.photo || "placeholder.jpg"));
 
-  return `
+    return `
   <article class="gs-card">
     <div class="gs-card-inner">
 
@@ -51,47 +51,58 @@ function card(s, lang) {
 }
 
 function matches(student, query) {
-  const ql = query.toLowerCase();
-  if (student.name && student.name.toLowerCase().includes(ql)) return true;
-  return false;
+    const ql = query.toLowerCase();
+    if (student.name && student.name.toLowerCase().includes(ql)) return true;
+    return false;
 }
 
 
 function renderCards(list) {
-  const currentLang = localStorage.getItem("lang") || "en";
-  const container = document.querySelector("#gs-cards-container");
-  container.innerHTML = list.map(student => card(student, currentLang)).join("");
+    const currentLang = localStorage.getItem("lang") || "en";
+    const container = document.querySelector("#gs-cards-container");
+    container.innerHTML = list.map(student => card(student, currentLang)).join("");
 }
 
 function apply() {
-  const currentLang = localStorage.getItem("lang") || "en";
-  elementSearch.placeholder = TRANSLATIONS[currentLang].placeholderSearch;
-  const query = elementSearch.value.trim();
-  const list = GRADUATE_STUDENTS.filter(student => matches(student, query));
-  elementCount.textContent = `${list.length} ${TRANSLATIONS[currentLang].postfixStudent}`;
-  renderCards(list);
+    const currentLang = localStorage.getItem("lang") || "en";
+    elementSearch.placeholder = TRANSLATIONS.searchPlaceholder[currentLang];
+    const query = elementSearch.value.trim();
+    const list = GRADUATE_STUDENTS.filter(student => matches(student, query));
+    elementCount.textContent = `${list.length} ${TRANSLATIONS.postfixStudent[currentLang]}`;
+    renderCards(list);
 }
 
 function resetFilters() {
-  elementSearch.value = "";
-  apply();
+    elementSearch.value = "";
+    apply();
 }
 
 function render() {
-  elementSearch.addEventListener("input", apply);
-  elementReset.addEventListener("click", resetFilters);
-  apply();
+    elementSearch.addEventListener("input", apply);
+    elementReset.addEventListener("click", resetFilters);
+    apply();
 }
 
-TRANSLATIONS.en.buttonReset = "Reset";
-TRANSLATIONS.en.postfixStudent = "Student(s)";
-TRANSLATIONS.en.placeholderSearch = "Search";
-TRANSLATIONS.en.labelAdvisor = "Advisor";
+TRANSLATIONS.buttonReset = {
+    en: "Reset",
+    tr: "Sıfırla"
+};
 
-TRANSLATIONS.tr.buttonReset = "Sıfırla";
-TRANSLATIONS.tr.postfixStudent = "Öğrenci";
-TRANSLATIONS.tr.placeholderSearch = "Ara";
-TRANSLATIONS.tr.labelAdvisor = "Danışman";
+TRANSLATIONS.postfixStudent = {
+    en: "Student(s)",
+    tr: "Öğrenci"
+};
+
+TRANSLATIONS.searchPlaceholder = {
+    en: "Search",
+    tr: "Ara"
+};
+
+TRANSLATIONS.labelAdvisor = {
+    en: "Advisor",
+    tr: "Danışman"
+};
+
 
 document.render = render;
 document.addEventListener("DOMContentLoaded", render);

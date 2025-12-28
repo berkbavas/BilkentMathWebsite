@@ -1,119 +1,213 @@
 // Each page imports this file and adds its translations to TRANSLATIONS object.
 // Definitions below are used in navigation and footer. 
 // Since they are common to all pages, they are defined in here.
-
 export const TRANSLATIONS = {
-    en: {
-        // Page Titles
-        title: "Bilkent University • Department of Mathematics",
-
-        // Navigation
-        titleDepartment: "Department of Mathematics",
-        titleUniversity: "Bilkent University",
-        navHome: "Home",
-        navPeople: "People",
-        navPeopleFaculty: "Faculty",
-        navPeopleGraduateStudents: "Graduate Students",
-        navPeopleAlumni: "Alumni",
-        navPeopleAlumniStatistics: "Alumni Statistics",
-        navPrograms: "Programs",
-        navProgramsAbout: "About the Department",
-        navProgramsHistory: "A Short History of the Department",
-        navProgramsUndergraduate: "Undergraduate Program",
-        navProgramsGraduate: "Graduate Program",
-        navProgramsDoubleMajor: "Double Major",
-        navProgramsMinor: "Minor Programs",
-        navProgramsExchange: "Exchange Programs",
-        navCourses: "Courses",
-        navCoursesCurriculum: "Curriculum",
-        navCoursesCatalog: "Course Catalog",
-        navCoursesOfferings: "Course Offerings",
-        navCoursesProject: "Project Courses",
-        navCoursesSummer: "Summer Practice",
-        navResearch: "Research",
-        navResearchBooks: "Books",
-        navResearchBooksReviews: "Books Reviews",
-        navResearchJournals: "Journals",
-        navResearchThesisArchive: "Thesis Archive",
-        navSeminars: "Seminars",
-        navSeminarsThisSemester: "This Semester",
-        navSeminarsPreviousSemesters: "Previous Semesters",
-        navApplications: "Applications",
-        navApplicationsGraduate: "Graduate Applications",
-        navApplicationsInternational: "International Applications",
-        navApplicationsOpenPosition: "Open Position",
-        navMore: "More",
-        navMoreAlisbahAwards: "Alisbah Awards",
-        navMoreProblemOfMonth: "Problem of Month",
-        navMoreNewsFromDepartment: "News from Department",
-        navMoreVideos: "Videos",
-        navMoreLinks: "Links",
-
-        // Footer
-        footerAddress: "Address",
-        footerDepartment: "Department of Mathematics",
-        footerUniversity: "Bilkent University",
-        footerAddressLine1: "Faculty of Science Building, Room SA132B",
-        footerAddressLine2: "Bilkent University, 06800 Ankara, Turkey",
-        footerContact: "Contact",
-        footerFollowUs: "Follow Us"
+    title: {
+        en: "Bilkent University • Department of Mathematics",
+        tr: "Bilkent Üniversitesi • Matematik Bölümü"
     },
-    tr: {
-        // Page Titles
-        title: "Bilkent Üniversitesi • Matematik Bölümü",
 
-        // Navigation
-        titleDepartment: "Matematik Bölümü",
-        titleUniversity: "Bilkent Üniversitesi",
-        navHome: "Ana Sayfa",
-        navPeople: "Bölüm Elemanları",
-        navPeopleFaculty: "Öğretim Üyeleri",
-        navPeopleGraduateStudents: "Lisansüstü Öğrencileri",
-        navPeopleAlumni: "Bazı Mezunlarımız",
-        navPeopleAlumniStatistics: "Mezun İstatistikleri",
-        navPrograms: "Programlar",
-        navProgramsAbout: "Bölüm Hakkında",
-        navProgramsHistory: "Bölümün Kısa Tarihi",
-        navProgramsUndergraduate: "Lisans Programı",
-        navProgramsGraduate: "Lisansüstü Programı",
-        navProgramsDoubleMajor: "Çift Anadal",
-        navProgramsMinor: "Yandal Programları",
-        navProgramsExchange: "Değişim Programları",
-        navCourses: "Dersler",
-        navCoursesCurriculum: "Müfredat",
-        navCoursesCatalog: "Ders Kataloğu",
-        navCoursesOfferings: "Verilen Dersler",
-        navCoursesProject: "Proje Dersleri",
-        navCoursesSummer: "Yaz Stajı",
-        navResearch: "Araştırma",
-        navResearchBooks: "Kitaplar",
-        navResearchBooksReviews: "Kitap Eleştirileri",
-        navResearchJournals: "Makaleler",
-        navResearchThesisArchive: "Tez Arşivi",
-        navSeminars: "Seminerler",
-        navSeminarsThisSemester: "Bu Dönem",
-        navSeminarsPreviousSemesters: "Önceki Dönemler",
-        navApplications: "Başvurular",
-        navApplicationsGraduate: "Lisansüstü Başvuruları",
-        navApplicationsInternational: "Uluslararası Başvurular",
-        navApplicationsOpenPosition: "Açık Pozisyon",
-        navMore: "Daha Fazla",
-        navMoreAlisbahAwards: "Alisbah Ödülleri",
-        navMoreProblemOfMonth: "Ayın Problemi",
-        navMoreNewsFromDepartment: "Bölümden Haberler",
-        navMoreVideos: "Videolar",
-        navMoreLinks: "Bağlantılar",
+    /* Navigation – Titles */
+    titleDepartment: {
+        en: "Department of Mathematics",
+        tr: "Matematik Bölümü"
+    },
+    titleUniversity: {
+        en: "Bilkent University",
+        tr: "Bilkent Üniversitesi"
+    },
 
-        // Footer
-        footerAddress: "Adres",
-        footerDepartment: "Matematik Bölümü",
-        footerUniversity: "Bilkent Üniversitesi",
-        footerAddressLine1: "Fen Fakültesi Binası, Ofis SA132B",
-        footerAddressLine2: "Bilkent Üniversitesi, 06800 Ankara, Türkiye",
-        footerContact: "İletişim",
-        footerFollowUs: "Bizi Takip Edin"
+    /* Navigation – Main */
+    navHome: {
+        en: "Home",
+        tr: "Ana Sayfa"
+    },
+    navPeople: {
+        en: "People",
+        tr: "Bölüm Elemanları"
+    },
+    navPeopleFaculty: {
+        en: "Faculty",
+        tr: "Öğretim Üyeleri"
+    },
+    navPeopleGraduateStudents: {
+        en: "Graduate Students",
+        tr: "Lisansüstü Öğrencileri"
+    },
+    navPeopleAlumni: {
+        en: "Alumni",
+        tr: "Bazı Mezunlarımız"
+    },
+    navPeopleAlumniStatistics: {
+        en: "Alumni Statistics",
+        tr: "Mezun İstatistikleri"
+    },
+
+    navPrograms: {
+        en: "Programs",
+        tr: "Programlar"
+    },
+    navProgramsAbout: {
+        en: "About the Department",
+        tr: "Bölüm Hakkında"
+    },
+    navProgramsHistory: {
+        en: "A Short History of the Department",
+        tr: "Bölümün Kısa Tarihi"
+    },
+    navProgramsUndergraduate: {
+        en: "Undergraduate Program",
+        tr: "Lisans Programı"
+    },
+    navProgramsGraduate: {
+        en: "Graduate Program",
+        tr: "Lisansüstü Programı"
+    },
+    navProgramsDoubleMajor: {
+        en: "Double Major",
+        tr: "Çift Anadal"
+    },
+    navProgramsMinor: {
+        en: "Minor Programs",
+        tr: "Yandal Programları"
+    },
+    navProgramsExchange: {
+        en: "Exchange Programs",
+        tr: "Değişim Programları"
+    },
+
+    navCourses: {
+        en: "Courses",
+        tr: "Dersler"
+    },
+    navCoursesCurriculum: {
+        en: "Curriculum",
+        tr: "Müfredat"
+    },
+    navCoursesCatalog: {
+        en: "Course Catalog",
+        tr: "Ders Kataloğu"
+    },
+    navCoursesOfferings: {
+        en: "Course Offerings",
+        tr: "Verilen Dersler"
+    },
+    navCoursesProject: {
+        en: "Project Courses",
+        tr: "Proje Dersleri"
+    },
+    navCoursesSummer: {
+        en: "Summer Practice",
+        tr: "Yaz Stajı"
+    },
+
+    navResearch: {
+        en: "Research",
+        tr: "Araştırma"
+    },
+    navResearchBooks: {
+        en: "Books",
+        tr: "Kitaplar"
+    },
+    navResearchBooksReviews: {
+        en: "Books Reviews",
+        tr: "Kitap Eleştirileri"
+    },
+    navResearchJournals: {
+        en: "Journals",
+        tr: "Makaleler"
+    },
+    navResearchThesisArchive: {
+        en: "Thesis Archive",
+        tr: "Tez Arşivi"
+    },
+
+    navSeminars: {
+        en: "Seminars",
+        tr: "Seminerler"
+    },
+    navSeminarsThisSemester: {
+        en: "This Semester",
+        tr: "Bu Dönem"
+    },
+    navSeminarsPreviousSemesters: {
+        en: "Previous Semesters",
+        tr: "Önceki Dönemler"
+    },
+
+    navApplications: {
+        en: "Applications",
+        tr: "Başvurular"
+    },
+    navApplicationsGraduate: {
+        en: "Graduate Applications",
+        tr: "Lisansüstü Başvuruları"
+    },
+    navApplicationsInternational: {
+        en: "International Applications",
+        tr: "Uluslararası Başvurular"
+    },
+    navApplicationsOpenPosition: {
+        en: "Open Position",
+        tr: "Açık Pozisyon"
+    },
+
+    navMore: {
+        en: "More",
+        tr: "Daha Fazla"
+    },
+    navMoreAlisbahAwards: {
+        en: "Alisbah Awards",
+        tr: "Alisbah Ödülleri"
+    },
+    navMoreProblemOfMonth: {
+        en: "Problem of Month",
+        tr: "Ayın Problemi"
+    },
+    navMoreNewsFromDepartment: {
+        en: "News from Department",
+        tr: "Bölümden Haberler"
+    },
+    navMoreVideos: {
+        en: "Videos",
+        tr: "Videolar"
+    },
+    navMoreLinks: {
+        en: "Links",
+        tr: "Bağlantılar"
+    },
+
+    /* Footer */
+    footerAddress: {
+        en: "Address",
+        tr: "Adres"
+    },
+    footerDepartment: {
+        en: "Department of Mathematics",
+        tr: "Matematik Bölümü"
+    },
+    footerUniversity: {
+        en: "Bilkent University",
+        tr: "Bilkent Üniversitesi"
+    },
+    footerAddressLine1: {
+        en: "Faculty of Science Building, Room SA132B",
+        tr: "Fen Fakültesi Binası, Ofis SA132B"
+    },
+    footerAddressLine2: {
+        en: "Bilkent University, 06800 Ankara, Turkey",
+        tr: "Bilkent Üniversitesi, 06800 Ankara, Türkiye"
+    },
+    footerContact: {
+        en: "Contact",
+        tr: "İletişim"
+    },
+    footerFollowUs: {
+        en: "Follow Us",
+        tr: "Bizi Takip Edin"
     }
 };
+
 
 export const MONTHS_EN_TO_TR = {
     January: "Ocak",

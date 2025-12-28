@@ -62,7 +62,7 @@ function cardTemplate(p) {
 function render() {
     const lang = localStorage.getItem("lang") || "en";
     const search = elSearch.value.trim();
-    elSearch.placeholder = TRANSLATIONS[lang].placeholderSearch;
+    elSearch.placeholder = TRANSLATIONS.searchPlaceholder[lang];
 
     let list = lang === "en"
         ? GRADUATE_SUPERVISORS_EN
@@ -74,10 +74,10 @@ function render() {
 
     if (list.length === 0) {
         elCount.textContent = "";
-        elRoot.innerHTML = `<p>${TRANSLATIONS[lang].noResults}</p>`;
+        elRoot.innerHTML = `<p>${TRANSLATIONS.noResults[lang]}</p>`;
     }
     else {
-        elCount.textContent = TRANSLATIONS[lang].countResults.replace("{count}", list.length);
+        elCount.textContent = TRANSLATIONS.countResults[lang].replace("{count}", list.length);
         elRoot.innerHTML = list.map(cardTemplate).join("");
     }
 
@@ -96,26 +96,58 @@ document.render = render;
 document.addEventListener("DOMContentLoaded", init);
 
 // Add translations specific to Graduate Supervisors page
-TRANSLATIONS.en.titleGraduateSupervisors = "Graduate Supervisors";
-TRANSLATIONS.en.paragraphGraduateSupervisors = "Faculty members and their research interests.";
-TRANSLATIONS.en.placeholderSearch = "Search";
-TRANSLATIONS.en.buttonReset = "Reset";
-TRANSLATIONS.en.countResults = "{count} faculty members";
-TRANSLATIONS.en.noResults = "No results found.";
-TRANSLATIONS.en.headerPastTheses = "Past Theses";
-TRANSLATIONS.en.buttonPastTheses = "View";
-TRANSLATIONS.en.headerCoordinator = "Department Graduate Coordinator";
-TRANSLATIONS.en.buttonApplyOnline = "Apply Online";
-TRANSLATIONS.en.coordinatorName = "Prof. Azer Kerimov";
+TRANSLATIONS.titleGraduateSupervisors = {
+    en: "Graduate Supervisors",
+    tr: "Lisansüstü Tez Danışmanları"
+};
 
-TRANSLATIONS.tr.titleGraduateSupervisors = "Lisansüstü Tez Danışmanları";
-TRANSLATIONS.tr.paragraphGraduateSupervisors = "Öğretim üyeleri ve araştırma alanları.";
-TRANSLATIONS.tr.placeholderSearch = "Ara";
-TRANSLATIONS.tr.buttonReset = "Sıfırla";
-TRANSLATIONS.tr.noResults = "Sonuç bulunamadı.";
-TRANSLATIONS.tr.countResults = "{count} öğretim üyesi";
-TRANSLATIONS.tr.headerPastTheses = "Geçmişte Yürütülen Tezler";
-TRANSLATIONS.tr.buttonPastTheses = "Görüntüle";
-TRANSLATIONS.tr.headerCoordinator = "Bölüm Lisansüstü Koordinatörü";
-TRANSLATIONS.tr.buttonApplyOnline = "Çevrimiçi Başvuru Formu";
-TRANSLATIONS.tr.coordinatorName = "Prof. Dr. Azer Kerimov";
+TRANSLATIONS.paragraphGraduateSupervisors = {
+    en: "Faculty members and their research interests.",
+    tr: "Öğretim üyeleri ve araştırma alanları."
+};
+
+TRANSLATIONS.searchPlaceholder = {
+    en: "Search",
+    tr: "Ara"
+};
+
+TRANSLATIONS.buttonReset = {
+    en: "Reset",
+    tr: "Sıfırla"
+};
+
+TRANSLATIONS.countResults = {
+    en: "{count} faculty members",
+    tr: "{count} öğretim üyesi"
+};
+
+TRANSLATIONS.noResults = {
+    en: "No results found.",
+    tr: "Sonuç bulunamadı."
+};
+
+TRANSLATIONS.headerPastTheses = {
+    en: "Past Theses",
+    tr: "Geçmişte Yürütülen Tezler"
+};
+
+TRANSLATIONS.buttonPastTheses = {
+    en: "View",
+    tr: "Görüntüle"
+};
+
+TRANSLATIONS.headerCoordinator = {
+    en: "Department Graduate Coordinator",
+    tr: "Bölüm Lisansüstü Koordinatörü"
+};
+
+TRANSLATIONS.buttonApplyOnline = {
+    en: "Apply Online",
+    tr: "Çevrimiçi Başvuru Formu"
+};
+
+TRANSLATIONS.coordinatorName = {
+    en: "Prof. Azer Kerimov",
+    tr: "Prof. Dr. Azer Kerimov"
+};
+

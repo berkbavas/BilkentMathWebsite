@@ -32,14 +32,14 @@ function renderEntry(a, lang) {
         <details class="alumni-story">
             <summary>
                 <i class="fa-solid fa-caret-right"></i>
-                <span data-i18n="story">${TRANSLATIONS[lang].story}</span>
+                <span data-i18n="story">${TRANSLATIONS.story[lang]}</span>
             </summary>
             <blockquote>${a.story}</blockquote>
         </details>` : ""}
 
         ${a.lastUpdate ? `
         <div class="alumni-update">
-           ${TRANSLATIONS[lang].lastUpdate}: ${esc(a.lastUpdate)}
+           ${TRANSLATIONS.lastUpdate[lang]}: ${esc(a.lastUpdate)}
         </div>` : ""}
     </article>
     `;
@@ -56,9 +56,9 @@ function apply() {
     const query = elementSearch.value.trim();
     const list = ALUMNI.filter(alumni => matches(alumni, query));
     elementRoot.innerHTML = list.map(a => renderEntry(a, lang)).join("");
-    elementSearch.placeholder = TRANSLATIONS[lang].placeholderSearch;
+    elementSearch.placeholder = TRANSLATIONS.searchPlaceholder[lang];
     if (list.length === 0) {
-        elementRoot.innerHTML = `<p>${TRANSLATIONS[lang].noResults}</p>`;
+        elementRoot.innerHTML = `<p>${TRANSLATIONS.noResults[lang]}</p>`;
     }
 }
 
@@ -77,17 +77,31 @@ function render() {
     apply();
 }
 
-TRANSLATIONS.en.buttonReset = "Reset";
-TRANSLATIONS.en.noResults = "No matching alumni found.";
-TRANSLATIONS.en.placeholderSearch = "Search";
-TRANSLATIONS.en.story = "Story";
-TRANSLATIONS.en.lastUpdate = "Last Update";
+TRANSLATIONS.buttonReset = {
+    en: "Reset",
+    tr: "Sıfırla"
+};
 
-TRANSLATIONS.tr.buttonReset = "Sıfırla";
-TRANSLATIONS.tr.noResults = "Eşleşen mezun bulunamadı.";
-TRANSLATIONS.tr.placeholderSearch = "Ara";
-TRANSLATIONS.tr.story = "Hikaye";
-TRANSLATIONS.tr.lastUpdate = "Son Güncelleme";
+TRANSLATIONS.noResults = {
+    en: "No matching alumni found.",
+    tr: "Eşleşen mezun bulunamadı."
+};
 
-document.render = render; // expose render function to other modules, app.js in particular
+TRANSLATIONS.searchPlaceholder = {
+    en: "Search",
+    tr: "Ara"
+};
+
+TRANSLATIONS.story = {
+    en: "Story",
+    tr: "Hikaye"
+};
+
+TRANSLATIONS.lastUpdate = {
+    en: "Last Update",
+    tr: "Son Güncelleme"
+};
+
+
+document.render = render;
 document.addEventListener("DOMContentLoaded", init);

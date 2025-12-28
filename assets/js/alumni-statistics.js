@@ -46,11 +46,9 @@ function render() {
     Chart.helpers.each(Chart.instances, c => c.destroy());
 
     const lang = localStorage.getItem("lang") || "en";
-    const t = TRANSLATIONS[lang];
-
     const keys = Object.keys(ALUMNI_STATISTICS);
-    const labels = keys.map(k => t.chartLabels[k] ?? k);
     const values = Object.values(ALUMNI_STATISTICS);
+    const labels = keys.map(key => TRANSLATIONS.chartLabels[key][lang] ?? key);
 
     // theme-ish colors (brand #2d2a62 + soft companions)
     const palette = [
@@ -73,7 +71,7 @@ function render() {
             data: {
                 labels,
                 datasets: [{
-                    label: t.chartPercentage,
+                    label: TRANSLATIONS.chartPercentage[lang] || "Percentage",
                     data: values,
                     borderRadius: 10,
                     barThickness: 14,
@@ -173,42 +171,79 @@ function render() {
     }
 }
 
-TRANSLATIONS.en.headerAlumniStatistics = "Alumni Statistics";
-TRANSLATIONS.en.paragraphAlumniStatistics = "Information about alumni of the Department of Mathematics.";
-TRANSLATIONS.en.headerCareerPathsBar = "Career Paths After Graduation (Bar)";
-TRANSLATIONS.en.subCareerPathsBar = "Distribution by sector (%)";
-TRANSLATIONS.en.headerCareerPathsPie = "Career Paths After Graduation";
-TRANSLATIONS.en.subCareerPathsPie = "Distribution by sector (%)";
-TRANSLATIONS.en.chartPercentage = "Percentage";
-TRANSLATIONS.en.chartLabels = {
-    academia: "Academia",
-    financeAndBanking: "Finance and Banking",
-    it: "IT",
-    education: "Education",
-    publicSector: "Public Sector",
-    researchInstitute: "Research Institute",
-    telecommunications: "Telecommunications",
-    defenseIndustry: "Defense Industry",
-    other: "Other"
+
+TRANSLATIONS.headerAlumniStatistics = {
+    en: "Alumni Statistics",
+    tr: "Mezun İstatistikleri"
 };
 
-TRANSLATIONS.tr.headerAlumniStatistics = "Mezun İstatistikleri";
-TRANSLATIONS.tr.paragraphAlumniStatistics = "Matematik Bölümü mezunları hakkında bilgiler.";
-TRANSLATIONS.tr.headerCareerPathsBar = "Mezuniyet Sonrası Kariyer Yolları (Çubuk Grafik)";
-TRANSLATIONS.tr.subCareerPathsBar = "Sektöre göre dağılım (%)";
-TRANSLATIONS.tr.headerCareerPathsPie = "Mezuniyet Sonrası Kariyer Yolları";
-TRANSLATIONS.tr.subCareerPathsPie = "Sektöre göre dağılım (%)";
-TRANSLATIONS.tr.chartPercentage = "Yüzde";
-TRANSLATIONS.tr.chartLabels = {
-    academia: "Akademi",
-    financeAndBanking: "Bankacılık ve Finans",
-    it: "Bilişim Teknolojileri",
-    education: "Eğitim",
-    publicSector: "Kamu Sektörü",
-    researchInstitute: "Araştırma Enstitüsü",
-    telecommunications: "Telekomünikasyon",
-    defenseIndustry: "Savunma Sanayii",
-    other: "Diğer"
+TRANSLATIONS.paragraphAlumniStatistics = {
+    en: "Information about alumni of the Department of Mathematics.",
+    tr: "Matematik Bölümü mezunları hakkında bilgiler."
+};
+
+TRANSLATIONS.headerCareerPathsBar = {
+    en: "Career Paths After Graduation (Bar)",
+    tr: "Mezuniyet Sonrası Kariyer Yolları (Çubuk Grafik)"
+};
+
+TRANSLATIONS.subCareerPathsBar = {
+    en: "Distribution by sector (%)",
+    tr: "Sektöre göre dağılım (%)"
+};
+
+TRANSLATIONS.headerCareerPathsPie = {
+    en: "Career Paths After Graduation",
+    tr: "Mezuniyet Sonrası Kariyer Yolları"
+};
+
+TRANSLATIONS.subCareerPathsPie = {
+    en: "Distribution by sector (%)",
+    tr: "Sektöre göre dağılım (%)"
+};
+
+TRANSLATIONS.chartPercentage = {
+    en: "Percentage",
+    tr: "Yüzde"
+};
+
+TRANSLATIONS.chartLabels = {
+    academia: {
+        en: "Academia",
+        tr: "Akademi"
+    },
+    financeAndBanking: {
+        en: "Finance and Banking",
+        tr: "Bankacılık ve Finans"
+    },
+    it: {
+        en: "IT",
+        tr: "Bilişim Teknolojileri"
+    },
+    education: {
+        en: "Education",
+        tr: "Eğitim"
+    },
+    publicSector: {
+        en: "Public Sector",
+        tr: "Kamu Sektörü"
+    },
+    researchInstitute: {
+        en: "Research Institute",
+        tr: "Araştırma Enstitüsü"
+    },
+    telecommunications: {
+        en: "Telecommunications",
+        tr: "Telekomünikasyon"
+    },
+    defenseIndustry: {
+        en: "Defense Industry",
+        tr: "Savunma Sanayii"
+    },
+    other: {
+        en: "Other",
+        tr: "Diğer"
+    }
 };
 
 

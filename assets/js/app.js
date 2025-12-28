@@ -104,16 +104,15 @@ function setupLanguageToggle() {
 }
 
 function applyTranslations(lang) {
-    const dict = TRANSLATIONS[lang];
-
     document.querySelectorAll("[data-lang]").forEach(el => {
         el.hidden = (el.dataset.lang !== lang);
     });
 
     document.querySelectorAll("[data-i18n]").forEach(el => {
         const key = el.getAttribute("data-i18n");
-        if (dict[key]) {
-            el.textContent = dict[key];
+        const translation = TRANSLATIONS[key];
+        if (translation) {
+            el.textContent = translation[lang] || translation["en"] || "Translation missing";
         }
     });
 

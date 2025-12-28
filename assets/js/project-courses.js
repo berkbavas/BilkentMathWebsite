@@ -37,16 +37,32 @@ document.addEventListener('DOMContentLoaded', render);
 
 
 // Add translations specific to Project Courses page
-TRANSLATIONS.en.headerTitle = "Project Courses";
-TRANSLATIONS.en.headerDescription = "Project-based courses offered by the Department of Mathematics, including senior projects and summer projects.";
-TRANSLATIONS.en.textViewCourseInformation = "View course information";
-TRANSLATIONS.en.textViewCourseGuide = "Course guide";
-TRANSLATIONS.en.textProjectDetails = "Project details";
-TRANSLATIONS.en.textProjectArchive = "Project Archive";
+TRANSLATIONS.headerTitle = {
+    en: "Project Courses",
+    tr: "Proje Dersleri"
+};
 
-TRANSLATIONS.tr.headerTitle = "Proje Dersleri";
-TRANSLATIONS.tr.headerDescription = "Matematik Bölümü tarafından sunulan proje tabanlı dersler, mezuniyet projeleri ve yaz projeleri.";
-TRANSLATIONS.tr.textViewCourseInformation = "Ders bilgilerini görüntüle";
-TRANSLATIONS.tr.textViewCourseGuide = "Ders bilgilerini görüntüle";
-TRANSLATIONS.tr.textProjectDetails = "Ders bilgilerini görüntüle";
-TRANSLATIONS.tr.textProjectArchive = "Arşiv";
+TRANSLATIONS.headerDescription = {
+    en: "Project-based courses offered by the Department of Mathematics, including senior projects and summer projects.",
+    tr: "Matematik Bölümü tarafından sunulan proje tabanlı dersler, mezuniyet projeleri ve yaz projeleri."
+};
+
+TRANSLATIONS.textViewCourseInformation = {
+    en: "View course information",
+    tr: "Ders bilgilerini görüntüle"
+};
+
+TRANSLATIONS.textViewCourseGuide = {
+    en: "Course guide",
+    tr: "Ders rehberi"
+};
+
+TRANSLATIONS.textProjectDetails = {
+    en: "Project details",
+    tr: "Proje detayları"
+};
+
+TRANSLATIONS.textProjectArchive = {
+    en: "Project Archive",
+    tr: "Arşiv"
+};

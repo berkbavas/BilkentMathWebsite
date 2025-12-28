@@ -61,12 +61,10 @@ function renderCard(seminar) {
   `;
 }
 
-
 function renderCards(list) {
     const cards = $("#cards");
     cards.innerHTML = list.map(renderCard).join("");
 }
-
 
 function apply() {
     const search = $("#search").value.trim();
@@ -93,30 +91,52 @@ function resetFilters() {
 
 function render() {
     let lang = localStorage.getItem("lang") || "en";
-    $("#search").placeholder = TRANSLATIONS[lang].searchPlaceholder || "Search";
+    $("#search").placeholder = TRANSLATIONS.searchPlaceholder[lang] || "Search";
     $("#search").addEventListener("input", apply);
     $("#reset").addEventListener("click", resetFilters);
 
     apply();
 }
 
-TRANSLATIONS.en.titleSeminars = "2025-26 Academic Year Seminars";
-TRANSLATIONS.en.textDescription = "Department seminars held during the 2025-26 academic year. ";
-TRANSLATIONS.en.tableHeaderTitleSpeaker = "Title / Speaker";
-TRANSLATIONS.en.tableHeaderDate = "Date";
-TRANSLATIONS.en.tableHeaderTime = "Time";
-TRANSLATIONS.en.tableHeaderPlace = "Place";
-TRANSLATIONS.en.buttonReset = "Reset";
-TRANSLATIONS.en.searchPlaceholder = "Search";
+TRANSLATIONS.titleSeminars = {
+    en: "2025-26 Academic Year Seminars",
+    tr: "2025-26 Akademik Yılı Seminerleri"
+};
 
-TRANSLATIONS.tr.titleSeminars = "2025-26 Akademik Yılı Seminerleri";
-TRANSLATIONS.tr.textDescription = "2025-26 akademik yılı boyunca düzenlenen bölüm seminerleri.";
-TRANSLATIONS.tr.tableHeaderTitleSpeaker = "Başlık / Konuşmacı";
-TRANSLATIONS.tr.tableHeaderDate = "Tarih";
-TRANSLATIONS.tr.tableHeaderTime = "Saat";
-TRANSLATIONS.tr.tableHeaderPlace = "Yer";
-TRANSLATIONS.tr.buttonReset = "Sıfırla";
-TRANSLATIONS.tr.searchPlaceholder = "Ara";
+TRANSLATIONS.textDescription = {
+    en: "Department seminars held during the 2025-26 academic year.",
+    tr: "2025-26 akademik yılı boyunca düzenlenen bölüm seminerleri."
+};
+
+TRANSLATIONS.tableHeaderTitleSpeaker = {
+    en: "Title / Speaker",
+    tr: "Başlık / Konuşmacı"
+};
+
+TRANSLATIONS.tableHeaderDate = {
+    en: "Date",
+    tr: "Tarih"
+};
+
+TRANSLATIONS.tableHeaderTime = {
+    en: "Time",
+    tr: "Saat"
+};
+
+TRANSLATIONS.tableHeaderPlace = {
+    en: "Place",
+    tr: "Yer"
+};
+
+TRANSLATIONS.buttonReset = {
+    en: "Reset",
+    tr: "Sıfırla"
+};
+
+TRANSLATIONS.searchPlaceholder = {
+    en: "Search",
+    tr: "Ara"
+};
 
 document.render = render;
 document.addEventListener("DOMContentLoaded", render);
