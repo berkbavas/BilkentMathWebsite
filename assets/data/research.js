@@ -14,13 +14,12 @@ export const RESEARCH_DATA = [
         },
 
         faculty: [
-            { name: "Laurence J. Barker", url: "https://math.bilkent.edu.tr/barker.html" },
-            { name: "Ahmet Güloğlu", url: "https://math.bilkent.edu.tr/guloglu.html" },
-            { name: "Tomos Parry", url: "https://math.bilkent.edu.tr/parry.html" },
-            { name: "Müfit Sezer", url: "https://math.bilkent.edu.tr/sezer.html" },
-            { name: "Özgün Ünlü", url: "https://math.bilkent.edu.tr/unlu.html" },
-            { name: "Hamza Yeşilyurt", url: "https://math.bilkent.edu.tr/yesilyurt.html" },
-            { name: "Deniz Yılmaz", url: "https://web4.bilkent.edu.tr/deniz/" }
+            { name: "Laurence J. Barker", url: "http://www.fen.bilkent.edu.tr/~barker/fenis2.html" },
+            { name: "Ahmet Güloğlu", url: "http://www.fen.bilkent.edu.tr/~guloglua/" },
+            { name: "Müfit Sezer", url: "http://www.fen.bilkent.edu.tr/~sezer/" },
+            { name: "Özgün Ünlü", url: "http://www.fen.bilkent.edu.tr/~unluo/" },
+            { name: "Hamza Yeşilyurt", url: "http://www.fen.bilkent.edu.tr/~hamza/" },
+            { name: "Deniz Yılmaz", url: "https://yilmazdeniz.bilkent.edu.tr/" }
         ]
     },
     {
@@ -36,13 +35,13 @@ export const RESEARCH_DATA = [
             tr: "Fonksiyonel analiz, operatör kuramı, operatör cebirleri, matris ve sayısal analiz, kuantum operasyonları. Potansiyel kuramı, ortogonal polinomlar, yaklaşım kuramı. Birkaç değişkenli holomorf ve harmonik fonksiyon uzaylarında karmaşık analiz ve operatör kuramı. Tüm düzlemde analitik fonksiyonlar kuramı, Polya frekans dizileri. Wiener uzayı üzerinde analiz, Malliavin hesabı ve uygulamaları, Monge–Kantoroviç ölçü taşınımı ve Wiener uzayında Monge–Ampère denklemi. Diferansiyel operatörler ve diferansiyel denklemler. Dinamik sistemler, kısmi diferansiyel denklemler ve gecikmeli diferansiyel denklemler.",
         },
         faculty: [
-            { name: "Fatihcan Atay", url: "https://math.bilkent.edu.tr/atay.html" },
-            { name: "Alexander Goncharov", url: "https://math.bilkent.edu.tr/goncharov.html" },
-            { name: "H. Turgay Kaptanoğlu", url: "https://math.bilkent.edu.tr/kaptanoglu.html" },
+            { name: "Fatihcan Atay", url: "https://fatihcanatay.wordpress.com/" },
+            { name: "Alexander Goncharov", url: "http://www.fen.bilkent.edu.tr/~goncha/" },
+            { name: "H. Turgay Kaptanoğlu", url: "http://www.fen.bilkent.edu.tr/~kaptan/" },
             { name: "Konstantinos Maronikolakis", url: "https://conmaro.github.io/" },
             { name: "Türker Özsarı", url: "http://www.turkerozsari.com/" },
-            { name: "Gökhan Yıldırım", url: "https://math.bilkent.edu.tr/yildirim.html" },
-            { name: "Natalya Zheltukhina", url: "https://math.bilkent.edu.tr/zheltukhina.html" }
+            { name: "Gökhan Yıldırım", url: "https://orcid.org/0000-0003-4399-7843" },
+            { name: "Natalya Zheltukhina", url: "http://www.fen.bilkent.edu.tr/~natalya/" }
         ]
     },
     {
@@ -60,12 +59,12 @@ export const RESEARCH_DATA = [
         faculty: [
             { name: "Cihan Bahran", url: "https://www.cihanbahran.org/" },
             { name: "Kadri İlker Berktav", url: "https://sites.google.com/view/kadriilkerberktav/home" },
-            { name: "Alexander Degtyarev", url: "https://math.bilkent.edu.tr/degtyarev.html" },
+            { name: "Alexander Degtyarev", url: "http://www.fen.bilkent.edu.tr/~degt/" },
             { name: "Cihan Okay", url: "http://cihan.okay.bilkent.edu.tr/" },
-            { name: "Ali Sinan Sertöz", url: "https://math.bilkent.edu.tr/sertoz.html" },
-            { name: "Bülent Ünal", url: "https://math.bilkent.edu.tr/unal.html" },
-            { name: "Özgün Ünlü", url: "https://math.bilkent.edu.tr/unlu.html" },
-            { name: "Ergün Yalçın", url: "https://math.bilkent.edu.tr/yalcin.html" }
+            { name: "Ali Sinan Sertöz", url: "https://sertoz.bilkent.edu.tr/" },
+            { name: "Bülent Ünal", url: "http://www.fen.bilkent.edu.tr/~bulent/" },
+            { name: "Özgün Ünlü", url: "http://www.fen.bilkent.edu.tr/~unluo/" },
+            { name: "Ergün Yalçın", url: "http://www.fen.bilkent.edu.tr/~yalcine/" }
         ]
     },
     {
@@ -81,12 +80,12 @@ export const RESEARCH_DATA = [
             tr: "Genel görelilik kuramı, matematiksel fizik; doğrusal olmayan kısmi diferansiyel denklemlerin integrabilitesi, yüksek boyutlu klasik alan kuramları, sicimler ve klasik kütleçekim kuramı. İstatistiksel fiziğin matematiksel kuramı, olasılık kuramı, finans matematiği, veri bilimi. Dinamik sistemler. Karmaşık sistemler ve ağ analizi. Sistemler ve kontrol kuramı. Matematiksel biyoloji ve sinirbilim.",
         },
         faculty: [
-            { name: "Fatihcan Atay", url: "https://math.bilkent.edu.tr/atay.html" },
-            { name: "Metin Gürses", url: "https://math.bilkent.edu.tr/gurses.html" },
-            { name: "Yaghoub Heydarzade", url: "https://math.bilkent.edu.tr/heydarzade.html" },
-            { name: "Azer Kerimov", url: "https://math.bilkent.edu.tr/kerimov.html" },
+            { name: "Fatihcan Atay", url: "https://fatihcanatay.wordpress.com/" },
+            { name: "Metin Gürses", url: "http://www.fen.bilkent.edu.tr/~gurses/" },
+            { name: "Yaghoub Heydarzade", url: "#" },
+            { name: "Azer Kerimov", url: "http://www.fen.bilkent.edu.tr/~kerimov/fenis2.html" },
             { name: "Naci Saldı", url: "https://web4.bilkent.edu.tr/saldi/" },
-            { name: "Gökhan Yıldırım", url: "https://math.bilkent.edu.tr/yildirim.html" }
+            { name: "Gökhan Yıldırım", url: "https://orcid.org/0000-0003-4399-7843" }
         ]
     }
 ];
