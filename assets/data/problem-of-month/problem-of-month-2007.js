@@ -16,7 +16,7 @@ export const PROBLEM_OF_MONTH_2007 = [
             { name: "Stefan Gatachiu", affiliation: "Romania" },
             { name: "Kerry Soileau", affiliation: "NASA, Houston, USA" },
             { name: "Bekjan Djumabaev", affiliation: "METU" },
-            { name: "Erdoğan NakÄ±ÅŸlÄ±", affiliation: "Ozel Rahime Batu Lisesi, Malatya" },
+            { name: "Erdoğan NakıÅŸlı", affiliation: "Ozel Rahime Batu Lisesi, Malatya" },
             { name: "Ovidiu Furdui", affiliation: "Western Michigan University, USA" },
             { name: "Ahmet Atilla", affiliation: "Ozel Rahime Batu Lisesi, Malatya" },
             { name: "Murat Apaydin", affiliation: "Bilkent University, Ankara" },

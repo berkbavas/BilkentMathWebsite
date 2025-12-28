@@ -25,7 +25,7 @@ export const PROBLEM_OF_MONTH_2006 = [
         solvers: [
             { name: "Miroslava Sotakova", affiliation: "Aarhus University, Denmark" },
             { name: "Tomas Jurik", affiliation: "Comenius University" },
-            { name: "Burak Kaya", affiliation: "Ankara AtatÃ¼rk Anadolu Lisesi" },
+            { name: "Burak Kaya", affiliation: "Ankara Atatük Anadolu Lisesi" },
             { name: "Konstantinos Drakakis", affiliation: "University of Edinburg, UK" },
             { name: "Jan van Delden", affiliation: "Zuidhorn, The Netherlands" },
             { name: "Michel Bataille", affiliation: "Rouen, France" },
@@ -34,7 +34,7 @@ export const PROBLEM_OF_MONTH_2006 = [
             { name: "Osman Berat Okutan", affiliation: "Bilkent University" },
             { name: "Metehan Ozsoy", affiliation: "Ozel Samanyolu Fen Lisesi" },
             { name: "Nitin Aggarwal", affiliation: "Shalimar Bagh, Delhi, India" },
-            { name: "Ekrem Emre", affiliation: "DumlupÄ±nar University / KÃ¼tahya" }
+            { name: "Ekrem Emre", affiliation: "Dumlupınar University / KÃ¼tahya" }
         ]
     },
 
@@ -49,15 +49,15 @@ export const PROBLEM_OF_MONTH_2006 = [
             { name: "Tomas Jurik", affiliation: "Comenius University, Slovakia" },
             { name: "Ali Ä°lik", affiliation: "Uludag University" },
             { name: "Zhang Hanxiong", affiliation: "Tsinghua University, China" },
-            { name: "Fatih GÃ¼rses", affiliation: "Gebze Institute of Technology" },
-            { name: "Samil AkÃ§agil", affiliation: "BalÄ±kesir University" },
+            { name: "Fatih Güses", affiliation: "Gebze Institute of Technology" },
+            { name: "Samil AkÃ§agil", affiliation: "Balıkesir University" },
             { name: "Fuad Hamidli", affiliation: "METU" },
             { name: "Michel Bataille", affiliation: "Rouen, France" },
             { name: "Osman Berat Okutan", affiliation: "Bilkent University" },
             { name: "Nitin Aggarwal", affiliation: "Shalimar Bagh, Delhi, India" },
             { name: "Ahmet Gur", affiliation: "Istanbul University" },
-            { name: "Ekrem Emre", affiliation: "DumlupÄ±nar University/ KÃ¼tahya" },
-            { name: "Mehmet HafizoÄŸlu", affiliation: "Istanbul University" },
+            { name: "Ekrem Emre", affiliation: "Dumlupınar University/ KÃ¼tahya" },
+            { name: "Mehmet Hafizoğlu", affiliation: "Istanbul University" },
             { name: "Haluk Elis", affiliation: "Turkish Army, Osmaniye" }
         ]
     },
@@ -75,19 +75,19 @@ export const PROBLEM_OF_MONTH_2006 = [
             { name: "Hu Yong", affiliation: "Tsinghua University, China" },
             { name: "Nitin Aggarwal", affiliation: "Shalimar Bagh, Delhi, India" },
             { name: "Tomas Jurik", affiliation: "Comenius University, Slovakia" },
-            { name: "Samil Akçagil", affiliation: "BalÄ±kesir University" },
-            { name: "Nesim YiÄŸit", affiliation: "Bilkent University" },
+            { name: "Samil Akçagil", affiliation: "Balıkesir University" },
+            { name: "Nesim Yiğit", affiliation: "Bilkent University" },
             { name: "Gautham Dasarathy", affiliation: "VIT, Tmail nadu, India" },
             { name: "Batuhan KaragÃ¶z", affiliation: "Ankara Fen Lisesi" },
             { name: "Nawal Kishor Mishor", affiliation: "IIS, Bangalore, India" },
-            { name: "FÄ±rat Solgun", affiliation: "METU" },
+            { name: "Fırat Solgun", affiliation: "METU" },
             { name: "Ekrem Emre", affiliation: "Dumlupinar University" },
             { name: "Yunus Karabulut", affiliation: "Bogazici University" },
             { name: "Murgan Veera", affiliation: "ITT, Madras India" },
-            { name: "Metehan Ã–zsoy", affiliation: "Ã–zel Samanyolu Lisesi, Ankara" },
+            { name: "Metehan Özsoy", affiliation: "Özel Samanyolu Lisesi, Ankara" },
             { name: "Ali Keskin", affiliation: "METU" },
             { name: "Aleksander Ilic", affiliation: "Nis University, Serbia and Montenegro" },
-            { name: "Fatih GÃ¼rses", affiliation: "Gebze Institute of Technology" }
+            { name: "Fatih Güses", affiliation: "Gebze Institute of Technology" }
         ]
     },
 
@@ -113,9 +113,9 @@ export const PROBLEM_OF_MONTH_2006 = [
             { name: "Haluk Elis", affiliation: "Naval Postgraduate School, California, USA" },
             { name: "Ibrahim Ebeler", affiliation: "Bilkent University" },
             { name: "Mustafa Mizrak", affiliation: "Nevzat Ayaz Anadolu Lisesi, Diyarbakir" },
-            { name: "Murat ApaydÄ±n", affiliation: "Bilkent University" },
+            { name: "Murat Apaydın", affiliation: "Bilkent University" },
             { name: "Ali Keskin", affiliation: "METU" },
-            { name: "NazÄ±m Keven", affiliation: "Bilkent University" },
+            { name: "Nazım Keven", affiliation: "Bilkent University" },
             { name: "Firat Solgun", affiliation: "METU" },
             { name: "Sedat Arda Erdem", affiliation: "Bilkent University" },
             { name: "Oztekin Bakir", affiliation: "METU" },
