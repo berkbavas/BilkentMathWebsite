@@ -196,7 +196,7 @@ Each data file exports structured objects that are consumed by the corresponding
 }
 ```
 
-## 📄 License
+## License
 
 This website is maintained by the Department of Mathematics at Bilkent University. All rights reserved.
 
