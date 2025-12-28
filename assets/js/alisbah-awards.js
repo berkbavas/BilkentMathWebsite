@@ -10,18 +10,23 @@ function renderRecipients(recipients) {
 }
 
 function renderRow(item, labels) {
+    const photosCell = item.photos
+        ? `
+      <td data-label="${labels.photos}">
+        <a class="oa-btn" href="${item.photos}" target="_blank" rel="noopener">
+          <i class="fa-regular fa-image" aria-hidden="true"></i>
+          <span data-i18n="tableView">${labels.view}</span>
+        </a>
+      </td>`
+        : `<td data-label="${labels.photos}">-</td>`;
+
     return `
     <tr class="oa-row">
       <td class="oa-year-cell" data-label="${labels.year}">${item.year}</td>
       <td data-label="${labels.recipients}">
         ${renderRecipients(item.recipients)}
       </td>
-      ${item.photos ? `<td data-label="${labels.photos}">
-        <a class="oa-btn" href="${item.photos}" target="_blank" rel="noopener">
-          <i class="fa-regular fa-image" aria-hidden="true"></i>
-          <span data-i18n="tableView">${labels.view}</span>
-        </a>
-      </td>` : ` <td>-</td>`}
+      ${photosCell}
     </tr>
   `;
 }
@@ -32,32 +37,19 @@ function render() {
         year: TRANSLATIONS.tableYear[lang],
         recipients: TRANSLATIONS.tableRecipients[lang],
         photos: TRANSLATIONS.tablePhotos[lang],
-        view: TRANSLATIONS.tableView[lang]
+        view: TRANSLATIONS.tableView[lang],
     };
+
     const elTableMount = document.getElementById("tableMount");
+    if (!elTableMount) return;
+
     elTableMount.innerHTML = ALISBAH_AWARDS.map(item => renderRow(item, labels)).join("");
 }
 
-TRANSLATIONS.tableYear = {
-    en: "Year",
-    tr: "Yıl"
-};
-
-TRANSLATIONS.tableRecipients = {
-    en: "Recipients",
-    tr: "Ödül Sahipleri"
-};
-
-TRANSLATIONS.tablePhotos = {
-    en: "Photos",
-    tr: "Fotoğraflar"
-};
-
-TRANSLATIONS.tableView = {
-    en: "View",
-    tr: "Görüntüle"
-};
-
+TRANSLATIONS.tableYear = { en: "Year", tr: "Yıl" };
+TRANSLATIONS.tableRecipients = { en: "Recipients", tr: "Ödül Sahipleri" };
+TRANSLATIONS.tablePhotos = { en: "Photos", tr: "Fotoğraflar" };
+TRANSLATIONS.tableView = { en: "View", tr: "Görüntüle" };
 
 document.render = render;
 document.addEventListener("DOMContentLoaded", render);

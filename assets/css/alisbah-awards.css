@@ -1,10 +1,262 @@
 /* =========================
-   Orhan Alisbah Awards – Modern
+   Orhan Alisbah Awards – Redesign
    ========================= */
+
+/* Page layout */
+.oa-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 320px;
+    gap: 22px;
+    align-items: start;
+    margin-top: 18px;
+}
+
+@media (max-width: 980px) {
+    .oa-layout {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Hero */
+.oa-hero {
+    padding: 2.4rem 0 1.2rem;
+    border-bottom: 1px solid var(--border);
+}
+
+.oa-hero-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 10px;
+}
+
+.oa-hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 12px;
+    border-radius: 999px;
+    border: 1px solid rgba(45, 42, 98, .14);
+    background: rgba(45, 42, 98, .06);
+    color: rgba(17, 17, 17, .86);
+}
+
+.oa-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 999px;
+    background: var(--primary);
+    box-shadow: 0 0 0 4px rgba(45, 42, 98, .14);
+}
+
+.oa-hero-lead {
+    margin-top: 12px;
+    max-width: 860px;
+    font-size: 1.08rem;
+    color: var(--muted);
+    line-height: 1.75;
+}
+
+.oa-hero-actions {
+    display: flex;
+    gap: 12px;
+    margin-top: 18px;
+    flex-wrap: wrap;
+}
+
+.oa-hero-actions .btn, .oa-hero-actions .btn-black {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.oa-facts {
+    margin-top: 18px;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 12px;
+    max-width: 860px;
+}
+
+.oa-fact {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    padding: 14px 14px;
+    box-shadow: 0 10px 26px rgba(0, 0, 0, .06);
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+
+.oa-fact-k {
+    width: 44px;
+    height: 44px;
+    border-radius: 14px;
+    background: rgba(45, 42, 98, .08);
+    border: 1px solid rgba(45, 42, 98, .14);
+    display: grid;
+    place-items: center;
+    font-weight: 900;
+    color: var(--primary);
+    flex: 0 0 auto;
+}
+
+.oa-fact-k i {
+    color: var(--primary);
+}
+
+.oa-fact-v {
+    font-weight: 900;
+    letter-spacing: -0.2px;
+}
+
+@media (max-width: 760px) {
+    .oa-hero-title {
+        font-size: 1.8rem;
+    }
+
+    .oa-facts {
+        grid-template-columns: 1fr;
+    }
+
+    .oa-hero-actions {
+        flex-direction: column;
+        align-items: stretch;
+    }
+}
+
+/* Sections */
+.oa-section {
+    margin-top: 32px;
+    padding: 10px 0 0;
+}
+
+.oa-section-head h2 {
+    margin-bottom: 6px;
+}
+
+.oa-section-head p {
+    margin-bottom: 0;
+}
+
+/* Sidebar */
+.oa-side {
+    position: sticky;
+    top: 96px;
+    display: grid;
+    gap: 14px;
+}
+
+@media (max-width: 980px) {
+    .oa-side {
+        position: static;
+    }
+}
+
+.oa-side-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    padding: 16px;
+    box-shadow: 0 10px 26px rgba(0, 0, 0, .06);
+}
+
+.oa-side-title {
+    font-weight: 900;
+    letter-spacing: -0.2px;
+    margin-bottom: 10px;
+}
+
+.oa-side-links {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.oa-side-links a {
+    border-bottom: 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 12px;
+    border-radius: 14px;
+    background: rgba(0, 0, 0, .03);
+    border: 1px solid rgba(0, 0, 0, .06);
+    font-weight: 900;
+    transition: transform .14s ease, background .18s ease;
+}
+
+.oa-side-links a:hover {
+    transform: translateY(-1px);
+    background: rgba(45, 42, 98, .06);
+    border-color: rgba(45, 42, 98, .14);
+}
+
+/* CTA strip */
+.oa-cta-strip {
+    margin-top: 16px;
+    background: linear-gradient(180deg, rgba(45, 42, 98, .08), rgba(45, 42, 98, .03));
+    border: 1px solid rgba(45, 42, 98, .16);
+    border-radius: 20px;
+    padding: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 14px;
+}
+
+.oa-cta-title {
+    font-weight: 900;
+    letter-spacing: -0.2px;
+}
+
+.oa-cta-actions .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    border-bottom: 0;
+}
+
+/* Portrait card */
+.oa-portrait-card {
+    display: grid;
+    gap: 12px;
+    align-content: start;
+}
+
+.oa-portrait {
+    width: 100%;
+    min-height: 180px;
+    border-radius: 18px;
+    background: radial-gradient(1200px 250px at 10% 0%, rgba(45, 42, 98, .18), rgba(45, 42, 98, .05)),
+        linear-gradient(180deg, rgba(255, 255, 255, .9), rgba(255, 255, 255, .75));
+    border: 1px solid rgba(45, 42, 98, .14);
+    display: grid;
+    place-items: center;
+    color: var(--primary);
+}
+
+.oa-portrait span {
+    font-size: 42px;
+    font-weight: 900;
+    letter-spacing: -0.04em;
+}
+
+.oa-portrait-caption {
+    margin: 0 !important;
+    color: rgba(17, 17, 17, .82);
+    line-height: 1.7;
+}
+
+/* =========================================================
+   Table styles (kept; slightly adjusted)
+   ========================================================= */
 
 /* Table wrapper = card */
 .oa-table-wrap {
-    margin-top: 18px;
+    margin-top: 14px;
     background: var(--surface);
     border: 1px solid var(--border);
     border-radius: 20px;
@@ -68,15 +320,15 @@
     background: rgba(45, 42, 98, .06);
     border: 1px solid rgba(45, 42, 98, .14);
     color: rgba(17, 17, 17, .84);
-    font-weight: 800;
-    font-size: 1rem;
+    font-weight: 900;
+    font-size: .98rem;
 }
 
 /* View button */
 .oa-btn {
-    display: inline-block;
+    display: inline-flex;
     align-items: center;
-    text-align: center;
+    justify-content: center;
     gap: 10px;
     padding: 10px 12px;
     border-radius: 14px;
@@ -86,6 +338,7 @@
     font-weight: 900;
     text-decoration: none;
     transition: transform .12s ease, background .18s ease, box-shadow .18s ease;
+    border-bottom: 0;
 }
 
 .oa-btn:hover {
@@ -99,7 +352,7 @@
     display: grid;
     grid-template-columns: 3fr 2fr;
     gap: 16px;
-    margin-top: 26px;
+    margin-top: 16px;
 }
 
 .two-column-grid .card {
@@ -116,13 +369,6 @@
     font-size: 1.1rem;
     font-weight: 900;
     letter-spacing: -0.2px;
-}
-
-.two-column-grid .card img {
-    width: 100%;
-    height: auto;
-    display: block;
-    margin-top: 12px;
 }
 
 .two-column-grid .card p {
@@ -169,7 +415,7 @@
         letter-spacing: .02em;
         padding-top: 2px;
     }
-    
+
     .oa-names {
         gap: 6px;
     }

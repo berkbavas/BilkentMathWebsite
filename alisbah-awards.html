@@ -5,13 +5,16 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title data-i18n="title">Bilkent University • Department of Mathematics</title>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
     <link rel="stylesheet" href="assets/css/common.css">
     <link rel="stylesheet" href="assets/css/navigation.css">
     <link rel="stylesheet" href="assets/css/alisbah-awards.css">
+
     <script type="module" src="assets/js/alisbah-awards.js"></script>
     <script type="module" src="assets/js/app.js"></script>
 </head>
@@ -20,47 +23,94 @@
     <header id="navigation" class="navigation"><!-- JavaScript will inject content here --></header>
 
     <main class="container">
-        <header class="header">
+        <!-- HERO -->
+        <section class="oa-hero">
+            <div class="oa-hero-top">
+                <div class="oa-hero-badge">
+                    <span class="oa-dot" aria-hidden="true"></span>
+                    <span data-lang="en">Scholarship & Recognition</span>
+                    <span data-lang="tr">Burs & Takdir</span>
+                </div>
+            </div>
 
             <h1 data-lang="en">Orhan Alisbah Awards</h1>
             <h1 data-lang="tr">Orhan Alisbah Ödülleri</h1>
 
-            <p class="page-lead" data-lang="en">Orhan Alisbah Mathematics Awards are conferred in memory
-                of <strong><a href="#orhan-alisbah">Orhan Alisbah (1910--1989)</a></strong>, one of the earliest and best-known
-                mathematicians of the Republic of Turkey. Initiated
-                in 1998 by <strong><a href="#">Bilsel Alisbah</a></strong>,
-                son of Orhan Alisbah, and later continued by the generous contributions
-                of the Alisbah Family, the award provides financial
-                support each year to the most successful
-                graduate student and the most successful undergraduate
-                student of the Mathematics Department. This
-                fellowship ensures that the memory of Orhan Alisbah
-                lives on, continuing to serve as an exemplary
-                role model for young mathematicians.
+            <p class="oa-hero-lead" data-lang="en">
+                Orhan Alisbah Mathematics Awards are conferred in memory of
+                <strong><a href="#orhan-alisbah">Orhan Alisbah (1910–1989)</a></strong>, one of the earliest and best-known
+                mathematicians of the Republic of Turkey. Initiated in 1998 by <strong><a href="#">Bilsel Alisbah</a></strong>,
+                and continued by the generous contributions of the Alisbah Family, the award provides financial support each year
+                to the most successful graduate student and the most successful undergraduate student of the Department of Mathematics.
             </p>
-            <p class="page-lead" data-lang="tr">Orhan Alisbah Ödülleri, Türkiye'nin en iyi bilinen matematikçilerinden
-                biri olan <strong> <a href="#">Prof. Orhan Alisbah (1910--1989)</a></strong> adına verilir.
-                Orhan Alisbah'ın oğlu <strong><a href="#">Bilsel Alisbah</a></strong>, 1998'dan beri her
-                yıl Bilkent Matematik Bölümü'ndeki öğrencilere burs verilmesini sağlamıştır. Bu burs, Prof.
-                Alisbah'ın hatırasının unutulmaması ve genç matematikçiler tarafından örnek olarak alınması
-                amacını taşır. Burs, her yılın en başarılı lisans ve en başarılı lisansüstü öğrencisine maddi
-                destek sağlar.
-            </p>
-        </header>
 
-        <section class="oa-table-wrap" aria-label="Awards table">
-            <table class="oa-table">
-                <thead>
-                    <tr>
-                        <th style="width: 120px;" data-i18n="tableYear">Year</th>
-                        <th data-i18n="tableRecipients">Recipients</th>
-                        <th style="width: 200px;" data-i18n="tablePhotos">Photos</th>
-                    </tr>
-                </thead>
-                <tbody id="tableMount"><!-- JS will render this --></tbody>
-            </table>
+            <p class="oa-hero-lead" data-lang="tr">
+                Orhan Alisbah Ödülleri, Türkiye'nin en iyi bilinen matematikçilerinden biri olan
+                <strong><a href="#orhan-alisbah">Prof. Orhan Alisbah (1910–1989)</a></strong> adına verilir.
+                Prof. Alisbah'ın oğlu <strong><a href="#">Bilsel Alisbah</a></strong>, 1998'dan beri her yıl Bilkent Matematik Bölümü'ndeki
+                öğrencilere burs verilmesini sağlamıştır. Burs, her yılın en başarılı lisans ve en başarılı lisansüstü öğrencisine maddi destek sağlar.
+            </p>
+
+            <div class="oa-hero-actions">
+                <a class="btn-black" href="#awards-table">
+                    <i class="fa-solid fa-table" aria-hidden="true"></i>
+                    <span data-lang="en">View recipients</span>
+                    <span data-lang="tr">Ödül sahipleri</span>
+                </a>
+                <a class="btn" href="#orhan-alisbah">
+                    <i class="fa-solid fa-book-open" aria-hidden="true"></i>
+                    <span data-lang="en">About Orhan Alisbah</span>
+                    <span data-lang="tr">Orhan Alisbah hakkında</span>
+                </a>
+            </div>
         </section>
 
+        <div class="oa-layout">
+            <!-- MAIN -->
+            <div>
+                <!-- TABLE -->
+                <section id="awards-table" class="oa-section">
+                    <div class="oa-section-head">
+                        <h2 data-lang="en">Recipients</h2>
+                        <h2 data-lang="tr">Ödül Sahipleri</h2>
+                        <p class="muted" data-lang="en">Browse award recipients by year.</p>
+                        <p class="muted" data-lang="tr">Yıllara göre ödül sahiplerini görüntüleyin.</p>
+                    </div>
+
+                    <div class="oa-table-wrap" aria-label="Awards table">
+                        <table class="oa-table">
+                            <thead>
+                                <tr>
+                                    <th style="width: 120px;" data-i18n="tableYear">Year</th>
+                                    <th data-i18n="tableRecipients">Recipients</th>
+                                    <th style="width: 200px;" data-i18n="tablePhotos">Photos</th>
+                                </tr>
+                            </thead>
+                            <tbody id="tableMount"><!-- JS will render this --></tbody>
+                        </table>
+                    </div>
+                </section>
+
+                <!-- BIO -->
+                <section id="orhan-alisbah" class="oa-section">
+                    <div class="oa-cta-strip" role="region" aria-label="Call to action">
+                        <div>
+                            <div class="oa-cta-title" data-lang="en">Interested in graduate study?</div>
+                            <div class="oa-cta-title" data-lang="tr">Lisansüstü başvurusu mu düşünüyorsunuz?</div>
+                            <div class="oa-cta-sub muted" data-lang="en">Learn about our programs and application process.</div>
+                            <div class="oa-cta-sub muted" data-lang="tr">Programlarımızı ve başvuru sürecini inceleyin.</div>
+                        </div>
+                        <div class="oa-cta-actions">
+                            <a class="btn" href="graduate-program.html">
+                                <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+                                <span data-lang="en">Graduate Program</span>
+                                <span data-lang="tr">Lisansüstü Program</span>
+                            </a>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
     </main>
 
     <footer id="footer" class="footer"><!-- JavaScript will inject content here --></footer>

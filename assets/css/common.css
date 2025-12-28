@@ -136,9 +136,9 @@ p {
 }
 
 h1 {
-    font-size: 1.65rem;
-    font-weight: 600;
-    letter-spacing: -0.02em;
+    font-size: 2.05rem;
+    font-weight: 700;
+    letter-spacing: -0.03em;
     margin: 0;
 }
 
@@ -313,21 +313,6 @@ ul li {
     font-size: 1rem;
 }
 
-.header h1 {
-    font-size: 1.65rem;
-    font-weight: 600;
-    letter-spacing: -0.02em;
-    margin: 0;
-}
-
-.header h1::after {
-    content: "";
-    display: block;
-    width: 54px;
-    height: 3px;
-    background: var(--primary);
-    border-radius: 999px;
-}
 
 header p {
     margin: 0;
