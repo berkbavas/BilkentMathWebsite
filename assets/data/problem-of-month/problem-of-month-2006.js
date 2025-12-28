@@ -1,4 +1,4 @@
-export const PROBLEM_OF_THE_MONTH_2006 = [
+export const PROBLEM_OF_MONTH_2006 = [
     {
         month: "January",
         year: 2006,
