@@ -74,6 +74,10 @@ a:hover {
     border-bottom-style: solid;
 }
 
+a i {
+    margin-left: 6px;
+}
+
 p {
     padding: 0;
     margin: 0 0 1.25rem;

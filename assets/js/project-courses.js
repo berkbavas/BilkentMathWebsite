@@ -17,11 +17,14 @@ function render() {
         courses.forEach(course => {
             let courseDiv = document.createElement('div');
             courseDiv.className = 'archive-item';
+            let fontAwesomeIcon = document.createElement('i');
+            fontAwesomeIcon.className = 'fa-solid fa-square-arrow-up-right';
             let courseLink = document.createElement('a');
             courseLink.href = course.url;
             courseLink.target = '_blank';
             courseLink.rel = 'noopener noreferrer';
             courseLink.textContent = course.title;
+            courseLink.appendChild(fontAwesomeIcon);
             courseDiv.appendChild(courseLink);
             yearSection.appendChild(courseDiv);
         });
@@ -36,14 +39,14 @@ document.addEventListener('DOMContentLoaded', render);
 // Add translations specific to Project Courses page
 TRANSLATIONS.en.headerTitle = "Project Courses";
 TRANSLATIONS.en.headerDescription = "Project-based courses offered by the Department of Mathematics, including senior projects and summer projects.";
-TRANSLATIONS.en.textViewCourseInformation = "View course information ↗";
-TRANSLATIONS.en.textViewCourseGuide = "Course guide ↗";
-TRANSLATIONS.en.textProjectDetails = "Project details ↗";
+TRANSLATIONS.en.textViewCourseInformation = "View course information";
+TRANSLATIONS.en.textViewCourseGuide = "Course guide";
+TRANSLATIONS.en.textProjectDetails = "Project details";
 TRANSLATIONS.en.textProjectArchive = "Project Archive";
 
 TRANSLATIONS.tr.headerTitle = "Proje Dersleri";
 TRANSLATIONS.tr.headerDescription = "Matematik Bölümü tarafından sunulan proje tabanlı dersler, mezuniyet projeleri ve yaz projeleri.";
-TRANSLATIONS.tr.textViewCourseInformation = "Ders bilgilerini görüntüle ↗";
-TRANSLATIONS.tr.textViewCourseGuide = "Ders bilgilerini görüntüle ↗";
-TRANSLATIONS.tr.textProjectDetails = "Ders bilgilerini görüntüle ↗";
+TRANSLATIONS.tr.textViewCourseInformation = "Ders bilgilerini görüntüle";
+TRANSLATIONS.tr.textViewCourseGuide = "Ders bilgilerini görüntüle";
+TRANSLATIONS.tr.textProjectDetails = "Ders bilgilerini görüntüle";
 TRANSLATIONS.tr.textProjectArchive = "Arşiv";
