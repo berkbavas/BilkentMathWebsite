@@ -1,22 +1,30 @@
 export const ALISBAH_AWARDS = [
-    {
-        year: 2025,
-        recipients: ["John Doe", "Will Smith", "Black Dow"],
-        photos: "foo/bar.html"
-    },
-    {
-        year: 2024,
-        recipients: ["John Doe", "Will Smith", "Black Dow"],
-        photos: "foo/bar.html"
-    },
-    {
-        year: 2023,
-        recipients: ["John Doe", "Will Smith", "Black Dow"],
-        photos: "foo/bar.html"
-    },
-    {
-        year: 2022,
-        recipients: ["John Doe", "Will Smith", "Black Dow"],
-        photos: "foo/bar.html"
-    },
-]
+    { year: 2025, recipients: ["Alice Johnson", "Mehmet Yılmaz", "David Smith"], photos: "photos/2025.html" },
+    { year: 2024, recipients: ["Elif Kaya", "John Doe", "Maria Rossi"], photos: "photos/2024.html" },
+    { year: 2023, recipients: ["Ahmet Demir", "Sophia Brown", "Luca Bianchi"], photos: "photos/2023.html" },
+    { year: 2022, recipients: ["Zeynep Çelik", "Michael Johnson", "Anna Müller"], photos: "photos/2022.html" },
+    { year: 2021, recipients: ["Burak Aydın", "Emily Davis", "Carlos Gómez"], photos: "photos/2021.html" },
+    { year: 2020, recipients: ["Ayşe Şahin", "Daniel Wilson", "Isabelle Martin"], photos: "photos/2020.html" },
+    { year: 2019, recipients: ["Mustafa Koç", "Laura Taylor", "Paolo Conti"], photos: "photos/2019.html" },
+    { year: 2018, recipients: ["Selin Arslan", "Robert Anderson", "Eva Novak"], photos: "photos/2018.html" },
+    { year: 2017, recipients: ["Emre Yıldız", "Jessica Thomas", "Marko Petrović"], photos: "photos/2017.html" },
+    { year: 2016, recipients: ["Derya Özkan", "Andrew Moore", "Sofia Papadopoulos"], photos: "photos/2016.html" },
+    { year: 2015, recipients: ["Can Erdem", "Olivia Harris", "Nikolai Ivanov"], photos: "photos/2015.html" },
+    { year: 2014, recipients: ["Gizem Aksoy", "Benjamin Clark", "Laura Fernández"], photos: "photos/2014.html" },
+    { year: 2013, recipients: ["Hakan Tunç", "Natalie Lewis", "Thomas Weber"], photos: "photos/2013.html" },
+    { year: 2012, recipients: ["İrem Polat", "Christopher Walker", "Chiara Romano"], photos: "photos/2012.html" },
+    { year: 2011, recipients: ["Onur Karaca", "Amanda Hall", "Pierre Dubois"], photos: "photos/2011.html" },
+    { year: 2010, recipients: ["Melis Uçar", "Joshua Allen", "Katarina Horvat"], photos: "photos/2010.html" },
+    { year: 2009, recipients: ["Serkan Güneş", "Rebecca Young", "Miguel Santos"], photos: "photos/2009.html" },
+    { year: 2008, recipients: ["Pelin Doğan", "Matthew King", "Elena Popescu"], photos: "photos/2008.html" },
+    { year: 2007, recipients: ["Volkan Eren", "Stephanie Wright", "András Kovács"], photos: "photos/2007.html" },
+    { year: 2006, recipients: ["Büşra Korkmaz", "Ryan Lopez", "Marina Petrova"], photos: "photos/2006.html" },
+    { year: 2005, recipients: ["Kaan Şimşek", "Lauren Scott", "Giuseppe Rinaldi"], photos: "photos/2005.html" },
+    { year: 2004, recipients: ["Seda Yalçın", "Kevin Green", "Ana Silva"], photos: "photos/2004.html" },
+    { year: 2003, recipients: ["Murat Öztürk", "Hannah Adams", "Jan Kowalski"], photos: "photos/2003.html" },
+    { year: 2002, recipients: ["Ece Ergin", "Brian Baker", "Lucia Moretti"], photos: "photos/2002.html" },
+    { year: 2001, recipients: ["Tolga Keskin", "Victoria Nelson", "Rui Costa"], photos: "photos/2001.html" },
+    { year: 2000, recipients: ["Aslı Bayram", "Steven Carter", "Monika Schneider"], photos: "photos/2000.html" },
+    { year: 1999, recipients: ["Levent Arı", "Patricia Mitchell", "Javier Morales"], photos: "photos/1999.html" },
+    { year: 1998, recipients: ["Neslihan Toprak", "Edward Roberts", "Francesca De Luca"], photos: "photos/1998.html" }
+];
