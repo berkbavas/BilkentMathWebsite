@@ -3,8 +3,8 @@
    ========================= */
 
 .news-timeline {
-    max-width: 860px;
-    margin: 0 auto;
+    max-width: var(--card-max-width);
+    margin: 0;
     position: relative;
 }
 

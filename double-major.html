@@ -5,12 +5,16 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title data-i18n="title">Bilkent University • Department of Mathematics</title>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
     <link rel="stylesheet" href="assets/css/common.css">
     <link rel="stylesheet" href="assets/css/navigation.css">
+    <link rel="stylesheet" href="assets/css/double-major.css">
+
     <script type="module" src="assets/js/app.js"></script>
 </head>
 
@@ -19,73 +23,183 @@
 
     <main class="container">
 
-        <header class="header">
-            <h1 data-lang="en">Double Major in Mathematics</h1>
-            <h1 data-lang="tr">Matematik'te Çift Ana Dal Programı</h1>
+        <!-- HERO -->
+        <header class="dm-hero">
+            <div class="dm-hero-top">
+                <div class="dm-hero-badge">
+                    <i class="fa-solid fa-graduation-cap" aria-hidden="true"></i>
+                    <span data-lang="en">Undergraduate</span>
+                    <span data-lang="tr">Lisans</span>
+                </div>
+
+                <h1 data-lang="en">Double Major in Mathematics</h1>
+                <h1 data-lang="tr">Matematik'te Çift Ana Dal Programı</h1>
+
+                <p class="page-lead" data-lang="en">
+                    A structured path for high-performing students to complete the Mathematics curriculum alongside their first major.
+                </p>
+                <p class="page-lead" data-lang="tr">
+                    Başarılı öğrencilerin birinci ana dallarına ek olarak Matematik müfredatını tamamlamasına olanak sağlayan yapılandırılmış program.
+                </p>
+
+                <div class="dm-hero-actions">
+                    <a class="btn-black" href="DoubleMajor_Feasibility.pdf" target="_blank" data-lang="en">
+                        <i class="fa-solid fa-file-pdf" aria-hidden="true"></i> Double Major Curriculum
+                    </a>
+                    <a class="btn-black" href="DoubleMajor_Feasibility.pdf" target="_blank" data-lang="tr">
+                        <i class="fa-solid fa-file-pdf" aria-hidden="true"></i> Matematikte Çift Ana Dal Müfredatı
+                    </a>
+
+                    <a class="btn btn-ghost" href="https://w3.bilkent.edu.tr/www/lisans-ve-on-lisans-egitim-ogretim-yonetmeligi/#madde5" target="_blank">
+                        <i class="fa-solid fa-scale-balanced" aria-hidden="true"></i>
+                        <span data-lang="en">Rules (Article 5)</span>
+                        <span data-lang="tr">Kurallar (Madde 5)</span>
+                    </a>
+                </div>
+            </div>
         </header>
-        <ul class="max-width-720">
-            <li data-lang="en">Applications are made to the Registrar's Office by the due date announced in the Academic
-                Calendar
-                (usually in late August or early September for the Fall semester, in late December or early January
-                for the Spring semester).
-            </li>
-            <li data-lang="tr">Başvurular Akademik Takvimde belirtilen son tarihe kadar Öğrenci İşleri Müdürlüğü'ne
-                yapılır
-                (genellikle Güz dönemi için Ağustos sonu veya Eylül başı, Bahar dönemi için Aralık sonu veya Ocak
-                başı).
-            </li>
 
-            <li data-lang="en">Student quotas for the second-major programs are determined by the Rectorate
-                and are at least 20% of the quota of the corresponding major programs.
-            </li>
-            <li data-lang="tr">Öğrenciler en erken birinci ana dallarındaki 3. dönemlerinden önce, en geç 4.
-                dönemlerinden önce
-                başvurabilirler.
-            </li>
+        <!-- AT A GLANCE -->
+        <section class="dm-kpis" aria-label="At a glance">
+            <div class="dm-kpi card">
+                <div class="dm-kpi-icon"><i class="fa-solid fa-calendar-check" aria-hidden="true"></i></div>
+                <div>
+                    <div class="dm-kpi-title" data-lang="en">When to apply</div>
+                    <div class="dm-kpi-title" data-lang="tr">Ne zaman başvurulur</div>
+                    <div class="dm-kpi-text" data-lang="en">Typically late Aug–early Sep (Fall) / late Dec–early Jan (Spring)</div>
+                    <div class="dm-kpi-text" data-lang="tr">Genellikle Ağustos sonu–Eylül başı (Güz) / Aralık sonu–Ocak başı (Bahar)</div>
+                </div>
+            </div>
 
-            <li data-lang="en">Students can apply earliest before their 3rd semester and latest before their 4th
-                semester in their
-                first major.
-            </li>
-            <li data-lang="tr">Başvurmak için öğrencilerin genel not ortalamalarının (CGPA) 3,30 veya daha yüksek olması
-                ve tüm
-                derslerin genel not ortalaması (AGPA) bakımından en üst %20'de olmaları gerekir.
-            </li>
+            <div class="dm-kpi card">
+                <div class="dm-kpi-icon"><i class="fa-solid fa-chart-line" aria-hidden="true"></i></div>
+                <div>
+                    <div class="dm-kpi-title" data-lang="en">Eligibility</div>
+                    <div class="dm-kpi-title" data-lang="tr">Uygunluk</div>
+                    <div class="dm-kpi-text" data-lang="en">CGPA ≥ 3.30 & top 20% by AGPA</div>
+                    <div class="dm-kpi-text" data-lang="tr">CGPA ≥ 3,30 & AGPA’ye göre ilk %20</div>
+                </div>
+            </div>
 
-            <li data-lang="en">To apply, students must have CGPA 3.30 or greater and must be in the top 20% by AGPA in
-                their first
-                major.
-            </li>
-            <li data-lang="tr">Programdaki öğrenciler Matematik müfredatındaki tüm dersleri ya dersi alarak, veya
-                birinci ana
-                dallarındaki bir dersle ortak olması ile, ya da birinci ana dallarındaki bir derse eşdeğer sayılması
-                ile tamamlamalıdırlar. Detaylı ders yükümlülükleri aşağıdaki müfredat linkinde yer alan çizelgede
-                verilmiştir.
-            </li>
+            <div class="dm-kpi card">
+                <div class="dm-kpi-icon"><i class="fa-solid fa-users" aria-hidden="true"></i></div>
+                <div>
+                    <div class="dm-kpi-title" data-lang="en">Quotas</div>
+                    <div class="dm-kpi-title" data-lang="tr">Kontenjan</div>
+                    <div class="dm-kpi-text" data-lang="en">At least 20% of the corresponding major quota</div>
+                    <div class="dm-kpi-text" data-lang="tr">İlgili bölüm kontenjanının en az %20’si</div>
+                </div>
+            </div>
+        </section>
 
-            <li data-lang="en">Students in the program must complete all courses in the Mathematics curriculum either by
-                taking the
-                course, or having the course common with their first major, or by having the course deemed
-                equivalent
-                with a course in their first major. Full course requirements are listed in the curriculum link
-                below.
-            </li>
-            <li data-lang="tr">Programdaki öğrencilerin birinci ve ikinci ana dal not çizelgeleri ve ortalamaları
-                birbirinden ayrı
-                tutulur.
-            </li>
+        <!-- MAIN CONTENT GRID -->
+        <section class="dm-layout">
+            <!-- LEFT: CHECKLIST -->
+            <div class="dm-main">
+                <div class="dm-section">
+                    <div class="card">
+                        <h2 data-lang="en">Key points</h2>
+                        <h2 data-lang="tr">Önemli noktalar</h2>
+                        <ul class="dm-list">
+                            <li>
+                                <i class="fa-solid fa-circle-check" aria-hidden="true"></i>
+                                <span data-lang="en">Applications are made to the Registrar's Office by the due date announced in the Academic Calendar (usually in late August or early September for the Fall semester, in late December or early January for the Spring semester). Student quotas for the second-major programs are determined by the Rectorate and are at least 20% of the quota of the corresponding major programs.</span>
+                                <span data-lang="tr">Başvurular Akademik Takvimde belirtilen son tarihe kadar Öğrenci İşleri Müdürlüğü'ne yapılır (genellikle Güz dönemi için Ağustos sonu veya Eylül başı, Bahar dönemi için Aralık sonu veya Ocak başı). İkinci ana dal programlarına ait öğrenci kontenjanları ilgili programların kontenjanının %20’sinden az olmamak üzere Rektörlük tarafından belirlenir..</span>
+                            </li>
 
-            <li data-lang="en">The first and second major transcripts and GPAs of students in the program are kept
-                separate from
-                each other.
-            </li>
-            <li data-lang="en">Full rules and regulations of the program can be found in <a href="https://w3.bilkent.edu.tr/www/lisans-ve-on-lisans-egitim-ogretim-yonetmeligi/#madde5" target="_blank">Article 5 of Lisans ve Ön Lisans Eğitim-Öğretim Yönetmeliği</a> of the university.</li>
-            <li data-lang="tr">Programın tüm kuralları, üniversitenin Lisans ve <a href="https://w3.bilkent.edu.tr/www/lisans-ve-on-lisans-egitim-ogretim-yonetmeligi/#madde5" target="_blank">Ön Lisans Eğitim-Öğretim Yönetmeliği</a>'nin 5. maddesinde yer almaktadır.</li>
-        </ul>
-        <br>
-        <a class="btn-black" href="DoubleMajor_Feasibility.pdf" target="_blank" data-lang="en">Double Major Curriculum</a>
-        <a class="btn-black" href="DoubleMajor_Feasibility.pdf" target="_blank" data-lang="tr">Matematikte Çift Ana Dal Müfredatı</a>
+                            <li>
+                                <i class="fa-solid fa-circle-check" aria-hidden="true"></i>
+                                <span data-lang="en">Students can apply earliest before their 3rd semester and latest before their 4th semester in their first major.</span>
+                                <span data-lang="tr">Öğrenciler en erken birinci ana dallarındaki 3. dönemlerinden önce, en geç 4. dönemlerinden önce başvurabilirler.</span>
+                            </li>
 
+                            <li>
+                                <i class="fa-solid fa-circle-check" aria-hidden="true"></i>
+                                <span data-lang="en">To apply, students must have CGPA 3.30 or greater and must be in the top 20% by AGPA in their first major.</span>
+                                <span data-lang="tr">Başvurmak için öğrencilerin genel not ortalamalarının (CGPA) 3,30 veya daha yüksek olması ve tüm derslerin genel not ortalaması (AGPA) bakımından en üst %20'de olmaları gerekir.</span>
+                            </li>
+
+                            <li>
+                                <i class="fa-solid fa-circle-check" aria-hidden="true"></i>
+                                <span data-lang="en">Students in the program must complete all courses in the Mathematics curriculum either by taking the course, or having the course common with their first major, or by having the course deemed equivalent with a course in their first major. Full course requirements are listed in the curriculum link below..</span>
+                                <span data-lang="tr">Programdaki öğrenciler Matematik müfredatındaki tüm dersleri ya dersi alarak, veya birinci ana dallarındaki bir dersle ortak olması ile, ya da birinci ana dallarındaki bir derse eşdeğer sayılması ile tamamlamalıdırlar. Detaylı ders yükümlülükleri aşağıdaki müfredat linkinde yer alan çizelgede verilmiştir.</span>
+                            </li>
+
+                            <li>
+                                <i class="fa-solid fa-circle-check" aria-hidden="true"></i>
+                                <span data-lang="en">The first and second major transcripts and GPAs of students in the program are kept separate from each other.</span>
+                                <span data-lang="tr">Programdaki öğrencilerin birinci ve ikinci ana dal not çizelgeleri ve ortalamaları birbirinden ayrı tutulur.</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="dm-section card">
+                    <h2 data-lang="en">Full rules & regulations</h2>
+                    <h2 data-lang="tr">Tüm kural ve yönetmelikler</h2>
+                    <p class="muted" data-lang="en">
+                        The complete framework is provided in <a href="https://w3.bilkent.edu.tr/www/lisans-ve-on-lisans-egitim-ogretim-yonetmeligi/#madde5" target="_blank">Article 5</a> of the university’s Lisans ve Ön Lisans Eğitim-Öğretim Yönetmeliği.
+                    </p>
+                    <p class="muted" data-lang="tr">
+                        Programın tüm çerçevesi üniversitenin Lisans ve Ön Lisans Eğitim-Öğretim Yönetmeliği’nin <a href="https://w3.bilkent.edu.tr/www/lisans-ve-on-lisans-egitim-ogretim-yonetmeligi/#madde5" target="_blank">5. maddesinde</a> yer alır.
+                    </p>
+                </div>
+            </div>
+
+            <!-- RIGHT: SIDEBAR -->
+            <!--aside class="dm-aside" aria-label="Quick actions">
+                <div class="dm-aside-card card">
+                    <div class="dm-aside-title" data-lang="en">Quick actions</div>
+                    <div class="dm-aside-title" data-lang="tr">Hızlı işlemler</div>
+
+                    <div class="dm-aside-actions">
+                        <a class="btn w100" href="DoubleMajor_Feasibility.pdf" target="_blank">
+                            <i class="fa-solid fa-file-pdf" aria-hidden="true"></i>
+                            <span data-lang="en">Download curriculum</span>
+                            <span data-lang="tr">Müfredatı indir</span>
+                        </a>
+
+                        <a class="btn btn-ghost w100" href="undergraduate-program.html">
+                            <i class="fa-solid fa-arrow-left" aria-hidden="true"></i>
+                            <span data-lang="en">Back to Undergraduate Program</span>
+                            <span data-lang="tr">Lisans Programına dön</span>
+                        </a>
+                    </div>
+
+                    <div class="dm-aside-note muted">
+                        <i class="fa-solid fa-circle-info" aria-hidden="true"></i>
+                        <span data-lang="en">Check the Academic Calendar for exact dates.</span>
+                        <span data-lang="tr">Kesin tarihler için Akademik Takvim’i kontrol edin.</span>
+                    </div>
+                </div>
+
+                <div class="dm-aside-card card dm-aside-soft">
+                    <div class="dm-aside-title" data-lang="en">Need clarity?</div>
+                    <div class="dm-aside-title" data-lang="tr">Yardım mı lazım?</div>
+
+                    <p class="muted" data-lang="en">For course equivalences and planning, refer to the curriculum PDF and consult your advisor.</p>
+                    <p class="muted" data-lang="tr">Eşdeğerlik ve ders planı için müfredat PDF’ine bakın ve danışmanınızla görüşün.</p>
+                </div>
+            </aside-->
+        </section>
+
+        <!-- BOTTOM CTA STRIP -->
+        <section class="dm-cta card">
+            <div>
+                <h2 data-lang="en">Ready to plan your double major?</h2>
+                <h2 data-lang="tr">Çift ana dal planına hazır mısın?</h2>
+                <p class="muted" data-lang="en">Start with the curriculum chart and map shared/equivalent courses with your first major.</p>
+                <p class="muted" data-lang="tr">Müfredat çizelgesiyle başlayıp birinci ana dalınla ortak/eşdeğer dersleri işaretleyin.</p>
+            </div>
+
+            <div class="dm-cta-actions">
+                <a class="btn-black" href="DoubleMajor_Feasibility.pdf" target="_blank">
+                    <i class="fa-solid fa-file-pdf" aria-hidden="true"></i>
+                    <span data-lang="en">Open Curriculum</span>
+                    <span data-lang="tr">Müfredatı Aç</span>
+                </a>
+            </div>
+        </section>
 
     </main>
 
