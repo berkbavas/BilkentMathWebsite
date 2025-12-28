@@ -98,7 +98,7 @@ function setupLanguageToggle() {
         toggle.textContent = currentLang.toUpperCase();
         applyTranslations(currentLang);
         if (document.render) {
-            document.render();
+            document.render(); // For pages that implement a render function for dynamic content
         }
     });
 }
