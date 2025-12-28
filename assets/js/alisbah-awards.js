@@ -38,11 +38,6 @@ function render() {
     elTableMount.innerHTML = ALISBAH_AWARDS.map(item => renderRow(item, labels)).join("");
 }
 
-TRANSLATIONS.titleOrhanAlisbah = {
-    en: "Orhan Alisbah Awards - Department of Mathematics - Bilkent University",
-    tr: "Orhan Alisbah Ödülleri - Matematik Bölümü - Bilkent Üniversitesi"
-};
-
 TRANSLATIONS.tableYear = {
     en: "Year",
     tr: "Yıl"

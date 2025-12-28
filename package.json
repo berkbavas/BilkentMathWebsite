@@ -1,0 +1,15 @@
+{
+  "name": "bilkent-math",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "clean": "rm -rf dist node_modules"
+  },
+  "devDependencies": {
+    "vite": "^7.2.4"
+  }
+}

@@ -4,10 +4,10 @@
 import { TRANSLATIONS } from '../data/translations.js';
 
 function init() {
-    fetch("footer.html")
+    fetch("/footer.html")
         .then(res => res.text())
         .then(html => { document.getElementById("footer").innerHTML = html; })
-        .then(() => fetch("navigation.html"))
+        .then(() => fetch("/navigation.html"))
         .then(res => res.text())
         .then(html => {
             document.getElementById("navigation").innerHTML = html;

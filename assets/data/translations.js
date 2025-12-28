@@ -221,5 +221,7 @@ export const MONTHS_EN_TO_TR = {
     September: "Eylül",
     October: "Ekim",
     November: "Kasım",
-    December: "Aralık"
+    December: "Aralık",
+    "July-August": "Temmuz-Ağustos",
+    "July–August": "Temmuz-Ağustos"
 };

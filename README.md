@@ -46,32 +46,39 @@ bilkent-math/
 └── site.webmanifest        # Web app manifest
 ```
 
-## Getting Started
+## Build
 
-### Prerequisites
+This project uses Vite as the build tool. Make sure you have Node.js installed on your system.
 
-- A web server (Apache, Nginx, or development server)
-- Modern web browser with JavaScript enabled
-
-### Installation
-
-1. **Clone or download** the project files to your web server directory
-2. **Configure your web server** to serve the files from the project root
-3. **Access the website** through your web server URL
-
-For local development with XAMPP:
+### Development
 
 ```bash
-# Place files in: c:\xampp\htdocs\bilkent-math\
-# Access via: http://localhost/bilkent-math/
+# Install dependencies
+npm install
+
+# Start development server
+npm run dev
 ```
 
-### Development Setup
+The development server will start at `http://localhost:3000` (or another available port).
 
-1. **Start your web server**
-2. **Navigate to the project URL** in your browser
-3. **Make changes** to HTML, CSS, or JavaScript files
-4. **Refresh the browser** to see updates
+### Production Build
+
+```bash
+# Create production build
+npm run build
+
+# Preview production build locally
+npm run preview
+```
+
+The production files will be generated in the `dist/` directory.
+
+### Available Scripts
+
+- `npm run dev` - Start development server
+- `npm run build` - Create production build
+- `npm run preview` - Preview production build locally
 
 ## Content Management
 

@@ -67,8 +67,8 @@ function renderCard(item, lang) {
     ).join("");
 
     const solverCount = item.solvers?.length || 0;
-    let month = lang === "tr" ? MONTHS_EN_TO_TR[item.month] : item.month;
 
+    let month = lang === "tr" ? MONTHS_EN_TO_TR[item.month] || item.month : item.month;
     let question = URL + item.question;
     let solution = item.solution ? URL + item.solution : null;
 

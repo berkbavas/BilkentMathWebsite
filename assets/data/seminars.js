@@ -1,27 +1,11 @@
 export const SEMINARS = [
     {
-        speaker: "Asım Ocak",
-        title: "Chebyshev's Bias in Integer Partitions",
-        link: "seminars/2025-2026/senior_project_25122025.pdf",
-        date: "31.12.2025",
-        time: "19:30",
-        place: "SA141"
-    },
-    {
-        speaker: "Asım Ocak",
-        title: "Chebyshev's Bias in Integer Partitions",
-        link: "seminars/2025-2026/senior_project_25122025.pdf",
-        date: "30.12.2025",
-        time: "13:30",
-        place: "SA141"
-    },
-    {
-        speaker: "Asım Ocak",
-        title: "Chebyshev's Bias in Integer Partitions",
-        link: "seminars/2025-2026/senior_project_25122025.pdf",
+        speaker: "Fei Cao",
+        title: "Interacting particle systems and multi-agent dynamics: from stochastic agent-based models to deterministic differential equations",
+        link: "seminars/2025-2026/Math_Seminar_Fei_Cao.pdf",
         date: "29.12.2025",
-        time: "09:30",
-        place: "SA141"
+        time: "18:00",
+        place: "Zoom"
     },
     {
         speaker: "Asım Ocak",

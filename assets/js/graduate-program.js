@@ -1,6 +1,5 @@
 import { TRANSLATIONS } from '../data/translations.js';
 import { CURRENT_FACULTY } from "../data/faculty.js";
-import { escapeHtml } from "./helpers.js";
 
 const elRoot = document.getElementById("supRoot");
 const elSearch = document.getElementById("supSearch");

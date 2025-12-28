@@ -28,7 +28,7 @@
 
 .pom-hero {
     display: grid;
-    grid-template-columns: 1.35fr 0.65fr;
+    grid-template-columns: 1.15fr 0.85fr;
     gap: 18px;
     margin-bottom: 1rem;
 }
@@ -42,9 +42,9 @@
 .pom-meta {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: left;
     align-items: start;
-    gap: 2rem;
+    gap: 4rem;
 }
 
 @media (max-width: 720px) {

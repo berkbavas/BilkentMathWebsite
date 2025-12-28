@@ -4,6 +4,7 @@ import { TRANSLATIONS } from "../data/translations.js";
 const elementSearch = document.querySelector("#search");
 const elementCount = document.querySelector("#count");
 const elementReset = document.querySelector("#reset");
+const URL = "https://math.bilkent.edu.tr/Grad_student_photos/";
 
 function card(s, lang) {
     const name = s.name ?? "";
@@ -12,7 +13,7 @@ function card(s, lang) {
     const phone = s.phone ?? "";
     const email = s.email ?? "";
     const advisorLabel = TRANSLATIONS.labelAdvisor[lang] || "Advisor";
-    const photoUrl = encodeURI("https://math.bilkent.edu.tr/Grad_student_photos/" + (s.photo || "placeholder.jpg"));
+    const photoUrl = encodeURI(URL + (s.photo || "placeholder.jpg"));
 
     return `
   <article class="gs-card">
@@ -57,10 +58,10 @@ function matches(student, query) {
 }
 
 
-function renderCards(list) {
-    const currentLang = localStorage.getItem("lang") || "en";
+function renderCards(list, lang) {
+
     const container = document.querySelector("#gs-cards-container");
-    container.innerHTML = list.map(student => card(student, currentLang)).join("");
+    container.innerHTML = list.map(student => card(student, lang)).join("");
 }
 
 function apply() {
@@ -69,7 +70,7 @@ function apply() {
     const query = elementSearch.value.trim();
     const list = GRADUATE_STUDENTS.filter(student => matches(student, query));
     elementCount.textContent = `${list.length} ${TRANSLATIONS.postfixStudent[currentLang]}`;
-    renderCards(list);
+    renderCards(list, currentLang);
 }
 
 function resetFilters() {
