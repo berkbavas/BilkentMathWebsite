@@ -22,39 +22,39 @@ function cardTemplate(p) {
 
     return `
     <article class="faculty-card">
-        <div class="faculty-media">
-            <img src="${escapeHtml(photo)}" alt="${name}">
+        <div class="faculty-image-and-content">
+            <div class="faculty-media"><img src="${escapeHtml(photo)}" alt="${name}"></div>
+
+            <div class="faculty-content">
+                <header class="faculty-header">
+                    <h3 class="faculty-name">${nameHtml}</h3>
+                    ${rank ? `<span class="faculty-rank">${rank}</span>` : ""}
+                    ${degree ? `<p class="faculty-degree">${degree}</p>` : ""}
+                </header>
+                ${tags ? `<div class="faculty-chips">${tags}</div>` : ""}
+            </div>
         </div>
 
-        <div class="faculty-content">
-            <header class="faculty-header">
-                <h3 class="faculty-name">${nameHtml}</h3>
-                ${rank ? `<span class="faculty-rank">${rank}</span>` : ""}
-                ${degree ? `<p class="faculty-degree">${degree}</p>` : ""}
-            </header>
+        <ul class="faculty-meta">
+        ${office ? `
+        <li>
+            <i class="fa-solid fa-briefcase"></i>
+            <span>${office}</span>
+        </li>` : ""}
 
-            ${tags ? `<div class="faculty-chips">${tags}</div>` : ""}
+        ${email ? `
+        <li>
+            <i class="fa-regular fa-envelope"></i>
+            <span>${email}</span>
+        </li>` : ""}
 
-            <ul class="faculty-meta">
-                ${office ? `
-                <li>
-                    <i class="fa-solid fa-briefcase"></i>
-                    <span>${office}</span>
-                </li>` : ""}
+        ${phone ? `
+        <li>
+            <i class="fa-solid fa-phone"></i>
+            <span>${phone}</span>
+        </li>` : ""}
+        </ul>
 
-                ${email ? `
-                <li>
-                    <i class="fa-regular fa-envelope"></i>
-                    <span>${email}</span>
-                </li>` : ""}
-
-                ${phone ? `
-                <li>
-                    <i class="fa-solid fa-phone"></i>
-                    <span>${phone}</span>
-                </li>` : ""}
-            </ul>
-        </div>
     </article>`;
 }
 
