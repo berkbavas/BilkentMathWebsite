@@ -5,7 +5,7 @@
 
 .phd-hero {
     padding: 2.3rem 0 1.6rem;
-    border-bottom: 1px solid var(--border);
+    border-bottom: 1px solid #E5E7EB;
     margin-bottom: 1.8rem;
 }
 
@@ -52,7 +52,7 @@
 
 .phd-fact p {
     margin: 0;
-    color: var(--muted);
+    color: #474e5a;
 }
 
 .phd-fact-icon {
@@ -63,7 +63,7 @@
     place-items: center;
     border: 1px solid rgba(45, 42, 98, .14);
     background: rgba(45, 42, 98, .08);
-    color: var(--primary);
+    color: #2d2a62;
     flex: 0 0 auto;
 }
 
@@ -128,7 +128,7 @@
 }
 
 .phd-checklist i {
-    color: var(--primary);
+    color: #2d2a62;
     margin-top: 2px;
 }
 

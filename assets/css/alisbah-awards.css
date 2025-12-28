@@ -20,7 +20,7 @@
 /* Hero */
 .oa-hero {
     padding: 2.4rem 0 1.2rem;
-    border-bottom: 1px solid var(--border);
+    border-bottom: 1px solid #E5E7EB;
 }
 
 .oa-hero-top {
@@ -46,7 +46,7 @@
     width: 10px;
     height: 10px;
     border-radius: 999px;
-    background: var(--primary);
+    background: #2d2a62;
     box-shadow: 0 0 0 4px rgba(45, 42, 98, .14);
 }
 
@@ -54,7 +54,7 @@
     margin-top: 12px;
     max-width: 860px;
     font-size: 1.08rem;
-    color: var(--muted);
+    color: #474e5a;
     line-height: 1.75;
 }
 
@@ -80,8 +80,8 @@
 }
 
 .oa-fact {
-    background: var(--surface);
-    border: 1px solid var(--border);
+    background: #FFFFFF;
+    border: 1px solid #E5E7EB;
     border-radius: 18px;
     padding: 14px 14px;
     box-shadow: 0 10px 26px rgba(0, 0, 0, .06);
@@ -99,12 +99,12 @@
     display: grid;
     place-items: center;
     font-weight: 900;
-    color: var(--primary);
+    color: #2d2a62;
     flex: 0 0 auto;
 }
 
 .oa-fact-k i {
-    color: var(--primary);
+    color: #2d2a62;
 }
 
 .oa-fact-v {
@@ -156,8 +156,8 @@
 }
 
 .oa-side-card {
-    background: var(--surface);
-    border: 1px solid var(--border);
+    background: #FFFFFF;
+    border: 1px solid #E5E7EB;
     border-radius: 20px;
     padding: 16px;
     box-shadow: 0 10px 26px rgba(0, 0, 0, .06);
@@ -235,7 +235,7 @@
     border: 1px solid rgba(45, 42, 98, .14);
     display: grid;
     place-items: center;
-    color: var(--primary);
+    color: #2d2a62;
 }
 
 .oa-portrait span {
@@ -257,8 +257,8 @@
 /* Table wrapper = card */
 .oa-table-wrap {
     margin-top: 14px;
-    background: var(--surface);
-    border: 1px solid var(--border);
+    background: #FFFFFF;
+    border: 1px solid #E5E7EB;
     border-radius: 20px;
     overflow: hidden;
     box-shadow: 0 10px 28px rgba(0, 0, 0, .06);
@@ -279,7 +279,7 @@
     color: rgba(17, 17, 17, .65);
     padding: 14px 16px;
     background: rgba(0, 0, 0, .03);
-    border-bottom: 1px solid var(--border);
+    border-bottom: 1px solid #E5E7EB;
     position: sticky;
     top: 0;
     z-index: 1;
@@ -357,8 +357,8 @@
 
 .two-column-grid .card {
     border-radius: 20px;
-    border: 1px solid var(--border);
-    background: var(--surface);
+    border: 1px solid #E5E7EB;
+    background: #FFFFFF;
     box-shadow: 0 10px 26px rgba(0, 0, 0, .06);
     overflow: hidden;
 }

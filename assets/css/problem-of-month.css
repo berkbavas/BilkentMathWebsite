@@ -1,14 +1,9 @@
-:root {
-    --pom-surface: var(--surface, #fff);
-    --pom-border: var(--border, rgba(17, 17, 17, .12));
-    --pom-muted: var(--muted, rgba(17, 17, 17, .68));
-    --pom-radius: 16px;
-}
+
 
 .pom-card {
-    background: var(--pom-surface);
-    border: 1px solid var(--pom-border);
-    border-radius: var(--pom-radius);
+    background: var(--surface, #fff);
+    border: 1px solid var(--border, rgba(17, 17, 17, .12));
+    border-radius: 16px;
     padding: 18px;
     box-shadow: 0 8px 24px rgba(0, 0, 0, .04);
     transition: transform .12s ease, box-shadow .18s ease, border-color .18s ease;
@@ -163,22 +158,19 @@ details[open] .chev {
 
 
 /* --- Month cards polish (drop-in overrides) --- */
-:root {
-    --pom-shadow: 0 10px 28px rgba(0, 0, 0, .06);
-    --pom-shadow-hover: 0 18px 40px rgba(0, 0, 0, .10);
-}
+
 
 .pom-month-card {
-    background: var(--pom-surface);
-    border: 1px solid var(--pom-border);
-    border-radius: var(--pom-radius);
+    background: var(--surface, #fff);
+    border: 1px solid var(--border, rgba(17, 17, 17, .12));
+    border-radius: 16px;
     padding: 18px;
-    box-shadow: var(--pom-shadow);
+    box-shadow: 0 10px 28px rgba(0, 0, 0, .06);
     transition: transform .12s ease, box-shadow .18s ease, border-color .18s ease;
 }
 
 .pom-month-card:hover {
-    box-shadow: var(--pom-shadow-hover);
+    box-shadow: 0 18px 40px rgba(0, 0, 0, .10);
     border-color: rgba(17, 17, 17, .18);
 }
 
@@ -196,7 +188,7 @@ details[open] .chev {
 
 .pom-year {
     font-size: 13px;
-    color: var(--pom-muted);
+    color: var(--muted, rgba(17, 17, 17, .68));
     font-weight: 650;
 }
 
@@ -210,7 +202,7 @@ details[open] .chev {
     gap: 8px;
     padding: 6px 10px;
     border-radius: 999px;
-    border: 1px solid var(--pom-border);
+    border: 1px solid var(--border, rgba(17, 17, 17, .12));
     background: rgba(17, 17, 17, .03);
     font-size: 12.5px;
     font-weight: 650;
@@ -230,7 +222,7 @@ details[open] .chev {
     gap: 8px;
     padding: 10px 12px;
     border-radius: 999px;
-    border: 1px solid var(--pom-border);
+    border: 1px solid var(--border, rgba(17, 17, 17, .12));
     text-decoration: none;
     font-weight: 700;
     font-size: 13px;
@@ -274,7 +266,7 @@ details[open] .chev {
     gap: 8px;
     padding: 6px 10px;
     border-radius: 999px;
-    border: 1px solid var(--pom-border);
+    border: 1px solid var(--border, rgba(17, 17, 17, .12));
     background: rgba(17, 17, 17, .03);
     font-size: 12px;
     font-weight: 650;
@@ -295,7 +287,7 @@ details[open] .chev {
     gap: 12px;
     padding: 12px 12px;
     border-radius: 12px;
-    border: 1px solid var(--pom-border);
+    border: 1px solid var(--border, rgba(17, 17, 17, .12));
     background: rgba(17, 17, 17, .02);
 }
 
@@ -326,7 +318,7 @@ details[open] .chev {
     justify-content: center;
     font-size: 12px;
     font-weight: 800;
-    border: 1px solid var(--pom-border);
+    border: 1px solid var(--border, rgba(17, 17, 17, .12));
     background: #fff;
 }
 

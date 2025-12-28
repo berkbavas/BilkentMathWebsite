@@ -13,14 +13,14 @@
     gap: 18px;
     align-items: stretch;
     padding: 1.3rem 0 1.2rem;
-    border-bottom: 1px solid var(--border);
+    border-bottom: 1px solid #E5E7EB;
 }
 
 .about-badge {
     display: inline-flex;
     align-items: center;
     gap: 10px;
-    border: 1px solid var(--border);
+    border: 1px solid #E5E7EB;
     background: rgba(255, 255, 255, .65);
     padding: 8px 12px;
     border-radius: 999px;
@@ -30,7 +30,7 @@
 }
 
 .about-badge i {
-    color: var(--primary);
+    color: #2d2a62;
 }
 
 .about-hero h1 {
@@ -43,7 +43,7 @@
     margin-top: 12px;
     max-width: 58ch;
     font-size: 1.08rem;
-    color: var(--muted);
+    color: #474e5a;
     line-height: 1.7;
 }
 
@@ -62,7 +62,7 @@
 .about-hero-panel-card {
     width: 100%;
     background: linear-gradient(180deg, #ffffff, #fbfbfd);
-    border: 1px solid var(--border);
+    border: 1px solid #E5E7EB;
     border-radius: 22px;
     box-shadow: 0 10px 28px rgba(0, 0, 0, .06);
     padding: 18px;
@@ -89,7 +89,7 @@
 }
 
 .about-hero-panel-title i {
-    color: var(--primary);
+    color: #2d2a62;
 }
 
 .about-hero-panel-sub {
@@ -149,8 +149,8 @@
 
 
 .about-side-card {
-    background: var(--surface);
-    border: 1px solid var(--border);
+    background: #FFFFFF;
+    border: 1px solid #E5E7EB;
     border-radius: 20px;
     box-shadow: 0 10px 26px rgba(0, 0, 0, .06);
     padding: 16px;
@@ -166,7 +166,7 @@
 }
 
 .about-side-title i {
-    color: var(--primary);
+    color: #2d2a62;
 }
 
 .about-link {
@@ -199,12 +199,12 @@
 
 .about-link-left i {
     width: 22px;
-    color: var(--primary);
+    color: #2d2a62;
 }
 
 .about-side-divider {
     height: 1px;
-    background: var(--border);
+    background: #E5E7EB;
     margin: 14px 0;
 }
 
@@ -215,7 +215,7 @@
 
 .about-side-note-text {
     margin: 8px 0 12px;
-    color: var(--muted);
+    color: #474e5a;
     font-size: .95rem;
     line-height: 1.6;
 }
@@ -227,7 +227,7 @@
 }
 
 .about-cta-inner {
-    border: 1px solid var(--border);
+    border: 1px solid #E5E7EB;
     border-radius: 22px;
     background: linear-gradient(180deg, #ffffff, #fbfbfd);
     box-shadow: 0 10px 28px rgba(0, 0, 0, .06);
@@ -246,7 +246,7 @@
 
 .about-cta-text {
     margin: 6px 0 0;
-    color: var(--muted);
+    color: #474e5a;
     max-width: 62ch;
 }
 

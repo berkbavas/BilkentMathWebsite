@@ -1,10 +1,5 @@
 /* Page-specific tokens */
-:root {
-    --chip-bg: rgba(255, 255, 255, .65);
-    --chip-border: var(--border);
-    --chip-hover: rgba(17, 17, 17, .05);
-    --ring: 0 0 0 4px rgba(45, 42, 98, .18);
-}
+
 
 /* Toolbar */
 .research-toolbar {
@@ -34,8 +29,8 @@
     border-radius: 14px;
     display: grid;
     place-items: center;
-    background: var(--surface-2);
-    border: 1px solid var(--border);
+    background: #F0F4FF;
+    border: 1px solid #E5E7EB;
 }
 
 .area-accent {
@@ -45,7 +40,7 @@
     padding: 8px 10px;
     border-radius: 999px;
     font-weight: 800;
-    border: 1px solid var(--border);
+    border: 1px solid #E5E7EB;
     background: rgba(255, 255, 255, .65);
 }
 
@@ -53,7 +48,7 @@
     width: 10px;
     height: 10px;
     border-radius: 999px;
-    background: var(--accent);
+    background: #2d2a62;
 }
 
 /* Faculty chips */
@@ -70,8 +65,8 @@
     gap: 8px;
     padding: 8px 10px;
     border-radius: 999px;
-    border: 1px solid var(--chip-border);
-    background: var(--chip-bg);
+    border: 1px solid var(--border);
+    background: rgba(255, 255, 255, .65);
     font-weight: 700;
     transition: all .2s ease;
     text-decoration: none;
@@ -79,7 +74,7 @@
 
 .chip-link:hover {
     text-decoration: none;
-    background: var(--chip-hover);
+    background: rgba(17, 17, 17, .05);
 }
 
 .chip-link:active {
@@ -98,7 +93,7 @@
 }
 
 .acc-item {
-    border: 1px solid var(--border);
+    border: 1px solid #E5E7EB;
     background: linear-gradient(180deg, #fff, #fbfbfd);
     border-radius: 18px;
     box-shadow: 0 8px 26px rgba(0, 0, 0, .06);
@@ -138,17 +133,17 @@
     width: 10px;
     height: 10px;
     border-radius: 999px;
-    background: var(--accent);
+    background: #2d2a62;
 }
 
 .acc-chevron {
     width: 40px;
     height: 40px;
     border-radius: 12px;
-    border: 1px solid var(--border);
+    border: 1px solid #E5E7EB;
     display: grid;
     place-items: center;
-    background: var(--surface);
+    background: #FFFFFF;
 }
 
 .acc-body {

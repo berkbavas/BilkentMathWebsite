@@ -113,7 +113,7 @@ h2 {
 .kpi-link {
     text-decoration: none;
     color: inherit;
-    border-left: 6px solid var(--primary);
+    border-left: 6px solid #2d2a62;
 }
 
 .home-seminars {

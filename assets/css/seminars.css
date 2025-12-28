@@ -4,10 +4,10 @@
 
 .table-card {
     border: 1px solid var(--line);
-    border-radius: var(--radius);
+    border-radius: 14px;
     background: rgba(255, 255, 255, .75);
     backdrop-filter: blur(10px);
-    box-shadow: var(--shadow);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, .10);
     overflow: hidden;
 }
 
@@ -48,7 +48,7 @@
 }
 
 .title-link {
-    color: var(--text);
+    color: #000000;
     text-decoration: none;
 
     font-weight: 700;
@@ -82,7 +82,7 @@
 }
 
 .sc-title a {
-    color: var(--text);
+    color: #000000;
     text-decoration: none;
     font-weight: 700;
 }

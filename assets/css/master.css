@@ -20,13 +20,13 @@
     height: 3px;
     margin-top: .65rem;
     border-radius: 999px;
-    background: var(--primary);
+    background: #2d2a62;
 }
 
 .master-hero p {
     margin-top: 1rem;
     font-size: 1.08rem;
-    color: var(--muted);
+    color: #474e5a;
     line-height: 1.75;
     max-width: 720px;
 }
@@ -50,7 +50,7 @@
     display: flex;
     flex-direction: column;
     gap: 24px;
-    max-width: var(--max-card-width);
+    max-width: 830px;
     margin-top: 1.8rem;
 }
 
@@ -106,7 +106,7 @@
 
 .master-note {
     font-size: .95rem;
-    color: var(--muted);
+    color: #474e5a;
 }
 
 @media (max-width: 720px) {

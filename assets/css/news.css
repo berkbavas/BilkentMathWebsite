@@ -3,7 +3,7 @@
    ========================= */
 
 .news-timeline {
-    max-width: var(--max-card-width);
+    max-width: 830px;
     margin: 0;
     position: relative;
 }
@@ -38,7 +38,7 @@
 
     background: rgba(45, 42, 98, .08);
     border: 1px solid rgba(45, 42, 98, .16);
-    color: var(--accent);
+    color: #2d2a62;
     margin: 8px 0 10px 34px;
 }
 
@@ -57,8 +57,8 @@
     width: 12px;
     height: 12px;
     border-radius: 50%;
-    background: var(--surface);
-    border: 3px solid var(--primary);
+    background: #FFFFFF;
+    border: 3px solid #2d2a62;
     margin-top: 18px;
     margin-left: 9px;
 }
@@ -66,8 +66,8 @@
 /* Card */
 .news-card {
     border-radius: 20px;
-    border: 1px solid var(--border);
-    background: var(--surface);
+    border: 1px solid #E5E7EB;
+    background: #FFFFFF;
     box-shadow: 0 10px 26px rgba(0, 0, 0, .06);
     padding: 14px 16px 16px;
     transition: transform .22s ease, box-shadow .22s ease, border-color .22s ease;

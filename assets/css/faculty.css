@@ -24,8 +24,8 @@
 .faculty-card {
     gap: 1.4rem;
     padding: 1.6rem;
-    background: var(--surface);
-    border: 1px solid var(--border);
+    background: #FFFFFF;
+    border: 1px solid #E5E7EB;
     border-radius: 20px;
     box-shadow: 0 10px 28px rgba(0, 0, 0, .06);
     transition: transform .25s ease, box-shadow .25s ease;
@@ -70,7 +70,7 @@
 .faculty-name a {
     text-decoration: none;
     border: none;
-    color: var(--text);
+    color: #000000;
 }
 
 .faculty-rank {
@@ -80,12 +80,12 @@
     padding: .25rem .6rem;
     border-radius: 999px;
     background: rgba(45, 42, 98, .08);
-    color: var(--accent);
+    color: #2d2a62;
 }
 
 .faculty-degree {
     font-size: .9rem;
-    color: var(--muted);
+    color: #474e5a;
     margin: 0;
 }
 
@@ -98,7 +98,7 @@
 
 .faculty-chip {
     font-size: .75rem;
-    color: var(--accent);
+    color: #2d2a62;
 }
 
 /* Meta */

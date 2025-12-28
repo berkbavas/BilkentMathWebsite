@@ -5,7 +5,7 @@
 .ug-hero {
     padding: 2.2rem 0 1.4rem;
     margin-bottom: 1.6rem;
-    border-bottom: 1px solid var(--border);
+    border-bottom: 1px solid #E5E7EB;
 }
 
 .ug-hero-top {
@@ -38,8 +38,8 @@
 
 /* Right highlight card */
 .ug-hero-card {
-    background: linear-gradient(180deg, var(--surface), #fbfbfd);
-    border: 1px solid var(--border);
+    background: linear-gradient(180deg, #FFFFFF, #fbfbfd);
+    border: 1px solid #E5E7EB;
     border-radius: 20px;
     box-shadow: 0 10px 28px rgba(0, 0, 0, .06);
     padding: 18px;
@@ -80,7 +80,7 @@
     border-radius: 14px;
     border: 1px solid rgba(45, 42, 98, .14);
     background: rgba(45, 42, 98, .08);
-    color: var(--primary);
+    color: #2d2a62;
 }
 
 .ug-pill-row {
@@ -104,7 +104,7 @@
 }
 
 .ug-mini {
-    border: 1px solid var(--border);
+    border: 1px solid #E5E7EB;
     border-radius: 18px;
     padding: 14px;
     background: rgba(255, 255, 255, .65);
@@ -134,8 +134,8 @@
     gap: 16px;
     padding: 18px;
     border-radius: 22px;
-    border: 1px solid var(--border);
-    background: linear-gradient(180deg, var(--surface), var(--surface-2));
+    border: 1px solid #E5E7EB;
+    background: linear-gradient(180deg, #FFFFFF, #F0F4FF);
     box-shadow: 0 10px 26px rgba(0, 0, 0, .06);
 }
 
@@ -147,7 +147,7 @@
 
 .ug-cta-sub {
     margin: 6px 0 0;
-    color: var(--muted);
+    color: #474e5a;
 }
 
 .ug-cta-actions {
