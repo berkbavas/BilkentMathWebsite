@@ -115,7 +115,7 @@ Each data file exports structured objects that are consumed by the corresponding
 }
 ```
 
-### Graduate Students
+#### Graduate Students
 
 ```javascript
 // assets/data/graduate-students.js
