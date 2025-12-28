@@ -1,5 +1,5 @@
 import { SEMINARS } from "../data/seminars.js";
-import { CURRENT_FACULTY_EN } from "../data/faculty.js";
+import { CURRENT_FACULTY } from "../data/faculty.js";
 import { GRADUATE_STUDENTS } from "../data/graduate-students.js";
 
 function toDateKey(s, t) { // DD.MM.YYYY -> Date
@@ -9,7 +9,7 @@ function toDateKey(s, t) { // DD.MM.YYYY -> Date
 }
 
 function render() {
-	document.getElementById("facultyCount").textContent = CURRENT_FACULTY_EN.length;
+	document.getElementById("facultyCount").textContent = CURRENT_FACULTY.length;
 	document.getElementById("gradCount").textContent = GRADUATE_STUDENTS.length;
 
 	const now = new Date();
