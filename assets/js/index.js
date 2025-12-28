@@ -30,7 +30,7 @@ function render() {
 	document.getElementById("upcomingSeminarsTitle").hidden = upcoming.length === 0;
 
 	if (upcoming.length > 0) {
-		document.getElementById("nextSeminarDate").textContent = upcoming[0].date + `, ${upcoming[0].time} · ${upcoming[0].place}`;
+		document.getElementById("nextSeminarDate").textContent = `${upcoming[0].date} · ${upcoming[0].time} · ${upcoming[0].place}`;
 		document.getElementById("nextSeminarTitle").innerHTML = `<a href="${upcoming[0].link}" target="_blank" rel="noopener noreferrer">${upcoming[0].title}</a>`;
 		document.getElementById("nextSeminarSpeaker").textContent = upcoming[0].speaker;
 	}
