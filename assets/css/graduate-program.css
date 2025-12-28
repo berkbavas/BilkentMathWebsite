@@ -1,3 +1,236 @@
+/* =========================================================
+   Graduate Program + Graduate Supervisors (Redesign)
+   ========================================================= */
+
+/* ---------- Hero ---------- */
+.grad-hero {
+    padding: 2.6rem 0 2.2rem;
+    margin-bottom: 1.6rem;
+    position: relative;
+}
+
+.grad-hero::after {
+    content: "";
+    display: block;
+    margin-top: 1.8rem;
+    height: 1px;
+    background: var(--border);
+}
+
+.grad-hero-badge {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 12px;
+}
+
+.grad-hero h1 {
+    font-size: 2.05rem;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    margin: 0;
+}
+
+.grad-hero-lead {
+    margin-top: 14px;
+    max-width: 820px;
+    font-size: 1.1rem;
+    color: var(--muted);
+    line-height: 1.75;
+}
+
+.grad-hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 1.6rem;
+}
+
+@media (max-width: 720px) {
+    .grad-hero h1 { font-size: 1.75rem; }
+    .grad-hero-actions { flex-direction: column; }
+}
+
+/* ---------- Quick facts ---------- */
+.grad-facts { margin: 1.2rem 0 2.2rem; }
+
+.grad-facts-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 16px;
+}
+
+@media (max-width: 960px) {
+    .grad-facts-grid { grid-template-columns: 1fr; }
+}
+
+.grad-fact {
+    display: flex;
+    gap: 14px;
+    align-items: flex-start;
+}
+
+.grad-fact-icon {
+    width: 46px;
+    height: 46px;
+    border-radius: 16px;
+    border: 1px solid rgba(45, 42, 98, .14);
+    background: rgba(45, 42, 98, .07);
+    display: grid;
+    place-items: center;
+    flex: 0 0 auto;
+}
+
+.grad-fact-icon i { color: var(--primary); }
+
+.grad-fact-body h3 {
+    margin: 0;
+    font-size: 1.05rem;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+}
+
+.grad-fact-body p {
+    margin: 6px 0 0;
+    color: rgba(17, 17, 17, .82);
+}
+
+/* ---------- Main sections ---------- */
+.grad-section { margin: 1.4rem 0; }
+.grad-section h2 { margin-top: 0; }
+
+.grad-inline-actions {
+    display: flex;
+    gap: 12px;
+    margin-top: 14px;
+}
+
+@media (max-width: 720px) {
+    .grad-inline-actions { flex-direction: column; }
+}
+
+/* Emphasis card */
+.grad-emphasis {
+    position: relative;
+    overflow: hidden;
+}
+
+.grad-emphasis::before {
+    content: "";
+    position: absolute;
+    inset: -1px auto -1px -1px;
+    width: 6px;
+    background: var(--primary);
+    opacity: .9;
+    border-radius: 16px;
+}
+
+.grad-section-head {
+    display: flex;
+    gap: 14px;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.grad-section-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 18px;
+    border: 1px solid rgba(45, 42, 98, .14);
+    background: rgba(45, 42, 98, .07);
+    display: grid;
+    place-items: center;
+    flex: 0 0 auto;
+}
+
+.grad-section-icon i { color: var(--primary); }
+
+.grad-stipend {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin-top: 14px;
+}
+
+@media (max-width: 720px) {
+    .grad-stipend { grid-template-columns: 1fr; }
+}
+
+.grad-stipend-item {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 14px 16px;
+    box-shadow: 0 10px 26px rgba(0, 0, 0, .06);
+}
+
+.grad-stipend-kicker {
+    font-weight: 900;
+    letter-spacing: -0.01em;
+    color: var(--primary);
+}
+
+.grad-stipend-value {
+    margin-top: 6px;
+    font-size: 1.1rem;
+    font-weight: 800;
+}
+
+/* Timeline */
+.grad-timeline {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 12px;
+    margin: 16px 0 10px;
+}
+
+@media (max-width: 960px) {
+    .grad-timeline { grid-template-columns: 1fr; }
+}
+
+.grad-timeline-card {
+    background: rgba(255, 255, 255, .9);
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    padding: 14px 16px;
+    box-shadow: 0 10px 26px rgba(0, 0, 0, .06);
+}
+
+.grad-timeline-title {
+    font-weight: 900;
+    letter-spacing: -0.02em;
+    color: rgba(17, 17, 17, .88);
+}
+
+.grad-timeline-value {
+    margin-top: 6px;
+    font-weight: 800;
+    color: var(--primary);
+}
+
+.grad-cta-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 16px;
+}
+
+/* Ready block */
+.grad-ready {
+    margin-top: 22px;
+    text-align: center;
+}
+
+.grad-ready-actions {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 14px;
+}
+
+@media (max-width: 720px) {
+    .grad-ready-actions { flex-direction: column; align-items: stretch; }
+}
+
 /* =========================
    Graduate Supervisors
    ========================= */
@@ -15,23 +248,11 @@
     }
 }
 
-.spacer-16 {
-    display: flex;
-    gap: 16px;
-    margin-bottom: 24px;
-}
-
-@media (max-width: 720px) {
-    .spacer-16 {
-        flex-direction: column;
-    }
-}
-
 .gsup-controls {
     display: grid;
     grid-template-columns: 1fr auto;
     gap: 12px;
-    margin-bottom: 18px;
+    margin: 18px 0 18px;
 }
 
 .gsup-search {
@@ -77,14 +298,28 @@
     overflow: hidden;
 }
 
+.sup-card::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 4px;
+    height: 100%;
+    background: var(--primary);
+    opacity: 0;
+    transition: opacity .22s ease;
+}
+
 .sup-card:hover {
     transform: translateY(-6px);
     box-shadow: 0 18px 44px rgba(0, 0, 0, .12);
 }
 
+.sup-card:hover::before { opacity: 1; }
+
 .sup-top {
     display: grid;
-    grid-template-columns: 54px 1fr auto;
+    grid-template-columns: 54px 1fr;
     gap: 12px;
     align-items: center;
 }
@@ -129,14 +364,29 @@
     color: var(--muted);
 }
 
-.sup-body {
-    margin-top: 12px;
-    display: grid;
-    gap: 10px;
-}
-
 .sup-details {
     padding-top: 10px;
+}
+
+.sup-areas {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.sup-chip {
+    display: inline-flex;
+    align-items: center;
+    padding: 6px 10px;
+    border-radius: 999px;
+    border: 1px solid var(--border);
+    background: rgba(255, 255, 255, .7);
+    font-weight: 700;
+    font-size: 13px;
+    color: rgba(17, 17, 17, .82);
 }
 
 .sup-details p {

@@ -9,7 +9,7 @@ function render() {
     PROJECT_COURSES && Object.keys(PROJECT_COURSES).sort((a, b) => b - a).forEach(year => {
         let courses = PROJECT_COURSES[year];
         let yearSection = document.createElement('section');
-        yearSection.className = 'card-2';
+        yearSection.className = 'card';
         let yearHeader = document.createElement('h2');
         yearHeader.className = 'card-title';
         yearHeader.textContent = year;
