@@ -28,7 +28,7 @@
 
 .pom-hero {
     display: grid;
-    grid-template-columns: 1.25fr .75fr;
+    grid-template-columns: 1.35fr 0.65fr;
     gap: 18px;
     margin-bottom: 1rem;
 }
@@ -42,8 +42,16 @@
 .pom-meta {
     display: flex;
     flex-direction: row;
-    gap: 1rem;
-    font-size: 1em;
+    justify-content: space-around;
+    align-items: start;
+    gap: 2rem;
+}
+
+@media (max-width: 720px) {
+    .pom-meta {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
 }
 
 .pom-meta strong {
@@ -358,7 +366,6 @@ details[open] .chev {
 }
 
 .solver-item {
-    break-inside: avoid;
     padding: 8px 10px;
     margin: 0 0 10px;
     border-radius: 12px;
@@ -383,5 +390,5 @@ details[open] .chev {
 .solver-aff {
     font-size: 0.7em;
     color: rgba(17, 17, 17, .62);
-    white-space: nowrap;
+    text-align: right;
 }

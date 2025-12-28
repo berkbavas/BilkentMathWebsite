@@ -1,134 +1,235 @@
 export const PROBLEM_OF_MONTH_2025 = [
-    {
-        month: "January",
-        year: 2025,
-        question: "https://math.bilkent.edu.tr/Problem/2501q.pdf",
-        solution: "https://math.bilkent.edu.tr/Problem/2502a.pdf",
-        solvers: [
-            { name: "Adam West", affiliation: "Bilkent University" },
-            { name: "Bella Swan", affiliation: "Middle East Technical University" },
-            { name: "Chris Evans", affiliation: "Istanbul Technical University" },
-            { name: "Derya Aksoy", affiliation: "Hacettepe University" }
-        ]
-    },
-    {
-        month: "February",
-        year: 2025,
-        question: "https://math.bilkent.edu.tr/Problem/2502q.pdf",
-        solution: "https://math.bilkent.edu.tr/Problem/2503a.pdf",
-        solvers: [
-            { name: "Elif Yılmaz", affiliation: "Ankara University" },
-            { name: "Frank Ocean", affiliation: "Bilkent University" },
-            { name: "Grace Hopper", affiliation: "Middle East Technical University" },
-            { name: "Henry Ford", affiliation: "Istanbul Technical University" },
-            { name: "Iris Demir", affiliation: "Hacettepe University" }
-        ]
-    },
-    {
-        month: "March",
-        year: 2025,
-        question: "https://math.bilkent.edu.tr/Problem/2503q.pdf",
-        solution: "https://math.bilkent.edu.tr/Problem/2504a.pdf",
-        solvers: [
-            { name: "Jack Sparrow", affiliation: "Ankara University" },
-            { name: "Karen Page", affiliation: "Bilkent University" },
-            { name: "Leo Messi", affiliation: "Middle East Technical University" }
-        ]
-    },
-    {
-        month: "April",
-        year: 2025,
-        question: "https://math.bilkent.edu.tr/Problem/2504q.pdf",
-        solution: "https://math.bilkent.edu.tr/Problem/2505a.pdf",
-        solvers: [
-            { name: "Maya Angelou", affiliation: "Istanbul Technical University" },
-            { name: "Nathan Drake", affiliation: "Hacettepe University" },
-            { name: "Okan Kaya", affiliation: "Ankara University" },
-            { name: "Paula Abdul", affiliation: "Bilkent University" }
-        ]
-    },
-    {
-        month: "May",
-        year: 2025,
-        question: "https://math.bilkent.edu.tr/Problem/2505q.pdf",
-        solution: "https://math.bilkent.edu.tr/Problem/2506a.pdf",
-        solvers: [
-            { name: "Quincy Adams", affiliation: "Middle East Technical University" },
-            { name: "Rita Ora", affiliation: "Istanbul Technical University" },
-            { name: "Selin Arslan", affiliation: "Hacettepe University" }
-        ]
-    },
-    {
-        month: "June",
-        year: 2025,
-        question: "https://math.bilkent.edu.tr/Problem/2506q.pdf",
-        solution: "https://math.bilkent.edu.tr/Problem/2507a.pdf",
-        solvers: [
-            { name: "Tom Holland", affiliation: "Ankara University" },
-            { name: "Umut Çelik", affiliation: "Bilkent University" }
-        ]
-    },
-    {
-        month: "July",
-        year: 2025,
-        question: "https://math.bilkent.edu.tr/Problem/2507q.pdf",
-        solution: "https://math.bilkent.edu.tr/Problem/2508a.pdf",
-        solvers: [
-            { name: "Vera Wang", affiliation: "Middle East Technical University" },
-            { name: "Will Turner", affiliation: "Istanbul Technical University" },
-            { name: "Xenia Ivanova", affiliation: "Hacettepe University" }
-        ]
-    },
-    {
-        month: "August",
-        year: 2025,
-        question: "https://math.bilkent.edu.tr/Problem/2508q.pdf",
-        solution: "https://math.bilkent.edu.tr/Problem/2509a.pdf",
-        solvers: [
-            { name: "Yusuf Emre", affiliation: "Ankara University" },
-            { name: "Zoe Kravitz", affiliation: "Bilkent University" }
-        ]
-    },
-    {
-        month: "September",
-        year: 2025,
-        question: "https://math.bilkent.edu.tr/Problem/2509q.pdf",
-        solution: "https://math.bilkent.edu.tr/Problem/2510a.pdf",
-        solvers: [
-            { name: "Aaron Paul", affiliation: "Middle East Technical University" },
-            { name: "Burcu Şahin", affiliation: "Istanbul Technical University" },
-            { name: "Cem Yıldız", affiliation: "Hacettepe University" }
-        ]
-    },
-    {
-        month: "October",
-        year: 2025,
-        question: "https://math.bilkent.edu.tr/Problem/2510q.pdf",
-        solution: "https://math.bilkent.edu.tr/Problem/2511a.pdf",
-        solvers: [
-            { name: "Dustin Hoffman", affiliation: "Ankara University" },
-            { name: "Ece Koç", affiliation: "Bilkent University" }
-        ]
-    },
-    {
-        month: "November",
-        year: 2025,
-        question: "https://math.bilkent.edu.tr/Problem/2511q.pdf",
-        solution: "https://math.bilkent.edu.tr/Problem/2512a.pdf",
-        solvers: [
-            { name: "Fırat Özdemir", affiliation: "Middle East Technical University" },
-            { name: "Gina Torres", affiliation: "Istanbul Technical University" }
-        ]
-    },
-    {
-        month: "December",
-        year: 2025,
-        question: "https://math.bilkent.edu.tr/Problem/2512q.pdf",
-        solution: "https://math.bilkent.edu.tr/Problem/2601a.pdf",
-        solvers: [
-            { name: "Hasan Ali", affiliation: "Hacettepe University" },
-            { name: "Ivy Chen", affiliation: "Ankara University" },
-            { name: "John Nash", affiliation: "Bilkent University" }
-        ]
-    }
+  {
+    month: "January",
+    year: 2025,
+    question: "2412q.pdf",
+    solution: "2501a.pdf",
+    solvers: [
+      { name: "Toshihiro Shimizu", affiliation: "Kawasaki, Japan" },
+      { name: "Hasan Zübeyr Demir", affiliation: "Ankara" },
+      { name: "Hamza Akdeniz", affiliation: "Bilkent University" },
+      { name: "Albert Stadler", affiliation: "Herrliberg, Switzerland" },
+      { name: "Mehmet Samet Ödük", affiliation: "METU" },
+      { name: "Mehmet Çağatay Ünlü", affiliation: "İstanbul Atatürk Fen Lisesi" },
+      { name: "Orazguly Gylyjov", affiliation: "Magtymguly Turkmen State University" },
+      { name: "Ahmet Yüksel", affiliation: "Aydın" },
+      { name: "Alper Balcı", affiliation: "Ohio State University" },
+      { name: "Magnus Jakobsson", affiliation: "Lund, Sweden" },
+      { name: "Emre Bektaş", affiliation: "Boğaziçi University" },
+      { name: "Mahri Asgarova", affiliation: "Ashgabat Türkmenistan" },
+      { name: "Kerem Gelir", affiliation: "İstanbul Atatürk Fen Lisesi" },
+      { name: "Yunus Orazow", affiliation: "" },
+      { name: "Ramazan Karaşahin", affiliation: "Ankara" },
+      { name: "Mümtaz Ulaş Keskin", affiliation: "Erciyes University" },
+      { name: "Yiğit Can Karakaş", affiliation: "" },
+      { name: "Roger Bengtsson", affiliation: "Lund, Sweden" },
+      { name: "Arda Karahan", affiliation: "Trabzon Fen Lisesi" },
+      { name: "Choi Min Kyu", affiliation: "South Korea" },
+      { name: "Mustafa Derelioğlu", affiliation: "METU" },
+      { name: "Nawal Kishor Mishra", affiliation: "Hyderabad, India" },
+      { name: "Maliksha Meylismyradov", affiliation: "86th School, Askgabat, Türkmenistan" },
+      { name: "Vedat Deveci", affiliation: "İstanbul" },
+      { name: "Murat Dilber", affiliation: "Eskişehir Technical University" }
+    ]
+  },
+  {
+    month: "February",
+    year: 2025,
+    question: "2501q.pdf",
+    solution: "2502a.pdf",
+    solvers: [
+      { name: "Toshihiro Shimizu", affiliation: "Kawasaki, Japan" },
+      { name: "Ramazan Karaşahin", affiliation: "Ankara" },
+      { name: "Mustafa Kaynak", affiliation: "Gaziantep" },
+      { name: "Magnus Jakobsson", affiliation: "Lund, Sweden" },
+      { name: "Mahri Asgarova", affiliation: "Ashgabat, Turkmenistan" },
+      { name: "Roger Bengtsson", affiliation: "Lund, Sweden" },
+      { name: "Arda Karahan", affiliation: "Trabzon Fen Lisesi" },
+      { name: "Hamza Allaberdiyev", affiliation: "135th Specialized High School, Ashgabat" },
+      { name: "Alper Çay", affiliation: "Ankara University, MTA" }
+    ]
+  },
+  {
+    month: "March",
+    year: 2025,
+    question: "2502q.pdf",
+    solution: "2503a.pdf",
+    solvers: [
+      { name: "Toshihiro Shimizu", affiliation: "Kawasaki, Japan" },
+      { name: "Ramazan Karaşahin", affiliation: "Ankara" },
+      { name: "Burak Işıner Eker", affiliation: "Bilkent University" },
+      { name: "Hasan Zübeyr Demir", affiliation: "Ankara" },
+      { name: "Yunus Orazow", affiliation: "49th School, Ashgabat, Turkmenistan" },
+      { name: "Roger Bengtsson", affiliation: "Lund, Sweden" },
+      { name: "Magnus Jakobsson", affiliation: "Lund, Sweden" },
+      { name: "Ahmet Yıldız", affiliation: "İbrahim-Süheyla İzmirli Fen Lisesi, Ereğli, Zonguldak" },
+      { name: "Arda Karahan", affiliation: "Trabzon Fen Lisesi" }
+    ]
+  },
+  {
+    month: "April",
+    year: 2025,
+    question: "2503q.pdf",
+    solution: "2504a.pdf",
+    solvers: [
+      { name: "Toshihiro Shimizu", affiliation: "Kawasaki, Japan" },
+      { name: "Ramazan Karaşahin", affiliation: "Ankara" },
+      { name: "Albert Stadler", affiliation: "Herrliberg, Switzerland" },
+      { name: "Mahmut Semih Baş", affiliation: "İstanbul Technical University" },
+      { name: "Magnus Jakobsson", affiliation: "Lund, Sweden" },
+      { name: "Meliksha Meylismyradov", affiliation: "86th School, Ashgabat, Turkmenistan" },
+      { name: "Emre Bektaş", affiliation: "Boğaziçi University" },
+      { name: "Roger Bengtsson", affiliation: "Lund, Sweden" }
+    ]
+  },
+  {
+    month: "May",
+    year: 2025,
+    question: "2504q.pdf",
+    solution: "2505a.pdf",
+    solvers: [
+      { name: "Toshihiro Shimizu", affiliation: "Kawasaki, Japan" },
+      { name: "Mahmut Semih Baş", affiliation: "İstanbul Technical University" },
+      { name: "Ramazan Karaşahin", affiliation: "Ankara" },
+      { name: "Hasan Zübeyr Demir", affiliation: "Ankara" },
+      { name: "Magnus Jakobsson", affiliation: "Lund, Sweden" },
+      { name: "Özgür Soysal", affiliation: "Bilkent University" },
+      { name: "Murat Beşli", affiliation: "Politecnico di Torino" },
+      { name: "Arda Karahan", affiliation: "Trabzon Fen Lisesi" },
+      { name: "Ananda Raidu", affiliation: "Rajahmundry,  India" },
+      { name: "Serhat Güldoğan", affiliation: "Koç University" }
+    ]
+  },
+  {
+    month: "June",
+    year: 2025,
+    question: "2505q.pdf",
+    solution: "2506a.pdf",
+    solvers: [
+      { name: "Toshihiro Shimizu", affiliation: "Kawasaki, Japan" },
+      { name: "Murat Beşli", affiliation: "Politecnico di Torino, Italy" },
+      { name: "Magnus Jakobsson", affiliation: "Lund, Sweden" },
+      { name: "Roger Bengtsson", affiliation: "Lund, Sweden" },
+      { name: "Arda Karahan", affiliation: "Trabzon Fen Lisesi" },
+      { name: "Burak İşiner Eker", affiliation: "Bilkent University" },
+      { name: "Tamer Türkoğlu", affiliation: "" },
+      { name: "Mümtaz Ulaş Keskin", affiliation: "" },
+      { name: "Ramazan Karaşahin", affiliation: "Ankara" },
+      { name: "Choi Min Kyu", affiliation: "South Korea" }
+    ]
+  },
+  {
+    month: "July",
+    year: 2025,
+    question: "2506q.pdf",
+    solution: "2508a.pdf",
+    solvers: [
+      { name: "Toshihiro Shimizu", affiliation: "Kawasaki, Japan" },
+      { name: "Ahmet Yüksel", affiliation: "Aydın" },
+      { name: "Umut Eren Bilgiç", affiliation: "New Albany High School, Ohio, USA" },
+      { name: "Mert Emir", affiliation: "" },
+      { name: "Magnus Jakobsson", affiliation: "Lund, Sweden" },
+      { name: "Albert Stadler", affiliation: "Herrliberg, Switzerland" },
+      { name: "Serkan Sonel", affiliation: "Bilkent University" },
+      { name: "Roger Bengtsson", affiliation: "Lund, Sweden" },
+      { name: "Choi Min Kyu", affiliation: "South Korea" }
+    ]
+  },
+  {
+    month: "August",
+    year: 2025,
+    question: "2506q.pdf",
+    solution: "2508a.pdf",
+    solvers: [
+      { name: "Toshihiro Shimizu", affiliation: "Kawasaki, Japan" },
+      { name: "Ahmet Yüksel", affiliation: "Aydın" },
+      { name: "Umut Eren Bilgiç", affiliation: "New Albany High School, Ohio, USA" },
+      { name: "Mert Emir", affiliation: "" },
+      { name: "Magnus Jakobsson", affiliation: "Lund, Sweden" },
+      { name: "Albert Stadler", affiliation: "Herrliberg, Switzerland" },
+      { name: "Serkan Sonel", affiliation: "Bilkent University" },
+      { name: "Roger Bengtsson", affiliation: "Lund, Sweden" },
+      { name: "Choi Min Kyu", affiliation: "South Korea" }
+    ]
+  },
+  {
+    month: "September",
+    year: 2025,
+    question: "2508q.pdf",
+    solution: "2509a.pdf",
+    solvers: [
+      { name: "Toshihiro Shimizu", affiliation: "Kawasaki, Japan" },
+      { name: "Çağrı Maraşlı", affiliation: "Ankara Özel Yıldız Sınav Ortaokulu" },
+      { name: "Vedat Deveci", affiliation: "İstanbul" },
+      { name: "Albert Stadler", affiliation: "Herrliberg, Switzerland" },
+      { name: "Tamer Türkoğlu", affiliation: "" },
+      { name: "Oğuz Çetin", affiliation: "Bursa" },
+      { name: "Hari Kishan", affiliation: "D.N. College Meerut, India" },
+      { name: "Asım Kağan Oğuz", affiliation: "Bilkent University" },
+      { name: "Recep Bindak", affiliation: "Gaziantep" },
+      { name: "Halil İbrahim Dokuyucu", affiliation: "TİSKİ, Trabzon" },
+      { name: "Mustafa Kaynak", affiliation: "Gaziantep" },
+      { name: "Ahmet Erhan Avcı", affiliation: "Bilkent University" },
+      { name: "Cuma Güngörü", affiliation: "" },
+      { name: "Abdulkadir Tanrıverdi", affiliation: "Eskişehir" },
+      { name: "Ahmet Yasir Bora", affiliation: "Istanbul Technical University" },
+      { name: "Soyunmuhammet Geldimammedov", affiliation: "School 49, Ashgabat, Turkmenistan" },
+      { name: "Yavuz Selim İpek", affiliation: "İzmir Dokuz Eylül University" },
+      { name: "Levent Koçalan", affiliation: "İzmir" },
+      { name: "Begench Akmyradov", affiliation: "Ashgabat, Turkmenistan" },
+      { name: "Murat Beşli", affiliation: "Politecnico di Torino, Italy" },
+      { name: "Ahmet Yüksel", affiliation: "Aydın" },
+      { name: "Khaled Halaoua", affiliation: "Higher Institute of Appl. Sci. and Tech., Damascus, Syria" },
+      { name: "Muhammed Yüksel", affiliation: "Hacettepe University" },
+      { name: "Jürgen Weith", affiliation: "University of Appl. Sci. Würzburg-Schweinfurt, Germany" },
+      { name: "Magnus Jakobsson", affiliation: "Lund, Sweden" },
+      { name: "Mehmet Sarak", affiliation: "Bilkent University" },
+      { name: "Roger Bengtsson", affiliation: "Lund, Sweden" },
+      { name: "Eray Ege Tokgöz", affiliation: "Bilkent University" },
+      { name: "Javad Aliyev", affiliation: "Middle East Technical University" },
+      { name: "Özgür Soysal", affiliation: "" }
+    ]
+  },
+  {
+    month: "October",
+    year: 2025,
+    question: "2509q.pdf",
+    solution: "2510a.pdf",
+    solvers: [
+      { name: "Mehmet Sarak", affiliation: "Bilkent University" },
+      { name: "Mustafa Kaynak", affiliation: "Gaziantep" },
+      { name: "Toshihiro Shimizu", affiliation: "Kawasaki, Japan" },
+      { name: "Ahmet Erçıkdı", affiliation: "Bilkent University" },
+      { name: "Ananda Raidu", affiliation: "Rajahmundry, India" },
+      { name: "Magnus Jakobsson", affiliation: "Lund, Sweden" },
+      { name: "Javad Aliyev", affiliation: "Middle East Technical University, Ankara" }
+    ]
+  },
+  {
+    month: "November",
+    year: 2025,
+    question: "2510q.pdf",
+    solution: "2511a.pdf",
+    solvers: [
+      { name: "Toshihiro Shimizu", affiliation: "Kawasaki, Japan" },
+      { name: "Mehmet Sarak", affiliation: "Bilkent University" },
+      { name: "Yunus Orazow", affiliation: "40th Specialized School, Ashkabat, Turkmenistan" },
+      { name: "Emir Kara", affiliation: "Gazi Anadolu Lisesi, Ankara" },
+      { name: "Mustafa Kaynak", affiliation: "Gaziantep" },
+      { name: "Erenalp Yuca", affiliation: "Bilkent University" },
+      { name: "Abdulkadir Tanrıverdi", affiliation: "Eskişehir" },
+      { name: "Magnus Jakobsson", affiliation: "Lund, Sweden" },
+      { name: "Roger Bengtsson", affiliation: "Lund, Sweden" },
+      { name: "Alper Balcı", affiliation: "Ohio State University, USA" },
+      { name: "Özgür Soysal", affiliation: "Bilkent University" },
+      { name: "Ananda Raidu", affiliation: "Rajahmundry, India" }
+    ]
+  },
+  {
+    month: "December",
+    year: 2025,
+    question: "2511q.pdf",
+    solution: null,
+    solvers: []
+  }
 ];

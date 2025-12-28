@@ -1,11 +1,33 @@
 import { SEMINARS_2024_2025 } from "../data/seminars/seminars-2024-2025.js";
 import { SEMINARS_2023_2024 } from "../data/seminars/seminars-2023-2024.js";
+import { SEMINARS_2022_2023 } from "../data/seminars/seminars-2022-2023.js";
+import { SEMINARS_2021_2022 } from "../data/seminars/seminars-2021-2022.js";
+import { SEMINARS_2020_2021 } from "../data/seminars/seminars-2020-2021.js";
+import { SEMINARS_2019_2020 } from "../data/seminars/seminars-2019-2020.js";
+import { SEMINARS_2018_2019 } from "../data/seminars/seminars-2018-2019.js";
+import { SEMINARS_2017_2018 } from "../data/seminars/seminars-2017-2018.js";
+import { SEMINARS_2016_2017 } from "../data/seminars/seminars-2016-2017.js";
+import { SEMINARS_2015_2016 } from "../data/seminars/seminars-2015-2016.js";
+import { SEMINARS_2014_2015 } from "../data/seminars/seminars-2014-2015.js";
+import { SEMINARS_2013_2014 } from "../data/seminars/seminars-2013-2014.js";
+
+
 import { TRANSLATIONS } from "../data/translations.js";
 import { escapeHtml } from "./helpers.js";
 
 const DATA = {
     "2024-2025": SEMINARS_2024_2025,
     "2023-2024": SEMINARS_2023_2024,
+    "2022-2023": SEMINARS_2022_2023,
+    "2021-2022": SEMINARS_2021_2022,
+    "2020-2021": SEMINARS_2020_2021,
+    "2019-2020": SEMINARS_2019_2020,
+    "2018-2019": SEMINARS_2018_2019,
+    "2017-2018": SEMINARS_2017_2018,
+    "2016-2017": SEMINARS_2016_2017,
+    "2015-2016": SEMINARS_2015_2016,
+    "2014-2015": SEMINARS_2014_2015,
+    "2013-2014": SEMINARS_2013_2014
 };
 
 const elArchive = document.getElementById("mount");
@@ -38,9 +60,9 @@ function renderRow(seminar) {
         <a class="title-link" target="_blank" href="${seminar.link || "#"}">${escapeHtml(seminar.title)}</a>
         <div class="col-speaker">${escapeHtml(seminar.speaker)}</div>
       </td>
-      <td>${escapeHtml(seminar.date)}</td>
-      <td>${escapeHtml(seminar.time)}</td>
-      <td><span class="pill">${escapeHtml(seminar.place)}</span></td>
+      ${seminar.date ? `<td>${escapeHtml(seminar.date)}</td>` : "<td></td>"}
+      ${seminar.time ? `<td>${escapeHtml(seminar.time)}</td>` : "<td></td>"}
+      ${seminar.place ? `<td><span class="pill">${escapeHtml(seminar.place)}</span></td>` : "<td></td>"}
     </tr>
   `
 }

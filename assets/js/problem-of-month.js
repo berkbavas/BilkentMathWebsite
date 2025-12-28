@@ -1,12 +1,43 @@
-import { PROBLEM_OF_MONTH_2024 } from "../data/problem-of-month/problem-of-month-2024.js";
 import { PROBLEM_OF_MONTH_2025 } from "../data/problem-of-month/problem-of-month-2025.js";
+import { PROBLEM_OF_MONTH_2024 } from "../data/problem-of-month/problem-of-month-2024.js";
+import { PROBLEM_OF_MONTH_2023 } from "../data/problem-of-month/problem-of-month-2023.js";
+import { PROBLEM_OF_MONTH_2022 } from "../data/problem-of-month/problem-of-month-2022.js";
+import { PROBLEM_OF_MONTH_2021 } from "../data/problem-of-month/problem-of-month-2021.js";
+import { PROBLEM_OF_MONTH_2020 } from "../data/problem-of-month/problem-of-month-2020.js";
+import { PROBLEM_OF_MONTH_2019 } from "../data/problem-of-month/problem-of-month-2019.js";
+import { PROBLEM_OF_MONTH_2018 } from "../data/problem-of-month/problem-of-month-2018.js";
+import { PROBLEM_OF_MONTH_2017 } from "../data/problem-of-month/problem-of-month-2017.js";
+import { PROBLEM_OF_MONTH_2016 } from "../data/problem-of-month/problem-of-month-2016.js";
+import { PROBLEM_OF_MONTH_2015 } from "../data/problem-of-month/problem-of-month-2015.js";
+import { PROBLEM_OF_MONTH_2014 } from "../data/problem-of-month/problem-of-month-2014.js";
+import { PROBLEM_OF_MONTH_2013 } from "../data/problem-of-month/problem-of-month-2013.js";
+import { PROBLEM_OF_MONTH_2012 } from "../data/problem-of-month/problem-of-month-2012.js";
+import { PROBLEM_OF_MONTH_2011 } from "../data/problem-of-month/problem-of-month-2011.js";
+import { PROBLEM_OF_MONTH_2010 } from "../data/problem-of-month/problem-of-month-2010.js";
+
 import { TRANSLATIONS, MONTHS_EN_TO_TR } from "../data/translations.js";
 
 // Data for rendering descending years
 const DATA = [
     PROBLEM_OF_MONTH_2025,
-    PROBLEM_OF_MONTH_2024
+    PROBLEM_OF_MONTH_2024,
+    PROBLEM_OF_MONTH_2023,
+    PROBLEM_OF_MONTH_2022,
+    PROBLEM_OF_MONTH_2021,
+    PROBLEM_OF_MONTH_2020,
+    PROBLEM_OF_MONTH_2019,
+    PROBLEM_OF_MONTH_2018,
+    PROBLEM_OF_MONTH_2017,
+    PROBLEM_OF_MONTH_2016,
+    PROBLEM_OF_MONTH_2015,
+    PROBLEM_OF_MONTH_2014,
+    PROBLEM_OF_MONTH_2013,
+    PROBLEM_OF_MONTH_2012,
+    PROBLEM_OF_MONTH_2011,
+    PROBLEM_OF_MONTH_2010
 ];
+
+const URL = "Problem/"; // Base URL for problem PDFs
 
 const elMount = document.getElementById("mount");
 const elLatestProblemBtn = document.getElementById("latestProblemBtn");
@@ -22,13 +53,16 @@ function renderCard(item, lang) {
         (solver) => `
       <li class="solver-item">
         <span class="solver-name">${solver.name}</span>
-        <span class="solver-aff">${solver.affiliation}</span>
+        <span class="solver-aff">${solver.affiliation ? solver.affiliation : ""}</span>
       </li>
     `
     ).join("");
 
     const solverCount = item.solvers?.length || 0;
     let month = lang === "tr" ? MONTHS_EN_TO_TR[item.month] : item.month;
+
+    let question = URL + item.question;
+    let solution = item.solution ? URL + item.solution : null;
 
     return `
   <article class="pom-month-card">
@@ -48,15 +82,17 @@ function renderCard(item, lang) {
       </div>
 
       <div class="pom-links">
-        <a href="${item.question}" target="_blank" class="chip chip-ghost" aria-label="${TRANSLATIONS.pomOpenQuestionAria[lang] || "Open question PDF"}">
-          <i class="fa-regular fa-circle-question"></i>
-          ${TRANSLATIONS.pomQuestionLabel[lang] || "Question"}
+        <a href="${question}" target="_blank" class="chip chip-ghost"}">
+            <i class="fa-regular fa-circle-question"></i>
+            ${TRANSLATIONS.pomQuestionLabel[lang] || "Question"}
         </a>
 
-        <a href="${item.solution}" target="_blank" class="chip chip-ghost" aria-label="${TRANSLATIONS.pomOpenSolutionAria[lang] || "Open solution PDF"}">
-          <i class="fa-regular fa-file-lines"></i>
-          ${TRANSLATIONS.pomSolutionLabel[lang] || "Solution"}
+        ${solution ? `
+        <a href="${solution}" target="_blank" class="chip chip-ghost"}">
+            <i class="fa-regular fa-file-lines"></i>
+            ${TRANSLATIONS.pomSolutionLabel[lang] || "Solution"}
         </a>
+        ` : ""}
       </div>
     </div>
 
@@ -237,6 +273,21 @@ TRANSLATIONS.mailAddressLine3 = {
 TRANSLATIONS.emailLabel = {
     en: "Email:",
     tr: "E-posta:"
+};
+
+TRANSLATIONS.faxLabel = {
+    en: "Fax:",
+    tr: "Faks:"
+};
+
+TRANSLATIONS.faxAttention = {
+    en: "Attention: Azer Kerimov",
+    tr: "İlgili: Azer Kerimov"
+};
+
+TRANSLATIONS.faxSubject = {
+    en: "Subject: Math problem of the month",
+    tr: "Konu: Ayın matematik sorusu"
 };
 
 TRANSLATIONS.quickLinksTitle = {
