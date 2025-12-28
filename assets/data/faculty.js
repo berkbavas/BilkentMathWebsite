@@ -1,6 +1,7 @@
 export const CURRENT_FACULTY = [
     {
         name: "İnci Pekgüleç Apaydın",
+        isSupervisor: false,
         title: { en: "Instructor", tr: "Öğretim Görevlisi" },
         degree: {
             en: "M.S., Operational Research, Middle East Technical University, 1989",
@@ -16,8 +17,10 @@ export const CURRENT_FACULTY = [
         photo: "https://math.bilkent.edu.tr/apaydin.jpg",
         webpage: ""
     },
+
     {
         name: "Fatihcan Atay",
+        isSupervisor: true,
         title: { en: "Professor", tr: "Profesör Dr." },
         degree: {
             en: "Ph.D., Applied Mathematics, Brown University, 1994",
@@ -33,12 +36,14 @@ export const CURRENT_FACULTY = [
         photo: "https://math.bilkent.edu.tr/atay-2.jpg",
         webpage: "https://fatihcanatay.wordpress.com/"
     },
+
     {
         name: "Cihan Bahran",
+        isSupervisor: true,
         title: { en: "Assistant Professor", tr: "Dr. Öğr. Üyesi" },
         degree: {
             en: "Ph.D., Mathematics, University of Minnesota, 2019",
-            tr: "Doktora,Matematik, Minnesota Universitesi, 2019"
+            tr: "Doktora, Matematik, Minnesota Üniversitesi, 2019"
         },
         research: {
             en: ["Functorial Representation Theory with applications to Topology"],
@@ -50,8 +55,10 @@ export const CURRENT_FACULTY = [
         photo: "https://math.bilkent.edu.tr/bahran.jpg",
         webpage: "https://www.cihanbahran.org/"
     },
+
     {
         name: "Laurence Barker",
+        isSupervisor: true,
         title: { en: "Associate Professor", tr: "Doçent Dr." },
         degree: {
             en: "Ph.D., Mathematics, Oxford University, 1992",
@@ -67,8 +74,10 @@ export const CURRENT_FACULTY = [
         photo: "https://math.bilkent.edu.tr/barker-2.jpg",
         webpage: "http://www.fen.bilkent.edu.tr/~barker/fenis2.html"
     },
+
     {
         name: "Alexander Degtyarev",
+        isSupervisor: true,
         title: { en: "Professor", tr: "Profesör Dr." },
         degree: {
             en: "Ph.D., Mathematics, Steklov Mathematical Institute, 1988",
@@ -84,8 +93,10 @@ export const CURRENT_FACULTY = [
         photo: "https://math.bilkent.edu.tr/degtyarev-2.jpg",
         webpage: "http://www.fen.bilkent.edu.tr/~degt/"
     },
+
     {
         name: "Alexander Goncharov",
+        isSupervisor: true,
         title: { en: "Associate Professor", tr: "Doçent Dr." },
         degree: {
             en: "Ph.D., Mathematics, Rostov State University, 1986",
@@ -101,8 +112,10 @@ export const CURRENT_FACULTY = [
         photo: "https://math.bilkent.edu.tr/goncharov-2.jpg",
         webpage: "http://www.fen.bilkent.edu.tr/~goncha/index.html"
     },
+
     {
         name: "Ahmet Güloğlu",
+        isSupervisor: true,
         title: { en: "Associate Professor", tr: "Doçent Dr." },
         degree: {
             en: "Ph.D., Mathematics, Ohio State University, 2005",
@@ -118,8 +131,10 @@ export const CURRENT_FACULTY = [
         photo: "https://math.bilkent.edu.tr/guloglu-2.jpg",
         webpage: "http://www.fen.bilkent.edu.tr/~guloglua/"
     },
+
     {
         name: "Yaghoub Heydarzade",
+        isSupervisor: true,
         title: { en: "Assistant Professor", tr: "Dr. Öğr. Üyesi" },
         degree: {
             en: "Ph.D., Physics, Azarbaijan Shahid Madani University, 2018",
@@ -135,8 +150,10 @@ export const CURRENT_FACULTY = [
         photo: "https://math.bilkent.edu.tr/heydarzade-2.jpg",
         webpage: "https://www.yaghoubheydarzade.com/"
     },
+
     {
         name: "H. Turgay Kaptanoğlu",
+        isSupervisor: true,
         title: { en: "Professor", tr: "Profesör Dr." },
         degree: {
             en: "Ph.D., Mathematics, University of Wisconsin-Madison, 1991",
@@ -152,8 +169,10 @@ export const CURRENT_FACULTY = [
         photo: "https://math.bilkent.edu.tr/kaptanoglu-2.jpg",
         webpage: "http://www.fen.bilkent.edu.tr/~kaptan/"
     },
+
     {
         name: "Enis Kaya",
+        isSupervisor: true,
         title: { en: "Assistant Professor", tr: "Dr. Öğr. Üyesi" },
         degree: { en: "Ph. D., University of Groningen", tr: "Doktora, Groningen Üniversitesi" },
         research: {
@@ -166,8 +185,10 @@ export const CURRENT_FACULTY = [
         photo: "https://math.bilkent.edu.tr/kaya.jpg",
         webpage: "https://sites.google.com/view/eniskaya/home"
     },
+
     {
         name: "Azer Kerimov",
+        isSupervisor: true,
         title: { en: "Professor", tr: "Profesör Dr." },
         degree: {
             en: "Ph.D., Mathematics, Landau Institute of Theoretical Physics and Academy of Sciences of Azerbaijan, 1988",
@@ -183,8 +204,10 @@ export const CURRENT_FACULTY = [
         photo: "https://math.bilkent.edu.tr/kerimov-2.jpg",
         webpage: "http://www.fen.bilkent.edu.tr/~kerimov/fenis2.html"
     },
+
     {
         name: "Yasir Kızmaz",
+        isSupervisor: true,
         title: { en: "Assistant Professor", tr: "Dr. Öğr. Üyesi" },
         degree: {
             en: "Ph.D., Mathematics, Middle East Technical University, 2018",
@@ -197,8 +220,10 @@ export const CURRENT_FACULTY = [
         photo: "https://math.bilkent.edu.tr/kizmaz.jpg",
         webpage: "https://myasir-kizmaz.wixsite.com/my-homepage"
     },
+
     {
         name: "Konstantinos Maronikolakis",
+        isSupervisor: false,
         title: { en: "Visiting Assistant Professor", tr: "Misafir Dr. Öğr. Üyesi" },
         degree: {
             en: "Ph.D., Mathematics, University College Dublin, 2024",
@@ -214,8 +239,10 @@ export const CURRENT_FACULTY = [
         photo: "https://math.bilkent.edu.tr/maronikolakis.png",
         webpage: "https://conmaro.github.io/"
     },
+
     {
         name: "Cihan Okay",
+        isSupervisor: true,
         title: { en: "Assistant Professor", tr: "Dr. Öğr. Üyesi" },
         degree: {
             en: "Ph.D., Mathematics, University of British Columbia, 2014",
@@ -231,8 +258,10 @@ export const CURRENT_FACULTY = [
         photo: "https://math.bilkent.edu.tr/okay.jpg",
         webpage: "https://www.cihanokay.com/"
     },
+
     {
         name: "Türker Özsarı",
+        isSupervisor: true,
         title: { en: "Associate Professor, Department Head", tr: "Doçent Dr., Bölüm Başkanı" },
         degree: {
             en: "Ph.D., Mathematics, University of Virginia, 2010",
@@ -248,8 +277,10 @@ export const CURRENT_FACULTY = [
         photo: "https://math.bilkent.edu.tr/ozsari.jpg",
         webpage: "https://turkerozsari.com/"
     },
+
     {
         name: "Naci Saldı",
+        isSupervisor: true,
         title: { en: "Associate Professor", tr: "Doçent Dr." },
         degree: {
             en: "Ph.D., Applied Mathematics, Queen's University, 2015",
@@ -265,8 +296,10 @@ export const CURRENT_FACULTY = [
         photo: "https://math.bilkent.edu.tr/saldi.jpg",
         webpage: "https://web4.bilkent.edu.tr/saldi/"
     },
+
     {
         name: "Ali Sinan Sertöz",
+        isSupervisor: true,
         title: { en: "Professor", tr: "Profesör Dr." },
         degree: {
             en: "Ph.D., Mathematics, University of British Columbia, 1984",
@@ -279,8 +312,10 @@ export const CURRENT_FACULTY = [
         photo: "https://math.bilkent.edu.tr/sertoz-2.jpg",
         webpage: "https://sertoz.bilkent.edu.tr/"
     },
+
     {
         name: "Müfit Sezer",
+        isSupervisor: true,
         title: { en: "Professor", tr: "Profesör Dr." },
         degree: {
             en: "Ph.D., Mathematics, Purdue University, 2003",
@@ -296,8 +331,10 @@ export const CURRENT_FACULTY = [
         photo: "https://math.bilkent.edu.tr/sezer-2.jpg",
         webpage: "https://orcid.org/0000-0002-6704-5399"
     },
+
     {
         name: "Syed Waqar Ali Shah",
+        isSupervisor: false,
         title: { en: "Assistant Professor", tr: "Dr. Öğr. Üyesi" },
         degree: { en: "Ph.D., Harvard University", tr: "Doktora, Harvard Üniversitesi" },
         research: { en: ["Iwasawa Theory", "Arithmetic Geometry"], tr: ["İwasawa Teorisi", "Aritmetik Geometri"] },
@@ -307,8 +344,10 @@ export const CURRENT_FACULTY = [
         photo: "https://math.bilkent.edu.tr/shah.jpg",
         webpage: "https://sites.google.com/view/swshah/home"
     },
+
     {
         name: "Okan Tekman",
+        isSupervisor: false,
         title: { en: "Senior Lecturer", tr: "Senior Lecturer" },
         degree: {
             en: "Ph.D., Mathematics, University of Minnesota, 1992",
@@ -321,8 +360,10 @@ export const CURRENT_FACULTY = [
         photo: "https://math.bilkent.edu.tr/tekman-2.jpg",
         webpage: "http://www.fen.bilkent.edu.tr/~otekman/"
     },
+
     {
         name: "Bülent Ünal",
+        isSupervisor: true,
         title: { en: "Associate Professor", tr: "Doçent Dr." },
         degree: {
             en: "Ph.D., Mathematics, University of Missouri, 2000",
@@ -338,8 +379,10 @@ export const CURRENT_FACULTY = [
         photo: "https://math.bilkent.edu.tr/unal-2.jpg",
         webpage: "http://www.fen.bilkent.edu.tr/~bulent/"
     },
+
     {
         name: "Özgün Ünlü",
+        isSupervisor: true,
         title: { en: "Associate Professor", tr: "Doçent Dr." },
         degree: {
             en: "Ph.D., Mathematics, University of Wisconsin-Madison, 2004",
@@ -355,8 +398,10 @@ export const CURRENT_FACULTY = [
         photo: "https://math.bilkent.edu.tr/unlu-2.jpg",
         webpage: "http://www.fen.bilkent.edu.tr/~unluo/"
     },
+
     {
         name: "Ergün Yalçın",
+        isSupervisor: true,
         title: { en: "Professor", tr: "Profesör Dr." },
         degree: {
             en: "Ph.D., Mathematics, University of Wisconsin-Madison, 1998",
@@ -372,8 +417,10 @@ export const CURRENT_FACULTY = [
         photo: "https://math.bilkent.edu.tr/yalcin-2.jpg",
         webpage: "http://www.fen.bilkent.edu.tr/~yalcine/"
     },
+
     {
         name: "Hamza Yeşilyurt",
+        isSupervisor: true,
         title: { en: "Associate Professor", tr: "Doçent Dr." },
         degree: {
             en: "Ph.D., Mathematics, University of Illinois Urbana-Champaign, 2004",
@@ -386,8 +433,10 @@ export const CURRENT_FACULTY = [
         photo: "https://math.bilkent.edu.tr/yesilyurt-2.jpg",
         webpage: "http://www.fen.bilkent.edu.tr/~hamza/"
     },
+
     {
         name: "Gökhan Yıldırım",
+        isSupervisor: true,
         title: { en: "Assistant Professor", tr: "Dr. Öğr. Üyesi" },
         degree: {
             en: "Ph.D., Applied Mathematics, University of Southern California, 2013",
@@ -403,8 +452,10 @@ export const CURRENT_FACULTY = [
         photo: "https://math.bilkent.edu.tr/yildirim-2.jpg",
         webpage: "https://orcid.org/0000-0003-4399-7843"
     },
+
     {
         name: "Deniz Yılmaz",
+        isSupervisor: true,
         title: { en: "Assistant Professor", tr: "Dr. Öğr. Üyesi" },
         degree: {
             en: "Ph.D., Mathematics, University of California, Santa Cruz, 2020",
@@ -420,8 +471,10 @@ export const CURRENT_FACULTY = [
         photo: "https://math.bilkent.edu.tr/d.yilmaz.jpg",
         webpage: "https://yilmazdeniz.bilkent.edu.tr/"
     },
+
     {
         name: "Natalya Zheltukhina",
+        isSupervisor: false,
         title: { en: "Instructor", tr: "Öğretim Görevlisi" },
         degree: {
             en: "Ph.D., Mathematics, Bilkent University, 2002",

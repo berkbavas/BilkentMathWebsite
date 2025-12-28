@@ -1,6 +1,6 @@
 /* assets/js/heads-of-department.js */
 
-import { HEADS_OF_DEPARTMENT_EN, HEADS_OF_DEPARTMENT_TR } from "../data/history.js";
+import { HEADS_OF_DEPARTMENT } from "../data/history.js";
 
 function renderCard(head) {
     return `
@@ -35,7 +35,15 @@ function renderCard(head) {
 function render() {
     const container = document.getElementById("heads-root");
     const lang = localStorage.getItem("lang") || "en";
-    const heads = lang === "tr" ? HEADS_OF_DEPARTMENT_TR : HEADS_OF_DEPARTMENT_EN;
+    const heads = HEADS_OF_DEPARTMENT.map(head => ({
+        name: head.name,
+        term: head.term,
+        webpage: head.webpage,
+        photo: head.photo,
+        title: head.title[lang] || "",
+        phd: head.phd[lang] || "",
+        areas: head.areas[lang] || ""
+    }));
     container.innerHTML = heads.map(renderCard).join("");
 }
 

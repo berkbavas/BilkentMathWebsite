@@ -1,4 +1,4 @@
-import { NEWS_EN, NEWS_TR } from "../data/news.js";
+import { NEWS } from "../data/news.js";
 
 let elMount = document.getElementById("news-timeline");
 
@@ -43,14 +43,32 @@ function renderYear(year, items) {
 }
 
 function render() {
-    let lang = localStorage.getItem("lang") || "en";
-    let newsData = lang === "tr" ? NEWS_TR : NEWS_EN;
-
     elMount.innerHTML = "";
-
-    let years = Object.keys(newsData).sort((a, b) => b - a);
-    years.forEach((year) => {
-        elMount.appendChild(renderYear(year, newsData[year]));
+    const lang = localStorage.getItem("lang") || "en";
+    
+    // Group news items by year
+    const groupedByYear = NEWS.reduce((acc, item) => {
+        if (!acc[item.year]) {
+            acc[item.year] = [];
+        }
+        
+        // Transform the item to have the right language properties
+        const transformedItem = {
+            date: item.date[lang],
+            content: item.content[lang]
+        };
+        
+        acc[item.year].push(transformedItem);
+        return acc;
+    }, {});
+    
+    // Sort years in descending order (newest first)
+    const sortedYears = Object.keys(groupedByYear).sort((a, b) => b - a);
+    
+    // Render each year section
+    sortedYears.forEach(year => {
+        const yearSection = renderYear(year, groupedByYear[year]);
+        elMount.appendChild(yearSection);
     });
 }
 

@@ -1,5 +1,5 @@
 import { TRANSLATIONS } from '../data/translations.js';
-import { GRADUATE_SUPERVISORS_EN, GRADUATE_SUPERVISORS_TR } from "../data/graduate-supervisors.js";
+import { CURRENT_FACULTY } from "../data/faculty.js";
 import { escapeHtml } from "./helpers.js";
 
 const elRoot = document.getElementById("supRoot");
@@ -21,7 +21,7 @@ function matches(p, search) {
         return true;
     }
 
-    for (const area of p.areas) {
+    for (const area of p.research) {
         if (area.toLowerCase().includes(lowerSearch)) {
             return true;
         }
@@ -31,30 +31,29 @@ function matches(p, search) {
 
 
 function cardTemplate(p) {
-    const esc = escapeHtml;
-    const name = esc(p.name || "");
-    const rank = esc(p.rank || "");
+    const name = p.name || "";
+    const title = p.title || "";
     const photo = (p.photo || "").trim();
-    const areasText = p.areas.join(", ");
-    const url = p.url || "#";
+    const areasText = p.research.join(", ");
+    const webpage = p.webpage || "#";
 
     const avatar = photo
-        ? `<img src="${esc(photo)}" alt="${name}" loading="lazy">`
-        : `<span class="sup-initials">${esc(initials(p.name || ""))}</span>`;
+        ? `<img src="${photo}" alt="${name}" loading="lazy">`
+        : `<span class="sup-initials">${initials(p.name || "")}</span>`;
 
     return `
     <article class="sup-card">
         <div class="sup-top">
-            <a href="${esc(url)}" class="sup-avatar">${avatar}</a>
+            <a href="${webpage}" class="sup-avatar">${avatar}</a>
 
             <div style="min-width:0">
-                <a href="${esc(url)}" class="sup-name" target="_blank">${name}</a>
-                ${rank ? `<div class="sup-rank">${rank}</div>` : ""}
+                <a href="${webpage}" class="sup-name" target="_blank">${name}</a>
+                ${title ? `<div class="sup-rank">${title}</div>` : ""}
             </div>
         </div>
 
             <div class="sup-details">
-                <p>${esc(areasText)}</p>
+                <p>${areasText}</p>
             </div>
     </article>`;
 }
@@ -64,9 +63,17 @@ function render() {
     const search = elSearch.value.trim();
     elSearch.placeholder = TRANSLATIONS.searchPlaceholder[lang];
 
-    let list = lang === "en"
-        ? GRADUATE_SUPERVISORS_EN
-        : GRADUATE_SUPERVISORS_TR;
+    let list = CURRENT_FACULTY
+        .filter(p => p.isSupervisor)
+        .map(p => {
+            return {
+                name: p.name,
+                title: p.title[lang] || "",
+                photo: p.photo,
+                research: p.research[lang] || [],
+                webpage: p.webpage || "#"
+            };
+        });
 
     if (search) {
         list = list.filter(p => matches(p, search));
