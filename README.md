@@ -94,6 +94,18 @@ Each data file exports structured objects that are consumed by the corresponding
 
 ### Updating Content
 
+#### Translations
+
+```javascript
+// assets/data/translations.js
+{
+    home: { en: "Home", tr: "Ana Sayfa" },
+    faculty: { en: "Faculty", tr: "Fakülte" },
+    // More key-value pairs
+}
+
+```
+
 #### Faculty Information
 
 ```javascript
@@ -150,23 +162,38 @@ Each data file exports structured objects that are consumed by the corresponding
 {
     speaker: "Speaker Name",
     title: "Seminar Title",
-    link: "seminars/2025-2026/file.pdf",
+    link: "seminars/YYYY-YYYY/file.pdf",
     date: "DD.MM.YYYY",
     time: "HH:MM",
     place: "Room Code"
 }
 ```
 
-### Translations
+#### Problem of the Month
 
 ```javascript
-// assets/data/translations.js
+// assets/data/problem-of-the-month-YYYY.js
 {
-    home: { en: "Home", tr: "Ana Sayfa" },
-    faculty: { en: "Faculty", tr: "Fakülte" },
-    // More key-value pairs
+  month: "January",
+  year: 2025,
+  question: "Problem/YYMMq.pdf",
+  solution: "Problem/YYMMa.pdf",
+  solvers: [
+    { name: "Name Surname", affiliation: "University" },
+    { name: "Name Surname", affiliation: "University" }
+  ]
 }
+```
 
+#### Alisbah Awards
+
+```javascript
+// assets/data/alisbah-awards.js
+{
+    year: 2025,
+    recipients: ["Name Surname", "Name Surname"],
+    photos: "photo.jpg"
+}
 ```
 
 ## 📄 License
