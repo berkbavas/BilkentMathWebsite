@@ -150,7 +150,7 @@ Each data file exports structured objects that are consumed by the corresponding
 {
     speaker: "Speaker Name",
     title: "Seminar Title",
-    link: "seminars/2025-2026/file.pdf", // Optional PDF link
+    link: "seminars/2025-2026/file.pdf",
     date: "DD.MM.YYYY",
     time: "HH:MM",
     place: "Room Code"
