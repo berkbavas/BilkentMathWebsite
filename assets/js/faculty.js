@@ -1,23 +1,25 @@
-import { CURRENT_FACULTY_EN, CURRENT_FACULTY_TR } from "../data/faculty.js";
-import { EMERITI_EN, EMERITI_TR } from "../data/emeriti.js";
+import { CURRENT_FACULTY } from "../data/faculty.js";
+import { EMERITI } from "../data/emeriti.js";
 import { escapeHtml } from "./helpers.js";
 
 function cardTemplate(p) {
+    let currentLang = localStorage.getItem("lang") || "en";
+
     const name = escapeHtml(p.name);
-    const rank = escapeHtml(p.rank || "");
-    const degree = escapeHtml(p.degree || "");
+    const title = escapeHtml(p.title[currentLang] || "");
+    const degree = escapeHtml(p.degree[currentLang] || "");
     const office = escapeHtml(p.office || "");
     const phone = escapeHtml(p.phone || "");
     const email = escapeHtml(p.email || "");
-    const url = (p.url || "").trim();
+    const webpage = (p.webpage || "").trim();
     const photo = (p.photo || "").trim();
 
-    const tags = (p.research || [])
+    const tags = (p.research[currentLang] || [])
         .map(t => `<span class="faculty-chip">${escapeHtml(t)}</span>`)
         .join("");
 
-    const nameHtml = url
-        ? `<a href="${escapeHtml(url)}" target="_blank" rel="noopener">${name}</a>`
+    const nameHtml = webpage
+        ? `<a href="${escapeHtml(webpage)}" target="_blank" rel="noopener">${name}</a>`
         : name;
 
     return `
@@ -28,7 +30,7 @@ function cardTemplate(p) {
             <div class="faculty-content">
                 <header class="faculty-header">
                     <h3 class="faculty-name">${nameHtml}</h3>
-                    ${rank ? `<span class="faculty-rank">${rank}</span>` : ""}
+                    ${title ? `<span class="faculty-rank">${title}</span>` : ""}
                     ${degree ? `<p class="faculty-degree">${degree}</p>` : ""}
                 </header>
                 ${tags ? `<div class="faculty-chips">${tags}</div>` : ""}
@@ -59,18 +61,14 @@ function cardTemplate(p) {
 }
 
 
-const gridCurrent = document.querySelector("#gridCurrent");
-const gridEmeriti = document.querySelector("#gridEmeriti");
-
 function render() {
 
-    let currentLang = localStorage.getItem("lang") || "en";
-    let currentFaculty = currentLang === "tr" ? CURRENT_FACULTY_TR : CURRENT_FACULTY_EN;
-    let emeritiFaculty = currentLang === "tr" ? EMERITI_TR : EMERITI_EN;
+    const gridCurrent = document.querySelector("#gridCurrent");
+    const gridEmeriti = document.querySelector("#gridEmeriti");
 
-    gridCurrent.innerHTML = currentFaculty.map(cardTemplate).join("");
-    gridEmeriti.innerHTML = emeritiFaculty.map(cardTemplate).join("");
+    gridCurrent.innerHTML = CURRENT_FACULTY.map(cardTemplate).join("");
+    gridEmeriti.innerHTML = EMERITI.map(cardTemplate).join("");
 }
 
+document.render = render;
 document.addEventListener("DOMContentLoaded", render);
-document.render = render; // expose render function to other modules, app.js in particular
