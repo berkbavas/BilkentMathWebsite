@@ -16,12 +16,12 @@ function renderRow(item, labels) {
       <td data-label="${labels.recipients}">
         ${renderRecipients(item.recipients)}
       </td>
-      <td data-label="${labels.photos}">
+      ${item.photos ? `<td data-label="${labels.photos}">
         <a class="oa-btn" href="${item.photos}" target="_blank" rel="noopener">
           <i class="fa-regular fa-image" aria-hidden="true"></i>
           <span data-i18n="tableView">${labels.view}</span>
         </a>
-      </td>
+      </td>` : ` <td>-</td>`}
     </tr>
   `;
 }
