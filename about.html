@@ -5,12 +5,16 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title data-i18n="title">Bilkent University • Department of Mathematics</title>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
     <link rel="stylesheet" href="assets/css/common.css">
     <link rel="stylesheet" href="assets/css/navigation.css">
+    <link rel="stylesheet" href="assets/css/about.css">
+
     <script type="module" src="assets/js/app.js"></script>
 </head>
 
@@ -19,48 +23,194 @@
 
     <main class="container">
 
-        <header class="header">
-            <h1 data-lang="en">Department of Mathematics</h1>
-            <h1 data-lang="tr">Matematik Bölümü</h1>
-            <p class="page-lead" data-lang="en"> Undergraduate and graduate education at Bilkent University in Mathematics.</p>
-            <p class="page-lead" data-lang="tr"> Bilkent Üniversitesi'nde Matematik alanında lisans ve lisansüstü eğitim.</p>
+        <!-- Hero -->
+        <header class="about-hero">
+            <div class="about-hero-inner">
+                <div class="about-hero-copy">
+                    <h1 data-lang="en">Department of Mathematics</h1>
+                    <h1 data-lang="tr">Matematik Bölümü</h1>
+
+                    <p class="about-lead" data-lang="en">
+                        Undergraduate and graduate education at Bilkent University in Mathematics.
+                    </p>
+                    <p class="about-lead" data-lang="tr">
+                        Bilkent Üniversitesi'nde Matematik alanında lisans ve lisansüstü eğitim.
+                    </p>
+
+                    <!--div class="about-hero-actions">
+                        <a class="btn-black" href="undergraduate-program.html">
+                            <i class="fa-solid fa-book-open" aria-hidden="true"></i>
+                            <span data-lang="en">Undergraduate</span>
+                            <span data-lang="tr">Lisans</span>
+                        </a>
+
+                        <a class="btn" href="graduate-program.html">
+                            <i class="fa-solid fa-flask" aria-hidden="true"></i>
+                            <span data-lang="en">Graduate</span>
+                            <span data-lang="tr">Lisansüstü</span>
+                        </a>
+
+                        <a class="btn btn-ghost" href="research.html">
+                            <i class="fa-solid fa-diagram-project" aria-hidden="true"></i>
+                            <span data-lang="en">Research</span>
+                            <span data-lang="tr">Araştırma</span>
+                        </a>
+                    </div-->
+                </div>
+
+            </div>
         </header>
 
-        <div class="max-width-720">
-            <p data-lang="en">
-                The Department of Mathematics offers undergraduate and graduate
-                programs leading to <strong>B.S.</strong>, <strong>M.S.</strong>,
-                and <strong>Ph.D.</strong> degrees in Mathematics. In addition,
-                the department provides a wide range of service courses to
-                other departments of the university.</p>
-            <p data-lang="tr">
-                Matematik Bölümü, matematikte <strong>lisans</strong>, <strong>yüksek lisans</strong> ve
-                <strong>doktora</strong> derecelerine yönelik dersler
-                vermenin yanı sıra, üniversitenin bütün bölümleri için de lisans ve lisansüstü seviyelerinde
-                matematik dersleri verir.
-            </p>
+        <!-- Content -->
+        <section class="about-section">
+            <div class="about-two-col">
+                <div class="about-card card no-max-width">
+                    <h2 data-lang="en">Overview</h2>
+                    <h2 data-lang="tr">Genel Bakış</h2>
 
-            <p data-lang="en">
-                The department emphasizes both <strong>pure</strong> and
-                <strong>applied mathematics</strong>. Research activities span
-                areas such as algebra, algebraic topology, algebraic geometry,
-                complex analysis, functional analysis, number theory, financial
-                mathematics, differential equations and dynamical systems,
-                mathematical physics, and applied mathematics.
-            </p>
-            <p data-lang="tr">
-                Matematik Bölümü, hem <strong>soyut</strong> hem de <strong>uygulamalı matematikte</strong>
-                araştırmaya ağırlık verir. Bölümün
-                araştırma alanları, cebir, cebirsel topoloji, cebirsel geometri, karmaşık analiz,
-                fonksiyonel
-                analiz, sayılar kuramı, finans matematiği, diferansiyel denklemler ve dinamik sistemler,
-                matematiksel fizik ve uygulamalı matematik konularını içermektedir.
-            </p>
-        </div>
+                    <p data-lang="en">
+                        The Department of Mathematics offers undergraduate and graduate
+                        programs leading to <strong>B.S.</strong>, <strong>M.S.</strong>,
+                        and <strong>Ph.D.</strong> degrees in Mathematics. In addition,
+                        the department provides a wide range of service courses to
+                        other departments of the university.
+                    </p>
+                    <p data-lang="tr">
+                        Matematik Bölümü, matematikte <strong>lisans</strong>, <strong>yüksek lisans</strong> ve
+                        <strong>doktora</strong> derecelerine yönelik dersler
+                        vermenin yanı sıra, üniversitenin bütün bölümleri için de lisans ve lisansüstü seviyelerinde
+                        matematik dersleri verir.
+                    </p>
 
+                    <p data-lang="en">
+                        The department emphasizes both <strong>pure</strong> and
+                        <strong>applied mathematics</strong>. Research activities span
+                        areas such as algebra, algebraic topology, algebraic geometry,
+                        complex analysis, functional analysis, number theory, financial
+                        mathematics, differential equations and dynamical systems,
+                        mathematical physics, and applied mathematics.
+                    </p>
+                    <p data-lang="tr">
+                        Matematik Bölümü, hem <strong>soyut</strong> hem de <strong>uygulamalı matematikte</strong>
+                        araştırmaya ağırlık verir. Bölümün
+                        araştırma alanları, cebir, cebirsel topoloji, cebirsel geometri, karmaşık analiz,
+                        fonksiyonel analiz, sayılar kuramı, finans matematiği, diferansiyel denklemler ve dinamik sistemler,
+                        matematiksel fizik ve uygulamalı matematik konularını içermektedir.
+                    </p>
+                </div>
+
+
+                <div class="about-hero-panel" aria-hidden="true">
+                    <div class="about-hero-panel-card">
+                        <div class="about-hero-panel-title">
+                            <i class="fa-solid fa-infinity" aria-hidden="true"></i>
+                            <span data-lang="en">Mathematics</span>
+                            <span data-lang="tr">Matematik</span>
+                        </div>
+                        <div class="about-hero-panel-sub" data-lang="en">Pure & applied focus • Small, research-driven community</div>
+                        <div class="about-hero-panel-sub" data-lang="tr">Soyut & uygulamalı odak • Araştırma yönelimli topluluk</div>
+
+                        <div class="about-hero-panel-grid">
+                            <div class="about-mini">
+                                <div class="about-mini-k" data-lang="en">Degrees</div>
+                                <div class="about-mini-k" data-lang="tr">Dereceler</div>
+                                <div class="about-mini-v">B.S. • M.S. • Ph.D.</div>
+                            </div>
+                            <div class="about-mini">
+                                <div class="about-mini-k" data-lang="en">Language</div>
+                                <div class="about-mini-k" data-lang="tr">Dil</div>
+                                <div class="about-mini-v" data-lang="en">English</div>
+                                <div class="about-mini-v" data-lang="tr">İngilizce</div>
+                            </div>
+                            <div class="about-mini">
+                                <div class="about-mini-k" data-lang="en">Location</div>
+                                <div class="about-mini-k" data-lang="tr">Konum</div>
+                                <div class="about-mini-v" data-lang="en">Ankara, Türkiye</div>
+                                <div class="about-mini-v" data-lang="tr">Ankara, Türkiye</div>
+                            </div>
+                            <div class="about-mini">
+                                <div class="about-mini-k" data-lang="en">Focus</div>
+                                <div class="about-mini-k" data-lang="tr">Odak</div>
+                                <div class="about-mini-v" data-lang="en">Research</div>
+                                <div class="about-mini-v" data-lang="tr">Araştırma</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!--div class="about-side-card">
+                    <div class="about-side-title">
+                        <i class="fa-solid fa-compass" aria-hidden="true"></i>
+                        <span data-lang="en">Quick links</span>
+                        <span data-lang="tr">Hızlı bağlantılar</span>
+                    </div>
+
+                    <a class="about-link" href="undergraduate-program.html">
+                        <span class="about-link-left">
+                            <i class="fa-solid fa-book-open" aria-hidden="true"></i>
+                            <span data-lang="en">Undergraduate Program</span>
+                            <span data-lang="tr">Lisans Programı</span>
+                        </span>
+                        <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+                    </a>
+
+                    <a class="about-link" href="graduate-program.html">
+                        <span class="about-link-left">
+                            <i class="fa-solid fa-flask" aria-hidden="true"></i>
+                            <span data-lang="en">Graduate Program</span>
+                            <span data-lang="tr">Lisansüstü Program</span>
+                        </span>
+                        <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+                    </a>
+
+                    <a class="about-link" href="faculty.html">
+                        <span class="about-link-left">
+                            <i class="fa-solid fa-people-group" aria-hidden="true"></i>
+                            <span data-lang="en">Faculty</span>
+                            <span data-lang="tr">Akademik Kadro</span>
+                        </span>
+                        <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+                    </a>
+
+                    <a class="about-link" href="research.html">
+                        <span class="about-link-left">
+                            <i class="fa-solid fa-diagram-project" aria-hidden="true"></i>
+                            <span data-lang="en">Research</span>
+                            <span data-lang="tr">Araştırma</span>
+                        </span>
+                        <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+                    </a>
+
+                </div-->
+
+            </div>
+        </section>
+
+        <!--section class="about-cta">
+            <div class="about-cta-inner">
+                <div>
+                    <div class="about-cta-title" data-lang="en">Explore programs</div>
+                    <div class="about-cta-title" data-lang="tr">Programları keşfet</div>
+                    <p class="about-cta-text" data-lang="en">Undergraduate, M.S., and Ph.D. paths with strong research mentoring.</p>
+                    <p class="about-cta-text" data-lang="tr">Güçlü araştırma danışmanlığı ile lisans, yüksek lisans ve doktora.</p>
+                </div>
+                <div class="about-cta-actions">
+                    <a class="btn-black" href="undergraduate-program.html">
+                        <i class="fa-solid fa-book-open" aria-hidden="true"></i>
+                        <span data-lang="en">Undergraduate</span>
+                        <span data-lang="tr">Lisans</span>
+                    </a>
+                    <a class="btn" href="graduate-program.html">
+                        <i class="fa-solid fa-flask" aria-hidden="true"></i>
+                        <span data-lang="en">Graduate</span>
+                        <span data-lang="tr">Lisansüstü</span>
+                    </a>
+                </div>
+            </div>
+        </section-->
 
     </main>
-
 
     <footer id="footer" class="footer"><!-- JavaScript will inject content here --></footer>
 </body>
