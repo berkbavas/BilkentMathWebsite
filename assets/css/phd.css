@@ -3,12 +3,6 @@
    Matches Graduate Program redesign style
    ========================= */
 
-.phd-hero {
-    padding: 2.3rem 0 1.6rem;
-    border-bottom: 1px solid #E5E7EB;
-    margin-bottom: 1.8rem;
-}
-
 .phd-hero-kicker {
     display: flex;
     align-items: center;
@@ -26,8 +20,8 @@
 .phd-hero-actions {
     display: flex;
     gap: 12px;
-    flex-wrap: wrap;
     margin-top: 1.4rem;
+    flex-wrap: wrap;
 }
 
 .phd-facts {
@@ -72,14 +66,13 @@
     grid-template-columns: 1.35fr .65fr;
     gap: 18px;
     align-items: start;
-    padding-bottom: 2rem;
 }
 
 .phd-section-grid {
-    margin-top: 18px;
+    margin-top: var(--margin-4);
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 16px;
+    gap: var(--gap-4)
 }
 
 .phd-list {
@@ -139,11 +132,14 @@
 }
 
 .phd-cta-bottom {
-    margin-top: 18px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: var(--margin-4);
 }
 
 .phd-cta-row {
-    margin-top: 12px;
     display: flex;
     gap: 12px;
     flex-wrap: wrap;

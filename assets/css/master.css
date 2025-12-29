@@ -6,7 +6,6 @@
     display: flex;
     gap: 12px;
     margin-top: 1.4rem;
-    flex-wrap: wrap;
 }
 
 .master-actions-footer {
@@ -76,7 +75,19 @@
     color: #474e5a;
 }
 
+.master-cta-bottom {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
 @media (max-width: 720px) {
+
+    .master-actions {
+        flex-direction: column;
+    }
+
     .master-info-grid {
         grid-template-columns: 1fr;
         margin-top: 0;
@@ -84,10 +95,6 @@
 
     .master-split {
         grid-template-columns: 1fr;
-    }
-
-    .master-actions {
-        flex-direction: column;
     }
 
     .master-aside .card {
