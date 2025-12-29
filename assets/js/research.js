@@ -42,8 +42,13 @@ function renderAccordionItem(area, lang) {
 
 function render() {
     const lang = localStorage.getItem("lang") || "en";
-    const mount = document.getElementById("mount");
-    mount.innerHTML = RESEARCH_DATA.map((a, idx) => renderAccordionItem(a, lang)).join("");
+    const elMount = document.getElementById("mount");
+    const elCount = document.getElementById("facultyMemberCount");
+    let totalMembers = 0;
+    RESEARCH_DATA.forEach(item => totalMembers += item.faculty.length);
+    elCount.textContent = lang === "tr" ? `${totalMembers} öğretim üyesi` : `${totalMembers} faculty member`;
+
+    elMount.innerHTML = RESEARCH_DATA.map((a, idx) => renderAccordionItem(a, lang)).join("");
 }
 
 document.render = render; // Expose render function to global scope for language toggle

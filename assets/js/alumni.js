@@ -12,7 +12,7 @@ function renderEntry(a, lang) {
     const bullets = Array.isArray(a.bullets) ? a.bullets : [];
 
     return `
-    <article class="alumni-card">
+    <article class="person-card">
         <header class="alumni-header">
             ${photoUrl ? `
             <div class="alumni-avatar">

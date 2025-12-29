@@ -192,7 +192,7 @@
 .grad-timeline-value {
     margin-top: 6px;
     font-weight: 800;
-    color: #2d2a62;
+    text-decoration: underline;
 }
 
 .grad-cta-row {

@@ -16,7 +16,7 @@ function card(s, lang) {
     const photoUrl = encodeURI(URL + (s.photo || "placeholder.jpg"));
 
     return `
-  <article class="gs-card">
+  <article class="person-card">
     <div class="gs-card-inner">
 
       <div class="gs-top">

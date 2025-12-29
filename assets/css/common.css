@@ -314,6 +314,37 @@ ul li:last-child {
     margin-bottom: .6rem;
 }
 
+.person-card {
+    background: #FFFFFF;
+    border: 1px solid #E5E7EB;
+    border-radius: 20px;
+    padding: 1.5rem;
+    box-shadow: 0 10px 26px rgba(0,0,0,.06);
+    transition: transform .22s ease, box-shadow .22s ease;
+    overflow: hidden;
+}
+
+.person-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 18px 44px rgba(0,0,0,.12);
+}
+
+.person-card::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 4px;
+    height: 100%;
+    background: #2d2a62;
+    opacity: 0;
+    transition: opacity .22s ease;
+}
+
+.person-card:hover::before {
+    opacity: 1;
+}
+
 .page-section {
     padding: 1.8rem 0 1rem;
 }

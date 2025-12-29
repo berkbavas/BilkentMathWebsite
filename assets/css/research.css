@@ -48,7 +48,7 @@
     width: 10px;
     height: 10px;
     border-radius: 999px;
-    background: #2d2a62;
+    background: #2a622d;
 }
 
 /* Faculty chips */
@@ -133,7 +133,7 @@
     width: 10px;
     height: 10px;
     border-radius: 999px;
-    background: #2d2a62;
+    background: var(--accent);
 }
 
 .acc-chevron {

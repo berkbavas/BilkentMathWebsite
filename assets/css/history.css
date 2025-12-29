@@ -127,21 +127,25 @@
 }
 
 .chair-card::before {
-	content: "";
-	position: absolute;
-	inset: 0;
-	pointer-events: none;
-	background: linear-gradient(120deg,
-			rgba(45, 42, 98, .07),
-			transparent 46%,
-			rgba(0, 0, 0, .03));
-	opacity: .45;
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 4px;
+    height: 100%;
+    background: #2d2a62;
+    opacity: 0;
+    transition: opacity .22s ease;
 }
 
 .chair-card:hover {
 	transform: translateY(-6px);
 	box-shadow: 0 18px 44px rgba(0, 0, 0, .12);
 	border-color: rgba(0, 0, 0, .14);
+}
+
+.chair-card:hover::before {
+    opacity: 1;
 }
 
 /* Avatar */

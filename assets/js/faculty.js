@@ -23,7 +23,7 @@ function cardTemplate(p) {
         : name;
 
     return `
-    <article class="faculty-card">
+    <article class="person-card">
         <div class="faculty-image-and-content">
             <div class="faculty-media"><img src="${escapeHtml(photo)}" alt="${name}"></div>
 
