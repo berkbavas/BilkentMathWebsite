@@ -46,7 +46,7 @@
     padding: .25rem .6rem;
     border-radius: 999px;
     background: rgba(45,42,98,.08);
-    color: #2d2a62;
+    color: var(--accent);
 }
 
 /* Bullets */
@@ -75,7 +75,7 @@
     gap: .5rem;
     cursor: pointer;
     font-weight: 600;
-    color: #2d2a62;
+    color: var(--accent);
 }
 
 .alumni-story summary i {
@@ -100,7 +100,7 @@
 .alumni-update {
     margin-top: .6rem;
     font-size: .8rem;
-    color: #474e5a;
+    color: var(--muted);
     text-align: right;
 }
 

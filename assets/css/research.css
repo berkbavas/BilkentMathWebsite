@@ -30,7 +30,7 @@
     display: grid;
     place-items: center;
     background: #F0F4FF;
-    border: 1px solid #E5E7EB;
+    border: 1px solid var(--border);
 }
 
 .area-accent {
@@ -40,7 +40,7 @@
     padding: 8px 10px;
     border-radius: 999px;
     font-weight: 800;
-    border: 1px solid #E5E7EB;
+    border: 1px solid var(--border);
     background: rgba(255, 255, 255, .65);
 }
 
@@ -93,7 +93,7 @@
 }
 
 .acc-item {
-    border: 1px solid #E5E7EB;
+    border: 1px solid var(--border);
     background: linear-gradient(180deg, #fff, #fbfbfd);
     border-radius: 18px;
     box-shadow: 0 8px 26px rgba(0, 0, 0, .06);
@@ -140,7 +140,7 @@
     width: 40px;
     height: 40px;
     border-radius: 12px;
-    border: 1px solid #E5E7EB;
+    border: 1px solid var(--border);
     display: grid;
     place-items: center;
     background: #FFFFFF;

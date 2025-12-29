@@ -19,7 +19,7 @@
 /* Right highlight card */
 .ug-hero-card {
     background: linear-gradient(180deg, #FFFFFF, #fbfbfd);
-    border: 1px solid #E5E7EB;
+    border: 1px solid var(--border);
     border-radius: 20px;
     box-shadow: 0 10px 28px rgba(0, 0, 0, .06);
     padding: 18px;
@@ -60,7 +60,7 @@
     border-radius: 14px;
     border: 1px solid rgba(45, 42, 98, .14);
     background: rgba(45, 42, 98, .08);
-    color: #2d2a62;
+    color: var(--accent);
 }
 
 .ug-pill-row {
@@ -114,7 +114,7 @@
     gap: 16px;
     padding: 18px;
     border-radius: 22px;
-    border: 1px solid #E5E7EB;
+    border: 1px solid var(--border);
     background: linear-gradient(180deg, #FFFFFF, #F0F4FF);
     box-shadow: 0 10px 26px rgba(0, 0, 0, .06);
 }
@@ -127,7 +127,7 @@
 
 .ug-cta-sub {
     margin: 6px 0 0;
-    color: #474e5a;
+    color: var(--muted);
 }
 
 .ug-cta-actions {

@@ -11,7 +11,7 @@
 .chart-card {
   grid-column: span 6;
   background: #FFFFFF;
-  border: 1px solid #E5E7EB;
+  border: 1px solid var(--border);
   border-radius: 20px;
   box-shadow: 0 10px 28px rgba(0,0,0,.06);
   padding: 18px 18px 14px 18px;
@@ -41,7 +41,7 @@
 .chart-sub {
   margin: 8px 0 0;
   font-size: 0.9rem;
-  color: #474e5a;
+  color: var(--muted);
 }
 
 .chart-pill {

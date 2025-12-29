@@ -24,7 +24,7 @@
 
 .history-aside-card {
 	background: #FFFFFF;
-	border: 1px solid #E5E7EB;
+	border: 1px solid var(--border);
 	border-radius: 20px;
 	padding: 16px;
 	box-shadow: 0 10px 26px rgba(0, 0, 0, .06);
@@ -53,7 +53,7 @@
 
 .history-aside-link i {
 	width: 18px;
-	color: #2d2a62;
+	color: var(--accent);
 }
 
 /* Milestones list in aside */
@@ -119,7 +119,7 @@
 
 	padding: 16px;
 	background: #FFFFFF;
-	border: 1px solid #E5E7EB;
+	border: 1px solid var(--border);
 	border-radius: 22px;
 	box-shadow: 0 10px 26px rgba(0, 0, 0, .06);
 	transition: transform .22s ease, box-shadow .22s ease, border-color .22s ease;
@@ -133,7 +133,7 @@
     top: 0;
     width: 4px;
     height: 100%;
-    background: #2d2a62;
+    background: var(--accent);
     opacity: 0;
     transition: opacity .22s ease;
 }
@@ -199,7 +199,7 @@
 .chair-role {
 	margin: 6px 0 0;
 	font-size: 0.9rem;
-	color: #474e5a;
+	color: var(--muted);
 	line-height: 1.35;
 }
 
@@ -211,7 +211,7 @@
 	border-radius: 999px;
 	background: rgba(45, 42, 98, .08);
 	border: 1px solid rgba(45, 42, 98, .16);
-	color: #2d2a62;
+	color: var(--accent);
 	white-space: nowrap;
 }
 

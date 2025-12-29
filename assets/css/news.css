@@ -38,7 +38,7 @@
 
     background: rgba(45, 42, 98, .08);
     border: 1px solid rgba(45, 42, 98, .16);
-    color: #2d2a62;
+    color: var(--accent);
     margin: 8px 0 10px 34px;
 }
 
@@ -58,7 +58,7 @@
     height: 12px;
     border-radius: 50%;
     background: #FFFFFF;
-    border: 3px solid #2d2a62;
+    border: 3px solid var(--accent);
     margin-top: 18px;
     margin-left: 9px;
 }
@@ -66,7 +66,7 @@
 /* Card */
 .news-card {
     border-radius: 20px;
-    border: 1px solid #E5E7EB;
+    border: 1px solid var(--border);
     background: #FFFFFF;
     box-shadow: 0 10px 26px rgba(0, 0, 0, .06);
     padding: 14px 16px 16px;

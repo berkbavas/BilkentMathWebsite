@@ -72,7 +72,7 @@
 
 .master-note {
     font-size: .95rem;
-    color: #474e5a;
+    color: var(--muted);
 }
 
 .master-cta-bottom {

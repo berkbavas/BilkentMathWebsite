@@ -37,7 +37,7 @@
     --gap-5: 32px;
 
     --muted: #474e5a;
-    --accent: #2d2a62;
+    --accent: #2d2a62;;
     --border: #E5E7EB;
     --text-color: rgba(17, 17, 17, .92);
     --accent-darker: rgba(45, 42, 98, 0.451);
@@ -188,7 +188,7 @@ ul li:last-child {
     margin: var(--gap-4) 0 var(--gap-4);
     padding: 1.4rem 0 1.4rem;
     margin-bottom: 1.6rem;
-    border-bottom: 1px solid #E5E7EB;
+    border-bottom: 1px solid var(--border);
 }
 
 .no-border-bottom {
@@ -316,7 +316,7 @@ ul li:last-child {
 
 .person-card {
     background: #FFFFFF;
-    border: 1px solid #E5E7EB;
+    border: 1px solid var(--border);
     border-radius: 20px;
     padding: 1.5rem;
     box-shadow: 0 10px 26px rgba(0,0,0,.06);
@@ -336,7 +336,7 @@ ul li:last-child {
     top: 0;
     width: 4px;
     height: 100%;
-    background: #2d2a62;
+    background: var(--accent);
     opacity: 0;
     transition: opacity .22s ease;
 }
@@ -367,7 +367,7 @@ ul li:last-child {
 
 .page-kpi-label {
     font-size: 0.85rem;
-    color: #474e5a;
+    color: var(--muted);
     font-weight: 700;
     margin-bottom: 6px;
 }
@@ -516,7 +516,7 @@ ul li:last-child {
 
 .footer p,
 .footer a {
-    color: #474e5a;
+    color: var(--muted);
 }
 
 .footer a:hover {
