@@ -176,6 +176,10 @@ export const TRANSLATIONS = {
         en: "Links",
         tr: "Bağlantılar"
     },
+    navMoreInfoForProspectiveStudents: {
+        en: "Information for Prospective Students",
+        tr: "Üniversite Adayları İçin Bilgiler"
+    },
 
     /* Footer */
     footerAddress: {
