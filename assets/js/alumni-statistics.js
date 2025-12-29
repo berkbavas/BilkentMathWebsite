@@ -46,11 +46,8 @@ function render() {
     Chart.helpers.each(Chart.instances, c => c.destroy());
 
     const lang = localStorage.getItem("lang") || "en";
-    const keys = Object.keys(ALUMNI_STATISTICS);
-    const values = Object.values(ALUMNI_STATISTICS);
-    const labels = keys.map(key => TRANSLATIONS.chartLabels[key][lang] ?? key);
-
-    // theme-ish colors (brand #2d2a62 + soft companions)
+    const values = ALUMNI_STATISTICS.map(item => item.value);
+    const labels = ALUMNI_STATISTICS.map(item => item.label[lang] ?? item.label.en);
     const palette = [
         "#00a5e6",
         "#4b6fff",
@@ -206,46 +203,6 @@ TRANSLATIONS.chartPercentage = {
     en: "Percentage",
     tr: "Yüzde"
 };
-
-TRANSLATIONS.chartLabels = {
-    academia: {
-        en: "Academia",
-        tr: "Akademi"
-    },
-    financeAndBanking: {
-        en: "Finance and Banking",
-        tr: "Bankacılık ve Finans"
-    },
-    it: {
-        en: "IT",
-        tr: "Bilişim Teknolojileri"
-    },
-    education: {
-        en: "Education",
-        tr: "Eğitim"
-    },
-    publicSector: {
-        en: "Public Sector",
-        tr: "Kamu Sektörü"
-    },
-    researchInstitute: {
-        en: "Research Institute",
-        tr: "Araştırma Enstitüsü"
-    },
-    telecommunications: {
-        en: "Telecommunications",
-        tr: "Telekomünikasyon"
-    },
-    defenseIndustry: {
-        en: "Defense Industry",
-        tr: "Savunma Sanayii"
-    },
-    other: {
-        en: "Other",
-        tr: "Diğer"
-    }
-};
-
 
 document.render = render;
 document.addEventListener("DOMContentLoaded", render);
