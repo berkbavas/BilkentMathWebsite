@@ -1,6 +1,7 @@
 import { SEMINARS } from "../data/seminars.js";
 import { CURRENT_FACULTY } from "../data/faculty.js";
 import { GRADUATE_STUDENTS } from "../data/graduate-students.js";
+import { PROBLEM_OF_MONTH } from "../data/problem-of-month.js"
 
 function toDateKey(s, t) { // DD.MM.YYYY -> Date
 	const [d, m, y] = s.split(".").map(x => x.padStart(2, "0"));
@@ -34,6 +35,8 @@ function render() {
 		document.getElementById("nextSeminarTitle").innerHTML = `<a href="${upcoming[0].link}" target="_blank" rel="noopener noreferrer">${upcoming[0].title}</a>`;
 		document.getElementById("nextSeminarSpeaker").textContent = upcoming[0].speaker;
 	}
+
+	const 
 }
 
 function renderSeminars(containerId, list) {

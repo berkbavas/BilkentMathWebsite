@@ -18,31 +18,33 @@ import { PROBLEM_OF_MONTH_2009 } from "../data/problem-of-month/problem-of-month
 import { PROBLEM_OF_MONTH_2008 } from "../data/problem-of-month/problem-of-month-2008.js";
 import { PROBLEM_OF_MONTH_2007 } from "../data/problem-of-month/problem-of-month-2007.js";
 import { PROBLEM_OF_MONTH_2006 } from "../data/problem-of-month/problem-of-month-2006.js";
+import { PROBLEM_OF_MONTH } from "../data/problem-of-month.js"
 
 import { TRANSLATIONS, MONTHS_EN_TO_TR } from "../data/translations.js";
 
 // Data for rendering descending years
 const DATA = [
-    PROBLEM_OF_MONTH_2025,
-    PROBLEM_OF_MONTH_2024,
-    PROBLEM_OF_MONTH_2023,
-    PROBLEM_OF_MONTH_2022,
-    PROBLEM_OF_MONTH_2021,
-    PROBLEM_OF_MONTH_2020,
-    PROBLEM_OF_MONTH_2019,
-    PROBLEM_OF_MONTH_2018,
-    PROBLEM_OF_MONTH_2017,
-    PROBLEM_OF_MONTH_2016,
-    PROBLEM_OF_MONTH_2015,
-    PROBLEM_OF_MONTH_2014,
-    PROBLEM_OF_MONTH_2013,
-    PROBLEM_OF_MONTH_2012,
-    PROBLEM_OF_MONTH_2011,
-    PROBLEM_OF_MONTH_2010,
-    PROBLEM_OF_MONTH_2009,
-    PROBLEM_OF_MONTH_2008,
-    PROBLEM_OF_MONTH_2007,
-    PROBLEM_OF_MONTH_2006
+  PROBLEM_OF_MONTH,
+  PROBLEM_OF_MONTH_2025,
+  PROBLEM_OF_MONTH_2024,
+  PROBLEM_OF_MONTH_2023,
+  PROBLEM_OF_MONTH_2022,
+  PROBLEM_OF_MONTH_2021,
+  PROBLEM_OF_MONTH_2020,
+  PROBLEM_OF_MONTH_2019,
+  PROBLEM_OF_MONTH_2018,
+  PROBLEM_OF_MONTH_2017,
+  PROBLEM_OF_MONTH_2016,
+  PROBLEM_OF_MONTH_2015,
+  PROBLEM_OF_MONTH_2014,
+  PROBLEM_OF_MONTH_2013,
+  PROBLEM_OF_MONTH_2012,
+  PROBLEM_OF_MONTH_2011,
+  PROBLEM_OF_MONTH_2010,
+  PROBLEM_OF_MONTH_2009,
+  PROBLEM_OF_MONTH_2008,
+  PROBLEM_OF_MONTH_2007,
+  PROBLEM_OF_MONTH_2006
 ];
 
 const URL = "Problem/"; // Base URL for problem PDFs
@@ -52,27 +54,27 @@ const elLatestProblemBtn = document.getElementById("latestProblemBtn");
 const elQuickLinks = document.getElementById("quickLinks");
 
 function yearStats(items) {
-    const solversTotal = items.reduce((acc, it) => acc + (it.solvers?.length || 0), 0);
-    return solversTotal;
+  const solversTotal = items.reduce((acc, it) => acc + (it.solvers?.length || 0), 0);
+  return solversTotal;
 }
 
 function renderCard(item, lang) {
-    const solversList = (item.solvers || []).map(
-        (solver) => `
+  const solversList = (item.solvers || []).map(
+    (solver) => `
       <li class="solver-item">
         <span class="solver-name">${solver.name}</span>
         <span class="solver-aff">${solver.affiliation ? solver.affiliation : ""}</span>
       </li>
     `
-    ).join("");
+  ).join("");
 
-    const solverCount = item.solvers?.length || 0;
+  const solverCount = item.solvers?.length || 0;
 
-    let month = lang === "tr" ? MONTHS_EN_TO_TR[item.month] || item.month : item.month;
-    let question = URL + item.question;
-    let solution = item.solution ? URL + item.solution : null;
+  let month = lang === "tr" ? MONTHS_EN_TO_TR[item.month] || item.month : item.month;
+  let question = URL + item.question;
+  let solution = item.solution ? URL + item.solution : null;
 
-    return `
+  return `
   <article class="pom-month-card">
     <div class="pom-top">
       <div class="pom-title">
@@ -125,7 +127,7 @@ function renderCard(item, lang) {
 }
 
 function renderCards(data, lang) {
-    return `
+  return `
     <div class="pom-cards">
       ${data.map((item) => renderCard(item, lang)).join("")}
     </div>
@@ -133,7 +135,7 @@ function renderCards(data, lang) {
 }
 
 function createDetailSummary(year, solversTotal, lang) {
-    return `
+  return `
     <summary class="archive-accordion-summary">
       <div class="year-summary">
         <div class="year-left">
@@ -156,156 +158,156 @@ function createDetailSummary(year, solversTotal, lang) {
 }
 
 function render() {
-    elMount.innerHTML = "";
-    elQuickLinks.innerHTML = "";
+  elMount.innerHTML = "";
+  elQuickLinks.innerHTML = "";
 
-    const lang = localStorage.getItem("lang") || "en";
+  const lang = localStorage.getItem("lang") || "en";
 
-    DATA.map((item, idx) => {
-        const year = item[0].year;
-        const solversTotal = yearStats(item);
-        const details = document.createElement("details");
-        details.className = "archive-accordion-details";
-        details.id = `year-${year}`;
-        details.innerHTML = createDetailSummary(year, solversTotal, lang);
-        details.innerHTML += renderCards(item, lang);
-        if (idx === 0) {
-            details.setAttribute("open", "true");
-        }
+  DATA.map((item, idx) => {
+    const year = item[0].year;
+    const solversTotal = yearStats(item);
+    const details = document.createElement("details");
+    details.className = "archive-accordion-details";
+    details.id = `year-${year}`;
+    details.innerHTML = createDetailSummary(year, solversTotal, lang);
+    details.innerHTML += renderCards(item, lang);
+    if (idx === 0) {
+      details.setAttribute("open", "true");
+    }
 
-        elMount.appendChild(details);
+    elMount.appendChild(details);
 
-        // Quick links buttons
-        // const linkBtn = document.createElement("button");
-        // linkBtn.className = "btn btn-ghost";
-        // linkBtn.textContent = year;
-        // linkBtn.addEventListener("click", () => {
-        //     document.getElementById(`year-${year}`).scrollIntoView({ behavior: "smooth" });
-        // });
-        // elQuickLinks.appendChild(linkBtn);
-    });
+    // Quick links buttons
+    // const linkBtn = document.createElement("button");
+    // linkBtn.className = "btn btn-ghost";
+    // linkBtn.textContent = year;
+    // linkBtn.addEventListener("click", () => {
+    //     document.getElementById(`year-${year}`).scrollIntoView({ behavior: "smooth" });
+    // });
+    // elQuickLinks.appendChild(linkBtn);
+  });
 
 
-    // Latest problem button
-    const latestData = DATA[0]; // Latest year
-    const latestItem = latestData[latestData.length - 1];
+  // Latest problem button
+  const latestData = DATA[0]; // Latest year
+  const latestItem = latestData[latestData.length - 1];
 
-    let month = lang === "tr" ? MONTHS_EN_TO_TR[latestItem.month] || latestItem.month : latestItem.month;
+  let month = lang === "tr" ? MONTHS_EN_TO_TR[latestItem.month] || latestItem.month : latestItem.month;
 
-    elLatestProblemBtn.onclick = () => window.open(URL + latestItem.question, "_blank");
-    elLatestProblemBtn.textContent =
-        (TRANSLATIONS.pomLatestProblemLabel[lang] || "Latest Problem") + ` (${month} ${latestItem.year})`;
+  elLatestProblemBtn.onclick = () => window.open(URL + latestItem.question, "_blank");
+  elLatestProblemBtn.textContent =
+    (TRANSLATIONS.pomLatestProblemLabel[lang] || "Latest Problem") + ` (${month} ${latestItem.year})`;
 }
 
 
 TRANSLATIONS.pomQuestionLabel = {
-    en: "Question",
-    tr: "Soru"
+  en: "Question",
+  tr: "Soru"
 };
 
 TRANSLATIONS.pomSolutionLabel = {
-    en: "Solution",
-    tr: "Çözüm"
+  en: "Solution",
+  tr: "Çözüm"
 };
 
 TRANSLATIONS.pomSolversTitle = {
-    en: "Solvers",
-    tr: "Çözenler"
+  en: "Solvers",
+  tr: "Çözenler"
 };
 
 TRANSLATIONS.pomSolversLabel = {
-    en: "solvers",
-    tr: "çözen"
+  en: "solvers",
+  tr: "çözen"
 };
 
 TRANSLATIONS.pomViewLabel = {
-    en: "View",
-    tr: "Görüntüle"
+  en: "View",
+  tr: "Görüntüle"
 };
 
 TRANSLATIONS.pomLatestProblemLabel = {
-    en: "Problem of the Month",
-    tr: "Ayın Sorusu"
+  en: "Problem of the Month",
+  tr: "Ayın Sorusu"
 };
 
 TRANSLATIONS.pomOpenQuestionAria = {
-    en: "Open question PDF",
-    tr: "Soru PDF'ini aç"
+  en: "Open question PDF",
+  tr: "Soru PDF'ini aç"
 };
 
 TRANSLATIONS.pomOpenSolutionAria = {
-    en: "Open solution PDF",
-    tr: "Çözüm PDF'ini aç"
+  en: "Open solution PDF",
+  tr: "Çözüm PDF'ini aç"
 };
 
 TRANSLATIONS.headerTitle = {
-    en: "Problem of the Month",
-    tr: "Ayın Sorusu"
+  en: "Problem of the Month",
+  tr: "Ayın Sorusu"
 };
 
 TRANSLATIONS.headerDescription = {
-    en: "A monthly problem series. Submit your solution and see the archive of questions and solutions.",
-    tr: "Aylık soru serisi. Çözümünüzü gönderin veya arşive göz atın."
+  en: "A monthly problem series. Submit your solution and see the archive of questions and solutions.",
+  tr: "Aylık soru serisi. Çözümünüzü gönderin veya arşive göz atın."
 };
 
 TRANSLATIONS.howToSubmitTitle = {
-    en: "How to Submit",
-    tr: "Nasıl Gönderilir?"
+  en: "How to Submit",
+  tr: "Nasıl Gönderilir?"
 };
 
 TRANSLATIONS.howToSubmitDescription = {
-    en: "We will announce the following month on this page the names of people who have sent correct solutions. You can send your answers by one of the following ways.",
-    tr: "Soruları doğru çözenlerin isimlerini takip eden ay bu sayfada yayınlıyoruz. Çözümlerinizi aşağıdaki yollardan biri ile bize ulaştırabilirsiniz."
+  en: "We will announce the following month on this page the names of people who have sent correct solutions. You can send your answers by one of the following ways.",
+  tr: "Soruları doğru çözenlerin isimlerini takip eden ay bu sayfada yayınlıyoruz. Çözümlerinizi aşağıdaki yollardan biri ile bize ulaştırabilirsiniz."
 };
 
 TRANSLATIONS.mailLabel = {
-    en: "Mail:",
-    tr: "Posta:"
+  en: "Mail:",
+  tr: "Posta:"
 };
 
 TRANSLATIONS.mailAddressLine1 = {
-    en: "Bilkent University,",
-    tr: "Bilkent Üniversitesi,"
+  en: "Bilkent University,",
+  tr: "Bilkent Üniversitesi,"
 };
 
 TRANSLATIONS.mailAddressLine2 = {
-    en: "Department of Mathematics,",
-    tr: "Matematik Bölümü,"
+  en: "Department of Mathematics,",
+  tr: "Matematik Bölümü,"
 };
 
 TRANSLATIONS.mailAddressLine3 = {
-    en: "06800 Bilkent, Ankara, Turkey",
-    tr: "06800 Bilkent, Ankara, Türkiye"
+  en: "06800 Bilkent, Ankara, Turkey",
+  tr: "06800 Bilkent, Ankara, Türkiye"
 };
 
 TRANSLATIONS.emailLabel = {
-    en: "Email:",
-    tr: "E-posta:"
+  en: "Email:",
+  tr: "E-posta:"
 };
 
 TRANSLATIONS.faxLabel = {
-    en: "Fax:",
-    tr: "Faks:"
+  en: "Fax:",
+  tr: "Faks:"
 };
 
 TRANSLATIONS.faxAttention = {
-    en: "Attention: Azer Kerimov",
-    tr: "İlgili: Azer Kerimov"
+  en: "Attention: Azer Kerimov",
+  tr: "İlgili: Azer Kerimov"
 };
 
 TRANSLATIONS.faxSubject = {
-    en: "Subject: Math problem of the month",
-    tr: "Konu: Ayın matematik sorusu"
+  en: "Subject: Math problem of the month",
+  tr: "Konu: Ayın matematik sorusu"
 };
 
 TRANSLATIONS.quickLinksTitle = {
-    en: "Quick links",
-    tr: "Hızlı linkler"
+  en: "Quick links",
+  tr: "Hızlı linkler"
 };
 
 TRANSLATIONS.quickLinksDescription = {
-    en: "Open the latest question.",
-    tr: "Son soruyu açın."
+  en: "Open the latest question.",
+  tr: "Son soruyu açın."
 };
 
 
