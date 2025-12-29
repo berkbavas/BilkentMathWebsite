@@ -35,8 +35,7 @@ function render() {
 		document.getElementById("nextSeminarTitle").innerHTML = `<a href="${upcoming[0].link}" target="_blank" rel="noopener noreferrer">${upcoming[0].title}</a>`;
 		document.getElementById("nextSeminarSpeaker").textContent = upcoming[0].speaker;
 	}
-
-	const 
+	
 }
 
 function renderSeminars(containerId, list) {
