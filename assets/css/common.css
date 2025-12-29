@@ -134,6 +134,10 @@ a {
     text-decoration: none;
 }
 
+a i {
+    margin-left: 0.5rem;
+}
+
 a:hover {
     border-bottom-style: solid;
 }
