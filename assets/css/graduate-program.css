@@ -2,20 +2,9 @@
    Graduate Program + Graduate Supervisors (Redesign)
    ========================================================= */
 
-.grad-hero-actions {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 12px;
-    margin-top: 1.6rem;
-}
-
 @media (max-width: 720px) {
     .grad-hero h1 {
         font-size: 1.75rem;
-    }
-
-    .grad-hero-actions {
-        flex-direction: column;
     }
 }
 

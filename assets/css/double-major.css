@@ -37,13 +37,6 @@
     margin-top: 0;
 }
 
-.dm-hero-actions {
-    display: flex;
-    gap: 12px;
-    flex-wrap: wrap;
-    margin-top: 18px;
-}
-
 .dm-kpis {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -172,7 +165,7 @@
 }
 
 @media (max-width: 600px){
-    .dm-hero-actions {
+    .page-hero-actions {
         flex-direction: column;
         align-items: stretch;
     }

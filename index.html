@@ -76,15 +76,16 @@
             <div class="kpi-card">
                 <div class="kpi-label" data-lang="en"><i class="fa-solid fa-hourglass-start"></i>Next Seminar</div>
                 <div class="kpi-label" data-lang="tr"><i class="fa-solid fa-hourglass-start"></i>Sonraki Seminer</div>
-                <div class="kpi-value" id="nextSeminarDate">—</div><!-- e.g., "01.01.2026, 00:00 · SA141" -->
-                <div class="kpi-sub bold" id="nextSeminarTitle">—</div> <!-- e.g., "Proof of Riemann Hypothesis" -->
-                <div class="kpi-sub" id="nextSeminarSpeaker">—</div> <!-- e.g., "Prof. Berk Bavaş " -->
+                <div class="kpi-value" id="nextSeminarDate">—</div> <!-- e.g. Date and Time and Place -->
+                <div class="kpi-sub bold" id="nextSeminarTitle">—</div> <!-- e.g. Seminar Title -->
+                <div class="kpi-sub" id="nextSeminarSpeaker">—</div> <!-- e.g. Speaker Name -->
             </div>
 
             <a href="problem-of-month.html" class="kpi-card kpi-link">
                 <div class="kpi-label" data-lang="en"><i class="fa-regular fa-circle-question"></i>Problem of the Month</div>
                 <div class="kpi-label" data-lang="tr"><i class="fa-regular fa-circle-question"></i>Ayın Sorusu</div>
-                <div class="kpi-value" data-lang="en">View →</div>
+                <div class="kpi-value kpi-mid" id="problemOfMonthTitle">—</div> <!-- e.g. Problem Title (Year Month) -->
+                <div class="kpi-value " data-lang="en">View →</div>
                 <div class="kpi-value" data-lang="tr">Görüntüle →</div>
             </a>
         </section>
@@ -95,13 +96,13 @@
                     <h2 data-lang="en"><i class="fa-regular fa-bell"></i>Upcoming Seminars</h2>
                     <h2 data-lang="tr"><i class="fa-regular fa-bell"></i>Yaklaşan Seminerler</h2>
                 </div>
-                <div id="upcomingSeminars"><!-- JS will insert seminars here --></div>
+                <div id="upcomingSeminars"><!-- JavaScript will insert seminars here --></div>
             </div>
 
             <div class="seminar-column past">
                 <h2 data-lang="en"><i class="fa-regular fa-calendar-check"></i>Past Seminars</h2>
                 <h2 data-lang="tr"><i class="fa-regular fa-calendar-check"></i>Geçmiş Seminerler</h2>
-                <div id="pastSeminars"><!-- JS will insert seminars here --></div>
+                <div id="pastSeminars"><!-- JavaScript will insert seminars here --></div>
             </div>
         </section>
 

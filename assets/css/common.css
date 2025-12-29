@@ -4,11 +4,6 @@
    Author: Berk Bavaş
    ========================================================= */
 
-/* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
-*/
-
 :root {
     --navigation-height: 84px;
     --navigation-max-width: 1320px;
@@ -43,7 +38,6 @@
     --accent-darker: rgba(45, 42, 98, 0.451);
     --page-hero-badge-color: rgba(17, 17, 17, .82);
 }
-
 
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -191,6 +185,13 @@ ul li:last-child {
     border-bottom: 1px solid var(--border);
 }
 
+.page-hero-actions {
+    display: flex;
+    gap: 12px;
+    margin-top: 1.4rem;
+    flex-wrap: wrap;
+}
+
 .no-border-bottom {
     border-bottom: none !important;
 }
@@ -271,8 +272,6 @@ ul li:last-child {
 .search-input::placeholder {
     color: rgba(17, 17, 17, .45);
 }
-
-
 
 /* Card */
 .card {
@@ -409,8 +408,6 @@ ul li:last-child {
 }
 
 /* Buttons */
-
-
 .btn {
     display: inline-flex;
     align-items: center;
@@ -545,10 +542,14 @@ ul li:last-child {
     display: none !important;
 }
 
-
 @media (max-width: 720px) {
     .page-hero h1 {
         font-size: 1.85rem;
+    }
+
+    .page-hero-actions {
+        flex-direction: column;
+        align-items: stretch;
     }
 
     .page-kpis {

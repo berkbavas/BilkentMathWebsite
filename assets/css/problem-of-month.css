@@ -54,6 +54,11 @@
     font-weight: 600;
 }
 
+.text-mid {
+    font-size: 1rem;
+    font-weight: 700;
+}
+
 .pom-actions {
     display: flex;
     flex-wrap: wrap;

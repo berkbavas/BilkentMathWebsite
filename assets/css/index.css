@@ -105,6 +105,12 @@ h2 {
     margin-bottom: 0.4rem;
 }
 
+.kpi-mid {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 0.4rem;
+}
+
 .kpi-sub {
     font-size: .9rem;
     color: #555;

@@ -32,12 +32,6 @@
     line-height: 1.75;
 }
 
-.oa-hero-actions .btn, .oa-hero-actions .btn-black {
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
-}
-
 .oa-facts {
     margin-top: 18px;
     display: grid;
