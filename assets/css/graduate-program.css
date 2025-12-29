@@ -79,22 +79,6 @@
     }
 }
 
-/* Emphasis card */
-.grad-emphasis {
-    position: relative;
-    overflow: hidden;
-}
-
-.grad-emphasis::before {
-    content: "";
-    position: absolute;
-    inset: -1px auto -1px -1px;
-    width: 6px;
-    background: var(--accent);
-    opacity: .9;
-    border-radius: 16px;
-}
-
 .grad-section-head {
     display: flex;
     gap: 14px;
