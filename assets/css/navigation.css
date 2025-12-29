@@ -326,10 +326,10 @@
 
 @media (max-width: 480px) {
     .title strong {
-        font-size: 1rem;
+        font-size: 0.9rem;
     }
 
     .title span {
-        font-size: 0.875rem;
+        font-size: 0.8rem;
     }
 }
