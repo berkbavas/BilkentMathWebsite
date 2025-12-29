@@ -2,35 +2,6 @@
    Master Degree Program Page
    ========================= */
 
-.master-hero {
-    max-width: 820px;
-    padding: 2.6rem 0 1.6rem;
-}
-
-.master-hero h1 {
-    font-size: 2.05rem;
-    letter-spacing: -0.03em;
-    margin: 0;
-}
-
-.master-hero h1::after {
-    content: "";
-    display: block;
-    width: 56px;
-    height: 3px;
-    margin-top: .65rem;
-    border-radius: 999px;
-    background: #2d2a62;
-}
-
-.master-hero p {
-    margin-top: 1rem;
-    font-size: 1.08rem;
-    color: #474e5a;
-    line-height: 1.75;
-    max-width: 720px;
-}
-
 .master-actions {
     display: flex;
     gap: 12px;
@@ -45,13 +16,10 @@
     justify-content: center;
 }
 
-
 .master-section {
     display: flex;
     flex-direction: column;
-    gap: 24px;
-    max-width: 830px;
-    margin-top: 1.8rem;
+    gap: var(--gap-4);
 }
 
 .master-section h2 {
@@ -62,7 +30,6 @@
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 16px;
-    margin: 1.6rem 0 1.2rem;
     max-width: 980px;
 }
 

@@ -1,4 +1,4 @@
-.header-controls {
+.page-search-actions {
     display: grid;
     grid-template-columns: 1fr auto auto auto;
     gap: 10px;
@@ -202,7 +202,7 @@ details[open] .chev {
 
 /* Responsive */
 @media (max-width: 960px) {
-    .header-controls {
+    .page-search-actions {
         grid-template-columns: 1fr;
     }
 

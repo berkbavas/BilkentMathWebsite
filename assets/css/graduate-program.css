@@ -2,35 +2,6 @@
    Graduate Program + Graduate Supervisors (Redesign)
    ========================================================= */
 
-/* ---------- Hero ---------- */
-.grad-hero {
-    padding: 2.6rem 0;
-    margin-bottom: 1.6rem;
-    position: relative;
-}
-
-.grad-hero::after {
-    content: "";
-    display: block;
-    margin-top: 1.8rem;
-    height: 1px;
-    background: #E5E7EB;
-}
-
-.grad-hero-badge {
-    display: flex;
-    gap: 10px;
-    margin-bottom: 12px;
-}
-
-.grad-hero-lead {
-    margin-top: 14px;
-    max-width: 820px;
-    font-size: 1.1rem;
-    color: #474e5a;
-    line-height: 1.75;
-}
-
 .grad-hero-actions {
     display: flex;
     flex-wrap: wrap;
@@ -273,6 +244,12 @@
     grid-template-columns: 1fr auto;
     gap: 12px;
     margin: 18px 0 18px;
+}
+
+@media (max-width: 720px) {
+    .gsup-controls {
+        grid-template-columns: 1fr;
+    }
 }
 
 .gsup-search {

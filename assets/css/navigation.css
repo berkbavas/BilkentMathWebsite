@@ -18,9 +18,9 @@
     top: 0;
     left: 0;
     right: 0;
-    height: 84px;
+    height: var(--navigation-height);
     z-index: 1000;
-    background-color: #2d2a62;
+    background-color: var(--accent);
 }
 
 .navigation ul li {
@@ -33,7 +33,7 @@
     display: flex;
     align-items: center;
     gap: 16px;
-    max-width: 1320px;
+    max-width: var(--navigation-max-width);
     margin: 0 auto;
     padding: 12px 16px;
 }
@@ -170,7 +170,7 @@
     width: 44px;
     height: 44px;
     border-radius: 12px;
-    background: #2d2a62;
+    background: var(--accent);
     cursor: pointer;
 }
 
@@ -276,7 +276,7 @@
         right: 16px;
         margin-left: 0;
         border-radius: 16px;
-        background: #2d2a62;
+        background: var(--accent);
         border: 1px solid rgba(255, 255, 255, .10);
         box-shadow: 0 18px 40px rgba(0, 0, 0, .45);
         padding: 10px;

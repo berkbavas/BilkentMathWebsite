@@ -59,7 +59,6 @@ function matches(student, query) {
 
 
 function renderCards(list, lang) {
-
     const container = document.querySelector("#gs-cards-container");
     container.innerHTML = list.map(student => card(student, lang)).join("");
 }

@@ -23,55 +23,57 @@
     <main class="container">
 
         <!-- HERO -->
-        <header class="history-hero">
-            <div class="history-hero-top">
-                <div class="history-hero-badge">
+        <header class="page-hero">
+
+            <div class="page-hero-badge">
+                <div class="pill">
                     <i class="fa-solid fa-landmark" aria-hidden="true"></i>
                     <span data-lang="en">Department History</span>
                     <span data-lang="tr">Bölüm Tarihçesi</span>
                 </div>
-
-                <h1 data-lang="en">A Short History of the Department</h1>
-                <h1 data-lang="tr">Bölümün Kısa Tarihi</h1>
-
-                <p class="history-hero-lead" data-lang="en">
-                    A quick overview of how the department was founded and how it grew into an internationally oriented research department.
-                </p>
-                <p class="history-hero-lead" data-lang="tr">
-                    Bölümün kuruluşuna ve uluslararası düzeyde araştırma odaklı bir yapıya dönüşümüne kısa bir bakış.
-                </p>
-
-                <div class="history-hero-actions">
-                    <a class="btn-black" href="#heads" data-lang="en"><i class="fa-solid fa-users"></i>Heads of Department</a>
-                    <a class="btn-black" href="#heads" data-lang="tr"><i class="fa-solid fa-users"></i>Bölüm Başkanları</a>
-
-                    <a class="btn btn-ghost" href="about.html" data-lang="en"><i class="fa-solid fa-circle-info"></i>About</a>
-                    <a class="btn btn-ghost" href="about.html" data-lang="tr"><i class="fa-solid fa-circle-info"></i>Hakkında</a>
-                </div>
             </div>
 
-            <div class="history-kpis card-width" aria-label="Key milestones">
-                <div class="history-kpi">
-                    <div class="history-kpi-label" data-lang="en">First students</div>
-                    <div class="history-kpi-label" data-lang="tr">İlk öğrenciler</div>
-                    <div class="history-kpi-value">1986</div>
+            <h1 data-lang="en">A Short History of the Department</h1>
+            <h1 data-lang="tr">Bölümün Kısa Tarihi</h1>
+
+            <p class="page-lead" data-lang="en">
+                A quick overview of how the department was founded and how it grew into an internationally oriented research department.
+            </p>
+            <p class="page-lead" data-lang="tr">
+                Bölümün kuruluşuna ve uluslararası düzeyde araştırma odaklı bir yapıya dönüşümüne kısa bir bakış.
+            </p>
+
+            <div class="page-hero-actions">
+                <a class="btn-black" href="#heads" data-lang="en"><i class="fa-solid fa-users"></i>Heads of Department</a>
+                <a class="btn-black" href="#heads" data-lang="tr"><i class="fa-solid fa-users"></i>Bölüm Başkanları</a>
+
+                <a class="btn btn-ghost" href="about.html" data-lang="en"><i class="fa-solid fa-circle-info"></i>About</a>
+                <a class="btn btn-ghost" href="about.html" data-lang="tr"><i class="fa-solid fa-circle-info"></i>Hakkında</a>
+            </div>
+
+
+            <div class="page-kpis" aria-label="Key milestones">
+                <div class="page-kpi">
+                    <div class="page-kpi-label" data-lang="en">First students</div>
+                    <div class="page-kpi-label" data-lang="tr">İlk öğrenciler</div>
+                    <div class="page-kpi-value">1986</div>
                 </div>
-                <div class="history-kpi">
-                    <div class="history-kpi-label" data-lang="en">Independent department</div>
-                    <div class="history-kpi-label" data-lang="tr">Bölüm olarak konumlanma</div>
-                    <div class="history-kpi-value">1989</div>
+                <div class="page-kpi">
+                    <div class="page-kpi-label" data-lang="en">Independent department</div>
+                    <div class="page-kpi-label" data-lang="tr">Bölüm olarak konumlanma</div>
+                    <div class="page-kpi-value">1989</div>
                 </div>
-                <div class="history-kpi">
-                    <div class="history-kpi-label" data-lang="en">First undergraduates</div>
-                    <div class="history-kpi-label" data-lang="tr">İlk lisans öğrencileri</div>
-                    <div class="history-kpi-value">1991</div>
+                <div class="page-kpi">
+                    <div class="page-kpi-label" data-lang="en">First undergraduates</div>
+                    <div class="page-kpi-label" data-lang="tr">İlk lisans öğrencileri</div>
+                    <div class="page-kpi-value">1991</div>
                 </div>
             </div>
         </header>
 
         <!-- STORY -->
         <section class="history-layout">
-            <article class="card history-story">
+            <article class="card">
                 <h2 data-lang="en">Overview</h2>
                 <h2 data-lang="tr">Genel Bakış</h2>
 
@@ -124,8 +126,10 @@
 
         </section>
 
+        <div class="spacer-24"></div>
+
         <!-- HEADS -->
-        <section class="history-heads" id="heads">
+        <section id="heads" class="card-max-width">
             <div class="section-head history-section-head">
                 <h2 data-lang="en">Heads of the Department</h2>
                 <h2 data-lang="tr">Bölüm Başkanları</h2>
@@ -134,7 +138,7 @@
                 <p class="page-lead" data-lang="tr">Yıllar boyunca bölüm liderliği ve akademik odakların kısa bir özeti.</p>
             </div>
 
-            <div id="heads-root" aria-live="polite" class="grid card-width"><!-- JSON render target --></div>
+            <div id="heads-root" aria-live="polite" class="grid"><!-- JSON render target --></div>
         </section>
 
     </main>

@@ -65,7 +65,16 @@ function render() {
 
     const gridCurrent = document.querySelector("#gridCurrent");
     const gridEmeriti = document.querySelector("#gridEmeriti");
+    const facultyMemberCount = document.querySelector("#facultyMemberCount");
+    const lang = localStorage.getItem("lang") || "en";
 
+    if (lang === "en") {
+
+        facultyMemberCount.textContent = `${CURRENT_FACULTY.length} Faculty Members`;
+    } else {
+        facultyMemberCount.textContent = `${CURRENT_FACULTY.length} Öğretim Üyesi`;
+    }
+    
     gridCurrent.innerHTML = CURRENT_FACULTY.map(cardTemplate).join("");
     gridEmeriti.innerHTML = EMERITI.map(cardTemplate).join("");
 }

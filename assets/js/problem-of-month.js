@@ -176,13 +176,13 @@ function render() {
         elMount.appendChild(details);
 
         // Quick links buttons
-        const linkBtn = document.createElement("button");
-        linkBtn.className = "btn btn-ghost";
-        linkBtn.textContent = year;
-        linkBtn.addEventListener("click", () => {
-            document.getElementById(`year-${year}`).scrollIntoView({ behavior: "smooth" });
-        });
-        elQuickLinks.appendChild(linkBtn);
+        // const linkBtn = document.createElement("button");
+        // linkBtn.className = "btn btn-ghost";
+        // linkBtn.textContent = year;
+        // linkBtn.addEventListener("click", () => {
+        //     document.getElementById(`year-${year}`).scrollIntoView({ behavior: "smooth" });
+        // });
+        // elQuickLinks.appendChild(linkBtn);
     });
 
 
@@ -304,8 +304,8 @@ TRANSLATIONS.quickLinksTitle = {
 };
 
 TRANSLATIONS.quickLinksDescription = {
-    en: "Jump to a year or open the latest question.",
-    tr: "Bir yıla atlayın veya son soruyu açın."
+    en: "Open the latest question.",
+    tr: "Son soruyu açın."
 };
 
 

@@ -1,11 +1,5 @@
-/* Faculty Page */
-
 .wrap {
     margin-bottom: 4rem;
-}
-
-.wrap h2 {
-    margin-bottom: 1rem;
 }
 
 .faculty-grid {
@@ -108,10 +102,15 @@
     display: grid;
 }
 
+.faculty-meta li + li {
+    margin-top: .6rem;
+}
+
 .faculty-meta li {
     display: flex;
     align-items: center;
-    gap: .6rem;
+    gap: 0.6rem;
+    min-width: 0;
     font-size: .85rem;
     color: rgba(17, 17, 17, .85);
 }
@@ -128,7 +127,7 @@
 }
 
 /* Responsive */
-@media (max-width: 600px) {
+@media (max-width: var(--mobile-breakpoint)) {
     .faculty-card {
         grid-template-columns: 1fr;
         text-align: center;
