@@ -89,10 +89,12 @@
 .alumni-story blockquote {
     margin: .8rem 0 0;
     padding-left: 1rem;
-    border-left: 4px solid #2d2a62;
-    font-size: 0.85rem;
     color: #000000;
 }
+
+.alumni-story p {
+    font-size: 0.9rem;
+ }
 
 /* Update */
 .alumni-update {

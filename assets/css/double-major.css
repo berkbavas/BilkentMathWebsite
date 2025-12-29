@@ -171,6 +171,13 @@
     flex: 0 0 auto;
 }
 
+@media (max-width: 600px){
+    .dm-hero-actions {
+        flex-direction: column;
+        align-items: stretch;
+    }
+}
+
 @media (max-width: 980px) {
     .dm-kpis {
         grid-template-columns: 1fr;
