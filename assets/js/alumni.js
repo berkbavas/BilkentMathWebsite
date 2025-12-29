@@ -1,45 +1,45 @@
 import { ALUMNI } from "../data/alumni.js";
 import { TRANSLATIONS } from "../data/translations.js";
-import { escapeHtml } from "./helpers.js";
 
 const elementSearch = document.querySelector("#search");
 const elementReset = document.querySelector("#reset");
 const elementRoot = document.getElementById("alumniRoot");
+const URL = "https://math.bilkent.edu.tr/Alumni/";
 
 function renderEntry(a, lang) {
-    const esc = escapeHtml;
-    const photoUrl = a.photo ? "https://math.bilkent.edu.tr/Alumni/" + a.photo : "";
+    const photoUrl = a.photo ? URL + a.photo : "";
     const bullets = Array.isArray(a.bullets) ? a.bullets : [];
+    const story = a.story[lang] || "";
 
     return `
     <article class="person-card">
         <header class="alumni-header">
             ${photoUrl ? `
             <div class="alumni-avatar">
-                <img src="${photoUrl}" alt="${esc(a.name)}" loading="lazy">
+                <img src="${photoUrl}" alt="${a.name}" loading="lazy">
             </div>` : ""}
 
             <div class="alumni-title">
-                <h3 class="alumni-name">${esc(a.name)}</h3>
-                ${a.year ? `<span class="alumni-year">${esc(a.year)}</span>` : ""}
+                <h3 class="alumni-name">${a.name}</h3>
+                ${a.year ? `<span class="alumni-year">${a.year}</span>` : ""}
             </div>
         </header>
 
         ${bullets.length ? `
-        <ul class="alumni-bullets">${bullets.map(b => `<li>${esc(b)}</li>`).join("")}</ul>` : ""}
+        <ul class="alumni-bullets">${bullets.map(b => `<li>${b}</li>`).join("")}</ul>` : ""}
 
-        ${a.story ? `
+        ${story ? `
         <details class="alumni-story">
             <summary>
                 <i class="fa-solid fa-caret-right"></i>
-                <span data-i18n="story">${TRANSLATIONS.story[lang]}</span>
+                <span data-i18n="story">${TRANSLATIONS.labelStory[lang]}</span>
             </summary>
-            <blockquote>${a.story}</blockquote>
+            <blockquote>${story}</blockquote>
         </details>` : ""}
 
         ${a.lastUpdate ? `
         <div class="alumni-update">
-           ${TRANSLATIONS.lastUpdate[lang]}: ${esc(a.lastUpdate)}
+           ${TRANSLATIONS.labelLastUpdate[lang]}: ${a.lastUpdate}
         </div>` : ""}
     </article>
     `;
@@ -56,9 +56,9 @@ function apply() {
     const query = elementSearch.value.trim();
     const list = ALUMNI.filter(alumni => matches(alumni, query));
     elementRoot.innerHTML = list.map(a => renderEntry(a, lang)).join("");
-    elementSearch.placeholder = TRANSLATIONS.searchPlaceholder[lang];
+    elementSearch.placeholder = TRANSLATIONS.labelSearchPlaceholder[lang];
     if (list.length === 0) {
-        elementRoot.innerHTML = `<p>${TRANSLATIONS.noResults[lang]}</p>`;
+        elementRoot.innerHTML = `<p>${TRANSLATIONS.labelNoResults[lang]}</p>`;
     }
 }
 
@@ -77,27 +77,27 @@ function render() {
     apply();
 }
 
-TRANSLATIONS.buttonReset = {
+TRANSLATIONS.labelButtonReset = {
     en: "Reset",
     tr: "Sıfırla"
 };
 
-TRANSLATIONS.noResults = {
+TRANSLATIONS.labelNoResults = {
     en: "No matching alumni found.",
     tr: "Eşleşen mezun bulunamadı."
 };
 
-TRANSLATIONS.searchPlaceholder = {
+TRANSLATIONS.labelSearchPlaceholder = {
     en: "Search",
     tr: "Ara"
 };
 
-TRANSLATIONS.story = {
+TRANSLATIONS.labelStory = {
     en: "Story",
     tr: "Hikaye"
 };
 
-TRANSLATIONS.lastUpdate = {
+TRANSLATIONS.labelLastUpdate = {
     en: "Last Update",
     tr: "Son Güncelleme"
 };

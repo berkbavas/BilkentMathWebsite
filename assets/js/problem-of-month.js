@@ -47,7 +47,7 @@ const DATA = [
   PROBLEM_OF_MONTH_2006
 ];
 
-const URL = "Problem/"; // Base URL for problem PDFs
+const URL = "https://math.bilkent.edu.tr/Problem/"; // Base URL for problem PDFs
 
 const elMount = document.getElementById("mount");
 const elLatestProblemBtn = document.getElementById("latestProblemBtn");

@@ -2,6 +2,8 @@ import { SEMINARS } from "../data/seminars.js";
 import { TRANSLATIONS } from "../data/translations.js";
 import { escapeHtml } from "./helpers.js";
 
+const URL = "https://math.bilkent.edu.tr/";
+
 // ---------- helpers ----------
 const $ = (sel) => document.querySelector(sel);
 
@@ -22,7 +24,7 @@ function renderRow(seminar) {
     return `
     <tr>
       <td>
-        <a class="title-link" target="_blank" href="${seminar.link || "#"}">${escapeHtml(seminar.title)}</a>
+        <a class="title-link" target="_blank" href="${URL + (seminar.link || "#")}">${escapeHtml(seminar.title)}</a>
         <div class="col-speaker">${escapeHtml(seminar.speaker)}</div>
       </td>
       <td>${escapeHtml(seminar.date)}</td>

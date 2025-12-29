@@ -15,6 +15,8 @@ import { SEMINARS_2013_2014 } from "../data/seminars/seminars-2013-2014.js";
 import { TRANSLATIONS } from "../data/translations.js";
 import { escapeHtml } from "./helpers.js";
 
+const URL = "https://math.bilkent.edu.tr/";
+
 const DATA = {
     "2024-2025": SEMINARS_2024_2025,
     "2023-2024": SEMINARS_2023_2024,
@@ -58,7 +60,7 @@ function renderRow(seminar) {
     return `
     <tr>
       <td>
-        <a class="title-link" target="_blank" href="${seminar.link || "#"}">${escapeHtml(seminar.title)}</a>
+        <a class="title-link" target="_blank" href="${ URL + (seminar.link || "#")}">${escapeHtml(seminar.title)}</a>
         <div class="col-speaker">${escapeHtml(seminar.speaker)}</div>
       </td>
       ${seminar.date ? `<td>${escapeHtml(seminar.date)}</td>` : "<td></td>"}
