@@ -1,7 +1,5 @@
-
-
 .pom-card {
-    background: var(--surface, #fff);
+    background: #fff;
     border: 1px solid var(--border, rgba(17, 17, 17, .12));
     border-radius: 16px;
     padding: 18px;
@@ -163,10 +161,8 @@ details[open] .chev {
 
 
 /* --- Month cards polish (drop-in overrides) --- */
-
-
 .pom-month-card {
-    background: var(--surface, #fff);
+    background: #fff;
     border: 1px solid var(--border, rgba(17, 17, 17, .12));
     border-radius: 16px;
     padding: 18px;
