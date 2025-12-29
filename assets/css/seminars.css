@@ -3,7 +3,7 @@
 /* Table styles */
 
 .table-card {
-    border: 1px solid var(--line);
+    border: 1px solid var(--border);
     border-radius: 14px;
     background: rgba(255, 255, 255, .75);
     backdrop-filter: blur(10px);
@@ -28,7 +28,7 @@
     letter-spacing: .04em;
     text-transform: uppercase;
     color: rgba(17, 17, 17, .65);
-    border-bottom: 1px solid var(--line);
+    border-bottom: 1px solid var(--border);
     background: rgba(255, 255, 255, .65);
 }
 
@@ -66,7 +66,7 @@
 }
 
 .seminar-card {
-    border: 1px solid var(--line);
+    border: 1px solid var(--border);
     border-radius: 16px;
     background: rgba(255, 255, 255, .78);
     backdrop-filter: blur(10px);

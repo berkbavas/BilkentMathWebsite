@@ -107,8 +107,8 @@ details[open] .chev {
     letter-spacing: .04em;
     text-transform: uppercase;
     color: rgba(17, 17, 17, .65);
-    border-top: 1px solid var(--line);
-    border-bottom: 1px solid var(--line);
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
     background: rgba(255, 255, 255, .65);
 }
 
@@ -116,6 +116,10 @@ details[open] .chev {
     padding: 14px 16px;
     border-bottom: 1px solid rgba(17, 17, 17, .08);
     vertical-align: middle;
+}
+
+.seminar-table tbody td span {
+    text-wrap: nowrap;
 }
 
 .seminar-table tbody tr:hover {
@@ -145,7 +149,7 @@ details[open] .chev {
 }
 
 .seminar-card {
-    border: 1px solid var(--line);
+    border: 1px solid var(--border);
     border-radius: 16px;
     background: rgba(255, 255, 255, .78);
     backdrop-filter: blur(10px);
