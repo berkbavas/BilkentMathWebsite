@@ -204,13 +204,6 @@
     margin-top: 14px;
 }
 
-@media (max-width: 720px) {
-    .grad-ready-actions {
-        flex-direction: column;
-        align-items: stretch;
-    }
-}
-
 /* =========================
    Graduate Supervisors
    ========================= */

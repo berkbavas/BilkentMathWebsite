@@ -164,7 +164,7 @@
     flex: 0 0 auto;
 }
 
-@media (max-width: 600px){
+@media (max-width: 600px) {
     .page-hero-actions {
         flex-direction: column;
         align-items: stretch;
@@ -175,6 +175,12 @@
     .dm-kpis {
         grid-template-columns: 1fr;
     }
+
+    .dm-cta {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 36px;
+    }
 }
 
 @media (max-width: 980px) {
@@ -184,11 +190,5 @@
 
     .dm-aside {
         position: static;
-    }
-
-    .dm-cta {
-        flex-direction: column;
-        align-items: stretch;
-        gap: 36px;
     }
 }

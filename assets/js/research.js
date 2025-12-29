@@ -52,7 +52,7 @@ function render() {
     RESEARCH_DATA.forEach(item => totalMembers += item.faculty.length);
     elCount.textContent = lang === "tr" ? `${totalMembers} öğretim üyesi` : `${totalMembers} faculty member`;
 
-    elMount.innerHTML = RESEARCH_DATA.map((a, idx) => renderAccordionItem(a, lang)).join("");
+    elMount.innerHTML = RESEARCH_DATA.map(item => renderAccordionItem(item, lang)).join("");
 }
 
 document.render = render; // Expose render function to global scope for language toggle
