@@ -3,41 +3,30 @@
 */
 
 import { HEADS_OF_DEPARTMENT } from "../data/history.js";
-
-/** Escape a string for HTML injection safety */
-function esc(s = "") {
-    return String(s)
-        .replaceAll("&", "&amp;")
-        .replaceAll("<", "&lt;")
-        .replaceAll(">", "&gt;")
-        .replaceAll('"', "&quot;")
-        .replaceAll("'", "&#039;");
-}
+import { escapeHtml, safeUrl } from "./helpers.js";
 
 function renderCard(head) {
-    const name = esc(head.name || "");
-    const photo = esc(head.photo || "");
-    const title = esc(head.title || "");
-    const term = esc(head.term || "");
-    const phd = esc(head.phd || "");
+    const name = escapeHtml(head.name);
+    const photo = escapeHtml(head.photo);
+    const title = escapeHtml(head.title);
+    const term = escapeHtml(head.term);
+    const phd = escapeHtml(head.phd);
+    const webpage = safeUrl(head.webpage);
 
-    const webpage = head.webpage || "";
-    const safeLink = webpage ? esc(webpage) : "";
-
-    const nameHtml = safeLink
-        ? `<a href="${safeLink}" target="_blank" rel="noopener noreferrer">${name}</a>`
+    const nameHtml = webpage
+        ? `<a href="${webpage}" target="_blank" rel="noopener noreferrer">${name}</a>`
         : name;
 
     // areas can be array or comma-separated string
     let areas = head.areas;
     if (Array.isArray(areas)) {
-        areas = areas.filter(Boolean).map(esc);
+        areas = areas.filter(Boolean).map(escapeHtml);
     } else {
         areas = String(areas || "")
             .split(",")
             .map(s => s.trim())
             .filter(Boolean)
-            .map(esc);
+            .map(escapeHtml);
     }
 
     const tagsHtml = areas.length

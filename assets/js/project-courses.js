@@ -1,6 +1,7 @@
 
 import { PROJECT_COURSES } from '../data/project-courses.js';
 import { TRANSLATIONS } from '../data/translations.js';
+import { escapeHtml, safeUrl } from './helpers.js';
 
 function render() {
     let elMount = document.getElementById('archiveMount');
@@ -15,15 +16,18 @@ function render() {
         yearHeader.textContent = year;
         yearSection.appendChild(yearHeader);
         courses.forEach(course => {
+            const url = safeUrl(course.url);
+            const title = escapeHtml(course.title);
+
             let courseDiv = document.createElement('div');
             courseDiv.className = 'archive-item';
             let fontAwesomeIcon = document.createElement('i');
             fontAwesomeIcon.className = 'fa-solid fa-square-arrow-up-right';
             let courseLink = document.createElement('a');
-            courseLink.href = course.url;
+            courseLink.href = url;
             courseLink.target = '_blank';
             courseLink.rel = 'noopener noreferrer';
-            courseLink.textContent = course.title;
+            courseLink.textContent = title;
             courseLink.appendChild(fontAwesomeIcon);
             courseDiv.appendChild(courseLink);
             yearSection.appendChild(courseDiv);

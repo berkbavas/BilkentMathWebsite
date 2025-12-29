@@ -19,6 +19,7 @@ import { PROBLEM_OF_MONTH_2008 } from "../data/problem-of-month/problem-of-month
 import { PROBLEM_OF_MONTH_2007 } from "../data/problem-of-month/problem-of-month-2007.js";
 import { PROBLEM_OF_MONTH_2006 } from "../data/problem-of-month/problem-of-month-2006.js";
 import { PROBLEM_OF_MONTH } from "../data/problem-of-month.js"
+import { escapeHtml, safeUrl } from "./helpers.js";
 
 import { TRANSLATIONS, MONTHS_EN_TO_TR } from "../data/translations.js";
 
@@ -62,8 +63,8 @@ function renderCard(item, lang) {
   const solversList = (item.solvers || []).map(
     (solver) => `
       <li class="solver-item">
-        <span class="solver-name">${solver.name}</span>
-        <span class="solver-aff">${solver.affiliation ? solver.affiliation : ""}</span>
+        <span class="solver-name">${escapeHtml(solver.name)}</span>
+        <span class="solver-aff">${escapeHtml(solver.affiliation ? solver.affiliation : "")}</span>
       </li>
     `
   ).join("");
@@ -71,8 +72,8 @@ function renderCard(item, lang) {
   const solverCount = item.solvers?.length || 0;
 
   let month = lang === "tr" ? MONTHS_EN_TO_TR[item.month] || item.month : item.month;
-  let question = URL + item.question;
-  let solution = item.solution ? URL + item.solution : null;
+  let question = safeUrl(URL + item.question);
+  let solution = item.solution ? safeUrl(URL + item.solution) : null;
 
   return `
   <article class="pom-month-card">

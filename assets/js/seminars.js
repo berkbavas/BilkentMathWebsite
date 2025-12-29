@@ -1,13 +1,13 @@
 import { SEMINARS } from "../data/seminars.js";
 import { TRANSLATIONS } from "../data/translations.js";
-import { escapeHtml } from "./helpers.js";
+import { escapeHtml, safeUrl } from "./helpers.js";
 
 const URL = "https://math.bilkent.edu.tr/";
 
 // ---------- helpers ----------
 const $ = (sel) => document.querySelector(sel);
 
-function toDateKey(s, t) { // DD.MM.YYYY -> Date
+function toDateKey(s, t) {
     const [d, m, y] = s.split(".").map(x => x.padStart(2, "0"));
     const [hh, mm] = (t || "00:00").split(":").map(x => x.padStart(2, "0"));
     return new Date(`${y}-${m}-${d}T${hh}:${mm}:00`);
@@ -21,15 +21,22 @@ function matches(item, q) {
 }
 
 function renderRow(seminar) {
+    const url = safeUrl(URL + seminar.link);
+    const title = escapeHtml(seminar.title);
+    const speaker = escapeHtml(seminar.speaker);
+    const date = escapeHtml(seminar.date);
+    const time = escapeHtml(seminar.time);
+    const place = escapeHtml(seminar.place);
+
     return `
     <tr>
       <td>
-        <a class="title-link" target="_blank" href="${URL + (seminar.link || "#")}">${escapeHtml(seminar.title)}</a>
-        <div class="col-speaker">${escapeHtml(seminar.speaker)}</div>
+        <a class="title-link" target="_blank" href="${url}">${title}</a>
+        <div class="col-speaker">${speaker}</div>
       </td>
-      <td>${escapeHtml(seminar.date)}</td>
-      <td>${escapeHtml(seminar.time)}</td>
-      <td><span class="pill">${escapeHtml(seminar.place)}</span></td>
+      <td>${date}</td>
+      <td>${time}</td>
+      <td><span class="pill">${place}</span></td>
     </tr>
   `
 }
@@ -41,24 +48,33 @@ function renderTable(list) {
 }
 
 function renderCard(seminar) {
+    const url = safeUrl(URL + seminar.link);
+    const title = escapeHtml(seminar.title);
+    const speaker = escapeHtml(seminar.speaker);
+    const date = escapeHtml(seminar.date);
+    const time = escapeHtml(seminar.time);
+    const place = escapeHtml(seminar.place);
+
     return `
     <article class="seminar-card">
       <div class="sc-top">
         <div>
-          <div class="sc-title">
-            <a href="${seminar.link || "#"}">${escapeHtml(seminar.title)}</a>
-          </div>
-          <div class="sc-speaker">${escapeHtml(seminar.speaker)}</div>
+            <div class="sc-title">
+                <a href="${url}" target="_blank" rel="noopener">${title}</a>
+            </div>
+            <div class="sc-speaker">${speaker}</div>
         </div>
-        <div class="sc-date">
-          <span class="m">${escapeHtml(seminar.date)}</span>
-          <span class="t">${escapeHtml(seminar.time)}</span>
-        </div>
-      </div>
 
-      <div class="sc-meta">
-        <span class="pill">${escapeHtml(seminar.place)}</span>
-      </div>
+        <div class="sc-date">
+            <span class="m">${date}</span>
+            <span class="t">${time}</span>
+        </div>
+        </div>
+
+
+        <div class="sc-meta">
+            <span class="pill">${place}</span>
+        </div>
     </article>
   `;
 }
@@ -80,7 +96,7 @@ function apply() {
     let lang = localStorage.getItem("lang") || "en";
 
     $("#table-container").hidden = list.length === 0;
-    $("#count").textContent = `${list.length} ${lang === "en" ? "seminar(s)" : "seminer"}`;
+    $("#count").textContent = `${list.length} ${TRANSLATIONS.seminarPostfix[lang] || "seminar(s)"}`;
 
     renderTable(list);
     renderCards(list);
@@ -140,5 +156,10 @@ TRANSLATIONS.searchPlaceholder = {
     tr: "Ara"
 };
 
-document.render = render;
+TRANSLATIONS.seminarPostfix = {
+    en: "seminar(s)",
+    tr: "seminer"
+};
+
+document.render = render; // Expose render function for language toggle
 document.addEventListener("DOMContentLoaded", render);

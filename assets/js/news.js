@@ -1,4 +1,5 @@
 import { NEWS } from "../data/news.js";
+import { escapeHtml } from "./helpers.js";
 
 let elMount = document.getElementById("news-timeline");
 
@@ -12,6 +13,9 @@ function renderYear(year, items) {
     elYearSection.appendChild(elYearHeader);
 
     items.forEach((item) => {
+        const content = item.content;
+        const date = escapeHtml(item.date);
+
         const elItem = document.createElement("article");
         elItem.classList.add("news-item");
 
@@ -24,12 +28,11 @@ function renderYear(year, items) {
 
         const elDate = document.createElement("time");
         elDate.classList.add("news-date");
-        elDate.textContent = item.date;
+        elDate.textContent = date;
 
         const elContent = document.createElement("div");
         elContent.classList.add("news-content");
-        elContent.innerHTML = item.content;
-
+        elContent.innerHTML = content;
         elCard.appendChild(elDate);
         elCard.appendChild(elContent);
 
@@ -45,26 +48,26 @@ function renderYear(year, items) {
 function render() {
     elMount.innerHTML = "";
     const lang = localStorage.getItem("lang") || "en";
-    
+
     // Group news items by year
     const groupedByYear = NEWS.reduce((acc, item) => {
         if (!acc[item.year]) {
             acc[item.year] = [];
         }
-        
+
         // Transform the item to have the right language properties
         const transformedItem = {
             date: item.date[lang],
             content: item.content[lang]
         };
-        
+
         acc[item.year].push(transformedItem);
         return acc;
     }, {});
-    
+
     // Sort years in descending order (newest first)
     const sortedYears = Object.keys(groupedByYear).sort((a, b) => b - a);
-    
+
     // Render each year section
     sortedYears.forEach(year => {
         const yearSection = renderYear(year, groupedByYear[year]);

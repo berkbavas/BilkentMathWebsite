@@ -5,12 +5,12 @@ import { escapeHtml } from "./helpers.js";
 function cardTemplate(p) {
     let currentLang = localStorage.getItem("lang") || "en";
 
-    const name = escapeHtml(p.name);
-    const title = escapeHtml(p.title[currentLang] || "");
-    const degree = escapeHtml(p.degree[currentLang] || "");
-    const office = escapeHtml(p.office || "");
-    const phone = escapeHtml(p.phone || "");
-    const email = escapeHtml(p.email || "");
+    const name = p.name;
+    const title = p.title[currentLang] || "";
+    const degree = p.degree[currentLang] || "";
+    const office = p.office || "";
+    const phone = p.phone || "";
+    const email = p.email || "";
     const webpage = (p.webpage || "").trim();
     const photo = (p.photo || "").trim();
 

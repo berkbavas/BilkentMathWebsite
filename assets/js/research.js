@@ -1,11 +1,15 @@
 import { RESEARCH_DATA } from "../data/research.js";
+import { escapeHtml, safeUrl } from "./helpers.js";
+
 
 function renderFacultyChips(faculty, accent) {
     const chips = faculty.map(f => {
+        let url = safeUrl(f.url);
+        let name = escapeHtml(f.name);
         return `
-      <a class="chip-link" href="${f.url}" target="_blank" rel="noreferrer" style="--chip-accent: ${accent};">
+      <a class="chip-link" href="${url}" target="_blank" rel="noopener" style="--chip-accent: ${accent};">
         <i class="fa-regular fa-user"></i>
-        <span>${f.name}</span>
+        <span>${name}</span>
       </a>`;
     }).join("");
 

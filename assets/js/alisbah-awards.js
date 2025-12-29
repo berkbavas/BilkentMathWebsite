@@ -1,6 +1,8 @@
 import { TRANSLATIONS } from "../data/translations.js";
 import { ALISBAH_AWARDS } from "../data/alisbah-awards.js";
 
+const URL = "https://math.bilkent.edu.tr/";
+
 function renderRecipients(recipients) {
     return `
     <ul class="oa-names">
@@ -13,12 +15,12 @@ function renderRow(item, labels) {
     const photosCell = item.photos
         ? `
       <td data-label="${labels.photos}">
-        <a class="oa-btn" href="${item.photos}" target="_blank" rel="noopener">
+        <a class="oa-btn" href="${URL + item.photos}" target="_blank" rel="noopener">
           <i class="fa-regular fa-image" aria-hidden="true"></i>
           <span data-i18n="tableView">${labels.view}</span>
         </a>
       </td>`
-        : `<td data-label="${labels.photos}">-</td>`;
+        : `<td>-</td>`;
 
     return `
     <tr class="oa-row">

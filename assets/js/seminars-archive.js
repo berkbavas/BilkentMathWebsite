@@ -10,10 +10,8 @@ import { SEMINARS_2016_2017 } from "../data/seminars/seminars-2016-2017.js";
 import { SEMINARS_2015_2016 } from "../data/seminars/seminars-2015-2016.js";
 import { SEMINARS_2014_2015 } from "../data/seminars/seminars-2014-2015.js";
 import { SEMINARS_2013_2014 } from "../data/seminars/seminars-2013-2014.js";
-
-
 import { TRANSLATIONS } from "../data/translations.js";
-import { escapeHtml } from "./helpers.js";
+import { escapeHtml, safeUrl } from "./helpers.js";
 
 const URL = "https://math.bilkent.edu.tr/";
 
@@ -43,7 +41,7 @@ function norm(s) {
     return s.trim().toLowerCase();
 }
 
-function toDateKey(s, t) { // DD.MM.YYYY -> Date
+function toDateKey(s, t) {
     const [d, m, y] = s.split(".").map(x => x.padStart(2, "0"));
     const [hh, mm] = (t || "00:00").split(":").map(x => x.padStart(2, "0"));
     return new Date(`${y}-${m}-${d}T${hh}:${mm}:00`);
@@ -57,37 +55,51 @@ function matches(item, q) {
 }
 
 function renderRow(seminar) {
+    const url = safeUrl(URL + seminar.link);
+    const title = escapeHtml(seminar.title);
+    const speaker = escapeHtml(seminar.speaker);
+    const date = escapeHtml(seminar.date);
+    const time = escapeHtml(seminar.time);
+    const place = escapeHtml(seminar.place);
+
     return `
     <tr>
-      <td>
-        <a class="title-link" target="_blank" href="${ URL + (seminar.link || "#")}">${escapeHtml(seminar.title)}</a>
-        <div class="col-speaker">${escapeHtml(seminar.speaker)}</div>
-      </td>
-      ${seminar.date ? `<td>${escapeHtml(seminar.date)}</td>` : "<td></td>"}
-      ${seminar.time ? `<td>${escapeHtml(seminar.time)}</td>` : "<td></td>"}
-      ${seminar.place ? `<td><span class="pill">${escapeHtml(seminar.place)}</span></td>` : "<td></td>"}
+        <td>
+            <a class="title-link" target="_blank" rel="noopener" href="${url}">${title}</a>
+            <div class="col-speaker">${speaker}</div>
+        </td>
+        <td>${date}</td>
+        <td>${time}</td>
+        <td><span class="pill">${place}</span></td>       
     </tr>
   `
 }
 
 function renderCard(seminar) {
+    let url = safeUrl(URL + seminar.link);
+    let title = escapeHtml(seminar.title);
+    let speaker = escapeHtml(seminar.speaker);
+    let date = escapeHtml(seminar.date);
+    let time = escapeHtml(seminar.time);
+    let place = escapeHtml(seminar.place);
+
     return `
     <article class="seminar-card">
       <div class="sc-top">
         <div>
           <div class="sc-title">
-            <a href="${seminar.link || "#"}">${escapeHtml(seminar.title)}</a>
+            <a target="_blank" rel="noopener" href="${url}">${title}</a>
           </div>
-          <div class="sc-speaker">${escapeHtml(seminar.speaker)}</div>
+          <div class="sc-speaker">${speaker}</div>
         </div>
         <div class="sc-date">
-          <span class="m">${escapeHtml(seminar.date)}</span>
-          <span class="t">${escapeHtml(seminar.time)}</span>
+          <span class="m">${date}</span>
+          <span class="t">${time}</span>
         </div>
       </div>
 
       <div class="sc-meta">
-        <span class="pill">${escapeHtml(seminar.place)}</span>
+        <span class="pill">${place}</span>
       </div>
     </article>
   `;

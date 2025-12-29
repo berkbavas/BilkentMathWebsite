@@ -4,6 +4,8 @@ import { GRADUATE_STUDENTS } from "../data/graduate-students.js";
 import { PROBLEM_OF_MONTH } from "../data/problem-of-month.js"
 import { MONTHS_EN_TO_TR } from "../data/translations.js";
 
+const URL = "https://math.bilkent.edu.tr/";
+
 function toDateKey(s, t) { // DD.MM.YYYY -> Date
 	const [d, m, y] = s.split(".").map(x => x.padStart(2, "0"));
 	const [hh, mm] = (t || "00:00").split(":").map(x => x.padStart(2, "0"));
@@ -33,7 +35,7 @@ function render() {
 
 	if (upcoming.length > 0) {
 		document.getElementById("nextSeminarDate").textContent = `${upcoming[0].date} · ${upcoming[0].time} · ${upcoming[0].place}`;
-		document.getElementById("nextSeminarTitle").innerHTML = `<a href="${upcoming[0].link}" target="_blank" rel="noopener noreferrer">${upcoming[0].title}</a>`;
+		document.getElementById("nextSeminarTitle").innerHTML = `<a href="${URL + upcoming[0].link}" target="_blank" rel="noopener noreferrer">${upcoming[0].title}</a>`;
 		document.getElementById("nextSeminarSpeaker").textContent = upcoming[0].speaker;
 	}
 
@@ -47,7 +49,7 @@ function renderSeminars(containerId, list) {
 	const el = document.getElementById(containerId);
 	el.innerHTML = list.map(s => `
     <div class="seminar-card">
-      <strong><a href="${s.link}" target="_blank" rel="noopener noreferrer">${s.title}</a></strong><br>
+      <strong><a href="${URL + s.link}" target="_blank" rel="noopener noreferrer">${s.title}</a></strong><br>
       <span>${s.speaker}</span>
       <small>${s.date} · ${s.time} · ${s.place}</small>
     </div>
