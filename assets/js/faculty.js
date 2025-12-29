@@ -14,8 +14,8 @@ function cardTemplate(p) {
     const webpage = (p.webpage || "").trim();
     const photo = (p.photo || "").trim();
 
-    const tags = (p.research[currentLang] || [])
-        .map(t => `<span class="faculty-chip">${escapeHtml(t)}</span>`)
+    const tags = (p.research || [])
+        .map(area => `<span class="faculty-chip">${escapeHtml(area[currentLang] || "")}</span>`)
         .join("");
 
     const nameHtml = webpage

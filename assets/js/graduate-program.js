@@ -69,7 +69,7 @@ function render() {
                 name: p.name,
                 title: p.title[lang] || "",
                 photo: p.photo,
-                research: p.research[lang] || [],
+                research: p.research.map(area => area[lang] || ""),
                 webpage: p.webpage || "#"
             };
         });
