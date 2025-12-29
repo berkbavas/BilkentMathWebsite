@@ -162,7 +162,7 @@ export const TRANSLATIONS = {
     },
     navMoreProblemOfMonth: {
         en: "Problem of Month",
-        tr: "Ayın Problemi"
+        tr: "Ayın Sorusu"
     },
     navMoreNewsFromDepartment: {
         en: "News from Department",
