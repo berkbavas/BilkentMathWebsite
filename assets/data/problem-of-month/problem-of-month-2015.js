@@ -7,7 +7,7 @@ export const PROBLEM_OF_MONTH_2015 = [
     solvers: [
       { name: "Toshihiro Shimizu", affiliation: "Kawasaki, Japan" },
       { name: "William Wu Cheng Yuan", affiliation: "Singapore" },
-      { name: "Julian Al-Zukaimi", affiliation: "Higher Institue for Applied Science & Technology, Syria" },
+      { name: "Julian Al-Zukaimi", affiliation: "Higher Institute for Applied Science & Technology, Syria" },
       { name: "Harald Bogeholz", affiliation: "c t Computer magazine, Germany" },
       { name: "Tomas Jurik", affiliation: "Kosice, Slovakia" },
       { name: "Erdem Ünal", affiliation: "Finansbank, İstanbul" },
@@ -50,7 +50,7 @@ export const PROBLEM_OF_MONTH_2015 = [
       { name: "Toshihiro Shimizu", affiliation: "Kawasaki, Japan" },
       { name: "Yasuo Yamane", affiliation: "Machida, Japan" },
       { name: "William Wu Cheng Yuan", affiliation: "Singapore" },
-      { name: "Julian Al-Zukaimi", affiliation: "Higher Institue for Applied Science & Technology, Syria" },
+      { name: "Julian Al-Zukaimi", affiliation: "Higher Institute for Applied Science & Technology, Syria" },
       { name: "Tomas Jurik", affiliation: "Kosice, Slovakia" },
       { name: "Bojan Basic", affiliation: "Novi Sad, Serbia" }
     ]

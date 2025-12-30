@@ -2,7 +2,7 @@ export const PROBLEM_OF_MONTH_2006 = [
     {
         month: "January",
         year: 2006,
-        question: "0601q.pdf",
+        question: "0512q.pdf",
         solution: "0601a.pdf",
         solvers: [
             { name: "Tomas Jurik", affiliation: "Comenius University" },
@@ -20,13 +20,13 @@ export const PROBLEM_OF_MONTH_2006 = [
     {
         month: "February",
         year: 2006,
-        question: "0602q.pdf",
+        question: "0601q.pdf",
         solution: "0602a.pdf",
         solvers: [
             { name: "Miroslava Sotakova", affiliation: "Aarhus University, Denmark" },
             { name: "Tomas Jurik", affiliation: "Comenius University" },
-            { name: "Burak Kaya", affiliation: "Ankara Atatük Anadolu Lisesi" },
-            { name: "Konstantinos Drakakis", affiliation: "University of Edinburg, UK" },
+            { name: "Burak Kaya", affiliation: "Ankara Atatürk Anadolu Lisesi" },
+            { name: "Konstantinos Drakakis", affiliation: "University of Edinburgh, UK" },
             { name: "Jan van Delden", affiliation: "Zuidhorn, The Netherlands" },
             { name: "Michel Bataille", affiliation: "Rouen, France" },
             { name: "Vehbi Emrah Paksoy", affiliation: "Pomona College, USA" },
@@ -34,30 +34,30 @@ export const PROBLEM_OF_MONTH_2006 = [
             { name: "Osman Berat Okutan", affiliation: "Bilkent University" },
             { name: "Metehan Ozsoy", affiliation: "Ozel Samanyolu Fen Lisesi" },
             { name: "Nitin Aggarwal", affiliation: "Shalimar Bagh, Delhi, India" },
-            { name: "Ekrem Emre", affiliation: "Dumlupınar University / KÃ¼tahya" }
+            { name: "Ekrem Emre", affiliation: "Dumlupinar University / Kütahya" }
         ]
     },
 
     {
         month: "March",
         year: 2006,
-        question: "0603q.pdf",
+        question: "0602q.pdf",
         solution: "0603a.pdf",
         solvers: [
             { name: "Aleksander Ilic", affiliation: "Nis University, Serbia and Montenegro" },
             { name: "Ayberk Vardar", affiliation: "Bilkent University" },
             { name: "Tomas Jurik", affiliation: "Comenius University, Slovakia" },
-            { name: "Ali Ä°lik", affiliation: "Uludag University" },
+            { name: "Ali Ilic", affiliation: "Uludag University" },
             { name: "Zhang Hanxiong", affiliation: "Tsinghua University, China" },
-            { name: "Fatih Güses", affiliation: "Gebze Institute of Technology" },
-            { name: "Samil AkÃ§agil", affiliation: "Balıkesir University" },
+            { name: "Fatih Gürses", affiliation: "Gebze Institute of Technology" },
+            { name: "Samil Akcagil", affiliation: "Balikesir University" },
             { name: "Fuad Hamidli", affiliation: "METU" },
             { name: "Michel Bataille", affiliation: "Rouen, France" },
             { name: "Osman Berat Okutan", affiliation: "Bilkent University" },
             { name: "Nitin Aggarwal", affiliation: "Shalimar Bagh, Delhi, India" },
             { name: "Ahmet Gur", affiliation: "Istanbul University" },
-            { name: "Ekrem Emre", affiliation: "Dumlupınar University/ KÃ¼tahya" },
-            { name: "Mehmet Hafizoğlu", affiliation: "Istanbul University" },
+            { name: "Ekrem Emre", affiliation: "Dumlupinar University / Kütahya" },
+            { name: "Mehmet Hafizoglu", affiliation: "Istanbul University" },
             { name: "Haluk Elis", affiliation: "Turkish Army, Osmaniye" }
         ]
     },
@@ -65,7 +65,7 @@ export const PROBLEM_OF_MONTH_2006 = [
     {
         month: "April",
         year: 2006,
-        question: "0604q.pdf",
+        question: "0603q.pdf",
         solution: "0604a.pdf",
         solvers: [
             { name: "Said Amghibech", affiliation: "Quebec, Canada" },
@@ -75,26 +75,26 @@ export const PROBLEM_OF_MONTH_2006 = [
             { name: "Hu Yong", affiliation: "Tsinghua University, China" },
             { name: "Nitin Aggarwal", affiliation: "Shalimar Bagh, Delhi, India" },
             { name: "Tomas Jurik", affiliation: "Comenius University, Slovakia" },
-            { name: "Samil Akçagil", affiliation: "Balıkesir University" },
-            { name: "Nesim Yiğit", affiliation: "Bilkent University" },
-            { name: "Gautham Dasarathy", affiliation: "VIT, Tmail nadu, India" },
-            { name: "Batuhan KaragÃ¶z", affiliation: "Ankara Fen Lisesi" },
+            { name: "Samil Akcagil", affiliation: "Balikesir University" },
+            { name: "Nesim Yigit", affiliation: "Bilkent University" },
+            { name: "Gautham Dasarathy", affiliation: "VIT, Tamil Nadu, India" },
+            { name: "Batuhan Karagoz", affiliation: "Ankara Fen Lisesi" },
             { name: "Nawal Kishor Mishor", affiliation: "IIS, Bangalore, India" },
-            { name: "Fırat Solgun", affiliation: "METU" },
+            { name: "Firat Solgun", affiliation: "METU" },
             { name: "Ekrem Emre", affiliation: "Dumlupinar University" },
             { name: "Yunus Karabulut", affiliation: "Bogazici University" },
-            { name: "Murgan Veera", affiliation: "ITT, Madras India" },
-            { name: "Metehan Özsoy", affiliation: "Özel Samanyolu Lisesi, Ankara" },
+            { name: "Murgan Veera", affiliation: "ITT, Madras, India" },
+            { name: "Metehan Ozsoy", affiliation: "Ozel Samanyolu Lisesi, Ankara" },
             { name: "Ali Keskin", affiliation: "METU" },
             { name: "Aleksander Ilic", affiliation: "Nis University, Serbia and Montenegro" },
-            { name: "Fatih Güses", affiliation: "Gebze Institute of Technology" }
+            { name: "Fatih Gürses", affiliation: "Gebze Institute of Technology" }
         ]
     },
 
     {
         month: "May",
         year: 2006,
-        question: "0605q.pdf",
+        question: "0604q.pdf",
         solution: "0605a.pdf",
         solvers: [
             { name: "Miroslava Sotakova", affiliation: "Aarhus University, Denmark" },
@@ -102,7 +102,7 @@ export const PROBLEM_OF_MONTH_2006 = [
             { name: "Mithat Dedeoglu", affiliation: "Afyon Kocatepe University" },
             { name: "Manoj Kumar Yadav", affiliation: "IIT, Madras, India" },
             { name: "Burak Kaya", affiliation: "Ankara Ataturk Anadolu Lisesi" },
-            { name: "T. Karthick", affiliation: "ITT Adras, India" },
+            { name: "T. Karthick", affiliation: "ITT Madras, India" },
             { name: "Omer Faruk Tekin", affiliation: "Ankara Fen Lisesi" },
             { name: "Safak Alim Satici", affiliation: "Istanbul University" },
             { name: "Mustafa Turgut", affiliation: "Antalya" },
@@ -113,9 +113,9 @@ export const PROBLEM_OF_MONTH_2006 = [
             { name: "Haluk Elis", affiliation: "Naval Postgraduate School, California, USA" },
             { name: "Ibrahim Ebeler", affiliation: "Bilkent University" },
             { name: "Mustafa Mizrak", affiliation: "Nevzat Ayaz Anadolu Lisesi, Diyarbakir" },
-            { name: "Murat Apaydın", affiliation: "Bilkent University" },
+            { name: "Murat Apaydin", affiliation: "Bilkent University" },
             { name: "Ali Keskin", affiliation: "METU" },
-            { name: "Nazım Keven", affiliation: "Bilkent University" },
+            { name: "Nazim Keven", affiliation: "Bilkent University" },
             { name: "Firat Solgun", affiliation: "METU" },
             { name: "Sedat Arda Erdem", affiliation: "Bilkent University" },
             { name: "Oztekin Bakir", affiliation: "METU" },
@@ -123,14 +123,14 @@ export const PROBLEM_OF_MONTH_2006 = [
             { name: "Emel Dalgic", affiliation: "OHIO State University" },
             { name: "Onder Suvak", affiliation: "Bogazici University" },
             { name: "Tomas Schiffauer", affiliation: "Ostrava, Czech Republic" },
-            { name: "Ismail Haltas", affiliation: "California University, Davis,USA" },
+            { name: "Ismail Haltas", affiliation: "California University, Davis, USA" },
             { name: "Said Amghibech", affiliation: "Quebec, Canada" },
             { name: "Tomas Jurik", affiliation: "Comenius University, Slovakia" },
             { name: "Adam Panagos", affiliation: "Rolla, MO, USA" },
             { name: "Ekrem Emre", affiliation: "Dumlupinar University" },
             { name: "Michel Bataille", affiliation: "Rouen, France" },
-            { name: "UmmugulsumYildiz", affiliation: "Ege University" },
-            { name: "Dogan Vural", affiliation: "SÃ¼leyman Demirel University" },
+            { name: "Ummugulsum Yildiz", affiliation: "Ege University" },
+            { name: "Dogan Vural", affiliation: "Süleyman Demirel University" },
             { name: "Dogan Erbahar", affiliation: "Gebze Institute of Technology" },
             { name: "Selcuk", affiliation: "Trakya University" },
             { name: "Mehmet Tiyansan", affiliation: "Gebze Institute of Technology" },
@@ -138,12 +138,12 @@ export const PROBLEM_OF_MONTH_2006 = [
             { name: "Fatih Gurses", affiliation: "Gebze Institute of Technology" },
             { name: "Zhang Hanxiong", affiliation: "Tsinghua University, China" },
             { name: "Ozlem Baltaci", affiliation: "Gebze Institute of Technology" },
-            { name: "G.R.A. 20 Problem Solving Group", affiliation: "University of Tor Vertaga, Roma, Italy" },
+            { name: "G.R.A. 20 Problem Solving Group", affiliation: "University of Tor Vergata, Roma, Italy" },
             { name: "Seymur Cahangirov", affiliation: "Hacettepe University" },
-            { name: "Gautham Dasarathy", affiliation: "VIT, Tmail nadu, India" },
+            { name: "Gautham Dasarathy", affiliation: "VIT, Tamil Nadu, India" },
             { name: "Ali Riza Atasoy", affiliation: "Havelsan, Ankara" },
             { name: "Jan van Delgen", affiliation: "Zuidhorn, Holland" },
-            { name: "Rajesh Kumar", affiliation: "IIITB, Bangolore, India" },
+            { name: "Rajesh Kumar", affiliation: "IIITB, Bangalore, India" },
             { name: "Jurgen Bohm", affiliation: "Bonn, Germany" }
         ]
     },
@@ -151,11 +151,11 @@ export const PROBLEM_OF_MONTH_2006 = [
     {
         month: "June",
         year: 2006,
-        question: "0606q.pdf",
-        solution: "0606a1.pdf",
+        question: "0605q.pdf",
+        solution: "0606a.pdf",
         solvers: [
             { name: "Chao-Zhong Wu", affiliation: "Tsinghua University, China" },
-            { name: "Tomas Jurik", affiliation: "Comenius University Slovakia" },
+            { name: "Tomas Jurik", affiliation: "Comenius University, Slovakia" },
             { name: "Michel Bataille", affiliation: "Rouen, France" },
             { name: "Firat Solgun", affiliation: "METU" },
             { name: "Omer Faruk Tekin", affiliation: "Ankara Fen Lisesi" }
@@ -163,10 +163,10 @@ export const PROBLEM_OF_MONTH_2006 = [
     },
 
     {
-        month: "July–August",
+        month: "July-August",
         year: 2006,
-        question: "0606q1.pdf",
-        solution: "0609a.pdf",
+        question: "0606q.pdf",
+        solution: "0608a.pdf",
         solvers: [
             { name: "Samil Akcagil", affiliation: "Balikesir University" },
             { name: "Vivek Kumar Mehra", affiliation: "Mumbai, India" },
@@ -187,8 +187,8 @@ export const PROBLEM_OF_MONTH_2006 = [
     {
         month: "September",
         year: 2006,
-        question: "0609q.pdf",
-        solution: "0610a.pdf",
+        question: "0608q.pdf",
+        solution: "0609a.pdf",
         solvers: [
             { name: "Ovidiu Furdui", affiliation: "Western Michigan University, MI, USA" },
             { name: "Firat Solgun", affiliation: "METU" },
@@ -209,14 +209,14 @@ export const PROBLEM_OF_MONTH_2006 = [
     {
         month: "October",
         year: 2006,
-        question: "0610q.pdf",
-        solution: "0611a.pdf",
+        question: "0609q.pdf",
+        solution: "0610a.pdf",
         solvers: [
             { name: "Miroslava Sotakova", affiliation: "Aarhus University, Denmark" },
             { name: "Bekjan Djumabaev", affiliation: "METU" },
             { name: "Mario Antunez", affiliation: "Honduras" },
             { name: "Murat Cecen", affiliation: "Samanyolu Fen Lisesi, Ankara" },
-            { name: "Farid Lian", affiliation: "Atlantic University,Colombia, USA" },
+            { name: "Farid Lian", affiliation: "Atlantic University, Colombia, USA" },
             { name: "Meyram Murzabulatov", affiliation: "Suleyman Demirel University, Kazakhstan" },
             { name: "Tomas Jurik", affiliation: "Comenius University, Slovakia" },
             { name: "Madi Sagimbekov", affiliation: "Suleyman Demirel University, Kazakhstan" },
@@ -234,8 +234,8 @@ export const PROBLEM_OF_MONTH_2006 = [
     {
         month: "November",
         year: 2006,
-        question: "0611q.pdf",
-        solution: "0612a.pdf",
+        question: "0610q.pdf",
+        solution: "0611a.pdf",
         solvers: [
             { name: "Meyram Murzabulatov", affiliation: "Suleyman Demirel University, Kazakhstan" },
             { name: "Farid Lian", affiliation: "Atlantic University, Colombia, USA" },
@@ -266,8 +266,8 @@ export const PROBLEM_OF_MONTH_2006 = [
     {
         month: "December",
         year: 2006,
-        question: "0612q.pdf",
-        solution: "0701a.pdf",
+        question: "0611q.pdf",
+        solution: "0612a.pdf",
         solvers: [
             { name: "Tomas Jurik", affiliation: "Comenius University, Slovakia" },
             { name: "Se Kwon Kim", affiliation: "KAIST, South Korea" },

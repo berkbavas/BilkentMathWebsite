@@ -55,7 +55,7 @@ export const PROBLEM_OF_MONTH_2017 = [
             { name: "Toshihiro Shimizu", affiliation: "Kawasaki, Japan" },
             { name: "Batuhan Bayır", affiliation: "İzmir Betontaş Anadolu Lisesi" },
             { name: "Albert Stadler", affiliation: "Herrliberg, Switzerland" },
-            { name: "Mehmet Ali Yildirim", affiliation: "Florya Final Anadolu Lisesi, Istanbul" },
+            { name: "Mehmet Ali Yildirim", affiliation: "Florya Final Anadolu Lisesi, İstanbul" },
             { name: "Hasan Zubeyr Demir", affiliation: "Özel Çağlayan Fen Lisesi, Ankara" },
             { name: "Muhammetnur Bagbekov", affiliation: "School 21, Dashoguz, Turkmenistan" },
             { name: "Tomas Jurik", affiliation: "Kosice, Slovakia" },
@@ -93,46 +93,30 @@ export const PROBLEM_OF_MONTH_2017 = [
         solvers: [
             { name: "Toshihiro Shimizu", affiliation: "Kawasaki, Japan" },
             { name: "Tomas Jurik", affiliation: "Kosice, Slovakia" },
-
             { name: "Vedat Deveci", affiliation: "DMO, İstanbul" },
             { name: "Mehmet Ali Yildirim", affiliation: "Florya Final Anadolu Lisesi, İstanbul" },
-
             { name: "Serdar Hojayev", affiliation: "Dashoguz, Turkmenistan" },
             { name: "İlker Can Çicek", affiliation: "İstanbul Lisesi" },
-
             { name: "Kayra Uygun", affiliation: "Ankara Fen Lisesi" },
             { name: "Nurullah Giray Kuru", affiliation: "İstanbul Lisesi" },
-
-            { name: "Vivek Mehra", affiliation: "Mumbai, India" },
-            { name: "Muhammetnur Bagbekov", affiliation: "Dashoguz, Turkmenistan" },
-
             { name: "Onur Korkmaz", affiliation: "İzmir Fen Lisesi" },
             { name: "Ahmet Alper Özüdoğru", affiliation: "İstanbul Lisesi" },
-
             { name: "Mehmet Selahaddin Şentop", affiliation: "İstanbul Lisesi" },
             { name: "Mehmet Can Özdemir", affiliation: "İzmir Fen Lisesi" },
-
             { name: "Emirhan İlhan", affiliation: "Ankara Fen Lisesi" },
             { name: "Kerem Recep Gür", affiliation: "İzmir Fen Lisesi" },
-
             { name: "Tilekbek Zhoroev", affiliation: "Erciyes University, Kayseri" },
             { name: "Hasan Zubeyr Demir", affiliation: "Özel Çağlayan Fen Lisesi, Ankara" },
-
             { name: "Magnus Jakobsson", affiliation: "Lund, Sweden" },
             { name: "Osman Asil", affiliation: "Celal Bayar University" },
-
-            { name: "Dovran Nurgeldiyev", affiliation: "Magtumguly Turkmen State University, Turkmenistan" },
+            { name: "Dovran Nurgeldiyev", affiliation: "Magtymguly Turkmen State University, Turkmenistan" },
             { name: "Roger Bengtsson", affiliation: "Lund, Sweden" },
-
             { name: "Adem Limani", affiliation: "Lund, Sweden" },
             { name: "Batuhan Bayır", affiliation: "İzmir Betontaş Anadolu Lisesi" },
-
             { name: "Abdulkadir Tanrıverdi", affiliation: "Eskişehir" },
             { name: "Emine Yeşil Şahinkaya", affiliation: "Bursa" },
-
             { name: "Evan Luff", affiliation: "USA" },
-            { name: "Eren Can Kızıldağ", affiliation: "Massachusets Instıtute of Technology USA" },
-
+            { name: "Eren Can Kızıldağ", affiliation: "Massachusetts Institute of Technology, USA" },
             { name: "Sümeyye Seren", affiliation: "Yıldız Technical University" },
             { name: "Allen Kruze", affiliation: "Florida, USA" }
         ]
@@ -147,7 +131,7 @@ export const PROBLEM_OF_MONTH_2017 = [
             { name: "Toshihiro Shimizu", affiliation: "Kawasaki, Japan" },
             { name: "Serdar Hojayev", affiliation: "Dashoguz, Turkmenistan" },
             { name: "Mehmet Ali Yildirim", affiliation: "Florya Final Anadolu Lisesi, İstanbul" },
-            { name: "Hasan Zubeyr Demir", affiliation: "Özel Çaglayan Fen Lisesi, Ankara" },
+            { name: "Hasan Zubeyr Demir", affiliation: "Özel Çağlayan Fen Lisesi, Ankara" },
             { name: "Tomas Jurik", affiliation: "Kosice, Slovakia" },
             { name: "İlker Can Çicek", affiliation: "İstanbul Lisesi" },
             { name: "Kayra Uygun", affiliation: "Ankara Fen Lisesi" },
@@ -163,7 +147,7 @@ export const PROBLEM_OF_MONTH_2017 = [
         solvers: [
             { name: "Toshihiro Shimizu", affiliation: "Kawasaki, Japan" },
             { name: "Serdar Hojayev", affiliation: "Dashoguz, Turkmenistan" },
-            { name: "Hasan Zubeyr Demir", affiliation: "Özel Çaglayan Fen Lisesi, Ankara" },
+            { name: "Hasan Zubeyr Demir", affiliation: "Özel Çağlayan Fen Lisesi, Ankara" },
             { name: "Tomas Jurik", affiliation: "Kosice, Slovakia" },
             { name: "Leo Chin Ho", affiliation: "National University of Singapore, Singapore" },
             { name: "Mehmet Ali Yildirim", affiliation: "Florya Final Anadolu Lisesi, İstanbul" },
@@ -179,22 +163,16 @@ export const PROBLEM_OF_MONTH_2017 = [
         solvers: [
             { name: "Toshihiro Shimizu", affiliation: "Kawasaki, Japan" },
             { name: "Vedat Deveci", affiliation: "DMO, Istanbul" },
-
             { name: "Mehmet Ali Yıldırım", affiliation: "Florya Final Anadolu Lisesi, Istanbul" },
             { name: "Tomas Jurik", affiliation: "Kosice, Slovakia" },
-
             { name: "Vivek Mehra", affiliation: "Mumbai, India" },
             { name: "Serdar Hojayev", affiliation: "Dashoguz, Turkmenistan" },
-
             { name: "Xagani Gasımov", affiliation: "Baku, Azerbaijan" },
-            { name: "Hasan Zubeyr Demir", affiliation: "Özel Çaglayan Fen Lisesi, Ankara" },
-
+            { name: "Hasan Zubeyr Demir", affiliation: "Özel Çağlayan Fen Lisesi, Ankara" },
             { name: "Ömer Avcı", affiliation: "Bogaziçi University" },
             { name: "Dovran Nurgeldiyev", affiliation: "Lebap, Turkmenistan" },
-
             { name: "F. Wallner", affiliation: "Germany" },
             { name: "Magnus Jakobsson", affiliation: "Lund, Sweden" },
-
             { name: "Eren Can Kızıldağ", affiliation: "Massachusetts Institute of Technology, USA" },
             { name: "Semih Zaman", affiliation: "Özel Enka Fen ve Teknoloji Lisesi, Kocaeli" }
         ]
@@ -209,7 +187,7 @@ export const PROBLEM_OF_MONTH_2017 = [
             { name: "Toshihiro Shimizu", affiliation: "Kawasaki, Japan" },
             { name: "Batuhan Bayır", affiliation: "Ankara University" },
             { name: "Ömer Avcı", affiliation: "Bogaziçi University" },
-            { name: "Hasan Zubeyr Demir", affiliation: "Özel Çaglayan Fen Lisesi, Ankara" },
+            { name: "Hasan Zubeyr Demir", affiliation: "Özel Çağlayan Fen Lisesi, Ankara" },
             { name: "Xagani Gasımov", affiliation: "Baku, Azerbaijan" },
             { name: "Tomas Jurik", affiliation: "Kosice, Slovakia" }
         ]
@@ -223,7 +201,7 @@ export const PROBLEM_OF_MONTH_2017 = [
         solvers: [
             { name: "Toshihiro Shimizu", affiliation: "Kawasaki, Japan" },
             { name: "Tomas Jurik", affiliation: "Kosice, Slovakia" },
-            { name: "Hasan Zubeyr Demir", affiliation: "Özel Çaglayan Fen Lisesi, Ankara" },
+            { name: "Hasan Zubeyr Demir", affiliation: "Özel Çağlayan Fen Lisesi, Ankara" },
             { name: "Ömer Avcı", affiliation: "Bogaziçi University" },
             { name: "Batuhan Bayır", affiliation: "Ankara University" }
         ]
@@ -235,24 +213,18 @@ export const PROBLEM_OF_MONTH_2017 = [
         question: "1711q.pdf",
         solution: "1712a.pdf",
         solvers: [
-            { name: "Albert Stadler", affiliation: "Herrliberg , Switzerland" },
+            { name: "Albert Stadler", affiliation: "Herrliberg, Switzerland" },
             { name: "Toshihiro Shimizu", affiliation: "Kawasaki, Japan" },
-
             { name: "Tomas Jurik", affiliation: "Kosice, Slovakia" },
             { name: "Vivek Mehra", affiliation: "Mumbai, India" },
-
-            { name: "Hasan Zubeyr Demir", affiliation: "Özel Çaglayan Fen Lisesi, Ankara" },
+            { name: "Hasan Zubeyr Demir", affiliation: "Özel Çağlayan Fen Lisesi, Ankara" },
             { name: "Ömer Avcı", affiliation: "Boğaziçi University, İstanbul" },
-
             { name: "Paolo Perfetti", affiliation: "University of Rome Tor Vergata, Italy" },
-            { name: "Baygeldi Cholukov", affiliation: "S.Turkmenbashy State School, Ashgabat, Turkmenistan" },
-
+            { name: "Baygeldi Cholukov", affiliation: "S. Turkmenbashy State School, Ashgabat, Turkmenistan" },
             { name: "Muhammetnur Bagbekov", affiliation: "School 21, Dashoguz, Turkmenistan" },
             { name: "Serdar Hojayev", affiliation: "Dashoguz, Turkmenistan" },
-
             { name: "Batuhan Bayır", affiliation: "Ankara University" },
             { name: "İbrahim Fırat Yoğurtçu", affiliation: "Çağaloğlu Anadolu Lisesi, İstanbul" },
-
             { name: "Berkay Ünlü", affiliation: "Dokuz Eylül University, İzmir" }
         ]
     }

@@ -12,11 +12,11 @@ export const PROBLEM_OF_MONTH_2007 = [
             { name: "Se Kwon Kim", affiliation: "KAIST, South Korea" },
             { name: "Miroslava Sotakova", affiliation: "Aarhus University, Denmark" },
             { name: "Farid Lian", affiliation: "Atlantic University, Colombia, USA" },
-            { name: "Aydin Shukurov", affiliation: "Baku StateUniversity, Azerbaijan" },
+            { name: "Aydin Shukurov", affiliation: "Baku State University, Azerbaijan" },
             { name: "Stefan Gatachiu", affiliation: "Romania" },
             { name: "Kerry Soileau", affiliation: "NASA, Houston, USA" },
             { name: "Bekjan Djumabaev", affiliation: "METU" },
-            { name: "Erdoğan NakıÅŸlı", affiliation: "Ozel Rahime Batu Lisesi, Malatya" },
+            { name: "Erdogan Nakisli", affiliation: "Ozel Rahime Batu Lisesi, Malatya" },
             { name: "Ovidiu Furdui", affiliation: "Western Michigan University, USA" },
             { name: "Ahmet Atilla", affiliation: "Ozel Rahime Batu Lisesi, Malatya" },
             { name: "Murat Apaydin", affiliation: "Bilkent University, Ankara" },
@@ -25,7 +25,7 @@ export const PROBLEM_OF_MONTH_2007 = [
             { name: "Yerjanbek Absattarov", affiliation: "Suleyman Demirel University, Kazakhstan" },
             { name: "Eren Can Kizildag", affiliation: "Ankara Fen Lisesi" },
             { name: "Rusen Kaya", affiliation: "METU" },
-            { name: "Batuhan KaragÃ¶z", affiliation: "METU" },
+            { name: "Batuhan Karagoz", affiliation: "METU" },
             { name: "Enrique Trevino", affiliation: "Dartmouth College, USA" },
             { name: "Henrik Aberg", affiliation: "Gothenburg" },
             { name: "Nazim Keven", affiliation: "Bilkent University, Ankara" },
@@ -187,12 +187,12 @@ export const PROBLEM_OF_MONTH_2007 = [
             { name: "Muhammed Emin", affiliation: "Istanbul Ahmet Rasim Lisesi" },
             { name: "Jose Avila", affiliation: "The University of Texas at El Paso, USA" },
             { name: "Cagri Ozcaglar", affiliation: "Rensselaer Polytechnic Institute, USA" },
-            { name: ". Soon Cheol Kim", affiliation: "Brown University, USA" }
+            { name: "Soon Cheol Kim", affiliation: "Brown University, USA" }
         ]
     },
 
     {
-        month: "July–August",
+        month: "July-August",
         year: 2007,
         question: "0706q.pdf",
         solution: "0708a.pdf",
@@ -201,7 +201,7 @@ export const PROBLEM_OF_MONTH_2007 = [
             { name: "Bekjan Djumabaev", affiliation: "METU" },
             { name: "Albert Stadler", affiliation: "Meilen, Switzerland" },
             { name: "Michel Bataille", affiliation: "Rouen, France" },
-            { name: "Ali Tagiyev", affiliation: "Bagazici University" },
+            { name: "Ali Tagiyev", affiliation: "Bogazici University" },
             { name: "Murat Cecen", affiliation: "Ozel Samanyolu Fen Lisesi, Ankara" },
             { name: "Se Kwon Kim", affiliation: "SNU, South Korea" },
             { name: "Christophe Debry", affiliation: "Heilig Hartcollege, Tervuren, Belgium" },

@@ -65,7 +65,7 @@ export const PROBLEM_OF_MONTH_2019 = [
             { name: "Roger Bengtsson", affiliation: "Lund, Sweden" },
             { name: "Bülent Doğru", affiliation: "Eskişehir" },
             { name: "Johan Sandell", affiliation: "Lund, Sweden" },
-            { name: "Eren Can Kızıldağ", affiliation: "Massachusetts Institute of Technology, USA" },
+            { name: "Eren Can Kızıldağ", affiliation: "Massachusetts Insıtute of Technology, USA" },
             { name: "Dovran Nurgeldiyev", affiliation: "Magtumguly Turkmen State University, Turkmenistan" },
             { name: "Metin Can Aydemir", affiliation: "Bilkent University" },
             { name: "Berkay Kırali", affiliation: "" },
@@ -100,12 +100,12 @@ export const PROBLEM_OF_MONTH_2019 = [
         solvers: [
             { name: "Toshihiro Shimizu", affiliation: "Kawasaki, Japan" },
             { name: "Hasan Zübeyr Demir", affiliation: "Özel Ankara Çağlayan Fen Lisesi" },
-            { name: "Murat Chashmetov", affiliation: "TSU, Turkmenistan" },
+            { name: "Murat Chashmetov", affiliation: "TSU Turkmenistan" },
             { name: "Roger Bengtsson", affiliation: "Lund, Sweden" },
             { name: "Bora Ege Duygun", affiliation: "Bilkent University" },
             { name: "Max Nilsson", affiliation: "Lund, Sweden" },
             { name: "Magnus Jakobsson", affiliation: "Lund, Sweden" },
-            { name: "Steffen Weber", affiliation: "Ismaning, Germany" },
+            { name: "Steffen Weber", affiliation: "Ismanıng, Germany" },
             { name: "İrem Nur Çevikcan", affiliation: "Buca İnci Özer Tırnaklı Fen Lisesi" },
             { name: "Feray Lina Yence", affiliation: "Buca İnci Özer Tırnaklı Fen Lisesi" },
             { name: "Asude Ebrar Kızıloğlu", affiliation: "Kadıköy Özel Eğitmen Fen ve Anadolu Lisesi" },
@@ -122,7 +122,7 @@ export const PROBLEM_OF_MONTH_2019 = [
         solvers: [
             { name: "Toshihiro Shimizu", affiliation: "Kawasaki, Japan" },
             { name: "Vedat Deveci", affiliation: "İstanbul" },
-            { name: "Steffen Weber", affiliation: "Ismaning, Germany" },
+            { name: "Steffen Weber", affiliation: "Ismanıng, Germany" },
             { name: "Mehmet Yeni", affiliation: "Tarsus, Mersin" },
             { name: "Max Nilsson", affiliation: "Lund, Sweden" },
             { name: "Halil Özkan", affiliation: "Denizli Özel Denizli Koleji, Denizli" },
@@ -203,9 +203,7 @@ export const PROBLEM_OF_MONTH_2019 = [
         year: 2019,
         question: "1910q.pdf",
         solution: "1911a.pdf",
-        solvers: [
-            { name: "Toshihiro Shimizu", affiliation: "Kawasaki, Japan" }
-        ]
+        solvers: [{ name: "Toshihiro Shimizu", affiliation: "Kawasaki, Japan" }]
     },
     {
         month: "December",
@@ -217,7 +215,10 @@ export const PROBLEM_OF_MONTH_2019 = [
             { name: "Emirhan Yağcıoğlu", affiliation: "Matematik ve Fen Bilimleri Anadolu Lisesi, Ankara" },
             { name: "Vedat Deveci", affiliation: "İstanbul" },
             { name: "Muti Kara", affiliation: "Ankara Atatürk Anadolu Lisesi" },
-            { name: "Gizem Tabak", affiliation: "University of Illinois at Urbana-Champaign, USA" },
+            {
+                name: "Gizem Tabak",
+                affiliation: "University of İllinois at Urbana-Campaign’d, USA"
+            },
             { name: "Hasan Zübeyr Demir", affiliation: "Özel Ankara Çağlayan Fen Lisesi" },
             { name: "Kee-Wai Lau", affiliation: "Hong Kong, China" },
             { name: "Barış Koyuncu", affiliation: "Özel Enka Lisesi, İstinye, İstanbul" },

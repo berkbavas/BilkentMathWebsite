@@ -8,9 +8,9 @@ export const PROBLEM_OF_MONTH_2016 = [
             { name: "Toshihiro Shimizu", affiliation: "Kawasaki, Japan" },
             { name: "Tomas Jurik", affiliation: "Kosice, Slovakia" },
             { name: "Hasan Zubeyr Demir", affiliation: "Ozel Caglayan Fen Lisesi, Ankara" },
-            { name: "Harald Bögeholz", affiliation: "c't Computer Magazine,  Germany" },
+            { name: "Harald Bögeholz", affiliation: "c't Computer Magazine, Germany" },
             { name: "Roger Bengtsson", affiliation: "Lund, Sweden" },
-            { name: "Andreas Stiller", affiliation: "c't Computer Magazine,  Germany" },
+            { name: "Andreas Stiller", affiliation: "c't Computer Magazine, Germany" },
             { name: "Albert Stadler", affiliation: "Herrliberg, Switzerland" }
         ]
     },
@@ -23,9 +23,9 @@ export const PROBLEM_OF_MONTH_2016 = [
         solvers: [
             { name: "Toshihiro Shimizu", affiliation: "Kawasaki, Japan" },
             { name: "Wong Chi Fung", affiliation: "Hong Kong" },
-            { name: "Vedat Deveçi", affiliation: "DMI, Istanbul" },
+            { name: "Vedat Deveci", affiliation: "DMI, Istanbul" },
             { name: "Gruian Cornel", affiliation: "Cluj-Napoca, Romania" },
-            { name: "Albert Stadler", affiliation: "Herrliberg , Switzerland" },
+            { name: "Albert Stadler", affiliation: "Herrliberg, Switzerland" },
             { name: "Shatlyk Mamedov", affiliation: "School 21, Dashoguz, Turkmenistan" },
             { name: "Michel Bataille", affiliation: "Rouen, France" },
             { name: "Mohammad Reza Yegan", affiliation: "Central Tehran Branch, Islamic Azad University, Iran" },
@@ -44,7 +44,7 @@ export const PROBLEM_OF_MONTH_2016 = [
             { name: "Toshihiro Shimizu", affiliation: "Kawasaki, Japan" },
             { name: "Harald Bogeholz", affiliation: "c't Computer magazine, Germany" },
             { name: "Hasan Zubeyr Demir", affiliation: "Ozel Caglayan Fen Lisesi, Ankara" },
-            { name: "Albert Stadler", affiliation: "Herrliberg , Switzerland" },
+            { name: "Albert Stadler", affiliation: "Herrliberg, Switzerland" },
             { name: "Feyza Duman", affiliation: "Özel Servergazi Fen Lisesi, Denizli" },
             { name: "Magnus Jakobsson", affiliation: "Lund, Sweden" },
             { name: "Cemre Çadır", affiliation: "İzmir Fen Lisesi, İzmir" },
@@ -70,7 +70,7 @@ export const PROBLEM_OF_MONTH_2016 = [
             { name: "Toshihiro Shimizu", affiliation: "Kawasaki, Japan" },
             { name: "Kayra Uygun", affiliation: "Ankara Fen Lisesi" },
             { name: "Tomas Jurik", affiliation: "Kosice, Slovakia" },
-            { name: "Hasan Zubeyr Demi", affiliation: "Ozel Caglayan Fen Lisesi, Ankara" },
+            { name: "Hasan Zubeyr Demir", affiliation: "Ozel Caglayan Fen Lisesi, Ankara" },
             { name: "Feyza Duman", affiliation: "Özel Servergazi Fen Lisesi, Denizli" },
             { name: "Roger Bengtsson", affiliation: "Lund, Sweden" }
         ]
@@ -85,7 +85,7 @@ export const PROBLEM_OF_MONTH_2016 = [
             { name: "Toshihiro Shimizu", affiliation: "Kawasaki, Japan" },
             { name: "Arthur Vause", affiliation: "Preston, Lancashire, U.K." },
             { name: "Magnus Jakobsson", affiliation: "Lund, Sweden" },
-            { name: "Ahmet İleri", affiliation: "Özel Yamanlar Fen lisesi, İzmir" },
+            { name: "Ahmet İleri", affiliation: "Özel Yamanlar Fen Lisesi, İzmir" },
             { name: "Eray Ünsal Atay", affiliation: "İzmir Özel Fatih Koleji" },
             { name: "Nurullah Giray Kuru", affiliation: "İstanbul Erkek Lisesi" },
             { name: "Ömer Avcı", affiliation: "Özel Yamanlar Fen Lisesi, İzmir" },
@@ -102,9 +102,9 @@ export const PROBLEM_OF_MONTH_2016 = [
         solution: "1606a.pdf",
         solvers: [
             { name: "Toshihiro Shimizu", affiliation: "Kawasaki, Japan" },
-            { name: "Gulbuddin H. Al Akbar", affiliation: ".Ankara, Turkey" },
-            { name: "Albert Stadler", affiliation: "Herrliberg , Switzerland" },
-            { name: "Ömer Avcı", affiliation: "Yamanlar Fen lisesi, İzmir" },
+            { name: "Gulbuddin H. Al Akbar", affiliation: "Ankara, Turkey" },
+            { name: "Albert Stadler", affiliation: "Herrliberg, Switzerland" },
+            { name: "Ömer Avcı", affiliation: "Yamanlar Fen Lisesi, İzmir" },
             { name: "Vedat Deveci", affiliation: "DMO Istanbul" },
             { name: "Tomas Jurik", affiliation: "Kosice, Slovakia" },
             { name: "Onur Sulak", affiliation: "Samanyolu Lisesi, Ankara" },
@@ -115,10 +115,10 @@ export const PROBLEM_OF_MONTH_2016 = [
             { name: "Osman Berat Yıldırım", affiliation: "Özel Antalya Toros Akdeniz Fen Lisesi" },
             { name: "Hasan Yasin Çetin", affiliation: "Ankara Özel Atlantik Fen Lisesi" },
             { name: "Michel Bataille", affiliation: "Rouen, France" },
-            { name: "Ivane Gokadze", affiliation: "Georgıa" },
+            { name: "Ivane Gokadze", affiliation: "Georgia" },
             { name: "Vincelot Ravoson", affiliation: "Lycee Henri IV, Paris, France" },
             { name: "Furkan Suluova", affiliation: "Hacettepe University" },
-            { name: "Laçin Can ATIŞ", affiliation: "İstanbul, Turkey" }
+            { name: "Laçin Can Atış", affiliation: "İstanbul, Turkey" }
         ]
     },
 
@@ -129,17 +129,17 @@ export const PROBLEM_OF_MONTH_2016 = [
         solution: "1608a.pdf",
         solvers: [
             { name: "Toshihiro Shimizu", affiliation: "Kawasaki, Japan" },
-            { name: "Murad Sapayew", affiliation: ".School 21, Dashoguz, Turkmenistan" },
+            { name: "Murad Sapayew", affiliation: "School 21, Dashoguz, Turkmenistan" },
             { name: "Shatlyk Mamedov", affiliation: "Dashoguz, Turkmenistan" },
             { name: "Hasan Zubeyr Demir", affiliation: "Özel Ankara Çağlayan Fen Lisesi, Ankara" },
             { name: "Murat Chashemov", affiliation: "TSU, Turkmenistan" },
             { name: "Vincelot Ravoson", affiliation: "Lycee Henri IV, Paris, France" },
-            { name: "Albert Stadler", affiliation: "Herrliberg , Switzerland" },
+            { name: "Albert Stadler", affiliation: "Herrliberg, Switzerland" },
             { name: "Laçin Can Atış", affiliation: "İstanbul, Turkey" },
             { name: "Lamis Al Sheikh", affiliation: "Bordeaux, France" },
             { name: "Roger Bengtsson", affiliation: "Lund, Sweden" },
             { name: "Adem Limani", affiliation: "Lund, Sweden" },
-            { name: "Tomas Jurik", affiliation: "Kosice Slovakia" }
+            { name: "Tomas Jurik", affiliation: "Kosice, Slovakia" }
         ]
     },
 
@@ -167,7 +167,7 @@ export const PROBLEM_OF_MONTH_2016 = [
         solvers: [
             { name: "Toshihiro Shimizu", affiliation: "Kawasaki, Japan" },
             { name: "Vedat Deveci", affiliation: "DMO İstanbul" },
-            { name: "Steffen Weber", affiliation: "Ismanıng, Germany" },
+            { name: "Steffen Weber", affiliation: "Ismaning, Germany" },
             { name: "Tomas Jurik", affiliation: "Kosice, Slovakia" }
         ]
     },
@@ -179,12 +179,12 @@ export const PROBLEM_OF_MONTH_2016 = [
         solution: "1611a.pdf",
         solvers: [
             { name: "Toshihiro Shimizu", affiliation: "Kawasaki, Japan" },
-            { name: "Tomas Jurik", affiliation: "Kosice Slovakia" },
+            { name: "Tomas Jurik", affiliation: "Kosice, Slovakia" },
             { name: "Sapar Saryyev", affiliation: "Bilkent University" },
-            { name: "Albert Stadler", affiliation: "Herrliberg , Switzerland" },
+            { name: "Albert Stadler", affiliation: "Herrliberg, Switzerland" },
             { name: "F. Walner", affiliation: "Germany" },
-            { name: "Gocha Gokadze", affiliation: "L.T.D. School 1 Georgia," },
-            { name: "Ivane Gokadze", affiliation: "L.T.D. School 1 Georgia" },
+            { name: "Gocha Gokadze", affiliation: "L.T.D. School 1, Georgia" },
+            { name: "Ivane Gokadze", affiliation: "L.T.D. School 1, Georgia" },
             { name: "Vivek Mehra", affiliation: "Mumbai, India" },
             { name: "Henrik Aberg", affiliation: "Gothenburg, Sweden" },
             { name: "Hasan Zubeyr Demir", affiliation: "Ozel Caglayan Fen Lisesi, Ankara" },

@@ -48,8 +48,7 @@ const DATA = [
   PROBLEM_OF_MONTH_2006
 ];
 
-const URL = "https://math.bilkent.edu.tr/Problem/"; // Base URL for problem PDFs
-
+const url = "https://math.bilkent.edu.tr/Problem/"; // Base URL for problem PDFs
 const elMount = document.getElementById("mount");
 const elLatestProblemBtn = document.getElementById("latestProblemBtn");
 const elQuickLinks = document.getElementById("quickLinks");
@@ -72,8 +71,8 @@ function renderCard(item, lang) {
   const solverCount = item.solvers?.length || 0;
 
   let month = lang === "tr" ? MONTHS_EN_TO_TR[item.month] || item.month : item.month;
-  let question = safeUrl(URL + item.question);
-  let solution = item.solution ? safeUrl(URL + item.solution) : null;
+  let question = safeUrl(url + item.question);
+  let solution = item.solution ? safeUrl(url + item.solution) : null;
 
   return `
   <article class="pom-month-card">
@@ -195,7 +194,7 @@ function render() {
 
   let month = lang === "tr" ? MONTHS_EN_TO_TR[latestItem.month] || latestItem.month : latestItem.month;
 
-  elLatestProblemBtn.onclick = () => window.open(URL + latestItem.question, "_blank");
+  elLatestProblemBtn.onclick = () => window.open(url + latestItem.question, "_blank");
   elLatestProblemBtn.textContent =
     (TRANSLATIONS.pomLatestProblemLabel[lang] || "Latest Problem") + ` (${month} ${latestItem.year})`;
 }

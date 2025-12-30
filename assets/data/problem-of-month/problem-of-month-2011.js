@@ -6,7 +6,7 @@ export const PROBLEM_OF_MONTH_2011 = [
         solution: "1101a.pdf",
         solvers: [
             { name: "Naval Kishor Mishra", affiliation: "India" },
-            { name: "Omran Kouba", affiliation: "Higher Institute for Applied Science & Technology, Syria" },
+            { name: "Omran Kouba", affiliation: "Higher Institute for Applied Science &Technology, Syria" },
             { name: "Vedat Deveci", affiliation: "DMO, Istanbul" },
             { name: "Kipp Johnson", affiliation: "Valley Catholic School, Beaverton, Oregon, USA" },
             { name: "Albert Stadler", affiliation: "Herrliberg, Switzerland" },
@@ -36,7 +36,7 @@ export const PROBLEM_OF_MONTH_2011 = [
             { name: "Albert Stadler", affiliation: "Herrliberg, Switzerland" },
             { name: "Henrik Aberg", affiliation: "Gothenburg, Sweden" },
             { name: "Cuneyd Ozturk", affiliation: "Ankara Fen Lisesi" },
-            { name: "Omran Kouba", affiliation: "Higher Institute for Applied Science & Technology, Syria" },
+            { name: "Omran Kouba", affiliation: "Higher Institute for Applied Science &Technology, Syria" },
             { name: "Mahmut Sait Okyay", affiliation: "Bursa Ozel Nilufer Fen Lisesi" },
             { name: "Gruian Cornel", affiliation: "SC Remarul, Cluj-Napoca, Romania" },
             { name: "Sean Griffin", affiliation: "Dartmouth College, USA" },
@@ -68,7 +68,7 @@ export const PROBLEM_OF_MONTH_2011 = [
         question: "1102q.pdf",
         solution: "1103a.pdf",
         solvers: [
-            { name: "Omran Kouba", affiliation: "Higher Institute for Applied Science & Technology, Syria" },
+            { name: "Omran Kouba", affiliation: "Higher Institute for Applied Science &Technology, Syria" },
             { name: "Gruian Cornel", affiliation: "SC Remarul, Cluj-Napoca, Romania" },
             { name: "Magnus Jakobbson", affiliation: "Lund, Sweden" },
             { name: "Albert Stadler", affiliation: "Herrliberg, Switzerland" },
@@ -83,7 +83,7 @@ export const PROBLEM_OF_MONTH_2011 = [
         question: "1103q.pdf",
         solution: "1104a.pdf",
         solvers: [
-            { name: "Omran Kouba", affiliation: "Higher Institute for Applied Science & Technology, Syria" },
+            { name: "Omran Kouba", affiliation: "Higher Institute for Applied Science &Technology, Syria" },
             { name: "Gruian Cornel", affiliation: "SC Remarul, Cluj-Napoca, Romania" },
             { name: "Kipp Johnson", affiliation: "Valley Catholic School, Beaverton, Oregon, USA" },
             { name: "Cuneyd Ozturk", affiliation: "Ankara Fen Lisesi" },
@@ -102,7 +102,7 @@ export const PROBLEM_OF_MONTH_2011 = [
         solution: "1105a.pdf",
         solvers: [
             { name: "Gruian Cornel", affiliation: "SC Remarul, Cluj-Napoca, Romania" },
-            { name: "Omran Kouba", affiliation: "Higher Institute for Applied Science & Technology, Syria" },
+            { name: "Omran Kouba", affiliation: "Higher Institute for Applied Science &Technology, Syria" },
             { name: "Henrik Aberg", affiliation: "Gothenburg, Sweden" },
             { name: "Vedat Deveci", affiliation: "DMO, İstanbul" },
             { name: "Sean Griffin", affiliation: "Dartmouth College, USA" },
@@ -113,7 +113,7 @@ export const PROBLEM_OF_MONTH_2011 = [
             { name: "Michel Bataille", affiliation: "Rouen, France" },
             { name: "Andreas Stiller", affiliation: "c t Computer magazine, Germany" },
             { name: "Ismail Haltas", affiliation: "Zirve University, Gaziantep" },
-            { name: "Tomas Lucivjansky", affiliation: "University of P.J. Safarik in Kosice, Slovakia" },
+            { name: "Tomas Lucivjansky", affiliation: "University of P.J.Safarik in Kosice, Slovakia" },
             { name: "Paolo Perfetti", affiliation: "Universita degli Studi di Roma Tor Vergata, Italy" },
             { name: "Wu Cheng Yuan", affiliation: "National University of Singapore, Singapore" },
             { name: "Harald Bogeholz", affiliation: "c t Computer magazine, Germany" },
@@ -134,7 +134,7 @@ export const PROBLEM_OF_MONTH_2011 = [
             { name: "Mahmut Sait Okyay", affiliation: "Bursa Ozel Nilufer Lisesi" },
             { name: "Tomas Jurik", affiliation: "Comenius University, Slovakia" },
             { name: "Stefan Maubach", affiliation: "Jacobs University, Germany" },
-            { name: "Omran Kouba", affiliation: "Higher Institute for Applied Science & Technology, Syria" },
+            { name: "Omran Kouba", affiliation: "Higher Institute for Applied Science &Technology, Syria" },
             { name: "Kipp Johnson", affiliation: "Valley Catholic School, Beaverton, Oregon, USA" },
             { name: "Vedat Deveci", affiliation: "DMO, İstanbul" },
             { name: "Kee-Wai Lau", affiliation: "Hong-Kong, China" },
@@ -146,8 +146,8 @@ export const PROBLEM_OF_MONTH_2011 = [
             { name: "John M. Campbell", affiliation: "York University, Toronto, Canada" },
             { name: "Frank Feys", affiliation: "Katholieke Universiteit Leuven, Belgium" },
             { name: "Erdem Unal", affiliation: "Bogazici Universitesi, Istanbul" },
-            { name: "Bojan Basic", affiliation: "Novi Sad, Serbia" },
-            { name: "Cuneyt Ozturk", affiliation: "Ankara Fen Lisesi" }
+            { name: "Cuneyt Ozturk", affiliation: "Ankara Fen Lisesi" },
+            { name: "Bojan Basic", affiliation: "Novi Sad, Serbia" }
         ]
     },
 
@@ -176,7 +176,7 @@ export const PROBLEM_OF_MONTH_2011 = [
         question: "1107q.pdf",
         solution: "1109a.pdf",
         solvers: [
-            { name: "Omran Kouba", affiliation: "Higher Institute for Applied Science & Technology, Syria" },
+            { name: "Omran Kouba", affiliation: "Higher Institute for Applied Science &Technology, Syria" },
             { name: "Umut Uludag", affiliation: "TUBITAK BILGEM UEKAE" },
             { name: "Mahmut Sait Okyay", affiliation: "National Institute of Science and Technology, Korea" },
             { name: "Kipp Johnson", affiliation: "Valley Catholic School, Beaverton, Oregon, USA" },
@@ -184,7 +184,7 @@ export const PROBLEM_OF_MONTH_2011 = [
             { name: "Albert Stadler", affiliation: "Herrliberg, Switzerland" },
             { name: "Cuneyt Ozturk", affiliation: "Ankara Fen Lisesi" },
             { name: "Gruian Cornel", affiliation: "Cluj-Napoca, Romania" },
-            { name: "Khaled Halaoua", affiliation: "Higher Institute for Applied Science & Technology, Syria" },
+            { name: "Khaled Halaoua", affiliation: "Higher Institute for Applied Science &Technology, Syria" },
             { name: "Can Turkun", affiliation: "TOBB University" },
             { name: "Wu ChengYuan", affiliation: "National University of Singapore, Singapore" },
             { name: "Jan van Delden", affiliation: "Zuidhorn, The Netherlands" },
@@ -198,7 +198,7 @@ export const PROBLEM_OF_MONTH_2011 = [
             { name: "Tomas Carnstam", affiliation: "Lund, Sweden" },
             { name: "Michel Bataille", affiliation: "Rouen, France" },
             { name: "Bernard Ivol", affiliation: "Saint-Chamond, France" },
-            { name: "Tomas Lucivjanski", affiliation: "University of P.J. Safarik in Kosice, Slovakia" },
+            { name: "Tomas Lucivjanski", affiliation: "University of P.J.Safarik in Kosice, Slovakia" },
             { name: "Koo Do Wan", affiliation: "Haeundae High School, Busan, Korea" },
             { name: "Mustafa Kesal", affiliation: "University if Illinois at Urbana Champaign, USA" },
             { name: "Radouan Boukharfane", affiliation: "ISAE, France and Ecole polytechnique de Montreal, Canada" },
@@ -237,7 +237,7 @@ export const PROBLEM_OF_MONTH_2011 = [
             { name: "Wu ChengYuan", affiliation: "National University of Singapore, Singapore" },
             { name: "Daniel Lopez Aguayo", affiliation: "Institute of Mathematics, UNAM, Mexico" },
             { name: "Gruian Cornel", affiliation: "Cluj-Napoca, Romania" },
-            { name: "Omran Kouba", affiliation: "Higher Institute for Applied Science & Technology, Syria" },
+            { name: "Omran Kouba", affiliation: "Higher Institute for Applied Science &Technology, Syria" },
             { name: "Mahmut Sait Okyay", affiliation: "Ulsan National Institute of Science and Technology, Korea" },
             { name: "Albert Stadler", affiliation: "Herrliberg, Switzerland" },
             { name: "Lamis Alsheikh", affiliation: "Sam, Syria" },
@@ -266,7 +266,7 @@ export const PROBLEM_OF_MONTH_2011 = [
         question: "1111q.pdf",
         solution: "1112a.pdf",
         solvers: [
-            { name: "Omran Kouba", affiliation: "Higher Institute for Applied Science & Technology, Syria" },
+            { name: "Omran Kouba", affiliation: "Higher Institute for Applied Science &Technology, Syria" },
             { name: "Gruian Cornel", affiliation: "Cluj-Napoca, Romania" },
             { name: "Bojan Basic", affiliation: "Novi Sad, Serbia" },
             { name: "Wu ChengYuan", affiliation: "National University of Singapore, Singapore" },
