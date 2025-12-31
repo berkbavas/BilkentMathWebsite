@@ -1,10 +1,10 @@
 import { RESEARCH_DATA } from "../data/research.js";
+import { CURRENT_FACULTY } from "../data/faculty.js";
 import { escapeHtml, safeUrl } from "./helpers.js";
-
 
 function renderFacultyChips(faculty, accent) {
     const chips = faculty.map(f => {
-        let url = safeUrl(f.url);
+        let url = safeUrl(f.webpage);
         let name = escapeHtml(f.name);
         return `
       <a class="chip-link" href="${url}" target="_blank" rel="noopener" style="--chip-accent: ${accent};">
@@ -20,7 +20,9 @@ function renderAccordionItem(area, lang) {
     const accent = area.accent;
     const description = area.description[lang] || area.description["en"];
     const title = area.title[lang] || area.title["en"];
-    const labelParticipatingFaculty = lang === "en" ? "Participating faculty:" : "Öğretim üyeleri:"
+    const labelParticipatingFaculty = translations.participatingFaculty[lang] || translations.participatingFaculty["en"];
+
+    let faculty = CURRENT_FACULTY.filter(i => (i.researchGroups || []).includes(area.id));
 
     return `
     <details class="acc-item max-width-720" style="--accent:${accent}">
@@ -37,23 +39,32 @@ function renderAccordionItem(area, lang) {
       <div class="acc-body">
         <p>${description}</p>
         <p><strong>${labelParticipatingFaculty}</strong></p>
-        ${renderFacultyChips(area.faculty, accent)}
+        ${renderFacultyChips(faculty, accent)}
       </div>
     </details>
   `;
 }
 
-
 function render() {
+
     const lang = localStorage.getItem("lang") || "en";
     const elMount = document.getElementById("mount");
-    const elCount = document.getElementById("facultyMemberCount");
-    let totalMembers = 0;
-    RESEARCH_DATA.forEach(item => totalMembers += item.faculty.length);
-    elCount.textContent = lang === "tr" ? `${totalMembers} öğretim üyesi` : `${totalMembers} faculty member`;
+    const elFacultyMemberCount = document.getElementById("facultyMemberCount");
+    const facultyMemberCount = CURRENT_FACULTY.filter(item => (item.researchGroups || []).length > 0).length;
+    elFacultyMemberCount.textContent = `${facultyMemberCount} ${translations.faculty[lang]}`;
+
+    const elResearchGroupCount = document.getElementById("researchGroupCount");
+    const researchGroupCount = RESEARCH_DATA.length;
+    elResearchGroupCount.textContent = `${researchGroupCount} ${translations.researchGroup[lang]}`;
 
     elMount.innerHTML = RESEARCH_DATA.map(item => renderAccordionItem(item, lang)).join("");
 }
+
+const translations = {
+    faculty: { en: "faculty member", tr: "öğretim üyesi" },
+    researchGroup: { en: "research group", tr: "araştırma grubu" },
+    participatingFaculty: { en: "Participating faculty:", tr: "Öğretim Üyeleri:" }
+};
 
 document.render = render; // Expose render function to global scope for language toggle
 document.addEventListener("DOMContentLoaded", render); // Initial render on DOM load
