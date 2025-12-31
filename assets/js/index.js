@@ -12,6 +12,14 @@ function toDateKey(s, t) { // DD.MM.YYYY -> Date
 	return new Date(`${y}-${m}-${d}T${hh}:${mm}:00`);
 }
 
+function setRandomHeaderImage() {
+	if (Math.random() < 0.5) {
+		document.getElementById("header").style.backgroundImage = `linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.55)), url("assets/img/001.jpg")`;
+	} else {
+		document.getElementById("header").style.backgroundImage = `linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.55)), url("assets/img/002.jpg")`;
+	}
+}
+
 function render() {
 	document.getElementById("facultyCount").textContent = CURRENT_FACULTY.length;
 	document.getElementById("gradCount").textContent = GRADUATE_STUDENTS.length;
@@ -43,6 +51,9 @@ function render() {
 	const lastElement = PROBLEM_OF_MONTH[PROBLEM_OF_MONTH.length - 1];
 	let month = lang === "tr" ? MONTHS_EN_TO_TR[lastElement.month] || lastElement.month : lastElement.month;
 	document.getElementById("problemOfMonthTitle").textContent = `${month} ${lastElement.year}`;
+
+	setRandomHeaderImage();
+
 }
 
 function renderSeminars(containerId, list) {
