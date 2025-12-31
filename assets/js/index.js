@@ -3,6 +3,7 @@ import { CURRENT_FACULTY } from "../data/faculty.js";
 import { GRADUATE_STUDENTS } from "../data/graduate-students.js";
 import { PROBLEM_OF_MONTH } from "../data/problem-of-month.js"
 import { MONTHS_EN_TO_TR } from "../data/translations.js";
+import { NEWS } from "../data/news.js";
 
 const URL = "https://math.bilkent.edu.tr/";
 
@@ -53,6 +54,7 @@ function render() {
 	document.getElementById("problemOfMonthTitle").textContent = `${month} ${lastElement.year}`;
 
 	setRandomHeaderImage();
+	renderHomeNews();
 
 }
 
@@ -63,6 +65,21 @@ function renderSeminars(containerId, list) {
       <strong><a href="${URL + s.link}" target="_blank" rel="noopener noreferrer">${s.title}</a></strong><br>
       <span>${s.speaker}</span>
       <small>${s.date} · ${s.time} · ${s.place}</small>
+    </div>
+  `).join("");
+}
+
+function renderHomeNews() {
+  const el = document.getElementById("homeNewsList");
+  if (!el) return;
+
+  const lang = localStorage.getItem("lang") || "en";
+  const items = (NEWS || []).slice(0, 3);
+
+  el.innerHTML = items.map(n => `
+    <div class="home-news-item">
+      <div class="home-news-date">${(n.date && (n.date[lang] || n.date.en)) || ""}</div>
+      <div class="home-news-content">${(n.content && (n.content[lang] || n.content.en)) || ""}</div>
     </div>
   `).join("");
 }
