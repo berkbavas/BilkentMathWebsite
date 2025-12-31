@@ -14,9 +14,9 @@ function toDateKey(s, t) { // DD.MM.YYYY -> Date
 
 function setRandomHeaderImage() {
 	if (Math.random() < 0.5) {
-		document.getElementById("header").style.backgroundImage = `linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.55)), url("assets/img/001.jpg")`;
+		document.getElementById("header").className = "header header-bg-01";
 	} else {
-		document.getElementById("header").style.backgroundImage = `linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.55)), url("assets/img/002.jpg")`;
+		document.getElementById("header").className = "header header-bg-02";
 	}
 }
 
