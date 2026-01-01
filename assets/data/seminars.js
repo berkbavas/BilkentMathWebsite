@@ -1,5 +1,29 @@
 export const SEMINARS = [
     {
+        speaker: "John Doe",
+        title: "An Introduction to Algebraic Topology",
+        link: "seminars/2025-2026/Math_Seminar_John_Doe.pdf",
+        date: "01.02.2026",
+        time: "18:00",
+        place: "Zoom"
+    },
+    {
+        speaker: "Alan Turing",
+        title: "Computing Machinery and Intelligence",
+        link: "seminars/2025-2026/Math_Seminar_Alan_Turing.pdf",
+        date: "01.02.2026",
+        time: "12:00",
+        place: "Zoom"
+    },
+    {
+        speaker: "Smith Johnson",
+        title: "Introduction to Number Theory",
+        link: "seminars/2025-2026/Math_Seminar_Smith_Johnson.pdf",
+        date: "15.01.2026",
+        time: "18:00",
+        place: "Zoom"
+    },
+    {
         speaker: "Fei Cao",
         title: "Interacting particle systems and multi-agent dynamics: from stochastic agent-based models to deterministic differential equations",
         link: "seminars/2025-2026/Math_Seminar_Fei_Cao.pdf",
