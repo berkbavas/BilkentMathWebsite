@@ -513,7 +513,7 @@ ul li:last-child {
 /* Footer */
 .footer {
     margin-top: 3rem;
-    padding: 2rem 0;
+    padding: 2rem 0 1rem 0;
     border-top: 1px solid var(--border);
     background: #ffffff;
 }
@@ -548,14 +548,11 @@ ul li:last-child {
 }
 
 .footer-signature {
-    padding-top: 1rem;
-    padding-bottom: 1rem;
+    margin-top: 36px;
     text-align: center;
-    font-size: 0.75rem;
+    font-size: 0.7rem;
     letter-spacing: 0.04em;
-    line-height: 1.2;
     color: var(--muted);
-    background-color: #ffffff;
 }
 
 .divider {
