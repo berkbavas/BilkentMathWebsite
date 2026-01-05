@@ -543,6 +543,10 @@ ul li:last-child {
     margin: 0;
 }
 
+.footer .footer-link i {
+    margin: 0;
+}
+
 .footer-signature {
     padding-top: 1rem;
     padding-bottom: 1rem;
