@@ -37,7 +37,8 @@ function setupNavigation() {
     if (!nav || !navToggle) return;
 
     /* Mobile menu toggle */
-    navToggle.addEventListener("click", () => {
+    navToggle.addEventListener("click", (e) => {
+        e.stopPropagation();
         const isOpen = nav.getAttribute("data-collapsed") === "false";
         setNavOpen(!isOpen);
     });
@@ -58,6 +59,13 @@ function setupNavigation() {
         }
     });
 
+    document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape") {
+            closeAllDropdowns();
+            setNavOpen(false);
+        }
+    });
+
     function setNavOpen(open) {
         nav.setAttribute("data-collapsed", String(!open));
         navToggle.setAttribute("aria-expanded", String(open));
@@ -69,14 +77,11 @@ function setupNavigation() {
 
         closeAllDropdowns();
 
-        if (!expanded) {
-            item.classList.add("open");
-            button.setAttribute("aria-expanded", "true");
-        }
-        else {
-            item.classList.remove("open");
-            button.setAttribute("aria-expanded", "false");
-        }
+        // If it was open, we just closed everything => done (toggle close)
+        if (expanded) return;
+
+        item.classList.add("open");
+        button.setAttribute("aria-expanded", "true");
     }
 
     function closeAllDropdowns() {
@@ -87,6 +92,8 @@ function setupNavigation() {
             btn.setAttribute("aria-expanded", "false")
         );
     }
+
+
 }
 
 function setupLanguageToggle() {
