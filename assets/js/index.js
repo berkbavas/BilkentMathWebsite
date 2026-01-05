@@ -13,14 +13,6 @@ function toDateKey(s, t) { // DD.MM.YYYY -> Date
 	return new Date(`${y}-${m}-${d}T${hh}:${mm}:00`);
 }
 
-function setRandomHeaderImage() {
-	if (Math.random() < 0.5) {
-		document.getElementById("header").className = "header header-bg-01";
-	} else {
-		document.getElementById("header").className = "header header-bg-02";
-	}
-}
-
 function render() {
 	document.getElementById("facultyCount").textContent = CURRENT_FACULTY.length;
 	document.getElementById("gradCount").textContent = GRADUATE_STUDENTS.length;
@@ -53,9 +45,7 @@ function render() {
 	let month = lang === "tr" ? MONTHS_EN_TO_TR[lastElement.month] || lastElement.month : lastElement.month;
 	document.getElementById("problemOfMonthTitle").textContent = `${month} ${lastElement.year}`;
 
-	setRandomHeaderImage();
 	renderHomeNews();
-
 }
 
 function renderSeminars(containerId, list) {

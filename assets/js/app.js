@@ -100,13 +100,13 @@ function setupLanguageToggle() {
     const toggle = document.querySelector(SELECTORS.langToggle);
 
     let currentLang = localStorage.getItem("lang") || "en";
-    toggle.textContent = currentLang.toUpperCase();
+    toggle.textContent = currentLang === "en" ? "TR" : "EN";
     applyTranslations(currentLang);
 
     toggle.addEventListener("click", () => {
         currentLang = currentLang === "en" ? "tr" : "en";
         localStorage.setItem("lang", currentLang);
-        toggle.textContent = currentLang.toUpperCase();
+        toggle.textContent = currentLang === "en" ? "TR" : "EN";
         applyTranslations(currentLang);
         if (document.render) {
             document.render(); // For pages that implement a render function for dynamic content
