@@ -73,6 +73,10 @@ function setupNavigation() {
             item.classList.add("open");
             button.setAttribute("aria-expanded", "true");
         }
+        else {
+            item.classList.remove("open");
+            button.setAttribute("aria-expanded", "false");
+        }
     }
 
     function closeAllDropdowns() {
