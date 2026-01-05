@@ -157,10 +157,14 @@
 }
 
 /* Hover open (desktop) */
-@media (hover:hover) {
+/* @media (hover:hover) {
     .has-dropdown:hover .dropdown {
         display: block;
     }
+} */
+
+.has-dropdown:hover .dropdown {
+    display: block;
 }
 
 /* Mobile toggle button */
