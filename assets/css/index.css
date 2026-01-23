@@ -120,6 +120,9 @@ h2 {
     font-size: 2.2rem;
     font-weight: 700;
     margin-bottom: 0.4rem;
+    font-variant-numeric: tabular-nums;
+    min-width: 2ch;
+    display: inline-block;
 }
 
 .kpi-mid {

@@ -13,9 +13,64 @@ function toDateKey(s, t) { // DD.MM.YYYY -> Date
 	return new Date(`${y}-${m}-${d}T${hh}:${mm}:00`);
 }
 
+// Animated counter function
+function animateCounter(element, target, duration = 1500) {
+	const start = 0;
+	const startTime = performance.now();
+	
+	function easeOutQuart(t) {
+		return 1 - Math.pow(1 - t, 4);
+	}
+	
+	function update(currentTime) {
+		const elapsed = currentTime - startTime;
+		const progress = Math.min(elapsed / duration, 1);
+		const easedProgress = easeOutQuart(progress);
+		const current = Math.floor(start + (target - start) * easedProgress);
+		
+		element.textContent = current;
+		
+		if (progress < 1) {
+			requestAnimationFrame(update);
+		} else {
+			element.textContent = target;
+		}
+	}
+	
+	requestAnimationFrame(update);
+}
+
+// Intersection Observer for triggering animations when visible
+function setupCounterAnimations() {
+	const counters = [
+		{ id: "facultyCount", value: CURRENT_FACULTY.length },
+		{ id: "gradCount", value: GRADUATE_STUDENTS.length }
+	];
+	
+	const observer = new IntersectionObserver((entries) => {
+		entries.forEach(entry => {
+			if (entry.isIntersecting) {
+				const counterData = counters.find(c => c.id === entry.target.id);
+				if (counterData && !entry.target.dataset.animated) {
+					entry.target.dataset.animated = "true";
+					animateCounter(entry.target, counterData.value);
+				}
+			}
+		});
+	}, { threshold: 0.5 });
+	
+	counters.forEach(counter => {
+		const el = document.getElementById(counter.id);
+		if (el) {
+			el.textContent = "0";
+			observer.observe(el);
+		}
+	});
+}
+
 function render() {
-	document.getElementById("facultyCount").textContent = CURRENT_FACULTY.length;
-	document.getElementById("gradCount").textContent = GRADUATE_STUDENTS.length;
+	// Setup animated counters instead of static values
+	setupCounterAnimations();
 
 	const now = new Date();
 
