@@ -142,11 +142,10 @@ function renderYearContent(seminars, lang) {
 
 function render() {
     let lang = localStorage.getItem("lang") || "en";
-    const T = TRANSLATIONS.seminarsArchive;
-    elSearch.placeholder = T.searchPlaceholder[lang] || "Search";
-    const labelSeminar = T.labelSeminar[lang] || "Seminar(s)";
-    const labelView = T.labelView[lang] || "View";
-    const labelNoResults = T.noResults[lang] || "No results found.";
+    elSearch.placeholder = TRANSLATIONS.searchPlaceholder[lang] || "Search";
+    const labelSeminar = TRANSLATIONS.labelSeminar[lang] || "Seminar(s)";
+    const labelView = TRANSLATIONS.labelView[lang] || "View";
+    const labelNoResults = TRANSLATIONS.noResults[lang] || "No results found.";
     const search = norm(elSearch.value);
 
     elArchive.innerHTML = "";
@@ -188,7 +187,7 @@ function render() {
 
     // Update total seminar count badge
     const totalCount = Object.values(DATA).reduce((sum, arr) => { return sum + arr.length; }, 0);
-    elTotalSeminarCount.textContent = `${totalCount} ${T.labelSeminar[lang]}`;
+    elTotalSeminarCount.textContent = `${totalCount} ${TRANSLATIONS.labelSeminar[lang]}`;
 
 }
 
@@ -211,47 +210,54 @@ elReset.addEventListener("click", resetFilters);
 btnExpandAll.addEventListener("click", expandAll);
 btnCollapseAll.addEventListener("click", collapseAll);
 
-TRANSLATIONS.seminarsArchive = {
-    headerTitle: {
-        en: "Seminars Archive",
-        tr: "Seminer Arşivi"
-    },
-    textDescription: {
-        en: "Department seminars held between 2009 and 2025 (by academic year).",
-        tr: "2009 ile 2025 yılları arasında düzenlenen bölüm seminerleri (akademik yıla göre)."
-    },
-    textDescriptionFiles: {
-        en: `Files from February 2009 through June 2012 are mainly "mht" files, which can best be opened using the following software:`,
-        tr: `Şubat 2009 ile Haziran 2012 arasındaki dosyalar çoğunlukla "mht" dosyalarıdır ve aşağıdaki yazılımlar kullanılarak açılabilir:`
-    },
-    buttonReset: {
-        en: "Reset",
-        tr: "Sıfırla"
-    },
-    buttonExpandAll: {
-        en: "Expand all",
-        tr: "Tümünü genişlet"
-    },
-    buttonCollapseAll: {
-        en: "Collapse all",
-        tr: "Tümünü daralt"
-    },
-    searchPlaceholder: {
-        en: "Search",
-        tr: "Ara"
-    },
-    labelSeminar: {
-        en: "Seminar(s)",
-        tr: "Seminer"
-    },
-    labelView: {
-        en: "View",
-        tr: "Görüntüle"
-    },
-    noResults: {
-        en: "No results found.",
-        tr: "Sonuç bulunamadı."
-    }
+TRANSLATIONS.headerTitle = {
+    en: "Seminars Archive",
+    tr: "Seminer Arşivi"
+};
+
+TRANSLATIONS.textDescription = {
+    en: "Department seminars held between 2009 and 2025 (by academic year).",
+    tr: "2009 ile 2025 yılları arasında düzenlenen bölüm seminerleri (akademik yıla göre)."
+};
+
+TRANSLATIONS.textDescriptionFiles = {
+    en: `Files from February 2009 through June 2012 are mainly "mht" files, which can best be opened using the following software:`,
+    tr: `Şubat 2009 ile Haziran 2012 arasındaki dosyalar çoğunlukla "mht" dosyalarıdır ve aşağıdaki yazılımlar kullanılarak açılabilir:`
+};
+
+TRANSLATIONS.buttonReset = {
+    en: "Reset",
+    tr: "Sıfırla"
+};
+
+TRANSLATIONS.buttonExpandAll = {
+    en: "Expand all",
+    tr: "Tümünü genişlet"
+};
+
+TRANSLATIONS.buttonCollapseAll = {
+    en: "Collapse all",
+    tr: "Tümünü daralt"
+};
+
+TRANSLATIONS.searchPlaceholder = {
+    en: "Search",
+    tr: "Ara"
+};
+
+TRANSLATIONS.labelSeminar = {
+    en: "Seminar(s)",
+    tr: "Seminer"
+};
+
+TRANSLATIONS.labelView = {
+    en: "View",
+    tr: "Görüntüle"
+};
+
+TRANSLATIONS.noResults = {
+    en: "No results found.",
+    tr: "Sonuç bulunamadı."
 };
 
 
