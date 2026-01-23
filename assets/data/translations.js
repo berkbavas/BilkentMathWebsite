@@ -42,6 +42,10 @@ export const TRANSLATIONS = {
         en: "Alumni Statistics",
         tr: "Mezun İstatistikleri"
     },
+    navPeopleAdministrativeStaff: {
+        en: "Administrative Staff",
+        tr: "İdari Personel"
+    },
 
     navPrograms: {
         en: "Programs",

@@ -1,0 +1,187 @@
+/* Administrative Staff Page Styles */
+
+.wrap {
+    margin-bottom: 4rem;
+}
+
+.staff-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+    gap: 2rem;
+}
+
+.staff-card {
+    background: #fff;
+    border-radius: 20px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+    border: 1px solid rgba(0, 0, 0, 0.04);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.staff-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.1);
+}
+
+.staff-image-and-content {
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    gap: 1.4rem;
+    align-items: start;
+}
+
+/* Photo */
+.staff-media img {
+    width: 100px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 14px;
+    border: 2px solid #fff;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Content */
+.staff-content {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    min-width: 0;
+}
+
+/* Header */
+.staff-header {
+    display: grid;
+    gap: 0.4rem;
+}
+
+.staff-name {
+    font-size: 1.25rem;
+    font-weight: 700;
+    letter-spacing: -0.3px;
+    margin: 0;
+    color: #111;
+}
+
+.staff-title {
+    display: inline-flex;
+    align-self: flex-start;
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding: 0.3rem 0.7rem;
+    border-radius: 999px;
+    background: linear-gradient(135deg, rgba(45, 42, 98, 0.1), rgba(45, 42, 98, 0.05));
+    color: var(--accent);
+}
+
+.staff-responsibilities {
+    font-size: 0.85rem;
+    color: var(--muted);
+    margin: 0;
+    line-height: 1.5;
+}
+
+/* Meta Info */
+.staff-meta {
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0 0;
+    display: grid;
+    gap: 0.5rem;
+}
+
+.staff-meta li {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    font-size: 0.85rem;
+    color: rgba(17, 17, 17, 0.85);
+}
+
+.staff-meta i {
+    width: 26px;
+    height: 26px;
+    border-radius: 8px;
+    display: grid;
+    place-items: center;
+    font-size: 0.75rem;
+    background: rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    color: var(--accent);
+}
+
+.staff-meta a {
+    color: inherit;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.staff-meta a:hover {
+    color: var(--accent);
+}
+
+/* Empty State */
+.staff-empty {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 3rem 2rem;
+    color: var(--muted);
+    background: rgba(0, 0, 0, 0.02);
+    border-radius: 16px;
+    border: 2px dashed rgba(0, 0, 0, 0.08);
+}
+
+.staff-empty i {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    opacity: 0.4;
+}
+
+.staff-empty p {
+    margin: 0;
+    font-size: 0.95rem;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .staff-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .staff-image-and-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .staff-media {
+        display: flex;
+        justify-content: center;
+    }
+
+    .staff-media img {
+        width: 120px;
+        height: 140px;
+    }
+
+    .staff-title {
+        align-self: center;
+    }
+}
+
+/* Section Headers */
+.wrap h2 {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 1.5rem;
+    font-size: 1.4rem;
+    color: #111;
+}
+
+.wrap h2::before {
+    content: '';
+    width: 4px;
+    height: 1.2em;
+    background: var(--accent);
+    border-radius: 2px;
+}
