@@ -56,7 +56,6 @@ function apply() {
     const query = elementSearch.value.trim();
     const list = ALUMNI.filter(alumni => matches(alumni, query));
     elementRoot.innerHTML = list.map(a => renderEntry(a, lang)).join("");
-    elementReset.textContent = TRANSLATIONS.labelButtonReset[lang];
     elementSearch.placeholder = TRANSLATIONS.labelSearchPlaceholder[lang];
     if (list.length === 0) {
         elementRoot.innerHTML = `<p>${TRANSLATIONS.labelNoResults[lang]}</p>`;
@@ -77,11 +76,6 @@ function init() {
 function render() {
     apply();
 }
-
-TRANSLATIONS.labelButtonReset = {
-    en: "Reset",
-    tr: "Sıfırla"
-};
 
 TRANSLATIONS.labelNoResults = {
     en: "No matching alumni found.",
