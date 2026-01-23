@@ -213,6 +213,11 @@ export const TRANSLATIONS = {
     footerFollowUs: {
         en: "Follow Us",
         tr: "Bizi Takip Edin"
+    },
+
+    buttonReset: {
+        en: "Reset",
+        tr: "Sıfırla"
     }
 };
 

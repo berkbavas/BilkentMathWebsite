@@ -1,122 +1,229 @@
-/* =========================
-   Graduate Students – New Card
-   ========================= */
+/* Graduate Students Page Styles */
 
-.gs-grid {
+.wrap {
+    margin-bottom: 4rem;
+}
+
+/* Students Grid */
+.students-grid {
     display: grid;
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-    gap: 18px;
+    grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+    gap: 1.5rem;
 }
 
-@media (max-width: 1200px) {
-    .gs-grid {
-        grid-template-columns: repeat(3, minmax(0, 1fr));
+/* Student Card */
+.student-card {
+    background: #fff;
+    border-radius: 20px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+    border: 1px solid rgba(0, 0, 0, 0.04);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.student-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.1);
+}
+
+.student-image-and-content {
+    display: grid;
+    grid-template-columns: 90px 1fr;
+    gap: 1.25rem;
+    align-items: start;
+}
+
+/* Photo */
+.student-media img {
+    width: 90px;
+    height: 110px;
+    object-fit: cover;
+    border-radius: 14px;
+    border: 2px solid #fff;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Content */
+.student-content {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    min-width: 0;
+}
+
+/* Header */
+.student-header {
+    display: grid;
+    gap: 0.35rem;
+}
+
+.student-name {
+    font-size: 1.15rem;
+    font-weight: 700;
+    letter-spacing: -0.3px;
+    margin: 0;
+    color: #111;
+}
+
+.student-advisor {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-size: 0.8rem;
+    color: var(--muted);
+}
+
+.student-advisor i {
+    font-size: 0.7rem;
+    color: var(--accent);
+}
+
+.student-advisor-name {
+    font-weight: 500;
+    color: var(--accent);
+}
+
+/* Meta Info */
+.student-meta {
+    list-style: none;
+    padding: 0;
+    margin: 0.75rem 0 0;
+    display: grid;
+    gap: 0.4rem;
+}
+
+.student-meta li {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.82rem;
+    color: rgba(17, 17, 17, 0.85);
+}
+
+.student-meta i {
+    width: 24px;
+    height: 24px;
+    border-radius: 7px;
+    display: grid;
+    place-items: center;
+    font-size: 0.7rem;
+    background: rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    color: var(--accent);
+}
+
+.student-meta a {
+    color: inherit;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.student-meta a:hover {
+    color: var(--accent);
+}
+
+/* Empty State */
+.students-empty {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 3rem 2rem;
+    color: var(--muted);
+    background: rgba(0, 0, 0, 0.02);
+    border-radius: 16px;
+    border: 2px dashed rgba(0, 0, 0, 0.08);
+}
+
+.students-empty i {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    opacity: 0.4;
+}
+
+.students-empty p {
+    margin: 0;
+    font-size: 0.95rem;
+}
+
+/* No Results */
+.no-results {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 3rem 2rem;
+    color: var(--muted);
+}
+
+.no-results i {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    opacity: 0.3;
+}
+
+.no-results h3 {
+    margin: 0 0 0.5rem;
+    font-size: 1.2rem;
+    color: #333;
+}
+
+.no-results p {
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .filter-section {
+        flex-direction: column;
     }
-}
 
-@media (max-width: 900px) {
-    .gs-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
+    .filter-box {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .filter-box select {
+        width: 100%;
     }
 }
 
 @media (max-width: 600px) {
-    .gs-grid {
+    .students-grid {
         grid-template-columns: 1fr;
+    }
+
+    .student-image-and-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .student-media {
+        display: flex;
+        justify-content: center;
+    }
+
+    .student-media img {
+        width: 100px;
+        height: 120px;
+    }
+
+    .student-advisor {
+        justify-content: center;
     }
 }
 
-/* Card */
-.person-card {
-    padding: 0;
-}
-
-/* Inner spacing */
-.gs-card-inner {
-    padding: 16px;
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-}
-
-/* Top section */
-.gs-top {
-    display: grid;
-    grid-template-columns: 110px 1fr;
-    gap: 14px;
-    align-items: center;
-}
-
-.gs-avatar img {
-    width: 110px;
-    height: 140px;
-    object-fit: cover;
-    border-radius: 16px;
-    border: 2px solid #fff;
-    box-shadow: 0 10px 24px rgba(0, 0, 0, .18);
-}
-
-/* Title area */
-
-.gs-name {
-    margin: 0;
-    font-size: 1.05rem;
-    font-weight: 800;
-    letter-spacing: -0.2px;
-}
-
-.gs-sub {
-    margin: 8px 0 0;
-    font-size: 0.88rem;
-    color: var(--muted);
-    line-height: 1.35;
-    overflow: hidden;
-    text-overflow: ellipsis;
-}
-
-.gs-sub-label {
-    font-weight: 700;
-    color: rgba(17, 17, 17, .72);
-}
-
-/* Divider */
-.gs-divider {
-    height: 1px;
-    background: rgba(0, 0, 0, .08);
-}
-
-/* Meta list */
-.gs-meta {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: grid;
-    gap: 0px;
-}
-
-.gs-meta-item {
+/* Section Headers */
+.wrap h2 {
     display: flex;
     align-items: center;
-    gap: 10px;
-    min-width: 0;
-    color: rgba(17, 17, 17, .86);
+    gap: 0.75rem;
+    margin-bottom: 1.5rem;
+    font-size: 1.4rem;
+    color: #111;
 }
 
-.gs-ico {
-    width: 30px;
-    height: 30px;
-    border-radius: 10px;
-    display: grid;
-    place-items: center;
-    background: rgba(0, 0, 0, .05);
-    border: 1px solid rgba(0, 0, 0, .08);
-    font-size: 13px;
-    flex: 0 0 auto;
-}
-
-.gs-meta-text {
-    font-size: 0.88rem;
-    line-height: 1.25;
-    min-width: 0;
-    text-overflow: ellipsis;
+.wrap h2::before {
+    content: '';
+    width: 4px;
+    height: 1.2em;
+    background: var(--accent);
+    border-radius: 2px;
 }

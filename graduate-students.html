@@ -20,25 +20,34 @@
     <header id="navigation" class="navigation"><!-- JavaScript will inject content here --></header>
 
     <main class="container">
-        <header class="page-hero">
-            <h1 data-lang="en">Graduate Students</h1>
-            <h1 data-lang="tr" hidden>Lisansüstü Öğrencileri</h1>
 
-            <p class="page-lead" data-lang="en">Information about current graduate students of the Department of Mathematics.</p>
-            <p class="page-lead" data-lang="tr" hidden>Matematik Bölümü'nün mevcut lisansüstü öğrencileri hakkında bilgi.</p>
+        <header class="page-hero">
+            <div class="page-hero-badge">
+                <div class="pill">
+                    <i class="fa-solid fa-user-graduate" aria-hidden="true"></i>
+                    <span id="studentCount"><!-- JS will insert count here --></span>
+                </div>
+            </div>
+
+            <h1 data-lang="en">Graduate Students</h1>
+            <h1 data-lang="tr" hidden>Lisansüstü Öğrenciler</h1>
+
+            <p class="page-lead" data-lang="en">Meet our talented graduate students pursuing advanced degrees in Mathematics.</p>
+            <p class="page-lead" data-lang="tr" hidden>Matematik alanında lisansüstü eğitim alan yetenekli öğrencilerimiz.</p>
         </header>
 
+        <!-- Search and Filter -->
         <div class="page-search-actions" role="search">
-            <label class="search-label" for="search">
+            <label class="search-label">
                 <i class="fa-solid fa-magnifying-glass search-icon" aria-hidden="true"></i>
-                <input class="search-input" type="search" placeholder="Search" autocomplete="off" id="search">
+                <input class="search-input" type="search" placeholder="Search" autocomplete="off" id="searchInput">
             </label>
-
-            <button class="btn btn-ghost" type="button" id="reset" data-i18n="buttonReset"><!-- JavaScript will inject content here --></button>
-            <div class="header-meta"><span class="pill" id="count"><!-- JavaScript will inject content here --></span></div>
+            <button class="btn btn-ghost" type="button" id="resetBtn" data-i18n="buttonReset">Reset</button>
         </div>
 
-        <div id="gs-cards-container" class="gs-grid"><!-- JS will insert cards here --></div>
+        <section class="wrap">
+            <div id="studentsGrid" class="students-grid"><!-- JS will insert cards here --></div>
+        </section>
 
     </main>
 

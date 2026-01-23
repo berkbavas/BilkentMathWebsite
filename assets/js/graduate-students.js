@@ -1,108 +1,186 @@
 import { GRADUATE_STUDENTS } from "../data/graduate-students.js";
-import { TRANSLATIONS } from "../data/translations.js";
+import { escapeHtml } from "./helpers.js";
 
-const elementSearch = document.querySelector("#search");
-const elementCount = document.querySelector("#count");
-const elementReset = document.querySelector("#reset");
-const URL = "https://math.bilkent.edu.tr/Grad_student_photos/";
+const URL = "https://math.bilkent.edu.tr/Grad_student_photos";
 
-function card(s, lang) {
-    const name = s.name ?? "";
-    const advisor = s.advisor ?? "";
-    const office = s.office ?? "";
-    const phone = s.phone ?? "";
-    const email = s.email ?? "";
-    const advisorLabel = TRANSLATIONS.labelAdvisor[lang] || "Advisor";
-    const photoUrl = encodeURI(URL + (s.photo || "placeholder.jpg"));
+function cardTemplate(student) {
+    const name = student.name || "";
+    const office = student.office || "";
+    const phone = student.phone || "";
+    const email = student.email || "";
+    const advisor = student.advisor || "";
+    const photo = (student.photo || "").trim();
+
+    // Use a placeholder if no photo
+    const photoSrc = photo 
+        ? `${URL}/${photo}` 
+        : `${URL}/placeholder.png`;
+
+    const lang = localStorage.getItem("lang") || "en";
+    const advisorLabel = lang === "tr" ? "Danışman" : "Advisor";
 
     return `
-  <article class="person-card">
-    <div class="gs-card-inner">
+    <article class="student-card">
+        <div class="student-image-and-content">
+            <div class="student-media">
+                <img src="${escapeHtml(photoSrc)}" alt="${escapeHtml(name)}" loading="lazy">
+            </div>
 
-      <div class="gs-top">
-        <div class="gs-avatar">
-          <img src="${photoUrl}" alt="${name}" loading="lazy">
+            <div class="student-content">
+                <header class="student-header">
+                    <h3 class="student-name">${escapeHtml(name)}</h3>
+                    ${advisor ? `
+                    <div class="student-advisor">
+                        <i class="fa-solid fa-chalkboard-user" aria-hidden="true"></i>
+                        <span>${advisorLabel}: <span class="student-advisor-name">${escapeHtml(advisor)}</span></span>
+                    </div>` : ""}
+                </header>
+
+                <ul class="student-meta">
+                    ${office ? `
+                    <li>
+                        <i class="fa-solid fa-door-open" aria-hidden="true"></i>
+                        <span>${escapeHtml(office)}</span>
+                    </li>` : ""}
+
+                    ${email ? `
+                    <li>
+                        <i class="fa-regular fa-envelope" aria-hidden="true"></i>
+                        <span>${escapeHtml(email)}</span>
+                    </li>` : ""}
+
+                    ${phone ? `
+                    <li>
+                        <i class="fa-solid fa-phone" aria-hidden="true"></i>
+                        <span>${escapeHtml(phone)}</span>
+                    </li>` : ""}
+                </ul>
+            </div>
         </div>
-
-        <div class="gs-title">
-          <h2 class="gs-name">${name}</h2>
-          <p class="gs-sub"><span class="gs-sub-label">${advisorLabel}:</span> ${advisor}</p>
-        </div>
-      </div>
-
-      <ul class="gs-meta" aria-label="Contact information">
-          <li class="gs-meta-item">
-            <span class="gs-ico"><i class="fa-regular fa-building" aria-hidden="true"></i></span>
-            <span class="gs-meta-text">${office}</span>
-          </li>
-
-          <li class="gs-meta-item">
-            <span class="gs-ico"><i class="fa-regular fa-envelope" aria-hidden="true"></i></span>
-            <span class="gs-meta-text">${email}</span>
-          </li>
-
-          <li class="gs-meta-item">
-            <span class="gs-ico"><i class="fa-solid fa-phone" aria-hidden="true"></i></span>
-            <span class="gs-meta-text">${phone}</span>
-          </li>
-      </ul>
-
-    </div>
-  </article>`;
+    </article>`;
 }
 
-function matches(student, query) {
-    const ql = query.toLowerCase();
-    if (student.name && student.name.toLowerCase().includes(ql)) return true;
-    return false;
+function emptyState(lang) {
+    const message = lang === "tr" 
+        ? "Bu kategoride henüz öğrenci bulunmamaktadır." 
+        : "No graduate students found.";
+    
+    return `
+    <div class="students-empty">
+        <i class="fa-solid fa-user-slash" aria-hidden="true"></i>
+        <p>${message}</p>
+    </div>`;
 }
 
-
-function renderCards(list, lang) {
-    const container = document.querySelector("#gs-cards-container");
-    container.innerHTML = list.map(student => card(student, lang)).join("");
+function noResultsState(lang) {
+    const title = lang === "tr" ? "Sonuç bulunamadı" : "No results found";
+    const message = lang === "tr" 
+        ? "Arama kriterlerinize uygun öğrenci bulunamadı." 
+        : "No students match your search criteria.";
+    
+    return `
+    <div class="no-results">
+        <i class="fa-solid fa-search" aria-hidden="true"></i>
+        <h3>${title}</h3>
+        <p>${message}</p>
+    </div>`;
 }
 
-function apply() {
-    const currentLang = localStorage.getItem("lang") || "en";
-    elementSearch.placeholder = TRANSLATIONS.searchPlaceholder[currentLang];
-    const query = elementSearch.value.trim();
-    const list = GRADUATE_STUDENTS.filter(student => matches(student, query));
-    elementCount.textContent = `${list.length} ${TRANSLATIONS.postfixStudent[currentLang]}`;
-    renderCards(list, currentLang);
-}
-
-function resetFilters() {
-    elementSearch.value = "";
-    apply();
+function filterStudents(searchTerm) {
+    return GRADUATE_STUDENTS.filter(student => {
+        const matchesSearch = !searchTerm || 
+            student.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+            (student.advisor && student.advisor.toLowerCase().includes(searchTerm.toLowerCase())) ||
+            (student.email && student.email.toLowerCase().includes(searchTerm.toLowerCase()));
+        
+        return matchesSearch;
+    });
 }
 
 function render() {
-    elementSearch.addEventListener("input", apply);
-    elementReset.addEventListener("click", resetFilters);
-    apply();
+    const studentsGrid = document.querySelector("#studentsGrid");
+    const studentCount = document.querySelector("#studentCount");
+    const searchInput = document.querySelector("#searchInput");
+    const lang = localStorage.getItem("lang") || "en";
+
+    // Update search placeholder based on language
+    if (searchInput) {
+        searchInput.placeholder = lang === "tr" ? "Ara..." : "Search";
+    }
+
+    // Get filter values
+    const searchTerm = searchInput?.value || "";
+
+    // Filter students
+    const filteredStudents = filterStudents(searchTerm);
+
+    // Update count
+    const totalCount = GRADUATE_STUDENTS.length;
+    const filteredCount = filteredStudents.length;
+    
+    if (studentCount) {
+        if (searchTerm) {
+            studentCount.textContent = lang === "en" 
+                ? `${filteredCount} of ${totalCount} Students`
+                : `${totalCount} öğrenciden ${filteredCount}`;
+        } else {
+            studentCount.textContent = lang === "en" 
+                ? `${totalCount} Graduate Student${totalCount !== 1 ? 's' : ''}`
+                : `${totalCount} Lisansüstü Öğrenci`;
+        }
+    }
+
+    // Render grid
+    if (studentsGrid) {
+        if (filteredStudents.length > 0) {
+            studentsGrid.innerHTML = filteredStudents.map(cardTemplate).join("");
+        } else if (searchTerm) {
+            studentsGrid.innerHTML = noResultsState(lang);
+        } else {
+            studentsGrid.innerHTML = emptyState(lang);
+        }
+    }
+
+
+    searchInput.placeholder = lang === "tr" ? "Ara" : "Search";
+
+    // Handle language toggle visibility
+    document.querySelectorAll("[data-lang]").forEach(el => {
+        const elLang = el.getAttribute("data-lang");
+        el.hidden = elLang !== lang;
+    });
 }
 
-TRANSLATIONS.buttonReset = {
-    en: "Reset",
-    tr: "Sıfırla"
-};
+function setupEventListeners() {
+    const searchInput = document.querySelector("#searchInput");
+    const resetBtn = document.querySelector("#resetBtn");
+    
 
-TRANSLATIONS.postfixStudent = {
-    en: "Student(s)",
-    tr: "Öğrenci"
-};
+    // Debounce search
+    let searchTimeout;
+    if (searchInput) {
+        searchInput.addEventListener("input", () => {
+            clearTimeout(searchTimeout);
+            searchTimeout = setTimeout(render, 300);
+        });
+    }
 
-TRANSLATIONS.searchPlaceholder = {
-    en: "Search",
-    tr: "Ara"
-};
+    // Reset button
+    if (resetBtn) {
+        resetBtn.addEventListener("click", () => {
+            if (searchInput) {
+                searchInput.value = "";
+            }
+            render();
+        });
+    }
+}
 
-TRANSLATIONS.labelAdvisor = {
-    en: "Advisor",
-    tr: "Danışman"
-};
+// Initial render
+document.addEventListener("DOMContentLoaded", () => {
+    render();
+    setupEventListeners();
+});
 
-
+// Expose render function for language toggle
 document.render = render;
-document.addEventListener("DOMContentLoaded", render);
