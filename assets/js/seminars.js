@@ -94,9 +94,10 @@ function apply() {
     });
 
     let lang = localStorage.getItem("lang") || "en";
+    const T = TRANSLATIONS.seminars;
 
     $("#table-container").hidden = list.length === 0;
-    $("#count").textContent = `${list.length} ${TRANSLATIONS.seminarPostfix[lang] || "seminar(s)"}`;
+    $("#count").textContent = `${list.length} ${T.seminarPostfix[lang] || "seminar(s)"}`;
 
     renderTable(list);
     renderCards(list);
@@ -109,56 +110,51 @@ function resetFilters() {
 
 function render() {
     let lang = localStorage.getItem("lang") || "en";
-    $("#search").placeholder = TRANSLATIONS.searchPlaceholder[lang] || "Search";
+    const T = TRANSLATIONS.seminars;
+    $("#search").placeholder = T.searchPlaceholder[lang] || "Search";
     $("#search").addEventListener("input", apply);
     $("#reset").addEventListener("click", resetFilters);
 
     apply();
 }
 
-TRANSLATIONS.titleSeminars = {
-    en: "2025-26 Academic Year Seminars",
-    tr: "2025-26 Akademik Yılı Seminerleri"
-};
-
-TRANSLATIONS.textDescription = {
-    en: "Department seminars held during the 2025-26 academic year.",
-    tr: "2025-26 akademik yılı boyunca düzenlenen bölüm seminerleri."
-};
-
-TRANSLATIONS.tableHeaderTitleSpeaker = {
-    en: "Title / Speaker",
-    tr: "Başlık / Konuşmacı"
-};
-
-TRANSLATIONS.tableHeaderDate = {
-    en: "Date",
-    tr: "Tarih"
-};
-
-TRANSLATIONS.tableHeaderTime = {
-    en: "Time",
-    tr: "Saat"
-};
-
-TRANSLATIONS.tableHeaderPlace = {
-    en: "Place",
-    tr: "Yer"
-};
-
-TRANSLATIONS.buttonReset = {
-    en: "Reset",
-    tr: "Sıfırla"
-};
-
-TRANSLATIONS.searchPlaceholder = {
-    en: "Search",
-    tr: "Ara"
-};
-
-TRANSLATIONS.seminarPostfix = {
-    en: "seminar(s)",
-    tr: "seminer"
+TRANSLATIONS.seminars = {
+    titleSeminars: {
+        en: "2025-26 Academic Year Seminars",
+        tr: "2025-26 Akademik Yılı Seminerleri"
+    },
+    textDescription: {
+        en: "Department seminars held during the 2025-26 academic year.",
+        tr: "2025-26 akademik yılı boyunca düzenlenen bölüm seminerleri."
+    },
+    tableHeaderTitleSpeaker: {
+        en: "Title / Speaker",
+        tr: "Başlık / Konuşmacı"
+    },
+    tableHeaderDate: {
+        en: "Date",
+        tr: "Tarih"
+    },
+    tableHeaderTime: {
+        en: "Time",
+        tr: "Saat"
+    },
+    tableHeaderPlace: {
+        en: "Place",
+        tr: "Yer"
+    },
+    buttonReset: {
+        en: "Reset",
+        tr: "Sıfırla"
+    },
+    searchPlaceholder: {
+        en: "Search",
+        tr: "Ara"
+    },
+    seminarPostfix: {
+        en: "seminar(s)",
+        tr: "seminer"
+    }
 };
 
 document.render = render; // Expose render function for language toggle

@@ -59,6 +59,7 @@ function yearStats(items) {
 }
 
 function renderCard(item, lang) {
+    const T = TRANSLATIONS.problemOfMonth;
     const solversList = (item.solvers || []).map(
         (solver) => `
       <li class="solver-item">
@@ -86,7 +87,7 @@ function renderCard(item, lang) {
         <div class="pom-subline">
           <span class="badge">
             <i class="fa-solid fa-users"></i>
-            ${solverCount} ${TRANSLATIONS.pomSolversLabel[lang] || "solvers"}
+            ${solverCount} ${T.pomSolversLabel[lang] || "solvers"}
           </span>
         </div>
       </div>
@@ -94,13 +95,13 @@ function renderCard(item, lang) {
       <div class="pom-links">
         <a href="${question}" target="_blank" class="chip chip-ghost"}">
             <i class="fa-regular fa-circle-question"></i>
-            ${TRANSLATIONS.pomQuestionLabel[lang] || "Question"}
+            ${T.pomQuestionLabel[lang] || "Question"}
         </a>
 
         ${solution ? `
         <a href="${solution}" target="_blank" class="chip chip-ghost"}">
             <i class="fa-regular fa-file-lines"></i>
-            ${TRANSLATIONS.pomSolutionLabel[lang] || "Solution"}
+            ${T.pomSolutionLabel[lang] || "Solution"}
         </a>
         ` : ""}
       </div>
@@ -111,7 +112,7 @@ function renderCard(item, lang) {
         <summary class="solvers-summary">
           <span class="solvers-left">
             <i class="fa-solid fa-list-check"></i>
-            ${(TRANSLATIONS.pomSolversTitle[lang] || "Solvers")}
+            ${(T.pomSolversTitle[lang] || "Solvers")}
           </span>
           <span class="solvers-right">
             <span class="count-pill">${solverCount}</span>
@@ -135,6 +136,7 @@ function renderCards(data, lang) {
 }
 
 function createDetailSummary(year, solversTotal, lang) {
+    const T = TRANSLATIONS.problemOfMonth;
     return `
     <summary class="archive-accordion-summary">
       <div class="year-summary">
@@ -143,13 +145,13 @@ function createDetailSummary(year, solversTotal, lang) {
           <div class="year-meta">
             <span class="year-pill">
               <i class="fa-solid fa-users"></i>
-              ${solversTotal} ${TRANSLATIONS.pomSolversLabel[lang] || "solvers"}
+              ${solversTotal} ${T.pomSolversLabel[lang] || "solvers"}
             </span>
           </div>
         </div>
 
         <div class="year-right">
-          <span class="hint">${TRANSLATIONS.pomViewLabel[lang] || "View"}</span>
+          <span class="hint">${T.pomViewLabel[lang] || "View"}</span>
           <span class="chev" aria-hidden="true"></span>
         </div>
       </div>
@@ -188,122 +190,104 @@ function render() {
     // Latest problem button
     const latestData = DATA[0]; // Latest year
     const latestItem = latestData[latestData.length - 1];
+    const T = TRANSLATIONS.problemOfMonth;
 
     let month = lang === "tr" ? MONTHS_EN_TO_TR[latestItem.month] || latestItem.month : latestItem.month;
 
     elLatestProblemBtn.onclick = () => window.open(url + latestItem.question, "_blank");
-    elLatestProblemBtn.textContent = (TRANSLATIONS.pomLatestProblemLabel[lang] || "Latest Problem") + ` (${month} ${latestItem.year})`;
+    elLatestProblemBtn.textContent = (T.pomLatestProblemLabel[lang] || "Latest Problem") + ` (${month} ${latestItem.year})`;
 }
 
 
-TRANSLATIONS.pomQuestionLabel = {
-    en: "Question",
-    tr: "Soru"
-};
-
-TRANSLATIONS.pomSolutionLabel = {
-    en: "Solution",
-    tr: "Çözüm"
-};
-
-TRANSLATIONS.pomSolversTitle = {
-    en: "Solvers",
-    tr: "Çözenler"
-};
-
-TRANSLATIONS.pomSolversLabel = {
-    en: "solvers",
-    tr: "çözen"
-};
-
-TRANSLATIONS.pomViewLabel = {
-    en: "View",
-    tr: "Görüntüle"
-};
-
-TRANSLATIONS.pomLatestProblemLabel = {
-    en: "Problem of the Month",
-    tr: "Ayın Sorusu"
-};
-
-TRANSLATIONS.pomOpenQuestionAria = {
-    en: "Open question PDF",
-    tr: "Soru PDF'ini aç"
-};
-
-TRANSLATIONS.pomOpenSolutionAria = {
-    en: "Open solution PDF",
-    tr: "Çözüm PDF'ini aç"
-};
-
-TRANSLATIONS.headerTitle = {
-    en: "Problem of the Month",
-    tr: "Ayın Sorusu"
-};
-
-TRANSLATIONS.headerDescription = {
-    en: "A monthly problem series. Submit your solution and see the archive of questions and solutions.",
-    tr: "Aylık soru serisi. Çözümünüzü gönderin veya arşive göz atın."
-};
-
-TRANSLATIONS.howToSubmitTitle = {
-    en: "How to Submit",
-    tr: "Nasıl Gönderilir?"
-};
-
-TRANSLATIONS.howToSubmitDescription = {
-    en: "We will announce the following month on this page the names of people who have sent correct solutions. You can send your answers by one of the following ways.",
-    tr: "Soruları doğru çözenlerin isimlerini takip eden ay bu sayfada yayınlıyoruz. Çözümlerinizi aşağıdaki yollardan biri ile bize ulaştırabilirsiniz."
-};
-
-TRANSLATIONS.mailLabel = {
-    en: "Mail:",
-    tr: "Posta:"
-};
-
-TRANSLATIONS.mailAddressLine1 = {
-    en: "Bilkent University,",
-    tr: "Bilkent Üniversitesi,"
-};
-
-TRANSLATIONS.mailAddressLine2 = {
-    en: "Department of Mathematics,",
-    tr: "Matematik Bölümü,"
-};
-
-TRANSLATIONS.mailAddressLine3 = {
-    en: "06800 Bilkent, Ankara, Turkey",
-    tr: "06800 Bilkent, Ankara, Türkiye"
-};
-
-TRANSLATIONS.emailLabel = {
-    en: "Email:",
-    tr: "E-posta:"
-};
-
-TRANSLATIONS.faxLabel = {
-    en: "Fax:",
-    tr: "Faks:"
-};
-
-TRANSLATIONS.faxAttention = {
-    en: "Attention: Azer Kerimov",
-    tr: "İlgili: Azer Kerimov"
-};
-
-TRANSLATIONS.faxSubject = {
-    en: "Subject: Math problem of the month",
-    tr: "Konu: Ayın matematik sorusu"
-};
-
-TRANSLATIONS.quickLinksTitle = {
-    en: "Quick links",
-    tr: "Hızlı linkler"
-};
-
-TRANSLATIONS.quickLinksDescription = {
-    en: "Open the latest question.",
-    tr: "Son soruyu açın."
+TRANSLATIONS.problemOfMonth = {
+    pomQuestionLabel: {
+        en: "Question",
+        tr: "Soru"
+    },
+    pomSolutionLabel: {
+        en: "Solution",
+        tr: "Çözüm"
+    },
+    pomSolversTitle: {
+        en: "Solvers",
+        tr: "Çözenler"
+    },
+    pomSolversLabel: {
+        en: "solvers",
+        tr: "çözen"
+    },
+    pomViewLabel: {
+        en: "View",
+        tr: "Görüntüle"
+    },
+    pomLatestProblemLabel: {
+        en: "Problem of the Month",
+        tr: "Ayın Sorusu"
+    },
+    pomOpenQuestionAria: {
+        en: "Open question PDF",
+        tr: "Soru PDF'ini aç"
+    },
+    pomOpenSolutionAria: {
+        en: "Open solution PDF",
+        tr: "Çözüm PDF'ini aç"
+    },
+    headerTitle: {
+        en: "Problem of the Month",
+        tr: "Ayın Sorusu"
+    },
+    headerDescription: {
+        en: "A monthly problem series. Submit your solution and see the archive of questions and solutions.",
+        tr: "Aylık soru serisi. Çözümünüzü gönderin veya arşive göz atın."
+    },
+    howToSubmitTitle: {
+        en: "How to Submit",
+        tr: "Nasıl Gönderilir?"
+    },
+    howToSubmitDescription: {
+        en: "We will announce the following month on this page the names of people who have sent correct solutions. You can send your answers by one of the following ways.",
+        tr: "Soruları doğru çözenlerin isimlerini takip eden ay bu sayfada yayınlıyoruz. Çözümlerinizi aşağıdaki yollardan biri ile bize ulaştırabilirsiniz."
+    },
+    mailLabel: {
+        en: "Mail:",
+        tr: "Posta:"
+    },
+    mailAddressLine1: {
+        en: "Bilkent University,",
+        tr: "Bilkent Üniversitesi,"
+    },
+    mailAddressLine2: {
+        en: "Department of Mathematics,",
+        tr: "Matematik Bölümü,"
+    },
+    mailAddressLine3: {
+        en: "06800 Bilkent, Ankara, Turkey",
+        tr: "06800 Bilkent, Ankara, Türkiye"
+    },
+    emailLabel: {
+        en: "Email:",
+        tr: "E-posta:"
+    },
+    faxLabel: {
+        en: "Fax:",
+        tr: "Faks:"
+    },
+    faxAttention: {
+        en: "Attention: Azer Kerimov",
+        tr: "İlgili: Azer Kerimov"
+    },
+    faxSubject: {
+        en: "Subject: Math problem of the month",
+        tr: "Konu: Ayın matematik sorusu"
+    },
+    quickLinksTitle: {
+        en: "Quick links",
+        tr: "Hızlı linkler"
+    },
+    quickLinksDescription: {
+        en: "Open the latest question.",
+        tr: "Son soruyu açın."
+    }
 };
 
 
