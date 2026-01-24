@@ -110,3 +110,77 @@
         grid-template-columns: 1fr;
     }
 }
+
+@media (max-width: 768px) {
+    .alumni-grid {
+        gap: 1.5rem;
+    }
+
+    .alumni-header {
+        gap: 0.8rem;
+    }
+
+    .alumni-avatar img {
+        width: 80px;
+        height: 80px;
+    }
+
+    .alumni-name {
+        font-size: 1.1rem;
+    }
+
+    .alumni-year {
+        font-size: 0.75rem;
+        padding: 0.2rem 0.5rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .alumni-grid {
+        gap: 1.25rem;
+    }
+
+    .alumni-header {
+        flex-direction: column;
+        text-align: center;
+        gap: 0.6rem;
+    }
+
+    .alumni-avatar img {
+        width: 72px;
+        height: 72px;
+    }
+
+    .alumni-title {
+        justify-content: center;
+    }
+
+    .alumni-name {
+        font-size: 1.05rem;
+    }
+
+    .alumni-year {
+        font-size: 0.7rem;
+    }
+
+    .alumni-bullets {
+        padding-left: 1rem;
+    }
+
+    .alumni-bullets li {
+        font-size: 0.85rem;
+        margin-bottom: 0.3rem;
+    }
+
+    .alumni-story summary {
+        font-size: 0.9rem;
+    }
+
+    .alumni-story p {
+        font-size: 0.85rem;
+    }
+
+    .alumni-update {
+        font-size: 0.75rem;
+    }
+}

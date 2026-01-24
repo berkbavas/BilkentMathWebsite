@@ -401,3 +401,169 @@
         grid-template-columns: 1fr;
     }
 }
+
+/* =========================================================
+   Mobile Optimizations
+   ========================================================= */
+
+@media (max-width: 576px) {
+    /* Quick Facts */
+    .grad-fact {
+        gap: 10px;
+    }
+
+    .grad-fact-icon {
+        width: 40px;
+        height: 40px;
+        border-radius: 12px;
+    }
+
+    .grad-fact-icon i {
+        font-size: 0.9rem;
+    }
+
+    .grad-fact-body h3 {
+        font-size: 0.95rem;
+    }
+
+    .grad-fact-body p {
+        font-size: 0.88rem;
+        margin-top: 4px;
+    }
+
+    /* Sections */
+    .grad-section {
+        margin: 1rem 0;
+    }
+
+    .grad-section-head {
+        gap: 10px;
+        margin-bottom: 8px;
+    }
+
+    .grad-section-icon {
+        width: 42px;
+        height: 42px;
+        border-radius: 14px;
+    }
+
+    .grad-section h2 {
+        font-size: 1.15rem;
+    }
+
+    /* Stipend */
+    .grad-stipend-item {
+        padding: 12px 14px;
+        border-radius: 12px;
+    }
+
+    .grad-stipend-kicker {
+        font-size: 0.85rem;
+    }
+
+    .grad-stipend-value {
+        font-size: 1rem;
+        margin-top: 4px;
+    }
+
+    /* Timeline */
+    .grad-timeline-card {
+        padding: 12px 14px;
+        border-radius: 14px;
+    }
+
+    .grad-timeline-title {
+        font-size: 0.9rem;
+    }
+
+    .grad-timeline-value {
+        font-size: 0.95rem;
+        margin-top: 4px;
+    }
+
+    /* CTA Buttons */
+    .grad-cta-row {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .grad-ready-actions {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    /* Supervisors */
+    .gsup-controls {
+        margin: 14px 0;
+    }
+
+    .gsup-search {
+        height: 42px;
+    }
+
+    .gsup-search input {
+        font-size: 15px;
+    }
+
+    .sup-card {
+        padding: 14px;
+        border-radius: 16px;
+    }
+
+    .sup-top {
+        grid-template-columns: 48px 1fr;
+        gap: 10px;
+    }
+
+    .sup-avatar {
+        width: 48px;
+        height: 48px;
+        border-radius: 12px;
+    }
+
+    .sup-name {
+        font-size: 0.98rem;
+    }
+
+    .sup-rank {
+        font-size: 0.82rem;
+        margin-top: 2px;
+    }
+
+    .sup-details {
+        padding-top: 8px;
+    }
+
+    .sup-chip {
+        padding: 5px 8px;
+        font-size: 11px;
+    }
+
+    .sup-details p {
+        font-size: 0.88rem;
+        line-height: 1.6;
+    }
+
+    /* Footer Cards */
+    .gsup-footer {
+        margin-top: 18px;
+        padding-top: 16px;
+        gap: 12px;
+    }
+
+    .gsup-footer-card {
+        padding: 14px;
+        border-radius: 14px;
+        flex-direction: column;
+        align-items: flex-start;
+        text-align: left;
+    }
+
+    .gsup-footer-title {
+        font-size: 0.95rem;
+    }
+
+    .gsup-footer-sub {
+        font-size: 0.75rem;
+    }
+}
