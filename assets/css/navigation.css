@@ -759,6 +759,12 @@ body.nav-open .nav {
         display: flex;
     }
 
+    .nav-toggle {
+        margin-left: 0;
+    }
+}
+
+@media (max-width: 1024px) {
     .mobile-lang-toggle {
         display: inline-flex;
         align-items: center;
@@ -792,9 +798,5 @@ body.nav-open .nav {
 
     .mobile-lang-toggle .lang-text {
         font-weight: 600;
-    }
-
-    .nav-toggle {
-        margin-left: 0;
     }
 }
