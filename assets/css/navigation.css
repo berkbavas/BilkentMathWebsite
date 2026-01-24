@@ -555,6 +555,9 @@
         padding: 12px;
         max-height: calc(100vh - 140px);
         overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
+        overscroll-behavior: contain;
+        touch-action: pan-y;
         opacity: 1;
         transform: translateY(0);
         transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
@@ -728,6 +731,17 @@
 /* =========================================================
    MOBILE CONTROLS (Language Toggle + Hamburger)
    ========================================================= */
+
+/* Body scroll lock when nav is open */
+body.nav-open {
+    overflow: hidden;
+    touch-action: none;
+}
+
+/* But allow scroll inside navigation menu */
+body.nav-open .nav {
+    touch-action: pan-y;
+}
 
 .mobile-controls {
     display: none;

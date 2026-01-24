@@ -69,7 +69,12 @@ function setupNavigation() {
     function setNavOpen(open) {
         nav.setAttribute("data-collapsed", String(!open));
         navToggle.setAttribute("aria-expanded", String(open));
-        document.body.style.overflow = open ? "hidden" : "";
+        
+        if (open) {
+            document.body.classList.add("nav-open");
+        } else {
+            document.body.classList.remove("nav-open");
+        }
     }
 
     function toggleDropdown(button) {
