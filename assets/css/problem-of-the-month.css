@@ -132,20 +132,20 @@
 .year-right {
     display: flex;
     align-items: center;
-    gap: 10px;
-    color: #666;
-    font-size: 13px;
+    gap: 6px;
+    color: #888;
+    font-size: 12px;
     white-space: nowrap;
 }
 
 .chev {
-    width: 10px;
-    height: 10px;
+    width: 7px;
+    height: 7px;
     border-right: 2px solid #777;
     border-bottom: 2px solid #777;
     transform: rotate(-45deg);
     transition: transform .18s ease;
-    margin-left: 6px;
+    margin-left: 4px;
 }
 
 details[open] .chev {

@@ -7,6 +7,16 @@ export const TRANSLATIONS = {
         tr: "Bilkent Üniversitesi • Matematik Bölümü"
     },
 
+    /* Topbar */
+    topbarBilkent: {
+        en: "Bilkent University",
+        tr: "Bilkent Üniversitesi"
+    },
+    topbarFaculty: {
+        en: "Faculty of Science",
+        tr: "Fen Fakültesi"
+    },
+
     /* Navigation – Titles */
     titleDepartment: {
         en: "Department of Mathematics",

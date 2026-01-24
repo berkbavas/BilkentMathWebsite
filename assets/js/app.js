@@ -98,20 +98,44 @@ function setupNavigation() {
 }
 
 function setupLanguageToggle() {
-    const toggle = document.querySelector(SELECTORS.langToggle);
+    const toggles = document.querySelectorAll(SELECTORS.langToggle);
 
     let currentLang = localStorage.getItem("lang") || "en";
-    toggle.textContent = currentLang === "en" ? "TR" : "EN";
+    
+    // Update all toggle buttons - show the TARGET language (opposite of current)
+    const targetLang = currentLang === "en" ? "TR" : "EN";
+    toggles.forEach(toggle => {
+        const langText = toggle.querySelector('.lang-text');
+        if (langText) {
+            langText.textContent = targetLang;
+        } else {
+            toggle.textContent = targetLang;
+        }
+    });
+    
     applyTranslations(currentLang);
 
-    toggle.addEventListener("click", () => {
-        currentLang = currentLang === "en" ? "tr" : "en";
-        localStorage.setItem("lang", currentLang);
-        toggle.textContent = currentLang === "en" ? "TR" : "EN";
-        applyTranslations(currentLang);
-        if (document.render) {
-            document.render(); // For pages that implement a render function for dynamic content
-        }
+    toggles.forEach(toggle => {
+        toggle.addEventListener("click", () => {
+            currentLang = currentLang === "en" ? "tr" : "en";
+            localStorage.setItem("lang", currentLang);
+            
+            // Update all toggle buttons - show the TARGET language (opposite of current)
+            const newTargetLang = currentLang === "en" ? "TR" : "EN";
+            document.querySelectorAll(SELECTORS.langToggle).forEach(btn => {
+                const langText = btn.querySelector('.lang-text');
+                if (langText) {
+                    langText.textContent = newTargetLang;
+                } else {
+                    btn.textContent = newTargetLang;
+                }
+            });
+            
+            applyTranslations(currentLang);
+            if (document.render) {
+                document.render(); // For pages that implement a render function for dynamic content
+            }
+        });
     });
 }
 

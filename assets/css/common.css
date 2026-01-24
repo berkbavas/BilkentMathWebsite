@@ -5,7 +5,8 @@
    ========================================================= */
 
 :root {
-    --navigation-height: 84px;
+    --topbar-height: 42px;
+    --navigation-height: 128px; /* topbar + navbar */
     --navigation-max-width: 1320px;
     --container-max-width: 1260px;
     --card-max-width: 770px;
@@ -101,7 +102,14 @@ body {
     color: #000000;
     line-height: 1.55;
     background: var(--background-color);
-    padding-top: var(--navigation-height);
+    padding-top: 128px; /* Navbar + topbar yüksekliği */
+}
+
+/* Mobilde topbar gizlendiği için boşluğu azalt */
+@media (max-width: 1024px) {
+    body {
+        padding-top: 80px;
+    }
 }
 
 h1 {
