@@ -218,7 +218,7 @@
 }
 
 /* Responsive */
-@media (max-width: 960px) {
+@media (max-width: 1024px) {
     .about-hero-inner {
         grid-template-columns: 1fr;
     }
@@ -239,5 +239,265 @@
     .about-cta-actions a {
         width: 100%;
         text-align: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .about-hero-inner {
+        padding: 1rem 0;
+        gap: 14px;
+    }
+
+    .about-hero h1 {
+        font-size: 1.75rem;
+        margin-top: 10px;
+    }
+
+    .about-hero-panel-card {
+        padding: 16px;
+        border-radius: 18px;
+    }
+
+    .about-hero-panel-title {
+        font-size: 0.95rem;
+    }
+
+    .about-hero-panel-sub {
+        font-size: 0.88rem;
+    }
+
+    .about-hero-panel-grid {
+        grid-template-columns: 1fr;
+        gap: 8px;
+        margin-top: 12px;
+    }
+
+    .about-mini {
+        padding: 10px;
+        border-radius: 12px;
+    }
+
+    .about-mini-k {
+        font-size: 0.72rem;
+    }
+
+    .about-mini-v {
+        font-size: 0.95rem;
+    }
+
+    .about-card.card {
+        padding: 1.5rem;
+    }
+
+    .about-side-card {
+        padding: 14px;
+        border-radius: 16px;
+    }
+
+    .about-side-title {
+        font-size: 0.95rem;
+    }
+
+    .about-link {
+        padding: 10px;
+        border-radius: 12px;
+    }
+
+    .about-cta {
+        margin: 1.8rem 0 0;
+        padding: 1.2rem 0 0;
+    }
+
+    .about-cta-inner {
+        padding: 16px;
+        border-radius: 18px;
+    }
+}
+
+@media (max-width: 640px) {
+    .about-hero-inner {
+        padding: 0.85rem 0;
+        gap: 12px;
+    }
+
+    .about-hero h1 {
+        font-size: 1.5rem;
+    }
+
+    .about-hero-panel-card {
+        padding: 14px;
+        border-radius: 14px;
+    }
+
+    .about-hero-panel-title {
+        font-size: 0.9rem;
+        gap: 8px;
+    }
+
+    .about-hero-panel-sub {
+        font-size: 0.82rem;
+        margin-top: 4px;
+    }
+
+    .about-hero-panel-grid {
+        margin-top: 10px;
+    }
+
+    .about-mini {
+        padding: 8px 10px;
+        border-radius: 10px;
+    }
+
+    .about-mini-k {
+        font-size: 0.68rem;
+    }
+
+    .about-mini-v {
+        font-size: 0.88rem;
+    }
+
+    .about-card.card {
+        padding: 1.25rem;
+    }
+
+    .about-card h2 {
+        font-size: 1.15rem;
+    }
+
+    .about-card p {
+        font-size: 0.9rem;
+    }
+
+    .about-side-card {
+        padding: 12px;
+        border-radius: 14px;
+    }
+
+    .about-side-title {
+        font-size: 0.9rem;
+        margin-bottom: 8px;
+    }
+
+    .about-link {
+        padding: 8px 10px;
+        border-radius: 10px;
+        margin-top: 8px;
+    }
+
+    .about-link-left {
+        font-size: 0.88rem;
+        gap: 8px;
+    }
+
+    .about-side-divider {
+        margin: 12px 0;
+    }
+
+    .about-side-note-title {
+        font-size: 0.9rem;
+    }
+
+    .about-side-note-text {
+        font-size: 0.85rem;
+        margin: 6px 0 10px;
+    }
+
+    .about-cta {
+        margin: 1.5rem 0 0;
+        padding: 1rem 0 0;
+    }
+
+    .about-cta-inner {
+        padding: 14px;
+        border-radius: 14px;
+        gap: 12px;
+    }
+
+    .about-cta-title {
+        font-size: 0.95rem;
+    }
+
+    .about-cta-text {
+        font-size: 0.85rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .about-hero h1 {
+        font-size: 1.35rem;
+    }
+
+    .about-hero-panel-card {
+        padding: 12px;
+    }
+
+    .about-hero-panel-title {
+        font-size: 0.85rem;
+    }
+
+    .about-hero-panel-sub {
+        font-size: 0.78rem;
+    }
+
+    .about-mini {
+        padding: 6px 8px;
+    }
+
+    .about-mini-k {
+        font-size: 0.65rem;
+    }
+
+    .about-mini-v {
+        font-size: 0.82rem;
+    }
+
+    .about-card.card {
+        padding: 1rem;
+    }
+
+    .about-card h2 {
+        font-size: 1.05rem;
+    }
+
+    .about-card p {
+        font-size: 0.85rem;
+    }
+
+    .about-side-card {
+        padding: 10px;
+    }
+
+    .about-cta-inner {
+        padding: 12px;
+    }
+
+    .about-cta-title {
+        font-size: 0.9rem;
+    }
+
+    .about-cta-text {
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 360px) {
+    .about-hero h1 {
+        font-size: 1.2rem;
+    }
+
+    .about-hero-panel-title {
+        font-size: 0.8rem;
+    }
+
+    .about-mini-v {
+        font-size: 0.78rem;
+    }
+
+    .about-card h2 {
+        font-size: 1rem;
+    }
+
+    .about-card p {
+        font-size: 0.8rem;
     }
 }

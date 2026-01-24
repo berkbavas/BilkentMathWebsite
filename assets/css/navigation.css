@@ -61,12 +61,12 @@
 
 .title strong {
     display: block;
-    font-size: 1.25rem;
+    font-size: 1.15rem;
 }
 
 .title span {
     display: block;
-    font-size: 1rem;
+    font-size: 0.95rem;
 }
 
 /* Nav base */
@@ -156,7 +156,7 @@
     margin-left: 8px;
 }
 
-@media (min-width: 1320px) {
+@media (min-width: 1280px) {
     .has-dropdown:hover .dropdown {
         display: block;
     }
@@ -260,7 +260,7 @@
 }
 
 /* Responsive */
-@media (max-width: 1320px) {
+@media (max-width: 1280px) {
     .nav-toggle {
         display: inline-flex;
         align-items: center;
@@ -316,11 +316,40 @@
     }
 
     .title strong {
-        font-size: 1.125rem;
+        font-size: 1rem;
     }
 
     .title span {
         font-size: 0.9rem;
+    }
+
+    .navigation-inner {
+        padding: 10px 12px;
+    }
+
+    .logo img {
+        width: 50px;
+        height: 50px;
+    }
+}
+
+@media (max-width: 640px) {
+    .nav {
+        top: 82px;
+        left: 10px;
+        right: 10px;
+    }
+
+    .langbtn {
+        width: 40px;
+        height: 40px;
+        border-radius: 10px;
+    }
+
+    .nav-toggle {
+        width: 40px;
+        height: 40px;
+        border-radius: 10px;
     }
 }
 
@@ -331,5 +360,30 @@
 
     .title span {
         font-size: 0.8rem;
+    }
+
+    .navigation-inner {
+        padding: 8px 10px;
+        gap: 10px;
+    }
+
+    .logo img {
+        width: 44px;
+        height: 44px;
+    }
+
+    .controls {
+        gap: 6px;
+    }
+
+    .langbtn {
+        width: 36px;
+        height: 36px;
+        padding: 8px;
+    }
+
+    .nav-toggle {
+        width: 36px;
+        height: 36px;
     }
 }

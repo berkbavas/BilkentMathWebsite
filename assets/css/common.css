@@ -5,6 +5,13 @@
    ========================================================= */
 
 :root {
+    /* Standard Breakpoints */
+    --breakpoint-xs: 480px;
+    --breakpoint-sm: 640px;
+    --breakpoint-md: 768px;
+    --breakpoint-lg: 1024px;
+    --breakpoint-xl: 1280px;
+
     --navigation-height: 84px;
     --navigation-max-width: 1320px;
     --container-max-width: 1260px;
@@ -152,7 +159,7 @@ ul li:last-child {
 }
 
 .container {
-    width: min(var(--container-max-width), calc(100% - 2.2rem));
+    width: min(var(--container-max-width), calc(100% - 3rem));
     margin: 0 auto;
 }
 
@@ -233,7 +240,7 @@ ul li:last-child {
     margin-bottom: 2rem;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 640px) {
     .page-search-actions {
         grid-template-columns: 1fr;
     }
@@ -399,12 +406,6 @@ ul li:last-child {
     align-items: start;
 }
 
-@media (max-width: 720px) {
-    .hbox-grid-layout {
-        grid-template-columns: 1fr;
-    }
-}
-
 .vbox-grid-layout {
     display: grid;
     grid-template-columns: 1fr;
@@ -565,17 +566,28 @@ ul li:last-child {
     padding: 0;
 }
 
-@media (max-width: 768px) {
-    .footer-grid {
-        grid-template-columns: 1fr;
-    }
-}
-
 [data-lang][hidden] {
     display: none !important;
 }
 
-@media (max-width: 720px) {
+/* =========================
+   Responsive Breakpoints
+   Standard: xs(480), sm(640), md(768), lg(1024), xl(1280)
+   ========================= */
+
+/* Large devices (≤1024px) */
+@media (max-width: 1024px) {
+    .container {
+        width: min(var(--container-max-width), calc(100% - 2.5rem));
+    }
+}
+
+/* Tablets (≤768px) */
+@media (max-width: 768px) {
+    .footer-grid {
+        grid-template-columns: 1fr;
+    }
+
     .page-hero h1 {
         font-size: 1.85rem;
     }
@@ -587,5 +599,170 @@ ul li:last-child {
 
     .page-kpis {
         grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    .page-kpi {
+        padding: 12px 14px;
+        border-radius: 14px;
+    }
+
+    .page-kpi-label {
+        font-size: 0.8rem;
+        margin-bottom: 4px;
+    }
+
+    .page-kpi-value {
+        font-size: 1.4rem;
+    }
+
+    .hbox-grid-layout {
+        grid-template-columns: 1fr;
+    }
+
+    h1 {
+        font-size: 1.75rem;
+    }
+
+    h2 {
+        font-size: 1.25rem;
+    }
+
+    .card {
+        padding: 1.5rem;
+        border-radius: 16px;
+    }
+}
+
+/* Mobile devices (≤640px) */
+@media (max-width: 640px) {
+    :root {
+        --navigation-height: 72px;
+    }
+
+    .container {
+        width: min(var(--container-max-width), calc(100% - 2rem));
+    }
+
+    .page-search-actions {
+        grid-template-columns: 1fr;
+    }
+
+    .page-hero {
+        margin: var(--gap-3) 0;
+        padding: 1rem 0;
+    }
+
+    .page-lead {
+        font-size: 1rem;
+    }
+
+    .btn, .btn-black {
+        padding: 14px;
+        font-size: 0.9rem;
+    }
+
+    .card {
+        padding: 1.25rem;
+    }
+
+    .footer {
+        padding: 1.5rem 0;
+    }
+
+    .footer .small {
+        font-size: 0.85rem;
+    }
+}
+
+/* Small mobile devices (≤480px) */
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    h2 {
+        font-size: 1.1rem;
+    }
+
+    .page-hero h1 {
+        font-size: 1.5rem;
+    }
+
+    .page-lead {
+        font-size: 0.95rem;
+    }
+
+    .page-kpis {
+        gap: 8px;
+    }
+
+    .page-kpi {
+        padding: 10px 12px;
+        border-radius: 12px;
+    }
+
+    .page-kpi-label {
+        font-size: 0.75rem;
+    }
+
+    .page-kpi-value {
+        font-size: 1.25rem;
+    }
+
+    .pill, .chip {
+        font-size: 12px;
+        padding: 5px 8px;
+    }
+
+    .btn, .btn-black {
+        padding: 12px;
+        font-size: 0.85rem;
+    }
+
+    .card {
+        padding: 1rem;
+        border-radius: 14px;
+    }
+
+    .search-input {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 360px) {
+    h1 {
+        font-size: 1.35rem;
+    }
+
+    h2 {
+        font-size: 1rem;
+    }
+
+    .page-hero h1 {
+        font-size: 1.3rem;
+    }
+
+    .page-lead {
+        font-size: 0.88rem;
+    }
+
+    .page-kpi-value {
+        font-size: 1.15rem;
+    }
+
+    .pill, .chip {
+        font-size: 11px;
+        padding: 4px 7px;
+    }
+
+    .btn, .btn-black {
+        padding: 10px;
+        font-size: 0.8rem;
+    }
+
+    .card {
+        padding: 0.85rem;
+        border-radius: 12px;
     }
 }

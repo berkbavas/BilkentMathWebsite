@@ -191,7 +191,7 @@ h2 {
     margin-bottom: .25rem;
 }
 
-@media (max-width:960px) {
+@media (max-width: 1024px) {
     .home-highlights {
         grid-template-columns: 1fr;
     }
@@ -252,22 +252,272 @@ h2 {
     margin-right: .6rem;
 }
 
-@media (max-width: 960px) {
+@media (max-width: 1024px) {
     .home-seminars {
         grid-template-columns: 1fr;
     }
 }
 
+@media (max-width: 768px) {
+    .container {
+        padding-bottom: 2.5rem;
+    }
+
+    h2 {
+        font-size: 1.25rem;
+    }
+
+    .home-kpis {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+
+    .kpi-card {
+        padding: 1.25rem;
+    }
+
+    .kpi-big {
+        font-size: 1.8rem;
+    }
+
+    .home-seminars {
+        gap: 2rem;
+        margin-top: 2.5rem;
+    }
+
+    .home-highlights {
+        gap: 1.5rem;
+        margin-top: 2rem;
+    }
+}
+
 @media (max-width: 640px) {
     .header {
-        padding: 3rem 1.2rem;
+        padding: 2.5rem 1rem;
+        margin-top: 0.75rem;
+        margin-bottom: 1.5rem;
+        border-radius: 14px;
+        background-position: center center;
     }
 
     .header-wrap {
-        padding: 2rem 1.6rem;
+        padding: 1.5rem 1.25rem;
+        border-radius: 12px;
     }
 
     .header h1 {
-        font-size: 2rem;
+        font-size: 1.5rem;
+        margin-bottom: 0.6rem;
+    }
+
+    .header p {
+        font-size: 0.88rem;
+        line-height: 1.55;
+    }
+
+    .header a {
+        margin-top: 0.5rem;
+        font-size: 0.9rem;
+    }
+
+    .home-quick-links {
+        gap: 8px;
+        margin: -0.8rem 0 1.5rem;
+    }
+
+    .home-quick-links .pill {
+        font-size: 0.85rem;
+        padding: 0.5rem 0.75rem;
+    }
+
+    .home-kpis {
+        grid-template-columns: 1fr;
+        gap: 0.75rem;
+        margin: 1.5rem 0;
+    }
+
+    .kpi-card {
+        padding: 1rem;
+        border-radius: 12px;
+    }
+
+    .kpi-label {
+        font-size: .8rem;
+    }
+
+    .kpi-value {
+        font-size: 1rem;
+    }
+
+    .kpi-big {
+        font-size: 1.6rem;
+    }
+
+    .kpi-mid {
+        font-size: 1.2rem;
+    }
+
+    .kpi-sub {
+        font-size: .8rem;
+    }
+
+    .hl-card {
+        padding: 1.25rem;
+        border-radius: 12px;
+    }
+
+    .hl-card h2 {
+        font-size: 1.15rem;
+        margin-bottom: .6rem;
+    }
+
+    .hl-text {
+        font-size: 0.9rem;
+        margin-bottom: 0.75rem;
+    }
+
+    .home-seminars {
+        gap: 1.5rem;
+        margin-top: 2rem;
+    }
+
+    .seminar-column h2 {
+        font-size: 1.15rem;
+        margin-bottom: 0.75rem;
+    }
+
+    .seminar-card {
+        padding: 1rem;
+        border-radius: 12px;
+        margin-bottom: 0.75rem;
+    }
+
+    .seminar-card strong {
+        font-size: 0.95rem;
+    }
+
+    .seminar-card span {
+        font-size: 0.88rem;
+    }
+
+    .seminar-card small {
+        font-size: 0.8rem;
+    }
+
+    .home-news-item {
+        padding: .6rem 0;
+    }
+
+    .home-news-date {
+        font-size: .8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .header {
+        padding: 2rem 0.85rem;
+        margin-top: 0.5rem;
+        margin-bottom: 1.25rem;
+        border-radius: 12px;
+        box-shadow: 0 12px 40px rgba(0, 0, 0, 0.22);
+    }
+
+    .header-wrap {
+        padding: 1.25rem 1rem;
+        border-radius: 10px;
+    }
+
+    .header h1 {
+        font-size: 1.35rem;
+    }
+
+    .header p {
+        font-size: 0.85rem;
+        line-height: 1.5;
+    }
+
+    .home-kpis {
+        grid-template-columns: 1fr;
+        gap: 0.6rem;
+        margin: 1.25rem 0;
+    }
+
+    .kpi-card {
+        padding: 0.85rem;
+        border-radius: 10px;
+    }
+
+    .kpi-label {
+        font-size: .75rem;
+    }
+
+    .kpi-label i {
+        margin-right: 0.3rem;
+    }
+
+    .kpi-big {
+        font-size: 1.4rem;
+    }
+
+    .kpi-mid {
+        font-size: 1.1rem;
+    }
+
+    .kpi-sub {
+        font-size: .75rem;
+    }
+
+    .hl-card {
+        padding: 1rem;
+    }
+
+    .hl-card h2 {
+        font-size: 1.1rem;
+    }
+
+    .hl-text {
+        font-size: 0.85rem;
+    }
+
+    .seminar-card {
+        padding: 0.85rem;
+    }
+}
+
+@media (max-width: 360px) {
+    .header {
+        padding: 1.75rem 0.75rem;
+    }
+
+    .header-wrap {
+        padding: 1rem 0.85rem;
+    }
+
+    .header h1 {
+        font-size: 1.2rem;
+    }
+
+    .header p {
+        font-size: 0.8rem;
+    }
+
+    .home-kpis {
+        gap: 0.5rem;
+    }
+
+    .kpi-card {
+        padding: 0.75rem;
+    }
+
+    .kpi-label {
+        font-size: .7rem;
+    }
+
+    .kpi-big {
+        font-size: 1.25rem;
+    }
+
+    .kpi-sub {
+        font-size: .7rem;
     }
 }

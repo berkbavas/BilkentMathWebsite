@@ -82,8 +82,7 @@
     justify-content: center;
 }
 
-@media (max-width: 720px) {
-
+@media (max-width: 768px) {
     .master-actions {
         flex-direction: column;
     }
@@ -99,5 +98,29 @@
 
     .master-aside .card {
         position: static;
+    }
+}
+
+@media (max-width: 640px) {
+    .master-info-grid .card {
+        padding: 1.1rem;
+    }
+
+    .master-info-grid h3 {
+        font-size: 0.95rem;
+    }
+
+    .master-actions-footer {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 480px) {
+    .master-section {
+        gap: var(--gap-3);
+    }
+
+    .master-note {
+        font-size: 0.9rem;
     }
 }

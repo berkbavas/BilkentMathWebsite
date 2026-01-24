@@ -10,7 +10,7 @@
     align-items: start;
 }
 
-@media (max-width: 980px) {
+@media (max-width: 1024px) {
     .oa-layout {
         grid-template-columns: 1fr;
     }
@@ -73,7 +73,7 @@
     letter-spacing: -0.2px;
 }
 
-@media (max-width: 760px) {
+@media (max-width: 768px) {
     .oa-hero-title {
         font-size: 1.8rem;
     }
@@ -104,7 +104,7 @@
     gap: 14px;
 }
 
-@media (max-width: 980px) {
+@media (max-width: 1024px) {
     .oa-side {
         position: static;
     }
@@ -337,7 +337,7 @@
 /* -------------------------
    Mobile: table -> cards
    ------------------------- */
-@media (max-width: 760px) {
+@media (max-width: 768px) {
     .oa-table thead {
         display: none;
     }
@@ -378,5 +378,290 @@
 
     .two-column-grid {
         grid-template-columns: 1fr;
+    }
+
+    .oa-layout {
+        gap: 18px;
+    }
+
+    .oa-hero-lead {
+        font-size: 1rem;
+        margin-top: 10px;
+    }
+
+    .oa-section {
+        padding: 8px 0 0;
+    }
+
+    .oa-side-card {
+        padding: 14px;
+        border-radius: 16px;
+    }
+
+    .oa-side-title {
+        font-size: 0.95rem;
+    }
+
+    .oa-table-wrap {
+        border-radius: 16px;
+    }
+}
+
+@media (max-width: 640px) {
+    .oa-layout {
+        gap: 14px;
+    }
+
+    .oa-hero-lead {
+        font-size: 0.92rem;
+        line-height: 1.65;
+    }
+
+    .oa-facts {
+        gap: 10px;
+        margin-top: 14px;
+    }
+
+    .oa-fact {
+        padding: 12px;
+        gap: 10px;
+        border-radius: 14px;
+    }
+
+    .oa-fact-k {
+        width: 36px;
+        height: 36px;
+        border-radius: 10px;
+    }
+
+    .oa-fact-v {
+        font-size: 0.92rem;
+    }
+
+    .oa-side-card {
+        padding: 12px;
+        border-radius: 14px;
+    }
+
+    .oa-side-title {
+        font-size: 0.9rem;
+        margin-bottom: 8px;
+    }
+
+    .oa-side-links a {
+        padding: 8px 10px;
+        border-radius: 12px;
+        font-size: 0.88rem;
+        gap: 8px;
+    }
+
+    .oa-cta-strip {
+        padding: 14px;
+        border-radius: 16px;
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .oa-cta-title {
+        font-size: 0.95rem;
+    }
+
+    .oa-portrait {
+        min-height: 150px;
+        border-radius: 14px;
+    }
+
+    .oa-portrait span {
+        font-size: 36px;
+    }
+
+    .oa-portrait-caption {
+        font-size: 0.88rem;
+    }
+
+    .oa-table-wrap {
+        border-radius: 14px;
+    }
+
+    .oa-row {
+        padding: 10px 10px 4px;
+    }
+
+    .oa-table tbody td {
+        grid-template-columns: 100px 1fr;
+        gap: 8px;
+        padding: 8px 4px;
+        font-size: 0.88rem;
+    }
+
+    .oa-table tbody td::before {
+        font-size: 11px;
+    }
+
+    .oa-chip {
+        font-size: 0.88rem;
+        padding: 5px 8px;
+    }
+
+    .oa-btn {
+        padding: 8px 10px;
+        border-radius: 12px;
+        font-size: 0.88rem;
+        gap: 8px;
+    }
+
+    .two-column-grid {
+        gap: 12px;
+        margin-top: 12px;
+    }
+
+    .two-column-grid .card {
+        border-radius: 14px;
+    }
+
+    .two-column-grid .card h2 {
+        font-size: 1rem;
+        padding: 12px 14px 0;
+    }
+
+    .two-column-grid .card p {
+        padding: 12px 14px 14px;
+        font-size: 0.88rem;
+        line-height: 1.65;
+    }
+
+    .oa-section-head h2 {
+        font-size: 1.15rem;
+    }
+
+    .oa-section-head p {
+        font-size: 0.88rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .oa-layout {
+        gap: 12px;
+    }
+
+    .oa-hero-lead {
+        font-size: 0.85rem;
+    }
+
+    .oa-facts {
+        gap: 8px;
+        margin-top: 12px;
+    }
+
+    .oa-fact {
+        padding: 10px;
+        gap: 8px;
+        border-radius: 12px;
+    }
+
+    .oa-fact-k {
+        width: 32px;
+        height: 32px;
+        border-radius: 8px;
+    }
+
+    .oa-fact-v {
+        font-size: 0.85rem;
+    }
+
+    .oa-side-card {
+        padding: 10px;
+    }
+
+    .oa-side-title {
+        font-size: 0.85rem;
+    }
+
+    .oa-side-links a {
+        padding: 7px 8px;
+        font-size: 0.82rem;
+    }
+
+    .oa-cta-strip {
+        padding: 12px;
+        border-radius: 14px;
+    }
+
+    .oa-cta-title {
+        font-size: 0.88rem;
+    }
+
+    .oa-portrait {
+        min-height: 130px;
+    }
+
+    .oa-portrait span {
+        font-size: 30px;
+    }
+
+    .oa-portrait-caption {
+        font-size: 0.82rem;
+    }
+
+    .oa-table tbody td {
+        grid-template-columns: 90px 1fr;
+        font-size: 0.82rem;
+        padding: 6px 4px;
+    }
+
+    .oa-table tbody td::before {
+        font-size: 10px;
+    }
+
+    .oa-chip {
+        font-size: 0.8rem;
+        padding: 4px 6px;
+    }
+
+    .oa-btn {
+        padding: 6px 8px;
+        font-size: 0.82rem;
+    }
+
+    .two-column-grid .card h2 {
+        font-size: 0.95rem;
+        padding: 10px 12px 0;
+    }
+
+    .two-column-grid .card p {
+        padding: 10px 12px 12px;
+        font-size: 0.82rem;
+    }
+
+    .oa-section-head h2 {
+        font-size: 1.05rem;
+    }
+
+    .oa-section-head p {
+        font-size: 0.82rem;
+    }
+}
+
+@media (max-width: 360px) {
+    .oa-fact-k {
+        width: 28px;
+        height: 28px;
+    }
+
+    .oa-fact-v {
+        font-size: 0.8rem;
+    }
+
+    .oa-table tbody td {
+        grid-template-columns: 80px 1fr;
+        font-size: 0.78rem;
+    }
+
+    .oa-chip {
+        font-size: 0.75rem;
+    }
+
+    .oa-portrait span {
+        font-size: 26px;
     }
 }

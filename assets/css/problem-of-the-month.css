@@ -26,7 +26,7 @@
     margin-bottom: var(--margin-5);
 }
 
-@media (max-width: 960px) {
+@media (max-width: 1024px) {
     .pom-hero {
         grid-template-columns: 1fr;
     }
@@ -60,7 +60,7 @@
     letter-spacing: 0.5px;
 }
 
-@media (max-width: 720px) {
+@media (max-width: 768px) {
     .pom-meta {
         flex-direction: column;
         gap: 1rem;
@@ -139,17 +139,20 @@
 }
 
 .chev {
-    width: 10px;
-    height: 10px;
-    border-right: 2px solid #777;
-    border-bottom: 2px solid #777;
-    transform: rotate(-45deg);
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    font-size: 12px;
+    color: #777;
     transition: transform .18s ease;
     margin-left: 6px;
 }
 
+.chev::before {
+    content: "\f054";
+}
+
 details[open] .chev {
-    transform: rotate(45deg);
+    transform: rotate(90deg);
 }
 
 .pom-cards {
@@ -159,7 +162,7 @@ details[open] .chev {
     padding: 1rem;
 }
 
-@media (max-width: 960px) {
+@media (max-width: 1024px) {
     .pom-cards {
         grid-template-columns: 1fr;
     }
@@ -339,18 +342,21 @@ details[open] .chev {
 
 /* reuse your existing .chev, but smaller inside solvers */
 .chev-mini {
-    width: 7px;
-    height: 7px;
-    border-right: 2px solid #777;
-    border-bottom: 2px solid #777;
-    transform: rotate(-45deg);
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    font-size: 10px;
+    color: #777;
     transition: transform .18s ease;
     margin-left: 6px;
 }
 
+.chev-mini::before {
+    content: "\f054";
+}
+
 /* open state: rotate mini chevron too */
 .solvers-details[open] .chev-mini {
-    transform: rotate(45deg);
+    transform: rotate(90deg);
 }
 
 /* --- Solver list: columns + name/aff split --- */
@@ -366,7 +372,7 @@ details[open] .chev {
     column-gap: 26px;
 }
 
-@media (max-width: 960px) {
+@media (max-width: 1024px) {
     .solver-grid {
         column-count: 1;
     }
@@ -398,4 +404,66 @@ details[open] .chev {
     font-size: 0.7em;
     color: rgba(17, 17, 17, .62);
     text-align: right;
+}
+
+@media (max-width: 640px) {
+    .pom-card {
+        padding: 14px;
+        border-radius: 14px;
+    }
+
+    .pom-card h2 {
+        font-size: 1.25rem;
+    }
+
+    .pom-month-card {
+        padding: 14px;
+    }
+
+    .pom-actions {
+        gap: 8px;
+    }
+
+    .chip {
+        padding: 8px 10px;
+        font-size: 12px;
+    }
+
+    .badge {
+        font-size: 11px;
+        padding: 5px 8px;
+    }
+
+    .archive-accordion-summary {
+        padding: 12px;
+    }
+
+    .year-title {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .pom-card {
+        padding: 12px;
+    }
+
+    .pom-monthline {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 4px;
+    }
+
+    .pom-links {
+        gap: 6px;
+    }
+
+    .solvers-summary {
+        padding: 10px;
+    }
+
+    .solver-item {
+        padding: 6px 8px;
+        gap: 8px;
+    }
 }

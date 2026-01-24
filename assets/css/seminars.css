@@ -115,13 +115,126 @@
 }
 
 /* Responsive */
-@media (max-width: 960px) {
-
+@media (max-width: 1024px) {
     .table-card {
         display: none;
     }
 
     .cards {
         display: grid;
+    }
+}
+
+@media (max-width: 768px) {
+    .cards {
+        gap: 12px;
+    }
+
+    .seminar-card {
+        padding: 14px;
+    }
+}
+
+@media (max-width: 640px) {
+    .cards {
+        gap: 10px;
+        margin-top: 12px;
+    }
+
+    .seminar-card {
+        padding: 12px;
+        border-radius: 14px;
+    }
+
+    .sc-top {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .sc-date {
+        text-align: left;
+        min-width: auto;
+        display: flex;
+        gap: 8px;
+        align-items: center;
+        font-size: 0.88rem;
+    }
+
+    .sc-date .m {
+        display: inline;
+    }
+
+    .sc-date .t {
+        display: inline;
+        margin-top: 0;
+    }
+
+    .sc-date .t::before {
+        content: "•";
+        margin-right: 8px;
+    }
+
+    .sc-title a {
+        font-size: 0.95rem;
+    }
+
+    .sc-speaker {
+        font-size: 0.82rem;
+        margin-top: 4px;
+    }
+
+    .sc-meta {
+        margin-top: 8px;
+    }
+}
+
+@media (max-width: 480px) {
+    .cards {
+        gap: 8px;
+        margin-top: 10px;
+    }
+
+    .seminar-card {
+        padding: 10px;
+        border-radius: 12px;
+    }
+
+    .sc-top {
+        gap: 6px;
+    }
+
+    .sc-title a {
+        font-size: 0.9rem;
+    }
+
+    .sc-speaker {
+        font-size: 0.78rem;
+    }
+
+    .sc-date {
+        font-size: 0.82rem;
+        gap: 6px;
+    }
+
+    .sc-meta {
+        font-size: 0.82rem;
+    }
+}
+
+@media (max-width: 360px) {
+    .seminar-card {
+        padding: 8px 10px;
+    }
+
+    .sc-title a {
+        font-size: 0.85rem;
+    }
+
+    .sc-speaker {
+        font-size: 0.75rem;
+    }
+
+    .sc-date {
+        font-size: 0.78rem;
     }
 }

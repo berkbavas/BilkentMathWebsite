@@ -2,7 +2,7 @@
    Graduate Program + Graduate Supervisors (Redesign)
    ========================================================= */
 
-@media (max-width: 720px) {
+@media (max-width: 768px) {
     .grad-hero h1 {
         font-size: 1.75rem;
     }
@@ -19,7 +19,7 @@
     gap: 16px;
 }
 
-@media (max-width: 720px) {
+@media (max-width: 768px) {
     .grad-facts-grid {
         grid-template-columns: 1fr;
     }
@@ -73,7 +73,7 @@
     margin-top: 14px;
 }
 
-@media (max-width: 720px) {
+@media (max-width: 768px) {
     .grad-inline-actions {
         flex-direction: column;
     }
@@ -108,7 +108,7 @@
     margin-top: 14px;
 }
 
-@media (max-width: 720px) {
+@media (max-width: 768px) {
     .grad-stipend {
         grid-template-columns: 1fr;
     }
@@ -142,7 +142,7 @@
     margin: 16px 0 10px;
 }
 
-@media (max-width: 960px) {
+@media (max-width: 1024px) {
     .grad-timeline {
         grid-template-columns: 1fr;
     }
@@ -199,7 +199,7 @@
     gap: 16px;
 }
 
-@media (max-width: 720px) {
+@media (max-width: 768px) {
     .gsup-grid {
         grid-template-columns: 1fr;
     }
@@ -212,7 +212,7 @@
     margin: 18px 0 18px;
 }
 
-@media (max-width: 720px) {
+@media (max-width: 768px) {
     .gsup-controls {
         grid-template-columns: 1fr;
     }
@@ -396,8 +396,284 @@
     font-size: .8rem;
 }
 
-@media (max-width: 720px) {
+@media (max-width: 768px) {
     .gsup-footer {
         grid-template-columns: 1fr;
+    }
+
+    .grad-section {
+        margin: 1rem 0;
+    }
+
+    .grad-facts {
+        margin: 1rem 0 1.8rem;
+    }
+
+    .grad-ready-actions {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .grad-cta-row {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+@media (max-width: 640px) {
+    .grad-fact {
+        gap: 10px;
+    }
+
+    .grad-fact-icon {
+        width: 40px;
+        height: 40px;
+        border-radius: 12px;
+    }
+
+    .grad-fact-body h3 {
+        font-size: 0.95rem;
+    }
+
+    .grad-fact-body p {
+        font-size: 0.88rem;
+        margin-top: 4px;
+    }
+
+    .grad-section-head {
+        gap: 10px;
+        margin-bottom: 8px;
+    }
+
+    .grad-section-icon {
+        width: 44px;
+        height: 44px;
+        border-radius: 14px;
+    }
+
+    .grad-section h2 {
+        font-size: 1.15rem;
+    }
+
+    .grad-section p {
+        font-size: 0.9rem;
+    }
+
+    .grad-timeline-card {
+        padding: 12px 14px;
+        border-radius: 14px;
+    }
+
+    .grad-timeline-title {
+        font-size: 0.9rem;
+    }
+
+    .grad-timeline-value {
+        font-size: 0.95rem;
+    }
+
+    .grad-stipend-item {
+        padding: 12px 14px;
+        border-radius: 14px;
+    }
+
+    .grad-stipend-kicker {
+        font-size: 0.85rem;
+    }
+
+    .grad-stipend-value {
+        font-size: 1rem;
+    }
+
+    .sup-card {
+        padding: 14px;
+        border-radius: 16px;
+    }
+
+    .sup-top {
+        grid-template-columns: 48px 1fr;
+        gap: 10px;
+    }
+
+    .sup-avatar {
+        width: 48px;
+        height: 48px;
+        border-radius: 14px;
+    }
+
+    .sup-name {
+        font-size: 1rem;
+    }
+
+    .sup-rank {
+        font-size: 0.82rem;
+    }
+
+    .sup-details {
+        padding-top: 8px;
+    }
+
+    .sup-details p {
+        font-size: 0.88rem;
+    }
+
+    .gsup-footer-card {
+        padding: 14px;
+        border-radius: 16px;
+    }
+
+    .gsup-footer-title {
+        font-size: 0.95rem;
+    }
+
+    .gsup-controls {
+        margin: 14px 0;
+    }
+
+    .gsup-search {
+        height: 42px;
+    }
+}
+
+@media (max-width: 480px) {
+    .grad-fact-icon {
+        width: 36px;
+        height: 36px;
+        border-radius: 10px;
+    }
+
+    .grad-fact-body h3 {
+        font-size: 0.9rem;
+    }
+
+    .grad-fact-body p {
+        font-size: 0.82rem;
+    }
+
+    .grad-section-icon {
+        width: 38px;
+        height: 38px;
+        border-radius: 12px;
+    }
+
+    .grad-section h2 {
+        font-size: 1.05rem;
+    }
+
+    .grad-section p {
+        font-size: 0.85rem;
+    }
+
+    .grad-timeline-card {
+        padding: 10px 12px;
+    }
+
+    .grad-timeline-title {
+        font-size: 0.85rem;
+    }
+
+    .grad-timeline-value {
+        font-size: 0.88rem;
+    }
+
+    .grad-stipend-item {
+        padding: 10px 12px;
+    }
+
+    .grad-stipend-kicker {
+        font-size: 0.8rem;
+    }
+
+    .grad-stipend-value {
+        font-size: 0.95rem;
+    }
+
+    .sup-card {
+        padding: 12px;
+    }
+
+    .sup-top {
+        grid-template-columns: 42px 1fr;
+        gap: 8px;
+    }
+
+    .sup-avatar {
+        width: 42px;
+        height: 42px;
+        border-radius: 12px;
+    }
+
+    .sup-name {
+        font-size: 0.95rem;
+    }
+
+    .sup-rank {
+        font-size: 0.78rem;
+    }
+
+    .sup-chip {
+        font-size: 11px;
+        padding: 4px 7px;
+    }
+
+    .sup-areas {
+        gap: 6px;
+    }
+
+    .gsup-footer-card {
+        padding: 12px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+
+    .gsup-footer-title {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 360px) {
+    .grad-fact {
+        gap: 8px;
+    }
+
+    .grad-fact-icon {
+        width: 32px;
+        height: 32px;
+    }
+
+    .grad-fact-body h3 {
+        font-size: 0.85rem;
+    }
+
+    .grad-fact-body p {
+        font-size: 0.78rem;
+    }
+
+    .grad-section h2 {
+        font-size: 1rem;
+    }
+
+    .grad-section p {
+        font-size: 0.8rem;
+    }
+
+    .sup-top {
+        grid-template-columns: 38px 1fr;
+    }
+
+    .sup-avatar {
+        width: 38px;
+        height: 38px;
+    }
+
+    .sup-name {
+        font-size: 0.9rem;
+    }
+
+    .sup-chip {
+        font-size: 10px;
+        padding: 3px 6px;
     }
 }

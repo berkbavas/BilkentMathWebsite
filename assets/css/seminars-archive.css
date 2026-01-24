@@ -6,17 +6,20 @@
 }
 
 .chev {
-    width: 10px;
-    height: 10px;
-    border-right: 2px solid #777;
-    border-bottom: 2px solid #777;
-    transform: rotate(-45deg);
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    font-size: 12px;
+    color: #777;
     transition: transform .18s ease;
     margin-left: 6px;
 }
 
+.chev::before {
+    content: "\f054";
+}
+
 details[open] .chev {
-    transform: rotate(45deg);
+    transform: rotate(90deg);
 }
 
 .year-body {
@@ -204,7 +207,7 @@ details[open] .chev {
 }
 
 /* Responsive */
-@media (max-width: 960px) {
+@media (max-width: 1024px) {
     .page-search-actions {
         grid-template-columns: 1fr;
     }
@@ -215,5 +218,194 @@ details[open] .chev {
 
     .cards {
         display: grid;
+    }
+}
+
+@media (max-width: 768px) {
+    .page-search-actions {
+        gap: 8px;
+        margin-bottom: 1.5rem;
+    }
+
+    .archive-accordion details {
+        margin: 10px 0;
+        border-radius: 14px;
+    }
+
+    .archive-accordion summary {
+        padding: 12px;
+    }
+
+    .year-title {
+        font-size: 16px;
+    }
+
+    .year-count {
+        font-size: 12px;
+    }
+
+    .year-right {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 640px) {
+    .page-search-actions {
+        margin-bottom: 1.25rem;
+    }
+
+    .archive-accordion details {
+        margin: 8px 0;
+        border-radius: 12px;
+    }
+
+    .archive-accordion summary {
+        padding: 10px 12px;
+        gap: 10px;
+    }
+
+    .year-title {
+        font-size: 15px;
+    }
+
+    .year-summary {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 6px;
+    }
+
+    .year-right {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .cards {
+        padding: 12px;
+        gap: 10px;
+    }
+
+    .seminar-card {
+        padding: 12px;
+        border-radius: 14px;
+    }
+
+    .sc-top {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .sc-date {
+        text-align: left;
+        min-width: auto;
+        display: flex;
+        gap: 8px;
+        align-items: center;
+        font-size: 0.88rem;
+    }
+
+    .sc-date .m {
+        display: inline;
+    }
+
+    .sc-date .t {
+        display: inline;
+        margin-top: 0;
+    }
+
+    .sc-date .t::before {
+        content: "•";
+        margin-right: 8px;
+    }
+
+    .sc-title a {
+        font-size: 0.95rem;
+    }
+
+    .sc-speaker {
+        font-size: 0.82rem;
+        margin-top: 4px;
+    }
+
+    .sc-meta {
+        margin-top: 8px;
+    }
+}
+
+@media (max-width: 480px) {
+    .archive-accordion details {
+        margin: 6px 0;
+    }
+
+    .archive-accordion summary {
+        padding: 8px 10px;
+    }
+
+    .year-title {
+        font-size: 14px;
+    }
+
+    .year-count {
+        font-size: 11px;
+    }
+
+    .year-right {
+        font-size: 11px;
+    }
+
+    .cards {
+        padding: 10px;
+        gap: 8px;
+    }
+
+    .seminar-card {
+        padding: 10px;
+        border-radius: 12px;
+    }
+
+    .sc-top {
+        gap: 6px;
+    }
+
+    .sc-title a {
+        font-size: 0.9rem;
+    }
+
+    .sc-speaker {
+        font-size: 0.78rem;
+    }
+
+    .sc-date {
+        font-size: 0.82rem;
+        gap: 6px;
+    }
+
+    .sc-meta {
+        font-size: 0.82rem;
+    }
+}
+
+@media (max-width: 360px) {
+    .archive-accordion summary {
+        padding: 8px;
+    }
+
+    .year-title {
+        font-size: 13px;
+    }
+
+    .seminar-card {
+        padding: 8px 10px;
+    }
+
+    .sc-title a {
+        font-size: 0.85rem;
+    }
+
+    .sc-speaker {
+        font-size: 0.75rem;
+    }
+
+    .sc-date {
+        font-size: 0.78rem;
     }
 }

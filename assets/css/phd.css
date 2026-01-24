@@ -146,9 +146,7 @@
     .phd-sticky {
         position: static;
     }
-}
 
-@media (max-width: 960px) {
     .phd-facts {
         grid-template-columns: 1fr;
     }
@@ -158,9 +156,47 @@
     }
 }
 
-@media (max-width: 720px) {
+@media (max-width: 768px) {
     .phd-cta-row {
         flex-direction: column;
         align-items: stretch;
+    }
+
+    .phd-hero h1 {
+        font-size: 1.75rem;
+    }
+}
+
+@media (max-width: 640px) {
+    .phd-fact {
+        padding: 1rem;
+    }
+
+    .phd-fact-icon {
+        width: 40px;
+        height: 40px;
+        border-radius: 12px;
+    }
+
+    .phd-fact h3 {
+        font-size: 0.95rem;
+    }
+
+    .phd-checklist li {
+        font-size: 0.9rem;
+    }
+
+    .phd-sticky {
+        padding: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .phd-hero h1 {
+        font-size: 1.5rem;
+    }
+
+    .phd-hero-kicker {
+        gap: 8px;
     }
 }
