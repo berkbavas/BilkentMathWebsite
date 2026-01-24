@@ -260,14 +260,116 @@ h2 {
 
 @media (max-width: 576px) {
     .header {
-        padding: 3rem 1.2rem;
+        padding: 2rem 1rem;
+        margin-top: 1rem;
+        margin-bottom: 2rem;
+        border-radius: 16px;
     }
 
     .header-wrap {
-        padding: 2rem 1.6rem;
+        padding: 1.5rem 1.2rem;
+        border-radius: 12px;
     }
 
     .header h1 {
-        font-size: 2rem;
+        font-size: 1.5rem;
+        margin-bottom: 0.6rem;
+    }
+
+    .header p {
+        font-size: 0.9rem;
+        line-height: 1.55;
+    }
+
+    .header a {
+        font-size: 0.9rem;
+    }
+
+    .home-kpis {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        margin: 1.5rem 0;
+    }
+
+    .kpi-card {
+        padding: 1.2rem;
+        border-radius: 12px;
+    }
+
+    .kpi-big {
+        font-size: 1.8rem;
+    }
+
+    .kpi-mid {
+        font-size: 1.25rem;
+    }
+
+    .home-seminars {
+        gap: 1.5rem;
+        margin-top: 2rem;
+    }
+
+    .seminar-card {
+        padding: 1rem;
+        border-radius: 12px;
+    }
+
+    .seminar-card strong {
+        font-size: 0.95rem;
+    }
+
+    .home-highlights {
+        gap: 1.5rem;
+        margin-top: 2rem;
+    }
+
+    .hl-card {
+        padding: 1.2rem;
+        border-radius: 12px;
+    }
+
+    .hl-card h2 {
+        font-size: 1.15rem;
+    }
+
+    .hl-text {
+        font-size: 0.9rem;
+    }
+
+    h2 {
+        font-size: 1.2rem;
+    }
+
+    .container {
+        padding-bottom: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .header {
+        padding: 2.5rem 1.5rem;
+        margin-bottom: 2rem;
+    }
+
+    .header-wrap {
+        padding: 1.8rem;
+    }
+
+    .header h1 {
+        font-size: 1.75rem;
+    }
+
+    .home-kpis {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .home-seminars {
+        grid-template-columns: 1fr;
+    }
+
+    .home-highlights {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
     }
 }
