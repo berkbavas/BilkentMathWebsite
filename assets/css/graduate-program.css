@@ -2,7 +2,7 @@
    Graduate Program + Graduate Supervisors (Redesign)
    ========================================================= */
 
-@media (max-width: 720px) {
+@media (max-width: 768px) {
     .grad-hero h1 {
         font-size: 1.75rem;
     }
@@ -19,7 +19,7 @@
     gap: 16px;
 }
 
-@media (max-width: 720px) {
+@media (max-width: 768px) {
     .grad-facts-grid {
         grid-template-columns: 1fr;
     }
@@ -73,7 +73,7 @@
     margin-top: 14px;
 }
 
-@media (max-width: 720px) {
+@media (max-width: 768px) {
     .grad-inline-actions {
         flex-direction: column;
     }
@@ -108,7 +108,7 @@
     margin-top: 14px;
 }
 
-@media (max-width: 720px) {
+@media (max-width: 768px) {
     .grad-stipend {
         grid-template-columns: 1fr;
     }
@@ -142,7 +142,7 @@
     margin: 16px 0 10px;
 }
 
-@media (max-width: 960px) {
+@media (max-width: 992px) {
     .grad-timeline {
         grid-template-columns: 1fr;
     }
@@ -199,7 +199,7 @@
     gap: 16px;
 }
 
-@media (max-width: 720px) {
+@media (max-width: 768px) {
     .gsup-grid {
         grid-template-columns: 1fr;
     }
@@ -212,7 +212,7 @@
     margin: 18px 0 18px;
 }
 
-@media (max-width: 720px) {
+@media (max-width: 768px) {
     .gsup-controls {
         grid-template-columns: 1fr;
     }
@@ -396,7 +396,7 @@
     font-size: .8rem;
 }
 
-@media (max-width: 720px) {
+@media (max-width: 768px) {
     .gsup-footer {
         grid-template-columns: 1fr;
     }

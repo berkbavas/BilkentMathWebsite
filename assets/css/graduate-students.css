@@ -185,7 +185,7 @@
     }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 576px) {
     .students-grid {
         grid-template-columns: 1fr;
     }

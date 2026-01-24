@@ -126,7 +126,7 @@
 }
 
 /* Mobile */
-@media (max-width: 720px) {
+@media (max-width: 768px) {
     .news-timeline {
         max-width: 720px;
         padding-left: 0;

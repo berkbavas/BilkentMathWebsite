@@ -191,7 +191,7 @@ h2 {
     margin-bottom: .25rem;
 }
 
-@media (max-width:960px) {
+@media (max-width: 992px) {
     .home-highlights {
         grid-template-columns: 1fr;
     }
@@ -252,13 +252,13 @@ h2 {
     margin-right: .6rem;
 }
 
-@media (max-width: 960px) {
+@media (max-width: 992px) {
     .home-seminars {
         grid-template-columns: 1fr;
     }
 }
 
-@media (max-width: 640px) {
+@media (max-width: 576px) {
     .header {
         padding: 3rem 1.2rem;
     }

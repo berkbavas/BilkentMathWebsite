@@ -233,7 +233,7 @@ ul li:last-child {
     margin-bottom: 2rem;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 576px) {
     .page-search-actions {
         grid-template-columns: 1fr;
     }
@@ -399,7 +399,7 @@ ul li:last-child {
     align-items: start;
 }
 
-@media (max-width: 720px) {
+@media (max-width: 768px) {
     .hbox-grid-layout {
         grid-template-columns: 1fr;
     }
@@ -575,7 +575,7 @@ ul li:last-child {
     display: none !important;
 }
 
-@media (max-width: 720px) {
+@media (max-width: 768px) {
     .page-hero h1 {
         font-size: 1.85rem;
     }

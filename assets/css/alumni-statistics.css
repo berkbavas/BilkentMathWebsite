@@ -63,10 +63,10 @@
   height: 360px;
 }
 
-@media (max-width: 1080px) {
+@media (max-width: 1200px) {
   .chart-card { grid-column: span 12; }
 }
 
-@media (max-width: 520px) {
+@media (max-width: 576px) {
   .chart-canvas { height: 320px; }
 }

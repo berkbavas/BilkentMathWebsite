@@ -1,7 +1,7 @@
 import { SEMINARS } from "../data/seminars.js";
 import { CURRENT_FACULTY } from "../data/faculty.js";
 import { GRADUATE_STUDENTS } from "../data/graduate-students.js";
-import { PROBLEM_OF_MONTH } from "../data/problem-of-month.js"
+import { PROBLEM_OF_MONTH } from "../data/problem-of-the-month.js"
 import { MONTHS_EN_TO_TR } from "../data/translations.js";
 import { NEWS } from "../data/news.js";
 

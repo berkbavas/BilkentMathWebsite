@@ -63,11 +63,11 @@ bilkent-math/
 │   │   ├── research.js          # Research areas and descriptions
 │   │   ├── seminars.js          # Current seminar listings
 │   │   ├── translations.js      # UI text translations
-│   │   ├── problem-of-month/    # Historical problem data
-│   │   │   ├── problem-of-month-2006.js
-│   │   │   ├── problem-of-month-2007.js
+│   │   ├── problem-of-the-month/    # Historical problem data
+│   │   │   ├── problem-of-the-month-2006.js
+│   │   │   ├── problem-of-the-month-2007.js
 │   │   │   ├── ...
-│   │   │   └── problem-of-month-2025.js
+│   │   │   └── problem-of-the-month-2025.js
 │   │   └── seminars/            # Historical seminar data
 │   │       ├── seminars-2013-2014.js
 │   │       ├── seminars-2014-2015.js
@@ -110,7 +110,7 @@ bilkent-math/
 ├── navigation.html              # Navigation component
 ├── news.html                    # News and announcements
 ├── phd.html                     # PhD program page
-├── problem-of-month.html        # Problem of the month page
+├── problem-of-the-month.html        # Problem of the month page
 ├── project-courses.html         # Project courses page
 ├── research.html                # Research areas page
 ├── seminars-archive.html        # Seminar archive page
@@ -176,8 +176,8 @@ Each data file exports structured objects that are consumed by the corresponding
 | `research.js` | Research areas and descriptions | `RESEARCH_DATA` array with bilingual descriptions |
 | `project-courses.js` | Project course information | Bilingual course descriptions and requirements |
 | `history.js` | Department history timeline | Historical events and milestones |
-| `problem-of-month.js` | Current problem of the month | Current problem and solution data |
-| `problem-of-month/*.js` | Historical problems by year | Year-based problem archives |
+| `problem-of-the-month.js` | Current problem of the month | Current problem and solution data |
+| `problem-of-the-month/*.js` | Historical problems by year | Year-based problem archives |
 | `alisbah-awards.js` | Alisbah award recipients | Award recipients by year with photos |
 | `translations.js` | UI text translations | `TRANSLATIONS` object with Turkish/English pairs |
 

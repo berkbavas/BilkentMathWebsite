@@ -204,7 +204,7 @@ details[open] .chev {
 }
 
 /* Responsive */
-@media (max-width: 960px) {
+@media (max-width: 992px) {
     .page-search-actions {
         grid-template-columns: 1fr;
     }

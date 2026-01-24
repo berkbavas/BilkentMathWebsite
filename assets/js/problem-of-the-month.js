@@ -1,24 +1,24 @@
-import { PROBLEM_OF_MONTH_2025 } from "../data/problem-of-month/problem-of-month-2025.js";
-import { PROBLEM_OF_MONTH_2024 } from "../data/problem-of-month/problem-of-month-2024.js";
-import { PROBLEM_OF_MONTH_2023 } from "../data/problem-of-month/problem-of-month-2023.js";
-import { PROBLEM_OF_MONTH_2022 } from "../data/problem-of-month/problem-of-month-2022.js";
-import { PROBLEM_OF_MONTH_2021 } from "../data/problem-of-month/problem-of-month-2021.js";
-import { PROBLEM_OF_MONTH_2020 } from "../data/problem-of-month/problem-of-month-2020.js";
-import { PROBLEM_OF_MONTH_2019 } from "../data/problem-of-month/problem-of-month-2019.js";
-import { PROBLEM_OF_MONTH_2018 } from "../data/problem-of-month/problem-of-month-2018.js";
-import { PROBLEM_OF_MONTH_2017 } from "../data/problem-of-month/problem-of-month-2017.js";
-import { PROBLEM_OF_MONTH_2016 } from "../data/problem-of-month/problem-of-month-2016.js";
-import { PROBLEM_OF_MONTH_2015 } from "../data/problem-of-month/problem-of-month-2015.js";
-import { PROBLEM_OF_MONTH_2014 } from "../data/problem-of-month/problem-of-month-2014.js";
-import { PROBLEM_OF_MONTH_2013 } from "../data/problem-of-month/problem-of-month-2013.js";
-import { PROBLEM_OF_MONTH_2012 } from "../data/problem-of-month/problem-of-month-2012.js";
-import { PROBLEM_OF_MONTH_2011 } from "../data/problem-of-month/problem-of-month-2011.js";
-import { PROBLEM_OF_MONTH_2010 } from "../data/problem-of-month/problem-of-month-2010.js";
-import { PROBLEM_OF_MONTH_2009 } from "../data/problem-of-month/problem-of-month-2009.js";
-import { PROBLEM_OF_MONTH_2008 } from "../data/problem-of-month/problem-of-month-2008.js";
-import { PROBLEM_OF_MONTH_2007 } from "../data/problem-of-month/problem-of-month-2007.js";
-import { PROBLEM_OF_MONTH_2006 } from "../data/problem-of-month/problem-of-month-2006.js";
-import { PROBLEM_OF_MONTH } from "../data/problem-of-month.js"
+import { PROBLEM_OF_MONTH_2025 } from "../data/problem-of-the-month/problem-of-the-month-2025.js";
+import { PROBLEM_OF_MONTH_2024 } from "../data/problem-of-the-month/problem-of-the-month-2024.js";
+import { PROBLEM_OF_MONTH_2023 } from "../data/problem-of-the-month/problem-of-the-month-2023.js";
+import { PROBLEM_OF_MONTH_2022 } from "../data/problem-of-the-month/problem-of-the-month-2022.js";
+import { PROBLEM_OF_MONTH_2021 } from "../data/problem-of-the-month/problem-of-the-month-2021.js";
+import { PROBLEM_OF_MONTH_2020 } from "../data/problem-of-the-month/problem-of-the-month-2020.js";
+import { PROBLEM_OF_MONTH_2019 } from "../data/problem-of-the-month/problem-of-the-month-2019.js";
+import { PROBLEM_OF_MONTH_2018 } from "../data/problem-of-the-month/problem-of-the-month-2018.js";
+import { PROBLEM_OF_MONTH_2017 } from "../data/problem-of-the-month/problem-of-the-month-2017.js";
+import { PROBLEM_OF_MONTH_2016 } from "../data/problem-of-the-month/problem-of-the-month-2016.js";
+import { PROBLEM_OF_MONTH_2015 } from "../data/problem-of-the-month/problem-of-the-month-2015.js";
+import { PROBLEM_OF_MONTH_2014 } from "../data/problem-of-the-month/problem-of-the-month-2014.js";
+import { PROBLEM_OF_MONTH_2013 } from "../data/problem-of-the-month/problem-of-the-month-2013.js";
+import { PROBLEM_OF_MONTH_2012 } from "../data/problem-of-the-month/problem-of-the-month-2012.js";
+import { PROBLEM_OF_MONTH_2011 } from "../data/problem-of-the-month/problem-of-the-month-2011.js";
+import { PROBLEM_OF_MONTH_2010 } from "../data/problem-of-the-month/problem-of-the-month-2010.js";
+import { PROBLEM_OF_MONTH_2009 } from "../data/problem-of-the-month/problem-of-the-month-2009.js";
+import { PROBLEM_OF_MONTH_2008 } from "../data/problem-of-the-month/problem-of-the-month-2008.js";
+import { PROBLEM_OF_MONTH_2007 } from "../data/problem-of-the-month/problem-of-the-month-2007.js";
+import { PROBLEM_OF_MONTH_2006 } from "../data/problem-of-the-month/problem-of-the-month-2006.js";
+import { PROBLEM_OF_MONTH } from "../data/problem-of-the-month.js"
 import { escapeHtml, safeUrl } from "./helpers.js";
 
 import { TRANSLATIONS, MONTHS_EN_TO_TR } from "../data/translations.js";

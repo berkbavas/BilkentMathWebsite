@@ -239,7 +239,7 @@
 }
 
 /* Responsive */
-@media (max-width: 960px) {
+@media (max-width: 992px) {
 	.history-layout {
 		grid-template-columns: 1fr;
 	}
@@ -253,7 +253,7 @@
 	}
 }
 
-@media (max-width: 720px) {
+@media (max-width: 768px) {
 	.chair-card {
 		grid-template-columns: 1fr;
 		text-align: center;
