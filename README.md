@@ -43,7 +43,7 @@ bilkent-math/
 │   │   ├── master.css           # Master's program styles
 │   │   ├── news.css             # News page styles
 │   │   ├── phd.css              # PhD program styles
-│   │   ├── problem-of-month.css # Problem of month styles
+│   │   ├── problem-of-the-month.css # Problem of the month styles
 │   │   ├── project-courses.css  # Project courses styles
 │   │   ├── research.css         # Research page styles
 │   │   ├── seminars-archive.css # Seminar archive styles
@@ -58,7 +58,7 @@ bilkent-math/
 │   │   ├── graduate-students.js # Graduate student data
 │   │   ├── history.js           # Department history timeline
 │   │   ├── news.js              # News and announcements
-│   │   ├── problem-of-month.js  # Current problem of month
+│   │   ├── problem-of-the-month.js  # Current problem of the month
 │   │   ├── project-courses.js   # Project course information
 │   │   ├── research.js          # Research areas and descriptions
 │   │   ├── seminars.js          # Current seminar listings
@@ -86,7 +86,7 @@ bilkent-math/
 │       ├── history.js           # History timeline functionality
 │       ├── index.js             # Homepage interactions
 │       ├── news.js              # News page functionality
-│       ├── problem-of-month.js  # Problem of month logic
+│       ├── problem-of-the-month.js  # Problem of the month logic
 │       ├── project-courses.js   # Project courses functionality
 │       ├── research.js          # Research page interactions
 │       ├── seminars-archive.js  # Seminar archive functionality

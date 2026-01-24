@@ -98,7 +98,7 @@ function render() {
 	const lang = localStorage.getItem("lang") || "en";
 	const lastElement = PROBLEM_OF_MONTH[PROBLEM_OF_MONTH.length - 1];
 	let month = lang === "tr" ? MONTHS_EN_TO_TR[lastElement.month] || lastElement.month : lastElement.month;
-	document.getElementById("problemOfMonthTitle").textContent = `${month} ${lastElement.year}`;
+	document.getElementById("problemOfTheMonthTitle").textContent = `${month} ${lastElement.year}`;
 
 	renderHomeNews();
 }

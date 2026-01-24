@@ -164,8 +164,8 @@ export const TRANSLATIONS = {
         en: "Alisbah Awards",
         tr: "Alisbah Ödülleri"
     },
-    navMoreProblemOfMonth: {
-        en: "Problem of Month",
+    navMoreProblemOfTheMonth: {
+        en: "Problem of the Month",
         tr: "Ayın Sorusu"
     },
     navMoreNewsFromDepartment: {
