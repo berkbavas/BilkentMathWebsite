@@ -6,7 +6,8 @@
 
 :root {
     --topbar-height: 42px;
-    --navigation-height: 128px; /* topbar + navbar */
+    --navigation-height: 128px;
+    /* topbar + navbar */
     --navigation-max-width: 1320px;
     --container-max-width: 1260px;
     --card-max-width: 770px;
@@ -102,13 +103,15 @@ body {
     color: #000000;
     line-height: 1.55;
     background: var(--background-color);
-    padding-top: 144px; /* Navbar + topbar yüksekliği */
+    padding-top: 144px;
+    /* Navbar + topbar yüksekliği */
 }
 
 /* Mobilde topbar gizlendiği için boşluğu azalt */
 @media (max-width: 1024px) {
     body {
-        padding-top: 96px; /* Navbar + topbar yüksekliği */
+        padding-top: 96px;
+        /* Navbar + topbar yüksekliği */
     }
 }
 
@@ -528,13 +531,26 @@ ul li:last-child {
 
 .footer-grid {
     display: grid;
-    grid-template-columns: 1.2fr 1fr 1fr;
-    gap: 1.4rem;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 5rem;
+}
+
+.footer-section {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
 }
 
 .footer h4 {
-    margin: 0 0 .6rem;
+    padding-bottom: 8px;
     font-size: 1rem;
+    border-bottom: 1px solid var(--border);
 }
 
 .footer p,
