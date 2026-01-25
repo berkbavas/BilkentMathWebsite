@@ -68,9 +68,14 @@ function setupCounterAnimations() {
 	});
 }
 
+function updateCounter(id, value) {
+	const el = document.getElementById(id);
+	if (el) {
+		el.textContent = value;
+	}
+}
+
 function render() {
-	// Setup animated counters instead of static values
-	setupCounterAnimations();
 
 	const now = new Date();
 
@@ -101,6 +106,9 @@ function render() {
 	document.getElementById("problemOfTheMonthTitle").textContent = `${month} ${lastElement.year}`;
 
 	renderHomeNews();
+
+	updateCounter("facultyCount", CURRENT_FACULTY.length);
+	updateCounter("gradCount", GRADUATE_STUDENTS.length);
 }
 
 function renderSeminars(containerId, list) {
