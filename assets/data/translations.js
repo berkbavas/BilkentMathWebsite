@@ -220,6 +220,10 @@ export const TRANSLATIONS = {
         en: "Contact",
         tr: "İletişim"
     },
+    footerShowOnMap: {
+        en: "Show on Map",
+        tr: "Haritada Göster"
+    },
     footerFollowUs: {
         en: "Follow Us",
         tr: "Bizi Takip Edin"
