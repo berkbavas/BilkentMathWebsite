@@ -627,7 +627,7 @@ ul li:last-child {
 @media (max-width: 768px) {
     .footer-grid {
         grid-template-columns: 1fr;
-        gap: 2.5rem;
+        gap: 3rem;
     }
     
     .footer-section {
@@ -783,8 +783,5 @@ ul li:last-child {
     .footer .small {
         font-size: 0.85rem;
     }
-    
-    .footer-grid {
-        gap: 2rem;
-    }
+
 }
