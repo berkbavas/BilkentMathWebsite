@@ -236,6 +236,18 @@ export const ALUMNI = [
         },
         lastUpdate: "24.05.2025"
     },
+
+        {
+        name: "Berk Bavaş",
+        year: 2015,
+        photo: "Berk_Bavas.jpg",
+        bullets: ["Software Developer"],
+        story: {
+            tr: "<p>Bilkent Üniversitesi Matematik Bölümü 2015 yılı mezunuyum. Şu anda yazılım geliştirici olarak çalışmaktayım. Matematik okuduğum yıllarda edindiğim analitik düşünme becerileri, problem çözme yeteneklerim ve disiplinli çalışma alışkanlıklarım, yazılım geliştirme alanında başarılı olmamda büyük rol oynadı.</p>",
+            en: "<p>I graduated from Bilkent University Mathematics Department in 2015. I am currently working as a software developer. The analytical thinking skills, problem-solving abilities, and disciplined work habits I developed during my mathematics studies have played a significant role in my success in software development.</p>"
+        },
+        lastUpdate: "27.01.2026"
+    },
     {
         name: "Gizem Akman",
         year: 2015,
