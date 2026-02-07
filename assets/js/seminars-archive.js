@@ -216,8 +216,8 @@ TRANSLATIONS.headerTitle = {
 };
 
 TRANSLATIONS.textDescription = {
-    en: "Department seminars held between 2009 and 2025 (by academic year).",
-    tr: "2009 ile 2025 yılları arasında düzenlenen bölüm seminerleri (akademik yıla göre)."
+    en: "Department seminars held between 2014 and 2025 (by academic year).",
+    tr: "2014 ile 2025 yılları arasında düzenlenen bölüm seminerleri (akademik yıla göre)."
 };
 
 TRANSLATIONS.textDescriptionFiles = {

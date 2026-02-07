@@ -1,3 +1,36 @@
+/* Archive info card */
+.archive-info-card {
+    padding: 1.25rem 1.5rem;
+}
+
+.archive-info-card-content {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.archive-info-card-icon {
+    font-size: 1.35rem;
+    color: var(--accent);
+    flex-shrink: 0;
+}
+
+.archive-info-card p {
+    margin: 0;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.archive-info-card a {
+    font-weight: 600;
+}
+
+.archive-info-card a i {
+    font-size: 0.7em;
+    margin-left: 3px;
+}
+
+
 .pom-card {
     background: #fff;
     border: 1px solid var(--border, rgba(17, 17, 17, .12));
@@ -22,8 +55,8 @@
 .pom-hero {
     display: grid;
     grid-template-columns: 1.15fr 0.85fr;
-    gap: var(--gap-5);
-    margin-bottom: var(--margin-5);
+    gap: var(--gap-2);
+    margin-bottom: var(--margin-2);
 }
 
 @media (max-width: 992px) {
@@ -42,7 +75,7 @@
     padding: 1.25rem 1.5rem;
     background: linear-gradient(135deg, #f8f9fa 0%, #f0f2f5 100%);
     border: 1px solid rgba(0, 0, 0, 0.08);
-    border-left: 4px solid var(--primary, #0066cc);
+    border-left: 4px solid var(--accent);
     border-radius: 8px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
 }

@@ -1,3 +1,35 @@
+/* Archive info card */
+.archive-info-card {
+    padding: 1.25rem 1.5rem;
+}
+
+.archive-info-card-content {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.archive-info-card-icon {
+    font-size: 1.35rem;
+    color: var(--accent);
+    flex-shrink: 0;
+}
+
+.archive-info-card p {
+    margin: 0;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.archive-info-card a {
+    font-weight: 600;
+}
+
+.archive-info-card a i {
+    font-size: 0.7em;
+    margin-left: 3px;
+}
+
 .page-search-actions {
     display: grid;
     grid-template-columns: 1fr auto auto auto;
