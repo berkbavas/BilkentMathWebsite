@@ -112,7 +112,7 @@ export const PROBLEM_OF_MONTH_2022 = [
         ]
     },
     {
-        month: "July-August",
+        month: "July - August",
         year: 2022,
         question: { en: "2206q.pdf", tr: "2206s.pdf" },
         solution: { en: "2207a.pdf", tr: "2207c.pdf" },

@@ -7,7 +7,6 @@
 :root {
     --topbar-height: 42px;
     --navigation-height: 128px;
-    /* topbar + navbar */
     --navigation-max-width: 1320px;
     --container-max-width: 1260px;
     --card-max-width: 770px;

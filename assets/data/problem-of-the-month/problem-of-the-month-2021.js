@@ -128,7 +128,7 @@ export const PROBLEM_OF_MONTH_2021 = [
     },
 
     {
-        month: "July-August",
+        month: "July - August",
         year: 2021,
         question: { en: "2106q.pdf", tr: "2106s.pdf" },
         solution: { en: "2108a.pdf", tr: "2108c.pdf" },

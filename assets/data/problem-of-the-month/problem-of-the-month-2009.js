@@ -121,7 +121,7 @@ export const PROBLEM_OF_MONTH_2009 = [
     },
 
     {
-        month: "July-August",
+        month: "July - August",
         year: 2009,
         question: { en: "0906q.pdf", tr: "0906s.pdf" },
         solution: { en: "0908a.pdf", tr: "0908c.pdf" },
