@@ -57,6 +57,19 @@ function apply() {
     const lang = localStorage.getItem("lang") || "en";
     const query = elementSearch.value.trim();
     const list = ALUMNI.filter(alumni => matches(alumni, query));
+
+    // Sort by year descending, then by surname ascending
+    list.sort((a, b) => {
+        const yearA = a.year || "";
+        const yearB = b.year || "";
+        if (yearA !== yearB) {
+            return yearA < yearB; // Descending by year
+        }
+        const surnameA = a.name.split(" ").slice(-1)[0].toLowerCase();
+        const surnameB = b.name.split(" ").slice(-1)[0].toLowerCase();
+        return surnameA.localeCompare(surnameB); // Ascending by surname    
+    });
+
     elementRoot.innerHTML = list.map(a => renderEntry(a, lang)).join("");
     elementSearch.placeholder = TRANSLATIONS.alumniSearchPlaceholder[lang];
     if (list.length === 0) {

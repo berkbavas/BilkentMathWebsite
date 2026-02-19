@@ -21,8 +21,6 @@ function cardTemplate(p) {
         ? `${URL}/${photo}`
         : `${URL}/placeholder.jpg`;
 
-
-
     const tags = (p.research || [])
         .map(area => `<span class="faculty-chip">${escapeHtml(area[currentLang] || area["en"])}</span>`)
         .join("");
@@ -68,7 +66,6 @@ function cardTemplate(p) {
 
     </article>`;
 }
-
 
 function render() {
     const gridCurrent = document.querySelector("#gridCurrent");

@@ -26,4 +26,4 @@ function render() {
 }
 
 document.render = render; // Expose render function for language toggle
-render();
+render(); // Initial render

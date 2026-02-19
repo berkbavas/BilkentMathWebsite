@@ -20,8 +20,8 @@ export const PROBLEM_OF_MONTH = [
   { name: "Hudaynazar Nuryyew", affiliation: { en: "Babadayhan, Turkmenistan", tr: "Babadayhan, Türkmenistan" } },
   { name: "Magnus Jakobsson", affiliation: { en: "Lund, Sweden", tr: "Lund, İsveç" } },
   { name: "Abdulkadir Tanrıverdi", affiliation: { en: "Eskişehir", tr: "Eskişehir" } },
-  { name: "Murat Apaydın", affiliation: "" },
-  { name: "Tamer Türkoğlu", affiliation: "" }
+  { name: "Murat Apaydın", affiliation: { en: "", tr: "" } },
+  { name: "Tamer Türkoğlu", affiliation: { en: "", tr: "" } }
     ]
   },
   {

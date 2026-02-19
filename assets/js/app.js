@@ -12,8 +12,8 @@ function init() {
         .then(html => { document.getElementById("footer").innerHTML = html; })
         .then(() => fetch("navigation.html"))
         .then(res => res.text())
-        .then(html => {
-            document.getElementById("navigation").innerHTML = html;
+        .then(html => { document.getElementById("navigation").innerHTML = html; })
+        .then(() => {
             setupNavigation();
             setupLanguageToggle();
         });
@@ -101,8 +101,6 @@ function setupNavigation() {
             btn.setAttribute("aria-expanded", "false")
         );
     }
-
-
 }
 
 function setupLanguageToggle() {
@@ -140,8 +138,10 @@ function setupLanguageToggle() {
             });
 
             applyTranslations(currentLang);
+
+            // If the current page has a render function (for dynamic content), call it to update translations
             if (document.render) {
-                document.render(); // For pages that implement a render function for dynamic content
+                document.render();
             }
         });
     });
@@ -166,4 +166,4 @@ function applyTranslations(lang) {
     });
 }
 
-init();
+init(); // Initialize the app by loading navigation and footer, and setting up event listeners

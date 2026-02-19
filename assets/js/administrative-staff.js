@@ -95,6 +95,5 @@ function render() {
     });
 }
 
-// Expose render function for language toggle
 document.render = render; // Expose render function for language toggle
 render(); // Initial render

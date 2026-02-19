@@ -13,7 +13,6 @@ function toDateKey(s, t) { // DD.MM.YYYY -> Date
 	return new Date(`${y}-${m}-${d}T${hh}:${mm}:00`);
 }
 
-
 function updateCounter(id, value) {
 	const el = document.getElementById(id);
 	if (el) {
@@ -82,7 +81,6 @@ function renderHomeNews() {
     </div>
   `).join("");
 }
-
 
 document.render = render; // Expose render function for language toggle
 render(); // Initial render

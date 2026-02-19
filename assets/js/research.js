@@ -2,6 +2,7 @@
 
 const { RESEARCH_DATA } = await import(`../data/research.js?v=${document.version}`);
 const { CURRENT_FACULTY } = await import(`../data/faculty.js?v=${document.version}`);
+const { TRANSLATIONS } = await import(`../data/translations.js?v=${document.version}`);
 const { escapeHtml, safeUrl } = await import(`./helpers.js?v=${document.version}`);
 
 function renderFacultyChips(faculty, accent, lang = "en") {
@@ -27,12 +28,11 @@ function renderFacultyChips(faculty, accent, lang = "en") {
     return `<div class="faculty-chips">${chips}</div>`;
 }
 
-
 function renderAccordionItem(area, lang) {
     const accent = area.accent;
     const description = area.description[lang] || area.description["en"];
     const title = area.title[lang] || area.title["en"];
-    const labelParticipatingFaculty = translations.participatingFaculty[lang] || translations.participatingFaculty["en"];
+    const labelParticipatingFaculty = TRANSLATIONS.researchParticipatingFaculty[lang] || TRANSLATIONS.researchParticipatingFaculty["en"];
 
     let faculty = CURRENT_FACULTY.filter(i => (i.researchGroups || []).includes(area.id));
 
@@ -62,20 +62,14 @@ function render() {
     const elMount = document.getElementById("mount");
     const elFacultyMemberCount = document.getElementById("facultyMemberCount");
     const facultyMemberCount = CURRENT_FACULTY.filter(item => (item.researchGroups || []).length > 0).length;
-    elFacultyMemberCount.textContent = `${facultyMemberCount} ${translations.faculty[lang]}`;
+    elFacultyMemberCount.textContent = `${facultyMemberCount} ${TRANSLATIONS.researchFacultyCount[lang]}`;
 
     const elResearchGroupCount = document.getElementById("researchGroupCount");
     const researchGroupCount = RESEARCH_DATA.length;
-    elResearchGroupCount.textContent = `${researchGroupCount} ${translations.researchGroup[lang]}`;
+    elResearchGroupCount.textContent = `${researchGroupCount} ${TRANSLATIONS.researchGroupCount[lang]}`;
 
     elMount.innerHTML = RESEARCH_DATA.map(item => renderAccordionItem(item, lang)).join("");
 }
 
-const translations = {
-    faculty: { en: "faculty member", tr: "öğretim üyesi" },
-    researchGroup: { en: "research group", tr: "araştırma grubu" },
-    participatingFaculty: { en: "Participating faculty:", tr: "Öğretim Üyeleri:" }
-};
-
 document.render = render; // Expose render function for language toggle
-render();
+render(); // Initial render

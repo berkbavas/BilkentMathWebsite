@@ -518,6 +518,20 @@ export const TRANSLATIONS = {
     seminarsArchiveViewLabel: {
         en: "View",
         tr: "Görüntüle"
+    },
+
+    /* ── Research ── */
+    researchFacultyCount: {
+        en: "faculty member",
+        tr: "öğretim üyesi"
+    },
+    researchGroupCount: {
+        en: "research group",
+        tr: "araştırma grubu"
+    },
+    researchParticipatingFaculty: {
+        en: "Participating faculty:",
+        tr: "Öğretim Üyeleri:"
     }
 };
 

@@ -1,6 +1,3 @@
-// Administrative Staff Data
-// Categories: secretary, assistant, technical
-
 export const ADMINISTRATIVE_STAFF = [
     // Department Secretary
     {

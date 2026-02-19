@@ -104,4 +104,4 @@ function init() {
 }
 
 document.render = render; // Expose render function for language toggle
-init();
+init(); // Initial setup and render

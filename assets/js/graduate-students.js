@@ -115,8 +115,12 @@ function render() {
     // Filter students
     const filteredStudents = filterStudents(searchTerm);
 
-    // Sort students alphabetically by name
-    filteredStudents.sort((a, b) => a.name.localeCompare(b.name));
+    // Sort students alphabetically by surname (assuming surname is the last word in the name)
+    filteredStudents.sort((a, b) => {
+        const surnameA = a.name.split(" ").slice(-1)[0].toLowerCase();
+        const surnameB = b.name.split(" ").slice(-1)[0].toLowerCase();
+        return surnameA.localeCompare(surnameB);
+    });
 
     // Update count
     const totalCount = GRADUATE_STUDENTS.length;
@@ -178,6 +182,10 @@ function setupEventListeners() {
     }
 }
 
+function init() {
+    setupEventListeners();
+    render();
+}
+
 document.render = render; // Expose render function for language toggle
-setupEventListeners(); // Setup event listeners for search and reset
-render(); // Initial render
+init(); // Initial setup and render

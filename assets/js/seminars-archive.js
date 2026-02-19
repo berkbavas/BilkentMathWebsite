@@ -212,4 +212,4 @@ btnExpandAll.addEventListener("click", expandAll);
 btnCollapseAll.addEventListener("click", collapseAll);
 
 document.render = render; // Expose render function for language toggle
-render();
+render(); // Initial render
