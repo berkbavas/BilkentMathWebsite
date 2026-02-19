@@ -1,15 +1,7 @@
- 
-const facultyModule =
-  await import(`../data/faculty.js?v=${document.VERSION}`);
-const emeritiModule =
-  await import(`../data/emeriti.js?v=${document.VERSION}`);
-const helpersModule =
-  await import(`./helpers.js?v=${document.VERSION}`);
-const CURRENT_FACULTY = facultyModule.CURRENT_FACULTY;
-const EMERITI = emeritiModule.EMERITI;
-const { escapeHtml } = helpersModule;
 
-
+const { CURRENT_FACULTY } = await import(`../data/faculty.js?v=${document.version}`);
+const { EMERITI } = await import(`../data/emeriti.js?v=${document.version}`);
+const { escapeHtml } = await import(`./helpers.js?v=${document.version}`);
 
 const URL = "https://math.bilkent.edu.tr/personnel_photos";
 
@@ -25,8 +17,8 @@ function cardTemplate(p) {
     const webpage = (p.webpage || "").trim();
     const photo = (p.photo || "").trim();
 
-    const photoSrc = photo 
-        ? `${URL}/${photo}` 
+    const photoSrc = photo
+        ? `${URL}/${photo}`
         : `${URL}/placeholder.jpg`;
 
 
@@ -79,27 +71,20 @@ function cardTemplate(p) {
 
 
 function render() {
-
     const gridCurrent = document.querySelector("#gridCurrent");
     const gridEmeriti = document.querySelector("#gridEmeriti");
     const facultyMemberCount = document.querySelector("#facultyMemberCount");
     const lang = localStorage.getItem("lang") || "en";
 
     if (lang === "en") {
-
         facultyMemberCount.textContent = `${CURRENT_FACULTY.length} Faculty Members`;
     } else {
         facultyMemberCount.textContent = `${CURRENT_FACULTY.length} Öğretim Üyesi`;
     }
-    
+
     gridCurrent.innerHTML = CURRENT_FACULTY.map(cardTemplate).join("");
     gridEmeriti.innerHTML = EMERITI.map(cardTemplate).join("");
 }
 
 document.render = render; // Expose render function for language toggle
-if (document.readyState === "loading") {
-  document.addEventListener("DOMContentLoaded", () => { render(); document.app_init();});
-} else {
-  render();
-  document.app_init();
-}
+render(); // Initial render

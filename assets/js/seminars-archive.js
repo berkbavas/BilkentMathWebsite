@@ -10,16 +10,9 @@ import { SEMINARS_2016_2017 } from "../data/seminars/seminars-2016-2017.js";
 import { SEMINARS_2015_2016 } from "../data/seminars/seminars-2015-2016.js";
 import { SEMINARS_2014_2015 } from "../data/seminars/seminars-2014-2015.js";
 import { SEMINARS_2013_2014 } from "../data/seminars/seminars-2013-2014.js";
- 
 
-import { TRANSLATIONS } from '../data/translations.js';
-const helpersModule =
-  await import(`./helpers.js?v=${document.VERSION}`);
-
- 
-const { escapeHtml, safeUrl } = helpersModule;
-
-
+const { TRANSLATIONS } = await import(`../data/translations.js?v=${document.version}`);
+const { escapeHtml, safeUrl } = await import(`./helpers.js?v=${document.version}`);
 
 const URL = "https://math.bilkent.edu.tr/";
 
@@ -150,10 +143,10 @@ function renderYearContent(seminars, lang) {
 
 function render() {
     let lang = localStorage.getItem("lang") || "en";
-    elSearch.placeholder = TRANSLATIONS.searchPlaceholder[lang] || "Search";
-    const labelSeminar = TRANSLATIONS.labelSeminar[lang] || "Seminar(s)";
-    const labelView = TRANSLATIONS.labelView[lang] || "View";
-    const labelNoResults = TRANSLATIONS.noResults[lang] || "No results found.";
+    elSearch.placeholder = TRANSLATIONS.commonSearchPlaceholder[lang] || "Search";
+    const labelSeminar = TRANSLATIONS.seminarsArchiveSeminarLabel[lang] || "Seminar(s)";
+    const labelView = TRANSLATIONS.seminarsArchiveViewLabel[lang] || "View";
+    const labelNoResults = TRANSLATIONS.commonNoResults[lang] || "No results found.";
     const search = norm(elSearch.value);
 
     elArchive.innerHTML = "";
@@ -195,7 +188,7 @@ function render() {
 
     // Update total seminar count badge
     const totalCount = Object.values(DATA).reduce((sum, arr) => { return sum + arr.length; }, 0);
-    elTotalSeminarCount.textContent = `${totalCount} ${TRANSLATIONS.labelSeminar[lang]}`;
+    elTotalSeminarCount.textContent = `${totalCount} ${TRANSLATIONS.seminarsArchiveSeminarLabel[lang]}`;
 
 }
 
@@ -218,64 +211,5 @@ elReset.addEventListener("click", resetFilters);
 btnExpandAll.addEventListener("click", expandAll);
 btnCollapseAll.addEventListener("click", collapseAll);
 
-TRANSLATIONS.headerTitle = {
-    en: "Seminars Archive",
-    tr: "Seminer Arşivi"
-};
-
-TRANSLATIONS.textDescription = {
-    en: "Department seminars held between 2009 and 2025 (by academic year).",
-    tr: "2009 ile 2025 yılları arasında düzenlenen bölüm seminerleri (akademik yıla göre)."
-};
-
-TRANSLATIONS.textDescriptionFiles = {
-    en: `Files from February 2009 through June 2012 are mainly "mht" files, which can best be opened using the following software:`,
-    tr: `Şubat 2009 ile Haziran 2012 arasındaki dosyalar çoğunlukla "mht" dosyalarıdır ve aşağıdaki yazılımlar kullanılarak açılabilir:`
-};
-
-TRANSLATIONS.buttonReset = {
-    en: "Reset",
-    tr: "Sıfırla"
-};
-
-TRANSLATIONS.buttonExpandAll = {
-    en: "Expand all",
-    tr: "Tümünü genişlet"
-};
-
-TRANSLATIONS.buttonCollapseAll = {
-    en: "Collapse all",
-    tr: "Tümünü daralt"
-};
-
-TRANSLATIONS.searchPlaceholder = {
-    en: "Search",
-    tr: "Ara"
-};
-
-TRANSLATIONS.labelSeminar = {
-    en: "Seminar(s)",
-    tr: "Seminer"
-};
-
-TRANSLATIONS.labelView = {
-    en: "View",
-    tr: "Görüntüle"
-};
-
-TRANSLATIONS.noResults = {
-    en: "No results found.",
-    tr: "Sonuç bulunamadı."
-};
-
-
 document.render = render; // Expose render function for language toggle
-if (document.readyState === "loading") {
-  document.addEventListener("DOMContentLoaded", () => { render(); document.app_init();});
-} else {
-  render();
-  document.app_init();
-}
-
-// Note: The code above defines functions to render a seminars archive with search and expand/collapse features,
-// and sets up the initial rendering and language toggle support.
+render();

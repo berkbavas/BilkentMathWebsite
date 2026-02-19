@@ -1,12 +1,11 @@
 
-import { TRANSLATIONS } from '../data/translations.js'; 
-const { ALUMNI } = await import(`../data/alumni.js?v=${document.VERSION}`);
-
-
+const { ALUMNI } = await import(`../data/alumni.js?v=${document.version}`);
+const { TRANSLATIONS } = await import(`../data/translations.js?v=${document.version}`);
 
 const elementSearch = document.querySelector("#search");
 const elementReset = document.querySelector("#reset");
 const elementRoot = document.getElementById("alumniRoot");
+
 const URL = "https://math.bilkent.edu.tr/Alumni/";
 
 function renderEntry(a, lang) {
@@ -35,14 +34,14 @@ function renderEntry(a, lang) {
         <details class="alumni-story">
             <summary>
                 <i class="fa-solid fa-caret-right"></i>
-                <span data-i18n="story">${TRANSLATIONS.labelStory[lang]}</span>
+                <span data-i18n="alumniStory">${TRANSLATIONS.alumniStory[lang]}</span>
             </summary>
             <blockquote>${story}</blockquote>
         </details>` : ""}
 
         ${a.lastUpdate ? `
         <div class="alumni-update">
-           ${TRANSLATIONS.labelLastUpdate[lang]}: ${a.lastUpdate}
+           ${TRANSLATIONS.alumniLastUpdate[lang]}: ${a.lastUpdate}
         </div>` : ""}
     </article>
     `;
@@ -59,9 +58,9 @@ function apply() {
     const query = elementSearch.value.trim();
     const list = ALUMNI.filter(alumni => matches(alumni, query));
     elementRoot.innerHTML = list.map(a => renderEntry(a, lang)).join("");
-    elementSearch.placeholder = TRANSLATIONS.labelSearchPlaceholder[lang];
+    elementSearch.placeholder = TRANSLATIONS.alumniSearchPlaceholder[lang];
     if (list.length === 0) {
-        elementRoot.innerHTML = `<p>${TRANSLATIONS.labelNoResults[lang]}</p>`;
+        elementRoot.innerHTML = `<p>${TRANSLATIONS.alumniNoResults[lang]}</p>`;
     }
 }
 
@@ -80,30 +79,5 @@ function render() {
     apply();
 }
 
-TRANSLATIONS.labelNoResults = {
-    en: "No matching alumni found.",
-    tr: "Eşleşen mezun bulunamadı."
-};
-
-TRANSLATIONS.labelSearchPlaceholder = {
-    en: "Search",
-    tr: "Ara"
-};
-
-TRANSLATIONS.labelStory = {
-    en: "Story",
-    tr: "Hikaye"
-};
-
-TRANSLATIONS.labelLastUpdate = {
-    en: "Last Update",
-    tr: "Son Güncelleme"
-};
-
-document.render = render;
-document.init = init; 
-if (document.readyState === "loading") {
-  document.addEventListener("DOMContentLoaded", init);
-} else {
-  init();
-}
+document.render = render; // Expose render function for language toggle
+init(); // Initialize event listeners and render initial list

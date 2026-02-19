@@ -1,10 +1,6 @@
- 
-import { TRANSLATIONS } from '../data/translations.js';const alumniModule =
-  await import(`../data/alumni-statistics.js?v=${document.VERSION}`);
 
-
-const ALUMNI_STATISTICS = alumniModule.ALUMNI_STATISTICS;
- 
+const { ALUMNI_STATISTICS } = await import(`../data/alumni-statistics.js?v=${document.version}`);
+const { TRANSLATIONS } = await import(`../data/translations.js?v=${document.version}`);
 
 function hexToRgba(hex, a) {
     const h = (hex || "").replace("#", "").trim();
@@ -73,7 +69,7 @@ function render() {
             data: {
                 labels,
                 datasets: [{
-                    label: TRANSLATIONS.chartPercentage[lang] || "Percentage",
+                    label: TRANSLATIONS.alumniStatsPercentage[lang] || "Percentage",
                     data: values,
                     borderRadius: 10,
                     barThickness: 14,
@@ -173,46 +169,5 @@ function render() {
     }
 }
 
-
-TRANSLATIONS.headerAlumniStatistics = {
-    en: "Alumni Statistics",
-    tr: "Mezun İstatistikleri"
-};
-
-TRANSLATIONS.paragraphAlumniStatistics = {
-    en: "Information about alumni of the Department of Mathematics.",
-    tr: "Matematik Bölümü mezunları hakkında bilgiler."
-};
-
-TRANSLATIONS.headerCareerPathsBar = {
-    en: "Career Paths After Graduation (Bar)",
-    tr: "Mezuniyet Sonrası Kariyer Yolları (Çubuk Grafik)"
-};
-
-TRANSLATIONS.subCareerPathsBar = {
-    en: "Distribution by sector (%)",
-    tr: "Sektöre göre dağılım (%)"
-};
-
-TRANSLATIONS.headerCareerPathsPie = {
-    en: "Career Paths After Graduation",
-    tr: "Mezuniyet Sonrası Kariyer Yolları"
-};
-
-TRANSLATIONS.subCareerPathsPie = {
-    en: "Distribution by sector (%)",
-    tr: "Sektöre göre dağılım (%)"
-};
-
-TRANSLATIONS.chartPercentage = {
-    en: "Percentage",
-    tr: "Yüzde"
-};
-
 document.render = render; // Expose render function for language toggle
-if (document.readyState === "loading") {
-  document.addEventListener("DOMContentLoaded", () => { render(); document.app_init();});
-} else {
-  render();
-  document.app_init();
-}
+render(); // Initial render

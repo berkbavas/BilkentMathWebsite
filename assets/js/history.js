@@ -1,20 +1,7 @@
-/* assets/js/history.js (redesign-safe)
-   Renders heads of department list from ../data/history.js
-*/
-
- 
-
-const historyModule =
-  await import(`../data/history.js?v=${document.VERSION}`);
-
-const helpersModule =
-  await import(`./helpers.js?v=${document.VERSION}`);
-
-const HEADS_OF_DEPARTMENT = historyModule.HEADS_OF_DEPARTMENT;
-const { escapeHtml, safeUrl } = helpersModule;
+const { HEADS_OF_DEPARTMENT } = await import(`../data/history.js?v=${document.version}`);
+const { escapeHtml, safeUrl } = await import(`./helpers.js?v=${document.version}`);
 
 const URL = "https://math.bilkent.edu.tr/personnel_photos";
-
 
 function renderCard(head) {
     const name = escapeHtml(head.name);
@@ -24,11 +11,9 @@ function renderCard(head) {
     const phd = escapeHtml(head.phd);
     const webpage = safeUrl(head.webpage);
 
-    const photoSrc = photo 
-        ? `${URL}/${photo}` 
+    const photoSrc = photo
+        ? `${URL}/${photo}`
         : `${URL}/placeholder.jpg`;
-
-
 
     const nameHtml = webpage
         ? `<a href="${webpage}" target="_blank" rel="noopener noreferrer">${name}</a>`
@@ -86,11 +71,6 @@ function render() {
 
     container.innerHTML = heads.map(renderCard).join("");
 }
-document.render = render; // Expose render function for language toggle
-if (document.readyState === "loading") {
-  document.addEventListener("DOMContentLoaded", () => { render(); document.app_init();});
-} else {
-  render();
-  document.app_init();
-}
 
+document.render = render; // Expose render function for language toggle
+render(); // Initial render

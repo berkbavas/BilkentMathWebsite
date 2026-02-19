@@ -19,21 +19,9 @@ import { PROBLEM_OF_MONTH_2008 } from "../data/problem-of-the-month/problem-of-t
 import { PROBLEM_OF_MONTH_2007 } from "../data/problem-of-the-month/problem-of-the-month-2007.js";
 import { PROBLEM_OF_MONTH_2006 } from "../data/problem-of-the-month/problem-of-the-month-2006.js";
 
-import { TRANSLATIONS, MONTHS_EN_TO_TR } from "../data/translations.js";
- 
-
-const problemModule =
-  await import(`../data/problem-of-the-month.js?v=${document.VERSION}`);
-
-const helpersModule =
-  await import(`./helpers.js?v=${document.VERSION}`);
-
-
-
-const PROBLEM_OF_MONTH = problemModule.PROBLEM_OF_MONTH;
-const { escapeHtml, safeUrl } = helpersModule;
- 
-
+const { TRANSLATIONS, MONTHS_EN_TO_TR } = await import(`../data/translations.js?v=${document.version}`);
+const { PROBLEM_OF_MONTH } = await import(`../data/problem-of-the-month.js?v=${document.version}`);
+const { escapeHtml, safeUrl } = await import(`./helpers.js?v=${document.version}`);
 
 // Data for rendering descending years
 const DATA = [
@@ -196,7 +184,6 @@ function render() {
         // elQuickLinks.appendChild(linkBtn);
     });
 
-
     // Latest problem button
     const latestData = DATA[0]; // Latest year
     const latestItem = latestData[latestData.length - 1];
@@ -207,122 +194,5 @@ function render() {
     elLatestProblemBtn.textContent = (TRANSLATIONS.pomLatestProblemLabel[lang] || "Latest Problem") + ` (${month} ${latestItem.year})`;
 }
 
-
-TRANSLATIONS.pomQuestionLabel = {
-    en: "Question",
-    tr: "Soru"
-};
-
-TRANSLATIONS.pomSolutionLabel = {
-    en: "Solution",
-    tr: "Çözüm"
-};
-
-TRANSLATIONS.pomSolversTitle = {
-    en: "Solvers",
-    tr: "Çözenler"
-};
-
-TRANSLATIONS.pomSolversLabel = {
-    en: "solvers",
-    tr: "çözen"
-};
-
-TRANSLATIONS.pomViewLabel = {
-    en: "View",
-    tr: "Görüntüle"
-};
-
-TRANSLATIONS.pomLatestProblemLabel = {
-    en: "Problem of the Month",
-    tr: "Ayın Sorusu"
-};
-
-TRANSLATIONS.pomOpenQuestionAria = {
-    en: "Open question PDF",
-    tr: "Soru PDF'ini aç"
-};
-
-TRANSLATIONS.pomOpenSolutionAria = {
-    en: "Open solution PDF",
-    tr: "Çözüm PDF'ini aç"
-};
-
-TRANSLATIONS.headerTitle = {
-    en: "Problem of the Month",
-    tr: "Ayın Sorusu"
-};
-
-TRANSLATIONS.headerDescription = {
-    en: "A monthly problem series. Submit your solution and see the archive of questions and solutions.",
-    tr: "Aylık soru serisi. Çözümünüzü gönderin veya arşive göz atın."
-};
-
-TRANSLATIONS.howToSubmitTitle = {
-    en: "How to Submit",
-    tr: "Nasıl Gönderilir?"
-};
-
-TRANSLATIONS.howToSubmitDescription = {
-    en: "We will announce the following month on this page the names of people who have sent correct solutions. You can send your answers by one of the following ways.",
-    tr: "Soruları doğru çözenlerin isimlerini takip eden ay bu sayfada yayınlıyoruz. Çözümlerinizi aşağıdaki yollardan biri ile bize ulaştırabilirsiniz."
-};
-
-TRANSLATIONS.mailLabel = {
-    en: "Mail:",
-    tr: "Posta:"
-};
-
-TRANSLATIONS.mailAddressLine1 = {
-    en: "Bilkent University,",
-    tr: "Bilkent Üniversitesi,"
-};
-
-TRANSLATIONS.mailAddressLine2 = {
-    en: "Department of Mathematics,",
-    tr: "Matematik Bölümü,"
-};
-
-TRANSLATIONS.mailAddressLine3 = {
-    en: "06800 Bilkent, Ankara, Turkey",
-    tr: "06800 Bilkent, Ankara, Türkiye"
-};
-
-TRANSLATIONS.emailLabel = {
-    en: "Email:",
-    tr: "E-posta:"
-};
-
-TRANSLATIONS.faxLabel = {
-    en: "Fax:",
-    tr: "Faks:"
-};
-
-TRANSLATIONS.faxAttention = {
-    en: "Attention: Azer Kerimov",
-    tr: "İlgili: Azer Kerimov"
-};
-
-TRANSLATIONS.faxSubject = {
-    en: "Subject: Math problem of the month",
-    tr: "Konu: Ayın matematik sorusu"
-};
-
-TRANSLATIONS.quickLinksTitle = {
-    en: "Quick links",
-    tr: "Hızlı linkler"
-};
-
-TRANSLATIONS.quickLinksDescription = {
-    en: "Open the latest question.",
-    tr: "Son soruyu açın."
-};
-
-
 document.render = render; // Expose render function for language toggle
-if (document.readyState === "loading") {
-  document.addEventListener("DOMContentLoaded", () => { render(); document.app_init();});
-} else {
-  render();
-  document.app_init();
-}
+render(); // Initial render

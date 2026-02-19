@@ -1,13 +1,14 @@
-// Each page imports this file and adds its translations to TRANSLATIONS object.
-// Definitions below are used in navigation and footer. 
-// Since they are common to all pages, they are defined in here.
+// Single source of truth for all translations.
+// All page-specific translations are defined here — do not mutate TRANSLATIONS from other files.
+
 export const TRANSLATIONS = {
-    title: {
+    /* ── Page ── */
+    pageTitle: {
         en: "Bilkent University • Department of Mathematics",
         tr: "Bilkent Üniversitesi • Matematik Bölümü"
     },
 
-    /* Topbar */
+    /* ── Topbar ── */
     topbarBilkent: {
         en: "Bilkent University",
         tr: "Bilkent Üniversitesi"
@@ -17,17 +18,17 @@ export const TRANSLATIONS = {
         tr: "Fen Fakültesi"
     },
 
-    /* Navigation – Titles */
-    titleDepartment: {
+    /* ── Navigation – Titles ── */
+    navTitleDepartment: {
         en: "Department of Mathematics",
         tr: "Matematik Bölümü"
     },
-    titleUniversity: {
+    navTitleUniversity: {
         en: "Bilkent University",
         tr: "Bilkent Üniversitesi"
     },
 
-    /* Navigation – Main */
+    /* ── Navigation – Main ── */
     navHome: {
         en: "Home",
         tr: "Ana Sayfa"
@@ -195,7 +196,7 @@ export const TRANSLATIONS = {
         tr: "Üniversite Adayları İçin Bilgiler"
     },
 
-    /* Footer */
+    /* ── Footer ── */
     footerAddress: {
         en: "Address",
         tr: "Adres"
@@ -229,9 +230,294 @@ export const TRANSLATIONS = {
         tr: "Bizi Takip Edin"
     },
 
-    buttonReset: {
+    /* ── Common ── */
+    commonReset: {
         en: "Reset",
         tr: "Sıfırla"
+    },
+    commonSearchPlaceholder: {
+        en: "Search",
+        tr: "Ara"
+    },
+    commonNoResults: {
+        en: "No results found.",
+        tr: "Sonuç bulunamadı."
+    },
+
+    /* ── Alisbah Awards ── */
+    alisbahYear: {
+        en: "Year",
+        tr: "Yıl"
+    },
+    alisbahRecipients: {
+        en: "Recipients",
+        tr: "Ödül Sahipleri"
+    },
+    alisbahPhotos: {
+        en: "Photos",
+        tr: "Fotoğraflar"
+    },
+    alisbahView: {
+        en: "View",
+        tr: "Görüntüle"
+    },
+
+    /* ── Alumni ── */
+    alumniNoResults: {
+        en: "No matching alumni found.",
+        tr: "Eşleşen mezun bulunamadı."
+    },
+    alumniSearchPlaceholder: {
+        en: "Search",
+        tr: "Ara"
+    },
+    alumniStory: {
+        en: "Story",
+        tr: "Hikaye"
+    },
+    alumniLastUpdate: {
+        en: "Last Update",
+        tr: "Son Güncelleme"
+    },
+
+    /* ── Alumni Statistics ── */
+    alumniStatsTitle: {
+        en: "Alumni Statistics",
+        tr: "Mezun İstatistikleri"
+    },
+    alumniStatsDescription: {
+        en: "Information about alumni of the Department of Mathematics.",
+        tr: "Matematik Bölümü mezunları hakkında bilgiler."
+    },
+    alumniStatsCareerPathsBarTitle: {
+        en: "Career Paths After Graduation (Bar)",
+        tr: "Mezuniyet Sonrası Kariyer Yolları (Çubuk Grafik)"
+    },
+    alumniStatsCareerPathsBarSub: {
+        en: "Distribution by sector (%)",
+        tr: "Sektöre göre dağılım (%)"
+    },
+    alumniStatsCareerPathsPieTitle: {
+        en: "Career Paths After Graduation",
+        tr: "Mezuniyet Sonrası Kariyer Yolları"
+    },
+    alumniStatsCareerPathsPieSub: {
+        en: "Distribution by sector (%)",
+        tr: "Sektöre göre dağılım (%)"
+    },
+    alumniStatsPercentage: {
+        en: "Percentage",
+        tr: "Yüzde"
+    },
+
+    /* ── Graduate Program ── */
+    graduateProgramSupervisorsTitle: {
+        en: "Graduate Supervisors",
+        tr: "Lisansüstü Tez Danışmanları"
+    },
+    graduateProgramSupervisorsDescription: {
+        en: "Faculty members and their research interests.",
+        tr: "Öğretim üyeleri ve araştırma alanları."
+    },
+    graduateProgramCountResults: {
+        en: "{count} faculty members",
+        tr: "{count} öğretim üyesi"
+    },
+    graduateProgramPastThesesTitle: {
+        en: "Past Theses",
+        tr: "Geçmişte Yürütülen Tezler"
+    },
+    graduateProgramPastThesesButton: {
+        en: "View",
+        tr: "Görüntüle"
+    },
+    graduateProgramCoordinatorTitle: {
+        en: "Department Graduate Coordinator",
+        tr: "Bölüm Lisansüstü Koordinatörü"
+    },
+    graduateProgramApplyOnlineButton: {
+        en: "Apply Online",
+        tr: "Çevrimiçi Başvuru Formu"
+    },
+    graduateProgramCoordinatorName: {
+        en: "Prof. Azer Kerimov",
+        tr: "Prof. Dr. Azer Kerimov"
+    },
+
+    /* ── Problem of the Month ── */
+    pomHeaderTitle: {
+        en: "Problem of the Month",
+        tr: "Ayın Sorusu"
+    },
+    pomHeaderDescription: {
+        en: "A monthly problem series. Submit your solution and see the archive of questions and solutions.",
+        tr: "Aylık soru serisi. Çözümünüzü gönderin veya arşive göz atın."
+    },
+    pomQuestionLabel: {
+        en: "Question",
+        tr: "Soru"
+    },
+    pomSolutionLabel: {
+        en: "Solution",
+        tr: "Çözüm"
+    },
+    pomSolversTitle: {
+        en: "Solvers",
+        tr: "Çözenler"
+    },
+    pomSolversLabel: {
+        en: "solvers",
+        tr: "çözen"
+    },
+    pomViewLabel: {
+        en: "View",
+        tr: "Görüntüle"
+    },
+    pomLatestProblemLabel: {
+        en: "Problem of the Month",
+        tr: "Ayın Sorusu"
+    },
+    pomOpenQuestionAria: {
+        en: "Open question PDF",
+        tr: "Soru PDF'ini aç"
+    },
+    pomOpenSolutionAria: {
+        en: "Open solution PDF",
+        tr: "Çözüm PDF'ini aç"
+    },
+    pomHowToSubmitTitle: {
+        en: "How to Submit",
+        tr: "Nasıl Gönderilir?"
+    },
+    pomHowToSubmitDescription: {
+        en: "We will announce the following month on this page the names of people who have sent correct solutions. You can send your answers by one of the following ways.",
+        tr: "Soruları doğru çözenlerin isimlerini takip eden ay bu sayfada yayınlıyoruz. Çözümlerinizi aşağıdaki yollardan biri ile bize ulaştırabilirsiniz."
+    },
+    pomMailLabel: {
+        en: "Mail:",
+        tr: "Posta:"
+    },
+    pomMailAddressLine1: {
+        en: "Bilkent University,",
+        tr: "Bilkent Üniversitesi,"
+    },
+    pomMailAddressLine2: {
+        en: "Department of Mathematics,",
+        tr: "Matematik Bölümü,"
+    },
+    pomMailAddressLine3: {
+        en: "06800 Bilkent, Ankara, Turkey",
+        tr: "06800 Bilkent, Ankara, Türkiye"
+    },
+    pomEmailLabel: {
+        en: "Email:",
+        tr: "E-posta:"
+    },
+    pomFaxLabel: {
+        en: "Fax:",
+        tr: "Faks:"
+    },
+    pomFaxAttention: {
+        en: "Attention: Azer Kerimov",
+        tr: "İlgili: Azer Kerimov"
+    },
+    pomFaxSubject: {
+        en: "Subject: Math problem of the month",
+        tr: "Konu: Ayın matematik sorusu"
+    },
+    pomQuickLinksTitle: {
+        en: "Quick links",
+        tr: "Hızlı linkler"
+    },
+    pomQuickLinksDescription: {
+        en: "Open the latest question.",
+        tr: "Son soruyu açın."
+    },
+
+    /* ── Project Courses ── */
+    projectCoursesHeaderTitle: {
+        en: "Project Courses",
+        tr: "Proje Dersleri"
+    },
+    projectCoursesHeaderDescription: {
+        en: "Project-based courses offered by the Department of Mathematics, including senior projects and summer projects.",
+        tr: "Matematik Bölümü tarafından sunulan proje tabanlı dersler, mezuniyet projeleri ve yaz projeleri."
+    },
+    projectCoursesViewCourseInfo: {
+        en: "View course information",
+        tr: "Ders bilgilerini görüntüle"
+    },
+    projectCoursesCourseGuide: {
+        en: "Course guide",
+        tr: "Ders rehberi"
+    },
+    projectCoursesProjectDetails: {
+        en: "Project details",
+        tr: "Proje detayları"
+    },
+    projectCoursesProjectArchive: {
+        en: "Project Archive",
+        tr: "Arşiv"
+    },
+
+    /* ── Seminars ── */
+    seminarsTitle: {
+        en: "2025-26 Academic Year Seminars",
+        tr: "2025-26 Akademik Yılı Seminerleri"
+    },
+    seminarsDescription: {
+        en: "Department seminars held during the 2025-26 academic year.",
+        tr: "2025-26 akademik yılı boyunca düzenlenen bölüm seminerleri."
+    },
+    seminarsHeaderTitleSpeaker: {
+        en: "Title / Speaker",
+        tr: "Başlık / Konuşmacı"
+    },
+    seminarsHeaderDate: {
+        en: "Date",
+        tr: "Tarih"
+    },
+    seminarsHeaderTime: {
+        en: "Time",
+        tr: "Saat"
+    },
+    seminarsHeaderPlace: {
+        en: "Place",
+        tr: "Yer"
+    },
+    seminarsPostfix: {
+        en: "seminar(s)",
+        tr: "seminer"
+    },
+
+    /* ── Seminars Archive ── */
+    seminarsArchiveHeaderTitle: {
+        en: "Seminars Archive",
+        tr: "Seminer Arşivi"
+    },
+    seminarsArchiveDescription: {
+        en: "Department seminars held between 2009 and 2025 (by academic year).",
+        tr: "2009 ile 2025 yılları arasında düzenlenen bölüm seminerleri (akademik yıla göre)."
+    },
+    seminarsArchiveDescriptionFiles: {
+        en: "Files from February 2009 through June 2012 are mainly \"mht\" files, which can best be opened using the following software:",
+        tr: "Şubat 2009 ile Haziran 2012 arasındaki dosyalar çoğunlukla \"mht\" dosyalarıdır ve aşağıdaki yazılımlar kullanılarak açılabilir:"
+    },
+    seminarsArchiveExpandAll: {
+        en: "Expand all",
+        tr: "Tümünü genişlet"
+    },
+    seminarsArchiveCollapseAll: {
+        en: "Collapse all",
+        tr: "Tümünü daralt"
+    },
+    seminarsArchiveSeminarLabel: {
+        en: "Seminar(s)",
+        tr: "Seminer"
+    },
+    seminarsArchiveViewLabel: {
+        en: "View",
+        tr: "Görüntüle"
     }
 };
 

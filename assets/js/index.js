@@ -1,28 +1,9 @@
-
-const seminarsModule =
-  await import(`../data/seminars.js?v=${document.VERSION}`);
-
-const facultyModule =
-  await import(`../data/faculty.js?v=${document.VERSION}`);
-
-const graduateStudentsModule =
-  await import(`../data/graduate-students.js?v=${document.VERSION}`);
-
-const problemModule =
-  await import(`../data/problem-of-the-month.js?v=${document.VERSION}`);
-
-import { MONTHS_EN_TO_TR } from "../data/translations.js";
-
-const newsModule =
-  await import(`../data/news.js?v=${document.VERSION}`);
-
-
-const SEMINARS = seminarsModule.SEMINARS;
-const CURRENT_FACULTY = facultyModule.CURRENT_FACULTY;
-const GRADUATE_STUDENTS = graduateStudentsModule.GRADUATE_STUDENTS;
-const PROBLEM_OF_MONTH = problemModule.PROBLEM_OF_MONTH;
-
-const NEWS = newsModule.NEWS;
+const { SEMINARS } = await import(`../data/seminars.js?v=${document.version}`);
+const { CURRENT_FACULTY } = await import(`../data/faculty.js?v=${document.version}`);
+const { GRADUATE_STUDENTS } = await import(`../data/graduate-students.js?v=${document.version}`);
+const { PROBLEM_OF_MONTH } = await import(`../data/problem-of-the-month.js?v=${document.version}`);
+const { NEWS } = await import(`../data/news.js?v=${document.version}`);
+const { MONTHS_EN_TO_TR } = await import(`../data/translations.js?v=${document.version}`);
 
 const URL = "https://math.bilkent.edu.tr/";
 
@@ -32,60 +13,6 @@ function toDateKey(s, t) { // DD.MM.YYYY -> Date
 	return new Date(`${y}-${m}-${d}T${hh}:${mm}:00`);
 }
 
-// Animated counter function
-function animateCounter(element, target, duration = 1500) {
-	const start = 0;
-	const startTime = performance.now();
-	
-	function easeOutQuart(t) {
-		return 1 - Math.pow(1 - t, 4);
-	}
-	
-	function update(currentTime) {
-		const elapsed = currentTime - startTime;
-		const progress = Math.min(elapsed / duration, 1);
-		const easedProgress = easeOutQuart(progress);
-		const current = Math.floor(start + (target - start) * easedProgress);
-		
-		element.textContent = current;
-		
-		if (progress < 1) {
-			requestAnimationFrame(update);
-		} else {
-			element.textContent = target;
-		}
-	}
-	
-	requestAnimationFrame(update);
-}
-
-// Intersection Observer for triggering animations when visible
-function setupCounterAnimations() {
-	const counters = [
-		{ id: "facultyCount", value: CURRENT_FACULTY.length },
-		{ id: "gradCount", value: GRADUATE_STUDENTS.length }
-	];
-	
-	const observer = new IntersectionObserver((entries) => {
-		entries.forEach(entry => {
-			if (entry.isIntersecting) {
-				const counterData = counters.find(c => c.id === entry.target.id);
-				if (counterData && !entry.target.dataset.animated) {
-					entry.target.dataset.animated = "true";
-					animateCounter(entry.target, counterData.value);
-				}
-			}
-		});
-	}, { threshold: 0.5 });
-	
-	counters.forEach(counter => {
-		const el = document.getElementById(counter.id);
-		if (el) {
-			el.textContent = "0";
-			observer.observe(el);
-		}
-	});
-}
 
 function updateCounter(id, value) {
 	const el = document.getElementById(id);
@@ -142,13 +69,13 @@ function renderSeminars(containerId, list) {
 }
 
 function renderHomeNews() {
-  const el = document.getElementById("homeNewsList");
-  if (!el) return;
+	const el = document.getElementById("homeNewsList");
+	if (!el) return;
 
-  const lang = localStorage.getItem("lang") || "en";
-  const items = (NEWS || []).slice(0, 3);
+	const lang = localStorage.getItem("lang") || "en";
+	const items = (NEWS || []).slice(0, 3);
 
-  el.innerHTML = items.map(n => `
+	el.innerHTML = items.map(n => `
     <div class="home-news-item">
       <div class="home-news-date">${(n.date && (n.date[lang] || n.date.en)) || ""}</div>
       <div class="home-news-content">${(n.content && (n.content[lang] || n.content.en)) || ""}</div>
@@ -158,8 +85,4 @@ function renderHomeNews() {
 
 
 document.render = render; // Expose render function for language toggle
-if (document.readyState === "loading") {
-  document.addEventListener("DOMContentLoaded", render);
-} else {
-  render();
-}
+render(); // Initial render

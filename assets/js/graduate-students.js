@@ -1,10 +1,6 @@
- 
-const graduateStudentsModule =
-  await import(`../data/graduate-students.js?v=${document.VERSION}`);
-const helpersModule =
-  await import(`./helpers.js?v=${document.VERSION}`);
-const GRADUATE_STUDENTS = graduateStudentsModule.GRADUATE_STUDENTS;
-const { escapeHtml } = helpersModule;
+
+const { GRADUATE_STUDENTS } = await import(`../data/graduate-students.js?v=${document.version}`);
+const { escapeHtml } = await import(`./helpers.js?v=${document.version}`);
 
 const URL = "https://math.bilkent.edu.tr/Grad_student_photos";
 
@@ -17,8 +13,8 @@ function cardTemplate(student) {
     const photo = (student.photo || "").trim();
 
     // Use a placeholder if no photo
-    const photoSrc = photo 
-        ? `${URL}/${photo}` 
+    const photoSrc = photo
+        ? `${URL}/${photo}`
         : `${URL}/placeholder.jpg`;
 
     const lang = localStorage.getItem("lang") || "en";
@@ -66,10 +62,10 @@ function cardTemplate(student) {
 }
 
 function emptyState(lang) {
-    const message = lang === "tr" 
-        ? "Bu kategoride henüz öğrenci bulunmamaktadır." 
+    const message = lang === "tr"
+        ? "Bu kategoride henüz öğrenci bulunmamaktadır."
         : "No graduate students found.";
-    
+
     return `
     <div class="students-empty">
         <i class="fa-solid fa-user-slash" aria-hidden="true"></i>
@@ -79,10 +75,10 @@ function emptyState(lang) {
 
 function noResultsState(lang) {
     const title = lang === "tr" ? "Sonuç bulunamadı" : "No results found";
-    const message = lang === "tr" 
-        ? "Arama kriterlerinize uygun öğrenci bulunamadı." 
+    const message = lang === "tr"
+        ? "Arama kriterlerinize uygun öğrenci bulunamadı."
         : "No students match your search criteria.";
-    
+
     return `
     <div class="no-results">
         <i class="fa-solid fa-search" aria-hidden="true"></i>
@@ -93,11 +89,11 @@ function noResultsState(lang) {
 
 function filterStudents(searchTerm) {
     return GRADUATE_STUDENTS.filter(student => {
-        const matchesSearch = !searchTerm || 
+        const matchesSearch = !searchTerm ||
             student.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
             (student.advisor && student.advisor.toLowerCase().includes(searchTerm.toLowerCase())) ||
             (student.email && student.email.toLowerCase().includes(searchTerm.toLowerCase()));
-        
+
         return matchesSearch;
     });
 }
@@ -119,17 +115,20 @@ function render() {
     // Filter students
     const filteredStudents = filterStudents(searchTerm);
 
+    // Sort students alphabetically by name
+    filteredStudents.sort((a, b) => a.name.localeCompare(b.name));
+
     // Update count
     const totalCount = GRADUATE_STUDENTS.length;
     const filteredCount = filteredStudents.length;
-    
+
     if (studentCount) {
         if (searchTerm) {
-            studentCount.textContent = lang === "en" 
+            studentCount.textContent = lang === "en"
                 ? `${filteredCount} of ${totalCount} Students`
                 : `${totalCount} öğrenciden ${filteredCount}`;
         } else {
-            studentCount.textContent = lang === "en" 
+            studentCount.textContent = lang === "en"
                 ? `${totalCount} Graduate Student${totalCount !== 1 ? 's' : ''}`
                 : `${totalCount} Lisansüstü Öğrenci`;
         }
@@ -146,7 +145,6 @@ function render() {
         }
     }
 
-
     searchInput.placeholder = lang === "tr" ? "Ara" : "Search";
 
     // Handle language toggle visibility
@@ -154,14 +152,11 @@ function render() {
         const elLang = el.getAttribute("data-lang");
         el.hidden = elLang !== lang;
     });
-
-
 }
 
 function setupEventListeners() {
     const searchInput = document.querySelector("#searchInput");
     const resetBtn = document.querySelector("#resetBtn");
-    
 
     // Debounce search
     let searchTimeout;
@@ -183,20 +178,6 @@ function setupEventListeners() {
     }
 }
 
-
-// Initial render
-document.addEventListener("DOMContentLoaded", () => {
-    render();
-    setupEventListeners();
-});
-
 document.render = render; // Expose render function for language toggle
-if (document.readyState === "loading") {
-document.addEventListener("DOMContentLoaded", () => {
-    render();
-    setupEventListeners();
-});
-} else {
-    render();
-    setupEventListeners();
-}
+setupEventListeners(); // Setup event listeners for search and reset
+render(); // Initial render

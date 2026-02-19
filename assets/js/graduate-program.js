@@ -1,8 +1,7 @@
- 
-import { TRANSLATIONS } from '../data/translations.js';const facultyModule =
-  await import(`../data/faculty.js?v=${document.VERSION}`);
- 
-const CURRENT_FACULTY = facultyModule.CURRENT_FACULTY;
+const { CURRENT_FACULTY } = await import(`../data/faculty.js?v=${document.version}`);
+const { TRANSLATIONS } = await import(`../data/translations.js?v=${document.version}`);
+
+const URL = "https://math.bilkent.edu.tr/personnel_photos";
 
 const elRoot = document.getElementById("supRoot");
 const elSearch = document.getElementById("supSearch");
@@ -31,10 +30,6 @@ function matches(p, search) {
     return false;
 }
 
-
-const URL = "https://math.bilkent.edu.tr/personnel_photos";
-
-
 function cardTemplate(p) {
     const name = p.name || "";
     const title = p.title || "";
@@ -42,12 +37,9 @@ function cardTemplate(p) {
     const areasText = p.research.join(", ");
     const webpage = p.webpage || "#";
 
-    const photoSrc = photo 
-        ? `${URL}/${photo}` 
+    const photoSrc = photo
+        ? `${URL}/${photo}`
         : `${URL}/placeholder.jpg`;
-
-
-
 
     const avatar = photoSrc
         ? `<img src="${photoSrc}" alt="${name}" loading="lazy">`
@@ -73,7 +65,7 @@ function cardTemplate(p) {
 function render() {
     const lang = localStorage.getItem("lang") || "en";
     const search = elSearch.value.trim();
-    elSearch.placeholder = TRANSLATIONS.searchPlaceholder[lang];
+    elSearch.placeholder = TRANSLATIONS.commonSearchPlaceholder[lang];
 
     let list = CURRENT_FACULTY
         .filter(p => p.isSupervisor)
@@ -93,10 +85,10 @@ function render() {
 
     if (list.length === 0) {
         elCount.textContent = "";
-        elRoot.innerHTML = `<p>${TRANSLATIONS.noResults[lang]}</p>`;
+        elRoot.innerHTML = `<p>${TRANSLATIONS.commonNoResults[lang]}</p>`;
     }
     else {
-        elCount.textContent = TRANSLATIONS.countResults[lang].replace("{count}", list.length);
+        elCount.textContent = TRANSLATIONS.graduateProgramCountResults[lang].replace("{count}", list.length);
         elRoot.innerHTML = list.map(cardTemplate).join("");
     }
 
@@ -111,71 +103,5 @@ function init() {
     render();
 }
 
-// Add translations specific to Graduate Supervisors page
-TRANSLATIONS.titleGraduateSupervisors = {
-    en: "Graduate Supervisors",
-    tr: "Lisansüstü Tez Danışmanları"
-};
-
-TRANSLATIONS.paragraphGraduateSupervisors = {
-    en: "Faculty members and their research interests.",
-    tr: "Öğretim üyeleri ve araştırma alanları."
-};
-
-TRANSLATIONS.searchPlaceholder = {
-    en: "Search",
-    tr: "Ara"
-};
-
-TRANSLATIONS.buttonReset = {
-    en: "Reset",
-    tr: "Sıfırla"
-};
-
-TRANSLATIONS.countResults = {
-    en: "{count} faculty members",
-    tr: "{count} öğretim üyesi"
-};
-
-TRANSLATIONS.noResults = {
-    en: "No results found.",
-    tr: "Sonuç bulunamadı."
-};
-
-TRANSLATIONS.headerPastTheses = {
-    en: "Past Theses",
-    tr: "Geçmişte Yürütülen Tezler"
-};
-
-TRANSLATIONS.buttonPastTheses = {
-    en: "View",
-    tr: "Görüntüle"
-};
-
-TRANSLATIONS.headerCoordinator = {
-    en: "Department Graduate Coordinator",
-    tr: "Bölüm Lisansüstü Koordinatörü"
-};
-
-TRANSLATIONS.buttonApplyOnline = {
-    en: "Apply Online",
-    tr: "Çevrimiçi Başvuru Formu"
-};
-
-TRANSLATIONS.coordinatorName = {
-    en: "Prof. Azer Kerimov",
-    tr: "Prof. Dr. Azer Kerimov"
-};
-
-
-
-
 document.render = render; // Expose render function for language toggle
-document.init = init; 
-if (document.readyState === "loading") {
-  document.addEventListener("DOMContentLoaded", () => { init(); document.app_init();});
-} else {
-  init();
-  document.app_init();
-}
-
+init();

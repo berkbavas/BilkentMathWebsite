@@ -1,65 +1,9 @@
 
-import { TRANSLATIONS } from '../data/translations.js';
-const seminarsModule =
-  await import(`../data/seminars.js?v=${document.VERSION}`);
-
-const helpersModule =
-  await import(`./helpers.js?v=${document.VERSION}`);
-
-const SEMINARS = seminarsModule.SEMINARS;
- 
-const { escapeHtml, safeUrl } = helpersModule;
+const { SEMINARS } = await import(`../data/seminars.js?v=${document.version}`);
+const { TRANSLATIONS } = await import(`../data/translations.js?v=${document.version}`);
+const { escapeHtml, safeUrl } = await import(`./helpers.js?v=${document.version}`);
 
 const URL = "https://math.bilkent.edu.tr/";
-
-TRANSLATIONS.titleSeminars = {
-    en: "2025-26 Academic Year Seminars",
-    tr: "2025-26 Akademik Yılı Seminerleri"
-};
-
-TRANSLATIONS.textDescription = {
-    en: "Department seminars held during the 2025-26 academic year.",
-    tr: "2025-26 akademik yılı boyunca düzenlenen bölüm seminerleri."
-};
-
-TRANSLATIONS.tableHeaderTitleSpeaker = {
-    en: "Title / Speaker",
-    tr: "Başlık / Konuşmacı"
-};
-
-TRANSLATIONS.tableHeaderDate = {
-    en: "Date",
-    tr: "Tarih"
-};
-
-TRANSLATIONS.tableHeaderTime = {
-    en: "Time",
-    tr: "Saat"
-};
-
-TRANSLATIONS.tableHeaderPlace = {
-    en: "Place",
-    tr: "Yer"
-};
-
-TRANSLATIONS.buttonReset = {
-    en: "Reset",
-    tr: "Sıfırla"
-};
-
-TRANSLATIONS.searchPlaceholder = {
-    en: "Search",
-    tr: "Ara"
-};
-
-TRANSLATIONS.seminarPostfix = {
-    en: "seminar(s)",
-    tr: "seminer"
-};
-
-
-
-
 
 // ---------- helpers ----------
 const $ = (sel) => document.querySelector(sel);
@@ -99,17 +43,6 @@ function renderRow(seminar) {
 }
 
 // ---------- render ----------
-
-function applyTranslations(lang) {
-  document.querySelectorAll("[data-i18n]").forEach(el => {
-    const key = el.dataset.i18n;
-    if (TRANSLATIONS[key] && TRANSLATIONS[key][lang]) {
-      el.textContent = TRANSLATIONS[key][lang];
-    }
-  });
-}
-
-
 
 function renderTable(list) {
     const tbody = $("#tbody");
@@ -165,7 +98,7 @@ function apply() {
     let lang = localStorage.getItem("lang") || "en";
 
     $("#table-container").hidden = list.length === 0;
-    $("#count").textContent = `${list.length} ${TRANSLATIONS.seminarPostfix[lang] || "seminar(s)"}`;
+    $("#count").textContent = `${list.length} ${TRANSLATIONS.seminarsPostfix[lang] || "seminar(s)"}`;
 
     renderTable(list);
     renderCards(list);
@@ -178,7 +111,7 @@ function resetFilters() {
 
 function render() {
     let lang = localStorage.getItem("lang") || "en";
-    $("#search").placeholder = TRANSLATIONS.searchPlaceholder[lang] || "Search";
+    $("#search").placeholder = TRANSLATIONS.commonSearchPlaceholder[lang] || "Search";
     $("#search").addEventListener("input", apply);
     $("#reset").addEventListener("click", resetFilters);
 
@@ -187,9 +120,4 @@ function render() {
 
 
 document.render = render; // Expose render function for language toggle
-if (document.readyState === "loading") {
-  document.addEventListener("DOMContentLoaded", () => { render(); document.app_init();});
-} else {
-  render();
-  document.app_init();
-}
+render();

@@ -1,13 +1,10 @@
 /* ==========================================================
    App bootstrap
    ========================================================== */
- 
 
-document.VERSION = Date.now();
+document.version = Date.now(); // Cache busting for all modules
 
- 
-import { TRANSLATIONS } from '../data/translations.js';
-
+const { TRANSLATIONS } = await import(`../data/translations.js?v=${document.version}`);
 
 function init() {
     fetch("footer.html")
@@ -75,7 +72,7 @@ function setupNavigation() {
     function setNavOpen(open) {
         nav.setAttribute("data-collapsed", String(!open));
         navToggle.setAttribute("aria-expanded", String(open));
-        
+
         if (open) {
             document.body.classList.add("nav-open");
         } else {
@@ -112,7 +109,7 @@ function setupLanguageToggle() {
     const toggles = document.querySelectorAll(SELECTORS.langToggle);
 
     let currentLang = localStorage.getItem("lang") || "en";
-    
+
     // Update all toggle buttons - show the TARGET language (opposite of current)
     const targetLang = currentLang === "en" ? "TR" : "EN";
     toggles.forEach(toggle => {
@@ -123,14 +120,14 @@ function setupLanguageToggle() {
             toggle.textContent = targetLang;
         }
     });
-    
+
     applyTranslations(currentLang);
 
     toggles.forEach(toggle => {
         toggle.addEventListener("click", () => {
             currentLang = currentLang === "en" ? "tr" : "en";
             localStorage.setItem("lang", currentLang);
-            
+
             // Update all toggle buttons - show the TARGET language (opposite of current)
             const newTargetLang = currentLang === "en" ? "TR" : "EN";
             document.querySelectorAll(SELECTORS.langToggle).forEach(btn => {
@@ -141,7 +138,7 @@ function setupLanguageToggle() {
                     btn.textContent = newTargetLang;
                 }
             });
-            
+
             applyTranslations(currentLang);
             if (document.render) {
                 document.render(); // For pages that implement a render function for dynamic content
@@ -169,7 +166,4 @@ function applyTranslations(lang) {
     });
 }
 
-
-document.app_init=init;
-document.addEventListener("DOMContentLoaded", init);
-
+init();

@@ -1,7 +1,6 @@
- 
-const { ADMINISTRATIVE_STAFF } = await import(`../data/administrative-staff.js?v=${document.VERSION}`);
-const { escapeHtml } = await import(`./helpers.js?v=${document.VERSION}`);
 
+const { ADMINISTRATIVE_STAFF } = await import(`../data/administrative-staff.js?v=${document.version}`);
+const { escapeHtml } = await import(`./helpers.js?v=${document.version}`);
 
 function cardTemplate(staff) {
     const currentLang = localStorage.getItem("lang") || "en";
@@ -56,10 +55,10 @@ function cardTemplate(staff) {
 }
 
 function emptyState(lang) {
-    const message = lang === "tr" 
-        ? "Bu kategoride henüz personel bulunmamaktadır." 
+    const message = lang === "tr"
+        ? "Bu kategoride henüz personel bulunmamaktadır."
         : "No staff members in this category yet.";
-    
+
     return `
     <div class="staff-empty">
         <i class="fa-solid fa-user-slash" aria-hidden="true"></i>
@@ -77,15 +76,15 @@ function render() {
     // Update count
     const totalCount = ADMINISTRATIVE_STAFF.length;
     if (staffCount) {
-        staffCount.textContent = lang === "en" 
+        staffCount.textContent = lang === "en"
             ? `${totalCount} Staff Member${totalCount !== 1 ? 's' : ''}`
             : `${totalCount} Personel`;
     }
 
     // Render grids
     if (staffGrid) {
-        staffGrid.innerHTML = ADMINISTRATIVE_STAFF.length 
-            ? ADMINISTRATIVE_STAFF.map(cardTemplate).join("") 
+        staffGrid.innerHTML = ADMINISTRATIVE_STAFF.length
+            ? ADMINISTRATIVE_STAFF.map(cardTemplate).join("")
             : emptyState(lang);
     }
 
@@ -98,10 +97,4 @@ function render() {
 
 // Expose render function for language toggle
 document.render = render; // Expose render function for language toggle
-if (document.readyState === "loading") {
-  document.addEventListener("DOMContentLoaded", () => { render(); document.app_init();});
-} else {
-  render();
-  document.app_init();
-}
-
+render(); // Initial render

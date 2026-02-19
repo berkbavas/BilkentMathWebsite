@@ -1,13 +1,7 @@
- 
 
-const newsModule =
-  await import(`../data/news.js?v=${document.VERSION}`);
 
-const helpersModule =
-  await import(`./helpers.js?v=${document.VERSION}`);
-
-const NEWS = newsModule.NEWS;
-const { escapeHtml } = helpersModule;
+const { NEWS } = await import(`../data/news.js?v=${document.version}`);
+const { escapeHtml } = await import(`./helpers.js?v=${document.version}`);
 
 let elMount = document.getElementById("news-timeline");
 
@@ -84,9 +78,4 @@ function render() {
 }
 
 document.render = render; // Expose render function for language toggle
-if (document.readyState === "loading") {
-  document.addEventListener("DOMContentLoaded", () => { render(); document.app_init();});
-} else {
-  render();
-  document.app_init();
-}
+render(); // Initial render
