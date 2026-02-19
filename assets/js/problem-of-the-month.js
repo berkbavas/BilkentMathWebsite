@@ -60,12 +60,19 @@ function yearStats(items) {
     return solversTotal;
 }
 
+function resolveAffiliation(affiliation, lang) {
+    if (!affiliation) return "";
+    if (typeof affiliation === "string") return affiliation;
+    if (typeof affiliation === "object") return affiliation[lang] || affiliation.en || affiliation.tr || "";
+    return "";
+}
+
 function renderCard(item, lang) {
     const solversList = (item.solvers || []).map(
         (solver) => `
       <li class="solver-item">
         <span class="solver-name">${escapeHtml(solver.name)}</span>
-        <span class="solver-aff">${escapeHtml(solver.affiliation ? solver.affiliation : "")}</span>
+        <span class="solver-aff">${escapeHtml(resolveAffiliation(solver.affiliation, lang))}</span>
       </li>
     `
     ).join("");

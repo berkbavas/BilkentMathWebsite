@@ -5,15 +5,15 @@ export const PROBLEM_OF_MONTH_2009 = [
         question: { en: "0812q.pdf", tr: "0812s.pdf" },
         solution: { en: "0901a.pdf", tr: "0901c.pdf" },
         solvers: [
-            { name: "Tran Thanh Nam", affiliation: "Tomsk Polytechnic University, Russia" },
-            { name: "Khaled Halaoua", affiliation: "ISSAT, Syria" },
-            { name: "Brian Bradie", affiliation: "Christopher Newport University, VA, USA" },
-            { name: "Lo Giudice Alessio", affiliation: "University of Palermo, Italy" },
-            { name: "Omran Kouba", affiliation: "Higher Institute for Applied Science and Technology, Syria" },
-            { name: "Salvaggio Andrea", affiliation: "University of Palermo, Italy" },
-            { name: "Juergen Weith", affiliation: "University of Applied Sciences, Schweinfurt, Germany" },
-            { name: "Roger Bengtsson", affiliation: "Lund, Sweden" },
-            { name: "Albert Stadler", affiliation: "Herrliberg, Switzerland" }
+            { name: "Tran Thanh Nam", affiliation: { en: "Tomsk Polytechnic University, Russia", tr: "Tomsk Polytechnic Üniversitesi, Rusya" } },
+            { name: "Khaled Halaoua", affiliation: { en: "ISSAT, Syria", tr: "ISSAT, Suriye" } },
+            { name: "Brian Bradie", affiliation: { en: "Christopher Newport University, VA, USA", tr: "Christopher Newport Üniversitesi, VA, ABD" } },
+            { name: "Lo Giudice Alessio", affiliation: { en: "University of Palermo, Italy", tr: "Üniversitesi of Palermo, İtalya" } },
+            { name: "Omran Kouba", affiliation: { en: "Higher Institute for Applied Science and Technology, Syria", tr: "Higher Institute for Applied Science and Technology, Suriye" } },
+            { name: "Salvaggio Andrea", affiliation: { en: "University of Palermo, Italy", tr: "Üniversitesi of Palermo, İtalya" } },
+            { name: "Juergen Weith", affiliation: { en: "University of Applied Sciences, Schweinfurt, Germany", tr: "Üniversitesi of Applied Sciences, Schweinfurt, Almanya" } },
+            { name: "Roger Bengtsson", affiliation: { en: "Lund, Sweden", tr: "Lund, İsveç" } },
+            { name: "Albert Stadler", affiliation: { en: "Herrliberg, Switzerland", tr: "Herrliberg, İsviçre" } }
         ]
     },
 
@@ -25,13 +25,13 @@ export const PROBLEM_OF_MONTH_2009 = [
         solvers: [
             { name: "Bojan Basic", affiliation: "Novi Sad, Serbia" },
             { name: "Manh Dung Nguyen", affiliation: "High school for gifted students, HUS, Vietnam" },
-            { name: "Albert Stadler", affiliation: "Herrliberg, Switzerland" },
-            { name: "Ilias Giechaskiel", affiliation: "Anatolia College, Thessaloniki, Greece" },
-            { name: "Tran Thanh Nam", affiliation: "Tomsk Polytechnic University, Russia" },
-            { name: "Mohsen Sujadi nia", affiliation: "Agriculture University of Iran" },
-            { name: "Can Gokler", affiliation: "METU" },
-            { name: "Cornel Gruian", affiliation: "SC Remarul, Cluj-Napoca, Romania" },
-            { name: "Omran Kouba", affiliation: "Higher Institute for Applied Science & Technology, Syria" }
+            { name: "Albert Stadler", affiliation: { en: "Herrliberg, Switzerland", tr: "Herrliberg, İsviçre" } },
+            { name: "Ilias Giechaskiel", affiliation: { en: "Anatolia College, Thessaloniki, Greece", tr: "Anatolia College, Thessaloniki, Yunanistan" } },
+            { name: "Tran Thanh Nam", affiliation: { en: "Tomsk Polytechnic University, Russia", tr: "Tomsk Polytechnic Üniversitesi, Rusya" } },
+            { name: "Mohsen Sujadi nia", affiliation: { en: "Agriculture University of Iran", tr: "Agriculture Üniversitesi of İran" } },
+            { name: "Can Gokler", affiliation: { en: "METU", tr: "ODTÜ" } },
+            { name: "Cornel Gruian", affiliation: { en: "SC Remarul, Cluj-Napoca, Romania", tr: "SC Remarul, Cluj-Napoca, Romanya" } },
+            { name: "Omran Kouba", affiliation: { en: "Higher Institute for Applied Science & Technology, Syria", tr: "Higher Institute for Applied Science & Technology, Suriye" } }
         ]
     },
 
@@ -41,16 +41,16 @@ export const PROBLEM_OF_MONTH_2009 = [
         question: { en: "0902q.pdf", tr: "0902s.pdf" },
         solution: { en: "0903a.pdf", tr: "0903c.pdf" },
         solvers: [
-            { name: "Tran Thanh Nam", affiliation: "Tomsk Polytechnic University, Russia" },
+            { name: "Tran Thanh Nam", affiliation: { en: "Tomsk Polytechnic University, Russia", tr: "Tomsk Polytechnic Üniversitesi, Rusya" } },
             { name: "Manh Dung Nguyen", affiliation: "High school for gifted students, HUS, Vietnam" },
-            { name: "Albert Stadler", affiliation: "Herrliberg, Switzerland" },
-            { name: "Cornel Gruian", affiliation: "SC Remarul, Cluj-Napoca, Romania" },
+            { name: "Albert Stadler", affiliation: { en: "Herrliberg, Switzerland", tr: "Herrliberg, İsviçre" } },
+            { name: "Cornel Gruian", affiliation: { en: "SC Remarul, Cluj-Napoca, Romania", tr: "SC Remarul, Cluj-Napoca, Romanya" } },
             { name: "Bojan Basic", affiliation: "Novi Sad, Serbia" },
-            { name: "Abhishek Verma", affiliation: "Delhi College of Engineering, India" },
-            { name: "Michel Bataille", affiliation: "Rouen, France" },
-            { name: "Tuan Le", affiliation: "Fairmont High School, Anaheim, CA, USA" },
-            { name: "Omran Kouba", affiliation: "Higher Institute for Applied Science and Technology, Syria" },
-            { name: "Can Gokler", affiliation: "METU" }
+            { name: "Abhishek Verma", affiliation: { en: "Delhi College of Engineering, India", tr: "Delhi College of Engineering, Hindistan" } },
+            { name: "Michel Bataille", affiliation: { en: "Rouen, France", tr: "Rouen, Fransa" } },
+            { name: "Tuan Le", affiliation: { en: "Fairmont High School, Anaheim, CA, USA", tr: "Fairmont High School, Anaheim, CA, ABD" } },
+            { name: "Omran Kouba", affiliation: { en: "Higher Institute for Applied Science and Technology, Syria", tr: "Higher Institute for Applied Science and Technology, Suriye" } },
+            { name: "Can Gokler", affiliation: { en: "METU", tr: "ODTÜ" } }
         ]
     },
 
@@ -61,17 +61,17 @@ export const PROBLEM_OF_MONTH_2009 = [
         solution: { en: "0904a.pdf", tr: "0904c.pdf" },
         solvers: [
             { name: "Bojan Basic", affiliation: "Novi Sad, Serbia" },
-            { name: "Kee-Wai Lau", affiliation: "Hong-Kong, China" },
-            { name: "Tran Thanh Nam", affiliation: "Tomsk Polytechnic University, Russia" },
-            { name: "Albert Stadler", affiliation: "Herrliberg, Switzerland" },
+            { name: "Kee-Wai Lau", affiliation: { en: "Hong-Kong, China", tr: "Hong-Kong, Çin" } },
+            { name: "Tran Thanh Nam", affiliation: { en: "Tomsk Polytechnic University, Russia", tr: "Tomsk Polytechnic Üniversitesi, Rusya" } },
+            { name: "Albert Stadler", affiliation: { en: "Herrliberg, Switzerland", tr: "Herrliberg, İsviçre" } },
             { name: "Cao Minh Quang", affiliation: "Nguyen Binh Khiem High School, Vinh Long, Vietnam" },
-            { name: "Andrea Munaro", affiliation: "University of Trento, Italy" },
-            { name: "Cornel Gruian", affiliation: "SC Remarul, Cluj-Napoca, Romania" },
-            { name: "M. Haluk Guler", affiliation: "University of North Carolina at Chapel Hill, USA" },
-            { name: "Omran Kouba", affiliation: "Higher Institute for Applied Science & Technology, Syria" },
-            { name: "Tuan Le", affiliation: "Fairmont High School, Anaheim, CA, USA" },
+            { name: "Andrea Munaro", affiliation: { en: "University of Trento, Italy", tr: "Üniversitesi of Trento, İtalya" } },
+            { name: "Cornel Gruian", affiliation: { en: "SC Remarul, Cluj-Napoca, Romania", tr: "SC Remarul, Cluj-Napoca, Romanya" } },
+            { name: "M. Haluk Guler", affiliation: { en: "University of North Carolina at Chapel Hill, USA", tr: "Üniversitesi of North Carolina at Chapel Hill, ABD" } },
+            { name: "Omran Kouba", affiliation: { en: "Higher Institute for Applied Science & Technology, Syria", tr: "Higher Institute for Applied Science & Technology, Suriye" } },
+            { name: "Tuan Le", affiliation: { en: "Fairmont High School, Anaheim, CA, USA", tr: "Fairmont High School, Anaheim, CA, ABD" } },
             { name: "Manh Dung Nguyen", affiliation: "High school for gifted students, HUS, Vietnam" },
-            { name: "Abhishek Verma", affiliation: "Delhi College of Engineering, India" },
+            { name: "Abhishek Verma", affiliation: { en: "Delhi College of Engineering, India", tr: "Delhi College of Engineering, Hindistan" } },
             { name: "Vedat Deveci", affiliation: "Devlet Malzeme Ofisi, Istanbul" }
         ]
     },
@@ -82,18 +82,18 @@ export const PROBLEM_OF_MONTH_2009 = [
         question: { en: "0904q.pdf", tr: "0904s.pdf" },
         solution: { en: "0905a.pdf", tr: "0905c.pdf" },
         solvers: [
-            { name: "Cornel Gruian", affiliation: "SC Remarul, Cluj-Napoca, Romania" },
-            { name: "Omran Kouba", affiliation: "Higher Institute for Applied Science and Technology, Syria" },
+            { name: "Cornel Gruian", affiliation: { en: "SC Remarul, Cluj-Napoca, Romania", tr: "SC Remarul, Cluj-Napoca, Romanya" } },
+            { name: "Omran Kouba", affiliation: { en: "Higher Institute for Applied Science and Technology, Syria", tr: "Higher Institute for Applied Science and Technology, Suriye" } },
             { name: "Bojan Basic", affiliation: "Novi Sad, Serbia" },
-            { name: "Henrik Aberg", affiliation: "Gothenburg, Sweden" },
-            { name: "Kee-Wai Lau", affiliation: "Hong-Kong, China" },
-            { name: "Stanislav Volkov", affiliation: "Mittag-Leffler Institute, Sweden" },
-            { name: "Tran Thanh Nam", affiliation: "Tomsk Polytechnic University, Russia" },
-            { name: "Hachem Hadi", affiliation: "Higher Institute for Applied Science and Technology, Syria" },
-            { name: "Albert Stadler", affiliation: "Herrliberg, Switzerland" },
-            { name: "Roger Bengtsson", affiliation: "Lund, Sweden" },
+            { name: "Henrik Aberg", affiliation: { en: "Gothenburg, Sweden", tr: "Gothenburg, İsveç" } },
+            { name: "Kee-Wai Lau", affiliation: { en: "Hong-Kong, China", tr: "Hong-Kong, Çin" } },
+            { name: "Stanislav Volkov", affiliation: { en: "Mittag-Leffler Institute, Sweden", tr: "Mittag-Leffler Institute, İsveç" } },
+            { name: "Tran Thanh Nam", affiliation: { en: "Tomsk Polytechnic University, Russia", tr: "Tomsk Polytechnic Üniversitesi, Rusya" } },
+            { name: "Hachem Hadi", affiliation: { en: "Higher Institute for Applied Science and Technology, Syria", tr: "Higher Institute for Applied Science and Technology, Suriye" } },
+            { name: "Albert Stadler", affiliation: { en: "Herrliberg, Switzerland", tr: "Herrliberg, İsviçre" } },
+            { name: "Roger Bengtsson", affiliation: { en: "Lund, Sweden", tr: "Lund, İsveç" } },
             { name: "Boukharfane Radouan", affiliation: "Moulay Driss FES, Morocco" },
-            { name: "Abhishek Verma", affiliation: "Delhi College of Engineering, India" }
+            { name: "Abhishek Verma", affiliation: { en: "Delhi College of Engineering, India", tr: "Delhi College of Engineering, Hindistan" } }
         ]
     },
 
@@ -103,20 +103,20 @@ export const PROBLEM_OF_MONTH_2009 = [
         question: { en: "0905q.pdf", tr: "0905s.pdf" },
         solution: { en: "0906a.pdf", tr: "0906c.pdf" },
         solvers: [
-            { name: "Albert Stadler", affiliation: "Herrliberg, Switzerland" },
+            { name: "Albert Stadler", affiliation: { en: "Herrliberg, Switzerland", tr: "Herrliberg, İsviçre" } },
             { name: "Boukharfane Radouane", affiliation: "Moulay Driss FES, Morocco" },
             { name: "Cuneyd Ozturk", affiliation: "Ankara Fen Lisesi" },
-            { name: "Aslihan Demirkaya", affiliation: "University of Kansas, USA" },
-            { name: "Kee-Wai Lau", affiliation: "Hong-Kong, China" },
-            { name: "Gorkem Ozkaya", affiliation: "Princeton University, USA" },
-            { name: "Omran Kouba", affiliation: "Higher Institute for Applied Science & Technology, Syria" },
-            { name: "Roger Bengtsson", affiliation: "Lund, Sweden" },
-            { name: "Tran Thanh Nam", affiliation: "Tomsk Polytechnic University, Russia" },
-            { name: "Tuan Le", affiliation: "Fairmont High School, Anaheim, CA, USA" },
-            { name: "Konstantine Zelator", affiliation: "Rhode Island College, R.I., USA" },
+            { name: "Aslihan Demirkaya", affiliation: { en: "University of Kansas, USA", tr: "Üniversitesi of Kansas, ABD" } },
+            { name: "Kee-Wai Lau", affiliation: { en: "Hong-Kong, China", tr: "Hong-Kong, Çin" } },
+            { name: "Gorkem Ozkaya", affiliation: { en: "Princeton University, USA", tr: "Princeton Üniversitesi, ABD" } },
+            { name: "Omran Kouba", affiliation: { en: "Higher Institute for Applied Science & Technology, Syria", tr: "Higher Institute for Applied Science & Technology, Suriye" } },
+            { name: "Roger Bengtsson", affiliation: { en: "Lund, Sweden", tr: "Lund, İsveç" } },
+            { name: "Tran Thanh Nam", affiliation: { en: "Tomsk Polytechnic University, Russia", tr: "Tomsk Polytechnic Üniversitesi, Rusya" } },
+            { name: "Tuan Le", affiliation: { en: "Fairmont High School, Anaheim, CA, USA", tr: "Fairmont High School, Anaheim, CA, ABD" } },
+            { name: "Konstantine Zelator", affiliation: { en: "Rhode Island College, R.I., USA", tr: "Rhode Island College, R.I., ABD" } },
             { name: "Ruben Victor Cohen", affiliation: "Buenos Aires, Argentina" },
             { name: "Bojan Basic", affiliation: "Novi Sad, Serbia" },
-            { name: "Cornel Gruian", affiliation: "SC Remarul, Cluj-Napoca, Romania" }
+            { name: "Cornel Gruian", affiliation: { en: "SC Remarul, Cluj-Napoca, Romania", tr: "SC Remarul, Cluj-Napoca, Romanya" } }
         ]
     },
 
@@ -126,17 +126,17 @@ export const PROBLEM_OF_MONTH_2009 = [
         question: { en: "0906q.pdf", tr: "0906s.pdf" },
         solution: { en: "0908a.pdf", tr: "0908c.pdf" },
         solvers: [
-            { name: "Omran Kouba", affiliation: "Higher Institute for Applied Science and Technology, Syria" },
-            { name: "Kee-Wai Lau", affiliation: "Hong-Kong, China" },
-            { name: "Albert Stadler", affiliation: "Herrliberg, Switzerland" },
-            { name: "Peng Chhay Ung", affiliation: "Lycee Fenelon in Paris, France" },
-            { name: "Cornel Gruian", affiliation: "SC Remarul, Cluj-Napoca, Romania" },
-            { name: "Tran Thanh Nam", affiliation: "Tomsk Polytechnic University, Russia" },
+            { name: "Omran Kouba", affiliation: { en: "Higher Institute for Applied Science and Technology, Syria", tr: "Higher Institute for Applied Science and Technology, Suriye" } },
+            { name: "Kee-Wai Lau", affiliation: { en: "Hong-Kong, China", tr: "Hong-Kong, Çin" } },
+            { name: "Albert Stadler", affiliation: { en: "Herrliberg, Switzerland", tr: "Herrliberg, İsviçre" } },
+            { name: "Peng Chhay Ung", affiliation: { en: "Lycee Fenelon in Paris, France", tr: "Lycee Fenelon in Paris, Fransa" } },
+            { name: "Cornel Gruian", affiliation: { en: "SC Remarul, Cluj-Napoca, Romania", tr: "SC Remarul, Cluj-Napoca, Romanya" } },
+            { name: "Tran Thanh Nam", affiliation: { en: "Tomsk Polytechnic University, Russia", tr: "Tomsk Polytechnic Üniversitesi, Rusya" } },
             { name: "Bojan Basic", affiliation: "Novi Sad, Serbia" },
-            { name: "Fatma Topuz", affiliation: "Dumlupinar University, Kutahya" },
+            { name: "Fatma Topuz", affiliation: { en: "Dumlupinar University, Kutahya", tr: "Dumlupinar Üniversitesi, Kutahya" } },
             { name: "Cuneyd Ozturk", affiliation: "Ankara Fen Lisesi" },
-            { name: "Mithil Ramteke", affiliation: "Bangalore, India" },
-            { name: "Can Turkun", affiliation: "TOBB University, Ankara" }
+            { name: "Mithil Ramteke", affiliation: { en: "Bangalore, India", tr: "Bangalore, Hindistan" } },
+            { name: "Can Turkun", affiliation: { en: "TOBB University, Ankara", tr: "TOBB Üniversitesi, Ankara" } }
         ]
     },
 
@@ -146,26 +146,26 @@ export const PROBLEM_OF_MONTH_2009 = [
         question: { en: "0908q.pdf", tr: "0908s.pdf" },
         solution: { en: "0909a.pdf", tr: "0909c.pdf" },
         solvers: [
-            { name: "Cornel Gruian", affiliation: "SC Remarul, Cluj-Napoca, Romania" },
-            { name: "Bahadir Gizlici", affiliation: "Yeditepe University, Istanbul" },
-            { name: "Omran Kouba", affiliation: "Higher Institute for Applied Science & Technology, Syria" },
-            { name: "Henrik Aberg", affiliation: "Gothenburg, Sweden" },
-            { name: "Kee-Wai Lau", affiliation: "Hong-Kong, China" },
-            { name: "Boukharfane Radouane", affiliation: "ISAE, Toulouse, France" },
-            { name: "Albert Stadler", affiliation: "Herrliberg, Switzerland" },
-            { name: "Samil Akcagil", affiliation: "Sakarya University" },
+            { name: "Cornel Gruian", affiliation: { en: "SC Remarul, Cluj-Napoca, Romania", tr: "SC Remarul, Cluj-Napoca, Romanya" } },
+            { name: "Bahadir Gizlici", affiliation: { en: "Yeditepe University, Istanbul", tr: "Yeditepe Üniversitesi, Istanbul" } },
+            { name: "Omran Kouba", affiliation: { en: "Higher Institute for Applied Science & Technology, Syria", tr: "Higher Institute for Applied Science & Technology, Suriye" } },
+            { name: "Henrik Aberg", affiliation: { en: "Gothenburg, Sweden", tr: "Gothenburg, İsveç" } },
+            { name: "Kee-Wai Lau", affiliation: { en: "Hong-Kong, China", tr: "Hong-Kong, Çin" } },
+            { name: "Boukharfane Radouane", affiliation: { en: "ISAE, Toulouse, France", tr: "ISAE, Toulouse, Fransa" } },
+            { name: "Albert Stadler", affiliation: { en: "Herrliberg, Switzerland", tr: "Herrliberg, İsviçre" } },
+            { name: "Samil Akcagil", affiliation: { en: "Sakarya University", tr: "Sakarya Üniversitesi" } },
             { name: "Mahmut Sait Okyay", affiliation: "Bursa Ozel Nilufer Fen Lisesi" },
-            { name: "Uwe Schafer", affiliation: "Dreieich, Germany" },
-            { name: "Tran Thanh Nam", affiliation: "Tomsk Polytechnic University, Russia" },
+            { name: "Uwe Schafer", affiliation: { en: "Dreieich, Germany", tr: "Dreieich, Almanya" } },
+            { name: "Tran Thanh Nam", affiliation: { en: "Tomsk Polytechnic University, Russia", tr: "Tomsk Polytechnic Üniversitesi, Rusya" } },
             { name: "Naser Pastoriza Alejandro Jose", affiliation: "FaMAF-Unc.-Cordoba, Argentina" },
             { name: "Bojan Basic", affiliation: "Novi Sad, Serbia" },
-            { name: "Khaled Halaoua", affiliation: "ISSAT, Damascus, Syria" },
+            { name: "Khaled Halaoua", affiliation: { en: "ISSAT, Damascus, Syria", tr: "ISSAT, Damascus, Suriye" } },
             { name: "Cuneyd Ozturk", affiliation: "Ankara Fen Lisesi" },
-            { name: "Roger Bengtsson", affiliation: "Lund, Sweden" },
-            { name: "Magnus Jakobsson", affiliation: "Lund, Sweden" },
-            { name: "Ghalem Allai", affiliation: "Supaero ISAE, France" },
+            { name: "Roger Bengtsson", affiliation: { en: "Lund, Sweden", tr: "Lund, İsveç" } },
+            { name: "Magnus Jakobsson", affiliation: { en: "Lund, Sweden", tr: "Lund, İsveç" } },
+            { name: "Ghalem Allai", affiliation: { en: "Supaero ISAE, France", tr: "Supaero ISAE, Fransa" } },
             { name: "Vedat Deveci", affiliation: "DMO, Istanbul" },
-            { name: "Ali Sari", affiliation: "Yildiz Teknik University" }
+            { name: "Ali Sari", affiliation: { en: "Yildiz Teknik University", tr: "Yildiz Teknik Üniversitesi" } }
         ]
     },
 
@@ -175,16 +175,16 @@ export const PROBLEM_OF_MONTH_2009 = [
         question: { en: "0909q.pdf", tr: "0909s.pdf" },
         solution: { en: "0910a.pdf", tr: "0910c.pdf" },
         solvers: [
-            { name: "Chuan Guo", affiliation: "University of Waterloo, Canada" },
+            { name: "Chuan Guo", affiliation: { en: "University of Waterloo, Canada", tr: "Üniversitesi of Waterloo, Kanada" } },
             { name: "Bojan Basic", affiliation: "Novi Sad, Serbia" },
-            { name: "Omran Kouba", affiliation: "Higher Institute for Applied Science and Technology, Syria" },
-            { name: "Uwe Schafer", affiliation: "Dreieich, Germany" },
-            { name: "Cornel Gruian", affiliation: "SC Remarul, Cluj-Napoca, Romania" },
-            { name: "Roger Bengtsson", affiliation: "Lund, Sweden" },
-            { name: "Albert Stadler", affiliation: "Herrliberg, Switzerland" },
-            { name: "Idoughi Ramzi", affiliation: "Supaero ISAE, Toulouse, France" },
-            { name: "Magnus Jakobsson", affiliation: "Lund, Sweden" },
-            { name: "Tran Thanh Nam", affiliation: "Tomsk Polytechnic University, Russia" }
+            { name: "Omran Kouba", affiliation: { en: "Higher Institute for Applied Science and Technology, Syria", tr: "Higher Institute for Applied Science and Technology, Suriye" } },
+            { name: "Uwe Schafer", affiliation: { en: "Dreieich, Germany", tr: "Dreieich, Almanya" } },
+            { name: "Cornel Gruian", affiliation: { en: "SC Remarul, Cluj-Napoca, Romania", tr: "SC Remarul, Cluj-Napoca, Romanya" } },
+            { name: "Roger Bengtsson", affiliation: { en: "Lund, Sweden", tr: "Lund, İsveç" } },
+            { name: "Albert Stadler", affiliation: { en: "Herrliberg, Switzerland", tr: "Herrliberg, İsviçre" } },
+            { name: "Idoughi Ramzi", affiliation: { en: "Supaero ISAE, Toulouse, France", tr: "Supaero ISAE, Toulouse, Fransa" } },
+            { name: "Magnus Jakobsson", affiliation: { en: "Lund, Sweden", tr: "Lund, İsveç" } },
+            { name: "Tran Thanh Nam", affiliation: { en: "Tomsk Polytechnic University, Russia", tr: "Tomsk Polytechnic Üniversitesi, Rusya" } }
         ]
     },
 
@@ -195,17 +195,17 @@ export const PROBLEM_OF_MONTH_2009 = [
         solution: { en: "0911a.pdf", tr: "0911c.pdf" },
         solvers: [
             { name: "Bojan Basic", affiliation: "Novi Sad, Serbia" },
-            { name: "Magnus Jakobsson", affiliation: "Lund, Sweden" },
+            { name: "Magnus Jakobsson", affiliation: { en: "Lund, Sweden", tr: "Lund, İsveç" } },
             { name: "Mahmut Sait Okyay", affiliation: "Bursa Ozel Nilufer Fen Lisesi" },
-            { name: "Cornel Gruian", affiliation: "SC Remarul, Cluj-Napoca, Romania" },
-            { name: "Tran Thanh Nam", affiliation: "Tomsk Polytechnic University, Russia" },
-            { name: "Henrik Aberg", affiliation: "Gothenburg, Sweden" },
-            { name: "Ernist Elmar Tilenbaev", affiliation: "TOBB University" },
-            { name: "Albert Stadler", affiliation: "Herrliberg, Switzerland" },
-            { name: "Bekjan Djumabaev", affiliation: "METU" },
-            { name: "Roger Bengtsson", affiliation: "Lund, Sweden" },
-            { name: "Omran Kouba", affiliation: "Higher Institute for Applied Science & Technology, Syria" },
-            { name: "Uwe Schafer", affiliation: "Dreieich, Germany" }
+            { name: "Cornel Gruian", affiliation: { en: "SC Remarul, Cluj-Napoca, Romania", tr: "SC Remarul, Cluj-Napoca, Romanya" } },
+            { name: "Tran Thanh Nam", affiliation: { en: "Tomsk Polytechnic University, Russia", tr: "Tomsk Polytechnic Üniversitesi, Rusya" } },
+            { name: "Henrik Aberg", affiliation: { en: "Gothenburg, Sweden", tr: "Gothenburg, İsveç" } },
+            { name: "Ernist Elmar Tilenbaev", affiliation: { en: "TOBB University", tr: "TOBB Üniversitesi" } },
+            { name: "Albert Stadler", affiliation: { en: "Herrliberg, Switzerland", tr: "Herrliberg, İsviçre" } },
+            { name: "Bekjan Djumabaev", affiliation: { en: "METU", tr: "ODTÜ" } },
+            { name: "Roger Bengtsson", affiliation: { en: "Lund, Sweden", tr: "Lund, İsveç" } },
+            { name: "Omran Kouba", affiliation: { en: "Higher Institute for Applied Science & Technology, Syria", tr: "Higher Institute for Applied Science & Technology, Suriye" } },
+            { name: "Uwe Schafer", affiliation: { en: "Dreieich, Germany", tr: "Dreieich, Almanya" } }
         ]
     },
 
@@ -216,18 +216,18 @@ export const PROBLEM_OF_MONTH_2009 = [
         solution: { en: "0912a.pdf", tr: "0912c.pdf" },
         solvers: [
             { name: "Bojan Basic", affiliation: "Novi Sad, Serbia" },
-            { name: "Can Turkun", affiliation: "TOBB University" },
-            { name: "Omran Kouba", affiliation: "Higher Institute for Applied Science & Technology, Syria" },
-            { name: "Tran Thanh Nam", affiliation: "Tomsk Polytechnic University, Russia" },
-            { name: "Albert Stadler", affiliation: "Herrliberg, Switzerland" },
-            { name: "Marco Figueroa", affiliation: "Guanajuato University, Mexico" },
-            { name: "Ilias Giechaskiel", affiliation: "Princeton University" },
-            { name: "Henrik Aberg", affiliation: "Gothenburg, Sweden" },
-            { name: "Harald Bogeholz", affiliation: "c't Computer magazine, Germany" },
-            { name: "Andreas Stiller", affiliation: "c't Computer magazine, Germany" },
-            { name: "Cornel Gruian", affiliation: "SC Remarul, Cluj-Napoca, Romania" },
-            { name: "Ali Kemal Uncu", affiliation: "TOBB University" },
-            { name: "F. Wallner", affiliation: "Munich, Germany" }
+            { name: "Can Turkun", affiliation: { en: "TOBB University", tr: "TOBB Üniversitesi" } },
+            { name: "Omran Kouba", affiliation: { en: "Higher Institute for Applied Science & Technology, Syria", tr: "Higher Institute for Applied Science & Technology, Suriye" } },
+            { name: "Tran Thanh Nam", affiliation: { en: "Tomsk Polytechnic University, Russia", tr: "Tomsk Polytechnic Üniversitesi, Rusya" } },
+            { name: "Albert Stadler", affiliation: { en: "Herrliberg, Switzerland", tr: "Herrliberg, İsviçre" } },
+            { name: "Marco Figueroa", affiliation: { en: "Guanajuato University, Mexico", tr: "Guanajuato Üniversitesi, Mexico" } },
+            { name: "Ilias Giechaskiel", affiliation: { en: "Princeton University", tr: "Princeton Üniversitesi" } },
+            { name: "Henrik Aberg", affiliation: { en: "Gothenburg, Sweden", tr: "Gothenburg, İsveç" } },
+            { name: "Harald Bogeholz", affiliation: { en: "c't Computer magazine, Germany", tr: "c't Computer magazine, Almanya" } },
+            { name: "Andreas Stiller", affiliation: { en: "c't Computer magazine, Germany", tr: "c't Computer magazine, Almanya" } },
+            { name: "Cornel Gruian", affiliation: { en: "SC Remarul, Cluj-Napoca, Romania", tr: "SC Remarul, Cluj-Napoca, Romanya" } },
+            { name: "Ali Kemal Uncu", affiliation: { en: "TOBB University", tr: "TOBB Üniversitesi" } },
+            { name: "F. Wallner", affiliation: { en: "Munich, Germany", tr: "Munich, Almanya" } }
         ]
     }
 ];
