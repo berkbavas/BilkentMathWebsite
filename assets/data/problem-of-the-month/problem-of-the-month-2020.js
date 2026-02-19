@@ -2,8 +2,8 @@ export const PROBLEM_OF_MONTH_2020 = [
     {
         month: "January",
         year: 2020,
-        question: "1912q.pdf",
-        solution: "2001a.pdf",
+        question: { en: "1912q.pdf", tr: "1912s.pdf" },
+        solution: { en: "2001a.pdf", tr: "2001c.pdf" },
         solvers: [
             { name: "Toshihiro Shimizu", affiliation: "Kawasaki, Japan" },
             { name: "Muti Kara", affiliation: "Ankara Atatürk Anadolu Lisesi" },
@@ -15,8 +15,8 @@ export const PROBLEM_OF_MONTH_2020 = [
     {
         month: "February",
         year: 2020,
-        question: "2001q.pdf",
-        solution: "2002a.pdf",
+        question: { en: "2001q.pdf", tr: "2001s.pdf" },
+        solution: { en: "2002a.pdf", tr: "2002c.pdf" },
         solvers: [
             { name: "Toshihiro Shimizu", affiliation: "Kawasaki, Japan" },
             { name: "Hasan Zübeyr Demir", affiliation: "Özel Ankara Çağlayan Fen Lisesi" },
@@ -30,8 +30,8 @@ export const PROBLEM_OF_MONTH_2020 = [
     {
         month: "March",
         year: 2020,
-        question: "2002q.pdf",
-        solution: "2003a.pdf",
+        question: { en: "2002q.pdf", tr: "2002s.pdf" },
+        solution: { en: "2003a.pdf", tr: "2003c.pdf" },
         solvers: [
             { name: "Toshihiro Shimizu", affiliation: "Kawasaki, Japan" },
             { name: "Emirhan Yağcıoğlu", affiliation: "Özel Ankara Matematik ve Fen Bilimleri Anadolu Lisesi" },
@@ -44,8 +44,8 @@ export const PROBLEM_OF_MONTH_2020 = [
     {
         month: "April",
         year: 2020,
-        question: "2003q.pdf",
-        solution: "2004a.pdf",
+        question: { en: "2003q.pdf", tr: "2003s.pdf" },
+        solution: { en: "2004a.pdf", tr: "2004c.pdf" },
         solvers: [
             { name: "Toshihiro Shimizu", affiliation: "Kawasaki, Japan" },
             { name: "Vedat Deveci", affiliation: "İstanbul" },
@@ -67,8 +67,8 @@ export const PROBLEM_OF_MONTH_2020 = [
     {
         month: "May",
         year: 2020,
-        question: "2004q.pdf",
-        solution: "2005a.pdf",
+        question: { en: "2004q.pdf", tr: "2004s.pdf" },
+        solution: { en: "2005a.pdf", tr: "2005c.pdf" },
         solvers: [
             { name: "Toshihiro Shimizu", affiliation: "Kawasaki, Japan" },
             { name: "Mahmut Sait Okyay", affiliation: "UNIST, South Korea" },
@@ -90,8 +90,8 @@ export const PROBLEM_OF_MONTH_2020 = [
     {
         month: "June",
         year: 2020,
-        question: "2005q.pdf",
-        solution: "2006a.pdf",
+        question: { en: "2005q.pdf", tr: "2005s.pdf" },
+        solution: { en: "2006a.pdf", tr: "2006c.pdf" },
         solvers: [
             { name: "Toshihiro Shimizu", affiliation: "Kawasaki, Japan" },
             { name: "Magnus Jakobsson", affiliation: "Lund, Sweden" },
@@ -102,8 +102,8 @@ export const PROBLEM_OF_MONTH_2020 = [
     {
         month: "July-August",
         year: 2020,
-        question: "2006q.pdf",
-        solution: "2008a.pdf",
+        question: { en: "2006q.pdf", tr: "2006s.pdf" },
+        solution: { en: "2008a.pdf", tr: "2008c.pdf" },
         solvers: [
             { name: "Toshihiro Shimizu", affiliation: "Kawasaki, Japan" },
             { name: "Vedat Deveci", affiliation: "İstanbul" },
@@ -123,8 +123,8 @@ export const PROBLEM_OF_MONTH_2020 = [
     {
         month: "September",
         year: 2020,
-        question: "2008q.pdf",
-        solution: "2009a.pdf",
+        question: { en: "2008q.pdf", tr: "2008s.pdf" },
+        solution: { en: "2009a.pdf", tr: "2009c.pdf" },
         solvers: [
             { name: "Toshihiro Shimizu", affiliation: "Kawasaki, Japan" },
             { name: "Alper Balcı", affiliation: "Bilkent University" },
@@ -169,8 +169,8 @@ export const PROBLEM_OF_MONTH_2020 = [
     {
         month: "October",
         year: 2020,
-        question: "2009q.pdf",
-        solution: "2010a.pdf",
+        question: { en: "2009q.pdf", tr: "2009s.pdf" },
+        solution: { en: "2010a.pdf", tr: "2010c.pdf" },
         solvers: [
             { name: "Toshihiro Shimizu", affiliation: "Kawasaki, Japan" },
             { name: "Barış Koyuncu", affiliation: "Özel Enka Lisesi, İstanbul" },
@@ -184,8 +184,8 @@ export const PROBLEM_OF_MONTH_2020 = [
     {
         month: "November",
         year: 2020,
-        question: "2010q.pdf",
-        solution: "2011a.pdf",
+        question: { en: "2010q.pdf", tr: "2010s.pdf" },
+        solution: { en: "2011a.pdf", tr: "2011c.pdf" },
         solvers: [
             { name: "Toshihiro Shimizu", affiliation: "Kawasaki, Japan" },
             { name: "Barış Koyuncu", affiliation: "Özel Enka Lisesi, İstanbul" },
@@ -199,8 +199,8 @@ export const PROBLEM_OF_MONTH_2020 = [
     {
         month: "December",
         year: 2020,
-        question: "2011q.pdf",
-        solution: "2012a.pdf",
+        question: { en: "2011q.pdf", tr: "2011s.pdf" },
+        solution: { en: "2012a.pdf", tr: "2012c.pdf" },
         solvers: [
             { name: "Toshihiro Shimizu", affiliation: "Kawasaki, Japan" },
             { name: "Chui Tsz Fung", affiliation: "Hong Kong" },

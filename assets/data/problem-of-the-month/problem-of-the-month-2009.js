@@ -2,8 +2,8 @@ export const PROBLEM_OF_MONTH_2009 = [
     {
         month: "January",
         year: 2009,
-        question: "0812q.pdf",
-        solution: "0901a.pdf",
+        question: { en: "0812q.pdf", tr: "0812s.pdf" },
+        solution: { en: "0901a.pdf", tr: "0901c.pdf" },
         solvers: [
             { name: "Tran Thanh Nam", affiliation: "Tomsk Polytechnic University, Russia" },
             { name: "Khaled Halaoua", affiliation: "ISSAT, Syria" },
@@ -20,8 +20,8 @@ export const PROBLEM_OF_MONTH_2009 = [
     {
         month: "February",
         year: 2009,
-        question: "0901q.pdf",
-        solution: "0902a.pdf",
+        question: { en: "0901q.pdf", tr: "0901s.pdf" },
+        solution: { en: "0902a.pdf", tr: "0902c.pdf" },
         solvers: [
             { name: "Bojan Basic", affiliation: "Novi Sad, Serbia" },
             { name: "Manh Dung Nguyen", affiliation: "High school for gifted students, HUS, Vietnam" },
@@ -38,8 +38,8 @@ export const PROBLEM_OF_MONTH_2009 = [
     {
         month: "March",
         year: 2009,
-        question: "0902q.pdf",
-        solution: "0903a.pdf",
+        question: { en: "0902q.pdf", tr: "0902s.pdf" },
+        solution: { en: "0903a.pdf", tr: "0903c.pdf" },
         solvers: [
             { name: "Tran Thanh Nam", affiliation: "Tomsk Polytechnic University, Russia" },
             { name: "Manh Dung Nguyen", affiliation: "High school for gifted students, HUS, Vietnam" },
@@ -57,8 +57,8 @@ export const PROBLEM_OF_MONTH_2009 = [
     {
         month: "April",
         year: 2009,
-        question: "0903q.pdf",
-        solution: "0904a.pdf",
+        question: { en: "0903q.pdf", tr: "0903s.pdf" },
+        solution: { en: "0904a.pdf", tr: "0904c.pdf" },
         solvers: [
             { name: "Bojan Basic", affiliation: "Novi Sad, Serbia" },
             { name: "Kee-Wai Lau", affiliation: "Hong-Kong, China" },
@@ -79,8 +79,8 @@ export const PROBLEM_OF_MONTH_2009 = [
     {
         month: "May",
         year: 2009,
-        question: "0904q.pdf",
-        solution: "0905a.pdf",
+        question: { en: "0904q.pdf", tr: "0904s.pdf" },
+        solution: { en: "0905a.pdf", tr: "0905c.pdf" },
         solvers: [
             { name: "Cornel Gruian", affiliation: "SC Remarul, Cluj-Napoca, Romania" },
             { name: "Omran Kouba", affiliation: "Higher Institute for Applied Science and Technology, Syria" },
@@ -100,8 +100,8 @@ export const PROBLEM_OF_MONTH_2009 = [
     {
         month: "June",
         year: 2009,
-        question: "0905q.pdf",
-        solution: "0906a.pdf",
+        question: { en: "0905q.pdf", tr: "0905s.pdf" },
+        solution: { en: "0906a.pdf", tr: "0906c.pdf" },
         solvers: [
             { name: "Albert Stadler", affiliation: "Herrliberg, Switzerland" },
             { name: "Boukharfane Radouane", affiliation: "Moulay Driss FES, Morocco" },
@@ -123,8 +123,8 @@ export const PROBLEM_OF_MONTH_2009 = [
     {
         month: "July-August",
         year: 2009,
-        question: "0906q.pdf",
-        solution: "0908a.pdf",
+        question: { en: "0906q.pdf", tr: "0906s.pdf" },
+        solution: { en: "0908a.pdf", tr: "0908c.pdf" },
         solvers: [
             { name: "Omran Kouba", affiliation: "Higher Institute for Applied Science and Technology, Syria" },
             { name: "Kee-Wai Lau", affiliation: "Hong-Kong, China" },
@@ -143,8 +143,8 @@ export const PROBLEM_OF_MONTH_2009 = [
     {
         month: "September",
         year: 2009,
-        question: "0908q.pdf",
-        solution: "0909a.pdf",
+        question: { en: "0908q.pdf", tr: "0908s.pdf" },
+        solution: { en: "0909a.pdf", tr: "0909c.pdf" },
         solvers: [
             { name: "Cornel Gruian", affiliation: "SC Remarul, Cluj-Napoca, Romania" },
             { name: "Bahadir Gizlici", affiliation: "Yeditepe University, Istanbul" },
@@ -172,8 +172,8 @@ export const PROBLEM_OF_MONTH_2009 = [
     {
         month: "October",
         year: 2009,
-        question: "0909q.pdf",
-        solution: "0910a.pdf",
+        question: { en: "0909q.pdf", tr: "0909s.pdf" },
+        solution: { en: "0910a.pdf", tr: "0910c.pdf" },
         solvers: [
             { name: "Chuan Guo", affiliation: "University of Waterloo, Canada" },
             { name: "Bojan Basic", affiliation: "Novi Sad, Serbia" },
@@ -191,8 +191,8 @@ export const PROBLEM_OF_MONTH_2009 = [
     {
         month: "November",
         year: 2009,
-        question: "0910q.pdf",
-        solution: "0911a.pdf",
+        question: { en: "0910q.pdf", tr: "0910s.pdf" },
+        solution: { en: "0911a.pdf", tr: "0911c.pdf" },
         solvers: [
             { name: "Bojan Basic", affiliation: "Novi Sad, Serbia" },
             { name: "Magnus Jakobsson", affiliation: "Lund, Sweden" },
@@ -212,8 +212,8 @@ export const PROBLEM_OF_MONTH_2009 = [
     {
         month: "December",
         year: 2009,
-        question: "0911q.pdf",
-        solution: "0912a.pdf",
+        question: { en: "0911q.pdf", tr: "0911s.pdf" },
+        solution: { en: "0912a.pdf", tr: "0912c.pdf" },
         solvers: [
             { name: "Bojan Basic", affiliation: "Novi Sad, Serbia" },
             { name: "Can Turkun", affiliation: "TOBB University" },

@@ -19,8 +19,8 @@ import { PROBLEM_OF_MONTH_2008 } from "../data/problem-of-the-month/problem-of-t
 import { PROBLEM_OF_MONTH_2007 } from "../data/problem-of-the-month/problem-of-the-month-2007.js";
 import { PROBLEM_OF_MONTH_2006 } from "../data/problem-of-the-month/problem-of-the-month-2006.js";
 
-const { TRANSLATIONS, MONTHS_EN_TO_TR } = await import(`../data/translations.js?v=${document.version}`);
 const { PROBLEM_OF_MONTH } = await import(`../data/problem-of-the-month.js?v=${document.version}`);
+const { TRANSLATIONS, MONTHS_EN_TO_TR } = await import(`../data/translations.js?v=${document.version}`);
 const { escapeHtml, safeUrl } = await import(`./helpers.js?v=${document.version}`);
 
 // Data for rendering descending years
@@ -48,7 +48,9 @@ const DATA = [
     PROBLEM_OF_MONTH_2006
 ];
 
-const url = "https://math.bilkent.edu.tr/Problem/"; // Base URL for problem PDFs
+const urlEn = "https://math.bilkent.edu.tr/Problem/"; // Base URL for problem PDFs in English
+const urlTr = "https://math.bilkent.edu.tr/Soru/"; // Base URL for problem PDFs in Turkish
+
 const elMount = document.getElementById("mount");
 const elLatestProblemBtn = document.getElementById("latestProblemBtn");
 const elQuickLinks = document.getElementById("quickLinks");
@@ -69,10 +71,12 @@ function renderCard(item, lang) {
     ).join("");
 
     const solverCount = item.solvers?.length || 0;
-
+    let urlQuestion = lang === "tr" ? urlTr + item.question.tr : urlEn + item.question.en;
     let month = lang === "tr" ? MONTHS_EN_TO_TR[item.month] || item.month : item.month;
-    let question = safeUrl(url + item.question);
-    let solution = item.solution ? safeUrl(url + item.solution) : null;
+    let question = safeUrl(urlQuestion);
+    let solution = item.solution
+        ? safeUrl(lang === "tr" ? urlTr + item.solution.tr : urlEn + item.solution.en)
+        : null;
 
     return `
   <article class="pom-month-card">
@@ -189,8 +193,8 @@ function render() {
     const latestItem = latestData[latestData.length - 1];
 
     let month = lang === "tr" ? MONTHS_EN_TO_TR[latestItem.month] || latestItem.month : latestItem.month;
-
-    elLatestProblemBtn.onclick = () => window.open(url + latestItem.question, "_blank");
+    let url = lang === "tr" ? urlTr + latestItem.question.tr : urlEn + latestItem.question.en;
+    elLatestProblemBtn.onclick = () => window.open(url, "_blank");
     elLatestProblemBtn.textContent = (TRANSLATIONS.pomLatestProblemLabel[lang] || "Latest Problem") + ` (${month} ${latestItem.year})`;
 }
 

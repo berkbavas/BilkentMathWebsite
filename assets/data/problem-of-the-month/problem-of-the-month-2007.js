@@ -2,8 +2,8 @@ export const PROBLEM_OF_MONTH_2007 = [
     {
         month: "January",
         year: 2007,
-        question: "0612q.pdf",
-        solution: "0701a.pdf",
+        question: { en: "0612q.pdf", tr: "0612s.pdf" },
+        solution: { en: "0701a.pdf", tr: "0701c.pdf" },
         solvers: [
             { name: "Tomas Jurik", affiliation: "Comenius University, Slovakia" },
             { name: "Samil Akcagil", affiliation: "Balikesir University" },
@@ -55,8 +55,8 @@ export const PROBLEM_OF_MONTH_2007 = [
     {
         month: "February",
         year: 2007,
-        question: "0701q.pdf",
-        solution: "0702a.pdf",
+        question: { en: "0701q.pdf", tr: "0701s.pdf" },
+        solution: { en: "0702a.pdf", tr: "0702c.pdf" },
         solvers: [
             { name: "Samil Akcagil", affiliation: "Balikesir University" },
             { name: "Ekrem Emre", affiliation: "Kutahya" },
@@ -76,8 +76,8 @@ export const PROBLEM_OF_MONTH_2007 = [
     {
         month: "March",
         year: 2007,
-        question: "0702q.pdf",
-        solution: "0703a.pdf",
+        question: { en: "0702q.pdf", tr: "0702s.pdf" },
+        solution: { en: "0703a.pdf", tr: "0703c.pdf" },
         solvers: [
             { name: "Samil Akcagil", affiliation: "Balikesir University" },
             { name: "Batuhan Karagoz", affiliation: "METU" },
@@ -93,8 +93,8 @@ export const PROBLEM_OF_MONTH_2007 = [
     {
         month: "April",
         year: 2007,
-        question: "0703q.pdf",
-        solution: "0704a.pdf",
+        question: { en: "0703q.pdf", tr: "0703s.pdf" },
+        solution: { en: "0704a.pdf", tr: "0704c.pdf" },
         solvers: [
             { name: "Tomas Jurik", affiliation: "Comenius University, Slovakia" },
             { name: "Albert Stadler", affiliation: "Meilen, Switzerland" },
@@ -113,8 +113,8 @@ export const PROBLEM_OF_MONTH_2007 = [
     {
         month: "May",
         year: 2007,
-        question: "0704q.pdf",
-        solution: "0705a.pdf",
+        question: { en: "0704q.pdf", tr: "0704s.pdf" },
+        solution: { en: "0705a.pdf", tr: "0705c.pdf" },
         solvers: [
             { name: "Ovidiu Furdui", affiliation: "Western Michigan University, USA" },
             { name: "Jan Mazak", affiliation: "Comenius University, Slovakia" },
@@ -152,8 +152,8 @@ export const PROBLEM_OF_MONTH_2007 = [
     {
         month: "June",
         year: 2007,
-        question: "0705q.pdf",
-        solution: "0706a.pdf",
+        question: { en: "0705q.pdf", tr: "0705s.pdf" },
+        solution: { en: "0706a.pdf", tr: "0706c.pdf" },
         solvers: [
             { name: "Tomas Schiffauer", affiliation: "Ostrava, Czech Republic" },
             { name: "Jan Mazak", affiliation: "Comenius University, Slovakia" },
@@ -194,8 +194,8 @@ export const PROBLEM_OF_MONTH_2007 = [
     {
         month: "July-August",
         year: 2007,
-        question: "0706q.pdf",
-        solution: "0708a.pdf",
+        question: { en: "0706q.pdf", tr: "0706s.pdf" },
+        solution: { en: "0708a.pdf", tr: "0708c.pdf" },
         solvers: [
             { name: "Tomas Jurik", affiliation: "Comenius University, Slovakia" },
             { name: "Bekjan Djumabaev", affiliation: "METU" },
@@ -217,8 +217,8 @@ export const PROBLEM_OF_MONTH_2007 = [
     {
         month: "September",
         year: 2007,
-        question: "0708q.pdf",
-        solution: "0709a.pdf",
+        question: { en: "0708q.pdf", tr: "0708s.pdf" },
+        solution: { en: "0709a.pdf", tr: "0709c.pdf" },
         solvers: [
             { name: "Albert Stadler", affiliation: "Meilen, Switzerland" },
             { name: "Jose Avila", affiliation: "The University of Texas at El Paso, USA" },
@@ -237,8 +237,8 @@ export const PROBLEM_OF_MONTH_2007 = [
     {
         month: "October",
         year: 2007,
-        question: "0709q.pdf",
-        solution: "0710a.pdf",
+        question: { en: "0709q.pdf", tr: "0709s.pdf" },
+        solution: { en: "0710a.pdf", tr: "0710c.pdf" },
         solvers: [
             { name: "Albert Stadler", affiliation: "Meilen, Switzerland" },
             { name: "Leo Livshutz", affiliation: "Truman College, Chicago, USA" },
@@ -265,8 +265,8 @@ export const PROBLEM_OF_MONTH_2007 = [
     {
         month: "November",
         year: 2007,
-        question: "0710q.pdf",
-        solution: "0711a.pdf",
+        question: { en: "0710q.pdf", tr: "0710s.pdf" },
+        solution: { en: "0711a.pdf", tr: "0711c.pdf" },
         solvers: [
             { name: "Tomas Jurik", affiliation: "Comenius University, Slovakia" },
             { name: "K. Sengupta", affiliation: "Calcutta, India" },
@@ -283,8 +283,8 @@ export const PROBLEM_OF_MONTH_2007 = [
     {
         month: "December",
         year: 2007,
-        question: "0711q.pdf",
-        solution: "0712a.pdf",
+        question: { en: "0711q.pdf", tr: "0711s.pdf" },
+        solution: { en: "0712a.pdf", tr: "0712c.pdf" },
         solvers: [
             { name: "Tomas Jurik", affiliation: "Comenius University, Slovakia" },
             { name: "Leo Livshutz", affiliation: "Truman College, Chicago, USA" },

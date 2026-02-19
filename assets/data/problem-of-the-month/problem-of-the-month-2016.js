@@ -2,8 +2,8 @@ export const PROBLEM_OF_MONTH_2016 = [
     {
         month: "January",
         year: 2016,
-        question: "1512q.pdf",
-        solution: "1601a.pdf",
+        question: { en: "1512q.pdf", tr: "1512s.pdf" },
+        solution: { en: "1601a.pdf", tr: "1601c.pdf" },
         solvers: [
             { name: "Toshihiro Shimizu", affiliation: "Kawasaki, Japan" },
             { name: "Tomas Jurik", affiliation: "Kosice, Slovakia" },
@@ -18,8 +18,8 @@ export const PROBLEM_OF_MONTH_2016 = [
     {
         month: "February",
         year: 2016,
-        question: "1601q.pdf",
-        solution: "1602a.pdf",
+        question: { en: "1601q.pdf", tr: "1601s.pdf" },
+        solution: { en: "1602a.pdf", tr: "1602c.pdf" },
         solvers: [
             { name: "Toshihiro Shimizu", affiliation: "Kawasaki, Japan" },
             { name: "Wong Chi Fung", affiliation: "Hong Kong" },
@@ -38,8 +38,8 @@ export const PROBLEM_OF_MONTH_2016 = [
     {
         month: "March",
         year: 2016,
-        question: "1602q.pdf",
-        solution: "1603a.pdf",
+        question: { en: "1602q.pdf", tr: "1602s.pdf" },
+        solution: { en: "1603a.pdf", tr: "1603c.pdf" },
         solvers: [
             { name: "Toshihiro Shimizu", affiliation: "Kawasaki, Japan" },
             { name: "Harald Bogeholz", affiliation: "c't Computer magazine, Germany" },
@@ -64,8 +64,8 @@ export const PROBLEM_OF_MONTH_2016 = [
     {
         month: "April",
         year: 2016,
-        question: "1603q.pdf",
-        solution: "1604a.pdf",
+        question: { en: "1603q.pdf", tr: "1603s.pdf" },
+        solution: { en: "1604a.pdf", tr: "1604c.pdf" },
         solvers: [
             { name: "Toshihiro Shimizu", affiliation: "Kawasaki, Japan" },
             { name: "Kayra Uygun", affiliation: "Ankara Fen Lisesi" },
@@ -79,8 +79,8 @@ export const PROBLEM_OF_MONTH_2016 = [
     {
         month: "May",
         year: 2016,
-        question: "1604q.pdf",
-        solution: "1605a.pdf",
+        question: { en: "1604q.pdf", tr: "1604s.pdf" },
+        solution: { en: "1605a.pdf", tr: "1605c.pdf" },
         solvers: [
             { name: "Toshihiro Shimizu", affiliation: "Kawasaki, Japan" },
             { name: "Arthur Vause", affiliation: "Preston, Lancashire, U.K." },
@@ -98,8 +98,8 @@ export const PROBLEM_OF_MONTH_2016 = [
     {
         month: "June",
         year: 2016,
-        question: "1605q.pdf",
-        solution: "1606a.pdf",
+        question: { en: "1605q.pdf", tr: "1605s.pdf" },
+        solution: { en: "1606a.pdf", tr: "1606c.pdf" },
         solvers: [
             { name: "Toshihiro Shimizu", affiliation: "Kawasaki, Japan" },
             { name: "Gulbuddin H. Al Akbar", affiliation: "Ankara, Turkey" },
@@ -125,8 +125,8 @@ export const PROBLEM_OF_MONTH_2016 = [
     {
         month: "July-August",
         year: 2016,
-        question: "1606q.pdf",
-        solution: "1608a.pdf",
+        question: { en: "1606q.pdf", tr: "1606s.pdf" },
+        solution: { en: "1608a.pdf", tr: "1608c.pdf" },
         solvers: [
             { name: "Toshihiro Shimizu", affiliation: "Kawasaki, Japan" },
             { name: "Murad Sapayew", affiliation: "School 21, Dashoguz, Turkmenistan" },
@@ -146,8 +146,8 @@ export const PROBLEM_OF_MONTH_2016 = [
     {
         month: "September",
         year: 2016,
-        question: "1608q.pdf",
-        solution: "1609a.pdf",
+        question: { en: "1608q.pdf", tr: "1608s.pdf" },
+        solution: { en: "1609a.pdf", tr: "1609c.pdf" },
         solvers: [
             { name: "Toshihiro Shimizu", affiliation: "Kawasaki, Japan" },
             { name: "Hasan Zubeyr Demir", affiliation: "Özel Ankara Çağlayan Fen Lisesi, Ankara" },
@@ -162,8 +162,8 @@ export const PROBLEM_OF_MONTH_2016 = [
     {
         month: "October",
         year: 2016,
-        question: "1609q.pdf",
-        solution: "1610a.pdf",
+        question: { en: "1609q.pdf", tr: "1609s.pdf" },
+        solution: { en: "1610a.pdf", tr: "1610c.pdf" },
         solvers: [
             { name: "Toshihiro Shimizu", affiliation: "Kawasaki, Japan" },
             { name: "Vedat Deveci", affiliation: "DMO İstanbul" },
@@ -175,8 +175,8 @@ export const PROBLEM_OF_MONTH_2016 = [
     {
         month: "November",
         year: 2016,
-        question: "1610q.pdf",
-        solution: "1611a.pdf",
+        question: { en: "1610q.pdf", tr: "1610s.pdf" },
+        solution: { en: "1611a.pdf", tr: "1611c.pdf" },
         solvers: [
             { name: "Toshihiro Shimizu", affiliation: "Kawasaki, Japan" },
             { name: "Tomas Jurik", affiliation: "Kosice, Slovakia" },
@@ -200,8 +200,8 @@ export const PROBLEM_OF_MONTH_2016 = [
     {
         month: "December",
         year: 2016,
-        question: "1611q.pdf",
-        solution: "1612a.pdf",
+        question: { en: "1611q.pdf", tr: "1611s.pdf" },
+        solution: { en: "1612a.pdf", tr: "1612c.pdf" },
         solvers: [
             { name: "Toshihiro Shimizu", affiliation: "Kawasaki, Japan" },
             { name: "Mehmet Ali Yildirim", affiliation: "Florya Final Anadolu Lisesi, Istanbul" },

@@ -2,8 +2,8 @@ export const PROBLEM_OF_MONTH_2019 = [
     {
         month: "January",
         year: 2019,
-        question: "1812q.pdf",
-        solution: "1901a.pdf",
+        question: { en: "1812q.pdf", tr: "1812s.pdf" },
+        solution: { en: "1901a.pdf", tr: "1901c.pdf" },
         solvers: [
             { name: "Toshihiro Shimizu", affiliation: "Kawasaki, Japan" },
             { name: "Mehmet Ali Yıldırım", affiliation: "Boğaziçi University, İstanbul" },
@@ -13,8 +13,8 @@ export const PROBLEM_OF_MONTH_2019 = [
     {
         month: "February",
         year: 2019,
-        question: "1901q.pdf",
-        solution: "1902a.pdf",
+        question: { en: "1901q.pdf", tr: "1901s.pdf" },
+        solution: { en: "1902a.pdf", tr: "1902c.pdf" },
         solvers: [
             { name: "Toshihiro Shimizu", affiliation: "Kawasaki, Japan" },
             { name: "Susanne Tegler", affiliation: "Lund, Sweden" },
@@ -33,8 +33,8 @@ export const PROBLEM_OF_MONTH_2019 = [
     {
         month: "March",
         year: 2019,
-        question: "1902q.pdf",
-        solution: "1903a.pdf",
+        question: { en: "1902q.pdf", tr: "1902s.pdf" },
+        solution: { en: "1903a.pdf", tr: "1903c.pdf" },
         solvers: [
             { name: "Toshihiro Shimizu", affiliation: "Kawasaki, Japan" },
             { name: "Vedat Deveci", affiliation: "İstanbul" },
@@ -78,8 +78,8 @@ export const PROBLEM_OF_MONTH_2019 = [
     {
         month: "April",
         year: 2019,
-        question: "1903q.pdf",
-        solution: "1904a.pdf",
+        question: { en: "1903q.pdf", tr: "1903s.pdf" },
+        solution: { en: "1904a.pdf", tr: "1904c.pdf" },
         solvers: [
             { name: "Toshihiro Shimizu", affiliation: "Kawasaki, Japan" },
             { name: "Hasan Zübeyr Demir", affiliation: "Özel Ankara Çağlayan Fen Lisesi" },
@@ -95,8 +95,8 @@ export const PROBLEM_OF_MONTH_2019 = [
     {
         month: "May",
         year: 2019,
-        question: "1904q.pdf",
-        solution: "1905a.pdf",
+        question: { en: "1904q.pdf", tr: "1904s.pdf" },
+        solution: { en: "1905a.pdf", tr: "1905c.pdf" },
         solvers: [
             { name: "Toshihiro Shimizu", affiliation: "Kawasaki, Japan" },
             { name: "Hasan Zübeyr Demir", affiliation: "Özel Ankara Çağlayan Fen Lisesi" },
@@ -117,8 +117,8 @@ export const PROBLEM_OF_MONTH_2019 = [
     {
         month: "June",
         year: 2019,
-        question: "1905q.pdf",
-        solution: "1906a.pdf",
+        question: { en: "1905q.pdf", tr: "1905s.pdf" },
+        solution: { en: "1906a.pdf", tr: "1906c.pdf" },
         solvers: [
             { name: "Toshihiro Shimizu", affiliation: "Kawasaki, Japan" },
             { name: "Vedat Deveci", affiliation: "İstanbul" },
@@ -145,8 +145,8 @@ export const PROBLEM_OF_MONTH_2019 = [
     {
         month: "July-August",
         year: 2019,
-        question: "1906q.pdf",
-        solution: "1908a.pdf",
+        question: { en: "1906q.pdf", tr: "1906s.pdf" },
+        solution: { en: "1908a.pdf", tr: "1908c.pdf" },
         solvers: [
             { name: "Toshihiro Shimizu", affiliation: "Kawasaki, Japan" },
             { name: "Max Nilsson", affiliation: "Lund, Sweden" },
@@ -159,8 +159,8 @@ export const PROBLEM_OF_MONTH_2019 = [
     {
         month: "September",
         year: 2019,
-        question: "1908q.pdf",
-        solution: "1909a.pdf",
+        question: { en: "1908q.pdf", tr: "1908s.pdf" },
+        solution: { en: "1909a.pdf", tr: "1909c.pdf" },
         solvers: [
             { name: "Toshihiro Shimizu", affiliation: "Kawasaki, Japan" },
             { name: "Hasan Zübeyr Demir", affiliation: "Özel Ankara Çağlayan Fen Lisesi" },
@@ -183,8 +183,8 @@ export const PROBLEM_OF_MONTH_2019 = [
     {
         month: "October",
         year: 2019,
-        question: "1909q.pdf",
-        solution: "1910a.pdf",
+        question: { en: "1909q.pdf", tr: "1909s.pdf" },
+        solution: { en: "1910a.pdf", tr: "1910c.pdf" },
         solvers: [
             { name: "Toshihiro Shimizu", affiliation: "Kawasaki, Japan" },
             { name: "Albert Stadler", affiliation: "Herrliberg, Switzerland" },
@@ -201,15 +201,15 @@ export const PROBLEM_OF_MONTH_2019 = [
     {
         month: "November",
         year: 2019,
-        question: "1910q.pdf",
-        solution: "1911a.pdf",
+        question: { en: "1910q.pdf", tr: "1910s.pdf" },
+        solution: { en: "1911a.pdf", tr: "1911c.pdf" },
         solvers: [{ name: "Toshihiro Shimizu", affiliation: "Kawasaki, Japan" }]
     },
     {
         month: "December",
         year: 2019,
-        question: "1911q.pdf",
-        solution: "1912a.pdf",
+        question: { en: "1911q.pdf", tr: "1911s.pdf" },
+        solution: { en: "1912a.pdf", tr: "1912c.pdf" },
         solvers: [
             { name: "Toshihiro Shimizu", affiliation: "Kawasaki, Japan" },
             { name: "Emirhan Yağcıoğlu", affiliation: "Matematik ve Fen Bilimleri Anadolu Lisesi, Ankara" },

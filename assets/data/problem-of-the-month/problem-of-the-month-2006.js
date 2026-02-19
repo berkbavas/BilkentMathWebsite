@@ -2,8 +2,8 @@ export const PROBLEM_OF_MONTH_2006 = [
     {
         month: "January",
         year: 2006,
-        question: "0512q.pdf",
-        solution: "0601a.pdf",
+        question: { en: "0512q.pdf", tr: "0512s.pdf" },
+        solution: { en: "0601a.pdf", tr: "0601c.pdf" },
         solvers: [
             { name: "Tomas Jurik", affiliation: "Comenius University" },
             { name: "Said Amghibech", affiliation: "Quebec, Canada" },
@@ -20,8 +20,8 @@ export const PROBLEM_OF_MONTH_2006 = [
     {
         month: "February",
         year: 2006,
-        question: "0601q.pdf",
-        solution: "0602a.pdf",
+        question: { en: "0601q.pdf", tr: "0601s.pdf" },
+        solution: { en: "0602a.pdf", tr: "0602c.pdf" },
         solvers: [
             { name: "Miroslava Sotakova", affiliation: "Aarhus University, Denmark" },
             { name: "Tomas Jurik", affiliation: "Comenius University" },
@@ -41,8 +41,8 @@ export const PROBLEM_OF_MONTH_2006 = [
     {
         month: "March",
         year: 2006,
-        question: "0602q.pdf",
-        solution: "0603a.pdf",
+        question: { en: "0602q.pdf", tr: "0602s.pdf" },
+        solution: { en: "0603a.pdf", tr: "0603c.pdf" },
         solvers: [
             { name: "Aleksander Ilic", affiliation: "Nis University, Serbia and Montenegro" },
             { name: "Ayberk Vardar", affiliation: "Bilkent University" },
@@ -65,8 +65,8 @@ export const PROBLEM_OF_MONTH_2006 = [
     {
         month: "April",
         year: 2006,
-        question: "0603q.pdf",
-        solution: "0604a.pdf",
+        question: { en: "0603q.pdf", tr: "0603s.pdf" },
+        solution: { en: "0604a.pdf", tr: "0604c.pdf" },
         solvers: [
             { name: "Said Amghibech", affiliation: "Quebec, Canada" },
             { name: "Fuad Hamidli", affiliation: "METU" },
@@ -94,8 +94,8 @@ export const PROBLEM_OF_MONTH_2006 = [
     {
         month: "May",
         year: 2006,
-        question: "0604q.pdf",
-        solution: "0605a.pdf",
+        question: { en: "0604q.pdf", tr: "0604s.pdf" },
+        solution: { en: "0605a.pdf", tr: "0605c.pdf" },
         solvers: [
             { name: "Miroslava Sotakova", affiliation: "Aarhus University, Denmark" },
             { name: "Nawal Kishor Mishor", affiliation: "IIS, Bangalore, India" },
@@ -151,8 +151,8 @@ export const PROBLEM_OF_MONTH_2006 = [
     {
         month: "June",
         year: 2006,
-        question: "0605q.pdf",
-        solution: "0606a.pdf",
+        question: { en: "0605q.pdf", tr: "0605s.pdf" },
+        solution: { en: "0606a.pdf", tr: "0606c.pdf" },
         solvers: [
             { name: "Chao-Zhong Wu", affiliation: "Tsinghua University, China" },
             { name: "Tomas Jurik", affiliation: "Comenius University, Slovakia" },
@@ -165,8 +165,8 @@ export const PROBLEM_OF_MONTH_2006 = [
     {
         month: "July-August",
         year: 2006,
-        question: "0606q.pdf",
-        solution: "0608a.pdf",
+        question: { en: "0606q.pdf", tr: "0606s.pdf" },
+        solution: { en: "0608a.pdf", tr: "0608c.pdf" },
         solvers: [
             { name: "Samil Akcagil", affiliation: "Balikesir University" },
             { name: "Vivek Kumar Mehra", affiliation: "Mumbai, India" },
@@ -187,8 +187,8 @@ export const PROBLEM_OF_MONTH_2006 = [
     {
         month: "September",
         year: 2006,
-        question: "0608q.pdf",
-        solution: "0609a.pdf",
+        question: { en: "0608q.pdf", tr: "0608s.pdf" },
+        solution: { en: "0609a.pdf", tr: "0609c.pdf" },
         solvers: [
             { name: "Ovidiu Furdui", affiliation: "Western Michigan University, MI, USA" },
             { name: "Firat Solgun", affiliation: "METU" },
@@ -209,8 +209,8 @@ export const PROBLEM_OF_MONTH_2006 = [
     {
         month: "October",
         year: 2006,
-        question: "0609q.pdf",
-        solution: "0610a.pdf",
+        question: { en: "0609q.pdf", tr: "0609s.pdf" },
+        solution: { en: "0610a.pdf", tr: "0610c.pdf" },
         solvers: [
             { name: "Miroslava Sotakova", affiliation: "Aarhus University, Denmark" },
             { name: "Bekjan Djumabaev", affiliation: "METU" },
@@ -234,8 +234,8 @@ export const PROBLEM_OF_MONTH_2006 = [
     {
         month: "November",
         year: 2006,
-        question: "0610q.pdf",
-        solution: "0611a.pdf",
+        question: { en: "0610q.pdf", tr: "0610s.pdf" },
+        solution: { en: "0611a.pdf", tr: "0611c.pdf" },
         solvers: [
             { name: "Meyram Murzabulatov", affiliation: "Suleyman Demirel University, Kazakhstan" },
             { name: "Farid Lian", affiliation: "Atlantic University, Colombia, USA" },
@@ -266,8 +266,8 @@ export const PROBLEM_OF_MONTH_2006 = [
     {
         month: "December",
         year: 2006,
-        question: "0611q.pdf",
-        solution: "0612a.pdf",
+        question: { en: "0611q.pdf", tr: "0611s.pdf" },
+        solution: { en: "0612a.pdf", tr: "0612c.pdf" },
         solvers: [
             { name: "Tomas Jurik", affiliation: "Comenius University, Slovakia" },
             { name: "Se Kwon Kim", affiliation: "KAIST, South Korea" },

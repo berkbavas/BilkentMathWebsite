@@ -2,8 +2,8 @@ export const PROBLEM_OF_MONTH_2008 = [
     {
         month: "January",
         year: 2008,
-        question: "0712q.pdf",
-        solution: "0801a.pdf",
+        question: { en: "0712q.pdf", tr: "0712s.pdf" },
+        solution: { en: "0801a.pdf", tr: "0801c.pdf" },
         solvers: [
             { name: "Tomas Jurik", affiliation: "Comenius University, Slovakia" },
             { name: "Christophe Debry", affiliation: "Catholic University Leuven, Belgium" },
@@ -30,8 +30,8 @@ export const PROBLEM_OF_MONTH_2008 = [
     {
         month: "February",
         year: 2008,
-        question: "0801q.pdf",
-        solution: "0802a.pdf",
+        question: { en: "0801q.pdf", tr: "0801s.pdf" },
+        solution: { en: "0802a.pdf", tr: "0802c.pdf" },
         solvers: [
             { name: "K. Sengupta", affiliation: "Calcutta, India" },
             { name: "Murat Apaydin", affiliation: "Bilkent University" },
@@ -71,8 +71,8 @@ export const PROBLEM_OF_MONTH_2008 = [
     {
         month: "March",
         year: 2008,
-        question: "0802q.pdf",
-        solution: "0803a.pdf",
+        question: { en: "0802q.pdf", tr: "0802s.pdf" },
+        solution: { en: "0803a.pdf", tr: "0803c.pdf" },
         solvers: [
             { name: "Tomas Jurik", affiliation: "Comenius University, Slovakia" },
             { name: "Ercan Karadas", affiliation: "University Pompeu Fabra, Spain" },
@@ -92,8 +92,8 @@ export const PROBLEM_OF_MONTH_2008 = [
     {
         month: "April",
         year: 2008,
-        question: "0803q.pdf",
-        solution: "0804a.pdf",
+        question: { en: "0803q.pdf", tr: "0803s.pdf" },
+        solution: { en: "0804a.pdf", tr: "0804c.pdf" },
         solvers: [
             { name: "Tomas Jurik", affiliation: "Comenius University, Slovakia" },
             { name: "Kee-Wai Lau", affiliation: "Hong-Kong, China" },
@@ -116,8 +116,8 @@ export const PROBLEM_OF_MONTH_2008 = [
     {
         month: "May",
         year: 2008,
-        question: "0804q.pdf",
-        solution: "0805a.pdf",
+        question: { en: "0804q.pdf", tr: "0804s.pdf" },
+        solution: { en: "0805a.pdf", tr: "0805c.pdf" },
         solvers: [
             { name: "Albert Stadler", affiliation: "Herrliberg, Switzerland" },
             { name: "Bojan Basic", affiliation: "Novi Sad, Serbia" },
@@ -142,8 +142,8 @@ export const PROBLEM_OF_MONTH_2008 = [
     {
         month: "June",
         year: 2008,
-        question: "0805q.pdf",
-        solution: "0806a.pdf",
+        question: { en: "0805q.pdf", tr: "0805s.pdf" },
+        solution: { en: "0806a.pdf", tr: "0806c.pdf" },
         solvers: [
             { name: "Tomas Jurik", affiliation: "Comenius University, Slovakia" },
             { name: "Cornel Gruian", affiliation: "SD Remarul, Cluj-Napoca, Romania" },
@@ -157,8 +157,8 @@ export const PROBLEM_OF_MONTH_2008 = [
     {
         month: "July-August",
         year: 2008,
-        question: "0806q.pdf",
-        solution: "0808a.pdf",
+        question: { en: "0806q.pdf", tr: "0806s.pdf" },
+        solution: { en: "0808a.pdf", tr: "0808c.pdf" },
         solvers: [
             { name: "Albert Stadler", affiliation: "Herrliberg, Switzerland" },
             { name: "Erden Unal", affiliation: "Bogazici University" },
@@ -183,8 +183,8 @@ export const PROBLEM_OF_MONTH_2008 = [
     {
         month: "September",
         year: 2008,
-        question: "0808q.pdf",
-        solution: "0809a.pdf",
+        question: { en: "0808q.pdf", tr: "0808s.pdf" },
+        solution: { en: "0809a.pdf", tr: "0809c.pdf" },
         solvers: [
             { name: "Tomas Jurik", affiliation: "Comenius University, Slovakia" },
             { name: "Ha Duy Hung", affiliation: "Hanoi University of Education, Vietnam" },
@@ -214,8 +214,8 @@ export const PROBLEM_OF_MONTH_2008 = [
     {
         month: "October",
         year: 2008,
-        question: "0809q.pdf",
-        solution: "0810a.pdf",
+        question: { en: "0809q.pdf", tr: "0809s.pdf" },
+        solution: { en: "0810a.pdf", tr: "0810c.pdf" },
         solvers: [
             { name: "Albert Stadler", affiliation: "Herrliberg, Switzerland" },
             { name: "Henrik Aberg", affiliation: "Gothenburg, Sweden" },
@@ -253,8 +253,8 @@ export const PROBLEM_OF_MONTH_2008 = [
     {
         month: "November",
         year: 2008,
-        question: "0810q.pdf",
-        solution: "0811a.pdf",
+        question: { en: "0810q.pdf", tr: "0810s.pdf" },
+        solution: { en: "0811a.pdf", tr: "0811c.pdf" },
         solvers: [
             { name: "Albert Stadler", affiliation: "Herrliberg, Switzerland" },
             { name: "Haydar Emin Evren", affiliation: "Ozel Aziziye Lisesi, Erzurum" },
@@ -265,8 +265,8 @@ export const PROBLEM_OF_MONTH_2008 = [
     {
         month: "December",
         year: 2008,
-        question: "0811q.pdf",
-        solution: "0812a.pdf",
+        question: { en: "0811q.pdf", tr: "0811s.pdf" },
+        solution: { en: "0812a.pdf", tr: "0812c.pdf" },
         solvers: [
             { name: "Albert Stadler", affiliation: "Herrliberg, Switzerland" },
             { name: "Vu Van Tan", affiliation: "Hanoi University of Technology, Vietnam" },

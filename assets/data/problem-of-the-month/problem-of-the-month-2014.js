@@ -2,8 +2,8 @@ export const PROBLEM_OF_MONTH_2014 = [
   {
     month: "January",
     year: 2014,
-    question: "https://math.bilkent.edu.tr/Problem/1312q.pdf",
-    solution: "https://math.bilkent.edu.tr/Problem/1401a.pdf",
+    question: { en: "https://math.bilkent.edu.tr/Problem/1312q.pdf", tr: "https://math.bilkent.edu.tr/Problem/1312s.pdf" },
+    solution: { en: "https://math.bilkent.edu.tr/Problem/1401a.pdf", tr: "https://math.bilkent.edu.tr/Problem/1401c.pdf" },
     solvers: [
       { name: "William Wu Cheng Yuan", affiliation: "Singapore" },
       { name: "Uwe Schafer", affiliation: "Dreieich, Germany" },
@@ -14,8 +14,8 @@ export const PROBLEM_OF_MONTH_2014 = [
   {
     month: "February",
     year: 2014,
-    question: "https://math.bilkent.edu.tr/Problem/1401q.pdf",
-    solution: "https://math.bilkent.edu.tr/Problem/1402a.pdf",
+    question: { en: "https://math.bilkent.edu.tr/Problem/1401q.pdf", tr: "https://math.bilkent.edu.tr/Problem/1401s.pdf" },
+    solution: { en: "https://math.bilkent.edu.tr/Problem/1402a.pdf", tr: "https://math.bilkent.edu.tr/Problem/1402c.pdf" },
     solvers: [
       { name: "Vedat Deveci", affiliation: "DMO, İstanbul" },
       { name: "Julian Al-Zukaimi", affiliation: "Higher Institue for Applied Science & Technology, Syria" },
@@ -38,8 +38,8 @@ export const PROBLEM_OF_MONTH_2014 = [
   {
     month: "March",
     year: 2014,
-    question: "https://math.bilkent.edu.tr/Problem/1402q.pdf",
-    solution: "https://math.bilkent.edu.tr/Problem/1403a.pdf",
+    question: { en: "https://math.bilkent.edu.tr/Problem/1402q.pdf", tr: "https://math.bilkent.edu.tr/Problem/1402s.pdf" },
+    solution: { en: "https://math.bilkent.edu.tr/Problem/1403a.pdf", tr: "https://math.bilkent.edu.tr/Problem/1403c.pdf" },
     solvers: [
       { name: "Julian Al-Zukaimi", affiliation: "Higher Institue for Applied Science & Technology, Syria" },
       { name: "Tomas Jurik", affiliation: "Kosice, Slovakia" },
@@ -56,8 +56,8 @@ export const PROBLEM_OF_MONTH_2014 = [
   {
     month: "April",
     year: 2014,
-    question: "https://math.bilkent.edu.tr/Problem/1403q.pdf",
-    solution: "https://math.bilkent.edu.tr/Problem/1404a.pdf",
+    question: { en: "https://math.bilkent.edu.tr/Problem/1403q.pdf", tr: "https://math.bilkent.edu.tr/Problem/1403s.pdf" },
+    solution: { en: "https://math.bilkent.edu.tr/Problem/1404a.pdf", tr: "https://math.bilkent.edu.tr/Problem/1404c.pdf" },
     solvers: [
       { name: "William Wu Cheng Yuan", affiliation: "Singapore" },
       { name: "Julian Al-Zukaimi", affiliation: "Higher Institue for Applied Science & Technology, Syria" },
@@ -75,8 +75,8 @@ export const PROBLEM_OF_MONTH_2014 = [
   {
     month: "May",
     year: 2014,
-    question: "https://math.bilkent.edu.tr/Problem/1404q.pdf",
-    solution: "https://math.bilkent.edu.tr/Problem/1405a.pdf",
+    question: { en: "https://math.bilkent.edu.tr/Problem/1404q.pdf", tr: "https://math.bilkent.edu.tr/Problem/1404s.pdf" },
+    solution: { en: "https://math.bilkent.edu.tr/Problem/1405a.pdf", tr: "https://math.bilkent.edu.tr/Problem/1405c.pdf" },
     solvers: [
       { name: "Kipp Johnson", affiliation: "Valley Catholic School, Beaverton, Oregon, USA" },
       { name: "Khaled Halaoua", affiliation: "ISSAT, Syria" },
@@ -106,8 +106,8 @@ export const PROBLEM_OF_MONTH_2014 = [
   {
     month: "June",
     year: 2014,
-    question: "https://math.bilkent.edu.tr/Problem/1405q.pdf",
-    solution: "https://math.bilkent.edu.tr/Problem/1406a.pdf",
+    question: { en: "https://math.bilkent.edu.tr/Problem/1405q.pdf", tr: "https://math.bilkent.edu.tr/Problem/1405s.pdf" },
+    solution: { en: "https://math.bilkent.edu.tr/Problem/1406a.pdf", tr: "https://math.bilkent.edu.tr/Problem/1406c.pdf" },
     solvers: [
       { name: "Tomas Jurik", affiliation: "Kosice, Slovakia" },
       { name: "Julian Al-Zukaimi", affiliation: "Higher Institue for Applied Science & Technology, Syria" },
@@ -122,8 +122,8 @@ export const PROBLEM_OF_MONTH_2014 = [
   {
     month: "July - August",
     year: 2014,
-    question: "https://math.bilkent.edu.tr/Problem/1406q.pdf",
-    solution: "https://math.bilkent.edu.tr/Problem/1408a.pdf",
+    question: { en: "https://math.bilkent.edu.tr/Problem/1406q.pdf", tr: "https://math.bilkent.edu.tr/Problem/1406s.pdf" },
+    solution: { en: "https://math.bilkent.edu.tr/Problem/1408a.pdf", tr: "https://math.bilkent.edu.tr/Problem/1408c.pdf" },
     solvers: [
       { name: "Vedat Deveci", affiliation: "DMO, İstanbul" },
       { name: "Shatlyk Mamedov", affiliation: "School 21, Dashoguz, Turkmenistan" },
@@ -148,8 +148,8 @@ export const PROBLEM_OF_MONTH_2014 = [
   {
     month: "September",
     year: 2014,
-    question: "https://math.bilkent.edu.tr/Problem/1408q.pdf",
-    solution: "https://math.bilkent.edu.tr/Problem/1409a.pdf",
+    question: { en: "https://math.bilkent.edu.tr/Problem/1408q.pdf", tr: "https://math.bilkent.edu.tr/Problem/1408s.pdf" },
+    solution: { en: "https://math.bilkent.edu.tr/Problem/1409a.pdf", tr: "https://math.bilkent.edu.tr/Problem/1409c.pdf" },
     solvers: [
       { name: "William Wu Cheng Yuan", affiliation: "Singapore" },
       { name: "Gruian Cornel", affiliation: "Cluj-Napoca, Romania" },
@@ -164,8 +164,8 @@ export const PROBLEM_OF_MONTH_2014 = [
   {
     month: "October",
     year: 2014,
-    question: "https://math.bilkent.edu.tr/Problem/1409q.pdf",
-    solution: "https://math.bilkent.edu.tr/Problem/1410a.pdf",
+    question: { en: "https://math.bilkent.edu.tr/Problem/1409q.pdf", tr: "https://math.bilkent.edu.tr/Problem/1409s.pdf" },
+    solution: { en: "https://math.bilkent.edu.tr/Problem/1410a.pdf", tr: "https://math.bilkent.edu.tr/Problem/1410c.pdf" },
     solvers: [
       { name: "Kipp Johnson", affiliation: "Valley Catholic School, Beaverton, Oregon, USA" },
       { name: "Mahmut Sait Okyay", affiliation: "Ulsan National Institute of Science and Technology, Korea" },
@@ -193,8 +193,8 @@ export const PROBLEM_OF_MONTH_2014 = [
   {
     month: "November",
     year: 2014,
-    question: "https://math.bilkent.edu.tr/Problem/1410q.pdf",
-    solution: "https://math.bilkent.edu.tr/Problem/1411a.pdf",
+    question: { en: "https://math.bilkent.edu.tr/Problem/1410q.pdf", tr: "https://math.bilkent.edu.tr/Problem/1410s.pdf" },
+    solution: { en: "https://math.bilkent.edu.tr/Problem/1411a.pdf", tr: "https://math.bilkent.edu.tr/Problem/1411c.pdf" },
     solvers: [
       { name: "Toshihiro Shimizu", affiliation: "Kawasaki, Japan" },
       { name: "Vedat Deveci", affiliation: "DMO, İstanbul" },
@@ -216,8 +216,8 @@ export const PROBLEM_OF_MONTH_2014 = [
   {
     month: "December",
     year: 2014,
-    question: "https://math.bilkent.edu.tr/Problem/1411q.pdf",
-    solution: "https://math.bilkent.edu.tr/Problem/1412a.pdf",
+    question: { en: "https://math.bilkent.edu.tr/Problem/1411q.pdf", tr: "https://math.bilkent.edu.tr/Problem/1411s.pdf" },
+    solution: { en: "https://math.bilkent.edu.tr/Problem/1412a.pdf", tr: "https://math.bilkent.edu.tr/Problem/1412c.pdf" },
     solvers: [
       { name: "Toshihiro Shimizu", affiliation: "Kawasaki, Japan" },
       { name: "Tomas Jurik", affiliation: "Kosice, Slovakia" },

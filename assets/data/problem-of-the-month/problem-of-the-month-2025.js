@@ -2,8 +2,8 @@ export const PROBLEM_OF_MONTH_2025 = [
     {
         month: "January",
         year: 2025,
-        question: "2412q.pdf",
-        solution: "2501a.pdf",
+        question: { en: "2412q.pdf", tr: "2412s.pdf" },
+        solution: { en: "2501a.pdf", tr: "2501c.pdf" },
         solvers: [
             { name: "Toshihiro Shimizu", affiliation: "Kawasaki, Japan" },
             { name: "Hasan Zübeyr Demir", affiliation: "Ankara" },
@@ -36,8 +36,8 @@ export const PROBLEM_OF_MONTH_2025 = [
     {
         month: "February",
         year: 2025,
-        question: "2501q.pdf",
-        solution: "2502a.pdf",
+        question: { en: "2501q.pdf", tr: "2501s.pdf" },
+        solution: { en: "2502a.pdf", tr: "2502c.pdf" },
         solvers: [
             { name: "Toshihiro Shimizu", affiliation: "Kawasaki, Japan" },
             { name: "Ramazan Karaşahin", affiliation: "Ankara" },
@@ -54,8 +54,8 @@ export const PROBLEM_OF_MONTH_2025 = [
     {
         month: "March",
         year: 2025,
-        question: "2502q.pdf",
-        solution: "2503a.pdf",
+        question: { en: "2502q.pdf", tr: "2502s.pdf" },
+        solution: { en: "2503a.pdf", tr: "2503c.pdf" },
         solvers: [
             { name: "Toshihiro Shimizu", affiliation: "Kawasaki, Japan" },
             { name: "Ramazan Karaşahin", affiliation: "Ankara" },
@@ -72,8 +72,8 @@ export const PROBLEM_OF_MONTH_2025 = [
     {
         month: "April",
         year: 2025,
-        question: "2503q.pdf",
-        solution: "2504a.pdf",
+        question: { en: "2503q.pdf", tr: "2503s.pdf" },
+        solution: { en: "2504a.pdf", tr: "2504c.pdf" },
         solvers: [
             { name: "Toshihiro Shimizu", affiliation: "Kawasaki, Japan" },
             { name: "Ramazan Karaşahin", affiliation: "Ankara" },
@@ -89,8 +89,8 @@ export const PROBLEM_OF_MONTH_2025 = [
     {
         month: "May",
         year: 2025,
-        question: "2504q.pdf",
-        solution: "2505a.pdf",
+        question: { en: "2504q.pdf", tr: "2504s.pdf" },
+        solution: { en: "2505a.pdf", tr: "2505c.pdf" },
         solvers: [
             { name: "Toshihiro Shimizu", affiliation: "Kawasaki, Japan" },
             { name: "Mahmut Semih Baş", affiliation: "İstanbul Technical University" },
@@ -108,8 +108,8 @@ export const PROBLEM_OF_MONTH_2025 = [
     {
         month: "June",
         year: 2025,
-        question: "2505q.pdf",
-        solution: "2506a.pdf",
+        question: { en: "2505q.pdf", tr: "2505s.pdf" },
+        solution: { en: "2506a.pdf", tr: "2506c.pdf" },
         solvers: [
             { name: "Toshihiro Shimizu", affiliation: "Kawasaki, Japan" },
             { name: "Murat Beşli", affiliation: "Politecnico di Torino, Italy" },
@@ -127,8 +127,8 @@ export const PROBLEM_OF_MONTH_2025 = [
     {
         month: "July-August",
         year: 2025,
-        question: "2506q.pdf",
-        solution: "2508a.pdf",
+        question: { en: "2506q.pdf", tr: "2506s.pdf" },
+        solution: { en: "2508a.pdf", tr: "2508c.pdf" },
         solvers: [
             { name: "Toshihiro Shimizu", affiliation: "Kawasaki, Japan" },
             { name: "Ahmet Yüksel", affiliation: "Aydın" },
@@ -145,8 +145,8 @@ export const PROBLEM_OF_MONTH_2025 = [
     {
         month: "September",
         year: 2025,
-        question: "2508q.pdf",
-        solution: "2509a.pdf",
+        question: { en: "2508q.pdf", tr: "2508s.pdf" },
+        solution: { en: "2509a.pdf", tr: "2509c.pdf" },
         solvers: [
             { name: "Toshihiro Shimizu", affiliation: "Kawasaki, Japan" },
             { name: "Çağrı Maraşlı", affiliation: "Ankara Özel Yıldız Sınav Ortaokulu" },
@@ -184,8 +184,8 @@ export const PROBLEM_OF_MONTH_2025 = [
     {
         month: "October",
         year: 2025,
-        question: "2509q.pdf",
-        solution: "2510a.pdf",
+        question: { en: "2509q.pdf", tr: "2509s.pdf" },
+        solution: { en: "2510a.pdf", tr: "2510c.pdf" },
         solvers: [
             { name: "Mehmet Sarak", affiliation: "Bilkent University" },
             { name: "Mustafa Kaynak", affiliation: "Gaziantep" },
@@ -200,8 +200,8 @@ export const PROBLEM_OF_MONTH_2025 = [
     {
         month: "November",
         year: 2025,
-        question: "2510q.pdf",
-        solution: "2511a.pdf",
+        question: { en: "2510q.pdf", tr: "2510s.pdf" },
+        solution: { en: "2511a.pdf", tr: "2511c.pdf" },
         solvers: [
             { name: "Toshihiro Shimizu", affiliation: "Kawasaki, Japan" },
             { name: "Mehmet Sarak", affiliation: "Bilkent University" },
@@ -221,8 +221,8 @@ export const PROBLEM_OF_MONTH_2025 = [
     {
         month: "December",
         year: 2025,
-        question: "2511q.pdf",
-        solution: "2512a.pdf",
+        question: { en: "2511q.pdf", tr: "2511s.pdf" },
+        solution: { en: "2512a.pdf", tr: "2512c.pdf" },
         solvers: [
             { name: "Mehmet Sarak", affiliation: "Bilkent University" },
             { name: "Çağrı Maraşlı", affiliation: "Ankara Özel Yıldız Sınav Ortaokulu" },

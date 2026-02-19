@@ -2,8 +2,8 @@ export const PROBLEM_OF_MONTH = [
   {
     month: "January",
     year: 2026,
-    question: "2512q.pdf",
-    solution: "2601a.pdf",
+    question: { en: "2512q.pdf", tr: "2512s.pdf" },
+    solution: { en: "2601a.pdf", tr: "2601c.pdf" },
     solvers: [
   { name: "Mehmet Sarak", affiliation: "Bilkent University" },
   { name: "Toshihiro Shimizu", affiliation: "Kawasaki, Japan" },
@@ -27,7 +27,7 @@ export const PROBLEM_OF_MONTH = [
   {
     month: "February",
     year: 2026,
-    question: "2601q.pdf",
+    question: { en: "2601q.pdf", tr: "2601s.pdf" },
     solution: null,
     solvers: []
   }

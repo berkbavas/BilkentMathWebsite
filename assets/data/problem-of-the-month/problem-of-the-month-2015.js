@@ -2,8 +2,8 @@ export const PROBLEM_OF_MONTH_2015 = [
   {
     month: "January",
     year: 2015,
-    question: "1412q.pdf",
-    solution: "1501a.pdf",
+    question: { en: "1412q.pdf", tr: "1412s.pdf" },
+    solution: { en: "1501a.pdf", tr: "1501c.pdf" },
     solvers: [
       { name: "Toshihiro Shimizu", affiliation: "Kawasaki, Japan" },
       { name: "William Wu Cheng Yuan", affiliation: "Singapore" },
@@ -18,8 +18,8 @@ export const PROBLEM_OF_MONTH_2015 = [
   {
     month: "February",
     year: 2015,
-    question: "1501q.pdf",
-    solution: "1502a.pdf",
+    question: { en: "1501q.pdf", tr: "1501s.pdf" },
+    solution: { en: "1502a.pdf", tr: "1502c.pdf" },
     solvers: [
       { name: "Toshihiro Shimizu", affiliation: "Kawasaki, Japan" },
       { name: "Albert Stadler", affiliation: "Herrliberg, Switzerland" },
@@ -44,8 +44,8 @@ export const PROBLEM_OF_MONTH_2015 = [
   {
     month: "March",
     year: 2015,
-    question: "1502q.pdf",
-    solution: "1503a.pdf",
+    question: { en: "1502q.pdf", tr: "1502s.pdf" },
+    solution: { en: "1503a.pdf", tr: "1503c.pdf" },
     solvers: [
       { name: "Toshihiro Shimizu", affiliation: "Kawasaki, Japan" },
       { name: "Yasuo Yamane", affiliation: "Machida, Japan" },
@@ -58,8 +58,8 @@ export const PROBLEM_OF_MONTH_2015 = [
   {
     month: "April",
     year: 2015,
-    question: "1503q.pdf",
-    solution: "1504a.pdf",
+    question: { en: "1503q.pdf", tr: "1503s.pdf" },
+    solution: { en: "1504a.pdf", tr: "1504c.pdf" },
     solvers: [
       { name: "Toshihiro Shimizu", affiliation: "Kawasaki, Japan" },
       { name: "William Wu Cheng Yuan", affiliation: "Singapore" },
@@ -70,8 +70,8 @@ export const PROBLEM_OF_MONTH_2015 = [
   {
     month: "May",
     year: 2015,
-    question: "1504q.pdf",
-    solution: "1505a.pdf",
+    question: { en: "1504q.pdf", tr: "1504s.pdf" },
+    solution: { en: "1505a.pdf", tr: "1505c.pdf" },
     solvers: [
       { name: "Toshihiro Shimizu", affiliation: "Kawasaki, Japan" },
       { name: "Ramazan Karaşahin", affiliation: "TCMB, Ankara" },
@@ -83,8 +83,8 @@ export const PROBLEM_OF_MONTH_2015 = [
   {
     month: "June",
     year: 2015,
-    question: "1505q.pdf",
-    solution: "1506a.pdf",
+    question: { en: "1505q.pdf", tr: "1505s.pdf" },
+    solution: { en: "1506a.pdf", tr: "1506c.pdf" },
     solvers: [
       { name: "Toshihiro Shimizu", affiliation: "Kawasaki, Japan" },
       { name: "Vedat Deveci", affiliation: "DMI, İstanbul" },
@@ -98,8 +98,8 @@ export const PROBLEM_OF_MONTH_2015 = [
   {
     month: "July-August",
     year: 2015,
-    question: "1506q.pdf",
-    solution: "1507a.pdf",
+    question: { en: "1506q.pdf", tr: "1506s.pdf" },
+    solution: { en: "1507a.pdf", tr: "1507c.pdf" },
     solvers: [
       { name: "Toshihiro Shimizu", affiliation: "Kawasaki, Japan" },
       { name: "Ramazan Karaşahin", affiliation: "TCMB, Ankara" },
@@ -111,8 +111,8 @@ export const PROBLEM_OF_MONTH_2015 = [
   {
     month: "September",
     year: 2015,
-    question: "1507q.pdf",
-    solution: "1509a.pdf",
+    question: { en: "1507q.pdf", tr: "1507s.pdf" },
+    solution: { en: "1509a.pdf", tr: "1509c.pdf" },
     solvers: [
       { name: "Toshihiro Shimizu", affiliation: "Kawasaki, Japan" },
       { name: "Tomas Jurik", affiliation: "Kosice, Slovakia" },
@@ -127,8 +127,8 @@ export const PROBLEM_OF_MONTH_2015 = [
   {
     month: "October",
     year: 2015,
-    question: "1509q.pdf",
-    solution: "1510a.pdf",
+    question: { en: "1509q.pdf", tr: "1509s.pdf" },
+    solution: { en: "1510a.pdf", tr: "1510c.pdf" },
     solvers: [
       { name: "Toshihiro Shimizu", affiliation: "Kawasaki, Japan" },
       { name: "Halil Özkan", affiliation: "Özel Servergazi Fen Lisesi, Denizli" },
@@ -143,8 +143,8 @@ export const PROBLEM_OF_MONTH_2015 = [
   {
     month: "November",
     year: 2015,
-    question: "1510q.pdf",
-    solution: "1511a.pdf",
+    question: { en: "1510q.pdf", tr: "1510s.pdf" },
+    solution: { en: "1511a.pdf", tr: "1511c.pdf" },
     solvers: [
       { name: "Toshihiro Shimizu", affiliation: "Kawasaki, Japan" },
       { name: "Tomas Jurik", affiliation: "Kosice, Slovakia" },
@@ -161,8 +161,8 @@ export const PROBLEM_OF_MONTH_2015 = [
   {
     month: "December",
     year: 2015,
-    question: "1511q.pdf",
-    solution: "1512a.pdf",
+    question: { en: "1511q.pdf", tr: "1511s.pdf" },
+    solution: { en: "1512a.pdf", tr: "1512c.pdf" },
     solvers: [
       { name: "Toshihiro Shimizu", affiliation: "Kawasaki, Japan" },
       { name: "Tomas Jurik", affiliation: "Kosice, Slovakia" },

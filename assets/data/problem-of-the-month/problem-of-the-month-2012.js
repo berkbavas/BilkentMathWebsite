@@ -2,8 +2,8 @@ export const PROBLEM_OF_MONTH_2012 = [
     {
         month: "January",
         year: 2012,
-        question: "1112q.pdf",
-        solution: "1201a.pdf",
+        question: { en: "1112q.pdf", tr: "1112s.pdf" },
+        solution: { en: "1201a.pdf", tr: "1201c.pdf" },
         solvers: [
             { name: "Wu Cheng Yuan", affiliation: "National University of Singapore, Singapore" },
             { name: "Lamis Alsheikh", affiliation: "Syria" },
@@ -21,8 +21,8 @@ export const PROBLEM_OF_MONTH_2012 = [
     {
         month: "February",
         year: 2012,
-        question: "1201q.pdf",
-        solution: "1202a.pdf",
+        question: { en: "1201q.pdf", tr: "1201s.pdf" },
+        solution: { en: "1202a.pdf", tr: "1202c.pdf" },
         solvers: [
             { name: "Bernard Ivol", affiliation: "Saint-Chamond, France" },
             { name: "Hubert Desprez", affiliation: "Paris, France" },
@@ -44,8 +44,8 @@ export const PROBLEM_OF_MONTH_2012 = [
     {
         month: "March",
         year: 2012,
-        question: "1202q.pdf",
-        solution: "1203a.pdf",
+        question: { en: "1202q.pdf", tr: "1202s.pdf" },
+        solution: { en: "1203a.pdf", tr: "1203c.pdf" },
         solvers: [
             { name: "Gruian Cornel", affiliation: "Cluj-Napoca, Romania" },
             { name: "Omran Kouba", affiliation: "Higher Institute for Applied Science & Technology, Syria" },
@@ -77,8 +77,8 @@ export const PROBLEM_OF_MONTH_2012 = [
     {
         month: "April",
         year: 2012,
-        question: "1203q.pdf",
-        solution: "1204a.pdf",
+        question: { en: "1203q.pdf", tr: "1203s.pdf" },
+        solution: { en: "1204a.pdf", tr: "1204c.pdf" },
         solvers: [
             { name: "Gruian Cornel", affiliation: "Cluj-Napoca, Romania" },
             { name: "Vedat Deveci", affiliation: "DMO, Istanbul" },
@@ -95,8 +95,8 @@ export const PROBLEM_OF_MONTH_2012 = [
     {
         month: "May",
         year: 2012,
-        question: "1204q.pdf",
-        solution: "1205a.pdf",
+        question: { en: "1204q.pdf", tr: "1204s.pdf" },
+        solution: { en: "1205a.pdf", tr: "1205c.pdf" },
         solvers: [
             { name: "Albert Stadler", affiliation: "Herrliberg, Switzerland" },
             { name: "Wu Cheng Yuan", affiliation: "National University of Singapore, Singapore" },
@@ -129,8 +129,8 @@ export const PROBLEM_OF_MONTH_2012 = [
     {
         month: "June",
         year: 2012,
-        question: "1205q.pdf",
-        solution: "1206a.pdf",
+        question: { en: "1205q.pdf", tr: "1205s.pdf" },
+        solution: { en: "1206a.pdf", tr: "1206c.pdf" },
         solvers: [
             { name: "Henry Shin", affiliation: "Harvard University, USA" },
             { name: "Gruian Cornel", affiliation: "Cluj-Napoca, Romania" },
@@ -151,8 +151,8 @@ export const PROBLEM_OF_MONTH_2012 = [
     {
         month: "July-August",
         year: 2012,
-        question: "1206q.pdf",
-        solution: "1208a.pdf",
+        question: { en: "1206q.pdf", tr: "1206s.pdf" },
+        solution: { en: "1208a.pdf", tr: "1208c.pdf" },
         solvers: [
             { name: "Gruian Cornel", affiliation: "Cluj-Napoca, Romania" },
             { name: "Omran Kouba", affiliation: "Higher Institute for Applied Science & Technology, Syria" },
@@ -174,8 +174,8 @@ export const PROBLEM_OF_MONTH_2012 = [
     {
         month: "September",
         year: 2012,
-        question: "1208q.pdf",
-        solution: "1209a.pdf",
+        question: { en: "1208q.pdf", tr: "1208s.pdf" },
+        solution: { en: "1209a.pdf", tr: "1209c.pdf" },
         solvers: [
             { name: "Omran Kouba", affiliation: "Higher Institute for Applied Science & Technology, Syria" },
             { name: "Albert Stadler", affiliation: "Herrliberg, Switzerland" },
@@ -204,8 +204,8 @@ export const PROBLEM_OF_MONTH_2012 = [
     {
         month: "October",
         year: 2012,
-        question: "1209q.pdf",
-        solution: "1210a.pdf",
+        question: { en: "1209q.pdf", tr: "1209s.pdf" },
+        solution: { en: "1210a.pdf", tr: "1210c.pdf" },
         solvers: [
             { name: "Uwe Schafer", affiliation: "Dreieich, Germany" },
             { name: "Mahmut Sait Okyay", affiliation: "Ulsan National Institute of Science and Technology, Korea" },
@@ -228,8 +228,8 @@ export const PROBLEM_OF_MONTH_2012 = [
     {
         month: "November",
         year: 2012,
-        question: "1210q.pdf",
-        solution: "1211a.pdf",
+        question: { en: "1210q.pdf", tr: "1210s.pdf" },
+        solution: { en: "1211a.pdf", tr: "1211c.pdf" },
         solvers: [
             { name: "Omran Kouba", affiliation: "Higher Institute for Applied Science & Technology, Syria" },
             { name: "Vedat Deveci", affiliation: "DMO, Istanbul" },
@@ -242,8 +242,8 @@ export const PROBLEM_OF_MONTH_2012 = [
     {
         month: "December",
         year: 2012,
-        question: "1211q.pdf",
-        solution: "1212a.pdf",
+        question: { en: "1211q.pdf", tr: "1211s.pdf" },
+        solution: { en: "1212a.pdf", tr: "1212c.pdf" },
         solvers: [
             { name: "Omran Kouba", affiliation: "Higher Institute for Applied Science & Technology, Syria" },
             { name: "Henrik Aberg", affiliation: "Gothenburg, Sweden" },

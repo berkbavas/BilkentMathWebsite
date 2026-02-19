@@ -2,8 +2,8 @@ export const PROBLEM_OF_MONTH_2013 = [
     {
         month: "January",
         year: 2013,
-        question: "1212q.pdf",
-        solution: "1301a.pdf",
+        question: { en: "1212q.pdf", tr: "1212s.pdf" },
+        solution: { en: "1301a.pdf", tr: "1301c.pdf" },
         solvers: [
             { name: "Eric Bensley", affiliation: "University of Washington, USA" },
             { name: "Mahmut Sait Okyay", affiliation: "Ulsan National Institute of Science and Technology, Korea" },
@@ -20,8 +20,8 @@ export const PROBLEM_OF_MONTH_2013 = [
     {
         month: "February",
         year: 2013,
-        question: "1301q.pdf",
-        solution: "1302a.pdf",
+        question: { en: "1301q.pdf", tr: "1301s.pdf" },
+        solution: { en: "1302a.pdf", tr: "1302c.pdf" },
         solvers: [
             { name: "Bojan Basic", affiliation: "Novi Sad, Serbia" },
             { name: "Uwe Schafer", affiliation: "Dreieich, Germany" }
@@ -31,8 +31,8 @@ export const PROBLEM_OF_MONTH_2013 = [
     {
         month: "March",
         year: 2013,
-        question: "1302q.pdf",
-        solution: "1303a.pdf",
+        question: { en: "1302q.pdf", tr: "1302s.pdf" },
+        solution: { en: "1303a.pdf", tr: "1303c.pdf" },
         solvers: [
             { name: "Omran Kouba", affiliation: "Higher Institute for Applied Science & Technology, Syria" },
             { name: "Nawal Kishor Mishra", affiliation: "Hyderabad, India" },
@@ -65,8 +65,8 @@ export const PROBLEM_OF_MONTH_2013 = [
     {
         month: "April",
         year: 2013,
-        question: "1303q.pdf",
-        solution: "1304a.pdf",
+        question: { en: "1303q.pdf", tr: "1303s.pdf" },
+        solution: { en: "1304a.pdf", tr: "1304c.pdf" },
         solvers: [
             { name: "Arthur Vause", affiliation: "Preston, Lancashire, UK" },
             { name: "Gruian Cornel", affiliation: "Cluj-Napoca, Romania" },
@@ -83,8 +83,8 @@ export const PROBLEM_OF_MONTH_2013 = [
     {
         month: "May",
         year: 2013,
-        question: "1304q.pdf",
-        solution: "1305a.pdf",
+        question: { en: "1304q.pdf", tr: "1304s.pdf" },
+        solution: { en: "1305a.pdf", tr: "1305c.pdf" },
         solvers: [
             { name: "Albert Stadler", affiliation: "Herrliberg, Switzerland" },
             { name: "Gruian Cornel", affiliation: "Cluj-Napoca, Romania" },
@@ -125,8 +125,8 @@ export const PROBLEM_OF_MONTH_2013 = [
     {
         month: "June",
         year: 2013,
-        question: "1305q.pdf",
-        solution: "1306a.pdf",
+        question: { en: "1305q.pdf", tr: "1305s.pdf" },
+        solution: { en: "1306a.pdf", tr: "1306c.pdf" },
         solvers: [
             { name: "Radouan Boukharfane", affiliation: "Polytechnique de Montreal, Canada" },
             { name: "Mahmut Sait Okyay", affiliation: "Ulsan National Institute of Science and Technology, Korea" },
@@ -153,8 +153,8 @@ export const PROBLEM_OF_MONTH_2013 = [
     {
         month: "July - August",
         year: 2013,
-        question: "1306q.pdf",
-        solution: "1307a.pdf",
+        question: { en: "1306q.pdf", tr: "1306s.pdf" },
+        solution: { en: "1307a.pdf", tr: "1307c.pdf" },
         solvers: [
             { name: "Arthur Vause", affiliation: "Preston, Lancashire, UK" },
             { name: "Julian Al-Zukaimi", affiliation: "Higher Institute for Applied Science & Technology, Syria" },
@@ -174,8 +174,8 @@ export const PROBLEM_OF_MONTH_2013 = [
     {
         month: "September",
         year: 2013,
-        question: "1307q.pdf",
-        solution: "1309a.pdf",
+        question: { en: "1307q.pdf", tr: "1307s.pdf" },
+        solution: { en: "1309a.pdf", tr: "1309c.pdf" },
         solvers: [
             { name: "Henrik Aberg", affiliation: "Gothenburg, Sweden" },
             { name: "Vedat Deveci", affiliation: "DMO Istanbul" },
@@ -205,8 +205,8 @@ export const PROBLEM_OF_MONTH_2013 = [
     {
         month: "October",
         year: 2013,
-        question: "1309q.pdf",
-        solution: "1310a.pdf",
+        question: { en: "1309q.pdf", tr: "1309s.pdf" },
+        solution: { en: "1310a.pdf", tr: "1310c.pdf" },
         solvers: [
             { name: "Uwe Schafer", affiliation: "Dreieich, Germany" },
             { name: "Umut Uludag", affiliation: "TUBITAK" },
@@ -218,8 +218,8 @@ export const PROBLEM_OF_MONTH_2013 = [
     {
         month: "November",
         year: 2013,
-        question: "1310q.pdf",
-        solution: "1311a.pdf",
+        question: { en: "1310q.pdf", tr: "1310s.pdf" },
+        solution: { en: "1311a.pdf", tr: "1311c.pdf" },
         solvers: [
             { name: "Arthur Vause", affiliation: "Preston, Lancashire, UK" },
             { name: "William Wu Cheng Yuan", affiliation: "Singapore" },
@@ -239,8 +239,8 @@ export const PROBLEM_OF_MONTH_2013 = [
     {
         month: "December",
         year: 2013,
-        question: "1311q.pdf",
-        solution: "1312a.pdf",
+        question: { en: "1311q.pdf", tr: "1311s.pdf" },
+        solution: { en: "1312a.pdf", tr: "1312c.pdf" },
         solvers: [
             { name: "Lim Chang Kiat", affiliation: "Malaysia" },
             { name: "Bojan Basic", affiliation: "Novi Sad, Serbia" },

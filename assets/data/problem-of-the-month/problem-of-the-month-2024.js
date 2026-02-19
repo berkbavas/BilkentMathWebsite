@@ -2,8 +2,8 @@ export const PROBLEM_OF_MONTH_2024 = [
     {
         month: "January",
         year: 2024,
-        question: "2312q.pdf",
-        solution: "2401a.pdf",
+        question: { en: "2312q.pdf", tr: "2312s.pdf" },
+        solution: { en: "2401a.pdf", tr: "2401c.pdf" },
         solvers: [
             { name: "Arda Karahan", affiliation: "Trabzon Fen Lisesi" },
             { name: "Magnus Jakobsson", affiliation: "Lund, Sweden" },
@@ -18,8 +18,8 @@ export const PROBLEM_OF_MONTH_2024 = [
     {
         month: "February",
         year: 2024,
-        question: "2401q.pdf",
-        solution: "2402a.pdf",
+        question: { en: "2401q.pdf", tr: "2401s.pdf" },
+        solution: { en: "2402a.pdf", tr: "2402c.pdf" },
         solvers: [
             { name: "Roger Bengtsson", affiliation: "Lund, Sweden" },
             { name: "Magnus Jakobsson", affiliation: "Lund, Sweden" },
@@ -30,8 +30,8 @@ export const PROBLEM_OF_MONTH_2024 = [
     {
         month: "March",
         year: 2024,
-        question: "2402q.pdf",
-        solution: "2403a.pdf",
+        question: { en: "2402q.pdf", tr: "2402s.pdf" },
+        solution: { en: "2403a.pdf", tr: "2403c.pdf" },
         solvers: [
             { name: "Toshihiro Shimizu", affiliation: "Kawasaki, Japan" },
             { name: "Patrik Wild", affiliation: "Lund, Sweden" },
@@ -57,8 +57,8 @@ export const PROBLEM_OF_MONTH_2024 = [
     {
         month: "April",
         year: 2024,
-        question: "2403q.pdf",
-        solution: "2404a.pdf",
+        question: { en: "2403q.pdf", tr: "2403s.pdf" },
+        solution: { en: "2404a.pdf", tr: "2404c.pdf" },
         solvers: [
             { name: "Toshihiro Shimizu", affiliation: "Kawasaki, Japan" },
             { name: "Choi Min Kyu", affiliation: "South Korea" },
@@ -73,8 +73,8 @@ export const PROBLEM_OF_MONTH_2024 = [
     {
         month: "May",
         year: 2024,
-        question: "2404q.pdf",
-        solution: "2405a.pdf",
+        question: { en: "2404q.pdf", tr: "2404s.pdf" },
+        solution: { en: "2405a.pdf", tr: "2405c.pdf" },
         solvers: [
             { name: "Toshihiro Shimizu", affiliation: "Kawasaki, Japan" },
             { name: "Arda Karahan", affiliation: "Trabzon Fen Lisesi" },
@@ -87,8 +87,8 @@ export const PROBLEM_OF_MONTH_2024 = [
     {
         month: "June",
         year: 2024,
-        question: "2405q.pdf",
-        solution: "2406a.pdf",
+        question: { en: "2405q.pdf", tr: "2405s.pdf" },
+        solution: { en: "2406a.pdf", tr: "2406c.pdf" },
         solvers: [
             { name: "Toshihiro Shimizu", affiliation: "Kawasaki, Japan" },
             { name: "Mehmet Çağatay Ünlü", affiliation: "İstanbul Atatürk Fen Lisesi" },
@@ -103,8 +103,8 @@ export const PROBLEM_OF_MONTH_2024 = [
     {
         month: "July-August",
         year: 2024,
-        question: "2406q.pdf",
-        solution: "2408a.pdf",
+        question: { en: "2406q.pdf", tr: "2406s.pdf" },
+        solution: { en: "2408a.pdf", tr: "2408c.pdf" },
         solvers: [
             { name: "Toshihiro Shimizu", affiliation: "Kawasaki, Japan" },
             { name: "Vedat Deveci", affiliation: "İstanbul" },
@@ -123,8 +123,8 @@ export const PROBLEM_OF_MONTH_2024 = [
     {
         month: "September",
         year: 2024,
-        question: "2408q.pdf",
-        solution: "2409a.pdf",
+        question: { en: "2408q.pdf", tr: "2408s.pdf" },
+        solution: { en: "2409a.pdf", tr: "2409c.pdf" },
         solvers: [
             { name: "Toshihiro Shimizu", affiliation: "Kawasaki, Japan" },
             { name: "Emre Bektaş", affiliation: "Boğaziçi University" },
@@ -148,8 +148,8 @@ export const PROBLEM_OF_MONTH_2024 = [
     {
         month: "October",
         year: 2024,
-        question: "2409q.pdf",
-        solution: "2410a.pdf",
+        question: { en: "2409q.pdf", tr: "2409s.pdf" },
+        solution: { en: "2410a.pdf", tr: "2410c.pdf" },
         solvers: [
             { name: "Toshihiro Shimizu", affiliation: "Kawasaki, Japan" },
             { name: "Taner Erdem Akyıldız", affiliation: "Özel İzmir Bahçeşehir 50.Yıl Fen ve Teknoloji Lisesi" },
@@ -170,8 +170,8 @@ export const PROBLEM_OF_MONTH_2024 = [
     {
         month: "November",
         year: 2024,
-        question: "2410q.pdf",
-        solution: "2411a.pdf",
+        question: { en: "2410q.pdf", tr: "2410s.pdf" },
+        solution: { en: "2411a.pdf", tr: "2411c.pdf" },
         solvers: [
             { name: "Oğuzhan Demir", affiliation: "Ankara" },
             { name: "Hamza Akdeniz", affiliation: "Bilkent University" },
@@ -188,8 +188,8 @@ export const PROBLEM_OF_MONTH_2024 = [
     {
         month: "December",
         year: 2024,
-        question: "2411q.pdf",
-        solution: "2412a.pdf",
+        question: { en: "2411q.pdf", tr: "2411s.pdf" },
+        solution: { en: "2412a.pdf", tr: "2412c.pdf" },
         solvers: [
             { name: "Toshihiro Shimizu", affiliation: "Kawasaki, Japan" },
             { name: "Hamza Akdeniz", affiliation: "Bilkent University" },

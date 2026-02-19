@@ -2,8 +2,8 @@ export const PROBLEM_OF_MONTH_2017 = [
     {
         month: "January",
         year: 2017,
-        question: "1612q.pdf",
-        solution: "1701a.pdf",
+        question: { en: "1612q.pdf", tr: "1612s.pdf" },
+        solution: { en: "1701a.pdf", tr: "1701c.pdf" },
         solvers: [
             { name: "Toshihiro Shimizu", affiliation: "Kawasaki, Japan" },
             { name: "Tomas Jurik", affiliation: "Kosice, Slovakia" },
@@ -27,8 +27,8 @@ export const PROBLEM_OF_MONTH_2017 = [
     {
         month: "February",
         year: 2017,
-        question: "1701q.pdf",
-        solution: "1702a.pdf",
+        question: { en: "1701q.pdf", tr: "1701s.pdf" },
+        solution: { en: "1702a.pdf", tr: "1702c.pdf" },
         solvers: [
             { name: "Toshihiro Shimizu", affiliation: "Kawasaki, Japan" },
             { name: "Tomas Jurik", affiliation: "Kosice, Slovakia" },
@@ -49,8 +49,8 @@ export const PROBLEM_OF_MONTH_2017 = [
     {
         month: "March",
         year: 2017,
-        question: "1702q.pdf",
-        solution: "1703a.pdf",
+        question: { en: "1702q.pdf", tr: "1702s.pdf" },
+        solution: { en: "1703a.pdf", tr: "1703c.pdf" },
         solvers: [
             { name: "Toshihiro Shimizu", affiliation: "Kawasaki, Japan" },
             { name: "Batuhan Bayır", affiliation: "İzmir Betontaş Anadolu Lisesi" },
@@ -67,8 +67,8 @@ export const PROBLEM_OF_MONTH_2017 = [
     {
         month: "April",
         year: 2017,
-        question: "1703q.pdf",
-        solution: "1704a.pdf",
+        question: { en: "1703q.pdf", tr: "1703s.pdf" },
+        solution: { en: "1704a.pdf", tr: "1704c.pdf" },
         solvers: [
             { name: "Toshihiro Shimizu", affiliation: "Kawasaki, Japan" },
             { name: "Mehmet Ali Yildirim", affiliation: "Florya Final Anadolu Lisesi, İstanbul" },
@@ -88,8 +88,8 @@ export const PROBLEM_OF_MONTH_2017 = [
     {
         month: "May",
         year: 2017,
-        question: "1704q.pdf",
-        solution: "1705a.pdf",
+        question: { en: "1704q.pdf", tr: "1704s.pdf" },
+        solution: { en: "1705a.pdf", tr: "1705c.pdf" },
         solvers: [
             { name: "Toshihiro Shimizu", affiliation: "Kawasaki, Japan" },
             { name: "Tomas Jurik", affiliation: "Kosice, Slovakia" },
@@ -125,8 +125,8 @@ export const PROBLEM_OF_MONTH_2017 = [
     {
         month: "June",
         year: 2017,
-        question: "1705q.pdf",
-        solution: "1706a.pdf",
+        question: { en: "1705q.pdf", tr: "1705s.pdf" },
+        solution: { en: "1706a.pdf", tr: "1706c.pdf" },
         solvers: [
             { name: "Toshihiro Shimizu", affiliation: "Kawasaki, Japan" },
             { name: "Serdar Hojayev", affiliation: "Dashoguz, Turkmenistan" },
@@ -142,8 +142,8 @@ export const PROBLEM_OF_MONTH_2017 = [
     {
         month: "July-August",
         year: 2017,
-        question: "1706q.pdf",
-        solution: "1707a.pdf",
+        question: { en: "1706q.pdf", tr: "1706s.pdf" },
+        solution: { en: "1707a.pdf", tr: "1707c.pdf" },
         solvers: [
             { name: "Toshihiro Shimizu", affiliation: "Kawasaki, Japan" },
             { name: "Serdar Hojayev", affiliation: "Dashoguz, Turkmenistan" },
@@ -158,8 +158,8 @@ export const PROBLEM_OF_MONTH_2017 = [
     {
         month: "September",
         year: 2017,
-        question: "1707q.pdf",
-        solution: "1709a.pdf",
+        question: { en: "1707q.pdf", tr: "1707s.pdf" },
+        solution: { en: "1709a.pdf", tr: "1709c.pdf" },
         solvers: [
             { name: "Toshihiro Shimizu", affiliation: "Kawasaki, Japan" },
             { name: "Vedat Deveci", affiliation: "DMO, Istanbul" },
@@ -181,8 +181,8 @@ export const PROBLEM_OF_MONTH_2017 = [
     {
         month: "October",
         year: 2017,
-        question: "1709q.pdf",
-        solution: "1710a.pdf",
+        question: { en: "1709q.pdf", tr: "1709s.pdf" },
+        solution: { en: "1710a.pdf", tr: "1710c.pdf" },
         solvers: [
             { name: "Toshihiro Shimizu", affiliation: "Kawasaki, Japan" },
             { name: "Batuhan Bayır", affiliation: "Ankara University" },
@@ -196,8 +196,8 @@ export const PROBLEM_OF_MONTH_2017 = [
     {
         month: "November",
         year: 2017,
-        question: "1710q.pdf",
-        solution: "1711a.pdf",
+        question: { en: "1710q.pdf", tr: "1710s.pdf" },
+        solution: { en: "1711a.pdf", tr: "1711c.pdf" },
         solvers: [
             { name: "Toshihiro Shimizu", affiliation: "Kawasaki, Japan" },
             { name: "Tomas Jurik", affiliation: "Kosice, Slovakia" },
@@ -210,8 +210,8 @@ export const PROBLEM_OF_MONTH_2017 = [
     {
         month: "December",
         year: 2017,
-        question: "1711q.pdf",
-        solution: "1712a.pdf",
+        question: { en: "1711q.pdf", tr: "1711s.pdf" },
+        solution: { en: "1712a.pdf", tr: "1712c.pdf" },
         solvers: [
             { name: "Albert Stadler", affiliation: "Herrliberg, Switzerland" },
             { name: "Toshihiro Shimizu", affiliation: "Kawasaki, Japan" },
