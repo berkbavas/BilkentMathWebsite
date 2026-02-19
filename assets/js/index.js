@@ -78,8 +78,7 @@ function renderHomeNews() {
     <div class="home-news-item">
       <div class="home-news-date">${(n.date && (n.date[lang] || n.date.en)) || ""}</div>
       <div class="home-news-content">${(n.content && (n.content[lang] || n.content.en)) || ""}</div>
-    </div>
-  `).join("");
+    </div>`).join("");
 }
 
 document.render = render; // Expose render function for language toggle
