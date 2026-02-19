@@ -1,6 +1,17 @@
-import { CURRENT_FACULTY } from "../data/faculty.js";
-import { EMERITI } from "../data/emeriti.js";
-import { escapeHtml } from "./helpers.js";
+ 
+const facultyModule =
+  await import(`../data/faculty.js?v=${document.VERSION}`);
+const emeritiModule =
+  await import(`../data/emeriti.js?v=${document.VERSION}`);
+const helpersModule =
+  await import(`./helpers.js?v=${document.VERSION}`);
+const CURRENT_FACULTY = facultyModule.CURRENT_FACULTY;
+const EMERITI = emeritiModule.EMERITI;
+const { escapeHtml } = helpersModule;
+
+
+
+const URL = "https://math.bilkent.edu.tr/personnel_photos";
 
 function cardTemplate(p) {
     let currentLang = localStorage.getItem("lang") || "en";
@@ -14,6 +25,12 @@ function cardTemplate(p) {
     const webpage = (p.webpage || "").trim();
     const photo = (p.photo || "").trim();
 
+    const photoSrc = photo 
+        ? `${URL}/${photo}` 
+        : `${URL}/placeholder.jpg`;
+
+
+
     const tags = (p.research || [])
         .map(area => `<span class="faculty-chip">${escapeHtml(area[currentLang] || area["en"])}</span>`)
         .join("");
@@ -25,7 +42,7 @@ function cardTemplate(p) {
     return `
     <article class="person-card">
         <div class="faculty-image-and-content">
-            <div class="faculty-media"><img src="${escapeHtml(photo)}" alt="${name}"></div>
+            <div class="faculty-media"><img src="${escapeHtml(photoSrc)}" alt="${name}"></div>
 
             <div class="faculty-content">
                 <header class="faculty-header">
@@ -79,5 +96,10 @@ function render() {
     gridEmeriti.innerHTML = EMERITI.map(cardTemplate).join("");
 }
 
-document.render = render;
-document.addEventListener("DOMContentLoaded", render);
+document.render = render; // Expose render function for language toggle
+if (document.readyState === "loading") {
+  document.addEventListener("DOMContentLoaded", () => { render(); document.app_init();});
+} else {
+  render();
+  document.app_init();
+}

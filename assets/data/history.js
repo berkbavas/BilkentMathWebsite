@@ -1,9 +1,9 @@
 export const HEADS_OF_DEPARTMENT = [
   {
     name: "Mefharet Kocatepe",
-    term: "1986 - 1989",
+    term: "1986 - 1989, 1994 - 2016",
     webpage: "http://www.fen.bilkent.edu.tr/~kocatepe/",
-    photo: "https://math.bilkent.edu.tr/kocatepe-2.jpg",
+    photo: "kocatepe-2.jpg",
     title: {
       en: "Professor",
       tr: "Profesör Dr."
@@ -22,7 +22,7 @@ export const HEADS_OF_DEPARTMENT = [
     name: "Yavuz Nutku",
     term: "1989 - 1991",
     webpage: "https://tr.wikipedia.org/wiki/Yavuz_Nutku",
-    photo: "https://math.bilkent.edu.tr/nutku.jpg",
+    photo: "nutku.jpg",
     title: {
       en: "Professor",
       tr: "Profesör Dr."
@@ -41,7 +41,7 @@ export const HEADS_OF_DEPARTMENT = [
     name: "Metin Gürses",
     term: "1991 - 1994",
     webpage: "http://www.fen.bilkent.edu.tr/%7Egurses/",
-    photo: "https://math.bilkent.edu.tr/gurses.jpg",
+    photo: "gurses.jpg",
     title: {
       en: "Professor",
       tr: "Profesör Dr."
@@ -56,30 +56,30 @@ export const HEADS_OF_DEPARTMENT = [
     }
   },
 
-  {
-    name: "Mefharet Kocatepe",
-    term: "1994 - 2016",
-    webpage: "http://www.fen.bilkent.edu.tr/~kocatepe/",
-    photo: "https://math.bilkent.edu.tr/kocatepe-2.jpg",
-    title: {
-      en: "Professor",
-      tr: "Profesör Dr."
-    },
-    phd: {
-      en: "Ph.D., Mathematics, University of Michigan, 1978",
-      tr: "Doktora, Matematik, Michigan Üniversitesi, 1978"
-    },
-    areas: {
-      en: "Functional analysis, nuclear spaces, K-theory",
-      tr: "Fonksiyonel analiz, nükleer uzaylar, Köthe uzayları"
-    }
-  },
-
+ // {
+ //   name: "Mefharet Kocatepe",
+ //   term: "1994 - 2016",
+ //   webpage: "http://www.fen.bilkent.edu.tr/~kocatepe/",
+ //   photo: "kocatepe-2.jpg",
+ //   title: {
+ //     en: "Professor",
+ //     tr: "Profesör Dr."
+ //   },
+ //   phd: {
+ //     en: "Ph.D., Mathematics, University of Michigan, 1978",
+ //     tr: "Doktora, Matematik, Michigan Üniversitesi, 1978"
+ //   },
+ //   areas: {
+ //     en: "Functional analysis, nuclear spaces, K-theory",
+ //     tr: "Fonksiyonel analiz, nükleer uzaylar, Köthe uzayları"
+ //   }
+ // },
+ 
   {
     name: "Fatihcan Atay",
     term: "2016 - 2024",
     webpage: "https://fatihcanatay.wordpress.com/",
-    photo: "https://math.bilkent.edu.tr/atay-2.jpg",
+    photo: "atay-2.jpg",
     title: {
       en: "Professor",
       tr: "Profesör Dr."
@@ -98,7 +98,7 @@ export const HEADS_OF_DEPARTMENT = [
     name: "Ali Sinan Sertöz",
     term: "2024 - 2025",
     webpage: "https://sertoz.bilkent.edu.tr/",
-    photo: "https://math.bilkent.edu.tr/sertoz.jpg",
+    photo: "sertoz.jpg",
     title: {
       en: "Professor",
       tr: "Profesör Dr."
@@ -117,7 +117,7 @@ export const HEADS_OF_DEPARTMENT = [
     name: "Türker Özsarı",
     term: "2025 -",
     webpage: "https://turkerozsari.com/",
-    photo: "https://math.bilkent.edu.tr/ozsari.jpg",
+    photo: "turker.jpg",
     title: {
       en: "Associate Professor",
       tr: "Doçent Dr."

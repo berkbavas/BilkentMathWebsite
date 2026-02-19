@@ -1,5 +1,10 @@
-import { GRADUATE_STUDENTS } from "../data/graduate-students.js";
-import { escapeHtml } from "./helpers.js";
+ 
+const graduateStudentsModule =
+  await import(`../data/graduate-students.js?v=${document.VERSION}`);
+const helpersModule =
+  await import(`./helpers.js?v=${document.VERSION}`);
+const GRADUATE_STUDENTS = graduateStudentsModule.GRADUATE_STUDENTS;
+const { escapeHtml } = helpersModule;
 
 const URL = "https://math.bilkent.edu.tr/Grad_student_photos";
 
@@ -14,7 +19,7 @@ function cardTemplate(student) {
     // Use a placeholder if no photo
     const photoSrc = photo 
         ? `${URL}/${photo}` 
-        : `${URL}/placeholder.png`;
+        : `${URL}/placeholder.jpg`;
 
     const lang = localStorage.getItem("lang") || "en";
     const advisorLabel = lang === "tr" ? "Danışman" : "Advisor";
@@ -149,6 +154,8 @@ function render() {
         const elLang = el.getAttribute("data-lang");
         el.hidden = elLang !== lang;
     });
+
+
 }
 
 function setupEventListeners() {
@@ -176,11 +183,20 @@ function setupEventListeners() {
     }
 }
 
+
 // Initial render
 document.addEventListener("DOMContentLoaded", () => {
     render();
     setupEventListeners();
 });
 
-// Expose render function for language toggle
-document.render = render;
+document.render = render; // Expose render function for language toggle
+if (document.readyState === "loading") {
+document.addEventListener("DOMContentLoaded", () => {
+    render();
+    setupEventListeners();
+});
+} else {
+    render();
+    setupEventListeners();
+}

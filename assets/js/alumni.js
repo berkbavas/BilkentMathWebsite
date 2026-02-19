@@ -1,5 +1,8 @@
-import { ALUMNI } from "../data/alumni.js";
-import { TRANSLATIONS } from "../data/translations.js";
+
+import { TRANSLATIONS } from '../data/translations.js'; 
+const { ALUMNI } = await import(`../data/alumni.js?v=${document.VERSION}`);
+
+
 
 const elementSearch = document.querySelector("#search");
 const elementReset = document.querySelector("#reset");
@@ -97,6 +100,10 @@ TRANSLATIONS.labelLastUpdate = {
     tr: "Son Güncelleme"
 };
 
-
 document.render = render;
-document.addEventListener("DOMContentLoaded", init);
+document.init = init; 
+if (document.readyState === "loading") {
+  document.addEventListener("DOMContentLoaded", init);
+} else {
+  init();
+}

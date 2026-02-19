@@ -12,7 +12,7 @@ export const EMERITI = [
     office: "",
     phone: "",
     email: "",
-    photo: "https://math.bilkent.edu.tr/dibag.jpg",
+    photo: "dibag.jpg",
     webpage: ""
   },
 
@@ -35,7 +35,7 @@ export const EMERITI = [
     office: "",
     phone: "",
     email: "",
-    photo: "https://math.bilkent.edu.tr/mugan.jpg",
+    photo: "mugan.jpg",
     webpage: "http://www.fen.bilkent.edu.tr/~mugan/"
   },
 
@@ -54,7 +54,7 @@ export const EMERITI = [
     office: "",
     phone: "",
     email: "",
-    photo: "https://math.bilkent.edu.tr/klyachko-2.jpg",
+    photo: "klyachko-2.jpg",
     webpage: "http://www.fen.bilkent.edu.tr/~klyachko/"
   },
 
@@ -73,7 +73,7 @@ export const EMERITI = [
     office: "",
     phone: "",
     email: "",
-    photo: "https://math.bilkent.edu.tr/kocatepe-2.jpg",
+    photo: "kocatepe-2.jpg",
     webpage: "http://www.fen.bilkent.edu.tr/~kocatepe/"
   },
 
@@ -92,7 +92,7 @@ export const EMERITI = [
     office: "",
     phone: "",
     email: "",
-    photo: "https://math.bilkent.edu.tr/ustunel-2.jpg",
+    photo: "ustunel-2.jpg",
     webpage: "http://www.fen.bilkent.edu.tr/~ustunel/"
   },
 
@@ -112,7 +112,7 @@ export const EMERITI = [
     office: "",
     phone: "",
     email: "",
-    photo: "https://math.bilkent.edu.tr/gheondea-2.jpg",
+    photo: "gheondea-2.jpg",
     webpage: "http://www.fen.bilkent.edu.tr/~aurelian/"
   },
 
@@ -131,7 +131,7 @@ export const EMERITI = [
     office: "",
     phone: "",
     email: "",
-    photo: "https://math.bilkent.edu.tr/kurtulmaz-2.jpg",
+    photo: "kurtulmaz-2.jpg",
     webpage: "http://www.fen.bilkent.edu.tr/~yosum/"
   },
 
@@ -156,7 +156,7 @@ export const EMERITI = [
     office: "SA-126",
     phone: "+90 (312) 290-1924",
     email: "gurses [-at-] fen.bilkent.edu.tr",
-    photo: "https://math.bilkent.edu.tr/gurses-2.jpg",
+    photo: "gurses-2.jpg",
     webpage: "http://www.fen.bilkent.edu.tr/~gurses/"
   },
 
@@ -173,7 +173,7 @@ export const EMERITI = [
     office: "",
     phone: "",
     email: "",
-    photo: "https://math.bilkent.edu.tr/guvenc-2.jpg",
+    photo: "guvenc-2.jpg",
     webpage: "http://www.fen.bilkent.edu.tr/~guvenc/"
   }
 ];

@@ -10,8 +10,16 @@ import { SEMINARS_2016_2017 } from "../data/seminars/seminars-2016-2017.js";
 import { SEMINARS_2015_2016 } from "../data/seminars/seminars-2015-2016.js";
 import { SEMINARS_2014_2015 } from "../data/seminars/seminars-2014-2015.js";
 import { SEMINARS_2013_2014 } from "../data/seminars/seminars-2013-2014.js";
-import { TRANSLATIONS } from "../data/translations.js";
-import { escapeHtml, safeUrl } from "./helpers.js";
+ 
+
+import { TRANSLATIONS } from '../data/translations.js';
+const helpersModule =
+  await import(`./helpers.js?v=${document.VERSION}`);
+
+ 
+const { escapeHtml, safeUrl } = helpersModule;
+
+
 
 const URL = "https://math.bilkent.edu.tr/";
 
@@ -216,8 +224,8 @@ TRANSLATIONS.headerTitle = {
 };
 
 TRANSLATIONS.textDescription = {
-    en: "Department seminars held between 2014 and 2025 (by academic year).",
-    tr: "2014 ile 2025 yılları arasında düzenlenen bölüm seminerleri (akademik yıla göre)."
+    en: "Department seminars held between 2009 and 2025 (by academic year).",
+    tr: "2009 ile 2025 yılları arasında düzenlenen bölüm seminerleri (akademik yıla göre)."
 };
 
 TRANSLATIONS.textDescriptionFiles = {
@@ -261,8 +269,13 @@ TRANSLATIONS.noResults = {
 };
 
 
-document.render = render; // Expose render function to global scope for language toggle
-document.addEventListener("DOMContentLoaded", render); // Initial render on DOM load
+document.render = render; // Expose render function for language toggle
+if (document.readyState === "loading") {
+  document.addEventListener("DOMContentLoaded", () => { render(); document.app_init();});
+} else {
+  render();
+  document.app_init();
+}
 
 // Note: The code above defines functions to render a seminars archive with search and expand/collapse features,
 // and sets up the initial rendering and language toggle support.

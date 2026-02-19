@@ -1,7 +1,7 @@
-import { 
-    ADMINISTRATIVE_STAFF,
-} from "../data/administrative-staff.js";
-import { escapeHtml } from "./helpers.js";
+ 
+const { ADMINISTRATIVE_STAFF } = await import(`../data/administrative-staff.js?v=${document.VERSION}`);
+const { escapeHtml } = await import(`./helpers.js?v=${document.VERSION}`);
+
 
 function cardTemplate(staff) {
     const currentLang = localStorage.getItem("lang") || "en";
@@ -97,5 +97,11 @@ function render() {
 }
 
 // Expose render function for language toggle
-document.render = render;
-document.addEventListener("DOMContentLoaded", render);
+document.render = render; // Expose render function for language toggle
+if (document.readyState === "loading") {
+  document.addEventListener("DOMContentLoaded", () => { render(); document.app_init();});
+} else {
+  render();
+  document.app_init();
+}
+

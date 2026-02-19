@@ -18,10 +18,22 @@ import { PROBLEM_OF_MONTH_2009 } from "../data/problem-of-the-month/problem-of-t
 import { PROBLEM_OF_MONTH_2008 } from "../data/problem-of-the-month/problem-of-the-month-2008.js";
 import { PROBLEM_OF_MONTH_2007 } from "../data/problem-of-the-month/problem-of-the-month-2007.js";
 import { PROBLEM_OF_MONTH_2006 } from "../data/problem-of-the-month/problem-of-the-month-2006.js";
-import { PROBLEM_OF_MONTH } from "../data/problem-of-the-month.js"
-import { escapeHtml, safeUrl } from "./helpers.js";
 
 import { TRANSLATIONS, MONTHS_EN_TO_TR } from "../data/translations.js";
+ 
+
+const problemModule =
+  await import(`../data/problem-of-the-month.js?v=${document.VERSION}`);
+
+const helpersModule =
+  await import(`./helpers.js?v=${document.VERSION}`);
+
+
+
+const PROBLEM_OF_MONTH = problemModule.PROBLEM_OF_MONTH;
+const { escapeHtml, safeUrl } = helpersModule;
+ 
+
 
 // Data for rendering descending years
 const DATA = [
@@ -307,5 +319,10 @@ TRANSLATIONS.quickLinksDescription = {
 };
 
 
-document.render = render; // Expose render function to other modules, app.js in particular
-document.addEventListener("DOMContentLoaded", render); // Initial render on DOM load 
+document.render = render; // Expose render function for language toggle
+if (document.readyState === "loading") {
+  document.addEventListener("DOMContentLoaded", () => { render(); document.app_init();});
+} else {
+  render();
+  document.app_init();
+}

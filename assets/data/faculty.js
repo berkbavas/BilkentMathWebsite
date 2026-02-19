@@ -15,7 +15,7 @@ export const CURRENT_FACULTY = [
     office: "SA-144",
     phone: "+90 (312) 290-2131",
     email: "incia [-at-] bilkent.edu.tr",
-    photo: "https://math.bilkent.edu.tr/apaydin.jpg",
+    photo: "apaydin.jpg",
     webpage: "",
     researchGroups: []
   },
@@ -37,7 +37,7 @@ export const CURRENT_FACULTY = [
     office: "SA-132",
     phone: "+90 (312) 290-1265",
     email: "f.atay [-at-] bilkent.edu.tr",
-    photo: "https://math.bilkent.edu.tr/atay-2.jpg",
+    photo: "atay-2.jpg",
     webpage: "https://fatihcanatay.wordpress.com/",
     researchGroups: ["analysis", "applied"]
   },
@@ -59,9 +59,9 @@ export const CURRENT_FACULTY = [
     office: "SA-138",
     phone: "+90 (312) 290-2466",
     email: "cihan.bahran[-at-] bilkent.edu.tr",
-    photo: "https://math.bilkent.edu.tr/bahran.jpg",
+    photo: "bahran.jpg",
     webpage: "https://www.cihanbahran.org/",
-    researchGroups: ["geometry"]
+    researchGroups: ["algebra","geometry"]
   },
 
   {
@@ -82,7 +82,7 @@ export const CURRENT_FACULTY = [
     office: "SA-129",
     phone: "+90 (312) 290-2120",
     email: "barker [-at-] fen.bilkent.edu.tr",
-    photo: "https://math.bilkent.edu.tr/barker-2.jpg",
+    photo: "barker-2.jpg",
     webpage: "http://www.fen.bilkent.edu.tr/~barker/fenis2.html",
     researchGroups: ["algebra"]
   },
@@ -102,7 +102,7 @@ export const CURRENT_FACULTY = [
     office: "SA-130",
     phone: "+90 (312) 290-2135",
     email: "degt [-at-] fen.bilkent.edu.tr",
-    photo: "https://math.bilkent.edu.tr/degtyarev-2.jpg",
+    photo: "degtyarev-2.jpg",
     webpage: "http://www.fen.bilkent.edu.tr/~degt/",
     researchGroups: ["geometry"]
   },
@@ -124,7 +124,7 @@ export const CURRENT_FACULTY = [
     office: "SA-122",
     phone: "+90 (312) 290-1923",
     email: "goncha [-at-] fen.bilkent.edu.tr",
-    photo: "https://math.bilkent.edu.tr/goncharov-2.jpg",
+    photo: "goncharov-2.jpg",
     webpage: "http://www.fen.bilkent.edu.tr/~goncha/index.html",
     researchGroups: ["analysis"]
   },
@@ -141,9 +141,9 @@ export const CURRENT_FACULTY = [
     office: "SA-131",
     phone: "+90 (312) 290-2747",
     email: "guloglua [-at-] fen.bilkent.edu.tr",
-    photo: "https://math.bilkent.edu.tr/guloglu-2.jpg",
+    photo: "guloglu-2.jpg",
     webpage: "http://www.fen.bilkent.edu.tr/~guloglua/",
-    researchGroups: ["algebra"]
+    researchGroups: ["arithmetic"]
   },
 
   {
@@ -161,9 +161,9 @@ export const CURRENT_FACULTY = [
     office: "SA-137",
     phone: "+90 (312) 290-1590",
     email: "yheydarzade [-at-] bilkent.edu.tr",
-    photo: "https://math.bilkent.edu.tr/heydarzade-2.jpg",
+    photo: "heydarzade-2.jpg",
     webpage: "https://www.yaghoubheydarzade.com/",
-    researchGroups: ["applied"]
+    researchGroups: ["geometry","applied"]
   },
 
   {
@@ -183,7 +183,7 @@ export const CURRENT_FACULTY = [
     office: "SA-124",
     phone: "+90 (312) 290-2101",
     email: "kaptan [-at-] fen.bilkent.edu.tr",
-    photo: "https://math.bilkent.edu.tr/kaptanoglu-2.jpg",
+    photo: "kaptanoglu-2.jpg",
     webpage: "http://www.fen.bilkent.edu.tr/~kaptan/",
     researchGroups: ["analysis"]
   },
@@ -201,9 +201,9 @@ export const CURRENT_FACULTY = [
     office: "SA-105",
     phone: "+90 (312) 290 2132",
     email: "enis.kaya [-at-] bilkent.edu.tr",
-    photo: "https://math.bilkent.edu.tr/kaya.jpg",
+    photo: "kaya.jpg",
     webpage: "https://sites.google.com/view/eniskaya/home",
-    researchGroups: []
+    researchGroups: ["arithmetic"]
   },
 
   {
@@ -225,9 +225,9 @@ export const CURRENT_FACULTY = [
     office: "SA-120",
     phone: "+90 (312) 290-1627",
     email: "kerimov [-at-] fen.bilkent.edu.tr",
-    photo: "https://math.bilkent.edu.tr/kerimov-2.jpg",
+    photo: "kerimov-2.jpg",
     webpage: "http://www.fen.bilkent.edu.tr/~kerimov/fenis2.html",
-    researchGroups: ["applied"]
+    researchGroups: ["analysis","applied"]
   },
 
   {
@@ -242,14 +242,14 @@ export const CURRENT_FACULTY = [
     office: "SA-143",
     phone: "+90 (312) 290-2130",
     email: "yasirkizmaz [-at-] bilkent.edu.tr",
-    photo: "https://math.bilkent.edu.tr/kizmaz.jpg",
+    photo: "kizmaz.jpg",
     webpage: "https://myasir-kizmaz.wixsite.com/my-homepage",
-    researchGroups: []
+    researchGroups: ["algebra"]
   },
 
   {
     name: "Konstantinos Maronikolakis",
-    isSupervisor: false,
+    isSupervisor: true,
     title: { en: "Visiting Assistant Professor", tr: "Misafir Dr. Öğr. Üyesi" },
     degree: {
       en: "Ph.D., Mathematics, University College Dublin, 2024",
@@ -263,7 +263,7 @@ export const CURRENT_FACULTY = [
     office: "SA-109",
     phone: "+90 (312) 290-2102",
     email: "konstantinos [-at-] bilkent.edu.tr",
-    photo: "https://math.bilkent.edu.tr/maronikolakis.png",
+    photo: "maronikolakis.png",
     webpage: "https://conmaro.github.io/",
     researchGroups: ["analysis"]
   },
@@ -283,9 +283,9 @@ export const CURRENT_FACULTY = [
     office: "SA-140",
     phone: "+90 (312) 290-2103",
     email: "cihan.okay [-at-] bilkent.edu.tr",
-    photo: "https://math.bilkent.edu.tr/okay.jpg",
+    photo: "cihan.jpg",
     webpage: "https://www.cihanokay.com/",
-    researchGroups: ["geometry"]
+    researchGroups: ["geometry","applied"]
   },
 
   {
@@ -305,7 +305,7 @@ export const CURRENT_FACULTY = [
     office: "SA-111A",
     phone: "+90 (312) 290 2899",
     email: "turker.ozsari [-at-] bilkent.edu.tr",
-    photo: "https://math.bilkent.edu.tr/ozsari.jpg",
+    photo: "turker.jpg",
     webpage: "https://turkerozsari.com/",
     researchGroups: ["analysis"]
   },
@@ -331,9 +331,9 @@ export const CURRENT_FACULTY = [
     office: "SA-139",
     phone: "+90 (312) 290-1938",
     email: "naci.saldi [-at-] bilkent.edu.tr",
-    photo: "https://math.bilkent.edu.tr/saldi.jpg",
+    photo: "saldi.jpg",
     webpage: "https://web4.bilkent.edu.tr/saldi/",
-    researchGroups: ["applied"]
+    researchGroups: ["analysis","applied"]
   },
 
   {
@@ -348,7 +348,7 @@ export const CURRENT_FACULTY = [
     office: "SA-121",
     phone: "+90 (312) 290-1490",
     email: "sertoz [-at-] bilkent.edu.tr",
-    photo: "https://math.bilkent.edu.tr/sertoz-2.jpg",
+    photo: "sertoz-2.jpg",
     webpage: "https://sertoz.bilkent.edu.tr/",
     researchGroups: ["geometry"]
   },
@@ -368,14 +368,14 @@ export const CURRENT_FACULTY = [
     office: "SA-117",
     phone: "+90 (312) 290-1255",
     email: "sezer [-at-] fen.bilkent.edu.tr",
-    photo: "https://math.bilkent.edu.tr/sezer-2.jpg",
+    photo: "sezer-2.jpg",
     webpage: "https://orcid.org/0000-0002-6704-5399",
     researchGroups: ["algebra"]
   },
 
   {
     name: "Syed Waqar Ali Shah",
-    isSupervisor: false,
+    isSupervisor: true,
     title: { en: "Assistant Professor", tr: "Dr. Öğr. Üyesi" },
     degree: { en: "Ph.D., Harvard University", tr: "Doktora, Harvard Üniversitesi" },
     research: [
@@ -385,9 +385,9 @@ export const CURRENT_FACULTY = [
     office: "SA-103",
     phone: "+90 (312) 290-1883",
     email: "swshah [-at-] bilkent.edu.tr",
-    photo: "https://math.bilkent.edu.tr/shah.jpg",
+    photo: "shah.jpg",
     webpage: "https://sites.google.com/view/swshah/home",
-    researchGroups: []
+    researchGroups: ["arithmetic"]
   },
 
   {
@@ -402,7 +402,7 @@ export const CURRENT_FACULTY = [
     office: "SA-125",
     phone: "+90 (312) 290-1256",
     email: "otekman [-at-] fen.bilkent.edu.tr",
-    photo: "https://math.bilkent.edu.tr/tekman-2.jpg",
+    photo: "tekman-2.jpg",
     webpage: "http://www.fen.bilkent.edu.tr/~otekman/",
     researchGroups: []
   },
@@ -423,7 +423,7 @@ export const CURRENT_FACULTY = [
     office: "SA-118",
     phone: "+90 (312) 290-1719",
     email: "bulent [-at-] fen.bilkent.edu.tr",
-    photo: "https://math.bilkent.edu.tr/unal-2.jpg",
+    photo: "unal-2.jpg",
     webpage: "http://www.fen.bilkent.edu.tr/~bulent/",
     researchGroups: ["geometry"]
   },
@@ -437,13 +437,15 @@ export const CURRENT_FACULTY = [
       tr: "Doktora, Matematik, Wisconsin Üniversitesi, Madison, 2004"
     },
     research: [
-      { en: "Algebraic topology", tr: "Cebirsel geometri" },
-      { en: "geometric group theory", tr: "geometrik grup kuramı" }
+     { en: "Algebraic topology", tr: "Cebirsel topoloji" },
+     { en: "geometric group theory", tr: "geometrik grup kuramı" },
+     { en: "category theory", tr: "kategori kuramı" },
+     { en: "group actions", tr: "grup etkileri" }
     ],
     office: "SA-123",
     phone: "+90 (312) 290-1359",
     email: "unluo [-at-] fen.bilkent.edu.tr",
-    photo: "https://math.bilkent.edu.tr/unlu-2.jpg",
+    photo: "unlu-2.jpg",
     webpage: "http://www.fen.bilkent.edu.tr/~unluo/",
     researchGroups: ["geometry", "algebra"]
   },
@@ -466,7 +468,7 @@ export const CURRENT_FACULTY = [
     office: "SA-127",
     phone: "+90 (312) 290-2115",
     email: "yalcine [-at-] fen.bilkent.edu.tr",
-    photo: "https://math.bilkent.edu.tr/yalcin-2.jpg",
+    photo: "yalcin-2.jpg",
     webpage: "http://www.fen.bilkent.edu.tr/~yalcine/",
     researchGroups: ["geometry"]
   },
@@ -483,9 +485,9 @@ export const CURRENT_FACULTY = [
     office: "SA-106",
     phone: "+90 (312) 290-1897",
     email: "hamza [-at-] fen.bilkent.edu.tr",
-    photo: "https://math.bilkent.edu.tr/yesilyurt-2.jpg",
+    photo: "yesilyurt-2.jpg",
     webpage: "http://www.fen.bilkent.edu.tr/~hamza/",
-    researchGroups: ["algebra"]
+    researchGroups: ["arithmetic"]
   },
 
   {
@@ -505,7 +507,7 @@ export const CURRENT_FACULTY = [
     office: "SA-142",
     phone: "+90 (312) 290-2104",
     email: "gokhan.yildirim [-at-] bilkent.edu.tr",
-    photo: "https://math.bilkent.edu.tr/yildirim-2.jpg",
+    photo: "yildirim-2.jpg",
     webpage: "https://orcid.org/0000-0003-4399-7843",
     researchGroups: ["analysis", "applied"]
   },
@@ -527,7 +529,7 @@ export const CURRENT_FACULTY = [
     office: "SA-114",
     phone: "+90 (312) 290-1085",
     email: "d.yilmaz [-at-] bilkent.edu.tr",
-    photo: "https://math.bilkent.edu.tr/d.yilmaz.jpg",
+    photo: "d.yilmaz.jpg",
     webpage: "https://yilmazdeniz.bilkent.edu.tr/",
     researchGroups: ["algebra"]
   },
@@ -547,7 +549,7 @@ export const CURRENT_FACULTY = [
     office: "SA-111b",
     phone: "+90 (312) 290-2465",
     email: "natalya [-at-] fen.bilkent.edu.tr",
-    photo: "https://math.bilkent.edu.tr/zheltukhina-2.jpg",
+    photo: "zheltukhina-2.jpg",
     webpage: "http://www.fen.bilkent.edu.tr/~natalya/",
     researchGroups: ["analysis"]
   }

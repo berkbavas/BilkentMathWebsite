@@ -1,5 +1,6 @@
-import { TRANSLATIONS } from "../data/translations.js";
-import { ALISBAH_AWARDS } from "../data/alisbah-awards.js";
+ 
+import { TRANSLATIONS } from '../data/translations.js';
+const { ALISBAH_AWARDS } = await import(`../data/alisbah-awards.js?v=${document.VERSION}`);
 
 const URL = "https://math.bilkent.edu.tr/";
 
@@ -53,5 +54,11 @@ TRANSLATIONS.tableRecipients = { en: "Recipients", tr: "Ödül Sahipleri" };
 TRANSLATIONS.tablePhotos = { en: "Photos", tr: "Fotoğraflar" };
 TRANSLATIONS.tableView = { en: "View", tr: "Görüntüle" };
 
-document.render = render;
-document.addEventListener("DOMContentLoaded", render);
+document.render = render; // Expose render function for language toggle
+if (document.readyState === "loading") {
+  document.addEventListener("DOMContentLoaded", () => { render(); document.app_init();});
+} else {
+  render();
+  document.app_init();
+}
+

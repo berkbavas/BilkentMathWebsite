@@ -1,7 +1,13 @@
 /* ==========================================================
    App bootstrap
    ========================================================== */
+ 
+
+document.VERSION = Date.now();
+
+ 
 import { TRANSLATIONS } from '../data/translations.js';
+
 
 function init() {
     fetch("footer.html")
@@ -163,4 +169,7 @@ function applyTranslations(lang) {
     });
 }
 
+
+document.app_init=init;
 document.addEventListener("DOMContentLoaded", init);
+

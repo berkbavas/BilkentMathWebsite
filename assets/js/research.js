@@ -1,20 +1,41 @@
-import { RESEARCH_DATA } from "../data/research.js";
-import { CURRENT_FACULTY } from "../data/faculty.js";
-import { escapeHtml, safeUrl } from "./helpers.js";
+ 
 
-function renderFacultyChips(faculty, accent) {
-    const chips = faculty.map(f => {
-        let url = safeUrl(f.webpage);
-        let name = escapeHtml(f.name);
-        return `
-      <a class="chip-link" href="${url}" target="_blank" rel="noopener" style="--chip-accent: ${accent};">
+const researchModule =
+  await import(`../data/research.js?v=${document.VERSION}`);
+
+const facultyModule =
+  await import(`../data/faculty.js?v=${document.VERSION}`);
+
+const helpersModule =
+  await import(`./helpers.js?v=${document.VERSION}`);
+
+const RESEARCH_DATA = researchModule.RESEARCH_DATA;
+const CURRENT_FACULTY = facultyModule.CURRENT_FACULTY;
+const { escapeHtml, safeUrl } = helpersModule;
+
+function renderFacultyChips(faculty, accent, lang = "en") {
+  const chips = faculty.map(f => {
+    let url = safeUrl(f.webpage);
+    let name = escapeHtml(f.name);
+
+    // collect research areas in current language
+    let researchAreas = (f.research || [])
+      .map(r => escapeHtml(r[lang] || r.en))
+      .join(", ");
+
+    return `
+      <a class="chip-link" href="${url}" target="_blank" rel="noopener" style="--chip-accent:${accent};">
         <i class="fa-regular fa-user"></i>
-        <span>${name}</span>
+        <span>
+          ${name}
+          <span class="chip-research">${researchAreas}</span>
+        </span>
       </a>`;
-    }).join("");
+  }).join("");
 
-    return `<div class="faculty-chips">${chips}</div>`;
+  return `<div class="faculty-chips">${chips}</div>`;
 }
+
 
 function renderAccordionItem(area, lang) {
     const accent = area.accent;
@@ -39,7 +60,7 @@ function renderAccordionItem(area, lang) {
       <div class="acc-body">
         <p>${description}</p>
         <p><strong>${labelParticipatingFaculty}</strong></p>
-        ${renderFacultyChips(faculty, accent)}
+        ${renderFacultyChips(faculty, accent, lang)}
       </div>
     </details>
   `;
@@ -66,8 +87,13 @@ const translations = {
     participatingFaculty: { en: "Participating faculty:", tr: "Öğretim Üyeleri:" }
 };
 
-document.render = render; // Expose render function to global scope for language toggle
-document.addEventListener("DOMContentLoaded", render); // Initial render on DOM load
+document.render = render; // Expose render function for language toggle
+if (document.readyState === "loading") {
+  document.addEventListener("DOMContentLoaded", () => { render(); document.app_init();});
+} else {
+  render();
+  document.app_init();
+}
 
 // Note: The code above defines functions to render research areas with faculty chips
 // and sets up the initial rendering and language toggle support.

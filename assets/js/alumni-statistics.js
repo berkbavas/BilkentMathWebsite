@@ -1,5 +1,10 @@
-import { ALUMNI_STATISTICS } from "../data/alumni-statistics.js";
-import { TRANSLATIONS } from "../data/translations.js";
+ 
+import { TRANSLATIONS } from '../data/translations.js';const alumniModule =
+  await import(`../data/alumni-statistics.js?v=${document.VERSION}`);
+
+
+const ALUMNI_STATISTICS = alumniModule.ALUMNI_STATISTICS;
+ 
 
 function hexToRgba(hex, a) {
     const h = (hex || "").replace("#", "").trim();
@@ -204,5 +209,10 @@ TRANSLATIONS.chartPercentage = {
     tr: "Yüzde"
 };
 
-document.render = render;
-document.addEventListener("DOMContentLoaded", render);
+document.render = render; // Expose render function for language toggle
+if (document.readyState === "loading") {
+  document.addEventListener("DOMContentLoaded", () => { render(); document.app_init();});
+} else {
+  render();
+  document.app_init();
+}

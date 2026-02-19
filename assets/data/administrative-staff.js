@@ -13,9 +13,9 @@ export const ADMINISTRATIVE_STAFF = [
             en: "",
             tr: ""
         },
-        office: "SA-1XX",
-        phone: "+90 (312) 290-XXXX",
-        email: "place.holder [-at-] bilkent.edu.tr",
-        photo: "https://math.bilkent.edu.tr/staff-placeholder.jpg"
+        office: "SA-132B",
+        phone: "+90 (312) 290-1586",
+        email: "bilmath [-at-] fen.bilkent.edu.tr",
+        photo: "https://math.bilkent.edu.tr/personnel_photos/placeholder.jpg"
     },
 ];

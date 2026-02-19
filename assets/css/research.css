@@ -82,6 +82,17 @@
     opacity: .75;
 }
 
+
+.chip-research {
+  display: block;
+  font-size: 0.7em;
+  opacity: 0.75;
+  margin-top: 2px;
+  line-height: 1.2;
+}
+
+
+
 /* ---------- Accordion (mobile) ---------- */
 .research-accordion {
     display: grid;

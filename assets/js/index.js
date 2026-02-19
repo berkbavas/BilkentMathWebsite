@@ -1,9 +1,28 @@
-import { SEMINARS } from "../data/seminars.js";
-import { CURRENT_FACULTY } from "../data/faculty.js";
-import { GRADUATE_STUDENTS } from "../data/graduate-students.js";
-import { PROBLEM_OF_MONTH } from "../data/problem-of-the-month.js"
+
+const seminarsModule =
+  await import(`../data/seminars.js?v=${document.VERSION}`);
+
+const facultyModule =
+  await import(`../data/faculty.js?v=${document.VERSION}`);
+
+const graduateStudentsModule =
+  await import(`../data/graduate-students.js?v=${document.VERSION}`);
+
+const problemModule =
+  await import(`../data/problem-of-the-month.js?v=${document.VERSION}`);
+
 import { MONTHS_EN_TO_TR } from "../data/translations.js";
-import { NEWS } from "../data/news.js";
+
+const newsModule =
+  await import(`../data/news.js?v=${document.VERSION}`);
+
+
+const SEMINARS = seminarsModule.SEMINARS;
+const CURRENT_FACULTY = facultyModule.CURRENT_FACULTY;
+const GRADUATE_STUDENTS = graduateStudentsModule.GRADUATE_STUDENTS;
+const PROBLEM_OF_MONTH = problemModule.PROBLEM_OF_MONTH;
+
+const NEWS = newsModule.NEWS;
 
 const URL = "https://math.bilkent.edu.tr/";
 
@@ -137,5 +156,10 @@ function renderHomeNews() {
   `).join("");
 }
 
-document.render = render; // Expose render function to other modules, app.js in particular
-document.addEventListener("DOMContentLoaded", render); // Initial render on DOM load
+
+document.render = render; // Expose render function for language toggle
+if (document.readyState === "loading") {
+  document.addEventListener("DOMContentLoaded", render);
+} else {
+  render();
+}

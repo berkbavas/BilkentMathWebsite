@@ -1,8 +1,65 @@
-import { SEMINARS } from "../data/seminars.js";
-import { TRANSLATIONS } from "../data/translations.js";
-import { escapeHtml, safeUrl } from "./helpers.js";
+
+import { TRANSLATIONS } from '../data/translations.js';
+const seminarsModule =
+  await import(`../data/seminars.js?v=${document.VERSION}`);
+
+const helpersModule =
+  await import(`./helpers.js?v=${document.VERSION}`);
+
+const SEMINARS = seminarsModule.SEMINARS;
+ 
+const { escapeHtml, safeUrl } = helpersModule;
 
 const URL = "https://math.bilkent.edu.tr/";
+
+TRANSLATIONS.titleSeminars = {
+    en: "2025-26 Academic Year Seminars",
+    tr: "2025-26 Akademik Yılı Seminerleri"
+};
+
+TRANSLATIONS.textDescription = {
+    en: "Department seminars held during the 2025-26 academic year.",
+    tr: "2025-26 akademik yılı boyunca düzenlenen bölüm seminerleri."
+};
+
+TRANSLATIONS.tableHeaderTitleSpeaker = {
+    en: "Title / Speaker",
+    tr: "Başlık / Konuşmacı"
+};
+
+TRANSLATIONS.tableHeaderDate = {
+    en: "Date",
+    tr: "Tarih"
+};
+
+TRANSLATIONS.tableHeaderTime = {
+    en: "Time",
+    tr: "Saat"
+};
+
+TRANSLATIONS.tableHeaderPlace = {
+    en: "Place",
+    tr: "Yer"
+};
+
+TRANSLATIONS.buttonReset = {
+    en: "Reset",
+    tr: "Sıfırla"
+};
+
+TRANSLATIONS.searchPlaceholder = {
+    en: "Search",
+    tr: "Ara"
+};
+
+TRANSLATIONS.seminarPostfix = {
+    en: "seminar(s)",
+    tr: "seminer"
+};
+
+
+
+
 
 // ---------- helpers ----------
 const $ = (sel) => document.querySelector(sel);
@@ -42,6 +99,18 @@ function renderRow(seminar) {
 }
 
 // ---------- render ----------
+
+function applyTranslations(lang) {
+  document.querySelectorAll("[data-i18n]").forEach(el => {
+    const key = el.dataset.i18n;
+    if (TRANSLATIONS[key] && TRANSLATIONS[key][lang]) {
+      el.textContent = TRANSLATIONS[key][lang];
+    }
+  });
+}
+
+
+
 function renderTable(list) {
     const tbody = $("#tbody");
     tbody.innerHTML = list.map(renderRow).join("");
@@ -116,50 +185,11 @@ function render() {
     apply();
 }
 
-TRANSLATIONS.titleSeminars = {
-    en: "2025-26 Academic Year Seminars",
-    tr: "2025-26 Akademik Yılı Seminerleri"
-};
-
-TRANSLATIONS.textDescription = {
-    en: "Department seminars held during the 2025-26 academic year.",
-    tr: "2025-26 akademik yılı boyunca düzenlenen bölüm seminerleri."
-};
-
-TRANSLATIONS.tableHeaderTitleSpeaker = {
-    en: "Title / Speaker",
-    tr: "Başlık / Konuşmacı"
-};
-
-TRANSLATIONS.tableHeaderDate = {
-    en: "Date",
-    tr: "Tarih"
-};
-
-TRANSLATIONS.tableHeaderTime = {
-    en: "Time",
-    tr: "Saat"
-};
-
-TRANSLATIONS.tableHeaderPlace = {
-    en: "Place",
-    tr: "Yer"
-};
-
-TRANSLATIONS.buttonReset = {
-    en: "Reset",
-    tr: "Sıfırla"
-};
-
-TRANSLATIONS.searchPlaceholder = {
-    en: "Search",
-    tr: "Ara"
-};
-
-TRANSLATIONS.seminarPostfix = {
-    en: "seminar(s)",
-    tr: "seminer"
-};
 
 document.render = render; // Expose render function for language toggle
-document.addEventListener("DOMContentLoaded", render);
+if (document.readyState === "loading") {
+  document.addEventListener("DOMContentLoaded", () => { render(); document.app_init();});
+} else {
+  render();
+  document.app_init();
+}

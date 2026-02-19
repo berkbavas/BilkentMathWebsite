@@ -1,5 +1,8 @@
-import { TRANSLATIONS } from '../data/translations.js';
-import { CURRENT_FACULTY } from "../data/faculty.js";
+ 
+import { TRANSLATIONS } from '../data/translations.js';const facultyModule =
+  await import(`../data/faculty.js?v=${document.VERSION}`);
+ 
+const CURRENT_FACULTY = facultyModule.CURRENT_FACULTY;
 
 const elRoot = document.getElementById("supRoot");
 const elSearch = document.getElementById("supSearch");
@@ -29,6 +32,9 @@ function matches(p, search) {
 }
 
 
+const URL = "https://math.bilkent.edu.tr/personnel_photos";
+
+
 function cardTemplate(p) {
     const name = p.name || "";
     const title = p.title || "";
@@ -36,8 +42,15 @@ function cardTemplate(p) {
     const areasText = p.research.join(", ");
     const webpage = p.webpage || "#";
 
-    const avatar = photo
-        ? `<img src="${photo}" alt="${name}" loading="lazy">`
+    const photoSrc = photo 
+        ? `${URL}/${photo}` 
+        : `${URL}/placeholder.jpg`;
+
+
+
+
+    const avatar = photoSrc
+        ? `<img src="${photoSrc}" alt="${name}" loading="lazy">`
         : `<span class="sup-initials">${initials(p.name || "")}</span>`;
 
     return `
@@ -98,9 +111,6 @@ function init() {
     render();
 }
 
-document.render = render;
-document.addEventListener("DOMContentLoaded", init);
-
 // Add translations specific to Graduate Supervisors page
 TRANSLATIONS.titleGraduateSupervisors = {
     en: "Graduate Supervisors",
@@ -156,4 +166,16 @@ TRANSLATIONS.coordinatorName = {
     en: "Prof. Azer Kerimov",
     tr: "Prof. Dr. Azer Kerimov"
 };
+
+
+
+
+document.render = render; // Expose render function for language toggle
+document.init = init; 
+if (document.readyState === "loading") {
+  document.addEventListener("DOMContentLoaded", () => { init(); document.app_init();});
+} else {
+  init();
+  document.app_init();
+}
 

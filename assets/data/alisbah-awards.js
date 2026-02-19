@@ -1,4 +1,5 @@
 export const ALISBAH_AWARDS = [
+  { year: 2025, recipients: ["Farzad Shahi", "Yusuf İsa Dural"], photos: "Alisbah/2025.htm" },
   { year: 2024, recipients: ["Onur Ege Erden", "Deniz Ergün", "Alper Akyüz"], photos: "Alisbah/2024.htm" },
   { year: 2023, recipients: ["Yaman Paksoy", "Uzay Çetin", "Yusuf Nar"], photos: "Alisbah/2023.htm" },
   { year: 2022, recipients: ["Redi Haderi", "Metin Can Aydemir"], photos: "Alisbah/2022.htm" },

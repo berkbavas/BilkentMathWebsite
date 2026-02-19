@@ -1,4 +1,132 @@
 export const SEMINARS = [
+  {
+    speaker: "Stéphane Charpentier",
+    title: "Approximation in the Complex Plane by Incomplete Polynomials and Applications",
+    link: "seminars/2025-2026/analysis_24022026.pdf",
+    date: "24.02.2026",
+    time: "14:00",
+    place: "SA141"
+  },
+  {
+    speaker: "Öznur Turhan",
+    title: "Newton-nondegenerate line singularities, Lê numbers and Bekka (c)-regularity",
+    link: "seminars/2025-2026/algebraic_geometry_20022026.pdf",
+    date: "20.02.2026",
+    time: "15:40",
+    place: "Zoom"
+  },
+  {
+    speaker: "Cihan Bahran",
+    title: "Polynomiality in symmetric group representations via FI-modules",
+    link: "seminars/2025-2026/algebra18022026.pdf",
+    date: "18.02.2026",
+    time: "13:30",
+    place: "SA141"
+  },
+  {
+    speaker: "H. Turgay Kaptanoğlu",
+    title: "Discrete Analytic Functions II",
+    link: "seminars/2025-2026/analysis_17022026.pdf",
+    date: "17.02.2026",
+    time: "14:00",
+    place: "SA141"
+  },
+  {
+    speaker: "Rusiru Gambheera",
+    title: "Iwasawa Theory for branched Z_p-towers of finite graphs",
+    link: "seminars/2025-2026/Department_of_Mathematics_12022026.pdf",
+    date: "12.02.2026",
+    time: "19:00",
+    place: "Zoom"
+  },  
+  {
+    speaker: "Syed Waqar Ali Shah",
+    title: "On the Arithmetic of Special Values of the Riemann Zeta Function",
+    link: "seminars/2025-2026/Department_of_Mathematics_colloquim_11022026.pdf",
+    date: "11.02.2026",
+    time: "15:40",
+    place: "SA141"
+  },
+    {
+    speaker: "Cihan Bahran",
+    title: "Character polynomials for symmetric groups",
+    link: "seminars/2025-2026/algebra_11022026.pdf",
+    date: "11.02.2026",
+    time: "13:30",
+    place: "SA141"
+  },
+    {
+    speaker: "Simona Diaconu",
+    title: "Expectations and Eigenvalues",
+    link: "seminars/2025-2026/Math_Seminar_Simona_Diaconu.pdf",
+    date: "10.02.2026",
+    time: "19:00",
+    place: "Zoom"
+  },
+    {
+    speaker: "H. Turgay Kaptanoğlu",
+    title: "Discrete Analytic Functions",
+    link: "seminars/2025-2026/analysis_10022026.pdf",
+    date: "10.02.2026",
+    time: "14:00",
+    place: "SA141"
+  },
+    {
+    speaker: "Gözde Sert",
+    title: "Bayesian Semiparametric Causal Inference: Targeted Doubly Robust Estimation of Treatment Effects",
+    link: "seminars/2025-2026/Math_Seminar_Gözde_Sert.pdf",
+    date: "09.02.2026",
+    time: "19:00",
+    place: "Zoom"
+  },
+  {
+    speaker: "Ziad George Ghanem",
+    title: "Unbounded Branches of Traveling Wave Solutions to a Class of Reaction-Diffusion-Advection Systems on the n-Torus",
+    link: "seminars/2025-2026/Math_Seminar_Ziad_Ghanem.pdf",
+    date: "05.02.2026",
+    time: "19:00",
+    place: "Zoom"
+  },
+  {
+    speaker: "Priyanga Ganesan",
+    title: "Quantum Graphs and the Mathematics of Quantum Advantage",
+    link: "seminars/2025-2026/Math_Seminar_Priyanga_Ganesan.pdf",
+    date: "03.02.2026",
+    time: "19:00",
+    place: "Zoom"
+  },
+  {
+    speaker: "Alexander Goncharov",
+    title: "Spaces of Whitney Jets without BAP. II",
+    link: "seminars/2025-2026/analysis_03022026.pdf",
+    date: "03.02.2026",
+    time: "14:00",
+    place: "SA141"
+  },
+    {
+    speaker: "Alexander Goncharov",
+    title: "Spaces of Whitney Jets without BAP.",
+    link: "seminars/2025-2026/analysis_27012026.pdf",
+    date: "27.01.2026",
+    time: "14:00",
+    place: "SA141"
+  },
+  {
+    speaker: "J. E. Paguyo",
+    title: "Asymptotic behavior of the hierarchical Pitman-Yor process",
+    link: "seminars/2025-2026/Math_Seminar_Paguyo.pdf",
+    date: "08.01.2026",
+    time: "18:00",
+    place: "Zoom"
+  },
+  {
+    speaker: "Melih İşeri",
+    title: "Set Valued PDEs and Games",
+    link: "seminars/2025-2026/Math_Seminar_İşeri.pdf",
+    date: "07.01.2026",
+    time: "18:00",
+    place: "Zoom"
+  },  
     {
         speaker: "Fei Cao",
         title: "Interacting particle systems and multi-agent dynamics: from stochastic agent-based models to deterministic differential equations",

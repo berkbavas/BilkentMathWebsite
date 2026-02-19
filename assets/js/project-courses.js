@@ -1,7 +1,13 @@
-
-import { PROJECT_COURSES } from '../data/project-courses.js';
+ 
 import { TRANSLATIONS } from '../data/translations.js';
-import { escapeHtml, safeUrl } from './helpers.js';
+const projectCoursesModule =
+  await import(`../data/project-courses.js?v=${document.VERSION}`);
+
+const helpersModule =
+  await import(`./helpers.js?v=${document.VERSION}`);
+
+const PROJECT_COURSES = projectCoursesModule.PROJECT_COURSES;
+const { escapeHtml, safeUrl } = helpersModule;
 
 function render() {
     let elMount = document.getElementById('archiveMount');
@@ -36,9 +42,6 @@ function render() {
     });
 }
 
-document.render = render;
-document.addEventListener('DOMContentLoaded', render);
-
 
 // Add translations specific to Project Courses page
 TRANSLATIONS.headerTitle = {
@@ -70,3 +73,13 @@ TRANSLATIONS.textProjectArchive = {
     en: "Project Archive",
     tr: "Arşiv"
 };
+
+
+
+document.render = render; // Expose render function for language toggle
+if (document.readyState === "loading") {
+  document.addEventListener("DOMContentLoaded", () => { render(); document.app_init();});
+} else {
+  render();
+  document.app_init();
+}
