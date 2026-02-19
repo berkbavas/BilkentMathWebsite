@@ -2,10 +2,98 @@
 // All page-specific translations are defined here — do not mutate TRANSLATIONS from other files.
 
 export const TRANSLATIONS = {
-    /* ── Page ── */
+    /* ── Page Titles ── */
     pageTitle: {
         en: "Bilkent University • Department of Mathematics",
         tr: "Bilkent Üniversitesi • Matematik Bölümü"
+    },
+    pageTitleAbout: {
+        en: "About | Bilkent University • Department of Mathematics",
+        tr: "Bölüm Hakkında | Bilkent Üniversitesi • Matematik Bölümü"
+    },
+    pageTitleAdministrativeStaff: {
+        en: "Administrative Staff | Bilkent University • Department of Mathematics",
+        tr: "İdari Personel | Bilkent Üniversitesi • Matematik Bölümü"
+    },
+    pageTitleAlisbahAwards: {
+        en: "Alisbah Awards | Bilkent University • Department of Mathematics",
+        tr: "Alisbah Ödülleri | Bilkent Üniversitesi • Matematik Bölümü"
+    },
+    pageTitleAlumni: {
+        en: "Alumni | Bilkent University • Department of Mathematics",
+        tr: "Bazı Mezunlarımız | Bilkent Üniversitesi • Matematik Bölümü"
+    },
+    pageTitleAlumniStatistics: {
+        en: "Alumni Statistics | Bilkent University • Department of Mathematics",
+        tr: "Mezun İstatistikleri | Bilkent Üniversitesi • Matematik Bölümü"
+    },
+    pageTitleDoubleMajor: {
+        en: "Double Major | Bilkent University • Department of Mathematics",
+        tr: "Çift Anadal | Bilkent Üniversitesi • Matematik Bölümü"
+    },
+    pageTitleFaculty: {
+        en: "Faculty | Bilkent University • Department of Mathematics",
+        tr: "Öğretim Üyeleri | Bilkent Üniversitesi • Matematik Bölümü"
+    },
+    pageTitleGraduateProgram: {
+        en: "Graduate Program | Bilkent University • Department of Mathematics",
+        tr: "Lisansüstü Programı | Bilkent Üniversitesi • Matematik Bölümü"
+    },
+    pageTitleGraduateStudents: {
+        en: "Graduate Students | Bilkent University • Department of Mathematics",
+        tr: "Lisansüstü Öğrencileri | Bilkent Üniversitesi • Matematik Bölümü"
+    },
+    pageTitleHistory: {
+        en: "History | Bilkent University • Department of Mathematics",
+        tr: "Bölümün Kısa Tarihi | Bilkent Üniversitesi • Matematik Bölümü"
+    },
+    pageTitleLinks: {
+        en: "Links | Bilkent University • Department of Mathematics",
+        tr: "Bağlantılar | Bilkent Üniversitesi • Matematik Bölümü"
+    },
+    pageTitleMaster: {
+        en: "Master's Program | Bilkent University • Department of Mathematics",
+        tr: "Yüksek Lisans Programı | Bilkent Üniversitesi • Matematik Bölümü"
+    },
+    pageTitleNews: {
+        en: "News | Bilkent University • Department of Mathematics",
+        tr: "Haberler | Bilkent Üniversitesi • Matematik Bölümü"
+    },
+    pageTitlePhd: {
+        en: "Ph.D. Program | Bilkent University • Department of Mathematics",
+        tr: "Doktora Programı | Bilkent Üniversitesi • Matematik Bölümü"
+    },
+    pageTitleProblemOfTheMonth: {
+        en: "Problem of the Month | Bilkent University • Department of Mathematics",
+        tr: "Ayın Sorusu | Bilkent Üniversitesi • Matematik Bölümü"
+    },
+    pageTitleProjectCourses: {
+        en: "Project Courses | Bilkent University • Department of Mathematics",
+        tr: "Proje Dersleri | Bilkent Üniversitesi • Matematik Bölümü"
+    },
+    pageTitleResearch: {
+        en: "Research | Bilkent University • Department of Mathematics",
+        tr: "Araştırma | Bilkent Üniversitesi • Matematik Bölümü"
+    },
+    pageTitleSeminars: {
+        en: "Seminars | Bilkent University • Department of Mathematics",
+        tr: "Seminerler | Bilkent Üniversitesi • Matematik Bölümü"
+    },
+    pageTitleSeminarsArchive: {
+        en: "Seminars Archive | Bilkent University • Department of Mathematics",
+        tr: "Seminer Arşivi | Bilkent Üniversitesi • Matematik Bölümü"
+    },
+    pageTitleUndergraduateProgram: {
+        en: "Undergraduate Program | Bilkent University • Department of Mathematics",
+        tr: "Lisans Programı | Bilkent Üniversitesi • Matematik Bölümü"
+    },
+    pageTitleProspectiveStudents: {
+        en: "Information for Prospective Students | Bilkent University • Department of Mathematics",
+        tr: "Üniversite Adayları İçin Bilgiler | Bilkent Üniversitesi • Matematik Bölümü"
+    },
+    pageTitleVideos: {
+        en: "Videos | Bilkent University • Department of Mathematics",
+        tr: "Videolar | Bilkent Üniversitesi • Matematik Bölümü"
     },
 
     /* ── Topbar ── */
@@ -534,7 +622,6 @@ export const TRANSLATIONS = {
         tr: "Öğretim Üyeleri:"
     }
 };
-
 
 export const MONTHS_EN_TO_TR = {
     January: "Ocak",
